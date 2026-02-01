@@ -1,0 +1,34 @@
+name: "update-aws-service-references"
+
+on:
+  schedule:
+    - cron:  '30 6 * * 5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-aws-service-references:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: "create or update files"
+        working-directory: sources/aws
+        run: |
+          set -e
+          INDEX_URL="https://servicereference.us-east-1.amazonaws.com"
+          INDEX_JSON="aws-servicereference-index.json"
+          curl -s -o "${INDEX_JSON}" "${INDEX_URL}"
+          jq -r '.[].url' "${INDEX_JSON}" | while read -r url; do
+            filename=$(basename "${url}")
+            curl -s -o "${filename}" "${url}"
+          done
+          echo "done"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add *.json
+          git commit -m "Updated aws service references" || echo "No changes to commit"
+          git push
