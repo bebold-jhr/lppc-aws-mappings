@@ -1,0 +1,45 @@
+name: "update-terraform-schemas"
+
+on:
+  schedule:
+    - cron:  '0 6 * * 5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-terraform-schemas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: hashicorp/setup-terraform@v3
+      - name: "create or update files"
+        working-directory: sources/terraform
+        run: |
+          cat > providers.tf <<EOF
+          terraform {
+            required_providers {
+              aws = {
+                source = "hashicorp/aws"
+              }
+            }
+          }
+          EOF
+          terraform init -no-color
+          terraform providers schema -json > all-schemas.json
+          cat all-schemas.json | jq '.provider_schemas."registry.terraform.io/hashicorp/aws".resource_schemas | keys' > resource_schemas.json
+          cat all-schemas.json | jq '.provider_schemas."registry.terraform.io/hashicorp/aws".data_source_schemas | keys' > data_source_schemas.json
+          cat all-schemas.json | jq '.provider_schemas."registry.terraform.io/hashicorp/aws".ephemeral_resource_schemas | keys' > ephemeral_resource_schemas.json
+          cat all-schemas.json | jq '.provider_schemas."registry.terraform.io/hashicorp/aws".action_schemas | keys' > action_schemas.json
+          rm -f all-schemas.json
+          rm -f providers.tf
+          rm -f .terraform.lock.hcl
+          rm -rf .terraform
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add resource_schemas.json data_source_schemas.json ephemeral_resource_schemas.json action_schemas.json
+          git commit -m "Updated terraform schemas" || echo "No changes to commit"
+          git push

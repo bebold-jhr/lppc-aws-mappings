@@ -1,0 +1,35 @@
+---
+name: integration-tests-format-check
+
+on:
+  push:
+    paths:
+      - integration-tests/**/*
+      - .github/workflows/integration-tests-format-check.yml
+
+jobs:
+  terraform-fmt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: hashicorp/setup-terraform@v3
+      - name: Check action
+        working-directory: integration-tests/action
+        run: |
+          terraform fmt -check -recursive
+      - name: Check action
+        working-directory: integration-tests/data
+        run: |
+          terraform fmt -check -recursive
+      - name: Check action
+        working-directory: integration-tests/ephemeral
+        run: |
+          terraform fmt -check -recursive
+      - name: Check action
+        working-directory: integration-tests/resource
+        run: |
+          terraform fmt -check -recursive
+      - name: Check modules
+        working-directory: integration-tests/modules
+        run: |
+          terraform fmt -check -recursive

@@ -1,0 +1,33 @@
+---
+name: yaml-checks
+
+on:
+  push:
+    paths:
+      - mappings/**/*.yml
+      - .github/workflows/yaml-check.yml
+
+jobs:
+  syntax-check:
+    name: Check YAML syntax
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check YAML syntax
+        run: |
+          yamllint -c mappings/yamllint-config.yml mappings
+  schema-validation:
+    name: Validate schema
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Validate schema
+        run: |
+          pip install yamale
+          yamale -s mappings/schema.yamale mappings/action
+          yamale -s mappings/schema.yamale mappings/data
+          yamale -s mappings/schema.yamale mappings/ephemeral
+          yamale -s mappings/schema.yamale mappings/resource
