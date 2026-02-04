@@ -8,6 +8,7 @@ permissions:
   contents: read
   pull-requests: read
   issues: read
+  checks: write
 
 jobs:
   integration-test:
@@ -41,6 +42,28 @@ jobs:
             }
             core.setOutput('head_ref', pr.data.head.ref);
             core.setOutput('base_ref', pr.data.base.ref);
+            core.setOutput('head_sha', pr.data.head.sha);
+
+      - name: Create check run
+        uses: actions/github-script@v8
+        id: create-check
+        env:
+          HEAD_SHA: ${{ steps.get-pr.outputs.head_sha }}
+        with:
+          script: |
+            const check = await github.rest.checks.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'Integration Tests',
+              head_sha: process.env.HEAD_SHA,
+              status: 'in_progress',
+              started_at: new Date().toISOString(),
+              output: {
+                title: 'Integration Tests',
+                summary: 'Running integration tests...'
+              }
+            });
+            core.setOutput('check_run_id', check.data.id);
 
       - uses: actions/checkout@v6
         with:
@@ -138,3 +161,28 @@ jobs:
         if: steps.changed-files.outputs.test_dirs == ''
         run: |
           echo "No relevant changes found (no mappings or integration test files changed)."
+
+      - name: Update check run
+        if: always() && steps.create-check.outputs.check_run_id
+        uses: actions/github-script@v8
+        env:
+          CHECK_RUN_ID: ${{ steps.create-check.outputs.check_run_id }}
+          JOB_STATUS: ${{ job.status }}
+        with:
+          script: |
+            const conclusion = process.env.JOB_STATUS === 'success' ? 'success' : 'failure';
+            const summary = conclusion === 'success'
+              ? 'All integration tests passed!'
+              : 'Integration tests failed. Check the workflow run for details.';
+            await github.rest.checks.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              check_run_id: parseInt(process.env.CHECK_RUN_ID),
+              status: 'completed',
+              conclusion: conclusion,
+              completed_at: new Date().toISOString(),
+              output: {
+                title: 'Integration Tests',
+                summary: summary
+              }
+            });

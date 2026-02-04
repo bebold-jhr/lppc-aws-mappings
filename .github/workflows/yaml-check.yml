@@ -7,6 +7,9 @@ on:
       - mappings/**/*.yml
       - .github/workflows/yaml-check.yml
 
+permissions:
+  contents: read
+
 jobs:
   syntax-check:
     name: Check YAML syntax

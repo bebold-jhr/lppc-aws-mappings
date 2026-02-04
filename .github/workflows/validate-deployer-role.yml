@@ -7,6 +7,9 @@ on:
       - integration-tests/modules/deployer-role/**/*
       - .github/workflows/validate-deployer-role.yml
 
+permissions:
+  contents: read
+
 jobs:
   terraform-fmt:
     runs-on: ubuntu-latest
