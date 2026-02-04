@@ -1,0 +1,1250 @@
+{
+  "Name" : "aws-marketplace",
+  "Actions" : [ {
+    "Name" : "AcceptAgreementApprovalRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "AcceptAgreementPaymentRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "AcceptAgreementRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "AssociateProductsWithPrivateMarketplace",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "BatchMeterUsage",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CancelAgreement",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CancelAgreementPaymentRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CancelAgreementRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CancelChangeSet",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ChangeSet"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateAgreementRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreatePrivateMarketplaceRequests",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteResourcePolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Entity"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeAgreement",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeAssessment",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeBuilds",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeChangeSet",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ChangeSet"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeEntity",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Entity"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribePrivateMarketplaceRequests",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeProcurementSystemConfiguration",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DisassociateProductsFromPrivateMarketplace",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetAgreementApprovalRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetAgreementEntitlements",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetAgreementPaymentRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetAgreementRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetAgreementTerms",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetBuyerDashboard",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Dashboard"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetEntitlements",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetResourcePolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Entity"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetSellerDashboard",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "SellerDashboard"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAgreementApprovalRequests",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAgreementCharges",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAgreementPaymentRequests",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAgreementRequests",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAssessments",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListBuilds",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListChangeSets",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListEntities",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListEntitlementDetails",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListPrivateListings",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListPrivateMarketplaceRequests",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListTagsForResource",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ChangeSet"
+    }, {
+      "Name" : "DeploymentParameter"
+    }, {
+      "Name" : "Entity"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "MeterUsage",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutDeploymentParameter",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "DeploymentParameter",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutProcurementSystemConfiguration",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutResourcePolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Entity"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "RegisterUsage",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "RejectAgreementApprovalRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "RejectAgreementPaymentRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ResolveCustomer",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "SearchAgreements",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "SendAgreementPaymentRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StartBuild",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StartChangeSet",
+    "ActionConditionKeys" : [ "aws-marketplace:Intent", "aws:RequestTag/${TagKey}", "aws:TagKeys", "catalog:ChangeType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Entity"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "Subscribe",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "TagResource",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : true,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ChangeSet"
+    }, {
+      "Name" : "DeploymentParameter",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+    }, {
+      "Name" : "Entity"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "Unsubscribe",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UntagResource",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : true,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ChangeSet"
+    }, {
+      "Name" : "DeploymentParameter",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+    }, {
+      "Name" : "Entity"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateAgreementApprovalRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdatePurchaseOrders",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ViewSubscriptions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  } ],
+  "ConditionKeys" : [ {
+    "Name" : "aws-marketplace:AgreementType",
+    "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "aws-marketplace:Intent",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "aws-marketplace:PartyType",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "aws-marketplace:ProductId",
+    "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "aws:RequestTag/${TagKey}",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "aws:ResourceTag/${TagKey}",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "aws:TagKeys",
+    "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "catalog:ChangeType",
+    "Types" : [ "String" ]
+  } ],
+  "Operations" : [ {
+    "Name" : "BatchDescribeEntities",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeEntity",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-catalog",
+      "Method" : "batch_describe_entities",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "BatchMeterUsage",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchMeterUsage",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "meteringmarketplace",
+      "Method" : "batch_meter_usage",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CancelChangeSet",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelChangeSet",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-catalog",
+      "Method" : "cancel_change_set",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteResourcePolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteResourcePolicy",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-catalog",
+      "Method" : "delete_resource_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeAgreement",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAgreement",
+      "Service" : "aws-marketplace"
+    }, {
+      "Name" : "ViewSubscriptions",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "describe_agreement",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeChangeSet",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeChangeSet",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-catalog",
+      "Method" : "describe_change_set",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeEntity",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeEntity",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-catalog",
+      "Method" : "describe_entity",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetAgreementTerms",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAgreementTerms",
+      "Service" : "aws-marketplace"
+    }, {
+      "Name" : "ViewSubscriptions",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "get_agreement_terms",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetBuyerDashboard",
+    "AuthorizedActions" : [ {
+      "Name" : "GetBuyerDashboard",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-reporting",
+      "Method" : "get_buyer_dashboard",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetEntitlements",
+    "AuthorizedActions" : [ {
+      "Name" : "GetEntitlements",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-entitlement",
+      "Method" : "get_entitlements",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetResourcePolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "GetResourcePolicy",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-catalog",
+      "Method" : "get_resource_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListChangeSets",
+    "AuthorizedActions" : [ {
+      "Name" : "ListChangeSets",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-catalog",
+      "Method" : "list_change_sets",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListEntities",
+    "AuthorizedActions" : [ {
+      "Name" : "ListEntities",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-catalog",
+      "Method" : "list_entities",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListTagsForResource",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTagsForResource",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-catalog",
+      "Method" : "list_tags_for_resource",
+      "Package" : "Boto3"
+    }, {
+      "Name" : "marketplace-deployment",
+      "Method" : "list_tags_for_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "MeterUsage",
+    "AuthorizedActions" : [ {
+      "Name" : "MeterUsage",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "meteringmarketplace",
+      "Method" : "meter_usage",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutDeploymentParameter",
+    "AuthorizedActions" : [ {
+      "Name" : "PutDeploymentParameter",
+      "Service" : "aws-marketplace"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-deployment",
+      "Method" : "put_deployment_parameter",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutResourcePolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "PutResourcePolicy",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-catalog",
+      "Method" : "put_resource_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "RegisterUsage",
+    "AuthorizedActions" : [ {
+      "Name" : "RegisterUsage",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "meteringmarketplace",
+      "Method" : "register_usage",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ResolveCustomer",
+    "AuthorizedActions" : [ {
+      "Name" : "ResolveCustomer",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "meteringmarketplace",
+      "Method" : "resolve_customer",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "SearchAgreements",
+    "AuthorizedActions" : [ {
+      "Name" : "SearchAgreements",
+      "Service" : "aws-marketplace"
+    }, {
+      "Name" : "ViewSubscriptions",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "search_agreements",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartChangeSet",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAgreement",
+      "Service" : "aws-marketplace"
+    }, {
+      "Name" : "DescribeChangeSet",
+      "Service" : "aws-marketplace"
+    }, {
+      "Name" : "DescribeEntity",
+      "Service" : "aws-marketplace"
+    }, {
+      "Name" : "GetAgreementTerms",
+      "Service" : "aws-marketplace"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "assets.marketplace.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "PublishDataSet",
+      "Service" : "dataexchange"
+    }, {
+      "Name" : "StartChangeSet",
+      "Service" : "aws-marketplace"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-catalog",
+      "Method" : "start_change_set",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-catalog",
+      "Method" : "tag_resource",
+      "Package" : "Boto3"
+    }, {
+      "Name" : "marketplace-deployment",
+      "Method" : "tag_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-catalog",
+      "Method" : "untag_resource",
+      "Package" : "Boto3"
+    }, {
+      "Name" : "marketplace-deployment",
+      "Method" : "untag_resource",
+      "Package" : "Boto3"
+    } ]
+  } ],
+  "Resources" : [ {
+    "Name" : "ChangeSet",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}:${Account}:${Catalog}/ChangeSet/${ResourceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "catalog:ChangeType" ]
+  }, {
+    "Name" : "Dashboard",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dashboard/${DashboardName}" ]
+  }, {
+    "Name" : "DeploymentParameter",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}:${Account}:DeploymentParameter:catalogs/${CatalogName}/products/${ProductId}/${ResourceId}" ],
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+  }, {
+    "Name" : "Entity",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}:${Account}:${Catalog}/${EntityType}/${ResourceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "catalog:ChangeType" ]
+  }, {
+    "Name" : "SellerDashboard",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dashboard/${DashboardName}" ]
+  } ],
+  "Version" : "v1.4"
+}
