@@ -3,6 +3,14 @@ name: integration-tests-format-check
 
 on:
   push:
+    branches:
+      - 'main'
+    paths:
+      - integration-tests/**/*
+      - .github/workflows/integration-tests-format-check.yml
+  pull_request:
+    branches:
+      - '**'
     paths:
       - integration-tests/**/*
       - .github/workflows/integration-tests-format-check.yml
@@ -20,15 +28,15 @@ jobs:
         working-directory: integration-tests/action
         run: |
           terraform fmt -check -recursive
-      - name: Check action
+      - name: Check data
         working-directory: integration-tests/data
         run: |
           terraform fmt -check -recursive
-      - name: Check action
+      - name: Check ephemeral
         working-directory: integration-tests/ephemeral
         run: |
           terraform fmt -check -recursive
-      - name: Check action
+      - name: Check resource
         working-directory: integration-tests/resource
         run: |
           terraform fmt -check -recursive

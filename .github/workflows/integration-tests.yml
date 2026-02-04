@@ -1,7 +1,10 @@
 name: integration-tests
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: 
+      - opened
+      - synchronize
+      - reopened
 
 permissions:
   id-token: write
@@ -10,7 +13,7 @@ permissions:
 
 jobs:
   integration-test:
-    # Only run on re-runs (triggered by /run-integration-tests comment)
+    # Only run on re-runs (triggered by /run integration-tests comment)
     # First run will show as "skipped" in PR checks
     if: github.run_attempt > 1
     runs-on: ubuntu-latest
