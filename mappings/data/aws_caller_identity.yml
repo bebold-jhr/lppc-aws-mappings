@@ -1,0 +1,9 @@
+---
+metadata:
+  aws:
+    documentation: https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html
+    service-reference: https://servicereference.us-east-1.amazonaws.com/v1/sts/sts.json
+  terraform:
+    documentation: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity
+actions:
+  - sts:GetCallerIdentity  # You don't actually need this. Even a role without any policy can successfully execute GetCallerIdentity, but it's clean and consistent to list it

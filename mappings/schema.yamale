@@ -1,10 +1,11 @@
 # Example
+#
 # metadata:
 #   aws:
 #     documentation: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2.html
-#     service-referece: https://servicereference.us-east-1.amazonaws.com/v1/ec2/ec2.json
+#     service-reference: https://servicereference.us-east-1.amazonaws.com/v1/ec2/ec2.json
 #   terraform:
-#     documentations: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet
+#     documentation: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet
 # actions:
 #   - ec2:List*
 #   - ec2:Describe*
@@ -20,9 +21,9 @@
 metadata:
   aws:
     documentation: str(starts_with="https://docs.aws.amazon.com/", required=True)
-    service-referece: str(starts_with="https://servicereference.us-east-1.amazonaws.com/", required=True)
+    service-reference: str(starts_with="https://servicereference.us-east-1.amazonaws.com/", required=True)
   terraform:
-    documentations: str(starts_with="https://registry.terraform.io/", required=True)
+    documentation: str(starts_with="https://registry.terraform.io/", required=True)
 
 actions: list(str(matches="^[a-z0-9]+:[A-Za-z*]+$"), min=1, required=True)
 

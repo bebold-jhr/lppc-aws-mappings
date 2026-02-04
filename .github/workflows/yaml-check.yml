@@ -3,9 +3,17 @@ name: yaml-checks
 
 on:
   push:
+    branches:
+      - 'main'
     paths:
       - mappings/**/*.yml
       - .github/workflows/yaml-check.yml
+  pull_request:
+    branches:
+      - '**'
+    paths:
+        - mappings/**/*.yml
+        - .github/workflows/yaml-check.yml
 
 permissions:
   contents: read

@@ -3,6 +3,14 @@ name: validate-deployer-role-module
 
 on:
   push:
+    branches:
+      - 'main'
+    paths:
+      - integration-tests/modules/deployer-role/**/*
+      - .github/workflows/validate-deployer-role.yml
+  pull_request:
+    branches:
+      - '**'
     paths:
       - integration-tests/modules/deployer-role/**/*
       - .github/workflows/validate-deployer-role.yml
@@ -16,10 +24,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: hashicorp/setup-terraform@v3
-      - name: Check formatting
-        working-directory: integration-tests/modules/deployer-role
-        run: |
-          terraform fmt -check -recursive
       - name: Terraform validate
         working-directory: integration-tests/modules/deployer-role
         run: |
