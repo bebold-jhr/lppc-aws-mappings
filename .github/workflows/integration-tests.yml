@@ -13,8 +13,8 @@ permissions:
 
 jobs:
   integration-test:
-    # Only run on re-runs (triggered by /run integration-tests comment)
     # First run will show as "skipped" in PR checks
+    # Only run on re-runs (triggered by /run integration-tests comment or manually)
     if: github.run_attempt > 1
     runs-on: ubuntu-latest
     steps:

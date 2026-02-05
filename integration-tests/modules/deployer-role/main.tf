@@ -25,7 +25,7 @@ resource "aws_iam_role_policy" "deployer_role" {
     Statement = [
       {
         Effect   = "Allow"
-        Action   = local.actions
+        Action   = local.permissions
         Resource = "*"
       },
     ]

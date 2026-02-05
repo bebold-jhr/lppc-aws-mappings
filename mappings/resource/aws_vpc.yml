@@ -1,0 +1,17 @@
+---
+metadata:
+  aws:
+    documentation: https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html
+    service-reference: https://servicereference.us-east-1.amazonaws.com/v1/ec2/ec2.json
+  terraform:
+    documentation: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc
+actions:
+  - ec2:CreateTags
+  - ec2:CreateVpc
+  - ec2:DeleteTags
+  - ec2:DeleteVpc
+  - ec2:Describe*
+  - ec2:Get*
+  - ec2:List*
+  - ec2:ModifyVpcAttribute
+# A test shows that setting instance_tenancy doesn't require ec2:ModifyVpcTenancy
