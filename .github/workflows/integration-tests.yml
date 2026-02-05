@@ -12,45 +12,19 @@ jobs:
   integration-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Check for recent trigger comment
-        uses: actions/github-script@v8
+      - name: Check if triggered by re-run
         id: check-trigger
-        with:
-          script: |
-            const { data: comments } = await github.rest.issues.listComments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.payload.pull_request.number,
-              per_page: 1,
-              direction: 'desc'
-            });
-
-            if (comments.length === 0) {
-              console.log('No comments found on this PR');
-              core.setOutput('should_run', 'false');
-              return;
-            }
-
-            const latestComment = comments[0];
-            const commentAge = Date.now() - new Date(latestComment.created_at).getTime();
-            const oneMinuteMs = 60 * 1000;
-
-            console.log(`Latest comment by: ${latestComment.user.login}`);
-            console.log(`Author association: ${latestComment.author_association}`);
-            console.log(`Comment age: ${Math.round(commentAge / 1000)} seconds`);
-            console.log(`Comment body: ${latestComment.body.substring(0, 100)}`);
-
-            const isAuthorized = ['OWNER', 'MEMBER'].includes(latestComment.author_association);
-            const containsTrigger = latestComment.body.includes('/run-integration-tests');
-            const isRecent = commentAge < oneMinuteMs;
-
-            if (isAuthorized && containsTrigger && isRecent) {
-              console.log('Trigger conditions met - will run integration tests');
-              core.setOutput('should_run', 'true');
-            } else {
-              console.log(`Trigger conditions not met: authorized=${isAuthorized}, trigger=${containsTrigger}, recent=${isRecent}`);
-              core.setOutput('should_run', 'false');
-            }
+        env:
+          RUN_ATTEMPT: ${{ github.run_attempt }}
+        run: |
+          echo "Run attempt: $RUN_ATTEMPT"
+          if [ "$RUN_ATTEMPT" -gt 1 ]; then
+            echo "This is a re-run (attempt $RUN_ATTEMPT) - will run integration tests"
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "First run - skipping (comment /run-integration-tests to trigger)"
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Get PR details
         if: steps.check-trigger.outputs.should_run == 'true'
