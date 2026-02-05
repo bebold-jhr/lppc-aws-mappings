@@ -1,85 +1,82 @@
 name: integration-tests
 on:
-  issue_comment:
-    types: [created]
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 permissions:
   id-token: write
   contents: read
   pull-requests: read
-  issues: read
-  checks: write
 
 jobs:
   integration-test:
-    # Only run if:
-    # 1. Comment is on a PR (not an issue)
-    # 2. Comment contains the trigger phrase
-    # 3. Commenter is owner or member
-    if: |
-      github.event.issue.pull_request &&
-      contains(github.event.comment.body, '/run-integration-tests') &&
-      (
-        github.event.comment.author_association == 'OWNER' ||
-        github.event.comment.author_association == 'MEMBER'
-      )
     runs-on: ubuntu-latest
     steps:
+      - name: Check for recent trigger comment
+        uses: actions/github-script@v8
+        id: check-trigger
+        with:
+          script: |
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              per_page: 1,
+              direction: 'desc'
+            });
+
+            if (comments.length === 0) {
+              console.log('No comments found on this PR');
+              core.setOutput('should_run', 'false');
+              return;
+            }
+
+            const latestComment = comments[0];
+            const commentAge = Date.now() - new Date(latestComment.created_at).getTime();
+            const oneMinuteMs = 60 * 1000;
+
+            console.log(`Latest comment by: ${latestComment.user.login}`);
+            console.log(`Author association: ${latestComment.author_association}`);
+            console.log(`Comment age: ${Math.round(commentAge / 1000)} seconds`);
+            console.log(`Comment body: ${latestComment.body.substring(0, 100)}`);
+
+            const isAuthorized = ['OWNER', 'MEMBER'].includes(latestComment.author_association);
+            const containsTrigger = latestComment.body.includes('/run-integration-tests');
+            const isRecent = commentAge < oneMinuteMs;
+
+            if (isAuthorized && containsTrigger && isRecent) {
+              console.log('Trigger conditions met - will run integration tests');
+              core.setOutput('should_run', 'true');
+            } else {
+              console.log(`Trigger conditions not met: authorized=${isAuthorized}, trigger=${containsTrigger}, recent=${isRecent}`);
+              core.setOutput('should_run', 'false');
+            }
+
       - name: Get PR details
+        if: steps.check-trigger.outputs.should_run == 'true'
         uses: actions/github-script@v8
         id: get-pr
         with:
           script: |
-            const pr = await github.rest.pulls.get({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.issue.number
-            });
+            const pr = context.payload.pull_request;
             // Validate branch names contain only safe characters
             const branchRegex = /^[a-zA-Z0-9._\/-]+$/;
-            if (!branchRegex.test(pr.data.head.ref) || !branchRegex.test(pr.data.base.ref)) {
+            if (!branchRegex.test(pr.head.ref) || !branchRegex.test(pr.base.ref)) {
               throw new Error('Invalid branch name detected');
             }
-            console.log(`PR #${context.issue.number}: head_ref=${pr.data.head.ref}, head_sha=${pr.data.head.sha}`);
-            core.setOutput('head_ref', pr.data.head.ref);
-            core.setOutput('base_ref', pr.data.base.ref);
-            core.setOutput('head_sha', pr.data.head.sha);
-
-      - name: Create check run
-        uses: actions/github-script@v8
-        id: create-check
-        env:
-          HEAD_SHA: ${{ steps.get-pr.outputs.head_sha }}
-          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        with:
-          script: |
-            const headSha = process.env.HEAD_SHA;
-            if (!headSha) {
-              throw new Error('HEAD_SHA is empty or not set');
-            }
-            console.log(`Creating check run for SHA: ${headSha}`);
-            const check = await github.rest.checks.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: 'Integration Tests',
-              head_sha: headSha,
-              status: 'in_progress',
-              started_at: new Date().toISOString(),
-              details_url: process.env.RUN_URL,
-              output: {
-                title: 'Integration Tests',
-                summary: `Running integration tests...\n\n[View workflow run](${process.env.RUN_URL})`
-              }
-            });
-            console.log(`Created check run with ID: ${check.data.id}`);
-            core.setOutput('check_run_id', check.data.id);
+            console.log(`PR #${pr.number}: head_ref=${pr.head.ref}, head_sha=${pr.head.sha}`);
+            core.setOutput('head_ref', pr.head.ref);
+            core.setOutput('base_ref', pr.base.ref);
+            core.setOutput('head_sha', pr.head.sha);
 
       - uses: actions/checkout@v6
+        if: steps.check-trigger.outputs.should_run == 'true'
         with:
           ref: ${{ steps.get-pr.outputs.head_ref }}
           fetch-depth: 0
 
       - name: Get changed files and determine tests to run
+        if: steps.check-trigger.outputs.should_run == 'true'
         id: changed-files
         env:
           BASE_REF: ${{ steps.get-pr.outputs.base_ref }}
@@ -137,7 +134,7 @@ jobs:
           echo "Found test directories: $TEST_DIRS"
 
       - name: Configure AWS credentials
-        if: steps.changed-files.outputs.test_dirs != ''
+        if: steps.check-trigger.outputs.should_run == 'true' && steps.changed-files.outputs.test_dirs != ''
         uses: aws-actions/configure-aws-credentials@v5
         with:
           aws-region: us-east-1
@@ -145,15 +142,15 @@ jobs:
           role-session-name: integration-test-run-${{ github.run_id }}
 
       - name: Verify AWS credentials
-        if: steps.changed-files.outputs.test_dirs != ''
+        if: steps.check-trigger.outputs.should_run == 'true' && steps.changed-files.outputs.test_dirs != ''
         run: aws sts get-caller-identity
 
       - name: Setup Terraform
-        if: steps.changed-files.outputs.test_dirs != ''
+        if: steps.check-trigger.outputs.should_run == 'true' && steps.changed-files.outputs.test_dirs != ''
         uses: hashicorp/setup-terraform@v3
 
       - name: Run integration tests
-        if: steps.changed-files.outputs.test_dirs != ''
+        if: steps.check-trigger.outputs.should_run == 'true' && steps.changed-files.outputs.test_dirs != ''
         env:
           TEST_DIRS: ${{ steps.changed-files.outputs.test_dirs }}
         run: |
@@ -166,34 +163,12 @@ jobs:
             echo "::endgroup::"
           done
 
+      - name: No trigger comment found
+        if: steps.check-trigger.outputs.should_run == 'false'
+        run: |
+          echo "No recent trigger comment found. To run integration tests, comment '/run-integration-tests' on the PR."
+
       - name: No tests to run
-        if: steps.changed-files.outputs.test_dirs == ''
+        if: steps.check-trigger.outputs.should_run == 'true' && steps.changed-files.outputs.test_dirs == ''
         run: |
           echo "No relevant changes found (no mappings or integration test files changed)."
-
-      - name: Update check run
-        if: always() && steps.create-check.outputs.check_run_id
-        uses: actions/github-script@v8
-        env:
-          CHECK_RUN_ID: ${{ steps.create-check.outputs.check_run_id }}
-          JOB_STATUS: ${{ job.status }}
-          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        with:
-          script: |
-            const conclusion = process.env.JOB_STATUS === 'success' ? 'success' : 'failure';
-            const baseMessage = conclusion === 'success'
-              ? 'All integration tests passed!'
-              : 'Integration tests failed.';
-            const summary = `${baseMessage}\n\n[View workflow run](${process.env.RUN_URL})`;
-            await github.rest.checks.update({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              check_run_id: parseInt(process.env.CHECK_RUN_ID),
-              status: 'completed',
-              conclusion: conclusion,
-              completed_at: new Date().toISOString(),
-              output: {
-                title: 'Integration Tests',
-                summary: summary
-              }
-            });
