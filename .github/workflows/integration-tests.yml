@@ -10,24 +10,12 @@ permissions:
 
 jobs:
   integration-test:
+    # Only run on re-runs (triggered by /run-integration-tests comment)
+    # First run will show as "skipped" in PR checks
+    if: github.run_attempt > 1
     runs-on: ubuntu-latest
     steps:
-      - name: Check if triggered by re-run
-        id: check-trigger
-        env:
-          RUN_ATTEMPT: ${{ github.run_attempt }}
-        run: |
-          echo "Run attempt: $RUN_ATTEMPT"
-          if [ "$RUN_ATTEMPT" -gt 1 ]; then
-            echo "This is a re-run (attempt $RUN_ATTEMPT) - will run integration tests"
-            echo "should_run=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "First run - skipping (comment /run-integration-tests to trigger)"
-            echo "should_run=false" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Get PR details
-        if: steps.check-trigger.outputs.should_run == 'true'
         uses: actions/github-script@v8
         id: get-pr
         with:
@@ -44,13 +32,11 @@ jobs:
             core.setOutput('head_sha', pr.head.sha);
 
       - uses: actions/checkout@v6
-        if: steps.check-trigger.outputs.should_run == 'true'
         with:
           ref: ${{ steps.get-pr.outputs.head_ref }}
           fetch-depth: 0
 
       - name: Get changed files and determine tests to run
-        if: steps.check-trigger.outputs.should_run == 'true'
         id: changed-files
         env:
           BASE_REF: ${{ steps.get-pr.outputs.base_ref }}
@@ -108,7 +94,7 @@ jobs:
           echo "Found test directories: $TEST_DIRS"
 
       - name: Configure AWS credentials
-        if: steps.check-trigger.outputs.should_run == 'true' && steps.changed-files.outputs.test_dirs != ''
+        if: steps.changed-files.outputs.test_dirs != ''
         uses: aws-actions/configure-aws-credentials@v5
         with:
           aws-region: us-east-1
@@ -116,15 +102,15 @@ jobs:
           role-session-name: integration-test-run-${{ github.run_id }}
 
       - name: Verify AWS credentials
-        if: steps.check-trigger.outputs.should_run == 'true' && steps.changed-files.outputs.test_dirs != ''
+        if: steps.changed-files.outputs.test_dirs != ''
         run: aws sts get-caller-identity
 
       - name: Setup Terraform
-        if: steps.check-trigger.outputs.should_run == 'true' && steps.changed-files.outputs.test_dirs != ''
+        if: steps.changed-files.outputs.test_dirs != ''
         uses: hashicorp/setup-terraform@v3
 
       - name: Run integration tests
-        if: steps.check-trigger.outputs.should_run == 'true' && steps.changed-files.outputs.test_dirs != ''
+        if: steps.changed-files.outputs.test_dirs != ''
         env:
           TEST_DIRS: ${{ steps.changed-files.outputs.test_dirs }}
         run: |
@@ -137,12 +123,7 @@ jobs:
             echo "::endgroup::"
           done
 
-      - name: No trigger comment found
-        if: steps.check-trigger.outputs.should_run == 'false'
-        run: |
-          echo "No recent trigger comment found. To run integration tests, comment '/run-integration-tests' on the PR."
-
       - name: No tests to run
-        if: steps.check-trigger.outputs.should_run == 'true' && steps.changed-files.outputs.test_dirs == ''
+        if: steps.changed-files.outputs.test_dirs == ''
         run: |
           echo "No relevant changes found (no mappings or integration test files changed)."
