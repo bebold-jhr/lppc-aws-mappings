@@ -40,6 +40,7 @@ jobs:
             if (!branchRegex.test(pr.data.head.ref) || !branchRegex.test(pr.data.base.ref)) {
               throw new Error('Invalid branch name detected');
             }
+            console.log(`PR #${context.issue.number}: head_ref=${pr.data.head.ref}, head_sha=${pr.data.head.sha}`);
             core.setOutput('head_ref', pr.data.head.ref);
             core.setOutput('base_ref', pr.data.base.ref);
             core.setOutput('head_sha', pr.data.head.sha);
@@ -49,20 +50,28 @@ jobs:
         id: create-check
         env:
           HEAD_SHA: ${{ steps.get-pr.outputs.head_sha }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         with:
           script: |
+            const headSha = process.env.HEAD_SHA;
+            if (!headSha) {
+              throw new Error('HEAD_SHA is empty or not set');
+            }
+            console.log(`Creating check run for SHA: ${headSha}`);
             const check = await github.rest.checks.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               name: 'Integration Tests',
-              head_sha: process.env.HEAD_SHA,
+              head_sha: headSha,
               status: 'in_progress',
               started_at: new Date().toISOString(),
+              details_url: process.env.RUN_URL,
               output: {
                 title: 'Integration Tests',
-                summary: 'Running integration tests...'
+                summary: `Running integration tests...\n\n[View workflow run](${process.env.RUN_URL})`
               }
             });
+            console.log(`Created check run with ID: ${check.data.id}`);
             core.setOutput('check_run_id', check.data.id);
 
       - uses: actions/checkout@v6
@@ -168,12 +177,14 @@ jobs:
         env:
           CHECK_RUN_ID: ${{ steps.create-check.outputs.check_run_id }}
           JOB_STATUS: ${{ job.status }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         with:
           script: |
             const conclusion = process.env.JOB_STATUS === 'success' ? 'success' : 'failure';
-            const summary = conclusion === 'success'
+            const baseMessage = conclusion === 'success'
               ? 'All integration tests passed!'
-              : 'Integration tests failed. Check the workflow run for details.';
+              : 'Integration tests failed.';
+            const summary = `${baseMessage}\n\n[View workflow run](${process.env.RUN_URL})`;
             await github.rest.checks.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
