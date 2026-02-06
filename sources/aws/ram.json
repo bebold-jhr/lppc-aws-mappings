@@ -912,6 +912,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListSourceAssociations",
+    "SDK" : [ {
+      "Name" : "ram",
+      "Method" : "list_source_associations",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "PromotePermissionCreatedFromPolicy",
     "AuthorizedActions" : [ {
       "Name" : "PromotePermissionCreatedFromPolicy",

@@ -724,6 +724,9 @@
     "AuthorizedActions" : [ {
       "Name" : "AcceptDataGrant",
       "Service" : "dataexchange"
+    }, {
+      "Name" : "Subscribe",
+      "Service" : "aws-marketplace"
     } ],
     "SDK" : [ {
       "Name" : "dataexchange",

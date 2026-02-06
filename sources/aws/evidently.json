@@ -657,10 +657,6 @@
     } ]
   }, {
     "Name" : "CreateFeature",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateFeature",
-      "Service" : "evidently"
-    } ],
     "SDK" : [ {
       "Name" : "evidently",
       "Method" : "create_feature",
@@ -668,10 +664,6 @@
     } ]
   }, {
     "Name" : "CreateLaunch",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateLaunch",
-      "Service" : "evidently"
-    } ],
     "SDK" : [ {
       "Name" : "evidently",
       "Method" : "create_launch",
@@ -915,10 +907,6 @@
     } ]
   }, {
     "Name" : "StartLaunch",
-    "AuthorizedActions" : [ {
-      "Name" : "StartLaunch",
-      "Service" : "evidently"
-    } ],
     "SDK" : [ {
       "Name" : "evidently",
       "Method" : "start_launch",
