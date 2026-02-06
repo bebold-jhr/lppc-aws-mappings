@@ -17,7 +17,7 @@ run "create_deployer_role" {
 }
 
 ####
-# Perform tests
+# Provider using deployer role
 ####
 provider "aws" {
   region = "us-east-1"
@@ -28,6 +28,9 @@ provider "aws" {
   }
 }
 
+####
+# Perform tests
+####
 run "successfully_create_vpc" {
   state_key = "main"
 
