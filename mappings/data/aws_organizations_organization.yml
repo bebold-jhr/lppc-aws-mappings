@@ -1,0 +1,12 @@
+---
+metadata:
+  aws:
+    documentation: https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html
+    service-reference: https://servicereference.us-east-1.amazonaws.com/v1/organizations/organizations.json
+  terraform:
+    documentation: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/organizations_organization
+actions:
+  - organizations:DescribeOrganization
+  - organizations:ListAccounts
+  - organizations:ListRoots
+  - organizations:ListAWSServiceAccessForOrganization
