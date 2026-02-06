@@ -116,6 +116,7 @@ jobs:
         if: steps.changed-files.outputs.test_dirs != ''
         env:
           TEST_DIRS: ${{ steps.changed-files.outputs.test_dirs }}
+          TF_VAR_management_account_id: ${{ secrets.MANAGEMENT_ACCOUNT_ID }}
         run: |
           for dir in $TEST_DIRS; do
             echo "::group::Running tests in $dir"
