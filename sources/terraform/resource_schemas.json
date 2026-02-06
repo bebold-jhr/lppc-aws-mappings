@@ -1432,6 +1432,7 @@
   "aws_ssoadmin_application_assignment",
   "aws_ssoadmin_application_assignment_configuration",
   "aws_ssoadmin_customer_managed_policy_attachment",
+  "aws_ssoadmin_customer_managed_policy_attachments_exclusive",
   "aws_ssoadmin_instance_access_control_attributes",
   "aws_ssoadmin_managed_policy_attachment",
   "aws_ssoadmin_managed_policy_attachments_exclusive",
