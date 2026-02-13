@@ -5726,6 +5726,10 @@
     } ]
   }, {
     "Name" : "DeleteCommandExecution",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteCommandExecution",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "delete_command_execution",
@@ -8267,10 +8271,6 @@
     } ]
   }, {
     "Name" : "ValidateSecurityProfileBehaviors",
-    "AuthorizedActions" : [ {
-      "Name" : "ValidateSecurityProfileBehaviors",
-      "Service" : "iot"
-    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "validate_security_profile_behaviors",

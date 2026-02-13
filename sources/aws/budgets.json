@@ -381,6 +381,9 @@
     "AuthorizedActions" : [ {
       "Name" : "DescribeBudgetAction",
       "Service" : "budgets"
+    }, {
+      "Name" : "ViewBilling",
+      "Service" : "aws-portal"
     } ],
     "SDK" : [ {
       "Name" : "budgets",

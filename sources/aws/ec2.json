@@ -11848,8 +11848,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:AvailabilityZone", "ec2:AvailabilityZoneId", "ec2:Encrypted", "ec2:ParentSnapshot", "ec2:ResourceTag/${TagKey}", "ec2:VolumeID", "ec2:VolumeIops", "ec2:VolumeSize", "ec2:VolumeThroughput", "ec2:VolumeType" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListImagesInRecycleBin",
@@ -17098,6 +17098,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateSecondaryNetwork",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateTags",
+      "Service" : "ec2"
+    } ],
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "create_secondary_network",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateSecondarySubnet",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateTags",
+      "Service" : "ec2"
+    } ],
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "create_secondary_subnet",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateSecurityGroup",
     "AuthorizedActions" : [ {
       "Name" : "CreateSecurityGroup",
@@ -18206,6 +18228,20 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "delete_route_table",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteSecondaryNetwork",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "delete_secondary_network",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteSecondarySubnet",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "delete_secondary_subnet",
       "Package" : "Boto3"
     } ]
   }, {
@@ -20046,6 +20082,27 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "describe_scheduled_instances",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeSecondaryInterfaces",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "describe_secondary_interfaces",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeSecondaryNetworks",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "describe_secondary_networks",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeSecondarySubnets",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "describe_secondary_subnets",
       "Package" : "Boto3"
     } ]
   }, {

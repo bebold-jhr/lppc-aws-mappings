@@ -8170,6 +8170,9 @@
       "Name" : "CreateModel",
       "Service" : "sagemaker"
     }, {
+      "Name" : "DeployHubModel",
+      "Service" : "sagemaker"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "sagemaker.amazonaws.com" ]
@@ -8343,9 +8346,6 @@
   }, {
     "Name" : "CreateNotebookInstanceLifecycleConfig",
     "AuthorizedActions" : [ {
-      "Name" : "AddTags",
-      "Service" : "sagemaker"
-    }, {
       "Name" : "CreateNotebookInstanceLifecycleConfig",
       "Service" : "sagemaker"
     } ],
@@ -12014,6 +12014,9 @@
   }, {
     "Name" : "UpdateProject",
     "AuthorizedActions" : [ {
+      "Name" : "AddTags",
+      "Service" : "sagemaker"
+    }, {
       "Name" : "UpdateProject",
       "Service" : "sagemaker"
     } ],

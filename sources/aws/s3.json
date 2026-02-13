@@ -1489,7 +1489,7 @@
       "Name" : "object"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {

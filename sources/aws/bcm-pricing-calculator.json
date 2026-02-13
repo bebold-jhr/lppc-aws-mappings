@@ -19,6 +19,7 @@
     }
   }, {
     "Name" : "CreateBillScenario",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -67,6 +68,7 @@
     }
   }, {
     "Name" : "CreateWorkloadEstimate",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -449,6 +451,13 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "bill-scenario",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "workload-estimate",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -464,6 +473,13 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "bill-scenario",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "workload-estimate",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -1003,13 +1019,15 @@
   } ],
   "Resources" : [ {
     "Name" : "bill-estimate",
-    "ARNFormats" : [ "arn:${Partition}:bcm-pricing-calculator:${Region}:${Account}:bill-estimate/${BillEstimateId}" ]
+    "ARNFormats" : [ "arn:${Partition}:bcm-pricing-calculator::${Account}:bill-estimate/${BillEstimateId}" ]
   }, {
     "Name" : "bill-scenario",
-    "ARNFormats" : [ "arn:${Partition}:bcm-pricing-calculator:${Region}:${Account}:bill-scenario/${BillScenarioId}" ]
+    "ARNFormats" : [ "arn:${Partition}:bcm-pricing-calculator::${Account}:bill-scenario/${BillScenarioId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "workload-estimate",
-    "ARNFormats" : [ "arn:${Partition}:bcm-pricing-calculator:${Region}:${Account}:workload-estimate/${WorkloadEstimateId}" ]
+    "ARNFormats" : [ "arn:${Partition}:bcm-pricing-calculator::${Account}:workload-estimate/${WorkloadEstimateId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.4"
 }

@@ -8459,6 +8459,12 @@
       "Name" : "PassConnection",
       "Service" : "glue"
     }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "glue.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateTable",
       "Service" : "glue"
     } ],
