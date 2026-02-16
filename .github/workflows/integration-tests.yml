@@ -1,0 +1,133 @@
+name: integration-tests
+on:
+  pull_request:
+    types: 
+      - opened
+      - synchronize
+      - reopened
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: read
+
+jobs:
+  integration-test:
+    # First run will show as "skipped" in PR checks
+    # Only run on re-runs (triggered by /run integration-tests comment or manually)
+    if: github.run_attempt > 1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get PR details
+        uses: actions/github-script@v8
+        id: get-pr
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            // Validate branch names contain only safe characters
+            const branchRegex = /^[a-zA-Z0-9._\/-]+$/;
+            if (!branchRegex.test(pr.head.ref) || !branchRegex.test(pr.base.ref)) {
+              throw new Error('Invalid branch name detected');
+            }
+            console.log(`PR #${pr.number}: head_ref=${pr.head.ref}, head_sha=${pr.head.sha}`);
+            core.setOutput('head_ref', pr.head.ref);
+            core.setOutput('base_ref', pr.base.ref);
+            core.setOutput('head_sha', pr.head.sha);
+
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ steps.get-pr.outputs.head_ref }}
+          fetch-depth: 0
+
+      - name: Get changed files and determine tests to run
+        id: changed-files
+        env:
+          BASE_REF: ${{ steps.get-pr.outputs.base_ref }}
+        run: |
+          # Fetch base branch for comparison
+          git fetch origin "$BASE_REF"
+
+          # Get all changed files
+          CHANGED_FILES=$(git diff --name-only "origin/$BASE_REF"...HEAD)
+
+          TEST_DIRS=""
+
+          # 1. Check for changed mapping files -> run corresponding test
+          CHANGED_MAPPINGS=$(echo "$CHANGED_FILES" | grep -E '^mappings/.*\.yml$' | \
+            grep -v 'yamllint-config.yml' || true)
+
+          for file in $CHANGED_MAPPINGS; do
+            # Extract type and name from mappings/<type>/<name>.yml
+            if [[ "$file" =~ ^mappings/([^/]+)/([^/]+)\.yml$ ]]; then
+              TYPE="${BASH_REMATCH[1]}"
+              NAME="${BASH_REMATCH[2]}"
+              TEST_DIR="integration-tests/${TYPE}/${NAME}"
+
+              if [ -d "$TEST_DIR" ]; then
+                TEST_DIRS="$TEST_DIRS $TEST_DIR"
+              fi
+            fi
+          done
+
+          # 2. Check for changed integration test files -> run that test
+          CHANGED_TESTS=$(echo "$CHANGED_FILES" | grep -E '^integration-tests/' || true)
+
+          for file in $CHANGED_TESTS; do
+            # Extract type and name from integration-tests/<type>/<name>/...
+            # Skip files directly in integration-tests/ or integration-tests/modules/
+            if [[ "$file" =~ ^integration-tests/([^/]+)/([^/]+)/ ]]; then
+              TYPE="${BASH_REMATCH[1]}"
+              NAME="${BASH_REMATCH[2]}"
+
+              # Skip the shared modules directory
+              if [ "$TYPE" = "modules" ]; then
+                continue
+              fi
+
+              TEST_DIR="integration-tests/${TYPE}/${NAME}"
+              if [ -d "$TEST_DIR" ]; then
+                TEST_DIRS="$TEST_DIRS $TEST_DIR"
+              fi
+            fi
+          done
+
+          # Trim and deduplicate
+          TEST_DIRS=$(echo "$TEST_DIRS" | xargs -n1 | sort -u | xargs)
+          echo "test_dirs=$TEST_DIRS" >> "$GITHUB_OUTPUT"
+          echo "Found test directories: $TEST_DIRS"
+
+      - name: Configure AWS credentials
+        if: steps.changed-files.outputs.test_dirs != ''
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          aws-region: us-east-1
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/${{ secrets.AWS_OIDC_ROLE_NAME }}
+          role-session-name: integration-test-run-${{ github.run_id }}
+
+      - name: Verify AWS credentials
+        if: steps.changed-files.outputs.test_dirs != ''
+        run: aws sts get-caller-identity
+
+      - name: Setup Terraform
+        if: steps.changed-files.outputs.test_dirs != ''
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Run integration tests
+        if: steps.changed-files.outputs.test_dirs != ''
+        env:
+          TEST_DIRS: ${{ steps.changed-files.outputs.test_dirs }}
+          TF_VAR_management_account_id: ${{ secrets.MANAGEMENT_ACCOUNT_ID }}
+        run: |
+          for dir in $TEST_DIRS; do
+            echo "::group::Running tests in $dir"
+            cd "$dir"
+            terraform init -no-color
+            terraform test -no-color
+            cd - > /dev/null
+            echo "::endgroup::"
+          done
+
+      - name: No tests to run
+        if: steps.changed-files.outputs.test_dirs == ''
+        run: |
+          echo "No relevant changes found (no mappings or integration test files changed)."

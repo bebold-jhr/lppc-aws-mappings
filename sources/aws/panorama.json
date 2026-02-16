@@ -1,0 +1,996 @@
+{
+  "Name" : "panorama",
+  "Actions" : [ {
+    "Name" : "CreateApplicationInstance",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "CreateJobForDevices",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "CreateNodeFromTemplateJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "CreatePackage",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "CreatePackageImportJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteDevice",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "device"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeletePackage",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "package"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeregisterPackageVersion",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "package"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeApplicationInstance",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "applicationInstance"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeApplicationInstanceDetails",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "applicationInstance"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeDevice",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "device"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeDeviceJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeNode",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeNodeFromTemplateJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribePackage",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "package"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribePackageImportJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribePackageVersion",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "package"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeSoftware",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetWebSocketURL",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListApplicationInstanceDependencies",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "applicationInstance"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListApplicationInstanceNodeInstances",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "applicationInstance"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListApplicationInstances",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "device"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListDevices",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListDevicesJobs",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "device"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListNodeFromTemplateJobs",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListNodes",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListPackageImportJobs",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListPackages",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListTagsForResource",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "applicationInstance"
+    }, {
+      "Name" : "device"
+    }, {
+      "Name" : "package"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ProvisionDevice",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "RegisterPackageVersion",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "package"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "RemoveApplicationInstance",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "applicationInstance"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "SignalApplicationInstanceNodeInstances",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "applicationInstance"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "TagResource",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : true,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "applicationInstance"
+    }, {
+      "Name" : "device"
+    }, {
+      "Name" : "package"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UntagResource",
+    "ActionConditionKeys" : [ "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : true,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "applicationInstance"
+    }, {
+      "Name" : "device"
+    }, {
+      "Name" : "package"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateDeviceMetadata",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "device"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  } ],
+  "ConditionKeys" : [ {
+    "Name" : "aws:RequestTag/${TagKey}",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "aws:ResourceTag/${TagKey}",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "aws:TagKeys",
+    "Types" : [ "ArrayOfString" ]
+  } ],
+  "Operations" : [ {
+    "Name" : "CreateApplicationInstance",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateApplicationInstance",
+      "Service" : "panorama"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "panorama.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "create_application_instance",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateJobForDevices",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateJobForDevices",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "create_job_for_devices",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateNodeFromTemplateJob",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateNodeFromTemplateJob",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "create_node_from_template_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreatePackage",
+    "AuthorizedActions" : [ {
+      "Name" : "CreatePackage",
+      "Service" : "panorama"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "create_package",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreatePackageImportJob",
+    "AuthorizedActions" : [ {
+      "Name" : "CreatePackageImportJob",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "create_package_import_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteDevice",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteDevice",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "delete_device",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeletePackage",
+    "AuthorizedActions" : [ {
+      "Name" : "DeletePackage",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "delete_package",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeregisterPackageVersion",
+    "AuthorizedActions" : [ {
+      "Name" : "DeregisterPackageVersion",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "deregister_package_version",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeApplicationInstance",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeApplicationInstance",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "describe_application_instance",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeApplicationInstanceDetails",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeApplicationInstanceDetails",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "describe_application_instance_details",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeDevice",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeDevice",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "describe_device",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeDeviceJob",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeDeviceJob",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "describe_device_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeNode",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeNode",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "describe_node",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeNodeFromTemplateJob",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeNodeFromTemplateJob",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "describe_node_from_template_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribePackage",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribePackage",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "describe_package",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribePackageImportJob",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribePackageImportJob",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "describe_package_import_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribePackageVersion",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribePackageVersion",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "describe_package_version",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListApplicationInstanceDependencies",
+    "AuthorizedActions" : [ {
+      "Name" : "ListApplicationInstanceDependencies",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "list_application_instance_dependencies",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListApplicationInstanceNodeInstances",
+    "AuthorizedActions" : [ {
+      "Name" : "ListApplicationInstanceNodeInstances",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "list_application_instance_node_instances",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListApplicationInstances",
+    "AuthorizedActions" : [ {
+      "Name" : "ListApplicationInstances",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "list_application_instances",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListDevices",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDevices",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "list_devices",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListDevicesJobs",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDevicesJobs",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "list_devices_jobs",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListNodeFromTemplateJobs",
+    "AuthorizedActions" : [ {
+      "Name" : "ListNodeFromTemplateJobs",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "list_node_from_template_jobs",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListNodes",
+    "AuthorizedActions" : [ {
+      "Name" : "ListNodes",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "list_nodes",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListPackageImportJobs",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPackageImportJobs",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "list_package_import_jobs",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListPackages",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPackages",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "list_packages",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListTagsForResource",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTagsForResource",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "list_tags_for_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ProvisionDevice",
+    "AuthorizedActions" : [ {
+      "Name" : "ProvisionDevice",
+      "Service" : "panorama"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "provision_device",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "RegisterPackageVersion",
+    "AuthorizedActions" : [ {
+      "Name" : "RegisterPackageVersion",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "register_package_version",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "RemoveApplicationInstance",
+    "AuthorizedActions" : [ {
+      "Name" : "RemoveApplicationInstance",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "remove_application_instance",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "SignalApplicationInstanceNodeInstances",
+    "AuthorizedActions" : [ {
+      "Name" : "SignalApplicationInstanceNodeInstances",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "signal_application_instance_node_instances",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "tag_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "untag_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateDeviceMetadata",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateDeviceMetadata",
+      "Service" : "panorama"
+    } ],
+    "SDK" : [ {
+      "Name" : "panorama",
+      "Method" : "update_device_metadata",
+      "Package" : "Boto3"
+    } ]
+  } ],
+  "Resources" : [ {
+    "Name" : "applicationInstance",
+    "ARNFormats" : [ "arn:${Partition}:panorama:${Region}:${Account}:applicationInstance/${ApplicationInstanceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "device",
+    "ARNFormats" : [ "arn:${Partition}:panorama:${Region}:${Account}:device/${DeviceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "package",
+    "ARNFormats" : [ "arn:${Partition}:panorama:${Region}:${Account}:package/${PackageId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  } ],
+  "Version" : "v1.4"
+}

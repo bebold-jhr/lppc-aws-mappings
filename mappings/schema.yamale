@@ -1,0 +1,38 @@
+# Example
+#
+# metadata:
+#   aws:
+#     documentation: https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2.html
+#     service-reference: https://servicereference.us-east-1.amazonaws.com/v1/ec2/ec2.json
+#   terraform:
+#     documentation: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet
+# deny:
+#   - ec2:CopyImage
+# allow:
+#   - ec2:List*
+#   - ec2:Describe*
+#   - ec2:DeleteSubnet
+#   - ec2:CreateSubnet
+#   - ...
+# conditional:
+#   block:
+#     property:
+#       - ec2:AdditionalAction
+#   other:
+#     - ec2:OtherAction
+metadata:
+  aws:
+    documentation: str(starts_with="https://docs.aws.amazon.com/", required=True)
+    service-reference: str(starts_with="https://servicereference.us-east-1.amazonaws.com/", required=True)
+  terraform:
+    documentation: str(starts_with="https://registry.terraform.io/", required=True)
+
+deny: list(str(matches="^[a-z0-9]+:[A-Za-z*]+$"), min=1, required=False)
+
+allow: list(str(matches="^[a-z0-9]+:[A-Za-z*]+$"), min=1, required=True)
+
+conditional: include('conditional', required=False)
+
+---
+
+conditional: any(map(include('conditional')), list(str(matches="^[a-z0-9]+:[A-Za-z*]+$"), min=1))
