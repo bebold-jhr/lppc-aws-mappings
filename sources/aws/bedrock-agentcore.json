@@ -2811,6 +2811,10 @@
     } ]
   }, {
     "Name" : "DeleteBrowserProfile",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteBrowserProfile",
+      "Service" : "bedrock-agentcore"
+    } ],
     "SDK" : [ {
       "Name" : "bedrock-agentcore-control",
       "Method" : "delete_browser_profile",
@@ -3027,6 +3031,10 @@
     } ]
   }, {
     "Name" : "GetBrowserProfile",
+    "AuthorizedActions" : [ {
+      "Name" : "GetBrowserProfile",
+      "Service" : "bedrock-agentcore"
+    } ],
     "SDK" : [ {
       "Name" : "bedrock-agentcore-control",
       "Method" : "get_browser_profile",
@@ -3612,6 +3620,10 @@
     } ]
   }, {
     "Name" : "SaveBrowserSessionProfile",
+    "AuthorizedActions" : [ {
+      "Name" : "SaveBrowserSessionProfile",
+      "Service" : "bedrock-agentcore"
+    } ],
     "SDK" : [ {
       "Name" : "bedrock-agentcore",
       "Method" : "save_browser_session_profile",
@@ -3922,7 +3934,7 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "browser-profile",
-    "ARNFormats" : [ "arn:${Partition}:bedrock-agentcore:${Region}:aws:browser-profile/${BrowserProfileId}" ],
+    "ARNFormats" : [ "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:browser-profile/${BrowserProfileId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "code-interpreter",

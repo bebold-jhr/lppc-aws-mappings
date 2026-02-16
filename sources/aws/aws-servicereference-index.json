@@ -602,6 +602,9 @@
   "service" : "inspector2",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/inspector2/inspector2.json"
 }, {
+  "service" : "inspector2-telemetry",
+  "url" : "https://servicereference.us-east-1.amazonaws.com/v1/inspector2-telemetry/inspector2-telemetry.json"
+}, {
   "service" : "internetmonitor",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/internetmonitor/internetmonitor.json"
 }, {

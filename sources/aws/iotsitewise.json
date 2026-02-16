@@ -1892,6 +1892,10 @@
   } ],
   "Operations" : [ {
     "Name" : "AssociateAssets",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateAssets",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "associate_assets",
@@ -1899,6 +1903,10 @@
     } ]
   }, {
     "Name" : "AssociateTimeSeriesToAssetProperty",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateTimeSeriesToAssetProperty",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "associate_time_series_to_asset_property",
@@ -1983,6 +1991,13 @@
     } ]
   }, {
     "Name" : "CreateAsset",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAsset",
+      "Service" : "iotsitewise"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "create_asset",
@@ -1990,6 +2005,13 @@
     } ]
   }, {
     "Name" : "CreateAssetModel",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAssetModel",
+      "Service" : "iotsitewise"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "create_asset_model",
@@ -1997,6 +2019,16 @@
     } ]
   }, {
     "Name" : "CreateAssetModelCompositeModel",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAssetModelCompositeModel",
+      "Service" : "iotsitewise"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "iotsitewise.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "create_asset_model_composite_model",
@@ -2021,6 +2053,13 @@
     } ]
   }, {
     "Name" : "CreateComputationModel",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateComputationModel",
+      "Service" : "iotsitewise"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "create_computation_model",
@@ -2042,6 +2081,19 @@
     } ]
   }, {
     "Name" : "CreateDataset",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateDataset",
+      "Service" : "iotsitewise"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "iotsitewise.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "create_dataset",
@@ -2114,6 +2166,10 @@
     } ]
   }, {
     "Name" : "DeleteAsset",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAsset",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "delete_asset",
@@ -2121,6 +2177,10 @@
     } ]
   }, {
     "Name" : "DeleteAssetModel",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAssetModel",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "delete_asset_model",
@@ -2128,6 +2188,10 @@
     } ]
   }, {
     "Name" : "DeleteAssetModelCompositeModel",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAssetModelCompositeModel",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "delete_asset_model_composite_model",
@@ -2135,6 +2199,10 @@
     } ]
   }, {
     "Name" : "DeleteAssetModelInterfaceRelationship",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAssetModelInterfaceRelationship",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "delete_asset_model_interface_relationship",
@@ -2142,6 +2210,10 @@
     } ]
   }, {
     "Name" : "DeleteComputationModel",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteComputationModel",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "delete_computation_model",
@@ -2160,6 +2232,10 @@
     } ]
   }, {
     "Name" : "DeleteDataset",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteDataset",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "delete_dataset",
@@ -2200,6 +2276,10 @@
     } ]
   }, {
     "Name" : "DeleteTimeSeries",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteTimeSeries",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "delete_time_series",
@@ -2218,6 +2298,10 @@
     } ]
   }, {
     "Name" : "DescribeAction",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAction",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "describe_action",
@@ -2225,6 +2309,10 @@
     } ]
   }, {
     "Name" : "DescribeAsset",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAsset",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "describe_asset",
@@ -2232,6 +2320,10 @@
     } ]
   }, {
     "Name" : "DescribeAssetCompositeModel",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAssetCompositeModel",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "describe_asset_composite_model",
@@ -2239,6 +2331,10 @@
     } ]
   }, {
     "Name" : "DescribeAssetModel",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAssetModel",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "describe_asset_model",
@@ -2246,6 +2342,10 @@
     } ]
   }, {
     "Name" : "DescribeAssetModelCompositeModel",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAssetModelCompositeModel",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "describe_asset_model_composite_model",
@@ -2253,6 +2353,10 @@
     } ]
   }, {
     "Name" : "DescribeAssetModelInterfaceRelationship",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAssetModelInterfaceRelationship",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "describe_asset_model_interface_relationship",
@@ -2260,6 +2364,10 @@
     } ]
   }, {
     "Name" : "DescribeAssetProperty",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAssetProperty",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "describe_asset_property",
@@ -2278,6 +2386,10 @@
     } ]
   }, {
     "Name" : "DescribeComputationModel",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeComputationModel",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "describe_computation_model",
@@ -2285,6 +2397,10 @@
     } ]
   }, {
     "Name" : "DescribeComputationModelExecutionSummary",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeComputationModelExecutionSummary",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "describe_computation_model_execution_summary",
@@ -2303,6 +2419,10 @@
     } ]
   }, {
     "Name" : "DescribeDataset",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeDataset",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "describe_dataset",
@@ -2321,6 +2441,10 @@
     } ]
   }, {
     "Name" : "DescribeExecution",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeExecution",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "describe_execution",
@@ -2350,6 +2474,10 @@
     } ]
   }, {
     "Name" : "DescribeLoggingOptions",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeLoggingOptions",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "describe_logging_options",
@@ -2390,6 +2518,10 @@
     } ]
   }, {
     "Name" : "DescribeTimeSeries",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeTimeSeries",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "describe_time_series",
@@ -2397,6 +2529,10 @@
     } ]
   }, {
     "Name" : "DisassociateAssets",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateAssets",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "disassociate_assets",
@@ -2404,6 +2540,10 @@
     } ]
   }, {
     "Name" : "DisassociateTimeSeriesFromAssetProperty",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateTimeSeriesFromAssetProperty",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "disassociate_time_series_from_asset_property",
@@ -2411,6 +2551,10 @@
     } ]
   }, {
     "Name" : "ExecuteAction",
+    "AuthorizedActions" : [ {
+      "Name" : "ExecuteAction",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "execute_action",
@@ -2495,6 +2639,10 @@
     } ]
   }, {
     "Name" : "ListActions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListActions",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_actions",
@@ -2502,6 +2650,10 @@
     } ]
   }, {
     "Name" : "ListAssetModelCompositeModels",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAssetModelCompositeModels",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_asset_model_composite_models",
@@ -2509,6 +2661,10 @@
     } ]
   }, {
     "Name" : "ListAssetModelProperties",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAssetModelProperties",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_asset_model_properties",
@@ -2516,6 +2672,10 @@
     } ]
   }, {
     "Name" : "ListAssetModels",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAssetModels",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_asset_models",
@@ -2523,6 +2683,10 @@
     } ]
   }, {
     "Name" : "ListAssetProperties",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAssetProperties",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_asset_properties",
@@ -2530,6 +2694,10 @@
     } ]
   }, {
     "Name" : "ListAssetRelationships",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAssetRelationships",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_asset_relationships",
@@ -2537,6 +2705,10 @@
     } ]
   }, {
     "Name" : "ListAssets",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAssets",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_assets",
@@ -2544,6 +2716,10 @@
     } ]
   }, {
     "Name" : "ListAssociatedAssets",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAssociatedAssets",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_associated_assets",
@@ -2562,6 +2738,10 @@
     } ]
   }, {
     "Name" : "ListCompositionRelationships",
+    "AuthorizedActions" : [ {
+      "Name" : "ListCompositionRelationships",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_composition_relationships",
@@ -2569,6 +2749,10 @@
     } ]
   }, {
     "Name" : "ListComputationModelDataBindingUsages",
+    "AuthorizedActions" : [ {
+      "Name" : "ListComputationModelDataBindingUsages",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_computation_model_data_binding_usages",
@@ -2576,6 +2760,10 @@
     } ]
   }, {
     "Name" : "ListComputationModelResolveToResources",
+    "AuthorizedActions" : [ {
+      "Name" : "ListComputationModelResolveToResources",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_computation_model_resolve_to_resources",
@@ -2583,6 +2771,10 @@
     } ]
   }, {
     "Name" : "ListComputationModels",
+    "AuthorizedActions" : [ {
+      "Name" : "ListComputationModels",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_computation_models",
@@ -2601,6 +2793,10 @@
     } ]
   }, {
     "Name" : "ListDatasets",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDatasets",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_datasets",
@@ -2608,6 +2804,10 @@
     } ]
   }, {
     "Name" : "ListExecutions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListExecutions",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_executions",
@@ -2626,6 +2826,10 @@
     } ]
   }, {
     "Name" : "ListInterfaceRelationships",
+    "AuthorizedActions" : [ {
+      "Name" : "ListInterfaceRelationships",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_interface_relationships",
@@ -2677,6 +2881,10 @@
     } ]
   }, {
     "Name" : "ListTimeSeries",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTimeSeries",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "list_time_series",
@@ -2684,6 +2892,10 @@
     } ]
   }, {
     "Name" : "PutAssetModelInterfaceRelationship",
+    "AuthorizedActions" : [ {
+      "Name" : "PutAssetModelInterfaceRelationship",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "put_asset_model_interface_relationship",
@@ -2702,6 +2914,10 @@
     } ]
   }, {
     "Name" : "PutLoggingOptions",
+    "AuthorizedActions" : [ {
+      "Name" : "PutLoggingOptions",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "put_logging_options",
@@ -2759,6 +2975,10 @@
     } ]
   }, {
     "Name" : "UpdateAsset",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAsset",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "update_asset",
@@ -2766,6 +2986,10 @@
     } ]
   }, {
     "Name" : "UpdateAssetModel",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAssetModel",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "update_asset_model",
@@ -2773,6 +2997,16 @@
     } ]
   }, {
     "Name" : "UpdateAssetModelCompositeModel",
+    "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "iotsitewise.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "UpdateAssetModelCompositeModel",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "update_asset_model_composite_model",
@@ -2780,6 +3014,10 @@
     } ]
   }, {
     "Name" : "UpdateAssetProperty",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAssetProperty",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "update_asset_property",
@@ -2787,6 +3025,10 @@
     } ]
   }, {
     "Name" : "UpdateComputationModel",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateComputationModel",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "update_computation_model",
@@ -2805,6 +3047,16 @@
     } ]
   }, {
     "Name" : "UpdateDataset",
+    "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "iotsitewise.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "UpdateDataset",
+      "Service" : "iotsitewise"
+    } ],
     "SDK" : [ {
       "Name" : "iotsitewise",
       "Method" : "update_dataset",

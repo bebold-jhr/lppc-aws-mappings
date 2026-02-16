@@ -11,6 +11,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "AgentSpaceResource"
+    }, {
       "Name" : "AssociationResource"
     } ],
     "SupportedBy" : {
@@ -169,6 +171,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "AgentSpaceResource"
+    }, {
       "Name" : "AssociationResource"
     } ],
     "SupportedBy" : {
@@ -262,6 +266,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "AgentSpaceResource"
+    }, {
       "Name" : "AssociationResource"
     } ],
     "SupportedBy" : {
@@ -410,6 +416,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "AgentSpaceResource"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -537,6 +546,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "AgentSpaceResource"
+    }, {
       "Name" : "AssociationResource"
     } ],
     "SupportedBy" : {
@@ -616,6 +627,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "AgentSpaceResource"
+    }, {
       "Name" : "AssociationResource"
     } ],
     "SupportedBy" : {

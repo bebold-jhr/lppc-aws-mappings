@@ -1430,12 +1430,6 @@
   }, {
     "Name" : "UpdateExtension",
     "AuthorizedActions" : [ {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "appconfig.amazonaws.com" ]
-      },
-      "Service" : "iam"
-    }, {
       "Name" : "UpdateExtension",
       "Service" : "appconfig"
     } ],
@@ -1501,7 +1495,7 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "hostedconfigurationversion",
-    "ARNFormats" : [ "arn:${Partition}:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}/hostedconfigurationversion/${VersionNumber}" ]
+    "ARNFormats" : [ "arn:${Partition}:appconfig:${Region}:${Account}:application/${ApplicationId}/configurationprofile/${ConfigurationProfileId}" ]
   } ],
   "Version" : "v1.4"
 }

@@ -1005,8 +1005,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "mlflow-app",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
+      "Name" : "mlflow-app"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1261,8 +1260,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "partner-app",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
+      "Name" : "partner-app"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1279,8 +1277,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "partner-app",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
+      "Name" : "partner-app"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1332,8 +1329,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "mlflow-app",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
+      "Name" : "mlflow-app"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2214,8 +2210,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "mlflow-app",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
+      "Name" : "mlflow-app"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2455,8 +2450,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "partner-app",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
+      "Name" : "partner-app"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2639,6 +2633,8 @@
       "Name" : "inference-recommendations-job"
     }, {
       "Name" : "labeling-job"
+    }, {
+      "Name" : "mlflow-app"
     }, {
       "Name" : "mlflow-tracking-server"
     }, {
@@ -3504,8 +3500,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "mlflow-app",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
+      "Name" : "mlflow-app"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -3745,8 +3740,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "partner-app",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
+      "Name" : "partner-app"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -5577,6 +5571,8 @@
     }, {
       "Name" : "labeling-job"
     }, {
+      "Name" : "mlflow-app"
+    }, {
       "Name" : "mlflow-tracking-server"
     }, {
       "Name" : "model"
@@ -6912,8 +6908,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "mlflow-app",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
+      "Name" : "mlflow-app"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -7056,8 +7051,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "partner-app",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
+      "Name" : "partner-app"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -7926,9 +7920,6 @@
   }, {
     "Name" : "CreateFlowDefinition",
     "AuthorizedActions" : [ {
-      "Name" : "AddTags",
-      "Service" : "sagemaker"
-    }, {
       "Name" : "CreateFlowDefinition",
       "Service" : "sagemaker"
     }, {
@@ -8170,6 +8161,9 @@
       "Name" : "CreateModel",
       "Service" : "sagemaker"
     }, {
+      "Name" : "DeployHubModel",
+      "Service" : "sagemaker"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "sagemaker.amazonaws.com" ]
@@ -8343,9 +8337,6 @@
   }, {
     "Name" : "CreateNotebookInstanceLifecycleConfig",
     "AuthorizedActions" : [ {
-      "Name" : "AddTags",
-      "Service" : "sagemaker"
-    }, {
       "Name" : "CreateNotebookInstanceLifecycleConfig",
       "Service" : "sagemaker"
     } ],
@@ -12014,6 +12005,9 @@
   }, {
     "Name" : "UpdateProject",
     "AuthorizedActions" : [ {
+      "Name" : "AddTags",
+      "Service" : "sagemaker"
+    }, {
       "Name" : "UpdateProject",
       "Service" : "sagemaker"
     } ],
@@ -12255,7 +12249,8 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "mlflow-app",
-    "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-app/${MLflowAppId}" ]
+    "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-app/${MLflowAppId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "mlflow-tracking-server",
     "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-tracking-server/${MlflowTrackingServerName}" ]
@@ -12312,7 +12307,8 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "partner-app",
-    "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:partner-app/${AppId}" ]
+    "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:partner-app/${AppId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "pipeline",
     "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:pipeline/${PipelineName}" ],
