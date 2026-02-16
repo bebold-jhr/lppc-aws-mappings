@@ -5,10 +5,10 @@ locals {
   mappings_file      = abspath(local.mappings_file_path)
 
   yaml_decoded = yamldecode(file(local.mappings_file))
-  actions      = local.yaml_decoded["actions"] != null ? local.yaml_decoded["actions"] : []
+  allow        = local.yaml_decoded["allow"] != null ? local.yaml_decoded["allow"] : []
 
-  optional_exists = lookup(local.yaml_decoded, "optional", null) != null
-  optional        = regexall("\\w+:\\w+", local.optional_exists ? yamlencode(local.yaml_decoded["optional"]) : "")
+  conditional_exists = lookup(local.yaml_decoded, "conditional", null) != null
+  conditional        = regexall("\\w+:\\w+", local.conditional_exists ? yamlencode(local.yaml_decoded["conditional"]) : "")
 
-  permissions = setunion(toset(local.actions), toset(local.optional))
+  permissions = setunion(toset(local.allow), toset(local.conditional))
 }
