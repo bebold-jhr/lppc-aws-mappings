@@ -1,0 +1,9 @@
+---
+metadata:
+  aws:
+    documentation: https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html
+    service-reference: https://servicereference.us-east-1.amazonaws.com/v1/codebuild/codebuild.json
+  terraform:
+    documentation: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/actions/codebuild_start_build
+allow:
+  - codebuild:StartBuild
