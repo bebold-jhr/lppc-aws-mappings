@@ -7,4 +7,3 @@ metadata:
     documentation: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/actions/ses_send_email
 allow:
   - ses:SendEmail
-  - ses:SendRawEmail
