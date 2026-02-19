@@ -47,7 +47,7 @@ run "correctly_returns_caller_identity" {
 
   assert {
     condition     = startswith(data.aws_caller_identity.this.arn, "arn:aws:sts::${run.create_deployer_role.account_id}:assumed-role/${run.create_deployer_role.deployer_role.name}")
-    error_message = "Used wrong role."
+    error_message = "Used the wrong role."
   }
 
   assert {
