@@ -32,7 +32,7 @@ provider "aws" {
 ####
 # Perform tests
 ####
-run "fetch_primary_contact" {
+run "fetch_regions" {
   state_key = "main"
 
   module {
@@ -56,7 +56,7 @@ run "fetch_primary_contact" {
   }
 
   assert {
-    condition     = length(data.aws_account_primary_contact.this.full_name) > 0
-    error_message = "Expected full name to be set."
+    condition     = length(data.aws_account_regions.this.regions) > 0
+    error_message = "Expected regions to contains at least one entry."
   }
 }
