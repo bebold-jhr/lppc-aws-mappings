@@ -133,6 +133,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "assessmentFramework"
+    }, {
       "Name" : "control"
     } ],
     "SupportedBy" : {

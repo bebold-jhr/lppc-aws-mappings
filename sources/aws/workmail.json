@@ -53,6 +53,7 @@
     }
   }, {
     "Name" : "AssumeImpersonationRole",
+    "ActionConditionKeys" : [ "workmail:ImpersonationRoleId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2143,6 +2144,9 @@
   }, {
     "Name" : "aws:TagKeys",
     "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "workmail:ImpersonationRoleId",
+    "Types" : [ "String" ]
   } ],
   "Operations" : [ {
     "Name" : "AssociateDelegateToResource",

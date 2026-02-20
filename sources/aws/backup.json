@@ -2993,6 +2993,10 @@
     } ]
   }, {
     "Name" : "RevokeRestoreAccessBackupVault",
+    "AuthorizedActions" : [ {
+      "Name" : "RevokeRestoreAccessBackupVault",
+      "Service" : "backup"
+    } ],
     "SDK" : [ {
       "Name" : "backup",
       "Method" : "revoke_restore_access_backup_vault",

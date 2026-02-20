@@ -2590,6 +2590,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateBrowserProfile",
       "Service" : "bedrock-agentcore"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "bedrock-agentcore"
     } ],
     "SDK" : [ {
       "Name" : "bedrock-agentcore-control",
@@ -2620,6 +2623,9 @@
     "Name" : "CreateEvaluator",
     "AuthorizedActions" : [ {
       "Name" : "CreateEvaluator",
+      "Service" : "bedrock-agentcore"
+    }, {
+      "Name" : "TagResource",
       "Service" : "bedrock-agentcore"
     } ],
     "SDK" : [ {
@@ -2769,6 +2775,12 @@
     "Name" : "DeleteAgentRuntime",
     "AuthorizedActions" : [ {
       "Name" : "DeleteAgentRuntime",
+      "Service" : "bedrock-agentcore"
+    }, {
+      "Name" : "DeleteAgentRuntimeEndpoint",
+      "Service" : "bedrock-agentcore"
+    }, {
+      "Name" : "DeleteWorkloadIdentity",
       "Service" : "bedrock-agentcore"
     } ],
     "SDK" : [ {

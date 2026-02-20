@@ -411,7 +411,7 @@
     "Types" : [ "String" ]
   }, {
     "Name" : "sts:IdentityTokenAudience",
-    "Types" : [ "String" ]
+    "Types" : [ "ArrayOfString" ]
   }, {
     "Name" : "sts:RequestContext/${ContextKey}",
     "Types" : [ "String" ]

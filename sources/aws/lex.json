@@ -3106,7 +3106,13 @@
   }, {
     "Name" : "DescribeBotReplica",
     "AuthorizedActions" : [ {
+      "Name" : "DescribeBotAlias",
+      "Service" : "lex"
+    }, {
       "Name" : "DescribeBotReplica",
+      "Service" : "lex"
+    }, {
+      "Name" : "DescribeBotVersion",
       "Service" : "lex"
     } ],
     "SDK" : [ {

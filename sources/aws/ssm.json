@@ -2849,12 +2849,6 @@
         "iam:PassedToService" : [ "ssm.amazonaws.com" ]
       },
       "Service" : "iam"
-    }, {
-      "Name" : "SendCommand",
-      "Service" : "ssm"
-    }, {
-      "Name" : "StartAutomationExecution",
-      "Service" : "ssm"
     } ],
     "SDK" : [ {
       "Name" : "ssm",
@@ -2868,9 +2862,6 @@
       "Service" : "ssm"
     }, {
       "Name" : "CreateAssociationBatch",
-      "Service" : "ssm"
-    }, {
-      "Name" : "SendCommand",
       "Service" : "ssm"
     } ],
     "SDK" : [ {
@@ -4327,12 +4318,6 @@
         "iam:PassedToService" : [ "ssm.amazonaws.com" ]
       },
       "Service" : "iam"
-    }, {
-      "Name" : "SendCommand",
-      "Service" : "ssm"
-    }, {
-      "Name" : "StartAutomationExecution",
-      "Service" : "ssm"
     }, {
       "Name" : "UpdateAssociation",
       "Service" : "ssm"

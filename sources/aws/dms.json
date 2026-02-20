@@ -3140,6 +3140,12 @@
   }, {
     "Name" : "ModifyDataProvider",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "dms.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateDataProvider",
       "Service" : "dms"
     } ],

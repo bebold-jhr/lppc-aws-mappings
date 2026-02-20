@@ -8271,6 +8271,10 @@
     } ]
   }, {
     "Name" : "ValidateSecurityProfileBehaviors",
+    "AuthorizedActions" : [ {
+      "Name" : "ValidateSecurityProfileBehaviors",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "validate_security_profile_behaviors",
