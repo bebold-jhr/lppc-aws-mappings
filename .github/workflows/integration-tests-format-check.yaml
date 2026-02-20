@@ -7,13 +7,13 @@ on:
       - 'main'
     paths:
       - integration-tests/**/*
-      - .github/workflows/integration-tests-format-check.yml
+      - .github/workflows/integration-tests-format-check.yaml
   pull_request:
     branches:
       - '**'
     paths:
       - integration-tests/**/*
-      - .github/workflows/integration-tests-format-check.yml
+      - .github/workflows/integration-tests-format-check.yaml
 
 permissions:
   contents: read

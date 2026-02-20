@@ -6,14 +6,14 @@ on:
     branches:
       - 'main'
     paths:
-      - mappings/**/*.yml
-      - .github/workflows/yaml-check.yml
+      - mappings/**/*.yaml
+      - .github/workflows/yaml-check.yaml
   pull_request:
     branches:
       - '**'
     paths:
-        - mappings/**/*.yml
-        - .github/workflows/yaml-check.yml
+        - mappings/**/*.yaml
+        - .github/workflows/yaml-check.yaml
 
 permissions:
   contents: read
@@ -26,7 +26,7 @@ jobs:
       - uses: actions/checkout@v6
       - name: Check YAML syntax
         run: |
-          yamllint -c mappings/yamllint-config.yml mappings
+          yamllint -c mappings/yamllint-config.yaml mappings
   schema-validation:
     name: Validate schema
     runs-on: ubuntu-latest
