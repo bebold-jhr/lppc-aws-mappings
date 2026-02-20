@@ -53,12 +53,12 @@ jobs:
           TEST_DIRS=""
 
           # 1. Check for changed mapping files -> run corresponding test
-          CHANGED_MAPPINGS=$(echo "$CHANGED_FILES" | grep -E '^mappings/.*\.yml$' | \
-            grep -v 'yamllint-config.yml' || true)
+          CHANGED_MAPPINGS=$(echo "$CHANGED_FILES" | grep -E '^mappings/.*\.yaml$' | \
+            grep -v 'yamllint-config.yaml' || true)
 
           for file in $CHANGED_MAPPINGS; do
-            # Extract type and name from mappings/<type>/<name>.yml
-            if [[ "$file" =~ ^mappings/([^/]+)/([^/]+)\.yml$ ]]; then
+            # Extract type and name from mappings/<type>/<name>.yaml
+            if [[ "$file" =~ ^mappings/([^/]+)/([^/]+)\.yaml$ ]]; then
               TYPE="${BASH_REMATCH[1]}"
               NAME="${BASH_REMATCH[2]}"
               TEST_DIR="integration-tests/${TYPE}/${NAME}"
