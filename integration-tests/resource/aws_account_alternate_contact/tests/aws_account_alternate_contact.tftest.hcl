@@ -18,6 +18,10 @@ variable "aws_account_id" {
   }
 }
 
+variable "original_phone_number" {
+  type = string
+}
+
 ####
 # We are using the management account
 ####
@@ -29,7 +33,6 @@ provider "aws" {
     role_arn = "arn:aws:iam::${var.management_account_id}:role/lppc/ResourceAwsAccountAlternateContact"
   }
 }
-
 
 ####
 # Perform tests
@@ -46,6 +49,10 @@ run "create_alternate_contact" {
   }
 
   command = apply
+
+  variables {
+    phone_number = var.original_phone_number
+  }
 
   assert {
     condition     = startswith(data.aws_caller_identity.this.arn, "arn:aws:sts::${var.management_account_id}:assumed-role/ResourceAwsAccountAlternateContact")

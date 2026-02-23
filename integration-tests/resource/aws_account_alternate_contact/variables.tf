@@ -7,10 +7,6 @@ variable "aws_account_id" {
   }
 }
 
-variable "test_email" {
-  type = string
-}
-
-variable "test_phone_number" {
+variable "phone_number" {
   type = string
 }
