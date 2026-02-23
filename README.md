@@ -30,3 +30,4 @@ Here are some different test setups with examples for reference.
 + **Default:** Creates a resource or fetches a resource using the dynamically created deployer role. Examples: `resource/aws_vpc`, `data/aws_regions`
 + **Test with setup:** Before running the test a test setup has to be created using an independent role (`LppcTestSetupCreator`). Examples: `data/aws_iam_account_alias`, `data/aws_s3_bucket`
 + **Organization context:** Requires a dedicated role in the management account. Naming convention `lppc/{BLOCK_TYPE}{TYPE}` in PascalCase. Examples: `data/aws_organizations_organization`, `data/aws_organizations_delegated_services`
++ **Account context:** Requires a dedicated role in the management account, because the integration test account is not a delegated admin. Naming convention `lppc/{BLOCK_TYPE}{TYPE}` in PascalCase. Examples: `resource/aws_account_region`
