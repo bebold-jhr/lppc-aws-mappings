@@ -119,6 +119,8 @@ jobs:
           TF_VAR_management_account_id: ${{ secrets.MANAGEMENT_ACCOUNT_ID }}
           TF_VAR_aws_account_id: ${{ secrets.AWS_ACCOUNT_ID }}
           TF_VAR_delegated_admin_account_id: ${{ secrets.DELEGATED_ADMIN_ACCOUNT_ID }}
+          TF_VAR_test_email: ${{ secrets.TEST_EMAIL }}
+          TF_VAR_test_phone_number: ${{ secrets.TEST_PHONE_NUMBER }}
         run: |
           for dir in $TEST_DIRS; do
             echo "::group::Running tests in $dir"
