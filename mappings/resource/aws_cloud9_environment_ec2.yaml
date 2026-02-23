@@ -1,0 +1,23 @@
+---
+# CLOUD9 is EOL: https://docs.aws.amazon.com/cloud9/latest/user-guide/history.html
+metadata:
+  aws:
+    documentation: https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html
+    service-reference: https://servicereference.us-east-1.amazonaws.com/v1/cloud9/cloud9.json
+  terraform:
+    documentation: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloud9_environment_ec2
+allow:
+  - cloud9:ActivateEC2Remote
+  - cloud9:CreateEnvironmentEC2
+  - cloud9:CreateEnvironmentSSH
+  - cloud9:CreateEnvironmentToken
+  - cloud9:DeleteEnvironment
+  - cloud9:Describe*
+  - cloud9:Get*
+  - cloud9:List*
+  - cloud9:TagResource
+  - cloud9:UntagResource
+  - cloud9:UpdateEnvironment
+  - cloud9:UpdateEnvironmentSettings
+  - cloud9:UpdateSSHRemote
+  - cloud9:UpdateUserSettings
