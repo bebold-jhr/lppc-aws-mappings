@@ -7,6 +7,8 @@ provider "aws" {
 }
 
 run "create_deployer_role" {
+  state_key = "deployer_role"
+
   module {
     source = "../../modules/deployer-role"
   }

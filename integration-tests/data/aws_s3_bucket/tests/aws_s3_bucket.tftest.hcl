@@ -1,3 +1,37 @@
+variable "aws_account_id" {
+  type        = string
+  description = "The AWS account id for our test account that we get injected from the github workflow."
+
+  validation {
+    condition     = can(regex("^\\d{12}$", var.aws_account_id))
+    error_message = "Invalid AWS account ID."
+  }
+}
+
+####
+# Prepare test setup
+####
+provider "aws" {
+  region = "us-east-1"
+  alias  = "test_setup_creator"
+
+  assume_role {
+    role_arn = "arn:aws:iam::${var.aws_account_id}:role/LppcTestSetupCreator"
+  }
+}
+
+run "prepare_test_setup" {
+  state_key = "test_setup"
+
+  module {
+    source = "../../modules/data/aws_s3_bucket"
+  }
+
+  providers = {
+    aws = aws.test_setup_creator
+  }
+}
+
 ####
 # Set up deployer role
 ####
@@ -34,7 +68,7 @@ provider "aws" {
 ####
 # Perform tests
 ####
-run "find_ami_ids" {
+run "fetch_bucket" {
   state_key = "main"
 
   module {
@@ -47,6 +81,10 @@ run "find_ami_ids" {
 
   command = apply
 
+  variables {
+    bucket_name = run.prepare_test_setup.bucket_name
+  }
+
   assert {
     condition     = startswith(data.aws_caller_identity.this.arn, "arn:aws:sts::${run.create_deployer_role.account_id}:assumed-role/${run.create_deployer_role.deployer_role.name}")
     error_message = "Used the wrong role."
@@ -58,7 +96,7 @@ run "find_ami_ids" {
   }
 
   assert {
-    condition     = length(data.aws_ami_ids.this.id) > 0
-    error_message = "Expected AMI IDs to contain entries"
+    condition     = data.aws_s3_bucket.this.bucket == run.prepare_test_setup.bucket_name
+    error_message = "Expected S3 bucket name to be the same as the bucket name from previous step."
   }
 }
