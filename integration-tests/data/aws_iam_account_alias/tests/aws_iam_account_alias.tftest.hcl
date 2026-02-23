@@ -20,7 +20,9 @@ provider "aws" {
   }
 }
 
-run "prepate_setup" {
+run "prepare_test_setup" {
+  state_key = "test_setup"
+
   module {
     source = "../../modules/data/aws_iam_account_alias"
   }
@@ -39,6 +41,8 @@ provider "aws" {
 }
 
 run "create_deployer_role" {
+  state_key = "deployer_role"
+
   module {
     source = "../../modules/deployer-role"
   }
