@@ -11,6 +11,7 @@ This repository provides mapping files for [lppc](https://github.com/bebold-jhr/
   + Cost
   + EOL service
   + Difficult setup (e.g. configs that can only be done once per organization).
+  + Resources take a long time to delete (organization account)
 
 ## Repository structure
 
