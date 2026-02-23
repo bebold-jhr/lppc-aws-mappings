@@ -3,6 +3,6 @@ resource "aws_account_alternate_contact" "this" {
   alternate_contact_type = "OPERATIONS"
   title                  = "Integration Test"
   name                   = "Integration Test"
-  email_address          = var.test_email
-  phone_number           = var.test_phone_number
+  email_address          = "integrationtest@example.org"
+  phone_number           = var.phone_number
 }
