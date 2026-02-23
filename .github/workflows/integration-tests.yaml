@@ -119,8 +119,13 @@ jobs:
           TF_VAR_management_account_id: ${{ secrets.MANAGEMENT_ACCOUNT_ID }}
           TF_VAR_aws_account_id: ${{ secrets.AWS_ACCOUNT_ID }}
           TF_VAR_delegated_admin_account_id: ${{ secrets.DELEGATED_ADMIN_ACCOUNT_ID }}
-          TF_VAR_test_email: ${{ secrets.TEST_EMAIL }}
-          TF_VAR_test_phone_number: ${{ secrets.TEST_PHONE_NUMBER }}
+          TF_VAR_original_address_line_1: ${{ secrets.ORIGINAL_ADDRESS_LINE_1 }}
+          TF_VAR_original_city: ${{ secrets.ORIGINAL_CITY }}
+          TF_VAR_original_company_name: ${{ secrets.ORIGINAL_COMPANY_NAME }}
+          TF_VAR_original_phone_number: ${{ secrets.ORIGINAL_PHONE_NUMBER }}
+          TF_VAR_original_postal_code: ${{ secrets.ORIGINAL_POSTAL_CODE }}
+          TF_VAR_original_state_or_region: ${{ secrets.ORIGINAL_STATE_OR_REGION }}
+          TF_VAR_original_website_url: ${{ secrets.ORIGINAL_WEBSITE_URL }}
         run: |
           for dir in $TEST_DIRS; do
             echo "::group::Running tests in $dir"
