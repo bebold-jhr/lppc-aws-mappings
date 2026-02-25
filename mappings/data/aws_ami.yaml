@@ -6,4 +6,6 @@ metadata:
   terraform:
     documentation: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami
 allow:
-  - ec2:DescribeImages
+  - ec2:Describe*
+  - ec2:Get*
+  - ec2:List*
