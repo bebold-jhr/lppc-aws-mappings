@@ -82,7 +82,7 @@ run "fetch_bucket" {
   command = apply
 
   variables {
-    bucket_name = run.prepare_test_setup.bucket_name
+    bucket_name = run.prepare_test_setup.bucket.bucket
   }
 
   assert {
@@ -96,7 +96,7 @@ run "fetch_bucket" {
   }
 
   assert {
-    condition     = data.aws_s3_bucket.this.bucket == run.prepare_test_setup.bucket_name
+    condition     = data.aws_s3_bucket.this.bucket == run.prepare_test_setup.bucket.bucket
     error_message = "Expected S3 bucket name to be the same as the bucket name from previous step."
   }
 }
