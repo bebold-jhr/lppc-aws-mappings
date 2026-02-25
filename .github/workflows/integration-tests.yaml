@@ -110,7 +110,7 @@ jobs:
 
       - name: Setup Terraform
         if: steps.changed-files.outputs.test_dirs != ''
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v4
 
       - name: Run integration tests
         if: steps.changed-files.outputs.test_dirs != ''
