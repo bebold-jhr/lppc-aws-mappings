@@ -1,0 +1,1 @@
+Not related to a resource in AWS. A helper type that is comparable to provider::aws::arn_parse()
