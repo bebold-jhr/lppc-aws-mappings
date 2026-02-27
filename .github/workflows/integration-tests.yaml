@@ -44,11 +44,26 @@ jobs:
         env:
           BASE_REF: ${{ steps.get-pr.outputs.base_ref }}
         run: |
+          # Paths to exclude from triggering integration tests
+          # (e.g. to skip long-running tests on Renovate provider updates)
+          # The EXCLUDE_PATHS array at the top of the step lets you maintain a static list of path patterns. Each entry is a grep pattern, so you can use:
+          #   - Exact directory prefixes: "integration-tests/resource/aws_account_primary_contact/"
+          #   - Broader patterns: "\.terraform\.lock\.hcl$" to skip all lock file changes
+          #   - Simple substrings: "some_resource_name"
+          EXCLUDE_PATHS=(
+            "integration-tests/resource/aws_account_region/providers.tf" # takes > 5m30s
+          )
+
           # Fetch base branch for comparison
           git fetch origin "$BASE_REF"
 
           # Get all changed files
           CHANGED_FILES=$(git diff --name-only "origin/$BASE_REF"...HEAD)
+
+          # Filter out excluded paths
+          for pattern in "${EXCLUDE_PATHS[@]}"; do
+            CHANGED_FILES=$(echo "$CHANGED_FILES" | grep -v "$pattern" || true)
+          done
 
           TEST_DIRS=""
 
