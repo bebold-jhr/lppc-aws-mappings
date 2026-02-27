@@ -131,7 +131,9 @@ jobs:
             echo "::group::Running tests in $dir"
             cd "$dir"
             terraform init -no-color
+            SECONDS=0
             terraform test -no-color
+            echo "Test in $dir completed in $((SECONDS/60))m$((SECONDS%60))s"
             cd - > /dev/null
             echo "::endgroup::"
           done
