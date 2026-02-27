@@ -1055,6 +1055,12 @@
   }, {
     "Name" : "SetSubscriptionAttributes",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "sns.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "SetSubscriptionAttributes",
       "Service" : "sns"
     } ],

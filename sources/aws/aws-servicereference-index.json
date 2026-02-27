@@ -464,6 +464,9 @@
   "service" : "elemental-appliances-software",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/elemental-appliances-software/elemental-appliances-software.json"
 }, {
+  "service" : "elemental-inference",
+  "url" : "https://servicereference.us-east-1.amazonaws.com/v1/elemental-inference/elemental-inference.json"
+}, {
   "service" : "elemental-support-cases",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/elemental-support-cases/elemental-support-cases.json"
 }, {

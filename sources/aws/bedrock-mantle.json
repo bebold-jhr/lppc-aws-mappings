@@ -1,6 +1,24 @@
 {
   "Name" : "bedrock-mantle",
   "Actions" : [ {
+    "Name" : "ArchiveProject",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CallWithBearerToken",
     "ActionConditionKeys" : [ "bedrock-mantle:BearerTokenType" ],
     "Annotations" : {
@@ -27,7 +45,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "project"
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -44,7 +63,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "project"
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -61,7 +81,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "project"
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -79,7 +100,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "project"
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -97,7 +119,27 @@
       }
     },
     "Resources" : [ {
-      "Name" : "project"
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateProject",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -115,7 +157,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "project"
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -132,7 +175,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "project"
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -150,7 +194,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "project"
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -168,7 +213,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "project"
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -185,7 +231,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "project"
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -202,7 +249,26 @@
       }
     },
     "Resources" : [ {
-      "Name" : "project"
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetProject",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -219,7 +285,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "project"
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -236,7 +303,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "project"
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -253,7 +321,99 @@
       }
     },
     "Resources" : [ {
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListProjects",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
       "Name" : "project"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListTagsForResource",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "TagResource",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : true,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UntagResource",
+    "ActionConditionKeys" : [ "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : true,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateProject",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -261,6 +421,15 @@
     }
   } ],
   "ConditionKeys" : [ {
+    "Name" : "aws:RequestTag/${TagKey}",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "aws:ResourceTag/${TagKey}",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "aws:TagKeys",
+    "Types" : [ "ArrayOfString" ]
+  }, {
     "Name" : "bedrock-mantle:BearerTokenType",
     "Types" : [ "String" ]
   }, {
@@ -278,7 +447,8 @@
   } ],
   "Resources" : [ {
     "Name" : "project",
-    "ARNFormats" : [ "arn:${Partition}:bedrock-mantle:${Region}:${Account}:project/${ResourceId}" ]
+    "ARNFormats" : [ "arn:${Partition}:bedrock-mantle:${Region}:${Account}:project/${ResourceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.4"
 }

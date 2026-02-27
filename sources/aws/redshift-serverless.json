@@ -115,6 +115,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "namespace"
+    }, {
       "Name" : "snapshot"
     } ],
     "SupportedBy" : {

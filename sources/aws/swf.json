@@ -1212,6 +1212,9 @@
     "AuthorizedActions" : [ {
       "Name" : "RegisterDomain",
       "Service" : "swf"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "swf"
     } ],
     "SDK" : [ {
       "Name" : "swf",

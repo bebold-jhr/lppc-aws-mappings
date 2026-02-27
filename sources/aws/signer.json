@@ -376,6 +376,10 @@
       "Name" : "signer",
       "Method" : "get_revocation_status",
       "Package" : "Boto3"
+    }, {
+      "Name" : "signer-data",
+      "Method" : "get_revocation_status",
+      "Package" : "Boto3"
     } ]
   }, {
     "Name" : "GetSigningPlatform",

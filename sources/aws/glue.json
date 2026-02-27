@@ -451,7 +451,7 @@
     }
   }, {
     "Name" : "CreateCatalog",
-    "ActionConditionKeys" : [ "glue:FederatedAuthorizationSource", "glue:LakeFormationPermissions" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "glue:FederatedAuthorizationSource", "glue:LakeFormationPermissions" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -571,7 +571,7 @@
     }
   }, {
     "Name" : "CreateDatabase",
-    "ActionConditionKeys" : [ "glue:FederatedAuthorizationSource", "glue:LakeFormationPermissions" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "glue:FederatedAuthorizationSource", "glue:LakeFormationPermissions" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -3232,9 +3232,17 @@
     "Resources" : [ {
       "Name" : "blueprint"
     }, {
+      "Name" : "catalog"
+    }, {
+      "Name" : "connection"
+    }, {
+      "Name" : "connectionType"
+    }, {
       "Name" : "crawler"
     }, {
       "Name" : "customEntityType"
+    }, {
+      "Name" : "database"
     }, {
       "Name" : "devendpoint"
     }, {
@@ -4084,7 +4092,7 @@
     }
   }, {
     "Name" : "RegisterConnectionType",
-    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -4733,13 +4741,19 @@
     "Resources" : [ {
       "Name" : "blueprint"
     }, {
+      "Name" : "catalog"
+    }, {
       "Name" : "connection"
+    }, {
+      "Name" : "connectionType"
     }, {
       "Name" : "crawler"
     }, {
       "Name" : "customEntityType"
     }, {
       "Name" : "dataQualityRuleset"
+    }, {
+      "Name" : "database"
     }, {
       "Name" : "devendpoint"
     }, {
@@ -4814,13 +4828,19 @@
     "Resources" : [ {
       "Name" : "blueprint"
     }, {
+      "Name" : "catalog"
+    }, {
       "Name" : "connection"
+    }, {
+      "Name" : "connectionType"
     }, {
       "Name" : "crawler"
     }, {
       "Name" : "customEntityType"
     }, {
       "Name" : "dataQualityRuleset"
+    }, {
+      "Name" : "database"
     }, {
       "Name" : "devendpoint"
     }, {
@@ -8609,7 +8629,8 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "catalog",
-    "ARNFormats" : [ "arn:${Partition}:glue:${Region}:${Account}:catalog/${CatalogName}" ]
+    "ARNFormats" : [ "arn:${Partition}:glue:${Region}:${Account}:catalog/${CatalogName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "completion",
     "ARNFormats" : [ "arn:${Partition}:glue:${Region}:${Account}:completion/${CompletionId}" ]
@@ -8635,7 +8656,8 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "database",
-    "ARNFormats" : [ "arn:${Partition}:glue:${Region}:${Account}:database/${DatabaseName}" ]
+    "ARNFormats" : [ "arn:${Partition}:glue:${Region}:${Account}:database/${DatabaseName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "devendpoint",
     "ARNFormats" : [ "arn:${Partition}:glue:${Region}:${Account}:devEndpoint/${DevEndpointName}" ],

@@ -47,6 +47,8 @@
     },
     "Resources" : [ {
       "Name" : "Flow"
+    }, {
+      "Name" : "MediaStream"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -105,6 +107,8 @@
     },
     "Resources" : [ {
       "Name" : "Flow"
+    }, {
+      "Name" : "VpcInterface"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -838,6 +842,8 @@
     },
     "Resources" : [ {
       "Name" : "Flow"
+    }, {
+      "Name" : "MediaStream"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -893,6 +899,8 @@
     },
     "Resources" : [ {
       "Name" : "Flow"
+    }, {
+      "Name" : "VpcInterface"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1083,6 +1091,8 @@
     }, {
       "Name" : "Flow"
     }, {
+      "Name" : "MediaStream"
+    }, {
       "Name" : "Output"
     }, {
       "Name" : "RouterInput"
@@ -1092,6 +1102,8 @@
       "Name" : "RouterOutput"
     }, {
       "Name" : "Source"
+    }, {
+      "Name" : "VpcInterface"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1130,6 +1142,8 @@
     }, {
       "Name" : "Flow"
     }, {
+      "Name" : "MediaStream"
+    }, {
       "Name" : "Output"
     }, {
       "Name" : "RouterInput"
@@ -1139,6 +1153,8 @@
       "Name" : "RouterOutput"
     }, {
       "Name" : "Source"
+    }, {
+      "Name" : "VpcInterface"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1258,6 +1274,8 @@
     },
     "Resources" : [ {
       "Name" : "Flow"
+    }, {
+      "Name" : "MediaStream"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1642,6 +1660,12 @@
     "Name" : "DeleteBridge",
     "AuthorizedActions" : [ {
       "Name" : "DeleteBridge",
+      "Service" : "mediaconnect"
+    }, {
+      "Name" : "RemoveBridgeOutput",
+      "Service" : "mediaconnect"
+    }, {
+      "Name" : "RemoveBridgeSource",
       "Service" : "mediaconnect"
     } ],
     "SDK" : [ {
@@ -2448,6 +2472,10 @@
     "Name" : "GatewayInstance",
     "ARNFormats" : [ "arn:${Partition}:mediaconnect:${Region}:${Account}:gateway:${GatewayId}:${GatewayName}:instance:${InstanceId}" ]
   }, {
+    "Name" : "MediaStream",
+    "ARNFormats" : [ "arn:${Partition}:mediaconnect:${Region}:${Account}:flow:${FlowId}:${FlowName}/mediaStream/${MediaStreamName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "Offering",
     "ARNFormats" : [ "arn:${Partition}:mediaconnect:${Region}:offering:${OfferingId}" ]
   }, {
@@ -2472,6 +2500,10 @@
   }, {
     "Name" : "Source",
     "ARNFormats" : [ "arn:${Partition}:mediaconnect:${Region}:${Account}:source:${SourceId}:${SourceName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "VpcInterface",
+    "ARNFormats" : [ "arn:${Partition}:mediaconnect:${Region}:${Account}:flow:${FlowId}:${FlowName}/vpcInterface/${VpcInterfaceName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.4"

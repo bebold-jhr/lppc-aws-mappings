@@ -2481,12 +2481,6 @@
     "AuthorizedActions" : [ {
       "Name" : "ListResources",
       "Service" : "cloudformation"
-    }, {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "cloudformation.amazonaws.com" ]
-      },
-      "Service" : "iam"
     } ],
     "SDK" : [ {
       "Name" : "cloudcontrol",

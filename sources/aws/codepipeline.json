@@ -1136,9 +1136,6 @@
     }, {
       "Name" : "TagResource",
       "Service" : "codepipeline"
-    }, {
-      "Name" : "UntagResource",
-      "Service" : "codepipeline"
     } ],
     "SDK" : [ {
       "Name" : "codepipeline",

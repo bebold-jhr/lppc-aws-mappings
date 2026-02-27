@@ -47,6 +47,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteAlarmMuteRule",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "alarm-mute-rule"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteAlarms",
     "Annotations" : {
       "Properties" : {
@@ -332,6 +349,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetAlarmMuteRule",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "alarm-mute-rule"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetDashboard",
     "Annotations" : {
       "Properties" : {
@@ -518,6 +552,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListAlarmMuteRules",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "alarm-mute-rule"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListDashboards",
     "Annotations" : {
       "Properties" : {
@@ -634,6 +685,26 @@
       "Name" : "insight-rule"
     }, {
       "Name" : "slo"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutAlarmMuteRule",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "alarm"
+    }, {
+      "Name" : "alarm-mute-rule"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -912,6 +983,17 @@
     "Types" : [ "ArrayOfARN" ]
   } ],
   "Operations" : [ {
+    "Name" : "DeleteAlarmMuteRule",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAlarmMuteRule",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatch",
+      "Method" : "delete_alarm_mute_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteAlarms",
     "AuthorizedActions" : [ {
       "Name" : "DeleteAlarms",
@@ -1073,6 +1155,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetAlarmMuteRule",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAlarmMuteRule",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatch",
+      "Method" : "get_alarm_mute_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetDashboard",
     "AuthorizedActions" : [ {
       "Name" : "GetDashboard",
@@ -1139,6 +1232,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListAlarmMuteRules",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAlarmMuteRules",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatch",
+      "Method" : "list_alarm_mute_rules",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListDashboards",
     "AuthorizedActions" : [ {
       "Name" : "ListDashboards",
@@ -1194,6 +1298,20 @@
     "SDK" : [ {
       "Name" : "cloudwatch",
       "Method" : "list_tags_for_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutAlarmMuteRule",
+    "AuthorizedActions" : [ {
+      "Name" : "PutAlarmMuteRule",
+      "Service" : "cloudwatch"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatch",
+      "Method" : "put_alarm_mute_rule",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1370,6 +1488,10 @@
   "Resources" : [ {
     "Name" : "alarm",
     "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:alarm:${AlarmName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "alarm-mute-rule",
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:alarm-mute-rule:${AlarmMuteRuleName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "dashboard",
