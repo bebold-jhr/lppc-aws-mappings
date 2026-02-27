@@ -43,6 +43,11 @@ run "fetch_policies" {
   }
 
   assert {
+    condition     = data.aws_caller_identity.this.account_id == var.management_account_id
+    error_message = "Expected current account to be the management account."
+  }
+
+  assert {
     condition     = length(data.aws_organizations_policies.this.ids) > 0
     error_message = "Expected list of policies to contain at least one entry."
   }

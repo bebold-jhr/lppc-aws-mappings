@@ -16,14 +16,14 @@ provider "aws" {
   alias  = "management_account"
 
   assume_role {
-    role_arn = "arn:aws:iam::${var.management_account_id}:role/lppc/DataAwsOrganizationsDelegatedAdministrators"
+    role_arn = "arn:aws:iam::${var.management_account_id}:role/lppc/DataAwsOrganizationsPolicy"
   }
 }
 
 ####
 # Perform tests
 ####
-run "list_delegated_admins" {
+run "fetch_policy" {
   state_key = "main"
 
   module {
@@ -38,7 +38,7 @@ run "list_delegated_admins" {
 
   assert {
     # Note: role path gets stripped here
-    condition     = startswith(data.aws_caller_identity.this.arn, "arn:aws:sts::${var.management_account_id}:assumed-role/DataAwsOrganizationsDelegatedAdministrators")
+    condition     = startswith(data.aws_caller_identity.this.arn, "arn:aws:sts::${var.management_account_id}:assumed-role/DataAwsOrganizationsPolicy")
     error_message = "Used the wrong role."
   }
 
@@ -48,7 +48,7 @@ run "list_delegated_admins" {
   }
 
   assert {
-    condition     = length(data.aws_organizations_delegated_administrators.this.delegated_administrators) > 0
-    error_message = "Expected list of delegated admins to contain at least one entry."
+    condition     = data.aws_organizations_policy.this.arn != null && length(data.aws_organizations_policy.this.arn) > 0
+    error_message = "Expected policy to exist."
   }
 }
