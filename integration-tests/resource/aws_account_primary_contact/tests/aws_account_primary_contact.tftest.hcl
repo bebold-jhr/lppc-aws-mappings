@@ -110,7 +110,7 @@ run "revert_primary_contact" {
   command = apply
 
   variables {
-    account_id      = var.aws_account_id
+    aws_account_id  = var.aws_account_id
     address_line_1  = var.original_address_line_1
     city            = var.original_city
     company_name    = var.original_company_name
