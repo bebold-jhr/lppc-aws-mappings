@@ -43,12 +43,12 @@ run "fetch_organization_data" {
   }
 
   assert {
-    condition     = var.management_account_id == data.aws_organizations_organization.this.master_account_id
-    error_message = "Expected management account is different."
+    condition     = data.aws_caller_identity.this.account_id == var.management_account_id
+    error_message = "Expected current account to be the management account."
   }
 
   assert {
-    condition     = data.aws_caller_identity.this.account_id == data.aws_organizations_organization.this.master_account_id
-    error_message = "Expected current account to be management account."
+    condition     = var.management_account_id == data.aws_organizations_organization.this.master_account_id
+    error_message = "Expected management account ID differs."
   }
 }

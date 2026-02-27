@@ -73,7 +73,7 @@ run "create_ou" {
 
   assert {
     condition     = data.aws_caller_identity.this.account_id == var.management_account_id
-    error_message = "Expected to see the ID of a member account not the ID of the management account."
+    error_message = "Expected current account to be the management account."
   }
 
   assert {
@@ -108,7 +108,7 @@ run "change_ou_name" {
 
   assert {
     condition     = data.aws_caller_identity.this.account_id == var.management_account_id
-    error_message = "Expected to see the ID of a member account not the ID of the management account."
+    error_message = "Expected current account to be the management account."
   }
 }
 
@@ -141,7 +141,7 @@ run "tag_ou" {
 
   assert {
     condition     = data.aws_caller_identity.this.account_id == var.management_account_id
-    error_message = "Expected to see the ID of a member account not the ID of the management account."
+    error_message = "Expected current account to be the management account."
   }
 
   assert {
@@ -177,7 +177,7 @@ run "untag_ou" {
 
   assert {
     condition     = data.aws_caller_identity.this.account_id == var.management_account_id
-    error_message = "Expected to see the ID of a member account not the ID of the management account."
+    error_message = "Expected current account to be the management account."
   }
 
   assert {

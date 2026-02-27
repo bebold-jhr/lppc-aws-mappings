@@ -57,6 +57,11 @@ run "fetch_delegated_services" {
   }
 
   assert {
+    condition     = data.aws_caller_identity.this.account_id == var.management_account_id
+    error_message = "Expected current account to be the management account."
+  }
+
+  assert {
     condition     = length(data.aws_organizations_delegated_services.this.delegated_services) > 0
     error_message = "Expected list of delegated services to contain at least one entry."
   }

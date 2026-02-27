@@ -91,8 +91,8 @@ run "change_primary_contact" {
   }
 
   assert {
-    condition     = data.aws_caller_identity.this.account_id != var.aws_account_id
-    error_message = "Expected to see the ID of a member account not the ID of the management account."
+    condition     = data.aws_caller_identity.this.account_id == var.management_account_id
+    error_message = "Expected current account to be the management account."
   }
 }
 
@@ -126,7 +126,7 @@ run "revert_primary_contact" {
   }
 
   assert {
-    condition     = data.aws_caller_identity.this.account_id != var.aws_account_id
-    error_message = "Expected to see the ID of a member account not the ID of the management account."
+    condition     = data.aws_caller_identity.this.account_id == var.management_account_id
+    error_message = "Expected current account to be the management account."
   }
 }
