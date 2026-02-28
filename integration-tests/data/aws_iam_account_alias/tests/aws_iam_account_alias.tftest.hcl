@@ -16,7 +16,7 @@ provider "aws" {
   alias  = "test_setup_creator"
 
   assume_role {
-    role_arn = "arn:aws:iam::${var.aws_account_id}:role/LppcTestSetupCreator"
+    role_arn = "arn:aws:iam::${var.aws_account_id}:role/lppc/LppcTestSetupCreator"
   }
 }
 
