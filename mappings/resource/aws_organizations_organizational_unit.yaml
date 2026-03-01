@@ -8,8 +8,10 @@ metadata:
 allow:
   - organizations:CreateOrganizationalUnit
   - organizations:DeleteOrganizationalUnit
-  - organizations:Describe*
-  - organizations:List*
+  - organizations:DescribeOrganizationalUnit
+  - organizations:ListParents
+  - organizations:ListAccountsForParent
+  - organizations:ListTagsForResource
   - organizations:TagResource
   - organizations:UntagResource
   - organizations:UpdateOrganizationalUnit

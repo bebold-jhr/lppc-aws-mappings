@@ -6,7 +6,6 @@ metadata:
   terraform:
     documentation: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/organizations_tag
 allow:
-  - organizations:Describe*
-  - organizations:List*
+  - organizations:ListTagsForResource
   - organizations:TagResource
   - organizations:UntagResource

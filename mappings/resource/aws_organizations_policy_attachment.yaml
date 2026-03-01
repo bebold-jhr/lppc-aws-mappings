@@ -7,6 +7,5 @@ metadata:
     documentation: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/organizations_policy_attachment
 allow:
   - organizations:AttachPolicy
-  - organizations:Describe*
   - organizations:DetachPolicy
-  - organizations:List*
+  - organizations:ListTargetsForPolicy

@@ -9,8 +9,8 @@ metadata:
     documentation: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/organizations_delegated_administrator
 allow:
   - organizations:DeregisterDelegatedAdministrator
-  - organizations:Describe*
-  - organizations:List*
+  - organizations:ListDelegatedAdministrators
+  - organizations:ListDelegatedServicesForAccount
   - organizations:RegisterDelegatedAdministrator
   - organizations:TagResource
   - organizations:UntagResource
