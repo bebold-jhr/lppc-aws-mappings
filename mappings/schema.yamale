@@ -27,12 +27,12 @@ metadata:
   terraform:
     documentation: str(starts_with="https://registry.terraform.io/", required=True)
 
-deny: list(str(matches="^[a-z0-9]+:[A-Za-z0-9*]+$"), min=1, required=False)
+deny: list(str(matches="^[a-z0-9-]+:[A-Za-z0-9*]+$"), min=1, required=False)
 
-allow: list(str(matches="^[a-z0-9]+:[A-Za-z0-9*]+$"), min=1, required=True)
+allow: list(str(matches="^[a-z0-9-]+:[A-Za-z0-9*]+$"), min=1, required=True)
 
 conditional: include('conditional', required=False)
 
 ---
 
-conditional: any(map(include('conditional')), list(str(matches="^[a-z0-9]+:[A-Za-z*]+$"), min=1))
+conditional: any(map(include('conditional')), list(str(matches="^[a-z0-9-]+:[A-Za-z*]+$"), min=1))
