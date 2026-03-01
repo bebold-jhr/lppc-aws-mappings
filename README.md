@@ -7,6 +7,7 @@ This repository provides mapping files for [lppc](https://github.com/bebold-jhr/
 + Block types for creating resources normally contain any read permission with wildcards (example: `List*`, `Get*`, `Describe*`) which merge perfectly with data blocks and create smaller policies
   + An exception are `organizations` and `account`, because they contain sensitive data
 + Block types for creating resources contain tagging permissions and additionally the permission necessary to create, update and delete the respective resource
+  + Tagging permissions are not listed under the `conditional` key, because it is possible to set tag directly in the provider via `default_Tags`
 + Mappings are validated by integration tests if possible. Not every type can have an integration tests. Here some reasons (not an exhaustive list):
   + Cost
   + EOL service
