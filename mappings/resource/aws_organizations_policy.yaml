@@ -8,8 +8,8 @@ metadata:
 allow:
   - organizations:CreatePolicy
   - organizations:DeletePolicy
-  - organizations:Describe*
-  - organizations:List*
   - organizations:TagResource
   - organizations:UntagResource
   - organizations:UpdatePolicy
+  - organizations:DescribePolicy
+  - organizations:ListTagsForResource
