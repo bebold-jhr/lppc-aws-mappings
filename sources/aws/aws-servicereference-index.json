@@ -572,6 +572,9 @@
   "service" : "health",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/health/health.json"
 }, {
+  "service" : "health-agent",
+  "url" : "https://servicereference.us-east-1.amazonaws.com/v1/health-agent/health-agent.json"
+}, {
   "service" : "healthlake",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/healthlake/healthlake.json"
 }, {

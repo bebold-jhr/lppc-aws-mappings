@@ -2843,10 +2843,6 @@
     } ]
   }, {
     "Name" : "BatchModifyClusterSnapshots",
-    "AuthorizedActions" : [ {
-      "Name" : "BatchModifyClusterSnapshots",
-      "Service" : "redshift"
-    } ],
     "SDK" : [ {
       "Name" : "redshift",
       "Method" : "batch_modify_cluster_snapshots",
@@ -2927,10 +2923,6 @@
     } ]
   }, {
     "Name" : "CreateClusterSecurityGroup",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateClusterSecurityGroup",
-      "Service" : "redshift"
-    } ],
     "SDK" : [ {
       "Name" : "redshift",
       "Method" : "create_cluster_security_group",

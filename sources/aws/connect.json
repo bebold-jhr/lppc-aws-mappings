@@ -7035,6 +7035,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "AssociateQueueEmailAddresses",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateQueueEmailAddresses",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "associate_queue_email_addresses",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "AssociateQueueQuickConnects",
     "AuthorizedActions" : [ {
       "Name" : "AssociateQueueQuickConnects",
@@ -8602,6 +8613,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DisassociateQueueEmailAddresses",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateQueueEmailAddresses",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "disassociate_queue_email_addresses",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DisassociateQueueQuickConnects",
     "AuthorizedActions" : [ {
       "Name" : "DisassociateQueueQuickConnects",
@@ -9304,6 +9326,17 @@
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "list_prompts",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListQueueEmailAddresses",
+    "AuthorizedActions" : [ {
+      "Name" : "ListQueueEmailAddresses",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "list_queue_email_addresses",
       "Package" : "Boto3"
     } ]
   }, {

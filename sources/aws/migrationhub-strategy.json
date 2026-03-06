@@ -624,10 +624,6 @@
     } ]
   }, {
     "Name" : "StartImportFileTask",
-    "AuthorizedActions" : [ {
-      "Name" : "StartImportFileTask",
-      "Service" : "migrationhub-strategy"
-    } ],
     "SDK" : [ {
       "Name" : "migrationhubstrategy",
       "Method" : "start_import_file_task",
@@ -657,10 +653,6 @@
     } ]
   }, {
     "Name" : "UpdateApplicationComponentConfig",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateApplicationComponentConfig",
-      "Service" : "migrationhub-strategy"
-    } ],
     "SDK" : [ {
       "Name" : "migrationhubstrategy",
       "Method" : "update_application_component_config",
@@ -668,10 +660,6 @@
     } ]
   }, {
     "Name" : "UpdateServerConfig",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateServerConfig",
-      "Service" : "migrationhub-strategy"
-    } ],
     "SDK" : [ {
       "Name" : "migrationhubstrategy",
       "Method" : "update_server_config",

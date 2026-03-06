@@ -747,10 +747,6 @@
     } ]
   }, {
     "Name" : "UntagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "UntagResource",
-      "Service" : "launchwizard"
-    } ],
     "SDK" : [ {
       "Name" : "launch-wizard",
       "Method" : "untag_resource",

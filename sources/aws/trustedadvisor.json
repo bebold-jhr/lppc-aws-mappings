@@ -875,10 +875,6 @@
     } ]
   }, {
     "Name" : "UpdateOrganizationRecommendationLifecycle",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateOrganizationRecommendationLifecycle",
-      "Service" : "trustedadvisor"
-    } ],
     "SDK" : [ {
       "Name" : "trustedadvisor",
       "Method" : "update_organization_recommendation_lifecycle",
@@ -886,10 +882,6 @@
     } ]
   }, {
     "Name" : "UpdateRecommendationLifecycle",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateRecommendationLifecycle",
-      "Service" : "trustedadvisor"
-    } ],
     "SDK" : [ {
       "Name" : "trustedadvisor",
       "Method" : "update_recommendation_lifecycle",

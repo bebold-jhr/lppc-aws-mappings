@@ -2230,10 +2230,6 @@
     } ]
   }, {
     "Name" : "CancelInputDeviceTransfer",
-    "AuthorizedActions" : [ {
-      "Name" : "CancelInputDeviceTransfer",
-      "Service" : "medialive"
-    } ],
     "SDK" : [ {
       "Name" : "medialive",
       "Method" : "cancel_input_device_transfer",
@@ -3236,10 +3232,6 @@
     } ]
   }, {
     "Name" : "RejectInputDeviceTransfer",
-    "AuthorizedActions" : [ {
-      "Name" : "RejectInputDeviceTransfer",
-      "Service" : "medialive"
-    } ],
     "SDK" : [ {
       "Name" : "medialive",
       "Method" : "reject_input_device_transfer",
@@ -3454,10 +3446,6 @@
     } ]
   }, {
     "Name" : "UpdateCluster",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateCluster",
-      "Service" : "medialive"
-    } ],
     "SDK" : [ {
       "Name" : "medialive",
       "Method" : "update_cluster",
@@ -3601,10 +3589,6 @@
     } ]
   }, {
     "Name" : "UpdateSdiSource",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateSdiSource",
-      "Service" : "medialive"
-    } ],
     "SDK" : [ {
       "Name" : "medialive",
       "Method" : "update_sdi_source",

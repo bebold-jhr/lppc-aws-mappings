@@ -903,13 +903,6 @@
     } ]
   }, {
     "Name" : "ResumeBatchLoadTask",
-    "AuthorizedActions" : [ {
-      "Name" : "ResumeBatchLoadTask",
-      "Service" : "timestream"
-    }, {
-      "Name" : "WriteRecords",
-      "Service" : "timestream"
-    } ],
     "SDK" : [ {
       "Name" : "timestream-write",
       "Method" : "resume_batch_load_task",

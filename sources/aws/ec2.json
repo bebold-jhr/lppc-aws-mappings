@@ -16302,10 +16302,6 @@
     } ]
   }, {
     "Name" : "CancelDeclarativePoliciesReport",
-    "AuthorizedActions" : [ {
-      "Name" : "CancelDeclarativePoliciesReport",
-      "Service" : "ec2"
-    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "cancel_declarative_policies_report",
@@ -17296,13 +17292,6 @@
     } ]
   }, {
     "Name" : "CreateSecondarySubnet",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateSecondarySubnet",
-      "Service" : "ec2"
-    }, {
-      "Name" : "CreateTags",
-      "Service" : "ec2"
-    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "create_secondary_subnet",
@@ -18421,10 +18410,6 @@
     } ]
   }, {
     "Name" : "DeleteSecondaryNetwork",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteSecondaryNetwork",
-      "Service" : "ec2"
-    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "delete_secondary_network",

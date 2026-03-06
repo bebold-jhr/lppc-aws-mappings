@@ -317,6 +317,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StartApprovalTeamBaseline",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "approval-team"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StartSession",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "mpa:ProtectedResourceAccount", "mpa:RequestedOperation" ],
     "Annotations" : {
@@ -601,6 +619,17 @@
     "SDK" : [ {
       "Name" : "mpa",
       "Method" : "start_active_approval_team_deletion",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartApprovalTeamBaseline",
+    "AuthorizedActions" : [ {
+      "Name" : "StartApprovalTeamBaseline",
+      "Service" : "mpa"
+    } ],
+    "SDK" : [ {
+      "Name" : "mpa",
+      "Method" : "start_approval_team_baseline",
       "Package" : "Boto3"
     } ]
   }, {

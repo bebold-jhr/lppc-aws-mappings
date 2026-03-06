@@ -1,6 +1,20 @@
 {
   "Name" : "aidevops",
   "Actions" : [ {
+    "Name" : "AllowVendedLogDeliveryForResource",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "AssociateService",
     "Annotations" : {
       "Properties" : {
@@ -38,6 +52,20 @@
     }
   }, {
     "Name" : "CreateBacklogTask",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateChat",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -438,6 +466,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListChats",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListExecutions",
     "Annotations" : {
       "Properties" : {
@@ -600,6 +642,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StreamMessage",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateAgentSpace",
     "Annotations" : {
       "Properties" : {
@@ -637,6 +693,20 @@
     }
   }, {
     "Name" : "UpdateBacklogTask",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateGoal",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,

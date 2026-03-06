@@ -2249,10 +2249,6 @@
     } ]
   }, {
     "Name" : "CreateMobileDeviceAccessRule",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateMobileDeviceAccessRule",
-      "Service" : "workmail"
-    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "create_mobile_device_access_rule",
@@ -2970,10 +2966,6 @@
     } ]
   }, {
     "Name" : "PutMobileDeviceAccessOverride",
-    "AuthorizedActions" : [ {
-      "Name" : "PutMobileDeviceAccessOverride",
-      "Service" : "workmail"
-    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "put_mobile_device_access_override",
@@ -3130,10 +3122,6 @@
     } ]
   }, {
     "Name" : "UpdateMobileDeviceAccessRule",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateMobileDeviceAccessRule",
-      "Service" : "workmail"
-    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "update_mobile_device_access_rule",

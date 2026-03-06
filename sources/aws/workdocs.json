@@ -1109,10 +1109,6 @@
     } ]
   }, {
     "Name" : "DescribeGroups",
-    "AuthorizedActions" : [ {
-      "Name" : "DescribeGroups",
-      "Service" : "workdocs"
-    } ],
     "SDK" : [ {
       "Name" : "workdocs",
       "Method" : "describe_groups",

@@ -1168,10 +1168,6 @@
     } ]
   }, {
     "Name" : "RegisterOidcConfig",
-    "AuthorizedActions" : [ {
-      "Name" : "RegisterOidcConfig",
-      "Service" : "wickr"
-    } ],
     "SDK" : [ {
       "Name" : "wickr",
       "Method" : "register_oidc_config",
@@ -1179,10 +1175,6 @@
     } ]
   }, {
     "Name" : "RegisterOidcConfigTest",
-    "AuthorizedActions" : [ {
-      "Name" : "RegisterOidcConfigTest",
-      "Service" : "wickr"
-    } ],
     "SDK" : [ {
       "Name" : "wickr",
       "Method" : "register_oidc_config_test",
@@ -1219,10 +1211,6 @@
     } ]
   }, {
     "Name" : "UpdateGuestUser",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateGuestUser",
-      "Service" : "wickr"
-    } ],
     "SDK" : [ {
       "Name" : "wickr",
       "Method" : "update_guest_user",

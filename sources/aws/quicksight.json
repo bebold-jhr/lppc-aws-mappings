@@ -5155,10 +5155,6 @@
     } ]
   }, {
     "Name" : "DeleteDefaultQBusinessApplication",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteDefaultQBusinessApplication",
-      "Service" : "quicksight"
-    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "delete_default_q_business_application",
@@ -5236,10 +5232,6 @@
     } ]
   }, {
     "Name" : "DeleteIdentityPropagationConfig",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteIdentityPropagationConfig",
-      "Service" : "quicksight"
-    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "delete_identity_propagation_config",
@@ -6043,10 +6035,6 @@
     } ]
   }, {
     "Name" : "GenerateEmbedUrlForRegisteredUserWithIdentity",
-    "AuthorizedActions" : [ {
-      "Name" : "GenerateEmbedUrlForRegisteredUserWithIdentity",
-      "Service" : "quicksight"
-    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "generate_embed_url_for_registered_user_with_identity",
@@ -6780,6 +6768,12 @@
   }, {
     "Name" : "UpdateActionConnector",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "quicksight.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateActionConnector",
       "Service" : "quicksight"
     } ],
@@ -6832,10 +6826,6 @@
     } ]
   }, {
     "Name" : "UpdateApplicationWithTokenExchangeGrant",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateApplicationWithTokenExchangeGrant",
-      "Service" : "quicksight"
-    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_application_with_token_exchange_grant",
@@ -7007,10 +6997,6 @@
     } ]
   }, {
     "Name" : "UpdateDefaultQBusinessApplication",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateDefaultQBusinessApplication",
-      "Service" : "quicksight"
-    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_default_q_business_application",

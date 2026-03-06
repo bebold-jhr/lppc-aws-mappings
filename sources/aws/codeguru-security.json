@@ -252,10 +252,6 @@
   } ],
   "Operations" : [ {
     "Name" : "BatchGetFindings",
-    "AuthorizedActions" : [ {
-      "Name" : "BatchGetFindings",
-      "Service" : "codeguru-security"
-    } ],
     "SDK" : [ {
       "Name" : "codeguru-security",
       "Method" : "batch_get_findings",
@@ -376,10 +372,6 @@
     } ]
   }, {
     "Name" : "UntagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "UntagResource",
-      "Service" : "codeguru-security"
-    } ],
     "SDK" : [ {
       "Name" : "codeguru-security",
       "Method" : "untag_resource",

@@ -747,10 +747,6 @@
     } ]
   }, {
     "Name" : "PutMetadataFlag",
-    "AuthorizedActions" : [ {
-      "Name" : "PutMetadataFlag",
-      "Service" : "amplifyuibuilder"
-    } ],
     "SDK" : [ {
       "Name" : "amplifyuibuilder",
       "Method" : "put_metadata_flag",

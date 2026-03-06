@@ -5210,10 +5210,6 @@
     } ]
   }, {
     "Name" : "AssociatePhoneNumberWithUser",
-    "AuthorizedActions" : [ {
-      "Name" : "AssociatePhoneNumberWithUser",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "associate_phone_number_with_user",
@@ -5243,10 +5239,6 @@
     } ]
   }, {
     "Name" : "AssociateSigninDelegateGroupsWithAccount",
-    "AuthorizedActions" : [ {
-      "Name" : "AssociateSigninDelegateGroupsWithAccount",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "associate_signin_delegate_groups_with_account",
@@ -5302,10 +5294,6 @@
     } ]
   }, {
     "Name" : "BatchSuspendUser",
-    "AuthorizedActions" : [ {
-      "Name" : "BatchSuspendUser",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "batch_suspend_user",
@@ -5313,10 +5301,6 @@
     } ]
   }, {
     "Name" : "BatchUnsuspendUser",
-    "AuthorizedActions" : [ {
-      "Name" : "BatchUnsuspendUser",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "batch_unsuspend_user",
@@ -5324,10 +5308,6 @@
     } ]
   }, {
     "Name" : "BatchUpdateAttendeeCapabilitiesExcept",
-    "AuthorizedActions" : [ {
-      "Name" : "BatchUpdateAttendeeCapabilitiesExcept",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime-sdk-meetings",
       "Method" : "batch_update_attendee_capabilities_except",
@@ -5350,10 +5330,6 @@
     } ]
   }, {
     "Name" : "BatchUpdateUser",
-    "AuthorizedActions" : [ {
-      "Name" : "BatchUpdateUser",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "batch_update_user",
@@ -5408,13 +5384,6 @@
     } ]
   }, {
     "Name" : "CreateAppInstanceBot",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateAppInstanceBot",
-      "Service" : "chime"
-    }, {
-      "Name" : "TagResource",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime-sdk-identity",
       "Method" : "create_app_instance_bot",
@@ -5767,10 +5736,6 @@
     } ]
   }, {
     "Name" : "CreateUser",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateUser",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "create_user",
@@ -5809,10 +5774,6 @@
     } ]
   }, {
     "Name" : "CreateVoiceProfile",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateVoiceProfile",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime-sdk-voice",
       "Method" : "create_voice_profile",
@@ -6267,10 +6228,6 @@
     } ]
   }, {
     "Name" : "DescribeAppInstanceBot",
-    "AuthorizedActions" : [ {
-      "Name" : "DescribeAppInstanceBot",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime-sdk-identity",
       "Method" : "describe_app_instance_bot",
@@ -6289,10 +6246,6 @@
     } ]
   }, {
     "Name" : "DescribeAppInstanceUserEndpoint",
-    "AuthorizedActions" : [ {
-      "Name" : "DescribeAppInstanceUserEndpoint",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime-sdk-identity",
       "Method" : "describe_app_instance_user_endpoint",
@@ -6388,10 +6341,6 @@
     } ]
   }, {
     "Name" : "DisassociatePhoneNumberFromUser",
-    "AuthorizedActions" : [ {
-      "Name" : "DisassociatePhoneNumberFromUser",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "disassociate_phone_number_from_user",
@@ -6421,10 +6370,6 @@
     } ]
   }, {
     "Name" : "DisassociateSigninDelegateGroupsFromAccount",
-    "AuthorizedActions" : [ {
-      "Name" : "DisassociateSigninDelegateGroupsFromAccount",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "disassociate_signin_delegate_groups_from_account",
@@ -6929,10 +6874,6 @@
     } ]
   }, {
     "Name" : "InviteUsers",
-    "AuthorizedActions" : [ {
-      "Name" : "InviteUsers",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "invite_users",
@@ -7639,10 +7580,6 @@
     } ]
   }, {
     "Name" : "ResetPersonalPIN",
-    "AuthorizedActions" : [ {
-      "Name" : "ResetPersonalPIN",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "reset_personal_pin",
@@ -7885,10 +7822,6 @@
     } ]
   }, {
     "Name" : "UpdateAppInstanceUserEndpoint",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateAppInstanceUserEndpoint",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime-sdk-identity",
       "Method" : "update_app_instance_user_endpoint",
@@ -8005,10 +7938,6 @@
     } ]
   }, {
     "Name" : "UpdateMediaPipelineKinesisVideoStreamPool",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateMediaPipelineKinesisVideoStreamPool",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime-sdk-media-pipelines",
       "Method" : "update_media_pipeline_kinesis_video_stream_pool",
@@ -8112,10 +8041,6 @@
     } ]
   }, {
     "Name" : "UpdateUser",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateUser",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "update_user",
@@ -8123,10 +8048,6 @@
     } ]
   }, {
     "Name" : "UpdateUserSettings",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateUserSettings",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "update_user_settings",

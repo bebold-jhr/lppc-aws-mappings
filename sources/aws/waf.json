@@ -1306,10 +1306,6 @@
     } ]
   }, {
     "Name" : "CreateGeoMatchSet",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateGeoMatchSet",
-      "Service" : "waf"
-    } ],
     "SDK" : [ {
       "Name" : "waf",
       "Method" : "create_geo_match_set",
@@ -1392,10 +1388,6 @@
     } ]
   }, {
     "Name" : "CreateSizeConstraintSet",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateSizeConstraintSet",
-      "Service" : "waf"
-    } ],
     "SDK" : [ {
       "Name" : "waf",
       "Method" : "create_size_constraint_set",
@@ -1403,10 +1395,6 @@
     } ]
   }, {
     "Name" : "CreateSqlInjectionMatchSet",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateSqlInjectionMatchSet",
-      "Service" : "waf"
-    } ],
     "SDK" : [ {
       "Name" : "waf",
       "Method" : "create_sql_injection_match_set",
@@ -1439,10 +1427,6 @@
     } ]
   }, {
     "Name" : "CreateXssMatchSet",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateXssMatchSet",
-      "Service" : "waf"
-    } ],
     "SDK" : [ {
       "Name" : "waf",
       "Method" : "create_xss_match_set",
@@ -1512,10 +1496,6 @@
     } ]
   }, {
     "Name" : "DeleteRegexMatchSet",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteRegexMatchSet",
-      "Service" : "waf"
-    } ],
     "SDK" : [ {
       "Name" : "waf",
       "Method" : "delete_regex_match_set",
@@ -1523,10 +1503,6 @@
     } ]
   }, {
     "Name" : "DeleteRegexPatternSet",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteRegexPatternSet",
-      "Service" : "waf"
-    } ],
     "SDK" : [ {
       "Name" : "waf",
       "Method" : "delete_regex_pattern_set",
@@ -2095,10 +2071,6 @@
     } ]
   }, {
     "Name" : "UpdateRuleGroup",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateRuleGroup",
-      "Service" : "waf"
-    } ],
     "SDK" : [ {
       "Name" : "waf",
       "Method" : "update_rule_group",

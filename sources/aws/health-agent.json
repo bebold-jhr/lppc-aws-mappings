@@ -1,7 +1,7 @@
 {
-  "Name" : "migrationhub-orchestrator",
+  "Name" : "health-agent",
   "Actions" : [ {
-    "Name" : "CreateTemplate",
+    "Name" : "ActivateSubscription",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -10,12 +10,55 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Subscription"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "CreateWorkflow",
+    "Name" : "CancelAppointment",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateAgent",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Agent"
+    }, {
+      "Name" : "Domain"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateDomain",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
@@ -25,15 +68,12 @@
         "IsWrite" : true
       }
     },
-    "Resources" : [ {
-      "Name" : "template"
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "CreateWorkflowStep",
+    "Name" : "CreateIntegration",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -43,14 +83,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workflow"
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "CreateWorkflowStepGroup",
+    "Name" : "CreateSession",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -60,14 +102,18 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workflow"
+      "Name" : "Agent"
+    }, {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Session"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "DeleteTemplate",
+    "Name" : "CreateSubscription",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -77,14 +123,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "template"
+      "Name" : "Domain"
+    }, {
+      "Name" : "Subscription"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "DeleteWorkflow",
+    "Name" : "DeactivateSubscription",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -94,14 +142,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workflow"
+      "Name" : "Domain"
+    }, {
+      "Name" : "Subscription"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "DeleteWorkflowStep",
+    "Name" : "DeleteAgent",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -111,14 +161,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workflow"
+      "Name" : "Agent"
+    }, {
+      "Name" : "Domain"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "DeleteWorkflowStepGroup",
+    "Name" : "DeleteDomain",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -128,28 +180,33 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workflow"
+      "Name" : "Domain"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetMessage",
+    "Name" : "DeleteIntegration",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
-        "IsWrite" : false
+        "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetTemplate",
+    "Name" : "GetAgent",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -159,14 +216,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "template"
+      "Name" : "Agent"
+    }, {
+      "Name" : "Domain"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetTemplateStep",
+    "Name" : "GetCareTeamProvider",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -176,14 +235,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "template"
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetTemplateStepGroup",
+    "Name" : "GetDomain",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -193,14 +254,14 @@
       }
     },
     "Resources" : [ {
-      "Name" : "template"
+      "Name" : "Domain"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetWorkflow",
+    "Name" : "GetIntegration",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -210,14 +271,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workflow"
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetWorkflowStep",
+    "Name" : "GetMedicalScribeListeningSession",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -227,14 +290,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workflow"
+      "Name" : "Domain"
+    }, {
+      "Name" : "Subscription"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetWorkflowStepGroup",
+    "Name" : "GetPatient",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -244,14 +309,111 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workflow"
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "ListPlugins",
+    "Name" : "GetPatientInsightsJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "PatientInsightsJob"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetPractitioner",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetSessionContext",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Session"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetSubscription",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Subscription"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "InvokeAgent",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Session"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAgents",
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -260,6 +422,133 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "Domain"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAppointmentSlots",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListDomains",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListIntegrations",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListPatientAppointments",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListPatientInsuranceCoverages",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListProviders",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListSubscriptions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -268,6 +557,23 @@
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "MatchPatient",
+    "Annotations" : {
+      "Properties" : {
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -275,126 +581,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "template"
+      "Name" : "Domain"
     }, {
-      "Name" : "workflow"
+      "Name" : "Integration"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "ListTemplateStepGroups",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : true,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "Resources" : [ {
-      "Name" : "template"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "ListTemplateSteps",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : true,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "Resources" : [ {
-      "Name" : "template"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "ListTemplates",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : true,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "ListWorkflowStepGroups",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : true,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "Resources" : [ {
-      "Name" : "workflow"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "ListWorkflowSteps",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : true,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "Resources" : [ {
-      "Name" : "workflow"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "ListWorkflows",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : true,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "RegisterPlugin",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "RetryWorkflowStep",
+    "Name" : "PublishAgent",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -404,28 +600,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workflow"
+      "Name" : "Agent"
+    }, {
+      "Name" : "Domain"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "SendMessage",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "StartWorkflow",
+    "Name" : "RescheduleAppointment",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -435,14 +619,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workflow"
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "StopWorkflow",
+    "Name" : "ScheduleAppointment",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -452,7 +638,47 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workflow"
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StartMedicalScribeListeningSession",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Subscription"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StartPatientInsightsJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "PatientInsightsJob"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -470,9 +696,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "template"
-    }, {
-      "Name" : "workflow"
+      "Name" : "Domain",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -490,16 +715,33 @@
       }
     },
     "Resources" : [ {
-      "Name" : "template"
+      "Name" : "Domain"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateAgent",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Agent"
     }, {
-      "Name" : "workflow"
+      "Name" : "Domain"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "UpdateTemplate",
+    "Name" : "UpdateIntegration",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -509,14 +751,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "template"
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "UpdateWorkflow",
+    "Name" : "UpdateSession",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -526,41 +770,9 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workflow"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "UpdateWorkflowStep",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "Resources" : [ {
-      "Name" : "workflow"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "UpdateWorkflowStepGroup",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "Resources" : [ {
-      "Name" : "workflow"
+      "Name" : "Domain"
+    }, {
+      "Name" : "Session"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -578,350 +790,156 @@
     "Types" : [ "ArrayOfString" ]
   } ],
   "Operations" : [ {
-    "Name" : "CreateTemplate",
+    "Name" : "ActivateSubscription",
+    "SDK" : [ {
+      "Name" : "connecthealth",
+      "Method" : "activate_subscription",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateDomain",
     "AuthorizedActions" : [ {
-      "Name" : "CreateTemplate",
-      "Service" : "migrationhub-orchestrator"
+      "Name" : "CreateDomain",
+      "Service" : "health-agent"
     }, {
       "Name" : "TagResource",
-      "Service" : "migrationhub-orchestrator"
+      "Service" : "health-agent"
     } ],
     "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "create_template",
+      "Name" : "connecthealth",
+      "Method" : "create_domain",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "CreateWorkflow",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateWorkflow",
-      "Service" : "migrationhub-orchestrator"
-    } ],
+    "Name" : "CreateSubscription",
     "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "create_workflow",
+      "Name" : "connecthealth",
+      "Method" : "create_subscription",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "CreateWorkflowStep",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateWorkflowStep",
-      "Service" : "migrationhub-orchestrator"
-    } ],
+    "Name" : "DeactivateSubscription",
     "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "create_workflow_step",
+      "Name" : "connecthealth",
+      "Method" : "deactivate_subscription",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "CreateWorkflowStepGroup",
+    "Name" : "DeleteDomain",
     "AuthorizedActions" : [ {
-      "Name" : "CreateWorkflowStepGroup",
-      "Service" : "migrationhub-orchestrator"
+      "Name" : "DeleteDomain",
+      "Service" : "health-agent"
     } ],
     "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "create_workflow_step_group",
+      "Name" : "connecthealth",
+      "Method" : "delete_domain",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "DeleteTemplate",
+    "Name" : "GetDomain",
     "AuthorizedActions" : [ {
-      "Name" : "DeleteTemplate",
-      "Service" : "migrationhub-orchestrator"
+      "Name" : "GetDomain",
+      "Service" : "health-agent"
     } ],
     "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "delete_template",
+      "Name" : "connecthealth",
+      "Method" : "get_domain",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "DeleteWorkflow",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteWorkflow",
-      "Service" : "migrationhub-orchestrator"
-    } ],
+    "Name" : "GetMedicalScribeListeningSession",
     "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "delete_workflow",
+      "Name" : "connecthealth",
+      "Method" : "get_medical_scribe_listening_session",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "DeleteWorkflowStep",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteWorkflowStep",
-      "Service" : "migrationhub-orchestrator"
-    } ],
+    "Name" : "GetPatientInsightsJob",
     "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "delete_workflow_step",
+      "Name" : "connecthealth",
+      "Method" : "get_patient_insights_job",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "DeleteWorkflowStepGroup",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteWorkflowStepGroup",
-      "Service" : "migrationhub-orchestrator"
-    } ],
+    "Name" : "GetSubscription",
     "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "delete_workflow_step_group",
+      "Name" : "connecthealth",
+      "Method" : "get_subscription",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "GetTemplate",
+    "Name" : "ListDomains",
     "AuthorizedActions" : [ {
-      "Name" : "GetTemplate",
-      "Service" : "migrationhub-orchestrator"
+      "Name" : "ListDomains",
+      "Service" : "health-agent"
     } ],
     "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "get_template",
+      "Name" : "connecthealth",
+      "Method" : "list_domains",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "GetTemplateStep",
-    "AuthorizedActions" : [ {
-      "Name" : "GetTemplateStep",
-      "Service" : "migrationhub-orchestrator"
-    } ],
+    "Name" : "ListSubscriptions",
     "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "get_template_step",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "GetTemplateStepGroup",
-    "AuthorizedActions" : [ {
-      "Name" : "GetTemplateStepGroup",
-      "Service" : "migrationhub-orchestrator"
-    } ],
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "get_template_step_group",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "GetWorkflow",
-    "AuthorizedActions" : [ {
-      "Name" : "GetWorkflow",
-      "Service" : "migrationhub-orchestrator"
-    } ],
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "get_workflow",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "GetWorkflowStep",
-    "AuthorizedActions" : [ {
-      "Name" : "GetWorkflowStep",
-      "Service" : "migrationhub-orchestrator"
-    } ],
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "get_workflow_step",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "GetWorkflowStepGroup",
-    "AuthorizedActions" : [ {
-      "Name" : "GetWorkflowStepGroup",
-      "Service" : "migrationhub-orchestrator"
-    } ],
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "get_workflow_step_group",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "ListPlugins",
-    "AuthorizedActions" : [ {
-      "Name" : "ListPlugins",
-      "Service" : "migrationhub-orchestrator"
-    } ],
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "list_plugins",
+      "Name" : "connecthealth",
+      "Method" : "list_subscriptions",
       "Package" : "Boto3"
     } ]
   }, {
     "Name" : "ListTagsForResource",
-    "AuthorizedActions" : [ {
-      "Name" : "ListTagsForResource",
-      "Service" : "migrationhub-orchestrator"
-    } ],
     "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
+      "Name" : "connecthealth",
       "Method" : "list_tags_for_resource",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "ListTemplateStepGroups",
-    "AuthorizedActions" : [ {
-      "Name" : "ListTemplateStepGroups",
-      "Service" : "migrationhub-orchestrator"
-    } ],
+    "Name" : "StartMedicalScribeListeningSession",
     "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "list_template_step_groups",
+      "Name" : "connecthealth",
+      "Method" : "start_medical_scribe_listening_session",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "ListTemplateSteps",
-    "AuthorizedActions" : [ {
-      "Name" : "ListTemplateSteps",
-      "Service" : "migrationhub-orchestrator"
-    } ],
+    "Name" : "StartPatientInsightsJob",
     "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "list_template_steps",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "ListTemplates",
-    "AuthorizedActions" : [ {
-      "Name" : "ListTemplates",
-      "Service" : "migrationhub-orchestrator"
-    } ],
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "list_templates",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "ListWorkflowStepGroups",
-    "AuthorizedActions" : [ {
-      "Name" : "ListWorkflowStepGroups",
-      "Service" : "migrationhub-orchestrator"
-    } ],
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "list_workflow_step_groups",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "ListWorkflowSteps",
-    "AuthorizedActions" : [ {
-      "Name" : "ListWorkflowSteps",
-      "Service" : "migrationhub-orchestrator"
-    } ],
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "list_workflow_steps",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "ListWorkflows",
-    "AuthorizedActions" : [ {
-      "Name" : "ListWorkflows",
-      "Service" : "migrationhub-orchestrator"
-    } ],
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "list_workflows",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "RetryWorkflowStep",
-    "AuthorizedActions" : [ {
-      "Name" : "RetryWorkflowStep",
-      "Service" : "migrationhub-orchestrator"
-    } ],
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "retry_workflow_step",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "StartWorkflow",
-    "AuthorizedActions" : [ {
-      "Name" : "StartWorkflow",
-      "Service" : "migrationhub-orchestrator"
-    } ],
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "start_workflow",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "StopWorkflow",
-    "AuthorizedActions" : [ {
-      "Name" : "StopWorkflow",
-      "Service" : "migrationhub-orchestrator"
-    } ],
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "stop_workflow",
+      "Name" : "connecthealth",
+      "Method" : "start_patient_insights_job",
       "Package" : "Boto3"
     } ]
   }, {
     "Name" : "TagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "TagResource",
-      "Service" : "migrationhub-orchestrator"
-    } ],
     "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
+      "Name" : "connecthealth",
       "Method" : "tag_resource",
       "Package" : "Boto3"
     } ]
   }, {
     "Name" : "UntagResource",
     "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
+      "Name" : "connecthealth",
       "Method" : "untag_resource",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "UpdateTemplate",
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "update_template",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "UpdateWorkflow",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateWorkflow",
-      "Service" : "migrationhub-orchestrator"
-    } ],
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "update_workflow",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "UpdateWorkflowStep",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateWorkflowStep",
-      "Service" : "migrationhub-orchestrator"
-    } ],
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "update_workflow_step",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "UpdateWorkflowStepGroup",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateWorkflowStepGroup",
-      "Service" : "migrationhub-orchestrator"
-    } ],
-    "SDK" : [ {
-      "Name" : "migrationhuborchestrator",
-      "Method" : "update_workflow_step_group",
       "Package" : "Boto3"
     } ]
   } ],
   "Resources" : [ {
-    "Name" : "template",
-    "ARNFormats" : [ "arn:${Partition}:migrationhub-orchestrator:${Region}:${Account}:template/${ResourceId}" ],
+    "Name" : "Agent",
+    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/agent/${AgentId}" ]
+  }, {
+    "Name" : "Domain",
+    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
-    "Name" : "workflow",
-    "ARNFormats" : [ "arn:${Partition}:migrationhub-orchestrator:${Region}:${Account}:workflow/${ResourceId}" ],
-    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    "Name" : "Integration",
+    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/integration/${IntegrationId}" ]
+  }, {
+    "Name" : "PatientInsightsJob",
+    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/patient-insights-job/${JobId}" ]
+  }, {
+    "Name" : "Session",
+    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/session/${SessionId}" ]
+  }, {
+    "Name" : "Subscription",
+    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/subscription/${SubscriptionId}" ]
   } ],
   "Version" : "v1.4"
 }

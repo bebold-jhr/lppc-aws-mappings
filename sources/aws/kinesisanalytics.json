@@ -627,16 +627,6 @@
     } ]
   }, {
     "Name" : "AddApplicationInputProcessingConfiguration",
-    "AuthorizedActions" : [ {
-      "Name" : "AddApplicationInputProcessingConfiguration",
-      "Service" : "kinesisanalytics"
-    }, {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "kinesisanalytics.amazonaws.com" ]
-      },
-      "Service" : "iam"
-    } ],
     "SDK" : [ {
       "Name" : "kinesisanalytics",
       "Method" : "add_application_input_processing_configuration",

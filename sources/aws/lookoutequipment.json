@@ -1294,10 +1294,6 @@
     } ]
   }, {
     "Name" : "ListSensorStatistics",
-    "AuthorizedActions" : [ {
-      "Name" : "ListSensorStatistics",
-      "Service" : "lookoutequipment"
-    } ],
     "SDK" : [ {
       "Name" : "lookoutequipment",
       "Method" : "list_sensor_statistics",

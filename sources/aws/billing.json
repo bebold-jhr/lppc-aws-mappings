@@ -468,13 +468,6 @@
   } ],
   "Operations" : [ {
     "Name" : "AssociateSourceViews",
-    "AuthorizedActions" : [ {
-      "Name" : "AssociateSourceViews",
-      "Service" : "billing"
-    }, {
-      "Name" : "UseSourceView",
-      "Service" : "billing"
-    } ],
     "SDK" : [ {
       "Name" : "billing",
       "Method" : "associate_source_views",
@@ -510,10 +503,6 @@
     } ]
   }, {
     "Name" : "DisassociateSourceViews",
-    "AuthorizedActions" : [ {
-      "Name" : "DisassociateSourceViews",
-      "Service" : "billing"
-    } ],
     "SDK" : [ {
       "Name" : "billing",
       "Method" : "disassociate_source_views",

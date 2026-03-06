@@ -1725,10 +1725,6 @@
     } ]
   }, {
     "Name" : "QueryWhatIfForecast",
-    "AuthorizedActions" : [ {
-      "Name" : "QueryWhatIfForecast",
-      "Service" : "forecast"
-    } ],
     "SDK" : [ {
       "Name" : "forecastquery",
       "Method" : "query_what_if_forecast",

@@ -432,10 +432,6 @@
     } ]
   }, {
     "Name" : "DeletePipelineEndpoint",
-    "AuthorizedActions" : [ {
-      "Name" : "DeletePipelineEndpoint",
-      "Service" : "osis"
-    } ],
     "SDK" : [ {
       "Name" : "osis",
       "Method" : "delete_pipeline_endpoint",
@@ -564,10 +560,6 @@
     } ]
   }, {
     "Name" : "RevokePipelineEndpointConnections",
-    "AuthorizedActions" : [ {
-      "Name" : "RevokePipelineEndpointConnections",
-      "Service" : "osis"
-    } ],
     "SDK" : [ {
       "Name" : "osis",
       "Method" : "revoke_pipeline_endpoint_connections",

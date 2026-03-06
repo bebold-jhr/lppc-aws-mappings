@@ -7976,10 +7976,6 @@
     } ]
   }, {
     "Name" : "StartColumnStatisticsTaskRunSchedule",
-    "AuthorizedActions" : [ {
-      "Name" : "StartColumnStatisticsTaskRunSchedule",
-      "Service" : "glue"
-    } ],
     "SDK" : [ {
       "Name" : "glue",
       "Method" : "start_column_statistics_task_run_schedule",

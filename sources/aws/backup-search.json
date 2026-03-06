@@ -309,10 +309,6 @@
     } ]
   }, {
     "Name" : "StartSearchResultExportJob",
-    "AuthorizedActions" : [ {
-      "Name" : "StartSearchResultExportJob",
-      "Service" : "backup-search"
-    } ],
     "SDK" : [ {
       "Name" : "backupsearch",
       "Method" : "start_search_result_export_job",

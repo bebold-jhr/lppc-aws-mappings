@@ -826,10 +826,6 @@
     } ]
   }, {
     "Name" : "DeleteLibraryItem",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteLibraryItem",
-      "Service" : "qapps"
-    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "delete_library_item",
@@ -877,10 +873,6 @@
     } ]
   }, {
     "Name" : "ExportQAppSessionData",
-    "AuthorizedActions" : [ {
-      "Name" : "ExportQAppSessionData",
-      "Service" : "qapps"
-    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "export_q_app_session_data",
@@ -1027,10 +1019,6 @@
     } ]
   }, {
     "Name" : "TagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "TagResource",
-      "Service" : "qapps"
-    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "tag_resource",
@@ -1038,10 +1026,6 @@
     } ]
   }, {
     "Name" : "UntagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "UntagResource",
-      "Service" : "qapps"
-    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "untag_resource",
@@ -1060,10 +1044,6 @@
     } ]
   }, {
     "Name" : "UpdateLibraryItemMetadata",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateLibraryItemMetadata",
-      "Service" : "qapps"
-    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "update_library_item_metadata",

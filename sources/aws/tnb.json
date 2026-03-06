@@ -925,10 +925,6 @@
     } ]
   }, {
     "Name" : "UntagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "UntagResource",
-      "Service" : "tnb"
-    } ],
     "SDK" : [ {
       "Name" : "tnb",
       "Method" : "untag_resource",

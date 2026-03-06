@@ -1948,6 +1948,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "AddUserPoolClientSecret",
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "add_user_pool_client_secret",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "AdminAddUserToGroup",
     "AuthorizedActions" : [ {
       "Name" : "AdminAddUserToGroup",
@@ -2509,6 +2516,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteUserPoolClientSecret",
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "delete_user_pool_client_secret",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteUserPoolDomain",
     "AuthorizedActions" : [ {
       "Name" : "DeleteUserPoolDomain",
@@ -2883,6 +2897,13 @@
     "SDK" : [ {
       "Name" : "cognito-idp",
       "Method" : "list_user_import_jobs",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListUserPoolClientSecrets",
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "list_user_pool_client_secrets",
       "Package" : "Boto3"
     } ]
   }, {

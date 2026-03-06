@@ -963,13 +963,6 @@
     } ]
   }, {
     "Name" : "ListRepositorySyncDefinitions",
-    "AuthorizedActions" : [ {
-      "Name" : "ListRepositorySyncDefinitions",
-      "Service" : "codeconnections"
-    }, {
-      "Name" : "ListRepositorySyncDefinitions",
-      "Service" : "codestar-connections"
-    } ],
     "SDK" : [ {
       "Name" : "codeconnections",
       "Method" : "list_repository_sync_definitions",

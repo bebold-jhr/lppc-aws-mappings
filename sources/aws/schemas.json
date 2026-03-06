@@ -837,10 +837,6 @@
     } ]
   }, {
     "Name" : "StopDiscoverer",
-    "AuthorizedActions" : [ {
-      "Name" : "StopDiscoverer",
-      "Service" : "schemas"
-    } ],
     "SDK" : [ {
       "Name" : "schemas",
       "Method" : "stop_discoverer",

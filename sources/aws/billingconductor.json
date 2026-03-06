@@ -866,10 +866,6 @@
     } ]
   }, {
     "Name" : "TagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "TagResource",
-      "Service" : "billingconductor"
-    } ],
     "SDK" : [ {
       "Name" : "billingconductor",
       "Method" : "tag_resource",
@@ -877,10 +873,6 @@
     } ]
   }, {
     "Name" : "UntagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "UntagResource",
-      "Service" : "billingconductor"
-    } ],
     "SDK" : [ {
       "Name" : "billingconductor",
       "Method" : "untag_resource",

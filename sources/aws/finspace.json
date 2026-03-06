@@ -1151,9 +1151,6 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateKxScalingGroup",
       "Service" : "finspace"
-    }, {
-      "Name" : "TagResource",
-      "Service" : "finspace"
     } ],
     "SDK" : [ {
       "Name" : "finspace",
@@ -1567,10 +1564,6 @@
     } ]
   }, {
     "Name" : "UpdateKxClusterDatabases",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateKxClusterDatabases",
-      "Service" : "finspace"
-    } ],
     "SDK" : [ {
       "Name" : "finspace",
       "Method" : "update_kx_cluster_databases",

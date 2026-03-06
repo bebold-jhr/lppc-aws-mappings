@@ -690,10 +690,6 @@
     } ]
   }, {
     "Name" : "TagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "TagResource",
-      "Service" : "networkflowmonitor"
-    } ],
     "SDK" : [ {
       "Name" : "networkflowmonitor",
       "Method" : "tag_resource",
@@ -701,10 +697,6 @@
     } ]
   }, {
     "Name" : "UntagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "UntagResource",
-      "Service" : "networkflowmonitor"
-    } ],
     "SDK" : [ {
       "Name" : "networkflowmonitor",
       "Method" : "untag_resource",
@@ -712,10 +704,6 @@
     } ]
   }, {
     "Name" : "UpdateMonitor",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateMonitor",
-      "Service" : "networkflowmonitor"
-    } ],
     "SDK" : [ {
       "Name" : "networkflowmonitor",
       "Method" : "update_monitor",

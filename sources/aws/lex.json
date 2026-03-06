@@ -2825,10 +2825,6 @@
     } ]
   }, {
     "Name" : "CreateSlotTypeVersion",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateSlotTypeVersion",
-      "Service" : "lex"
-    } ],
     "SDK" : [ {
       "Name" : "lex-models",
       "Method" : "create_slot_type_version",
@@ -2918,10 +2914,6 @@
     } ]
   }, {
     "Name" : "DeleteBotChannelAssociation",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteBotChannelAssociation",
-      "Service" : "lex"
-    } ],
     "SDK" : [ {
       "Name" : "lex-models",
       "Method" : "delete_bot_channel_association",

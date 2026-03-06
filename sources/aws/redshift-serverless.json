@@ -1404,10 +1404,6 @@
     } ]
   }, {
     "Name" : "GetIdentityCenterAuthToken",
-    "AuthorizedActions" : [ {
-      "Name" : "GetIdentityCenterAuthToken",
-      "Service" : "redshift-serverless"
-    } ],
     "SDK" : [ {
       "Name" : "redshift-serverless",
       "Method" : "get_identity_center_auth_token",

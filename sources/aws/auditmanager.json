@@ -1692,10 +1692,6 @@
     } ]
   }, {
     "Name" : "ValidateAssessmentReportIntegrity",
-    "AuthorizedActions" : [ {
-      "Name" : "ValidateAssessmentReportIntegrity",
-      "Service" : "auditmanager"
-    } ],
     "SDK" : [ {
       "Name" : "auditmanager",
       "Method" : "validate_assessment_report_integrity",
