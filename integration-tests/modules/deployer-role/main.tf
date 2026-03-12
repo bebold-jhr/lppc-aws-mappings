@@ -3,7 +3,7 @@ resource "random_uuid" "name" {}
 resource "aws_iam_role" "deployer_role" {
   name                 = random_uuid.name.result
   path                 = "/lppc/deployer-roles/"
-  permissions_boundary = "arn:aws:iam::${data.aws_caller_identity.admin.account_id}:policy/LppcDeployerRolePermissionBoundary"
+  permissions_boundary = "arn:aws:iam::${data.aws_caller_identity.admin.account_id}:policy/lppc/LppcDeployerRolePermissionBoundary"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
