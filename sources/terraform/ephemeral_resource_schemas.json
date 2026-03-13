@@ -7,5 +7,6 @@
   "aws_lambda_invocation",
   "aws_secretsmanager_random_password",
   "aws_secretsmanager_secret_version",
-  "aws_ssm_parameter"
+  "aws_ssm_parameter",
+  "aws_sts_web_identity_token"
 ]
