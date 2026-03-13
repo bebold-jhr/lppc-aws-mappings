@@ -1078,10 +1078,6 @@
   } ],
   "Operations" : [ {
     "Name" : "AcceptResourceGroupingRecommendations",
-    "AuthorizedActions" : [ {
-      "Name" : "AcceptResourceGroupingRecommendations",
-      "Service" : "resiliencehub"
-    } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "accept_resource_grouping_recommendations",
@@ -1233,6 +1229,10 @@
     } ]
   }, {
     "Name" : "DeleteRecommendationTemplate",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteRecommendationTemplate",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "delete_recommendation_template",

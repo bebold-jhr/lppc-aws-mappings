@@ -8143,7 +8143,7 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "meeting",
-    "ARNFormats" : [ "arn:${Partition}:chime::${AccountId}:meeting/${MeetingId}" ],
+    "ARNFormats" : [ "arn:${Partition}:chime:${Region}:${AccountId}:meeting/${MeetingId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "sip-media-application",

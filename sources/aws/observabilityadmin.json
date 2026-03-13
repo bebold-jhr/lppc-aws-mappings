@@ -1145,10 +1145,6 @@
     } ]
   }, {
     "Name" : "ValidateTelemetryPipelineConfiguration",
-    "AuthorizedActions" : [ {
-      "Name" : "ValidateTelemetryPipelineConfiguration",
-      "Service" : "observabilityadmin"
-    } ],
     "SDK" : [ {
       "Name" : "observabilityadmin",
       "Method" : "validate_telemetry_pipeline_configuration",

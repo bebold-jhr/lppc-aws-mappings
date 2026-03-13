@@ -1869,6 +1869,9 @@
       "Name" : "CreateWorkflowVersion",
       "Service" : "omics"
     }, {
+      "Name" : "PassConnection",
+      "Service" : "codeconnections"
+    }, {
       "Name" : "TagResource",
       "Service" : "omics"
     } ],
@@ -2705,6 +2708,10 @@
     } ]
   }, {
     "Name" : "UpdateRunCache",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateRunCache",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "update_run_cache",

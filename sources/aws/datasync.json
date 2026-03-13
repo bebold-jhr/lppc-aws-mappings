@@ -1217,6 +1217,12 @@
       "Name" : "CreateLocationFsxOntap",
       "Service" : "datasync"
     }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "datasync.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "TagResource",
       "Service" : "datasync"
     } ],
@@ -1245,6 +1251,12 @@
       "Name" : "CreateLocationFsxWindows",
       "Service" : "datasync"
     }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "datasync.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "TagResource",
       "Service" : "datasync"
     } ],
@@ -1258,6 +1270,12 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateLocationHdfs",
       "Service" : "datasync"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "datasync.amazonaws.com" ]
+      },
+      "Service" : "iam"
     }, {
       "Name" : "TagResource",
       "Service" : "datasync"

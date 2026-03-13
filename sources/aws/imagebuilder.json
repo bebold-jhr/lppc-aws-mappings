@@ -2224,6 +2224,10 @@
     } ]
   }, {
     "Name" : "PutImageRecipePolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "PutImageRecipePolicy",
+      "Service" : "imagebuilder"
+    } ],
     "SDK" : [ {
       "Name" : "imagebuilder",
       "Method" : "put_image_recipe_policy",

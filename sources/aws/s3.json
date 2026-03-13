@@ -150,7 +150,7 @@
     }
   }, {
     "Name" : "CreateBucket",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:locationconstraint", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-acl", "s3:x-amz-content-sha256", "s3:x-amz-grant-full-control", "s3:x-amz-grant-read", "s3:x-amz-grant-read-acp", "s3:x-amz-grant-write", "s3:x-amz-grant-write-acp", "s3:x-amz-object-ownership" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:locationconstraint", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-acl", "s3:x-amz-bucket-namespace", "s3:x-amz-content-sha256", "s3:x-amz-grant-full-control", "s3:x-amz-grant-read", "s3:x-amz-grant-read-acp", "s3:x-amz-grant-write", "s3:x-amz-grant-write-acp", "s3:x-amz-object-ownership" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -3194,6 +3194,9 @@
     "Types" : [ "String" ]
   }, {
     "Name" : "s3:x-amz-acl",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "s3:x-amz-bucket-namespace",
     "Types" : [ "String" ]
   }, {
     "Name" : "s3:x-amz-content-sha256",

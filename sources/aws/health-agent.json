@@ -802,6 +802,12 @@
       "Name" : "CreateDomain",
       "Service" : "health-agent"
     }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "health-agent.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "TagResource",
       "Service" : "health-agent"
     } ],
@@ -887,6 +893,10 @@
     } ]
   }, {
     "Name" : "ListTagsForResource",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTagsForResource",
+      "Service" : "health-agent"
+    } ],
     "SDK" : [ {
       "Name" : "connecthealth",
       "Method" : "list_tags_for_resource",
@@ -908,6 +918,10 @@
     } ]
   }, {
     "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "health-agent"
+    } ],
     "SDK" : [ {
       "Name" : "connecthealth",
       "Method" : "tag_resource",
@@ -915,6 +929,10 @@
     } ]
   }, {
     "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "health-agent"
+    } ],
     "SDK" : [ {
       "Name" : "connecthealth",
       "Method" : "untag_resource",
@@ -923,23 +941,28 @@
   } ],
   "Resources" : [ {
     "Name" : "Agent",
-    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/agent/${AgentId}" ]
+    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/agent/${AgentId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "Domain",
     "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "Integration",
-    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/integration/${IntegrationId}" ]
+    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/integration/${IntegrationId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "PatientInsightsJob",
-    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/patient-insights-job/${JobId}" ]
+    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/patient-insights-job/${JobId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "Session",
-    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/session/${SessionId}" ]
+    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/session/${SessionId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "Subscription",
-    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/subscription/${SubscriptionId}" ]
+    "ARNFormats" : [ "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/subscription/${SubscriptionId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.4"
 }

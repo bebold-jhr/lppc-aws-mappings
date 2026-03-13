@@ -512,7 +512,7 @@
     }
   }, {
     "Name" : "BatchGetAttachedFileMetadata",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -608,7 +608,7 @@
     }
   }, {
     "Name" : "CompleteAttachedFileUpload",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -939,7 +939,7 @@
     }
   }, {
     "Name" : "CreateParticipant",
-    "ActionConditionKeys" : [ "connect:InstanceId" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -959,7 +959,7 @@
     }
   }, {
     "Name" : "CreatePersistentContactAssociation",
-    "ActionConditionKeys" : [ "connect:InstanceId" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1352,7 +1352,7 @@
     }
   }, {
     "Name" : "DeleteAttachedFile",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2024,7 +2024,7 @@
     }
   }, {
     "Name" : "DescribeContact",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2961,7 +2961,7 @@
     }
   }, {
     "Name" : "GetAttachedFile",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2979,7 +2979,7 @@
     }
   }, {
     "Name" : "GetContactAttributes",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -3322,7 +3322,7 @@
     }
   }, {
     "Name" : "ListAssociatedContacts",
-    "ActionConditionKeys" : [ "connect:InstanceId" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -3376,7 +3376,7 @@
     }
   }, {
     "Name" : "ListContactEvaluations",
-    "ActionConditionKeys" : [ "connect:InstanceId" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -3483,7 +3483,7 @@
     }
   }, {
     "Name" : "ListContactReferences",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -3965,6 +3965,7 @@
     }
   }, {
     "Name" : "ListRealtimeContactAnalysisSegments",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -3982,7 +3983,7 @@
     }
   }, {
     "Name" : "ListRealtimeContactAnalysisSegmentsV2",
-    "ActionConditionKeys" : [ "connect:ListRealtimeContactAnalysisSegmentsByOutputType", "connect:ListRealtimeContactAnalysisSegmentsBySegmentType" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:ListRealtimeContactAnalysisSegmentsByOutputType", "connect:ListRealtimeContactAnalysisSegmentsBySegmentType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -4578,7 +4579,7 @@
     }
   }, {
     "Name" : "ResumeContactRecording",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -4685,7 +4686,7 @@
     }
   }, {
     "Name" : "SearchContacts",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:InstanceId", "connect:PreferredUserArn", "connect:SearchContactsByContactAnalysis" ],
+    "ActionConditionKeys" : [ "connect:Channel", "connect:InstanceId", "connect:PreferredUserArn", "connect:SearchContactsByContactAnalysis", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -5113,7 +5114,7 @@
     }
   }, {
     "Name" : "StartAttachedFileUpload",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -5151,7 +5152,7 @@
     }
   }, {
     "Name" : "StartContactEvaluation",
-    "ActionConditionKeys" : [ "connect:InstanceId" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -5193,7 +5194,7 @@
     }
   }, {
     "Name" : "StartContactRecording",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -5211,6 +5212,7 @@
     }
   }, {
     "Name" : "StartContactStreaming",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -5325,7 +5327,7 @@
     }
   }, {
     "Name" : "StartScreenSharing",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -5425,7 +5427,7 @@
     }
   }, {
     "Name" : "StopContactRecording",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -5443,6 +5445,7 @@
     }
   }, {
     "Name" : "StopContactStreaming",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -5496,7 +5499,7 @@
     }
   }, {
     "Name" : "SuspendContactRecording",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -5514,7 +5517,7 @@
     }
   }, {
     "Name" : "TagContact",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -5596,7 +5599,7 @@
     }
   }, {
     "Name" : "TransferContact",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -5618,7 +5621,7 @@
     }
   }, {
     "Name" : "UntagContact",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:TagKeys", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -5736,7 +5739,7 @@
     }
   }, {
     "Name" : "UpdateContact",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -5754,7 +5757,7 @@
     }
   }, {
     "Name" : "UpdateContactAttributes",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -5898,7 +5901,7 @@
     }
   }, {
     "Name" : "UpdateContactRoutingData",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -5916,7 +5919,7 @@
     }
   }, {
     "Name" : "UpdateContactSchedule",
-    "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -6134,7 +6137,7 @@
     }
   }, {
     "Name" : "UpdateParticipantRoleConfig",
-    "ActionConditionKeys" : [ "connect:InstanceId" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,

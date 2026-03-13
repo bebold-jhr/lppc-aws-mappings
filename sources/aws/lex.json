@@ -2913,6 +2913,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteBotAnalyzerRecommendation",
+    "SDK" : [ {
+      "Name" : "lexv2-models",
+      "Method" : "delete_bot_analyzer_recommendation",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteBotChannelAssociation",
     "SDK" : [ {
       "Name" : "lex-models",
@@ -3156,6 +3163,17 @@
     "SDK" : [ {
       "Name" : "lexv2-models",
       "Method" : "describe_bot_alias",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeBotAnalyzerRecommendation",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeBotAnalyzerRecommendation",
+      "Service" : "lex"
+    } ],
+    "SDK" : [ {
+      "Name" : "lexv2-models",
+      "Method" : "describe_bot_analyzer_recommendation",
       "Package" : "Boto3"
     } ]
   }, {
@@ -3678,6 +3696,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListBotAnalyzerHistory",
+    "SDK" : [ {
+      "Name" : "lexv2-models",
+      "Method" : "list_bot_analyzer_history",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListBotLocales",
     "AuthorizedActions" : [ {
       "Name" : "ListBotLocales",
@@ -4119,6 +4144,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "StartBotAnalyzer",
+    "AuthorizedActions" : [ {
+      "Name" : "StartBotAnalyzer",
+      "Service" : "lex"
+    } ],
+    "SDK" : [ {
+      "Name" : "lexv2-models",
+      "Method" : "start_bot_analyzer",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StartBotRecommendation",
     "AuthorizedActions" : [ {
       "Name" : "CreateIntent",
@@ -4296,6 +4332,13 @@
     "SDK" : [ {
       "Name" : "lexv2-models",
       "Method" : "start_test_set_generation",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StopBotAnalyzer",
+    "SDK" : [ {
+      "Name" : "lexv2-models",
+      "Method" : "stop_bot_analyzer",
       "Package" : "Boto3"
     } ]
   }, {

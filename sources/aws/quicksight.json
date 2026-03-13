@@ -4936,10 +4936,6 @@
     } ]
   }, {
     "Name" : "CreateTemplateAlias",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateTemplateAlias",
-      "Service" : "quicksight"
-    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "create_template_alias",
@@ -4961,10 +4957,6 @@
     } ]
   }, {
     "Name" : "CreateThemeAlias",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateThemeAlias",
-      "Service" : "quicksight"
-    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "create_theme_alias",
@@ -5925,10 +5917,6 @@
     } ]
   }, {
     "Name" : "DescribeThemeAlias",
-    "AuthorizedActions" : [ {
-      "Name" : "DescribeThemeAlias",
-      "Service" : "quicksight"
-    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "describe_theme_alias",
@@ -6035,6 +6023,10 @@
     } ]
   }, {
     "Name" : "GenerateEmbedUrlForRegisteredUserWithIdentity",
+    "AuthorizedActions" : [ {
+      "Name" : "GenerateEmbedUrlForRegisteredUserWithIdentity",
+      "Service" : "quicksight"
+    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "generate_embed_url_for_registered_user_with_identity",
@@ -6384,10 +6376,6 @@
     } ]
   }, {
     "Name" : "ListTemplateAliases",
-    "AuthorizedActions" : [ {
-      "Name" : "ListTemplateAliases",
-      "Service" : "quicksight"
-    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "list_template_aliases",
@@ -7236,10 +7224,6 @@
     } ]
   }, {
     "Name" : "UpdateThemeAlias",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateThemeAlias",
-      "Service" : "quicksight"
-    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_theme_alias",

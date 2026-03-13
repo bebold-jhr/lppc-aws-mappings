@@ -1073,10 +1073,6 @@
     } ]
   }, {
     "Name" : "UpdateQAppSession",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateQAppSession",
-      "Service" : "qapps"
-    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "update_q_app_session",
@@ -1084,10 +1080,6 @@
     } ]
   }, {
     "Name" : "UpdateQAppSessionMetadata",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateQAppSessionMetadata",
-      "Service" : "qapps"
-    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "update_q_app_session_metadata",

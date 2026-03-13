@@ -1029,10 +1029,6 @@
     } ]
   }, {
     "Name" : "GetOidcInfo",
-    "AuthorizedActions" : [ {
-      "Name" : "GetOidcInfo",
-      "Service" : "wickr"
-    } ],
     "SDK" : [ {
       "Name" : "wickr",
       "Method" : "get_oidc_info",
@@ -1080,10 +1076,6 @@
     } ]
   }, {
     "Name" : "ListBlockedGuestUsers",
-    "AuthorizedActions" : [ {
-      "Name" : "ListBlockedGuestUsers",
-      "Service" : "wickr"
-    } ],
     "SDK" : [ {
       "Name" : "wickr",
       "Method" : "list_blocked_guest_users",

@@ -7747,6 +7747,10 @@
     } ]
   }, {
     "Name" : "StartOnDemandAuditTask",
+    "AuthorizedActions" : [ {
+      "Name" : "StartOnDemandAuditTask",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "start_on_demand_audit_task",
@@ -8160,6 +8164,16 @@
     } ]
   }, {
     "Name" : "UpdateStream",
+    "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "iot.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "UpdateStream",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "update_stream",

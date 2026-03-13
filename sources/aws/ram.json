@@ -20,7 +20,7 @@
     }
   }, {
     "Name" : "AssociateResourceShare",
-    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:AllowsExternalPrincipals", "ram:Principal", "ram:RequestedResourceType", "ram:ResourceArn", "ram:ResourceShareName", "ram:ResourceTag/${TagKey}" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:AllowsExternalPrincipals", "ram:Principal", "ram:RequestedResourceType", "ram:ResourceArn", "ram:ResourceShareName", "ram:ResourceTag/${TagKey}", "ram:RetainSharingOnAccountLeaveOrganization" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -92,7 +92,7 @@
     }
   }, {
     "Name" : "CreateResourceShare",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ram:AllowsExternalPrincipals", "ram:Principal", "ram:RequestedAllowsExternalPrincipals", "ram:RequestedResourceType", "ram:ResourceArn" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ram:AllowsExternalPrincipals", "ram:Principal", "ram:RequestedAllowsExternalPrincipals", "ram:RequestedResourceType", "ram:ResourceArn", "ram:RetainSharingOnAccountLeaveOrganization" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -143,7 +143,7 @@
     }
   }, {
     "Name" : "DeleteResourceShare",
-    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:AllowsExternalPrincipals", "ram:ResourceShareName", "ram:ResourceTag/${TagKey}" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:AllowsExternalPrincipals", "ram:ResourceShareName", "ram:ResourceTag/${TagKey}", "ram:RetainSharingOnAccountLeaveOrganization" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -161,7 +161,7 @@
     }
   }, {
     "Name" : "DisassociateResourceShare",
-    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:AllowsExternalPrincipals", "ram:Principal", "ram:RequestedResourceType", "ram:ResourceArn", "ram:ResourceShareName", "ram:ResourceTag/${TagKey}" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:AllowsExternalPrincipals", "ram:Principal", "ram:RequestedResourceType", "ram:ResourceArn", "ram:ResourceShareName", "ram:ResourceTag/${TagKey}", "ram:RetainSharingOnAccountLeaveOrganization" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -385,7 +385,7 @@
     }
   }, {
     "Name" : "ListResourceSharePermissions",
-    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:AllowsExternalPrincipals", "ram:ResourceShareName" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:AllowsExternalPrincipals", "ram:ResourceShareName", "ram:RetainSharingOnAccountLeaveOrganization" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -428,6 +428,20 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListSourceAssociations",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "PromotePermissionCreatedFromPolicy",
@@ -562,7 +576,7 @@
     }
   }, {
     "Name" : "UpdateResourceShare",
-    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:AllowsExternalPrincipals", "ram:RequestedAllowsExternalPrincipals", "ram:ResourceShareName", "ram:ResourceTag/${TagKey}" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:AllowsExternalPrincipals", "ram:RequestedAllowsExternalPrincipals", "ram:ResourceShareName", "ram:ResourceTag/${TagKey}", "ram:RetainSharingOnAccountLeaveOrganization" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -615,6 +629,9 @@
   }, {
     "Name" : "ram:ResourceTag/${TagKey}",
     "Types" : [ "String" ]
+  }, {
+    "Name" : "ram:RetainSharingOnAccountLeaveOrganization",
+    "Types" : [ "Bool" ]
   }, {
     "Name" : "ram:ShareOwnerAccountId",
     "Types" : [ "String" ]
@@ -913,6 +930,10 @@
     } ]
   }, {
     "Name" : "ListSourceAssociations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSourceAssociations",
+      "Service" : "ram"
+    } ],
     "SDK" : [ {
       "Name" : "ram",
       "Method" : "list_source_associations",

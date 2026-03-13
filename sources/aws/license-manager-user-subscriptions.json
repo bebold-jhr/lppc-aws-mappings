@@ -503,6 +503,10 @@
     } ]
   }, {
     "Name" : "UpdateIdentityProviderSettings",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateIdentityProviderSettings",
+      "Service" : "license-manager-user-subscriptions"
+    } ],
     "SDK" : [ {
       "Name" : "license-manager-user-subscriptions",
       "Method" : "update_identity_provider_settings",
