@@ -40,6 +40,8 @@ run "prepare_test_setup" {
   providers = {
     aws = aws.test_setup_creator
   }
+
+  command = apply
 }
 
 ####

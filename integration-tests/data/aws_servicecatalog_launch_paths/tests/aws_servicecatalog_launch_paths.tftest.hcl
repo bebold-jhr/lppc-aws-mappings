@@ -9,32 +9,6 @@ variable "aws_account_id" {
 }
 
 ####
-# Prepare test setup
-####
-provider "aws" {
-  region = "us-east-1"
-  alias  = "test_setup_creator"
-
-  assume_role {
-    role_arn = "arn:aws:iam::${var.aws_account_id}:role/lppc/LppcTestSetupCreator"
-  }
-}
-
-run "prepare_test_setup" {
-  state_key = "test_setup"
-
-  module {
-    source = "../../modules/data/aws_s3_bucket"
-  }
-
-  providers = {
-    aws = aws.test_setup_creator
-  }
-
-  command = apply
-}
-
-####
 # Set up deployer role
 ####
 provider "aws" {
@@ -55,6 +29,36 @@ run "create_deployer_role" {
 }
 
 ####
+# Prepare test setup
+####
+provider "aws" {
+  region = "us-east-1"
+  alias  = "test_setup_creator"
+
+  assume_role {
+    role_arn = "arn:aws:iam::${var.aws_account_id}:role/lppc/LppcTestSetupCreator"
+  }
+}
+
+run "prepare_test_setup" {
+  state_key = "test_setup"
+
+  module {
+    source = "../../modules/data/aws_servicecatalog_launch_paths"
+  }
+
+  providers = {
+    aws = aws.test_setup_creator
+  }
+
+  command = apply
+
+  variables {
+    principal_arn = run.create_deployer_role.deployer_role.arn
+  }
+}
+
+####
 # Provider using deployer role
 ####
 provider "aws" {
@@ -66,11 +70,10 @@ provider "aws" {
   }
 }
 
-
 ####
 # Perform tests
 ####
-run "fetch_bucket" {
+run "fetch_launch_paths" {
   state_key = "main"
 
   module {
@@ -84,7 +87,7 @@ run "fetch_bucket" {
   command = apply
 
   variables {
-    bucket_name = run.prepare_test_setup.bucket.bucket
+    product_id = run.prepare_test_setup.product.id
   }
 
   assert {
@@ -98,7 +101,7 @@ run "fetch_bucket" {
   }
 
   assert {
-    condition     = data.aws_s3_bucket.this.bucket == run.prepare_test_setup.bucket.bucket
-    error_message = "Expected S3 bucket name to be the same as the bucket name from previous step."
+    condition     = length(data.aws_servicecatalog_launch_paths.this.summaries) > 0
+    error_message = "Expected at least one launch path for the product associated with the portfolio."
   }
 }
