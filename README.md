@@ -2,6 +2,15 @@
 
 This repository provides mapping files for [lppc](https://github.com/bebold-jhr/lppc). Always use [mapping-creator](https://github.com/bebold-jhr/lppc/tree/main/mapping-creator) to create new mappings.
 
+Coverage:
+
+|Block type|source|mappings| test checked |
+|-|-|-|-|
+|action|10|10|0|
+|data|645|329|38|
+|ephemeral|10|0|0|
+|resource|1617|16|16|
+
 ## General mapping info
 
 + Block types for creating resources normally contain any read permission with wildcards (example: `List*`, `Get*`, `Describe*`) which merge perfectly with data blocks and create smaller policies
