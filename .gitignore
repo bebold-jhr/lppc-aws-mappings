@@ -1,6 +1,7 @@
 # Custom non-genrated
 
 **/*.terraform.lock.hcl
+.claude
 
 # Created by https://www.toptal.com/developers/gitignore/api/linux,macos,windows,intellij+all,visualstudiocode,terraform
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,windows,intellij+all,visualstudiocode,terraform
