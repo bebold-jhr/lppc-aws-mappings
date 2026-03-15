@@ -1,5 +1,4 @@
 ---
-# TODO: integration test
 # Keep in sync with aws_alb.yaml
 metadata:
   aws:
