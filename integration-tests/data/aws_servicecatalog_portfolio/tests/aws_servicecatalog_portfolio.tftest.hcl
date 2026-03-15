@@ -24,7 +24,7 @@ run "prepare_test_setup" {
   state_key = "test_setup"
 
   module {
-    source = "../../modules/data/aws_s3_bucket"
+    source = "../../modules/data/aws_servicecatalog_portfolio"
   }
 
   providers = {
@@ -66,11 +66,10 @@ provider "aws" {
   }
 }
 
-
 ####
 # Perform tests
 ####
-run "fetch_bucket" {
+run "fetch_portfolio" {
   state_key = "main"
 
   module {
@@ -84,7 +83,7 @@ run "fetch_bucket" {
   command = apply
 
   variables {
-    bucket_name = run.prepare_test_setup.bucket.bucket
+    portfolio_id = run.prepare_test_setup.portfolio.id
   }
 
   assert {
@@ -98,7 +97,7 @@ run "fetch_bucket" {
   }
 
   assert {
-    condition     = data.aws_s3_bucket.this.bucket == run.prepare_test_setup.bucket.bucket
-    error_message = "Expected S3 bucket name to be the same as the bucket name from previous step."
+    condition     = data.aws_servicecatalog_portfolio.this.id == run.prepare_test_setup.portfolio.id
+    error_message = "Expected portfolio ID to match the one from test setup."
   }
 }

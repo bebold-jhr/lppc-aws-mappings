@@ -1,0 +1,34 @@
+resource "random_uuid7" "this" {}
+
+resource "aws_s3_bucket" "template" {
+  bucket        = "${random_uuid7.this.result}-sc"
+  force_destroy = true
+}
+
+resource "aws_s3_object" "template" {
+  bucket       = aws_s3_bucket.template.bucket
+  key          = "template.json"
+  content_type = "application/json"
+
+  content = jsonencode({
+    AWSTemplateFormatVersion = "2010-09-09"
+    Resources = {
+      WaitHandle = {
+        Type = "AWS::CloudFormation::WaitConditionHandle"
+      }
+    }
+  })
+}
+
+resource "aws_servicecatalog_product" "this" {
+  name  = "lppc-test-${random_uuid7.this.result}"
+  owner = "lppc-test"
+  type  = "CLOUD_FORMATION_TEMPLATE"
+
+  provisioning_artifact_parameters {
+    name                        = "v1"
+    type                        = "CLOUD_FORMATION_TEMPLATE"
+    template_url                = "https://s3.amazonaws.com/${aws_s3_bucket.template.bucket}/${aws_s3_object.template.key}"
+    disable_template_validation = true
+  }
+}
