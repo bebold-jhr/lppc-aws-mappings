@@ -11,7 +11,7 @@ allow:
   - appmesh:CreateVirtualNode
   - appmesh:DeleteVirtualNode
   - appmesh:Describe*
-  - appmesh:GetMeshPolicy
+  - appmesh:Get*
   - appmesh:List*
   - appmesh:TagResource
   - appmesh:UntagResource

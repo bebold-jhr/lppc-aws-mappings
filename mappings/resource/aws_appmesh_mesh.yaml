@@ -12,7 +12,7 @@ allow:
   - appmesh:DeleteMesh
   - appmesh:DeleteMeshPolicy
   - appmesh:Describe*
-  - appmesh:GetMeshPolicy
+  - appmesh:Get*
   - appmesh:List*
   - appmesh:PutMeshPolicy
   - appmesh:TagResource

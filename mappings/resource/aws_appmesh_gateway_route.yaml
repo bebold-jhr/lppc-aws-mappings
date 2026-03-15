@@ -11,7 +11,7 @@ allow:
   - appmesh:CreateGatewayRoute
   - appmesh:DeleteGatewayRoute
   - appmesh:Describe*
-  - appmesh:GetMeshPolicy
+  - appmesh:Get*
   - appmesh:List*
   - appmesh:TagResource
   - appmesh:UntagResource

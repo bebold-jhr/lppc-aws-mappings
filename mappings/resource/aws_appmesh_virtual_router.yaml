@@ -11,7 +11,7 @@ allow:
   - appmesh:CreateVirtualRouter
   - appmesh:DeleteVirtualRouter
   - appmesh:Describe*
-  - appmesh:GetMeshPolicy
+  - appmesh:Get*
   - appmesh:List*
   - appmesh:TagResource
   - appmesh:UntagResource

@@ -11,7 +11,7 @@ allow:
   - appmesh:CreateRoute
   - appmesh:DeleteRoute
   - appmesh:Describe*
-  - appmesh:GetMeshPolicy
+  - appmesh:Get*
   - appmesh:List*
   - appmesh:TagResource
   - appmesh:UntagResource
