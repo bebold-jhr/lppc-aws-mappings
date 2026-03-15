@@ -1,5 +1,6 @@
 ---
-# TODO: integration test
+# No integration test:
+# Setup too complex: requires provisioning ACM server and client certificates before creating the endpoint.
 metadata:
   aws:
     documentation: https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html
