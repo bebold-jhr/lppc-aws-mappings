@@ -7,9 +7,9 @@ Coverage:
 |Block type|source|mappings| test checked |
 |-|-|-|-|
 |action|10|10|0|
-|data|645|329|38|
+|data|645|348|74|
 |ephemeral|10|0|0|
-|resource|1617|16|16|
+|resource|1617|23|23|
 
 ## General mapping info
 
