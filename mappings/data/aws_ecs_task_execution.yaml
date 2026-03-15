@@ -1,5 +1,9 @@
 ---
-# TODO: integration test
+# No integration test:
+# This data source calls the RunTask API on every read and plan operation,
+# actually launching containers rather than querying existing state. This makes it an action,
+# not a read-only data source, and would require VPC, subnets, IAM execution role, and cluster setup
+# while creating real running tasks that must be separately tracked and stopped.
 metadata:
   aws:
     documentation: https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html
@@ -10,3 +14,4 @@ allow:
   - ecs:Describe*
   - ecs:Get*
   - ecs:List*
+  - ecs:RunTask
