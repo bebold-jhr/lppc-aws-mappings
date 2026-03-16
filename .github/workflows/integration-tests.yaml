@@ -190,4 +190,4 @@ jobs:
           terraform init -no-color
           SECONDS=0
           terraform test -no-color
-          echo "Test completed in $((SECONDS/60))m$((SECONDS%60))s"
+          echo "Test $TEST_DIR ran $((SECONDS/60))m$((SECONDS%60))s"
