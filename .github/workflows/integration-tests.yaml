@@ -1,7 +1,7 @@
 name: integration-tests
 on:
   pull_request:
-    types: 
+    types:
       - opened
       - synchronize
       - reopened
@@ -12,11 +12,13 @@ permissions:
   pull-requests: read
 
 jobs:
-  integration-test:
+  detect-tests:
     # First run will show as "skipped" in PR checks
     # Only run on re-runs (triggered by /run integration-tests comment or manually)
     if: github.run_attempt > 1
     runs-on: ubuntu-latest
+    outputs:
+      test_dirs: ${{ steps.changed-files.outputs.test_dirs }}
     steps:
       - name: Get PR details
         uses: actions/github-script@v8
@@ -51,7 +53,11 @@ jobs:
           #   - Broader patterns: "\.terraform\.lock\.hcl$" to skip all lock file changes
           #   - Simple substrings: "some_resource_name"
           EXCLUDE_PATHS=(
-            "integration-tests/resource/aws_account_region/providers.tf" # takes > 5m30s
+            "integration-tests/resource/aws_account_region/providers.tf", # takes > 5m30s
+            "integration-tests/data/aws_ec2_transit_gateway_attachment/providers.tf", # takes > 5m00s
+            "integration-tests/data/aws_ec2_transit_gateway_attachments/providers.tf", # takes > 5m00s
+            "integration-tests/data/aws_ec2_transit_gateway_vpc_attachment/providers.tf", # takes > 5m00s
+            "integration-tests/data/aws_ec2_transit_gateway_vpc_attachments/providers.tf", # takes > 5m00s
           )
 
           # Fetch base branch for comparison
@@ -108,11 +114,43 @@ jobs:
 
           # Trim and deduplicate
           TEST_DIRS=$(echo "$TEST_DIRS" | xargs -n1 | sort -u | xargs)
-          echo "test_dirs=$TEST_DIRS" >> "$GITHUB_OUTPUT"
           echo "Found test directories: $TEST_DIRS"
 
+          if [ -z "$TEST_DIRS" ]; then
+            echo "No relevant changes found (no mappings or integration test files changed)."
+            echo 'test_dirs=[]' >> "$GITHUB_OUTPUT"
+          else
+            # Convert space-separated list to JSON array
+            JSON_ARRAY=$(echo "$TEST_DIRS" | xargs -n1 | jq -R . | jq -sc .)
+            echo "test_dirs=$JSON_ARRAY" >> "$GITHUB_OUTPUT"
+          fi
+
+  integration-test:
+    needs: detect-tests
+    if: needs.detect-tests.outputs.test_dirs != '[]'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        test_dir: ${{ fromJson(needs.detect-tests.outputs.test_dirs) }}
+    steps:
+      - name: Get PR details
+        uses: actions/github-script@v8
+        id: get-pr
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const branchRegex = /^[a-zA-Z0-9._\/-]+$/;
+            if (!branchRegex.test(pr.head.ref)) {
+              throw new Error('Invalid branch name detected');
+            }
+            core.setOutput('head_ref', pr.head.ref);
+
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ steps.get-pr.outputs.head_ref }}
+
       - name: Configure AWS credentials
-        if: steps.changed-files.outputs.test_dirs != ''
         uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-region: us-east-1
@@ -120,17 +158,14 @@ jobs:
           role-session-name: integration-test-run-${{ github.run_id }}
 
       - name: Verify AWS credentials
-        if: steps.changed-files.outputs.test_dirs != ''
         run: aws sts get-caller-identity
 
       - name: Setup Terraform
-        if: steps.changed-files.outputs.test_dirs != ''
         uses: hashicorp/setup-terraform@v4
 
-      - name: Run integration tests
-        if: steps.changed-files.outputs.test_dirs != ''
+      - name: Run integration test
         env:
-          TEST_DIRS: ${{ steps.changed-files.outputs.test_dirs }}
+          TEST_DIR: ${{ matrix.test_dir }}
           TF_VAR_management_account_id: ${{ secrets.MANAGEMENT_ACCOUNT_ID }}
           TF_VAR_aws_account_id: ${{ secrets.AWS_ACCOUNT_ID }}
           TF_VAR_delegated_admin_account_id: ${{ secrets.DELEGATED_ADMIN_ACCOUNT_ID }}
@@ -142,18 +177,8 @@ jobs:
           TF_VAR_original_state_or_region: ${{ secrets.ORIGINAL_STATE_OR_REGION }}
           TF_VAR_original_website_url: ${{ secrets.ORIGINAL_WEBSITE_URL }}
         run: |
-          for dir in $TEST_DIRS; do
-            echo "::group::Running tests in $dir"
-            cd "$dir"
-            terraform init -no-color
-            SECONDS=0
-            terraform test -no-color
-            echo "Test in $dir completed in $((SECONDS/60))m$((SECONDS%60))s"
-            cd - > /dev/null
-            echo "::endgroup::"
-          done
-
-      - name: No tests to run
-        if: steps.changed-files.outputs.test_dirs == ''
-        run: |
-          echo "No relevant changes found (no mappings or integration test files changed)."
+          cd "$TEST_DIR"
+          terraform init -no-color
+          SECONDS=0
+          terraform test -no-color
+          echo "Test completed in $((SECONDS/60))m$((SECONDS%60))s"
