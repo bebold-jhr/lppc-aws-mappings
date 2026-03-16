@@ -67,6 +67,10 @@ jobs:
             "integration-tests/data/aws_ec2_transit_gateway_route_tables/providers.tf", # takes > 5m00s
             "integration-tests/data/aws_ec2_transit_gateway_vpc_attachment/providers.tf", # takes > 5m00s
             "integration-tests/data/aws_ec2_transit_gateway_vpc_attachments/providers.tf", # takes > 5m00s
+            "integration-tests/data/aws_lb/providers.tf", # takes > 3m3s
+            "integration-tests/data/aws_lbs/providers.tf", # takes > 3m11s
+            "integration-tests/data/aws_lb_listener/providers.tf", # takes > 2m57s
+            "integration-tests/data/aws_lb_listener_rule/providers.tf", # takes > 3m0s
           )
 
           # Fetch base branch for comparison
