@@ -1,0 +1,3 @@
+data "aws_vpclattice_service_network" "this" {
+  service_network_identifier = var.service_network_identifier
+}
