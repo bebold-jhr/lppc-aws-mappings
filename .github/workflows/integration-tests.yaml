@@ -88,6 +88,7 @@ jobs:
             "integration-tests/data/aws_api_gateway_vpc_link/providers.tf" # takes > 10m49s
             "integration-tests/data/aws_apigatewayv2_vpc_link/providers.tf" # takes > 2m31s
             "integration-tests/data/aws_api_gateway_export/providers.tf" # takes > 2m50s
+            "integration-tests/data/aws_sfn_alias/providers.tf" # takes > 1m3s
           )
 
           # Fetch base branch for comparison
