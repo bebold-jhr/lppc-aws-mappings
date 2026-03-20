@@ -80,6 +80,7 @@ jobs:
             "integration-tests/data/aws_vpc_ipam_pool_cidrs/providers.tf" # takes > 1m47s
             "integration-tests/data/aws_vpc_ipam_preview_next_cidr/providers.tf" # takes > 1m10s
             "integration-tests/data/aws_vpn_connection/providers.tf" # takes > 5m10s
+            "integration-tests/data/aws_backup_framework/providers.tf" # takes > 1m3s
           )
 
           # Fetch base branch for comparison
