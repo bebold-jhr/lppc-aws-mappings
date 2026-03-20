@@ -12,5 +12,3 @@ deny:
 allow:
   - sns:Get*
   - sns:List*
-  - sns:TagResource
-  - sns:UntagResource

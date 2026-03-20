@@ -12,5 +12,3 @@ allow:
   - athena:BatchGetNamedQuery
   - athena:Get*
   - athena:List*
-  - athena:TagResource
-  - athena:UntagResource

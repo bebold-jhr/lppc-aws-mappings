@@ -15,5 +15,3 @@ deny:
 allow:
   - sqs:Get*
   - sqs:List*
-  - sqs:TagQueue
-  - sqs:UntagQueue
