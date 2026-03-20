@@ -75,6 +75,8 @@ jobs:
             "integration-tests/data/aws_instances/providers.tf" # takes > 1m1s
             "integration-tests/data/aws_nat_gateway/providers.tf" # takes > 3m12s
             "integration-tests/data/aws_nat_gateways/providers.tf" # takes > 3m12s
+            "integration-tests/data/aws_vpc_ipam_pool/providers.tf" # takes > 1m11s
+            "integration-tests/data/aws_vpc_ipam_pools/providers.tf" # takes > 1m2s
             "integration-tests/data/aws_vpc_ipam_pool_cidrs/providers.tf" # takes > 1m47s
             "integration-tests/data/aws_vpc_ipam_preview_next_cidr/providers.tf" # takes > 1m10s
             "integration-tests/data/aws_vpn_connection/providers.tf" # takes > 5m10s
