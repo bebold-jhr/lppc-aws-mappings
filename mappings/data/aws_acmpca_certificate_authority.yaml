@@ -1,5 +1,6 @@
 ---
-# TODO: integration test
+# No integration test:
+# Requires ACM PCA Certificate Authority ($400/month per CA), prohibitive cost.
 metadata:
   aws:
     documentation: https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html
