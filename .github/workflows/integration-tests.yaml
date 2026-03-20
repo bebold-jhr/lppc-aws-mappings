@@ -81,6 +81,13 @@ jobs:
             "integration-tests/data/aws_vpc_ipam_preview_next_cidr/providers.tf" # takes > 1m10s
             "integration-tests/data/aws_vpn_connection/providers.tf" # takes > 5m10s
             "integration-tests/data/aws_backup_framework/providers.tf" # takes > 1m3s
+            "integration-tests/data/aws_api_gateway_authorizer/providers.tf" # takes > 11m45s
+            "integration-tests/data/aws_api_gateway_authorizers/providers.tf" # takes > 1m53s
+            "integration-tests/data/aws_api_gateway_resource/providers.tf" # takes > 6m44s
+            "integration-tests/data/aws_api_gateway_rest_api/providers.tf" # takes > 2m12s
+            "integration-tests/data/aws_api_gateway_vpc_link/providers.tf" # takes > 10m49s
+            "integration-tests/data/aws_apigatewayv2_vpc_link/providers.tf" # takes > 2m31s
+            "integration-tests/data/aws_api_gateway_export/providers.tf" # takes > 2m50s
           )
 
           # Fetch base branch for comparison
