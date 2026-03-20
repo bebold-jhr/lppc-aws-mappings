@@ -10791,10 +10791,6 @@
     } ]
   }, {
     "Name" : "UpdateQueueOutboundEmailConfig",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateQueueOutboundEmailConfig",
-      "Service" : "connect"
-    } ],
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "update_queue_outbound_email_config",

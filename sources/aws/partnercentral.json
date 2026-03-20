@@ -2251,10 +2251,6 @@
     } ]
   }, {
     "Name" : "DeleteRelationship",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteRelationship",
-      "Service" : "partnercentral"
-    } ],
     "SDK" : [ {
       "Name" : "partnercentral-channel",
       "Method" : "delete_relationship",
@@ -2481,6 +2477,10 @@
     } ]
   }, {
     "Name" : "GetResourceSnapshotJob",
+    "AuthorizedActions" : [ {
+      "Name" : "GetResourceSnapshotJob",
+      "Service" : "partnercentral"
+    } ],
     "SDK" : [ {
       "Name" : "partnercentral-selling",
       "Method" : "get_resource_snapshot_job",

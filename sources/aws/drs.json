@@ -1569,13 +1569,6 @@
     } ]
   }, {
     "Name" : "CreateExtendedSourceServer",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateExtendedSourceServer",
-      "Service" : "drs"
-    }, {
-      "Name" : "TagResource",
-      "Service" : "drs"
-    } ],
     "SDK" : [ {
       "Name" : "drs",
       "Method" : "create_extended_source_server",
@@ -1944,10 +1937,6 @@
     } ]
   }, {
     "Name" : "StartFailbackLaunch",
-    "AuthorizedActions" : [ {
-      "Name" : "StartFailbackLaunch",
-      "Service" : "drs"
-    } ],
     "SDK" : [ {
       "Name" : "drs",
       "Method" : "start_failback_launch",
@@ -1980,13 +1969,6 @@
     } ]
   }, {
     "Name" : "StartSourceNetworkRecovery",
-    "AuthorizedActions" : [ {
-      "Name" : "StartSourceNetworkRecovery",
-      "Service" : "drs"
-    }, {
-      "Name" : "TagResource",
-      "Service" : "drs"
-    } ],
     "SDK" : [ {
       "Name" : "drs",
       "Method" : "start_source_network_recovery",
@@ -1994,10 +1976,6 @@
     } ]
   }, {
     "Name" : "StartSourceNetworkReplication",
-    "AuthorizedActions" : [ {
-      "Name" : "StartSourceNetworkReplication",
-      "Service" : "drs"
-    } ],
     "SDK" : [ {
       "Name" : "drs",
       "Method" : "start_source_network_replication",
@@ -2027,10 +2005,6 @@
     } ]
   }, {
     "Name" : "StopSourceNetworkReplication",
-    "AuthorizedActions" : [ {
-      "Name" : "StopSourceNetworkReplication",
-      "Service" : "drs"
-    } ],
     "SDK" : [ {
       "Name" : "drs",
       "Method" : "stop_source_network_replication",

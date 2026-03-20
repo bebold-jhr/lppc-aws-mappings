@@ -791,6 +791,10 @@
   } ],
   "Operations" : [ {
     "Name" : "ActivateSubscription",
+    "AuthorizedActions" : [ {
+      "Name" : "ActivateSubscription",
+      "Service" : "health-agent"
+    } ],
     "SDK" : [ {
       "Name" : "connecthealth",
       "Method" : "activate_subscription",
@@ -818,6 +822,10 @@
     } ]
   }, {
     "Name" : "CreateSubscription",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateSubscription",
+      "Service" : "health-agent"
+    } ],
     "SDK" : [ {
       "Name" : "connecthealth",
       "Method" : "create_subscription",
@@ -825,6 +833,10 @@
     } ]
   }, {
     "Name" : "DeactivateSubscription",
+    "AuthorizedActions" : [ {
+      "Name" : "DeactivateSubscription",
+      "Service" : "health-agent"
+    } ],
     "SDK" : [ {
       "Name" : "connecthealth",
       "Method" : "deactivate_subscription",
@@ -854,6 +866,10 @@
     } ]
   }, {
     "Name" : "GetMedicalScribeListeningSession",
+    "AuthorizedActions" : [ {
+      "Name" : "GetMedicalScribeListeningSession",
+      "Service" : "health-agent"
+    } ],
     "SDK" : [ {
       "Name" : "connecthealth",
       "Method" : "get_medical_scribe_listening_session",
@@ -861,6 +877,10 @@
     } ]
   }, {
     "Name" : "GetPatientInsightsJob",
+    "AuthorizedActions" : [ {
+      "Name" : "GetPatientInsightsJob",
+      "Service" : "health-agent"
+    } ],
     "SDK" : [ {
       "Name" : "connecthealth",
       "Method" : "get_patient_insights_job",
@@ -868,6 +888,10 @@
     } ]
   }, {
     "Name" : "GetSubscription",
+    "AuthorizedActions" : [ {
+      "Name" : "GetSubscription",
+      "Service" : "health-agent"
+    } ],
     "SDK" : [ {
       "Name" : "connecthealth",
       "Method" : "get_subscription",
@@ -904,6 +928,10 @@
     } ]
   }, {
     "Name" : "StartMedicalScribeListeningSession",
+    "AuthorizedActions" : [ {
+      "Name" : "StartMedicalScribeListeningSession",
+      "Service" : "health-agent"
+    } ],
     "SDK" : [ {
       "Name" : "connecthealth",
       "Method" : "start_medical_scribe_listening_session",
@@ -911,6 +939,10 @@
     } ]
   }, {
     "Name" : "StartPatientInsightsJob",
+    "AuthorizedActions" : [ {
+      "Name" : "StartPatientInsightsJob",
+      "Service" : "health-agent"
+    } ],
     "SDK" : [ {
       "Name" : "connecthealth",
       "Method" : "start_patient_insights_job",

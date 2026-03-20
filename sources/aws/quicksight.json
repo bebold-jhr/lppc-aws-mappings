@@ -5289,10 +5289,6 @@
     } ]
   }, {
     "Name" : "DeleteTemplateAlias",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteTemplateAlias",
-      "Service" : "quicksight"
-    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "delete_template_alias",

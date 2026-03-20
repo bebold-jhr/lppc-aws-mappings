@@ -1722,6 +1722,12 @@
   }, {
     "Name" : "UpdateLocationFsxOntap",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "datasync.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateLocationFsxOntap",
       "Service" : "datasync"
     } ],
@@ -1744,6 +1750,12 @@
   }, {
     "Name" : "UpdateLocationFsxWindows",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "datasync.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateLocationFsxWindows",
       "Service" : "datasync"
     } ],

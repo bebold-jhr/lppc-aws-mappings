@@ -3096,10 +3096,6 @@
     } ]
   }, {
     "Name" : "UpdateTrustedTokenIssuer",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateTrustedTokenIssuer",
-      "Service" : "sso"
-    } ],
     "SDK" : [ {
       "Name" : "sso-admin",
       "Method" : "update_trusted_token_issuer",

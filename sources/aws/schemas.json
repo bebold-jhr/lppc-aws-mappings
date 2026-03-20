@@ -650,10 +650,6 @@
     } ]
   }, {
     "Name" : "DescribeCodeBinding",
-    "AuthorizedActions" : [ {
-      "Name" : "DescribeCodeBinding",
-      "Service" : "schemas"
-    } ],
     "SDK" : [ {
       "Name" : "schemas",
       "Method" : "describe_code_binding",
@@ -705,10 +701,6 @@
     } ]
   }, {
     "Name" : "GetCodeBindingSource",
-    "AuthorizedActions" : [ {
-      "Name" : "GetCodeBindingSource",
-      "Service" : "schemas"
-    } ],
     "SDK" : [ {
       "Name" : "schemas",
       "Method" : "get_code_binding_source",
@@ -793,10 +785,6 @@
     } ]
   }, {
     "Name" : "PutCodeBinding",
-    "AuthorizedActions" : [ {
-      "Name" : "PutCodeBinding",
-      "Service" : "schemas"
-    } ],
     "SDK" : [ {
       "Name" : "schemas",
       "Method" : "put_code_binding",
@@ -826,10 +814,6 @@
     } ]
   }, {
     "Name" : "StartDiscoverer",
-    "AuthorizedActions" : [ {
-      "Name" : "StartDiscoverer",
-      "Service" : "schemas"
-    } ],
     "SDK" : [ {
       "Name" : "schemas",
       "Method" : "start_discoverer",
@@ -837,10 +821,6 @@
     } ]
   }, {
     "Name" : "StopDiscoverer",
-    "AuthorizedActions" : [ {
-      "Name" : "StopDiscoverer",
-      "Service" : "schemas"
-    } ],
     "SDK" : [ {
       "Name" : "schemas",
       "Method" : "stop_discoverer",

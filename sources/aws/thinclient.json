@@ -348,10 +348,6 @@
     } ]
   }, {
     "Name" : "DeleteDevice",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteDevice",
-      "Service" : "thinclient"
-    } ],
     "SDK" : [ {
       "Name" : "workspaces-thin-client",
       "Method" : "delete_device",
@@ -370,10 +366,6 @@
     } ]
   }, {
     "Name" : "DeregisterDevice",
-    "AuthorizedActions" : [ {
-      "Name" : "DeregisterDevice",
-      "Service" : "thinclient"
-    } ],
     "SDK" : [ {
       "Name" : "workspaces-thin-client",
       "Method" : "deregister_device",
@@ -458,10 +450,6 @@
     } ]
   }, {
     "Name" : "TagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "TagResource",
-      "Service" : "thinclient"
-    } ],
     "SDK" : [ {
       "Name" : "workspaces-thin-client",
       "Method" : "tag_resource",

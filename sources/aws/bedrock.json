@@ -4520,9 +4520,6 @@
   }, {
     "Name" : "CreateEvaluationJob",
     "AuthorizedActions" : [ {
-      "Name" : "CallWithBearerToken",
-      "Service" : "bedrock"
-    }, {
       "Name" : "CreateEvaluationJob",
       "Service" : "bedrock"
     }, {

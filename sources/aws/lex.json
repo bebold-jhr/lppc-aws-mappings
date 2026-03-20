@@ -2650,10 +2650,6 @@
     } ]
   }, {
     "Name" : "BatchUpdateCustomVocabularyItem",
-    "AuthorizedActions" : [ {
-      "Name" : "BatchUpdateCustomVocabularyItem",
-      "Service" : "lex"
-    } ],
     "SDK" : [ {
       "Name" : "lexv2-models",
       "Method" : "batch_update_custom_vocabulary_item",
@@ -2951,10 +2947,6 @@
     } ]
   }, {
     "Name" : "DeleteBotReplica",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteBotReplica",
-      "Service" : "lex"
-    } ],
     "SDK" : [ {
       "Name" : "lexv2-models",
       "Method" : "delete_bot_replica",
@@ -4145,10 +4137,6 @@
     } ]
   }, {
     "Name" : "StartBotAnalyzer",
-    "AuthorizedActions" : [ {
-      "Name" : "StartBotAnalyzer",
-      "Service" : "lex"
-    } ],
     "SDK" : [ {
       "Name" : "lexv2-models",
       "Method" : "start_bot_analyzer",

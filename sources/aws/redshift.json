@@ -2843,10 +2843,6 @@
     } ]
   }, {
     "Name" : "BatchModifyClusterSnapshots",
-    "AuthorizedActions" : [ {
-      "Name" : "BatchModifyClusterSnapshots",
-      "Service" : "redshift"
-    } ],
     "SDK" : [ {
       "Name" : "redshift",
       "Method" : "batch_modify_cluster_snapshots",
@@ -2927,13 +2923,6 @@
     } ]
   }, {
     "Name" : "CreateClusterSecurityGroup",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateClusterSecurityGroup",
-      "Service" : "redshift"
-    }, {
-      "Name" : "CreateTags",
-      "Service" : "redshift"
-    } ],
     "SDK" : [ {
       "Name" : "redshift",
       "Method" : "create_cluster_security_group",
@@ -3894,10 +3883,6 @@
     } ]
   }, {
     "Name" : "FailoverPrimaryCompute",
-    "AuthorizedActions" : [ {
-      "Name" : "FailoverPrimaryCompute",
-      "Service" : "redshift"
-    } ],
     "SDK" : [ {
       "Name" : "redshift",
       "Method" : "failover_primary_compute",
@@ -4002,10 +3987,6 @@
     } ]
   }, {
     "Name" : "ModifyAuthenticationProfile",
-    "AuthorizedActions" : [ {
-      "Name" : "ModifyAuthenticationProfile",
-      "Service" : "redshift"
-    } ],
     "SDK" : [ {
       "Name" : "redshift",
       "Method" : "modify_authentication_profile",
@@ -4118,10 +4099,6 @@
     } ]
   }, {
     "Name" : "ModifyEndpointAccess",
-    "AuthorizedActions" : [ {
-      "Name" : "ModifyEndpointAccess",
-      "Service" : "redshift"
-    } ],
     "SDK" : [ {
       "Name" : "redshift",
       "Method" : "modify_endpoint_access",

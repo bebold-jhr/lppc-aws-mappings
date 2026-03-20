@@ -198,6 +198,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "Assessment"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -1228,6 +1231,9 @@
     } ]
   } ],
   "Resources" : [ {
+    "Name" : "Assessment",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}::${Catalog}/Assessment/${ResourceId}" ]
+  }, {
     "Name" : "ChangeSet",
     "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}:${Account}:${Catalog}/ChangeSet/${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "catalog:ChangeType" ]

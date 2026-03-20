@@ -813,6 +813,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreatePrefetchSchedule",
       "Service" : "mediatailor"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "mediatailor"
     } ],
     "SDK" : [ {
       "Name" : "mediatailor",

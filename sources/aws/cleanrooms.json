@@ -2508,10 +2508,6 @@
     } ]
   }, {
     "Name" : "PreviewPrivacyImpact",
-    "AuthorizedActions" : [ {
-      "Name" : "PreviewPrivacyImpact",
-      "Service" : "cleanrooms"
-    } ],
     "SDK" : [ {
       "Name" : "cleanrooms",
       "Method" : "preview_privacy_impact",
@@ -2552,10 +2548,6 @@
     } ]
   }, {
     "Name" : "UntagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "UntagResource",
-      "Service" : "cleanrooms"
-    } ],
     "SDK" : [ {
       "Name" : "cleanrooms",
       "Method" : "untag_resource",

@@ -5308,6 +5308,10 @@
     } ]
   }, {
     "Name" : "BatchUpdateAttendeeCapabilitiesExcept",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchUpdateAttendeeCapabilitiesExcept",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime-sdk-meetings",
       "Method" : "batch_update_attendee_capabilities_except",

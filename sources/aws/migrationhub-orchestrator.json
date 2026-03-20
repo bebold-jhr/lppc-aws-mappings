@@ -860,10 +860,6 @@
     } ]
   }, {
     "Name" : "TagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "TagResource",
-      "Service" : "migrationhub-orchestrator"
-    } ],
     "SDK" : [ {
       "Name" : "migrationhuborchestrator",
       "Method" : "tag_resource",

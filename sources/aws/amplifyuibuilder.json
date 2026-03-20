@@ -593,10 +593,6 @@
     } ]
   }, {
     "Name" : "ExchangeCodeForToken",
-    "AuthorizedActions" : [ {
-      "Name" : "ExchangeCodeForToken",
-      "Service" : "amplifyuibuilder"
-    } ],
     "SDK" : [ {
       "Name" : "amplifyuibuilder",
       "Method" : "exchange_code_for_token",
@@ -754,10 +750,6 @@
     } ]
   }, {
     "Name" : "RefreshToken",
-    "AuthorizedActions" : [ {
-      "Name" : "RefreshToken",
-      "Service" : "amplifyuibuilder"
-    } ],
     "SDK" : [ {
       "Name" : "amplifyuibuilder",
       "Method" : "refresh_token",

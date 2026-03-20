@@ -11,9 +11,6 @@
         "IsWrite" : true
       }
     },
-    "Resources" : [ {
-      "Name" : "cluster"
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -30,7 +27,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "controlpanel"
+      "Name" : "cluster"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -47,7 +44,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "routingcontrol"
+      "Name" : "cluster"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -65,7 +62,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "safetyrule"
+      "Name" : "cluster"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -208,23 +205,6 @@
       "IAM Action Last Accessed" : true
     }
   }, {
-    "Name" : "DescribeRoutingControlByName",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "Resources" : [ {
-      "Name" : "routingcontrol"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
     "Name" : "DescribeSafetyRule",
     "Annotations" : {
       "Properties" : {
@@ -268,6 +248,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "routingcontrol"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -310,6 +293,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "controlpanel"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -341,6 +327,13 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    }, {
+      "Name" : "controlpanel"
+    }, {
+      "Name" : "safetyrule"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false

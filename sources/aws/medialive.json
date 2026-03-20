@@ -2175,10 +2175,6 @@
   } ],
   "Operations" : [ {
     "Name" : "AcceptInputDeviceTransfer",
-    "AuthorizedActions" : [ {
-      "Name" : "AcceptInputDeviceTransfer",
-      "Service" : "medialive"
-    } ],
     "SDK" : [ {
       "Name" : "medialive",
       "Method" : "accept_input_device_transfer",
@@ -3541,10 +3537,6 @@
     } ]
   }, {
     "Name" : "UpdateNetwork",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateNetwork",
-      "Service" : "medialive"
-    } ],
     "SDK" : [ {
       "Name" : "medialive",
       "Method" : "update_network",

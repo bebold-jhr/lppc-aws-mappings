@@ -611,6 +611,9 @@
   "service" : "inspector2-telemetry",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/inspector2-telemetry/inspector2-telemetry.json"
 }, {
+  "service" : "interconnect",
+  "url" : "https://servicereference.us-east-1.amazonaws.com/v1/interconnect/interconnect.json"
+}, {
   "service" : "internetmonitor",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/internetmonitor/internetmonitor.json"
 }, {

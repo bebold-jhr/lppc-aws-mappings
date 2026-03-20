@@ -1997,9 +1997,6 @@
       "Name" : "CreateAlias",
       "Service" : "gamelift"
     }, {
-      "Name" : "CreateAlias",
-      "Service" : "gamelift"
-    }, {
       "Name" : "TagResource",
       "Service" : "gamelift"
     } ],
@@ -2159,9 +2156,6 @@
   }, {
     "Name" : "CreateLocation",
     "AuthorizedActions" : [ {
-      "Name" : "CreateLocation",
-      "Service" : "gamelift"
-    }, {
       "Name" : "CreateLocation",
       "Service" : "gamelift"
     }, {

@@ -6072,10 +6072,6 @@
     } ]
   }, {
     "Name" : "DescribeAuditSuppression",
-    "AuthorizedActions" : [ {
-      "Name" : "DescribeAuditSuppression",
-      "Service" : "iot"
-    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "describe_audit_suppression",
@@ -6479,10 +6475,6 @@
     } ]
   }, {
     "Name" : "DisableTopicRule",
-    "AuthorizedActions" : [ {
-      "Name" : "DisableTopicRule",
-      "Service" : "iot"
-    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "disable_topic_rule",
@@ -7725,10 +7717,6 @@
     } ]
   }, {
     "Name" : "StartAuditMitigationActionsTask",
-    "AuthorizedActions" : [ {
-      "Name" : "StartAuditMitigationActionsTask",
-      "Service" : "iot"
-    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "start_audit_mitigation_actions_task",
@@ -7747,10 +7735,6 @@
     } ]
   }, {
     "Name" : "StartOnDemandAuditTask",
-    "AuthorizedActions" : [ {
-      "Name" : "StartOnDemandAuditTask",
-      "Service" : "iot"
-    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "start_on_demand_audit_task",
@@ -7956,10 +7940,6 @@
     } ]
   }, {
     "Name" : "UpdateDimension",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateDimension",
-      "Service" : "iot"
-    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "update_dimension",
@@ -8164,16 +8144,6 @@
     } ]
   }, {
     "Name" : "UpdateStream",
-    "AuthorizedActions" : [ {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "iot.amazonaws.com" ]
-      },
-      "Service" : "iam"
-    }, {
-      "Name" : "UpdateStream",
-      "Service" : "iot"
-    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "update_stream",

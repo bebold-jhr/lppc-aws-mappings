@@ -1061,10 +1061,6 @@
     } ]
   }, {
     "Name" : "UntagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "UntagResource",
-      "Service" : "notifications"
-    } ],
     "SDK" : [ {
       "Name" : "notifications",
       "Method" : "untag_resource",

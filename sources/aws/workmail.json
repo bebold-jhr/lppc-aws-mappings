@@ -2205,10 +2205,6 @@
     } ]
   }, {
     "Name" : "CreateAvailabilityConfiguration",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateAvailabilityConfiguration",
-      "Service" : "workmail"
-    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "create_availability_configuration",
@@ -2238,10 +2234,6 @@
     } ]
   }, {
     "Name" : "CreateImpersonationRole",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateImpersonationRole",
-      "Service" : "workmail"
-    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "create_impersonation_role",
@@ -3045,10 +3037,6 @@
     } ]
   }, {
     "Name" : "TestAvailabilityConfiguration",
-    "AuthorizedActions" : [ {
-      "Name" : "TestAvailabilityConfiguration",
-      "Service" : "workmail"
-    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "test_availability_configuration",
@@ -3067,10 +3055,6 @@
     } ]
   }, {
     "Name" : "UpdateAvailabilityConfiguration",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateAvailabilityConfiguration",
-      "Service" : "workmail"
-    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "update_availability_configuration",
@@ -3100,10 +3084,6 @@
     } ]
   }, {
     "Name" : "UpdateImpersonationRole",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateImpersonationRole",
-      "Service" : "workmail"
-    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "update_impersonation_role",

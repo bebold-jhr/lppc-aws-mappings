@@ -1636,10 +1636,6 @@
     } ]
   }, {
     "Name" : "RejectGrant",
-    "AuthorizedActions" : [ {
-      "Name" : "RejectGrant",
-      "Service" : "license-manager"
-    } ],
     "SDK" : [ {
       "Name" : "license-manager",
       "Method" : "reject_grant",

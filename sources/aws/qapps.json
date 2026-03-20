@@ -979,10 +979,6 @@
     } ]
   }, {
     "Name" : "ListTagsForResource",
-    "AuthorizedActions" : [ {
-      "Name" : "ListTagsForResource",
-      "Service" : "qapps"
-    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "list_tags_for_resource",

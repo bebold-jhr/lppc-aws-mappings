@@ -323,10 +323,6 @@
     } ]
   }, {
     "Name" : "UntagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "UntagResource",
-      "Service" : "networkmonitor"
-    } ],
     "SDK" : [ {
       "Name" : "networkmonitor",
       "Method" : "untag_resource",

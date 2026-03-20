@@ -72,6 +72,7 @@
     }
   }, {
     "Name" : "GetDICOMBulkdata",
+    "ActionConditionKeys" : [ "medical-imaging:SeriesInstanceUID", "medical-imaging:StudyInstanceUID" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -106,6 +107,7 @@
     }
   }, {
     "Name" : "GetDICOMInstance",
+    "ActionConditionKeys" : [ "medical-imaging:SeriesInstanceUID", "medical-imaging:StudyInstanceUID" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -123,6 +125,7 @@
     }
   }, {
     "Name" : "GetDICOMInstanceFrames",
+    "ActionConditionKeys" : [ "medical-imaging:SeriesInstanceUID", "medical-imaging:StudyInstanceUID" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -140,6 +143,7 @@
     }
   }, {
     "Name" : "GetDICOMInstanceMetadata",
+    "ActionConditionKeys" : [ "medical-imaging:SeriesInstanceUID", "medical-imaging:StudyInstanceUID" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -157,6 +161,7 @@
     }
   }, {
     "Name" : "GetDICOMSeriesMetadata",
+    "ActionConditionKeys" : [ "medical-imaging:SeriesInstanceUID", "medical-imaging:StudyInstanceUID" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -317,6 +322,7 @@
     }
   }, {
     "Name" : "SearchDICOMInstances",
+    "ActionConditionKeys" : [ "medical-imaging:SeriesInstanceUID", "medical-imaging:StudyInstanceUID" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -334,6 +340,7 @@
     }
   }, {
     "Name" : "SearchDICOMSeries",
+    "ActionConditionKeys" : [ "medical-imaging:StudyInstanceUID" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -419,6 +426,7 @@
     }
   }, {
     "Name" : "StoreDICOMStudy",
+    "ActionConditionKeys" : [ "medical-imaging:StudyInstanceUID" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -503,6 +511,12 @@
   }, {
     "Name" : "aws:TagKeys",
     "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "medical-imaging:SeriesInstanceUID",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "medical-imaging:StudyInstanceUID",
+    "Types" : [ "String" ]
   } ],
   "Operations" : [ {
     "Name" : "CopyImageSet",

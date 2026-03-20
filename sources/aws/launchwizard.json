@@ -754,10 +754,6 @@
     } ]
   }, {
     "Name" : "UpdateDeployment",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateDeployment",
-      "Service" : "launchwizard"
-    } ],
     "SDK" : [ {
       "Name" : "launch-wizard",
       "Method" : "update_deployment",

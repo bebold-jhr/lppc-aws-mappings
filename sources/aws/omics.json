@@ -1659,10 +1659,6 @@
     } ]
   }, {
     "Name" : "AcceptShare",
-    "AuthorizedActions" : [ {
-      "Name" : "AcceptShare",
-      "Service" : "omics"
-    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "accept_share",
@@ -1937,10 +1933,6 @@
     } ]
   }, {
     "Name" : "DeleteRunCache",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteRunCache",
-      "Service" : "omics"
-    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "delete_run_cache",
@@ -2708,10 +2700,6 @@
     } ]
   }, {
     "Name" : "UpdateRunCache",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateRunCache",
-      "Service" : "omics"
-    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "update_run_cache",
@@ -2763,10 +2751,6 @@
     } ]
   }, {
     "Name" : "UpdateWorkflowVersion",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateWorkflowVersion",
-      "Service" : "omics"
-    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "update_workflow_version",

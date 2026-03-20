@@ -1681,10 +1681,6 @@
     } ]
   }, {
     "Name" : "DeleteSharedTrustStoreAssociation",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteSharedTrustStoreAssociation",
-      "Service" : "elasticloadbalancing"
-    } ],
     "SDK" : [ {
       "Name" : "elbv2",
       "Method" : "delete_shared_trust_store_association",

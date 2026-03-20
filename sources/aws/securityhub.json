@@ -35,6 +35,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "AllowVendedLogDeliveryForResource",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "hub"
+    }, {
+      "Name" : "hubv2"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "BatchDeleteAutomationRules",
     "Annotations" : {
       "Properties" : {
@@ -1620,7 +1639,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "configuration-policy"
+      "Name" : "hub"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1637,7 +1656,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "configuration-policy"
+      "Name" : "hub"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,

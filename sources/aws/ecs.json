@@ -2,7 +2,7 @@
   "Name" : "ecs",
   "Actions" : [ {
     "Name" : "CreateCapacityProvider",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ecs:propagate-tags" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ecs:instance-metadata-tags-propagation", "ecs:propagate-tags" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1042,7 +1042,7 @@
     }
   }, {
     "Name" : "UpdateCapacityProvider",
-    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:propagate-tags" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:instance-metadata-tags-propagation", "ecs:propagate-tags" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1278,6 +1278,9 @@
   }, {
     "Name" : "ecs:fargate-ephemeral-storage-kms-key",
     "Types" : [ "String" ]
+  }, {
+    "Name" : "ecs:instance-metadata-tags-propagation",
+    "Types" : [ "Bool" ]
   }, {
     "Name" : "ecs:namespace",
     "Types" : [ "ARN" ]

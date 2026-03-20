@@ -12086,10 +12086,6 @@
     } ]
   }, {
     "Name" : "UpdateWorkforce",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateWorkforce",
-      "Service" : "sagemaker"
-    } ],
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "update_workforce",

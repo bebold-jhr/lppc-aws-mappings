@@ -1138,10 +1138,6 @@
     } ]
   }, {
     "Name" : "CreateAppVersionResource",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateAppVersionResource",
-      "Service" : "resiliencehub"
-    } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "create_app_version_resource",
@@ -1149,10 +1145,6 @@
     } ]
   }, {
     "Name" : "CreateRecommendationTemplate",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateRecommendationTemplate",
-      "Service" : "resiliencehub"
-    } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "create_recommendation_template",
@@ -1229,10 +1221,6 @@
     } ]
   }, {
     "Name" : "DeleteRecommendationTemplate",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteRecommendationTemplate",
-      "Service" : "resiliencehub"
-    } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "delete_recommendation_template",

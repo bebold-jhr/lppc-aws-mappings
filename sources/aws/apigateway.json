@@ -2083,10 +2083,6 @@
     } ]
   }, {
     "Name" : "DisablePortal",
-    "AuthorizedActions" : [ {
-      "Name" : "DisablePortal",
-      "Service" : "apigateway"
-    } ],
     "SDK" : [ {
       "Name" : "apigatewayv2",
       "Method" : "disable_portal",

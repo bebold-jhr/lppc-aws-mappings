@@ -1282,6 +1282,25 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "InvokeAgentRuntimeCommand",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "runtime"
+    }, {
+      "Name" : "runtime-endpoint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "InvokeAgentRuntimeForUser",
     "Annotations" : {
       "Properties" : {
@@ -3306,6 +3325,17 @@
     "SDK" : [ {
       "Name" : "bedrock-agentcore",
       "Method" : "invoke_agent_runtime",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "InvokeAgentRuntimeCommand",
+    "AuthorizedActions" : [ {
+      "Name" : "InvokeAgentRuntimeCommand",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore",
+      "Method" : "invoke_agent_runtime_command",
       "Package" : "Boto3"
     } ]
   }, {
