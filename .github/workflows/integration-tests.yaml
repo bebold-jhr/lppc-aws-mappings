@@ -53,26 +53,26 @@ jobs:
           #   - Broader patterns: "\.terraform\.lock\.hcl$" to skip all lock file changes
           #   - Simple substrings: "some_resource_name"
           EXCLUDE_PATHS=(
-            "integration-tests/resource/aws_account_region/providers.tf", # takes > 5m30s
-            "integration-tests/data/aws_ec2_transit_gateway/providers.tf", # takes > 3m28s
-            "integration-tests/data/aws_ec2_transit_gateway_attachment/providers.tf", # takes > 5m16s
-            "integration-tests/data/aws_ec2_transit_gateway_attachments/providers.tf", # takes > 6m36s
-            "integration-tests/data/aws_ec2_transit_gateway_connect/providers.tf", # takes > 11m9s
-            "integration-tests/data/aws_ec2_transit_gateway_connect_peer/providers.tf", # takes > 11m28s
-            "integration-tests/data/aws_ec2_transit_gateway_multicast_domain/providers.tf", # takes > 4m15s
-            "integration-tests/data/aws_ec2_transit_gateway_route_table/providers.tf", # takes > 6m6s
-            "integration-tests/data/aws_ec2_transit_gateway_route_table_associations/providers.tf", # takes > 6m27s
-            "integration-tests/data/aws_ec2_transit_gateway_route_table_propagations/providers.tf", # takes > 5m00s
-            "integration-tests/data/aws_ec2_transit_gateway_route_table_routes/providers.tf", # takes > 5m00s
-            "integration-tests/data/aws_ec2_transit_gateway_route_tables/providers.tf", # takes > 5m00s
-            "integration-tests/data/aws_ec2_transit_gateway_vpc_attachment/providers.tf", # takes > 5m00s
-            "integration-tests/data/aws_ec2_transit_gateway_vpc_attachments/providers.tf", # takes > 5m00s
-            "integration-tests/data/aws_lb/providers.tf", # takes > 3m3s
-            "integration-tests/data/aws_lbs/providers.tf", # takes > 3m11s
-            "integration-tests/data/aws_lb_listener/providers.tf", # takes > 2m57s
-            "integration-tests/data/aws_lb_listener_rule/providers.tf", # takes > 3m0s
-            "integration-tests/data/aws_instance/providers.tf" # takes > 1m13s 
-            "integration-tests/data/aws_instances/providers.tf" # takes > 1m1s 
+            "integration-tests/resource/aws_account_region/providers.tf" # takes > 5m30s
+            "integration-tests/data/aws_ec2_transit_gateway/providers.tf" # takes > 3m28s
+            "integration-tests/data/aws_ec2_transit_gateway_attachment/providers.tf" # takes > 5m16s
+            "integration-tests/data/aws_ec2_transit_gateway_attachments/providers.tf" # takes > 6m36s
+            "integration-tests/data/aws_ec2_transit_gateway_connect/providers.tf" # takes > 11m9s
+            "integration-tests/data/aws_ec2_transit_gateway_connect_peer/providers.tf" # takes > 11m28s
+            "integration-tests/data/aws_ec2_transit_gateway_multicast_domain/providers.tf" # takes > 4m15s
+            "integration-tests/data/aws_ec2_transit_gateway_route_table/providers.tf" # takes > 6m6s
+            "integration-tests/data/aws_ec2_transit_gateway_route_table_associations/providers.tf" # takes > 6m27s
+            "integration-tests/data/aws_ec2_transit_gateway_route_table_propagations/providers.tf" # takes > 5m00s
+            "integration-tests/data/aws_ec2_transit_gateway_route_table_routes/providers.tf" # takes > 5m00s
+            "integration-tests/data/aws_ec2_transit_gateway_route_tables/providers.tf" # takes > 5m00s
+            "integration-tests/data/aws_ec2_transit_gateway_vpc_attachment/providers.tf" # takes > 5m00s
+            "integration-tests/data/aws_ec2_transit_gateway_vpc_attachments/providers.tf" # takes > 5m00s
+            "integration-tests/data/aws_lb/providers.tf" # takes > 3m3s
+            "integration-tests/data/aws_lbs/providers.tf" # takes > 3m11s
+            "integration-tests/data/aws_lb_listener/providers.tf" # takes > 2m57s
+            "integration-tests/data/aws_lb_listener_rule/providers.tf" # takes > 3m0s
+            "integration-tests/data/aws_instance/providers.tf" # takes > 1m13s
+            "integration-tests/data/aws_instances/providers.tf" # takes > 1m1s
             "integration-tests/data/aws_nat_gateway/providers.tf" # takes > 3m12s
             "integration-tests/data/aws_nat_gateways/providers.tf" # takes > 3m12s
             "integration-tests/data/aws_vpc_ipam_pool_cidrs/providers.tf" # takes > 1m47s
