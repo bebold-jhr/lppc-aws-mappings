@@ -1,5 +1,7 @@
 ---
-# TODO: integration test
+# No integration test:
+# AWS WAF Classic is an EOL service (planned end-of-life, replaced by WAFv2).
+# https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html
 metadata:
   aws:
     documentation: https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html
