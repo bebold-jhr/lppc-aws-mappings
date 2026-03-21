@@ -1,5 +1,6 @@
 ---
-# TODO: integration test
+# No integration test:
+# DMS replication instances are costly and take 10+ minutes to create/delete.
 metadata:
   aws:
     documentation: https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html
