@@ -1825,9 +1825,6 @@
       "Name" : "CreateConnectAttachment",
       "Service" : "networkmanager"
     }, {
-      "Name" : "PutAttachmentRoutingPolicyLabel",
-      "Service" : "networkmanager"
-    }, {
       "Name" : "TagResource",
       "Service" : "networkmanager"
     } ],
@@ -2073,10 +2070,6 @@
     } ]
   }, {
     "Name" : "DeleteCoreNetworkPolicyVersion",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteCoreNetworkPolicyVersion",
-      "Service" : "networkmanager"
-    } ],
     "SDK" : [ {
       "Name" : "networkmanager",
       "Method" : "delete_core_network_policy_version",

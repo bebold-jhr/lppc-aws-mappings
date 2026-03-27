@@ -4276,16 +4276,6 @@
     } ]
   }, {
     "Name" : "StartMigration",
-    "AuthorizedActions" : [ {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "lexv2.amazonaws.com" ]
-      },
-      "Service" : "iam"
-    }, {
-      "Name" : "StartMigration",
-      "Service" : "lex"
-    } ],
     "SDK" : [ {
       "Name" : "lex-models",
       "Method" : "start_migration",
@@ -4417,10 +4407,6 @@
     } ]
   }, {
     "Name" : "UpdateBotRecommendation",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateBotRecommendation",
-      "Service" : "lex"
-    } ],
     "SDK" : [ {
       "Name" : "lexv2-models",
       "Method" : "update_bot_recommendation",

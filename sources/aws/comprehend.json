@@ -2046,9 +2046,6 @@
         "iam:PassedToService" : [ "comprehend.amazonaws.com" ]
       },
       "Service" : "iam"
-    }, {
-      "Name" : "TagResource",
-      "Service" : "comprehend"
     } ],
     "SDK" : [ {
       "Name" : "comprehend",

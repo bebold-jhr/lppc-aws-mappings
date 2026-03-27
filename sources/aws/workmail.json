@@ -2234,6 +2234,10 @@
     } ]
   }, {
     "Name" : "CreateImpersonationRole",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateImpersonationRole",
+      "Service" : "workmail"
+    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "create_impersonation_role",
@@ -3037,6 +3041,10 @@
     } ]
   }, {
     "Name" : "TestAvailabilityConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "TestAvailabilityConfiguration",
+      "Service" : "workmail"
+    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "test_availability_configuration",

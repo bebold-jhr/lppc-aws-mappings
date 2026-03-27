@@ -558,10 +558,6 @@
     } ]
   }, {
     "Name" : "GetQueryStatusWorkloadInsightsTopContributors",
-    "AuthorizedActions" : [ {
-      "Name" : "GetQueryStatusWorkloadInsightsTopContributors",
-      "Service" : "networkflowmonitor"
-    } ],
     "SDK" : [ {
       "Name" : "networkflowmonitor",
       "Method" : "get_query_status_workload_insights_top_contributors",
@@ -609,10 +605,6 @@
     } ]
   }, {
     "Name" : "ListTagsForResource",
-    "AuthorizedActions" : [ {
-      "Name" : "ListTagsForResource",
-      "Service" : "networkflowmonitor"
-    } ],
     "SDK" : [ {
       "Name" : "networkflowmonitor",
       "Method" : "list_tags_for_resource",

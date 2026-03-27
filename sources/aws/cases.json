@@ -1248,6 +1248,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateRelatedItem",
+    "SDK" : [ {
+      "Name" : "connectcases",
+      "Method" : "update_related_item",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateTemplate",
     "AuthorizedActions" : [ {
       "Name" : "UpdateTemplate",

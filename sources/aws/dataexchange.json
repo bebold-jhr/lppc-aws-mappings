@@ -761,6 +761,9 @@
     }, {
       "Name" : "StartJob",
       "Service" : "dataexchange"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "dataexchange"
     } ],
     "SDK" : [ {
       "Name" : "dataexchange",
@@ -1107,6 +1110,9 @@
       "Service" : "dataexchange"
     }, {
       "Name" : "StartJob",
+      "Service" : "dataexchange"
+    }, {
+      "Name" : "TagResource",
       "Service" : "dataexchange"
     } ],
     "SDK" : [ {

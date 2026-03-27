@@ -1300,6 +1300,10 @@
     } ]
   }, {
     "Name" : "RebootDbNode",
+    "AuthorizedActions" : [ {
+      "Name" : "RebootDbNode",
+      "Service" : "odb"
+    } ],
     "SDK" : [ {
       "Name" : "odb",
       "Method" : "reboot_db_node",

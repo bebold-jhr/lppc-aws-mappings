@@ -1560,10 +1560,6 @@
     } ]
   }, {
     "Name" : "RegisterOrganizationAdminAccount",
-    "AuthorizedActions" : [ {
-      "Name" : "RegisterOrganizationAdminAccount",
-      "Service" : "auditmanager"
-    } ],
     "SDK" : [ {
       "Name" : "auditmanager",
       "Method" : "register_organization_admin_account",

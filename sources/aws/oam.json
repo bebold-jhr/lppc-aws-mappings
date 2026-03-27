@@ -280,6 +280,31 @@
   } ],
   "Operations" : [ {
     "Name" : "CreateLink",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateLink",
+      "Service" : "oam"
+    }, {
+      "Name" : "Link",
+      "Service" : "application-signals"
+    }, {
+      "Name" : "Link",
+      "Service" : "applicationinsights"
+    }, {
+      "Name" : "Link",
+      "Service" : "cloudwatch"
+    }, {
+      "Name" : "Link",
+      "Service" : "internetmonitor"
+    }, {
+      "Name" : "Link",
+      "Service" : "logs"
+    }, {
+      "Name" : "Link",
+      "Service" : "xray"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "oam"
+    } ],
     "SDK" : [ {
       "Name" : "oam",
       "Method" : "create_link",
@@ -287,6 +312,13 @@
     } ]
   }, {
     "Name" : "CreateSink",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateSink",
+      "Service" : "oam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "oam"
+    } ],
     "SDK" : [ {
       "Name" : "oam",
       "Method" : "create_sink",
@@ -294,6 +326,10 @@
     } ]
   }, {
     "Name" : "DeleteLink",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteLink",
+      "Service" : "oam"
+    } ],
     "SDK" : [ {
       "Name" : "oam",
       "Method" : "delete_link",
@@ -301,6 +337,10 @@
     } ]
   }, {
     "Name" : "DeleteSink",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteSink",
+      "Service" : "oam"
+    } ],
     "SDK" : [ {
       "Name" : "oam",
       "Method" : "delete_sink",
@@ -308,6 +348,10 @@
     } ]
   }, {
     "Name" : "GetLink",
+    "AuthorizedActions" : [ {
+      "Name" : "GetLink",
+      "Service" : "oam"
+    } ],
     "SDK" : [ {
       "Name" : "oam",
       "Method" : "get_link",
@@ -315,6 +359,10 @@
     } ]
   }, {
     "Name" : "GetSink",
+    "AuthorizedActions" : [ {
+      "Name" : "GetSink",
+      "Service" : "oam"
+    } ],
     "SDK" : [ {
       "Name" : "oam",
       "Method" : "get_sink",
@@ -322,6 +370,10 @@
     } ]
   }, {
     "Name" : "GetSinkPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "GetSinkPolicy",
+      "Service" : "oam"
+    } ],
     "SDK" : [ {
       "Name" : "oam",
       "Method" : "get_sink_policy",
@@ -329,6 +381,10 @@
     } ]
   }, {
     "Name" : "ListAttachedLinks",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAttachedLinks",
+      "Service" : "oam"
+    } ],
     "SDK" : [ {
       "Name" : "oam",
       "Method" : "list_attached_links",
@@ -336,6 +392,10 @@
     } ]
   }, {
     "Name" : "ListLinks",
+    "AuthorizedActions" : [ {
+      "Name" : "ListLinks",
+      "Service" : "oam"
+    } ],
     "SDK" : [ {
       "Name" : "oam",
       "Method" : "list_links",
@@ -343,6 +403,10 @@
     } ]
   }, {
     "Name" : "ListSinks",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSinks",
+      "Service" : "oam"
+    } ],
     "SDK" : [ {
       "Name" : "oam",
       "Method" : "list_sinks",
@@ -350,6 +414,10 @@
     } ]
   }, {
     "Name" : "ListTagsForResource",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTagsForResource",
+      "Service" : "oam"
+    } ],
     "SDK" : [ {
       "Name" : "oam",
       "Method" : "list_tags_for_resource",
@@ -357,6 +425,10 @@
     } ]
   }, {
     "Name" : "PutSinkPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "PutSinkPolicy",
+      "Service" : "oam"
+    } ],
     "SDK" : [ {
       "Name" : "oam",
       "Method" : "put_sink_policy",
@@ -364,6 +436,10 @@
     } ]
   }, {
     "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "oam"
+    } ],
     "SDK" : [ {
       "Name" : "oam",
       "Method" : "tag_resource",
@@ -371,6 +447,10 @@
     } ]
   }, {
     "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "oam"
+    } ],
     "SDK" : [ {
       "Name" : "oam",
       "Method" : "untag_resource",
@@ -378,6 +458,28 @@
     } ]
   }, {
     "Name" : "UpdateLink",
+    "AuthorizedActions" : [ {
+      "Name" : "Link",
+      "Service" : "application-signals"
+    }, {
+      "Name" : "Link",
+      "Service" : "applicationinsights"
+    }, {
+      "Name" : "Link",
+      "Service" : "cloudwatch"
+    }, {
+      "Name" : "Link",
+      "Service" : "internetmonitor"
+    }, {
+      "Name" : "Link",
+      "Service" : "logs"
+    }, {
+      "Name" : "Link",
+      "Service" : "xray"
+    }, {
+      "Name" : "UpdateLink",
+      "Service" : "oam"
+    } ],
     "SDK" : [ {
       "Name" : "oam",
       "Method" : "update_link",

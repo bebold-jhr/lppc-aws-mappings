@@ -510,6 +510,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreatePolicyStoreAlias",
+    "SDK" : [ {
+      "Name" : "verifiedpermissions",
+      "Method" : "create_policy_store_alias",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreatePolicyTemplate",
     "SDK" : [ {
       "Name" : "verifiedpermissions",
@@ -538,6 +545,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeletePolicyStoreAlias",
+    "SDK" : [ {
+      "Name" : "verifiedpermissions",
+      "Method" : "delete_policy_store_alias",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeletePolicyTemplate",
     "SDK" : [ {
       "Name" : "verifiedpermissions",
@@ -563,6 +577,13 @@
     "SDK" : [ {
       "Name" : "verifiedpermissions",
       "Method" : "get_policy_store",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetPolicyStoreAlias",
+    "SDK" : [ {
+      "Name" : "verifiedpermissions",
+      "Method" : "get_policy_store_alias",
       "Package" : "Boto3"
     } ]
   }, {
@@ -605,6 +626,13 @@
     "SDK" : [ {
       "Name" : "verifiedpermissions",
       "Method" : "list_policies",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListPolicyStoreAliases",
+    "SDK" : [ {
+      "Name" : "verifiedpermissions",
+      "Method" : "list_policy_store_aliases",
       "Package" : "Boto3"
     } ]
   }, {

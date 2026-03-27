@@ -475,13 +475,6 @@
     } ]
   }, {
     "Name" : "UpdateEnvironment",
-    "AuthorizedActions" : [ {
-      "Name" : "TagResource",
-      "Service" : "thinclient"
-    }, {
-      "Name" : "UpdateEnvironment",
-      "Service" : "thinclient"
-    } ],
     "SDK" : [ {
       "Name" : "workspaces-thin-client",
       "Method" : "update_environment",
@@ -489,10 +482,6 @@
     } ]
   }, {
     "Name" : "UpdateSoftwareSet",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateSoftwareSet",
-      "Service" : "thinclient"
-    } ],
     "SDK" : [ {
       "Name" : "workspaces-thin-client",
       "Method" : "update_software_set",

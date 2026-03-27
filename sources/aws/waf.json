@@ -1445,10 +1445,6 @@
     } ]
   }, {
     "Name" : "DeleteGeoMatchSet",
-    "AuthorizedActions" : [ {
-      "Name" : "DeleteGeoMatchSet",
-      "Service" : "waf"
-    } ],
     "SDK" : [ {
       "Name" : "waf",
       "Method" : "delete_geo_match_set",
@@ -2005,10 +2001,6 @@
     } ]
   }, {
     "Name" : "UpdateGeoMatchSet",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateGeoMatchSet",
-      "Service" : "waf"
-    } ],
     "SDK" : [ {
       "Name" : "waf",
       "Method" : "update_geo_match_set",

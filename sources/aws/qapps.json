@@ -862,10 +862,6 @@
     } ]
   }, {
     "Name" : "DisassociateQAppFromUser",
-    "AuthorizedActions" : [ {
-      "Name" : "DisassociateQAppFromUser",
-      "Service" : "qapps"
-    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "disassociate_q_app_from_user",
@@ -1029,10 +1025,6 @@
     } ]
   }, {
     "Name" : "UpdateLibraryItem",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateLibraryItem",
-      "Service" : "qapps"
-    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "update_library_item",
@@ -1069,6 +1061,10 @@
     } ]
   }, {
     "Name" : "UpdateQAppSession",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateQAppSession",
+      "Service" : "qapps"
+    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "update_q_app_session",

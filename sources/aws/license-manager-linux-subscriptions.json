@@ -279,10 +279,6 @@
     } ]
   }, {
     "Name" : "UpdateServiceSettings",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateServiceSettings",
-      "Service" : "license-manager-linux-subscriptions"
-    } ],
     "SDK" : [ {
       "Name" : "license-manager-linux-subscriptions",
       "Method" : "update_service_settings",

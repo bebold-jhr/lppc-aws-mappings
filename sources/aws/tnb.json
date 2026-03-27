@@ -900,10 +900,6 @@
     } ]
   }, {
     "Name" : "TagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "TagResource",
-      "Service" : "tnb"
-    } ],
     "SDK" : [ {
       "Name" : "tnb",
       "Method" : "tag_resource",

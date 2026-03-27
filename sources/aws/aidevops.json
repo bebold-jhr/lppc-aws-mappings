@@ -25,9 +25,9 @@
       }
     },
     "Resources" : [ {
-      "Name" : "AgentSpaceResource"
+      "Name" : "agentspace"
     }, {
-      "Name" : "AssociationResource"
+      "Name" : "associations"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -35,6 +35,7 @@
     }
   }, {
     "Name" : "CreateAgentSpace",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -44,7 +45,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "AgentSpaceResource"
+      "Name" : "agentspace"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -60,6 +61,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -74,6 +78,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -88,22 +95,8 @@
         "IsWrite" : true
       }
     },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "CreateOneTimeLoginSession",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
     "Resources" : [ {
-      "Name" : "AgentSpaceResource"
+      "Name" : "agentspace"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -111,6 +104,7 @@
     }
   }, {
     "Name" : "DeleteAgentSpace",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -120,7 +114,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "AgentSpaceResource"
+      "Name" : "agentspace"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -136,12 +130,16 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeregisterService",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -151,7 +149,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "ServiceResource"
+      "Name" : "service"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -167,6 +165,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -182,7 +183,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "AgentSpaceResource"
+      "Name" : "agentspace"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -199,9 +200,9 @@
       }
     },
     "Resources" : [ {
-      "Name" : "AgentSpaceResource"
+      "Name" : "agentspace"
     }, {
-      "Name" : "AssociationResource"
+      "Name" : "associations"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -217,6 +218,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -232,7 +236,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "AgentSpaceResource"
+      "Name" : "agentspace"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -248,6 +252,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -268,6 +275,7 @@
     }
   }, {
     "Name" : "GetAgentSpace",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -277,7 +285,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "AgentSpaceResource"
+      "Name" : "agentspace"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -294,9 +302,9 @@
       }
     },
     "Resources" : [ {
-      "Name" : "AgentSpaceResource"
+      "Name" : "agentspace"
     }, {
-      "Name" : "AssociationResource"
+      "Name" : "associations"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -312,6 +320,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -326,12 +337,15 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetOperatorAppTeams",
+    "Name" : "GetOperatorApp",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -341,7 +355,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "AgentSpaceResource"
+      "Name" : "agentspace"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -357,12 +371,16 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "GetService",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -372,22 +390,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "ServiceResource"
+      "Name" : "service"
     } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "HandleServiceRegistrationCallback",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -402,20 +406,9 @@
         "IsWrite" : true
       }
     },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "InitiateServiceRegistration",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -445,7 +438,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "AgentSpaceResource"
+      "Name" : "agentspace"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -461,6 +454,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -475,6 +471,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -489,6 +488,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -503,6 +505,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -517,6 +522,26 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListKnowledgeItemVersions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -531,6 +556,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -545,6 +573,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -559,6 +590,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -578,6 +612,28 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListTagsForResource",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "agentspace",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+    }, {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListWebhooks",
     "Annotations" : {
       "Properties" : {
@@ -588,9 +644,9 @@
       }
     },
     "Resources" : [ {
-      "Name" : "AgentSpaceResource"
+      "Name" : "agentspace"
     }, {
-      "Name" : "AssociationResource"
+      "Name" : "associations"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -598,6 +654,7 @@
     }
   }, {
     "Name" : "RegisterService",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -607,7 +664,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "ServiceResource"
+      "Name" : "service"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -628,35 +685,7 @@
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "SendChatMessage",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "StreamMessage",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "UpdateAgentSpace",
+    "Name" : "SendMessage",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -666,7 +695,69 @@
       }
     },
     "Resources" : [ {
-      "Name" : "AgentSpaceResource"
+      "Name" : "agentspace"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "TagResource",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : true,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "agentspace",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+    }, {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UntagResource",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : true,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "agentspace",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+    }, {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateAgentSpace",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "agentspace"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -683,9 +774,9 @@
       }
     },
     "Resources" : [ {
-      "Name" : "AgentSpaceResource"
+      "Name" : "agentspace"
     }, {
-      "Name" : "AssociationResource"
+      "Name" : "associations"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -701,6 +792,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -715,6 +809,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -729,12 +826,15 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "UpdateOperatorAppTeams",
+    "Name" : "UpdateOperatorAppIdpConfig",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -744,7 +844,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "AgentSpaceResource"
+      "Name" : "agentspace"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -760,36 +860,52 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ValidateAwsAssociations",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   } ],
   "ConditionKeys" : [ {
-    "Name" : "aidevops:AgentSpaceResourceAgentSpaceId",
+    "Name" : "aws:RequestTag/${TagKey}",
     "Types" : [ "String" ]
   }, {
-    "Name" : "aidevops:AssociationResourceAgentSpaceId",
+    "Name" : "aws:ResourceTag/${TagKey}",
     "Types" : [ "String" ]
   }, {
-    "Name" : "aidevops:AssociationResourceAssociationId",
-    "Types" : [ "String" ]
-  }, {
-    "Name" : "aidevops:ServiceResourceServiceId",
-    "Types" : [ "String" ]
+    "Name" : "aws:TagKeys",
+    "Types" : [ "ArrayOfString" ]
   } ],
   "Resources" : [ {
-    "Name" : "AgentSpaceResource",
+    "Name" : "agentspace",
     "ARNFormats" : [ "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}" ],
-    "ConditionKeys" : [ "aidevops:AgentSpaceResourceAgentSpaceId" ]
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
-    "Name" : "AssociationResource",
-    "ARNFormats" : [ "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}/associations/${AssociationId}" ],
-    "ConditionKeys" : [ "aidevops:AssociationResourceAgentSpaceId", "aidevops:AssociationResourceAssociationId" ]
+    "Name" : "associations",
+    "ARNFormats" : [ "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}/associations/${AssociationId}" ]
   }, {
-    "Name" : "ServiceResource",
+    "Name" : "service",
     "ARNFormats" : [ "arn:${Partition}:aidevops:${Region}:${Account}:service/${ServiceId}" ],
-    "ConditionKeys" : [ "aidevops:ServiceResourceServiceId" ]
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.4"
 }

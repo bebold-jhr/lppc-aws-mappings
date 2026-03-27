@@ -2127,6 +2127,9 @@
         "iam:PassedToService" : [ "logs.amazonaws.com" ]
       },
       "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "logs"
     } ],
     "SDK" : [ {
       "Name" : "logs",
@@ -3133,6 +3136,9 @@
     "Name" : "StartQuery",
     "AuthorizedActions" : [ {
       "Name" : "DescribeLogGroups",
+      "Service" : "logs"
+    }, {
+      "Name" : "DescribeQueryDefinitions",
       "Service" : "logs"
     }, {
       "Name" : "FilterLogEvents",

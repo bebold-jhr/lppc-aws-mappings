@@ -2508,6 +2508,10 @@
     } ]
   }, {
     "Name" : "PreviewPrivacyImpact",
+    "AuthorizedActions" : [ {
+      "Name" : "PreviewPrivacyImpact",
+      "Service" : "cleanrooms"
+    } ],
     "SDK" : [ {
       "Name" : "cleanrooms",
       "Method" : "preview_privacy_impact",

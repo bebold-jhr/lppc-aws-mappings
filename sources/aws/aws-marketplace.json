@@ -951,6 +951,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CancelAgreementPaymentRequest",
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "cancel_agreement_payment_request",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CancelChangeSet",
     "AuthorizedActions" : [ {
       "Name" : "CancelChangeSet",
@@ -1009,6 +1016,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetAgreementPaymentRequest",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAgreementPaymentRequest",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "get_agreement_payment_request",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetAgreementTerms",
     "AuthorizedActions" : [ {
       "Name" : "GetAgreementTerms",
@@ -1053,6 +1071,17 @@
     "SDK" : [ {
       "Name" : "marketplace-catalog",
       "Method" : "get_resource_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListAgreementPaymentRequests",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAgreementPaymentRequests",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "list_agreement_payment_requests",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1162,6 +1191,17 @@
     "SDK" : [ {
       "Name" : "marketplace-agreement",
       "Method" : "search_agreements",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "SendAgreementPaymentRequest",
+    "AuthorizedActions" : [ {
+      "Name" : "SendAgreementPaymentRequest",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "send_agreement_payment_request",
       "Package" : "Boto3"
     } ]
   }, {

@@ -4012,16 +4012,6 @@
     } ]
   }, {
     "Name" : "DisassociateEnvironmentRole",
-    "AuthorizedActions" : [ {
-      "Name" : "DisassociateEnvironmentRole",
-      "Service" : "datazone"
-    }, {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "datazone.amazonaws.com" ]
-      },
-      "Service" : "iam"
-    } ],
     "SDK" : [ {
       "Name" : "datazone",
       "Method" : "disassociate_environment_role",

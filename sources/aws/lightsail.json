@@ -197,6 +197,7 @@
     }
   }, {
     "Name" : "CreateContactMethod",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2289,6 +2290,8 @@
     }, {
       "Name" : "Certificate"
     }, {
+      "Name" : "ContactMethod"
+    }, {
       "Name" : "ContainerService"
     }, {
       "Name" : "Disk"
@@ -2363,6 +2366,8 @@
       "Name" : "Bucket"
     }, {
       "Name" : "Certificate"
+    }, {
+      "Name" : "ContactMethod"
     }, {
       "Name" : "ContainerService"
     }, {
@@ -4409,7 +4414,8 @@
     "ARNFormats" : [ "arn:${Partition}:lightsail:${Region}:${Account}:CloudFormationStackRecord/${Id}" ]
   }, {
     "Name" : "ContactMethod",
-    "ARNFormats" : [ "arn:${Partition}:lightsail:${Region}:${Account}:ContactMethod/${Id}" ]
+    "ARNFormats" : [ "arn:${Partition}:lightsail:${Region}:${Account}:ContactMethod/${Id}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "ContainerService",
     "ARNFormats" : [ "arn:${Partition}:lightsail:${Region}:${Account}:ContainerService/${Id}" ],

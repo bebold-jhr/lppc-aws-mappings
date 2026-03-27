@@ -2760,10 +2760,6 @@
     } ]
   }, {
     "Name" : "PutProfileVisibility",
-    "AuthorizedActions" : [ {
-      "Name" : "PutProfileVisibility",
-      "Service" : "partnercentral"
-    } ],
     "SDK" : [ {
       "Name" : "partnercentral-account",
       "Method" : "put_profile_visibility",
@@ -2865,9 +2861,6 @@
       "Service" : "partnercentral"
     }, {
       "Name" : "SubmitOpportunity",
-      "Service" : "partnercentral"
-    }, {
-      "Name" : "TagResource",
       "Service" : "partnercentral"
     } ],
     "SDK" : [ {
