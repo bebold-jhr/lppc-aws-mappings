@@ -6232,6 +6232,10 @@
     } ]
   }, {
     "Name" : "DescribeAppInstanceBot",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAppInstanceBot",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime-sdk-identity",
       "Method" : "describe_app_instance_bot",

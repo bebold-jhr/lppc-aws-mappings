@@ -1746,6 +1746,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateNotifyConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "sms-voice"
+    } ],
+    "SDK" : [ {
+      "Name" : "pinpoint-sms-voice-v2",
+      "Method" : "create_notify_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateOptOutList",
     "AuthorizedActions" : [ {
       "Name" : "CreateOptOutList",
@@ -1785,6 +1796,17 @@
     "SDK" : [ {
       "Name" : "pinpoint-sms-voice-v2",
       "Method" : "create_protect_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateRcsAgent",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "sms-voice"
+    } ],
+    "SDK" : [ {
+      "Name" : "pinpoint-sms-voice-v2",
+      "Method" : "create_rcs_agent",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1952,6 +1974,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteNotifyConfiguration",
+    "SDK" : [ {
+      "Name" : "pinpoint-sms-voice-v2",
+      "Method" : "delete_notify_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteNotifyMessageSpendLimitOverride",
+    "SDK" : [ {
+      "Name" : "pinpoint-sms-voice-v2",
+      "Method" : "delete_notify_message_spend_limit_override",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteOptOutList",
     "AuthorizedActions" : [ {
       "Name" : "DeleteOptOutList",
@@ -2004,6 +2040,13 @@
     "SDK" : [ {
       "Name" : "pinpoint-sms-voice-v2",
       "Method" : "delete_protect_configuration_rule_set_number_override",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteRcsAgent",
+    "SDK" : [ {
+      "Name" : "pinpoint-sms-voice-v2",
+      "Method" : "delete_rcs_agent",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2128,6 +2171,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeNotifyConfigurations",
+    "SDK" : [ {
+      "Name" : "pinpoint-sms-voice-v2",
+      "Method" : "describe_notify_configurations",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeNotifyTemplates",
+    "SDK" : [ {
+      "Name" : "pinpoint-sms-voice-v2",
+      "Method" : "describe_notify_templates",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeOptOutLists",
     "AuthorizedActions" : [ {
       "Name" : "DescribeOptOutLists",
@@ -2180,6 +2237,20 @@
     "SDK" : [ {
       "Name" : "pinpoint-sms-voice-v2",
       "Method" : "describe_protect_configurations",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeRcsAgentCountryLaunchStatus",
+    "SDK" : [ {
+      "Name" : "pinpoint-sms-voice-v2",
+      "Method" : "describe_rcs_agent_country_launch_status",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeRcsAgents",
+    "SDK" : [ {
+      "Name" : "pinpoint-sms-voice-v2",
+      "Method" : "describe_rcs_agents",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2378,6 +2449,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListNotifyCountries",
+    "SDK" : [ {
+      "Name" : "pinpoint-sms-voice-v2",
+      "Method" : "list_notify_countries",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListPoolOriginationIdentities",
     "AuthorizedActions" : [ {
       "Name" : "ListPoolOriginationIdentities",
@@ -2569,6 +2647,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "SendNotifyTextMessage",
+    "SDK" : [ {
+      "Name" : "pinpoint-sms-voice-v2",
+      "Method" : "send_notify_text_message",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "SendNotifyVoiceMessage",
+    "SDK" : [ {
+      "Name" : "pinpoint-sms-voice-v2",
+      "Method" : "send_notify_voice_message",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "SendTextMessage",
     "AuthorizedActions" : [ {
       "Name" : "SendTextMessage",
@@ -2651,6 +2743,13 @@
     "SDK" : [ {
       "Name" : "pinpoint-sms-voice-v2",
       "Method" : "set_media_message_spend_limit_override",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "SetNotifyMessageSpendLimitOverride",
+    "SDK" : [ {
+      "Name" : "pinpoint-sms-voice-v2",
+      "Method" : "set_notify_message_spend_limit_override",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2737,6 +2836,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateNotifyConfiguration",
+    "SDK" : [ {
+      "Name" : "pinpoint-sms-voice-v2",
+      "Method" : "update_notify_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdatePhoneNumber",
     "AuthorizedActions" : [ {
       "Name" : "PassRole",
@@ -2790,6 +2896,13 @@
     "SDK" : [ {
       "Name" : "pinpoint-sms-voice-v2",
       "Method" : "update_protect_configuration_country_rule_set",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateRcsAgent",
+    "SDK" : [ {
+      "Name" : "pinpoint-sms-voice-v2",
+      "Method" : "update_rcs_agent",
       "Package" : "Boto3"
     } ]
   }, {

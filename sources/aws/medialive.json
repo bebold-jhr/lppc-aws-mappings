@@ -2452,6 +2452,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreatePartnerInput",
       "Service" : "medialive"
+    }, {
+      "Name" : "CreateTags",
+      "Service" : "medialive"
     } ],
     "SDK" : [ {
       "Name" : "medialive",
@@ -3268,10 +3271,6 @@
     } ]
   }, {
     "Name" : "StartInputDevice",
-    "AuthorizedActions" : [ {
-      "Name" : "StartInputDevice",
-      "Service" : "medialive"
-    } ],
     "SDK" : [ {
       "Name" : "medialive",
       "Method" : "start_input_device",
@@ -3330,10 +3329,6 @@
     } ]
   }, {
     "Name" : "StopInputDevice",
-    "AuthorizedActions" : [ {
-      "Name" : "StopInputDevice",
-      "Service" : "medialive"
-    } ],
     "SDK" : [ {
       "Name" : "medialive",
       "Method" : "stop_input_device",
@@ -3352,10 +3347,6 @@
     } ]
   }, {
     "Name" : "TransferInputDevice",
-    "AuthorizedActions" : [ {
-      "Name" : "TransferInputDevice",
-      "Service" : "medialive"
-    } ],
     "SDK" : [ {
       "Name" : "medialive",
       "Method" : "transfer_input_device",

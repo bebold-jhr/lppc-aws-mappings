@@ -125,6 +125,9 @@
   "service" : "autoscaling-plans",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/autoscaling-plans/autoscaling-plans.json"
 }, {
+  "service" : "aws-external-anthropic",
+  "url" : "https://servicereference.us-east-1.amazonaws.com/v1/aws-external-anthropic/aws-external-anthropic.json"
+}, {
   "service" : "aws-marketplace",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/aws-marketplace/aws-marketplace.json"
 }, {

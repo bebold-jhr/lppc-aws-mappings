@@ -464,10 +464,6 @@
     } ]
   }, {
     "Name" : "UpdateDevice",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateDevice",
-      "Service" : "thinclient"
-    } ],
     "SDK" : [ {
       "Name" : "workspaces-thin-client",
       "Method" : "update_device",

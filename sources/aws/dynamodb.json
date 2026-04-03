@@ -732,6 +732,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "table"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -760,6 +763,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "table"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -803,6 +809,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "stream"
+    }, {
       "Name" : "table"
     } ],
     "SupportedBy" : {
@@ -1090,6 +1098,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "stream"
+    }, {
       "Name" : "table"
     } ],
     "SupportedBy" : {
@@ -1108,6 +1118,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "stream"
+    }, {
       "Name" : "table"
     } ],
     "SupportedBy" : {

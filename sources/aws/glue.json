@@ -7865,6 +7865,9 @@
     "AuthorizedActions" : [ {
       "Name" : "RegisterConnectionType",
       "Service" : "glue"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "glue"
     } ],
     "SDK" : [ {
       "Name" : "glue",
@@ -7973,6 +7976,10 @@
     } ]
   }, {
     "Name" : "StartColumnStatisticsTaskRunSchedule",
+    "AuthorizedActions" : [ {
+      "Name" : "StartColumnStatisticsTaskRunSchedule",
+      "Service" : "glue"
+    } ],
     "SDK" : [ {
       "Name" : "glue",
       "Method" : "start_column_statistics_task_run_schedule",

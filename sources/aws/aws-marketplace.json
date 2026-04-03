@@ -15,6 +15,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "AcceptAgreementCancellationRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "AcceptAgreementPaymentRequest",
     "Annotations" : {
       "Properties" : {
@@ -57,6 +71,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "BatchCreateBillingAdjustmentRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "BatchMeterUsage",
     "Annotations" : {
       "Properties" : {
@@ -72,6 +100,20 @@
     }
   }, {
     "Name" : "CancelAgreement",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CancelAgreementCancellationRequest",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -310,6 +352,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetAgreementCancellationRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetAgreementEntitlements",
     "Annotations" : {
       "Properties" : {
@@ -356,6 +412,20 @@
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetBillingAdjustmentRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false
@@ -445,7 +515,35 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListAgreementCancellationRequests",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListAgreementCharges",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAgreementInvoiceLineItems",
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -488,6 +586,20 @@
     }
   }, {
     "Name" : "ListAssessments",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListBillingAdjustmentRequests",
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -699,6 +811,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "RejectAgreementCancellationRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "RejectAgreementPaymentRequest",
     "Annotations" : {
       "Properties" : {
@@ -734,6 +860,20 @@
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "SendAgreementCancellationRequest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
       }
     },
     "SupportedBy" : {
@@ -929,6 +1069,13 @@
     "Types" : [ "String" ]
   } ],
   "Operations" : [ {
+    "Name" : "BatchCreateBillingAdjustmentRequest",
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "batch_create_billing_adjustment_request",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "BatchDescribeEntities",
     "AuthorizedActions" : [ {
       "Name" : "DescribeEntity",
@@ -951,7 +1098,18 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CancelAgreementCancellationRequest",
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "cancel_agreement_cancellation_request",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CancelAgreementPaymentRequest",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelAgreementPaymentRequest",
+      "Service" : "aws-marketplace"
+    } ],
     "SDK" : [ {
       "Name" : "marketplace-agreement",
       "Method" : "cancel_agreement_payment_request",
@@ -1016,6 +1174,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetAgreementCancellationRequest",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAgreementCancellationRequest",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "get_agreement_cancellation_request",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetAgreementPaymentRequest",
     "AuthorizedActions" : [ {
       "Name" : "GetAgreementPaymentRequest",
@@ -1038,6 +1207,17 @@
     "SDK" : [ {
       "Name" : "marketplace-agreement",
       "Method" : "get_agreement_terms",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetBillingAdjustmentRequest",
+    "AuthorizedActions" : [ {
+      "Name" : "GetBillingAdjustmentRequest",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "get_billing_adjustment_request",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1074,6 +1254,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListAgreementCancellationRequests",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAgreementCancellationRequests",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "list_agreement_cancellation_requests",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListAgreementInvoiceLineItems",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAgreementInvoiceLineItems",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "list_agreement_invoice_line_items",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListAgreementPaymentRequests",
     "AuthorizedActions" : [ {
       "Name" : "ListAgreementPaymentRequests",
@@ -1082,6 +1284,17 @@
     "SDK" : [ {
       "Name" : "marketplace-agreement",
       "Method" : "list_agreement_payment_requests",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListBillingAdjustmentRequests",
+    "AuthorizedActions" : [ {
+      "Name" : "ListBillingAdjustmentRequests",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "list_billing_adjustment_requests",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1191,6 +1404,13 @@
     "SDK" : [ {
       "Name" : "marketplace-agreement",
       "Method" : "search_agreements",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "SendAgreementCancellationRequest",
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "send_agreement_cancellation_request",
       "Package" : "Boto3"
     } ]
   }, {

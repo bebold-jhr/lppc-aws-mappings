@@ -1025,6 +1025,10 @@
     } ]
   }, {
     "Name" : "UpdateLibraryItem",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateLibraryItem",
+      "Service" : "qapps"
+    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "update_library_item",

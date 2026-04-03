@@ -2608,6 +2608,10 @@
     } ]
   }, {
     "Name" : "GetNetworkMigrationMapperSegmentConstruct",
+    "AuthorizedActions" : [ {
+      "Name" : "GetNetworkMigrationMapperSegmentConstruct",
+      "Service" : "mgn"
+    } ],
     "SDK" : [ {
       "Name" : "mgn",
       "Method" : "get_network_migration_mapper_segment_construct",

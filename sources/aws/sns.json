@@ -250,6 +250,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "topic"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -520,6 +523,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "topic"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -587,6 +593,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "topic"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false

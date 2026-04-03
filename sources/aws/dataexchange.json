@@ -36,6 +36,7 @@
     }
   }, {
     "Name" : "CreateAsset",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -472,6 +473,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "assets"
+    }, {
       "Name" : "data-grants"
     }, {
       "Name" : "data-sets"
@@ -601,6 +604,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "assets"
+    }, {
       "Name" : "data-grants"
     }, {
       "Name" : "data-sets"
@@ -625,6 +630,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "assets"
+    }, {
       "Name" : "data-grants"
     }, {
       "Name" : "data-sets"
@@ -1195,7 +1202,8 @@
   } ],
   "Resources" : [ {
     "Name" : "assets",
-    "ARNFormats" : [ "arn:${Partition}:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}/assets/${AssetId}" ]
+    "ARNFormats" : [ "arn:${Partition}:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}/assets/${AssetId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "data-grants",
     "ARNFormats" : [ "arn:${Partition}:dataexchange:${Region}:${Account}:data-grants/${DataGrantId}" ],

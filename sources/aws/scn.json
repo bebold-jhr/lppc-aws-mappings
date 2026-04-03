@@ -947,6 +947,10 @@
     } ]
   }, {
     "Name" : "UpdateDataLakeNamespace",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateDataLakeNamespace",
+      "Service" : "scn"
+    } ],
     "SDK" : [ {
       "Name" : "supplychain",
       "Method" : "update_data_lake_namespace",

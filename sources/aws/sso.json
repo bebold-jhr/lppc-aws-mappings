@@ -11,7 +11,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -56,9 +57,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -75,9 +78,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -96,9 +101,11 @@
     "Resources" : [ {
       "Name" : "Account"
     }, {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -116,11 +123,13 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
       "Name" : "ApplicationProvider"
     }, {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -138,7 +147,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -201,7 +211,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -233,9 +244,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -281,9 +294,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "TrustedTokenIssuer"
+      "Name" : "TrustedTokenIssuer",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -302,9 +317,11 @@
     "Resources" : [ {
       "Name" : "Account"
     }, {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -322,7 +339,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -340,7 +358,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -358,7 +377,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -376,7 +396,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -394,7 +415,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -439,9 +461,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -458,7 +482,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -475,7 +500,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -506,9 +532,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -525,9 +553,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -558,7 +588,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "TrustedTokenIssuer"
+      "Name" : "TrustedTokenIssuer",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -575,7 +606,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -592,7 +624,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -610,7 +643,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -628,7 +662,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -662,7 +697,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -679,7 +715,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -696,9 +733,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -715,7 +754,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -732,7 +772,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -763,7 +804,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "TrustedTokenIssuer"
+      "Name" : "TrustedTokenIssuer",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -780,9 +822,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -799,9 +843,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -847,7 +893,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -865,7 +912,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -883,7 +931,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -901,7 +950,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -933,7 +983,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -964,9 +1015,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1025,9 +1078,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1128,7 +1183,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1145,7 +1201,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1164,9 +1221,11 @@
     "Resources" : [ {
       "Name" : "Account"
     }, {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1183,7 +1242,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1200,9 +1260,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1220,7 +1282,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1238,7 +1301,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1256,7 +1320,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1274,7 +1339,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1292,7 +1358,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1382,9 +1449,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1429,9 +1498,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1448,7 +1519,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1465,7 +1537,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1484,7 +1557,8 @@
     "Resources" : [ {
       "Name" : "Account"
     }, {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1529,7 +1603,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1569,7 +1644,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1588,9 +1664,11 @@
     "Resources" : [ {
       "Name" : "Account"
     }, {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1608,7 +1686,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1626,7 +1705,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1644,7 +1724,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1662,7 +1743,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1680,7 +1762,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1697,9 +1780,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1730,9 +1815,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1763,7 +1850,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1871,7 +1959,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Application"
+      "Name" : "Application",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1986,7 +2075,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2003,7 +2093,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2034,9 +2125,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Instance"
+      "Name" : "Instance",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     }, {
-      "Name" : "PermissionSet"
+      "Name" : "PermissionSet",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2095,7 +2188,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "TrustedTokenIssuer"
+      "Name" : "TrustedTokenIssuer",
+      "ConditionKeys" : [ "sso:PrimaryRegion" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2119,6 +2213,9 @@
     "Types" : [ "ARN" ]
   }, {
     "Name" : "sso:ApplicationAccount",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "sso:PrimaryRegion",
     "Types" : [ "String" ]
   } ],
   "Operations" : [ {
@@ -3108,22 +3205,22 @@
   }, {
     "Name" : "Application",
     "ARNFormats" : [ "arn:${Partition}:sso::${AccountId}:application/${InstanceId}/${ApplicationId}" ],
-    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sso:ApplicationAccount" ]
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sso:ApplicationAccount", "sso:PrimaryRegion" ]
   }, {
     "Name" : "ApplicationProvider",
     "ARNFormats" : [ "arn:${Partition}:sso::aws:applicationProvider/${ApplicationProviderId}" ]
   }, {
     "Name" : "Instance",
     "ARNFormats" : [ "arn:${Partition}:sso:::instance/${InstanceId}" ],
-    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sso:PrimaryRegion" ]
   }, {
     "Name" : "PermissionSet",
     "ARNFormats" : [ "arn:${Partition}:sso:::permissionSet/${InstanceId}/${PermissionSetId}" ],
-    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sso:PrimaryRegion" ]
   }, {
     "Name" : "TrustedTokenIssuer",
     "ARNFormats" : [ "arn:${Partition}:sso::${AccountId}:trustedTokenIssuer/${InstanceId}/${TrustedTokenIssuerId}" ],
-    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sso:PrimaryRegion" ]
   } ],
   "Version" : "v1.4"
 }

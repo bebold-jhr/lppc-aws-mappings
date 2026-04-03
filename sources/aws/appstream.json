@@ -2191,6 +2191,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DrainSessionInstance",
+    "SDK" : [ {
+      "Name" : "appstream",
+      "Method" : "drain_session_instance",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "EnableUser",
     "AuthorizedActions" : [ {
       "Name" : "EnableUser",

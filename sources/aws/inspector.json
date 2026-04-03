@@ -1108,6 +1108,10 @@
     } ]
   }, {
     "Name" : "UpdateAssessmentTarget",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAssessmentTarget",
+      "Service" : "inspector"
+    } ],
     "SDK" : [ {
       "Name" : "inspector",
       "Method" : "update_assessment_target",

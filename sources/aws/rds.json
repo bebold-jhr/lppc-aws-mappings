@@ -654,6 +654,8 @@
     "Resources" : [ {
       "Name" : "cluster"
     }, {
+      "Name" : "db"
+    }, {
       "Name" : "integration"
     } ],
     "SupportedBy" : {
@@ -708,6 +710,13 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster-snapshot"
+    }, {
+      "Name" : "db"
+    }, {
+      "Name" : "snapshot"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -1975,6 +1984,8 @@
     },
     "Resources" : [ {
       "Name" : "cluster"
+    }, {
+      "Name" : "db"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -2594,6 +2605,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "db"
+    }, {
       "Name" : "target-group"
     } ],
     "SupportedBy" : {
@@ -5550,7 +5563,7 @@
     }, {
       "Name" : "PassRole",
       "Context" : {
-        "iam:PassedToService" : [ "rds.amazonaws.com" ]
+        "iam:PassedToService" : [ "rds-preview.amazonaws.com", "rds.amazonaws.com" ]
       },
       "Service" : "iam"
     }, {

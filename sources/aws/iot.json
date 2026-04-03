@@ -6072,6 +6072,10 @@
     } ]
   }, {
     "Name" : "DescribeAuditSuppression",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAuditSuppression",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "describe_audit_suppression",
@@ -8144,6 +8148,16 @@
     } ]
   }, {
     "Name" : "UpdateStream",
+    "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "iot.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "UpdateStream",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "update_stream",

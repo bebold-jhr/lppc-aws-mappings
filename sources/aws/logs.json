@@ -194,6 +194,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateLookupTable",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "lookup-table"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateScheduledQuery",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -419,6 +437,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteLookupTable",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "lookup-table"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteMetricFilter",
@@ -731,6 +766,20 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeLookupTables",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DescribeMetricFilters",
@@ -1052,6 +1101,23 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetLookupTable",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "lookup-table"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetQueryResults",
     "Annotations" : {
       "Properties" : {
@@ -1332,6 +1398,8 @@
       "Name" : "destination"
     }, {
       "Name" : "log-group"
+    }, {
+      "Name" : "lookup-table"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1785,6 +1853,8 @@
     }, {
       "Name" : "log-group"
     }, {
+      "Name" : "lookup-table"
+    }, {
       "Name" : "scheduled-query"
     } ],
     "SupportedBy" : {
@@ -1878,6 +1948,8 @@
     }, {
       "Name" : "log-group"
     }, {
+      "Name" : "lookup-table"
+    }, {
       "Name" : "scheduled-query"
     } ],
     "SupportedBy" : {
@@ -1950,6 +2022,23 @@
         "IsWrite" : true
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateLookupTable",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "lookup-table"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -2117,6 +2206,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateLookupTable",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateLookupTable",
+      "Service" : "logs"
+    } ],
+    "SDK" : [ {
+      "Name" : "logs",
+      "Method" : "create_lookup_table",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateScheduledQuery",
     "AuthorizedActions" : [ {
       "Name" : "CreateScheduledQuery",
@@ -2278,6 +2378,17 @@
     "SDK" : [ {
       "Name" : "logs",
       "Method" : "delete_log_stream",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteLookupTable",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteLookupTable",
+      "Service" : "logs"
+    } ],
+    "SDK" : [ {
+      "Name" : "logs",
+      "Method" : "delete_lookup_table",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2498,6 +2609,17 @@
     "SDK" : [ {
       "Name" : "logs",
       "Method" : "describe_log_streams",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeLookupTables",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeLookupTables",
+      "Service" : "logs"
+    } ],
+    "SDK" : [ {
+      "Name" : "logs",
+      "Method" : "describe_lookup_tables",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2732,6 +2854,17 @@
     "SDK" : [ {
       "Name" : "logs",
       "Method" : "get_log_record",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetLookupTable",
+    "AuthorizedActions" : [ {
+      "Name" : "GetLookupTable",
+      "Service" : "logs"
+    } ],
+    "SDK" : [ {
+      "Name" : "logs",
+      "Method" : "get_lookup_table",
       "Package" : "Boto3"
     } ]
   }, {
@@ -3269,6 +3402,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateLookupTable",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateLookupTable",
+      "Service" : "logs"
+    } ],
+    "SDK" : [ {
+      "Name" : "logs",
+      "Method" : "update_lookup_table",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateScheduledQuery",
     "AuthorizedActions" : [ {
       "Name" : "PassRole",
@@ -3313,6 +3457,10 @@
   }, {
     "Name" : "log-stream",
     "ARNFormats" : [ "arn:${Partition}:logs:${Region}:${Account}:log-group:${LogGroupName}:log-stream:${LogStreamName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "lookup-table",
+    "ARNFormats" : [ "arn:${Partition}:logs:${Region}:${Account}:lookup-table:${LookupTableName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "scheduled-query",

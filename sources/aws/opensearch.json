@@ -469,6 +469,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeregisterCapability",
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "deregister_capability",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeDomain",
     "AuthorizedActions" : [ {
       "Name" : "DescribeDomain",
@@ -580,6 +587,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeInsightDetails",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeInsightDetails",
+      "Service" : "es"
+    } ],
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "describe_insight_details",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeInstanceTypeLimits",
     "AuthorizedActions" : [ {
       "Name" : "DescribeElasticsearchInstanceTypeLimits",
@@ -688,6 +706,13 @@
     "SDK" : [ {
       "Name" : "opensearch",
       "Method" : "get_application",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetCapability",
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "get_capability",
       "Package" : "Boto3"
     } ]
   }, {
@@ -859,6 +884,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListInsights",
+    "AuthorizedActions" : [ {
+      "Name" : "ListInsights",
+      "Service" : "es"
+    } ],
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "list_insights",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListInstanceTypeDetails",
     "AuthorizedActions" : [ {
       "Name" : "ListElasticsearchInstanceTypeDetails",
@@ -975,6 +1011,13 @@
     "SDK" : [ {
       "Name" : "opensearch",
       "Method" : "put_default_application_setting",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "RegisterCapability",
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "register_capability",
       "Package" : "Boto3"
     } ]
   }, {

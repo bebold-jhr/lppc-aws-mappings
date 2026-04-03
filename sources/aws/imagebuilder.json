@@ -1714,6 +1714,9 @@
         "iam:PassedToService" : [ "imagebuilder.amazonaws.com" ]
       },
       "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "imagebuilder"
     } ],
     "SDK" : [ {
       "Name" : "imagebuilder",

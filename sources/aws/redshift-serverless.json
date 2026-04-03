@@ -1191,6 +1191,10 @@
     } ]
   }, {
     "Name" : "CreateReservation",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateReservation",
+      "Service" : "redshift-serverless"
+    } ],
     "SDK" : [ {
       "Name" : "redshift-serverless",
       "Method" : "create_reservation",
@@ -1429,6 +1433,10 @@
     } ]
   }, {
     "Name" : "GetReservation",
+    "AuthorizedActions" : [ {
+      "Name" : "GetReservation",
+      "Service" : "redshift-serverless"
+    } ],
     "SDK" : [ {
       "Name" : "redshift-serverless",
       "Method" : "get_reservation",

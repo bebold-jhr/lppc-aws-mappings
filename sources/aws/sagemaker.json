@@ -2474,6 +2474,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteProcessingJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "processing-job"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteProject",
     "Annotations" : {
       "Properties" : {
@@ -2684,6 +2701,23 @@
       "Name" : "user-profile"
     }, {
       "Name" : "workteam"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteTrainingJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "training-job"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -5997,6 +6031,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StartClusterHealthCheck",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StartEdgeDeploymentStage",
     "Annotations" : {
       "Properties" : {
@@ -7753,9 +7804,6 @@
   }, {
     "Name" : "CreateComputeQuota",
     "AuthorizedActions" : [ {
-      "Name" : "AddTags",
-      "Service" : "sagemaker"
-    }, {
       "Name" : "CreateComputeQuota",
       "Service" : "sagemaker"
     } ],
@@ -7976,9 +8024,6 @@
   }, {
     "Name" : "CreateHumanTaskUi",
     "AuthorizedActions" : [ {
-      "Name" : "AddTags",
-      "Service" : "sagemaker"
-    }, {
       "Name" : "CreateHumanTaskUi",
       "Service" : "sagemaker"
     } ],
@@ -9163,6 +9208,10 @@
     } ]
   }, {
     "Name" : "DeleteProcessingJob",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteProcessingJob",
+      "Service" : "sagemaker"
+    } ],
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "delete_processing_job",
@@ -9225,6 +9274,10 @@
     } ]
   }, {
     "Name" : "DeleteTrainingJob",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteTrainingJob",
+      "Service" : "sagemaker"
+    } ],
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "delete_training_job",

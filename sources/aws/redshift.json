@@ -93,6 +93,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -125,6 +128,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "cluster"
+    }, {
       "Name" : "snapshot"
     } ],
     "SupportedBy" : {
@@ -189,6 +194,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -222,6 +230,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "cluster"
+    }, {
       "Name" : "snapshot"
     } ],
     "SupportedBy" : {
@@ -308,6 +318,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "cluster"
+    }, {
       "Name" : "snapshot"
     } ],
     "SupportedBy" : {
@@ -377,6 +389,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -615,6 +630,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "cluster"
+    }, {
       "Name" : "usagelimit"
     } ],
     "SupportedBy" : {
@@ -715,6 +732,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "cluster"
+    }, {
       "Name" : "snapshot"
     } ],
     "SupportedBy" : {
@@ -848,6 +867,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -1154,6 +1176,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -1297,6 +1322,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -1311,6 +1339,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -1445,6 +1476,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -1473,6 +1507,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -1631,6 +1668,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "cluster"
+    }, {
       "Name" : "snapshotschedule"
     } ],
     "SupportedBy" : {
@@ -1675,6 +1714,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -1733,6 +1775,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "cluster"
+    }, {
       "Name" : "usagelimit"
     } ],
     "SupportedBy" : {
@@ -1935,6 +1979,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -2011,6 +2058,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -2166,6 +2216,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -2632,6 +2685,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -2647,6 +2703,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "cluster"
+    }, {
       "Name" : "snapshot"
     } ],
     "SupportedBy" : {
@@ -2680,6 +2738,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -2708,6 +2769,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -3883,6 +3947,10 @@
     } ]
   }, {
     "Name" : "FailoverPrimaryCompute",
+    "AuthorizedActions" : [ {
+      "Name" : "FailoverPrimaryCompute",
+      "Service" : "redshift"
+    } ],
     "SDK" : [ {
       "Name" : "redshift",
       "Method" : "failover_primary_compute",
@@ -3987,6 +4055,10 @@
     } ]
   }, {
     "Name" : "ModifyAuthenticationProfile",
+    "AuthorizedActions" : [ {
+      "Name" : "ModifyAuthenticationProfile",
+      "Service" : "redshift"
+    } ],
     "SDK" : [ {
       "Name" : "redshift",
       "Method" : "modify_authentication_profile",
@@ -4099,6 +4171,10 @@
     } ]
   }, {
     "Name" : "ModifyEndpointAccess",
+    "AuthorizedActions" : [ {
+      "Name" : "ModifyEndpointAccess",
+      "Service" : "redshift"
+    } ],
     "SDK" : [ {
       "Name" : "redshift",
       "Method" : "modify_endpoint_access",
