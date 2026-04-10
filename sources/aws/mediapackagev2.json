@@ -1002,10 +1002,6 @@
     } ]
   }, {
     "Name" : "UntagResource",
-    "AuthorizedActions" : [ {
-      "Name" : "UntagResource",
-      "Service" : "mediapackagev2"
-    } ],
     "SDK" : [ {
       "Name" : "mediapackagev2",
       "Method" : "untag_resource",

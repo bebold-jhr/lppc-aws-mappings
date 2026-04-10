@@ -3086,10 +3086,6 @@
     } ]
   }, {
     "Name" : "StartNetworkMigrationMappingUpdate",
-    "AuthorizedActions" : [ {
-      "Name" : "StartNetworkMigrationMappingUpdate",
-      "Service" : "mgn"
-    } ],
     "SDK" : [ {
       "Name" : "mgn",
       "Method" : "start_network_migration_mapping_update",

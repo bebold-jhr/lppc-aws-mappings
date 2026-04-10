@@ -5416,6 +5416,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteResourcePolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteResourcePolicy",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "delete_resource_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteSession",
     "AuthorizedActions" : [ {
       "Name" : "DeleteSession",
@@ -6092,6 +6103,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetResourcePolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "GetResourcePolicy",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "get_resource_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetSession",
     "AuthorizedActions" : [ {
       "Name" : "GetSession",
@@ -6184,6 +6206,9 @@
     "Name" : "InvokeDataAutomationLibraryIngestionJob",
     "AuthorizedActions" : [ {
       "Name" : "InvokeDataAutomationLibraryIngestionJob",
+      "Service" : "bedrock"
+    }, {
+      "Name" : "TagResource",
       "Service" : "bedrock"
     } ],
     "SDK" : [ {
@@ -6907,6 +6932,17 @@
     "SDK" : [ {
       "Name" : "bedrock",
       "Method" : "put_model_invocation_logging_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutResourcePolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "PutResourcePolicy",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "put_resource_policy",
       "Package" : "Boto3"
     } ]
   }, {

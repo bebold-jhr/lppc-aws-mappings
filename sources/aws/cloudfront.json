@@ -4527,6 +4527,9 @@
       "Name" : "GetDistribution",
       "Service" : "cloudfront"
     }, {
+      "Name" : "GetVpcOrigin",
+      "Service" : "cloudfront"
+    }, {
       "Name" : "UpdateDistribution",
       "Service" : "cloudfront"
     } ],

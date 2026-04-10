@@ -21867,6 +21867,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetCapacityManagerMonitoredTagKeys",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "get_capacity_manager_monitored_tag_keys",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetCapacityReservationUsage",
     "AuthorizedActions" : [ {
       "Name" : "GetCapacityReservationUsage",
@@ -24336,6 +24343,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "unmonitor_instances",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateCapacityManagerMonitoredTagKeys",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "update_capacity_manager_monitored_tag_keys",
       "Package" : "Boto3"
     } ]
   }, {

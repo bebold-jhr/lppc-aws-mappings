@@ -514,9 +514,6 @@
     "AuthorizedActions" : [ {
       "Name" : "GetCanary",
       "Service" : "synthetics"
-    }, {
-      "Name" : "ListTagsForResource",
-      "Service" : "synthetics"
     } ],
     "SDK" : [ {
       "Name" : "synthetics",

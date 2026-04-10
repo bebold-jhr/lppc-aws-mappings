@@ -467,6 +467,91 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetListing",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Listing"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetOffer",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Offer"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetOfferSet",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "OfferSet"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetOfferTerms",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Offer"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetProduct",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Product"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetResourcePolicy",
     "Annotations" : {
       "Properties" : {
@@ -669,6 +754,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListFulfillmentOptions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Product"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListPrivateListings",
     "Annotations" : {
       "Properties" : {
@@ -692,6 +794,23 @@
         "IsWrite" : false
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListPurchaseOptions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "PurchaseOption"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -862,6 +981,40 @@
         "IsWrite" : false
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "SearchFacets",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Listing"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "SearchListings",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Listing"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -1070,6 +1223,10 @@
   } ],
   "Operations" : [ {
     "Name" : "BatchCreateBillingAdjustmentRequest",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchCreateBillingAdjustmentRequest",
+      "Service" : "aws-marketplace"
+    } ],
     "SDK" : [ {
       "Name" : "marketplace-agreement",
       "Method" : "batch_create_billing_adjustment_request",
@@ -1243,6 +1400,61 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetListing",
+    "AuthorizedActions" : [ {
+      "Name" : "GetListing",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-discovery",
+      "Method" : "get_listing",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetOffer",
+    "AuthorizedActions" : [ {
+      "Name" : "GetOffer",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-discovery",
+      "Method" : "get_offer",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetOfferSet",
+    "AuthorizedActions" : [ {
+      "Name" : "GetOfferSet",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-discovery",
+      "Method" : "get_offer_set",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetOfferTerms",
+    "AuthorizedActions" : [ {
+      "Name" : "GetOfferTerms",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-discovery",
+      "Method" : "get_offer_terms",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetProduct",
+    "AuthorizedActions" : [ {
+      "Name" : "GetProduct",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-discovery",
+      "Method" : "get_product",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetResourcePolicy",
     "AuthorizedActions" : [ {
       "Name" : "GetResourcePolicy",
@@ -1317,6 +1529,28 @@
     "SDK" : [ {
       "Name" : "marketplace-catalog",
       "Method" : "list_entities",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListFulfillmentOptions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListFulfillmentOptions",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-discovery",
+      "Method" : "list_fulfillment_options",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListPurchaseOptions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPurchaseOptions",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-discovery",
+      "Method" : "list_purchase_options",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1407,7 +1641,33 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "SearchFacets",
+    "AuthorizedActions" : [ {
+      "Name" : "SearchFacets",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-discovery",
+      "Method" : "search_facets",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "SearchListings",
+    "AuthorizedActions" : [ {
+      "Name" : "SearchListings",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-discovery",
+      "Method" : "search_listings",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "SendAgreementCancellationRequest",
+    "AuthorizedActions" : [ {
+      "Name" : "SendAgreementCancellationRequest",
+      "Service" : "aws-marketplace"
+    } ],
     "SDK" : [ {
       "Name" : "marketplace-agreement",
       "Method" : "send_agreement_cancellation_request",
@@ -1508,6 +1768,21 @@
     "Name" : "Entity",
     "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}:${Account}:${Catalog}/${EntityType}/${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "catalog:ChangeType" ]
+  }, {
+    "Name" : "Listing",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/listing/${ListingId}" ]
+  }, {
+    "Name" : "Offer",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/offer/${OfferId}" ]
+  }, {
+    "Name" : "OfferSet",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/offerSet/${OfferSetId}" ]
+  }, {
+    "Name" : "Product",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/product/${ProductId}" ]
+  }, {
+    "Name" : "PurchaseOption",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/purchaseOption/${PurchaseOptionId}" ]
   }, {
     "Name" : "SellerDashboard",
     "ARNFormats" : [ "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dashboard/${DashboardName}" ]

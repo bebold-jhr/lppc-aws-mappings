@@ -1767,6 +1767,12 @@
   }, {
     "Name" : "UpdateLocationHdfs",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "datasync.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateLocationHdfs",
       "Service" : "datasync"
     } ],

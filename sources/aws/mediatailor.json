@@ -827,6 +827,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateProgram",
       "Service" : "mediatailor"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "mediatailor"
     } ],
     "SDK" : [ {
       "Name" : "mediatailor",

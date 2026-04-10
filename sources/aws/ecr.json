@@ -1383,6 +1383,12 @@
     "AuthorizedActions" : [ {
       "Name" : "BatchGetImage",
       "Service" : "ecr"
+    }, {
+      "Name" : "BatchImportUpstreamImage",
+      "Service" : "ecr"
+    }, {
+      "Name" : "CreateRepository",
+      "Service" : "ecr"
     } ],
     "SDK" : [ {
       "Name" : "ecr",

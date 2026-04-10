@@ -1,7 +1,26 @@
 {
-  "Name" : "repostspace",
+  "Name" : "s3files",
   "Actions" : [ {
-    "Name" : "BatchAddChannelRoleToAccessors",
+    "Name" : "ClientMount",
+    "ActionConditionKeys" : [ "s3files:AccessPointArn" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "file-system"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ClientRootAccess",
+    "ActionConditionKeys" : [ "s3files:AccessPointArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -11,14 +30,15 @@
       }
     },
     "Resources" : [ {
-      "Name" : "space"
+      "Name" : "file-system"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "BatchAddRole",
+    "Name" : "ClientWrite",
+    "ActionConditionKeys" : [ "s3files:AccessPointArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -28,14 +48,15 @@
       }
     },
     "Resources" : [ {
-      "Name" : "space"
+      "Name" : "file-system"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "BatchRemoveChannelRoleFromAccessors",
+    "Name" : "CreateAccessPoint",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -45,48 +66,14 @@
       }
     },
     "Resources" : [ {
-      "Name" : "space"
+      "Name" : "file-system"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "BatchRemoveRole",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "Resources" : [ {
-      "Name" : "space"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "CreateChannel",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "Resources" : [ {
-      "Name" : "space"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "CreateSpace",
+    "Name" : "CreateFileSystem",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
@@ -101,7 +88,7 @@
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "DeleteSpace",
+    "Name" : "CreateMountTarget",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -111,14 +98,14 @@
       }
     },
     "Resources" : [ {
-      "Name" : "space"
+      "Name" : "file-system"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "DeregisterAdmin",
+    "Name" : "DeleteAccessPoint",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -128,14 +115,65 @@
       }
     },
     "Resources" : [ {
-      "Name" : "space"
+      "Name" : "access-point"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetChannel",
+    "Name" : "DeleteFileSystem",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "file-system"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteFileSystemPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "file-system"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteMountTarget",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "file-system"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetAccessPoint",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -145,14 +183,14 @@
       }
     },
     "Resources" : [ {
-      "Name" : "space"
+      "Name" : "access-point"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetSpace",
+    "Name" : "GetFileSystem",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -162,14 +200,14 @@
       }
     },
     "Resources" : [ {
-      "Name" : "space"
+      "Name" : "file-system"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "ListChannels",
+    "Name" : "GetFileSystemPolicy",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -179,14 +217,14 @@
       }
     },
     "Resources" : [ {
-      "Name" : "space"
+      "Name" : "file-system"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "ListSpaces",
+    "Name" : "GetMountTarget",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -195,13 +233,83 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "file-system"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetSynchronizationConfiguration",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "file-system"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAccessPoints",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "access-point"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListFileSystems",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "file-system"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListMountTargets",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "file-system"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ListTagsForResource",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -211,14 +319,33 @@
       }
     },
     "Resources" : [ {
-      "Name" : "space"
+      "Name" : "access-point"
+    }, {
+      "Name" : "file-system"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "RegisterAdmin",
+    "Name" : "PutFileSystemPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "file-system"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutSynchronizationConfiguration",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -228,24 +355,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "space"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "SendInvites",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "Resources" : [ {
-      "Name" : "space"
+      "Name" : "file-system"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -253,7 +363,7 @@
     }
   }, {
     "Name" : "TagResource",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "s3files:CreateAction" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -263,7 +373,9 @@
       }
     },
     "Resources" : [ {
-      "Name" : "space"
+      "Name" : "access-point"
+    }, {
+      "Name" : "file-system"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -281,14 +393,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "space"
+      "Name" : "access-point"
+    }, {
+      "Name" : "file-system"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "UpdateChannel",
+    "Name" : "UpdateMountTarget",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -298,24 +412,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "space"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "UpdateSpace",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "Resources" : [ {
-      "Name" : "space"
+      "Name" : "file-system"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -331,189 +428,231 @@
   }, {
     "Name" : "aws:TagKeys",
     "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "s3files:AccessPointArn",
+    "Types" : [ "ARN" ]
+  }, {
+    "Name" : "s3files:CreateAction",
+    "Types" : [ "String" ]
   } ],
   "Operations" : [ {
-    "Name" : "BatchAddChannelRoleToAccessors",
+    "Name" : "CreateAccessPoint",
     "AuthorizedActions" : [ {
-      "Name" : "BatchAddChannelRoleToAccessors",
-      "Service" : "repostspace"
+      "Name" : "CreateAccessPoint",
+      "Service" : "s3files"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "s3files"
     } ],
     "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "batch_add_channel_role_to_accessors",
+      "Name" : "s3files",
+      "Method" : "create_access_point",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "BatchAddRole",
+    "Name" : "CreateFileSystem",
     "AuthorizedActions" : [ {
-      "Name" : "BatchAddRole",
-      "Service" : "repostspace"
-    } ],
-    "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "batch_add_role",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "BatchRemoveChannelRoleFromAccessors",
-    "AuthorizedActions" : [ {
-      "Name" : "BatchRemoveChannelRoleFromAccessors",
-      "Service" : "repostspace"
-    } ],
-    "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "batch_remove_channel_role_from_accessors",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "BatchRemoveRole",
-    "AuthorizedActions" : [ {
-      "Name" : "BatchRemoveRole",
-      "Service" : "repostspace"
-    } ],
-    "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "batch_remove_role",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "CreateChannel",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateChannel",
-      "Service" : "repostspace"
-    } ],
-    "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "create_channel",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "CreateSpace",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateSpace",
-      "Service" : "repostspace"
+      "Name" : "CreateFileSystem",
+      "Service" : "s3files"
     }, {
       "Name" : "PassRole",
       "Context" : {
-        "iam:PassedToService" : [ "repostspace.amazonaws.com" ]
+        "iam:PassedToService" : [ "elasticfilesystem.amazonaws.com" ]
       },
       "Service" : "iam"
     }, {
       "Name" : "TagResource",
-      "Service" : "repostspace"
+      "Service" : "s3files"
     } ],
     "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "create_space",
+      "Name" : "s3files",
+      "Method" : "create_file_system",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "DeleteSpace",
+    "Name" : "CreateMountTarget",
     "AuthorizedActions" : [ {
-      "Name" : "DeleteSpace",
-      "Service" : "repostspace"
+      "Name" : "CreateMountTarget",
+      "Service" : "s3files"
     } ],
     "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "delete_space",
+      "Name" : "s3files",
+      "Method" : "create_mount_target",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "DeregisterAdmin",
+    "Name" : "DeleteAccessPoint",
     "AuthorizedActions" : [ {
-      "Name" : "DeregisterAdmin",
-      "Service" : "repostspace"
+      "Name" : "DeleteAccessPoint",
+      "Service" : "s3files"
     } ],
     "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "deregister_admin",
+      "Name" : "s3files",
+      "Method" : "delete_access_point",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "GetChannel",
+    "Name" : "DeleteFileSystem",
     "AuthorizedActions" : [ {
-      "Name" : "GetChannel",
-      "Service" : "repostspace"
+      "Name" : "DeleteFileSystem",
+      "Service" : "s3files"
     } ],
     "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "get_channel",
+      "Name" : "s3files",
+      "Method" : "delete_file_system",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "GetSpace",
+    "Name" : "DeleteFileSystemPolicy",
     "AuthorizedActions" : [ {
-      "Name" : "GetSpace",
-      "Service" : "repostspace"
+      "Name" : "DeleteFileSystemPolicy",
+      "Service" : "s3files"
     } ],
     "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "get_space",
+      "Name" : "s3files",
+      "Method" : "delete_file_system_policy",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "ListChannels",
+    "Name" : "DeleteMountTarget",
     "AuthorizedActions" : [ {
-      "Name" : "ListChannels",
-      "Service" : "repostspace"
+      "Name" : "DeleteMountTarget",
+      "Service" : "s3files"
     } ],
     "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "list_channels",
+      "Name" : "s3files",
+      "Method" : "delete_mount_target",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "ListSpaces",
+    "Name" : "GetAccessPoint",
     "AuthorizedActions" : [ {
-      "Name" : "ListSpaces",
-      "Service" : "repostspace"
+      "Name" : "GetAccessPoint",
+      "Service" : "s3files"
     } ],
     "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "list_spaces",
+      "Name" : "s3files",
+      "Method" : "get_access_point",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetFileSystem",
+    "AuthorizedActions" : [ {
+      "Name" : "GetFileSystem",
+      "Service" : "s3files"
+    } ],
+    "SDK" : [ {
+      "Name" : "s3files",
+      "Method" : "get_file_system",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetFileSystemPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "GetFileSystemPolicy",
+      "Service" : "s3files"
+    } ],
+    "SDK" : [ {
+      "Name" : "s3files",
+      "Method" : "get_file_system_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetMountTarget",
+    "AuthorizedActions" : [ {
+      "Name" : "GetMountTarget",
+      "Service" : "s3files"
+    } ],
+    "SDK" : [ {
+      "Name" : "s3files",
+      "Method" : "get_mount_target",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetSynchronizationConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "GetSynchronizationConfiguration",
+      "Service" : "s3files"
+    } ],
+    "SDK" : [ {
+      "Name" : "s3files",
+      "Method" : "get_synchronization_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListAccessPoints",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAccessPoints",
+      "Service" : "s3files"
+    } ],
+    "SDK" : [ {
+      "Name" : "s3files",
+      "Method" : "list_access_points",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListFileSystems",
+    "AuthorizedActions" : [ {
+      "Name" : "ListFileSystems",
+      "Service" : "s3files"
+    } ],
+    "SDK" : [ {
+      "Name" : "s3files",
+      "Method" : "list_file_systems",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListMountTargets",
+    "AuthorizedActions" : [ {
+      "Name" : "ListMountTargets",
+      "Service" : "s3files"
+    } ],
+    "SDK" : [ {
+      "Name" : "s3files",
+      "Method" : "list_mount_targets",
       "Package" : "Boto3"
     } ]
   }, {
     "Name" : "ListTagsForResource",
     "AuthorizedActions" : [ {
       "Name" : "ListTagsForResource",
-      "Service" : "repostspace"
+      "Service" : "s3files"
     } ],
     "SDK" : [ {
-      "Name" : "repostspace",
+      "Name" : "s3files",
       "Method" : "list_tags_for_resource",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "RegisterAdmin",
+    "Name" : "PutFileSystemPolicy",
     "AuthorizedActions" : [ {
-      "Name" : "RegisterAdmin",
-      "Service" : "repostspace"
+      "Name" : "PutFileSystemPolicy",
+      "Service" : "s3files"
     } ],
     "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "register_admin",
+      "Name" : "s3files",
+      "Method" : "put_file_system_policy",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "SendInvites",
+    "Name" : "PutSynchronizationConfiguration",
     "AuthorizedActions" : [ {
-      "Name" : "SendInvites",
-      "Service" : "repostspace"
+      "Name" : "PutSynchronizationConfiguration",
+      "Service" : "s3files"
     } ],
     "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "send_invites",
+      "Name" : "s3files",
+      "Method" : "put_synchronization_configuration",
       "Package" : "Boto3"
     } ]
   }, {
     "Name" : "TagResource",
     "AuthorizedActions" : [ {
       "Name" : "TagResource",
-      "Service" : "repostspace"
+      "Service" : "s3files"
     } ],
     "SDK" : [ {
-      "Name" : "repostspace",
+      "Name" : "s3files",
       "Method" : "tag_resource",
       "Package" : "Boto3"
     } ]
@@ -521,45 +660,32 @@
     "Name" : "UntagResource",
     "AuthorizedActions" : [ {
       "Name" : "UntagResource",
-      "Service" : "repostspace"
+      "Service" : "s3files"
     } ],
     "SDK" : [ {
-      "Name" : "repostspace",
+      "Name" : "s3files",
       "Method" : "untag_resource",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "UpdateChannel",
+    "Name" : "UpdateMountTarget",
     "AuthorizedActions" : [ {
-      "Name" : "UpdateChannel",
-      "Service" : "repostspace"
+      "Name" : "UpdateMountTarget",
+      "Service" : "s3files"
     } ],
     "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "update_channel",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "UpdateSpace",
-    "AuthorizedActions" : [ {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "repostspace.amazonaws.com" ]
-      },
-      "Service" : "iam"
-    }, {
-      "Name" : "UpdateSpace",
-      "Service" : "repostspace"
-    } ],
-    "SDK" : [ {
-      "Name" : "repostspace",
-      "Method" : "update_space",
+      "Name" : "s3files",
+      "Method" : "update_mount_target",
       "Package" : "Boto3"
     } ]
   } ],
   "Resources" : [ {
-    "Name" : "space",
-    "ARNFormats" : [ "arn:${Partition}:repostspace:${Region}:${Account}:space/${ResourceId}" ],
+    "Name" : "access-point",
+    "ARNFormats" : [ "arn:${Partition}:s3files:${Region}:${Account}:file-system/${FileSystemId}/access-point/${AccessPointId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "file-system",
+    "ARNFormats" : [ "arn:${Partition}:s3files:${Region}:${Account}:file-system/${FileSystemId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.4"

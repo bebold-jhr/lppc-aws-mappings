@@ -1984,6 +1984,7 @@
     }
   }, {
     "Name" : "PutAlarm",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2286,6 +2287,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "Alarm"
+    }, {
       "Name" : "Bucket"
     }, {
       "Name" : "Certificate"
@@ -2363,6 +2366,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "Alarm"
+    }, {
       "Name" : "Bucket"
     }, {
       "Name" : "Certificate"
@@ -4400,7 +4405,8 @@
   } ],
   "Resources" : [ {
     "Name" : "Alarm",
-    "ARNFormats" : [ "arn:${Partition}:lightsail:${Region}:${Account}:Alarm/${Id}" ]
+    "ARNFormats" : [ "arn:${Partition}:lightsail:${Region}:${Account}:Alarm/${Id}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "Bucket",
     "ARNFormats" : [ "arn:${Partition}:lightsail:${Region}:${Account}:Bucket/${Id}" ],

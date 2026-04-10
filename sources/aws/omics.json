@@ -2161,6 +2161,10 @@
     } ]
   }, {
     "Name" : "GetConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "GetConfiguration",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "get_configuration",
@@ -2782,6 +2786,19 @@
     } ]
   }, {
     "Name" : "StartRunBatch",
+    "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "omics.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "StartRun",
+      "Service" : "omics"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "start_run_batch",
