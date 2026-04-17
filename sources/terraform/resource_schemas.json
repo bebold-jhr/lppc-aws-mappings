@@ -254,6 +254,7 @@
   "aws_cloudtrail",
   "aws_cloudtrail_event_data_store",
   "aws_cloudtrail_organization_delegated_admin_account",
+  "aws_cloudwatch_alarm_mute_rule",
   "aws_cloudwatch_composite_alarm",
   "aws_cloudwatch_contributor_insight_rule",
   "aws_cloudwatch_contributor_managed_insight_rule",
