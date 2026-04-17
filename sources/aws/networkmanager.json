@@ -1777,10 +1777,6 @@
     } ]
   }, {
     "Name" : "AssociateConnectPeer",
-    "AuthorizedActions" : [ {
-      "Name" : "AssociateConnectPeer",
-      "Service" : "networkmanager"
-    } ],
     "SDK" : [ {
       "Name" : "networkmanager",
       "Method" : "associate_connect_peer",
@@ -1904,9 +1900,6 @@
     "Name" : "CreateDirectConnectGatewayAttachment",
     "AuthorizedActions" : [ {
       "Name" : "CreateDirectConnectGatewayAttachment",
-      "Service" : "networkmanager"
-    }, {
-      "Name" : "PutAttachmentRoutingPolicyLabel",
       "Service" : "networkmanager"
     }, {
       "Name" : "TagResource",
@@ -2638,10 +2631,6 @@
     } ]
   }, {
     "Name" : "PutAttachmentRoutingPolicyLabel",
-    "AuthorizedActions" : [ {
-      "Name" : "PutAttachmentRoutingPolicyLabel",
-      "Service" : "networkmanager"
-    } ],
     "SDK" : [ {
       "Name" : "networkmanager",
       "Method" : "put_attachment_routing_policy_label",
@@ -2693,10 +2682,6 @@
     } ]
   }, {
     "Name" : "RemoveAttachmentRoutingPolicyLabel",
-    "AuthorizedActions" : [ {
-      "Name" : "RemoveAttachmentRoutingPolicyLabel",
-      "Service" : "networkmanager"
-    } ],
     "SDK" : [ {
       "Name" : "networkmanager",
       "Method" : "remove_attachment_routing_policy_label",
@@ -2759,10 +2744,6 @@
     } ]
   }, {
     "Name" : "UpdateConnection",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateConnection",
-      "Service" : "networkmanager"
-    } ],
     "SDK" : [ {
       "Name" : "networkmanager",
       "Method" : "update_connection",

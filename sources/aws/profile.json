@@ -2044,6 +2044,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateRecommenderSchema",
+    "SDK" : [ {
+      "Name" : "customer-profiles",
+      "Method" : "create_recommender_schema",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateSegmentDefinition",
     "AuthorizedActions" : [ {
       "Name" : "CreateSegmentDefinition",
@@ -2233,6 +2240,13 @@
     "SDK" : [ {
       "Name" : "customer-profiles",
       "Method" : "delete_recommender_filter",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteRecommenderSchema",
+    "SDK" : [ {
+      "Name" : "customer-profiles",
+      "Method" : "delete_recommender_schema",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2460,6 +2474,13 @@
     "SDK" : [ {
       "Name" : "customer-profiles",
       "Method" : "get_recommender_filter",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetRecommenderSchema",
+    "SDK" : [ {
+      "Name" : "customer-profiles",
+      "Method" : "get_recommender_schema",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2764,6 +2785,13 @@
     "SDK" : [ {
       "Name" : "customer-profiles",
       "Method" : "list_recommender_recipes",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListRecommenderSchemas",
+    "SDK" : [ {
+      "Name" : "customer-profiles",
+      "Method" : "list_recommender_schemas",
       "Package" : "Boto3"
     } ]
   }, {

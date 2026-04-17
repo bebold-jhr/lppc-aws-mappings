@@ -710,6 +710,10 @@
     } ]
   }, {
     "Name" : "GetCapability",
+    "AuthorizedActions" : [ {
+      "Name" : "GetCapability",
+      "Service" : "es"
+    } ],
     "SDK" : [ {
       "Name" : "opensearch",
       "Method" : "get_capability",
@@ -1015,6 +1019,10 @@
     } ]
   }, {
     "Name" : "RegisterCapability",
+    "AuthorizedActions" : [ {
+      "Name" : "RegisterCapability",
+      "Service" : "es"
+    } ],
     "SDK" : [ {
       "Name" : "opensearch",
       "Method" : "register_capability",
@@ -1148,6 +1156,10 @@
     } ]
   }, {
     "Name" : "UpdateIndex",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateIndex",
+      "Service" : "es"
+    } ],
     "SDK" : [ {
       "Name" : "opensearch",
       "Method" : "update_index",

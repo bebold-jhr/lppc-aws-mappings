@@ -5993,6 +5993,9 @@
       "Name" : "CreateJob",
       "Service" : "glue"
     }, {
+      "Name" : "GetUsageProfile",
+      "Service" : "glue"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "glue.amazonaws.com" ]

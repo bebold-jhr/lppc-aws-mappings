@@ -8196,9 +8196,6 @@
       "Name" : "CreateModel",
       "Service" : "sagemaker"
     }, {
-      "Name" : "DeployHubModel",
-      "Service" : "sagemaker"
-    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "sagemaker.amazonaws.com" ]
@@ -11357,6 +11354,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "StartClusterHealthCheck",
+    "AuthorizedActions" : [ {
+      "Name" : "StartClusterHealthCheck",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "start_cluster_health_check",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StartEdgeDeploymentStage",
     "SDK" : [ {
       "Name" : "sagemaker",
@@ -12065,9 +12073,6 @@
   }, {
     "Name" : "UpdateProject",
     "AuthorizedActions" : [ {
-      "Name" : "AddTags",
-      "Service" : "sagemaker"
-    }, {
       "Name" : "UpdateProject",
       "Service" : "sagemaker"
     } ],

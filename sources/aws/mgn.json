@@ -2740,6 +2740,10 @@
     } ]
   }, {
     "Name" : "ListNetworkMigrationAnalysisResults",
+    "AuthorizedActions" : [ {
+      "Name" : "ListNetworkMigrationAnalysisResults",
+      "Service" : "mgn"
+    } ],
     "SDK" : [ {
       "Name" : "mgn",
       "Method" : "list_network_migration_analysis_results",

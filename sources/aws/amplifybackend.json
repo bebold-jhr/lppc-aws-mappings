@@ -830,10 +830,6 @@
     } ]
   }, {
     "Name" : "ImportBackendStorage",
-    "AuthorizedActions" : [ {
-      "Name" : "ImportBackendStorage",
-      "Service" : "amplifybackend"
-    } ],
     "SDK" : [ {
       "Name" : "amplifybackend",
       "Method" : "import_backend_storage",

@@ -459,6 +459,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetOTelEnrichment",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetService",
     "Annotations" : {
       "Properties" : {
@@ -878,6 +892,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "StartOTelEnrichment",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StopMetricStreams",
     "Annotations" : {
       "Properties" : {
@@ -893,6 +921,20 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "StopOTelEnrichment",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "TagResource",
@@ -1233,6 +1275,10 @@
     } ]
   }, {
     "Name" : "GetOTelEnrichment",
+    "AuthorizedActions" : [ {
+      "Name" : "GetOTelEnrichment",
+      "Service" : "cloudwatch"
+    } ],
     "SDK" : [ {
       "Name" : "cloudwatch",
       "Method" : "get_o_tel_enrichment",
@@ -1451,6 +1497,10 @@
     } ]
   }, {
     "Name" : "StartOTelEnrichment",
+    "AuthorizedActions" : [ {
+      "Name" : "StartOTelEnrichment",
+      "Service" : "cloudwatch"
+    } ],
     "SDK" : [ {
       "Name" : "cloudwatch",
       "Method" : "start_o_tel_enrichment",
@@ -1469,6 +1519,10 @@
     } ]
   }, {
     "Name" : "StopOTelEnrichment",
+    "AuthorizedActions" : [ {
+      "Name" : "StopOTelEnrichment",
+      "Service" : "cloudwatch"
+    } ],
     "SDK" : [ {
       "Name" : "cloudwatch",
       "Method" : "stop_o_tel_enrichment",

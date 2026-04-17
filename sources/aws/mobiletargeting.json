@@ -3543,10 +3543,6 @@
     } ]
   }, {
     "Name" : "UpdateVoiceTemplate",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateVoiceTemplate",
-      "Service" : "mobiletargeting"
-    } ],
     "SDK" : [ {
       "Name" : "pinpoint",
       "Method" : "update_voice_template",

@@ -2424,6 +2424,10 @@
     } ]
   }, {
     "Name" : "DisassociateBackupVaultMpaApprovalTeam",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateBackupVaultMpaApprovalTeam",
+      "Service" : "backup"
+    } ],
     "SDK" : [ {
       "Name" : "backup",
       "Method" : "disassociate_backup_vault_mpa_approval_team",

@@ -15,7 +15,50 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateScheduledReport",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteDashboard",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteScheduledReport",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ExecuteScheduledReport",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -57,10 +100,38 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetScheduledReport",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListDashboards",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListScheduledReports",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false
@@ -128,9 +199,26 @@
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
+  }, {
+    "Name" : "UpdateScheduledReport",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
   } ],
   "ConditionKeys" : [ {
     "Name" : "aws:RequestTag/${TagKey}",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "aws:ResourceTag/${TagKey}",
     "Types" : [ "String" ]
   }, {
     "Name" : "aws:TagKeys",
@@ -153,6 +241,9 @@
   }, {
     "Name" : "CreateScheduledReport",
     "AuthorizedActions" : [ {
+      "Name" : "CreateScheduledReport",
+      "Service" : "bcm-dashboards"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "bcm-dashboards.amazonaws.com" ]
@@ -180,6 +271,10 @@
     } ]
   }, {
     "Name" : "DeleteScheduledReport",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteScheduledReport",
+      "Service" : "bcm-dashboards"
+    } ],
     "SDK" : [ {
       "Name" : "bcm-dashboards",
       "Method" : "delete_scheduled_report",
@@ -187,6 +282,10 @@
     } ]
   }, {
     "Name" : "ExecuteScheduledReport",
+    "AuthorizedActions" : [ {
+      "Name" : "ExecuteScheduledReport",
+      "Service" : "bcm-dashboards"
+    } ],
     "SDK" : [ {
       "Name" : "bcm-dashboards",
       "Method" : "execute_scheduled_report",
@@ -216,6 +315,10 @@
     } ]
   }, {
     "Name" : "GetScheduledReport",
+    "AuthorizedActions" : [ {
+      "Name" : "GetScheduledReport",
+      "Service" : "bcm-dashboards"
+    } ],
     "SDK" : [ {
       "Name" : "bcm-dashboards",
       "Method" : "get_scheduled_report",
@@ -234,6 +337,10 @@
     } ]
   }, {
     "Name" : "ListScheduledReports",
+    "AuthorizedActions" : [ {
+      "Name" : "ListScheduledReports",
+      "Service" : "bcm-dashboards"
+    } ],
     "SDK" : [ {
       "Name" : "bcm-dashboards",
       "Method" : "list_scheduled_reports",
@@ -291,12 +398,24 @@
         "iam:PassedToService" : [ "bcm-dashboards.amazonaws.com" ]
       },
       "Service" : "iam"
+    }, {
+      "Name" : "UpdateScheduledReport",
+      "Service" : "bcm-dashboards"
     } ],
     "SDK" : [ {
       "Name" : "bcm-dashboards",
       "Method" : "update_scheduled_report",
       "Package" : "Boto3"
     } ]
+  } ],
+  "Resources" : [ {
+    "Name" : "dashboard",
+    "ARNFormats" : [ "arn:${Partition}:bcm-dashboards::${Account}:dashboard/${DashboardName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+  }, {
+    "Name" : "scheduled-report",
+    "ARNFormats" : [ "arn:${Partition}:bcm-dashboards::${Account}:scheduled-report/${ScheduledReportName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
   } ],
   "Version" : "v1.4"
 }

@@ -1283,10 +1283,6 @@
     } ]
   }, {
     "Name" : "DescribeAppVersionResource",
-    "AuthorizedActions" : [ {
-      "Name" : "DescribeAppVersionResource",
-      "Service" : "resiliencehub"
-    } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "describe_app_version_resource",

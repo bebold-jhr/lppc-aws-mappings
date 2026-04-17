@@ -2413,9 +2413,6 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateNetwork",
       "Service" : "medialive"
-    }, {
-      "Name" : "CreateTags",
-      "Service" : "medialive"
     } ],
     "SDK" : [ {
       "Name" : "medialive",
@@ -3546,10 +3543,6 @@
     } ]
   }, {
     "Name" : "UpdateNodeState",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateNodeState",
-      "Service" : "medialive"
-    } ],
     "SDK" : [ {
       "Name" : "medialive",
       "Method" : "update_node_state",

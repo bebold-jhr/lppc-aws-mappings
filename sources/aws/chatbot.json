@@ -976,6 +976,10 @@
     } ]
   }, {
     "Name" : "UpdateAccountPreferences",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAccountPreferences",
+      "Service" : "chatbot"
+    } ],
     "SDK" : [ {
       "Name" : "chatbot",
       "Method" : "update_account_preferences",

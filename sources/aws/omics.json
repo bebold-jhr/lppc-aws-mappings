@@ -80,6 +80,23 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CancelRunBatch",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "runBatch"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CancelVariantImportJob",
     "Annotations" : {
       "Properties" : {
@@ -334,6 +351,23 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DeleteBatch",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "runBatch"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteConfiguration",
     "Annotations" : {
       "Properties" : {
@@ -402,6 +436,25 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteRunBatch",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "run"
+    }, {
+      "Name" : "runBatch"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteRunCache",
@@ -585,6 +638,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetBatch",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "runBatch"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "GetConfiguration",
@@ -995,6 +1065,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListBatch",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListConfigurations",
     "Annotations" : {
       "Properties" : {
@@ -1218,6 +1302,23 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListRunsInBatch",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "runBatch"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListSequenceStores",
     "Annotations" : {
       "Properties" : {
@@ -1438,6 +1539,8 @@
     }, {
       "Name" : "run"
     }, {
+      "Name" : "runBatch"
+    }, {
       "Name" : "runCache"
     }, {
       "Name" : "runGroup"
@@ -1447,6 +1550,32 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "StartRunBatch",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "run"
+    }, {
+      "Name" : "runBatch"
+    }, {
+      "Name" : "runCache"
+    }, {
+      "Name" : "runGroup"
+    }, {
+      "Name" : "workflow"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "StartVariantImportJob",
@@ -1495,6 +1624,8 @@
     }, {
       "Name" : "run"
     }, {
+      "Name" : "runBatch"
+    }, {
       "Name" : "runCache"
     }, {
       "Name" : "runGroup"
@@ -1536,6 +1667,8 @@
       "Name" : "referenceStore"
     }, {
       "Name" : "run"
+    }, {
+      "Name" : "runBatch"
     }, {
       "Name" : "runCache"
     }, {
@@ -1825,6 +1958,19 @@
     } ]
   }, {
     "Name" : "CreateConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateConfiguration",
+      "Service" : "omics"
+    }, {
+      "Name" : "DescribeSecurityGroups",
+      "Service" : "ec2"
+    }, {
+      "Name" : "DescribeSubnets",
+      "Service" : "ec2"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "create_configuration",
@@ -2154,6 +2300,10 @@
     } ]
   }, {
     "Name" : "GetBatch",
+    "AuthorizedActions" : [ {
+      "Name" : "GetBatch",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "get_batch",
@@ -2425,6 +2575,10 @@
     } ]
   }, {
     "Name" : "ListBatch",
+    "AuthorizedActions" : [ {
+      "Name" : "ListBatch",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "list_batch",
@@ -2796,6 +2950,9 @@
       "Name" : "StartRun",
       "Service" : "omics"
     }, {
+      "Name" : "StartRunBatch",
+      "Service" : "omics"
+    }, {
       "Name" : "TagResource",
       "Service" : "omics"
     } ],
@@ -2907,10 +3064,6 @@
     } ]
   }, {
     "Name" : "UpdateWorkflow",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateWorkflow",
-      "Service" : "omics"
-    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "update_workflow",
@@ -2973,6 +3126,10 @@
   }, {
     "Name" : "run",
     "ARNFormats" : [ "arn:${Partition}:omics:${Region}:${Account}:run/${Id}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "runBatch",
+    "ARNFormats" : [ "arn:${Partition}:omics:${Region}:${Account}:runBatch/${BatchId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "runCache",

@@ -2104,6 +2104,10 @@
     } ]
   }, {
     "Name" : "CreateServiceSyncConfig",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateServiceSyncConfig",
+      "Service" : "proton"
+    } ],
     "SDK" : [ {
       "Name" : "proton",
       "Method" : "create_service_sync_config",

@@ -2785,6 +2785,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetMonitorSettings",
+    "SDK" : [ {
+      "Name" : "deadline",
+      "Method" : "get_monitor_settings",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetQueue",
     "AuthorizedActions" : [ {
       "Name" : "GetQueue",
@@ -3387,18 +3394,19 @@
   }, {
     "Name" : "UpdateMonitor",
     "AuthorizedActions" : [ {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "deadline.amazonaws.com" ]
-      },
-      "Service" : "iam"
-    }, {
       "Name" : "UpdateMonitor",
       "Service" : "deadline"
     } ],
     "SDK" : [ {
       "Name" : "deadline",
       "Method" : "update_monitor",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateMonitorSettings",
+    "SDK" : [ {
+      "Name" : "deadline",
+      "Method" : "update_monitor_settings",
       "Package" : "Boto3"
     } ]
   }, {

@@ -838,10 +838,6 @@
     } ]
   }, {
     "Name" : "StartWorkflow",
-    "AuthorizedActions" : [ {
-      "Name" : "StartWorkflow",
-      "Service" : "migrationhub-orchestrator"
-    } ],
     "SDK" : [ {
       "Name" : "migrationhuborchestrator",
       "Method" : "start_workflow",
@@ -903,10 +899,6 @@
     } ]
   }, {
     "Name" : "UpdateWorkflowStepGroup",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateWorkflowStepGroup",
-      "Service" : "migrationhub-orchestrator"
-    } ],
     "SDK" : [ {
       "Name" : "migrationhuborchestrator",
       "Method" : "update_workflow_step_group",

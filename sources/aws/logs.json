@@ -2210,6 +2210,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateLookupTable",
       "Service" : "logs"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "logs"
     } ],
     "SDK" : [ {
       "Name" : "logs",

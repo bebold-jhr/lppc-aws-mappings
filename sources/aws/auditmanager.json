@@ -1056,10 +1056,6 @@
     } ]
   }, {
     "Name" : "BatchDisassociateAssessmentReportEvidence",
-    "AuthorizedActions" : [ {
-      "Name" : "BatchDisassociateAssessmentReportEvidence",
-      "Service" : "auditmanager"
-    } ],
     "SDK" : [ {
       "Name" : "auditmanager",
       "Method" : "batch_disassociate_assessment_report_evidence",
@@ -1567,10 +1563,6 @@
     } ]
   }, {
     "Name" : "StartAssessmentFrameworkShare",
-    "AuthorizedActions" : [ {
-      "Name" : "StartAssessmentFrameworkShare",
-      "Service" : "auditmanager"
-    } ],
     "SDK" : [ {
       "Name" : "auditmanager",
       "Method" : "start_assessment_framework_share",

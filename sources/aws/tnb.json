@@ -613,10 +613,6 @@
   } ],
   "Operations" : [ {
     "Name" : "CancelSolNetworkOperation",
-    "AuthorizedActions" : [ {
-      "Name" : "CancelSolNetworkOperation",
-      "Service" : "tnb"
-    } ],
     "SDK" : [ {
       "Name" : "tnb",
       "Method" : "cancel_sol_network_operation",
@@ -928,10 +924,6 @@
     } ]
   }, {
     "Name" : "UpdateSolFunctionPackage",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateSolFunctionPackage",
-      "Service" : "tnb"
-    } ],
     "SDK" : [ {
       "Name" : "tnb",
       "Method" : "update_sol_function_package",
@@ -964,10 +956,6 @@
     } ]
   }, {
     "Name" : "ValidateSolFunctionPackageContent",
-    "AuthorizedActions" : [ {
-      "Name" : "ValidateSolFunctionPackageContent",
-      "Service" : "tnb"
-    } ],
     "SDK" : [ {
       "Name" : "tnb",
       "Method" : "validate_sol_function_package_content",

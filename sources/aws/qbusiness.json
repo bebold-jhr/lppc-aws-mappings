@@ -1867,6 +1867,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateChatResponseConfiguration",
       "Service" : "qbusiness"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "qbusiness"
     } ],
     "SDK" : [ {
       "Name" : "qbusiness",

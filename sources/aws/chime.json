@@ -5388,6 +5388,13 @@
     } ]
   }, {
     "Name" : "CreateAppInstanceBot",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAppInstanceBot",
+      "Service" : "chime"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime-sdk-identity",
       "Method" : "create_app_instance_bot",

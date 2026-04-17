@@ -1833,6 +1833,15 @@
   }, {
     "Name" : "UpdateScheduledAction",
     "AuthorizedActions" : [ {
+      "Name" : "CreateSnapshot",
+      "Service" : "redshift-serverless"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "redshift-serverless.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateScheduledAction",
       "Service" : "redshift-serverless"
     } ],

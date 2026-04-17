@@ -788,6 +788,10 @@
     } ]
   }, {
     "Name" : "CreateProgressUpdateStream",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateProgressUpdateStream",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "create_progress_update_stream",
@@ -831,6 +835,10 @@
     } ]
   }, {
     "Name" : "DescribeMigrationTask",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeMigrationTask",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "describe_migration_task",
@@ -870,6 +878,10 @@
     } ]
   }, {
     "Name" : "ImportMigrationTask",
+    "AuthorizedActions" : [ {
+      "Name" : "ImportMigrationTask",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "import_migration_task",
@@ -877,6 +889,10 @@
     } ]
   }, {
     "Name" : "ListApplicationStates",
+    "AuthorizedActions" : [ {
+      "Name" : "ListApplicationStates",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "list_application_states",
@@ -891,6 +907,10 @@
     } ]
   }, {
     "Name" : "ListDiscoveredResources",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDiscoveredResources",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "list_discovered_resources",
@@ -905,6 +925,10 @@
     } ]
   }, {
     "Name" : "ListMigrationTasks",
+    "AuthorizedActions" : [ {
+      "Name" : "ListMigrationTasks",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "list_migration_tasks",
@@ -912,6 +936,10 @@
     } ]
   }, {
     "Name" : "ListProgressUpdateStreams",
+    "AuthorizedActions" : [ {
+      "Name" : "ListProgressUpdateStreams",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "list_progress_update_streams",
@@ -926,6 +954,10 @@
     } ]
   }, {
     "Name" : "NotifyApplicationState",
+    "AuthorizedActions" : [ {
+      "Name" : "NotifyApplicationState",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "notify_application_state",
@@ -933,6 +965,10 @@
     } ]
   }, {
     "Name" : "NotifyMigrationTaskState",
+    "AuthorizedActions" : [ {
+      "Name" : "NotifyMigrationTaskState",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "notify_migration_task_state",
