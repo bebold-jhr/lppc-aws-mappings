@@ -143,7 +143,7 @@
     }
   }, {
     "Name" : "CreateAgentRuntime",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock-agentcore:securityGroups", "bedrock-agentcore:subnets" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock-agentcore:RuntimeAuthorizerType", "bedrock-agentcore:securityGroups", "bedrock-agentcore:subnets" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -300,6 +300,21 @@
     "Resources" : [ {
       "Name" : "gateway"
     } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateHarness",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -606,6 +621,23 @@
     },
     "Resources" : [ {
       "Name" : "gateway"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteHarness",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "harness"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1035,6 +1067,23 @@
     },
     "Resources" : [ {
       "Name" : "gateway"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetHarness",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "harness"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1493,6 +1542,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "InvokeHarness",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "harness"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "InvokeRegistryMcp",
     "Annotations" : {
       "Properties" : {
@@ -1726,6 +1792,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListHarnesses",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListMemories",
     "Annotations" : {
       "Properties" : {
@@ -1945,6 +2025,8 @@
       "Name" : "evaluator"
     }, {
       "Name" : "gateway"
+    }, {
+      "Name" : "harness"
     }, {
       "Name" : "memory"
     }, {
@@ -2319,6 +2401,8 @@
     }, {
       "Name" : "gateway"
     }, {
+      "Name" : "harness"
+    }, {
       "Name" : "memory"
     }, {
       "Name" : "oauth2credentialprovider"
@@ -2363,6 +2447,8 @@
     }, {
       "Name" : "gateway"
     }, {
+      "Name" : "harness"
+    }, {
       "Name" : "memory"
     }, {
       "Name" : "oauth2credentialprovider"
@@ -2385,7 +2471,7 @@
     }
   }, {
     "Name" : "UpdateAgentRuntime",
-    "ActionConditionKeys" : [ "bedrock-agentcore:securityGroups", "bedrock-agentcore:subnets" ],
+    "ActionConditionKeys" : [ "bedrock-agentcore:RuntimeAuthorizerType", "bedrock-agentcore:securityGroups", "bedrock-agentcore:subnets" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2504,6 +2590,23 @@
     },
     "Resources" : [ {
       "Name" : "gateway"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateHarness",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "harness"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2698,6 +2801,9 @@
     "Types" : [ "String" ]
   }, {
     "Name" : "bedrock-agentcore:KmsKeyArn",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "bedrock-agentcore:RuntimeAuthorizerType",
     "Types" : [ "String" ]
   }, {
     "Name" : "bedrock-agentcore:actorId",
@@ -2933,6 +3039,26 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateHarness",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateHarness",
+      "Service" : "bedrock-agentcore"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "bedrock-agentcore.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "create_harness",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateMemory",
     "AuthorizedActions" : [ {
       "Name" : "CreateMemory",
@@ -3164,6 +3290,17 @@
     "SDK" : [ {
       "Name" : "bedrock-agentcore-control",
       "Method" : "delete_gateway_target",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteHarness",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteHarness",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "delete_harness",
       "Package" : "Boto3"
     } ]
   }, {
@@ -3431,6 +3568,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetHarness",
+    "AuthorizedActions" : [ {
+      "Name" : "GetHarness",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "get_harness",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetMemory",
     "AuthorizedActions" : [ {
       "Name" : "GetMemory",
@@ -3664,6 +3812,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "InvokeHarness",
+    "AuthorizedActions" : [ {
+      "Name" : "InvokeAgentRuntime",
+      "Service" : "bedrock-agentcore"
+    }, {
+      "Name" : "InvokeHarness",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore",
+      "Method" : "invoke_harness",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListActors",
     "AuthorizedActions" : [ {
       "Name" : "ListActors",
@@ -3815,6 +3977,17 @@
     "SDK" : [ {
       "Name" : "bedrock-agentcore-control",
       "Method" : "list_gateways",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListHarnesses",
+    "AuthorizedActions" : [ {
+      "Name" : "ListHarnesses",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "list_harnesses",
       "Package" : "Boto3"
     } ]
   }, {
@@ -4240,6 +4413,23 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateHarness",
+    "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "bedrock-agentcore.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "UpdateHarness",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "update_harness",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateMemory",
     "AuthorizedActions" : [ {
       "Name" : "PassRole",
@@ -4386,6 +4576,10 @@
   }, {
     "Name" : "gateway",
     "ARNFormats" : [ "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:gateway/${GatewayId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "harness",
+    "ARNFormats" : [ "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:harness/${HarnessId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "memory",

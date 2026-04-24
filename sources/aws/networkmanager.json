@@ -2689,10 +2689,6 @@
     } ]
   }, {
     "Name" : "RestoreCoreNetworkPolicyVersion",
-    "AuthorizedActions" : [ {
-      "Name" : "RestoreCoreNetworkPolicyVersion",
-      "Service" : "networkmanager"
-    } ],
     "SDK" : [ {
       "Name" : "networkmanager",
       "Method" : "restore_core_network_policy_version",

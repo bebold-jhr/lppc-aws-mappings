@@ -16,6 +16,7 @@
     }
   }, {
     "Name" : "AcceptAgreementCancellationRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -30,6 +31,7 @@
     }
   }, {
     "Name" : "AcceptAgreementPaymentRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -44,6 +46,7 @@
     }
   }, {
     "Name" : "AcceptAgreementRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:ProductId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -72,6 +75,7 @@
     }
   }, {
     "Name" : "BatchCreateBillingAdjustmentRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -100,6 +104,7 @@
     }
   }, {
     "Name" : "CancelAgreement",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -114,6 +119,7 @@
     }
   }, {
     "Name" : "CancelAgreementCancellationRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -128,6 +134,7 @@
     }
   }, {
     "Name" : "CancelAgreementPaymentRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -173,6 +180,7 @@
     }
   }, {
     "Name" : "CreateAgreementRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:ProductId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -218,6 +226,7 @@
     }
   }, {
     "Name" : "DescribeAgreement",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -353,6 +362,7 @@
     }
   }, {
     "Name" : "GetAgreementCancellationRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -367,6 +377,7 @@
     }
   }, {
     "Name" : "GetAgreementEntitlements",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -381,6 +392,7 @@
     }
   }, {
     "Name" : "GetAgreementPaymentRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -409,6 +421,7 @@
     }
   }, {
     "Name" : "GetAgreementTerms",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -423,6 +436,7 @@
     }
   }, {
     "Name" : "GetBillingAdjustmentRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -465,6 +479,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetInvoiceSubmissionTask",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "InvoiceSubmissionTask"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "GetListing",
@@ -601,6 +632,7 @@
     }
   }, {
     "Name" : "ListAgreementCancellationRequests",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -615,6 +647,7 @@
     }
   }, {
     "Name" : "ListAgreementCharges",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -629,6 +662,7 @@
     }
   }, {
     "Name" : "ListAgreementInvoiceLineItems",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -643,6 +677,7 @@
     }
   }, {
     "Name" : "ListAgreementPaymentRequests",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -685,6 +720,7 @@
     }
   }, {
     "Name" : "ListBillingAdjustmentRequests",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -771,6 +807,34 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListInvoiceSubmissionTasks",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListPayables",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListPrivateListings",
     "Annotations" : {
       "Properties" : {
@@ -832,6 +896,8 @@
       "Name" : "DeploymentParameter"
     }, {
       "Name" : "Entity"
+    }, {
+      "Name" : "InvoiceSubmissionTask"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -931,6 +997,7 @@
     }
   }, {
     "Name" : "RejectAgreementCancellationRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -945,6 +1012,7 @@
     }
   }, {
     "Name" : "RejectAgreementPaymentRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -973,6 +1041,7 @@
     }
   }, {
     "Name" : "SearchAgreements",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -1021,6 +1090,7 @@
     }
   }, {
     "Name" : "SendAgreementCancellationRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1035,6 +1105,7 @@
     }
   }, {
     "Name" : "SendAgreementPaymentRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1080,6 +1151,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StartInvoiceSubmissionTask",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "InvoiceSubmissionTask"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "Subscribe",
     "Annotations" : {
       "Properties" : {
@@ -1111,6 +1200,8 @@
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
     }, {
       "Name" : "Entity"
+    }, {
+      "Name" : "InvoiceSubmissionTask"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1148,6 +1239,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
     }, {
       "Name" : "Entity"
+    }, {
+      "Name" : "InvoiceSubmissionTask"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1169,6 +1262,7 @@
     }
   }, {
     "Name" : "UpdatePurchaseOrders",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1768,6 +1862,10 @@
     "Name" : "Entity",
     "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}:${Account}:${Catalog}/${EntityType}/${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "catalog:ChangeType" ]
+  }, {
+    "Name" : "InvoiceSubmissionTask",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}:${Account}:catalog/${Catalog}/invoice-submission-task/${ResourceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "Listing",
     "ARNFormats" : [ "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/listing/${ListingId}" ]

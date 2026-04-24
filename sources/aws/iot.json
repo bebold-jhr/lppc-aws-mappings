@@ -6479,6 +6479,10 @@
     } ]
   }, {
     "Name" : "DisableTopicRule",
+    "AuthorizedActions" : [ {
+      "Name" : "DisableTopicRule",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "disable_topic_rule",

@@ -2136,6 +2136,10 @@
     } ]
   }, {
     "Name" : "DeleteConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteConfiguration",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "delete_configuration",
@@ -2740,6 +2744,10 @@
     } ]
   }, {
     "Name" : "ListRunsInBatch",
+    "AuthorizedActions" : [ {
+      "Name" : "ListRunsInBatch",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "list_runs_in_batch",

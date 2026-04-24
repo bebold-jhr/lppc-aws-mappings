@@ -590,6 +590,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "SearchAllRelatedItems",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "SearchCases",
     "Annotations" : {
       "Properties" : {
@@ -765,6 +782,27 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateRelatedItem",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Case"
+    }, {
+      "Name" : "Domain"
+    }, {
+      "Name" : "RelatedItem"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateTemplate",
     "Annotations" : {
       "Properties" : {
@@ -793,6 +831,12 @@
   }, {
     "Name" : "aws:TagKeys",
     "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "cases:CreatedBy",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "cases:RelatedItemType",
+    "Types" : [ "String" ]
   }, {
     "Name" : "connect:UserArn",
     "Types" : [ "ARN" ]
@@ -1154,6 +1198,10 @@
     } ]
   }, {
     "Name" : "SearchAllRelatedItems",
+    "AuthorizedActions" : [ {
+      "Name" : "SearchAllRelatedItems",
+      "Service" : "cases"
+    } ],
     "SDK" : [ {
       "Name" : "connectcases",
       "Method" : "search_all_related_items",
@@ -1249,6 +1297,10 @@
     } ]
   }, {
     "Name" : "UpdateRelatedItem",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateRelatedItem",
+      "Service" : "cases"
+    } ],
     "SDK" : [ {
       "Name" : "connectcases",
       "Method" : "update_related_item",
@@ -1289,7 +1341,7 @@
   }, {
     "Name" : "RelatedItem",
     "ARNFormats" : [ "arn:${Partition}:cases:${Region}:${Account}:domain/${DomainId}/case/${CaseId}/related-item/${RelatedItemId}" ],
-    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "cases:CreatedBy", "cases:RelatedItemType" ]
   }, {
     "Name" : "Template",
     "ARNFormats" : [ "arn:${Partition}:cases:${Region}:${Account}:domain/${DomainId}/template/${TemplateId}" ],

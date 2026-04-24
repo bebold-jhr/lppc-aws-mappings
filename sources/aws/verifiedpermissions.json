@@ -61,6 +61,8 @@
     },
     "Resources" : [ {
       "Name" : "policy-store"
+    }, {
+      "Name" : "policy-store-alias"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -775,6 +777,9 @@
     "Name" : "policy-store",
     "ARNFormats" : [ "arn:${Partition}:verifiedpermissions::${Account}:policy-store/${PolicyStoreId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "policy-store-alias",
+    "ARNFormats" : [ "arn:${Partition}:verifiedpermissions:${Region}:${Account}:policy-store-alias/${AliasName}" ]
   } ],
   "Version" : "v1.4"
 }

@@ -52,6 +52,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateAdConfiguration",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Ad-Configuration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateChannel",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -214,6 +232,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteAdConfiguration",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Ad-Configuration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteChannel",
@@ -403,6 +438,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetAdConfiguration",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Ad-Configuration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "GetChannel",
@@ -694,6 +746,37 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "InsertAdBreak",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Channel"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAdConfigurations",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ListChannels",
@@ -985,6 +1068,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "Ad-Configuration"
+    }, {
       "Name" : "Channel"
     }, {
       "Name" : "Composition"
@@ -1150,6 +1235,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "Ad-Configuration"
+    }, {
       "Name" : "Channel"
     }, {
       "Name" : "Composition"
@@ -1188,6 +1275,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "Ad-Configuration"
+    }, {
       "Name" : "Channel"
     }, {
       "Name" : "Composition"
@@ -1327,6 +1416,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateAdConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAdConfiguration",
+      "Service" : "ivs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ivs",
+      "Method" : "create_ad_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateChannel",
     "AuthorizedActions" : [ {
       "Name" : "CreateChannel",
@@ -1450,6 +1550,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteAdConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAdConfiguration",
+      "Service" : "ivs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ivs",
+      "Method" : "delete_ad_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteChannel",
     "AuthorizedActions" : [ {
       "Name" : "DeleteChannel",
@@ -1568,6 +1679,17 @@
     "SDK" : [ {
       "Name" : "ivs-realtime",
       "Method" : "disconnect_participant",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetAdConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAdConfiguration",
+      "Service" : "ivs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ivs",
+      "Method" : "get_ad_configuration",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1761,6 +1883,28 @@
     "SDK" : [ {
       "Name" : "ivs-realtime",
       "Method" : "import_public_key",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "InsertAdBreak",
+    "AuthorizedActions" : [ {
+      "Name" : "InsertAdBreak",
+      "Service" : "ivs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ivs",
+      "Method" : "insert_ad_break",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListAdConfigurations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAdConfigurations",
+      "Service" : "ivs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ivs",
+      "Method" : "list_ad_configurations",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2121,6 +2265,10 @@
     } ]
   } ],
   "Resources" : [ {
+    "Name" : "Ad-Configuration",
+    "ARNFormats" : [ "arn:${Partition}:ivs:${Region}:${Account}:ad-configuration/${ResourceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "Channel",
     "ARNFormats" : [ "arn:${Partition}:ivs:${Region}:${Account}:channel/${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]

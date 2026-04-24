@@ -1944,6 +1944,10 @@
     } ]
   }, {
     "Name" : "CancelComponentDeployment",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelComponentDeployment",
+      "Service" : "proton"
+    } ],
     "SDK" : [ {
       "Name" : "proton",
       "Method" : "cancel_component_deployment",

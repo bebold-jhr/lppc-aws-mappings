@@ -1505,6 +1505,10 @@
     } ]
   }, {
     "Name" : "GetCheckerIpRanges",
+    "AuthorizedActions" : [ {
+      "Name" : "GetCheckerIpRanges",
+      "Service" : "route53"
+    } ],
     "SDK" : [ {
       "Name" : "route53",
       "Method" : "get_checker_ip_ranges",
@@ -1523,6 +1527,10 @@
     } ]
   }, {
     "Name" : "GetGeoLocation",
+    "AuthorizedActions" : [ {
+      "Name" : "GetGeoLocation",
+      "Service" : "route53"
+    } ],
     "SDK" : [ {
       "Name" : "route53",
       "Method" : "get_geo_location",
@@ -1706,6 +1714,10 @@
     } ]
   }, {
     "Name" : "ListGeoLocations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListGeoLocations",
+      "Service" : "route53"
+    } ],
     "SDK" : [ {
       "Name" : "route53",
       "Method" : "list_geo_locations",

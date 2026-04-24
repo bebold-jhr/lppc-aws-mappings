@@ -39,6 +39,12 @@
     "Resources" : [ {
       "Name" : "action"
     }, {
+      "Name" : "ai-benchmark-job"
+    }, {
+      "Name" : "ai-recommendation-job"
+    }, {
+      "Name" : "ai-workload-config"
+    }, {
       "Name" : "algorithm"
     }, {
       "Name" : "app"
@@ -330,6 +336,60 @@
     },
     "Resources" : [ {
       "Name" : "partner-app"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateAIBenchmarkJob",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ai-benchmark-job"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateAIRecommendationJob",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ai-recommendation-job"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateAIWorkloadConfig",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ai-workload-config"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1196,7 +1256,7 @@
     }
   }, {
     "Name" : "CreateNotebookInstance",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "sagemaker:AcceleratorTypes", "sagemaker:DirectInternetAccess", "sagemaker:InstanceTypes", "sagemaker:MinimumInstanceMetadataServiceVersion", "sagemaker:RootAccess", "sagemaker:VolumeKmsKey", "sagemaker:VpcSecurityGroupIds", "sagemaker:VpcSubnets" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "sagemaker:AcceleratorTypes", "sagemaker:DirectInternetAccess", "sagemaker:InstanceTypes", "sagemaker:MinimumInstanceMetadataServiceVersion", "sagemaker:NotebookInstanceLifecycleConfigArns", "sagemaker:RootAccess", "sagemaker:VolumeKmsKey", "sagemaker:VpcSecurityGroupIds", "sagemaker:VpcSubnets" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1622,6 +1682,57 @@
     },
     "Resources" : [ {
       "Name" : "workteam"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteAIBenchmarkJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ai-benchmark-job"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteAIRecommendationJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ai-recommendation-job"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteAIWorkloadConfig",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ai-workload-config"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2587,6 +2698,12 @@
     "Resources" : [ {
       "Name" : "action"
     }, {
+      "Name" : "ai-benchmark-job"
+    }, {
+      "Name" : "ai-recommendation-job"
+    }, {
+      "Name" : "ai-workload-config"
+    }, {
       "Name" : "algorithm"
     }, {
       "Name" : "app"
@@ -2839,6 +2956,57 @@
     },
     "Resources" : [ {
       "Name" : "device"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeAIBenchmarkJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ai-benchmark-job"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeAIRecommendationJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ai-recommendation-job"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeAIWorkloadConfig",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ai-workload-config"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -4388,6 +4556,48 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListAIBenchmarkJobs",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAIRecommendationJobs",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAIWorkloadConfigs",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListActions",
     "Annotations" : {
       "Properties" : {
@@ -5541,6 +5751,12 @@
     "Resources" : [ {
       "Name" : "action"
     }, {
+      "Name" : "ai-benchmark-job"
+    }, {
+      "Name" : "ai-recommendation-job"
+    }, {
+      "Name" : "ai-workload-config"
+    }, {
       "Name" : "algorithm"
     }, {
       "Name" : "app"
@@ -6180,6 +6396,40 @@
     },
     "Resources" : [ {
       "Name" : "space"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StopAIBenchmarkJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ai-benchmark-job"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StopAIRecommendationJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ai-recommendation-job"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -7058,7 +7308,7 @@
     }
   }, {
     "Name" : "UpdateNotebookInstance",
-    "ActionConditionKeys" : [ "sagemaker:AcceleratorTypes", "sagemaker:InstanceTypes", "sagemaker:MinimumInstanceMetadataServiceVersion", "sagemaker:RootAccess" ],
+    "ActionConditionKeys" : [ "sagemaker:AcceleratorTypes", "sagemaker:InstanceTypes", "sagemaker:MinimumInstanceMetadataServiceVersion", "sagemaker:NotebookInstanceLifecycleConfigArns", "sagemaker:RootAccess" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -7433,6 +7683,9 @@
     "Name" : "sagemaker:NetworkIsolation",
     "Types" : [ "Bool" ]
   }, {
+    "Name" : "sagemaker:NotebookInstanceLifecycleConfigArns",
+    "Types" : [ "ArrayOfARN" ]
+  }, {
     "Name" : "sagemaker:OutputKmsKey",
     "Types" : [ "ARN" ]
   }, {
@@ -7618,6 +7871,60 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateAIBenchmarkJob",
+    "AuthorizedActions" : [ {
+      "Name" : "AddTags",
+      "Service" : "sagemaker"
+    }, {
+      "Name" : "CreateAIBenchmarkJob",
+      "Service" : "sagemaker"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "sagemaker.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "create_ai_benchmark_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateAIRecommendationJob",
+    "AuthorizedActions" : [ {
+      "Name" : "AddTags",
+      "Service" : "sagemaker"
+    }, {
+      "Name" : "CreateAIRecommendationJob",
+      "Service" : "sagemaker"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "sagemaker.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "create_ai_recommendation_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateAIWorkloadConfig",
+    "AuthorizedActions" : [ {
+      "Name" : "AddTags",
+      "Service" : "sagemaker"
+    }, {
+      "Name" : "CreateAIWorkloadConfig",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "create_ai_workload_config",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateAction",
     "AuthorizedActions" : [ {
       "Name" : "AddTags",
@@ -7787,6 +8094,9 @@
   }, {
     "Name" : "CreateCompilationJob",
     "AuthorizedActions" : [ {
+      "Name" : "AddTags",
+      "Service" : "sagemaker"
+    }, {
       "Name" : "CreateCompilationJob",
       "Service" : "sagemaker"
     }, {
@@ -8691,6 +9001,39 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteAIBenchmarkJob",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAIBenchmarkJob",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "delete_ai_benchmark_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteAIRecommendationJob",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAIRecommendationJob",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "delete_ai_recommendation_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteAIWorkloadConfig",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAIWorkloadConfig",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "delete_ai_workload_config",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteAction",
     "AuthorizedActions" : [ {
       "Name" : "DeleteAction",
@@ -9343,6 +9686,39 @@
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "deregister_devices",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeAIBenchmarkJob",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAIBenchmarkJob",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "describe_ai_benchmark_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeAIRecommendationJob",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAIRecommendationJob",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "describe_ai_recommendation_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeAIWorkloadConfig",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAIWorkloadConfig",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "describe_ai_workload_config",
       "Package" : "Boto3"
     } ]
   }, {
@@ -10306,6 +10682,39 @@
     "SDK" : [ {
       "Name" : "sagemaker-runtime",
       "Method" : "invoke_endpoint_with_response_stream",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListAIBenchmarkJobs",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAIBenchmarkJobs",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "list_ai_benchmark_jobs",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListAIRecommendationJobs",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAIRecommendationJobs",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "list_ai_recommendation_jobs",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListAIWorkloadConfigs",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAIWorkloadConfigs",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "list_ai_workload_configs",
       "Package" : "Boto3"
     } ]
   }, {
@@ -11445,6 +11854,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "StopAIBenchmarkJob",
+    "AuthorizedActions" : [ {
+      "Name" : "StopAIBenchmarkJob",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "stop_ai_benchmark_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StopAIRecommendationJob",
+    "AuthorizedActions" : [ {
+      "Name" : "StopAIRecommendationJob",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "stop_ai_recommendation_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StopAutoMLJob",
     "AuthorizedActions" : [ {
       "Name" : "StopAutoMLJob",
@@ -12164,6 +12595,18 @@
   "Resources" : [ {
     "Name" : "action",
     "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:action/${ActionName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "ai-benchmark-job",
+    "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:ai-benchmark-job/${AIBenchmarkJobName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "ai-recommendation-job",
+    "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:ai-recommendation-job/${AIRecommendationJobName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "ai-workload-config",
+    "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:ai-workload-config/${AIWorkloadConfigName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "algorithm",

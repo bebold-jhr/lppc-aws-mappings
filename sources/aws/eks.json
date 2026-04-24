@@ -37,6 +37,7 @@
     }
   }, {
     "Name" : "AssociateEncryptionConfig",
+    "ActionConditionKeys" : [ "eks:encryptionConfigProviderKeyArns" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -128,7 +129,7 @@
     }
   }, {
     "Name" : "CreateCluster",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "eks:authenticationMode", "eks:blockStorageEnabled", "eks:bootstrapClusterCreatorAdminPermissions", "eks:bootstrapSelfManagedAddons", "eks:computeConfigEnabled", "eks:elasticLoadBalancingEnabled", "eks:loggingType/${type}", "eks:supportType" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "eks:authenticationMode", "eks:blockStorageEnabled", "eks:bootstrapClusterCreatorAdminPermissions", "eks:bootstrapSelfManagedAddons", "eks:computeConfigEnabled", "eks:controlPlaneScalingTier", "eks:deletionProtection", "eks:elasticLoadBalancingEnabled", "eks:encryptionConfigProviderKeyArns", "eks:endpointPrivateAccess", "eks:endpointPublicAccess", "eks:kubernetesVersion", "eks:loggingType/${type}", "eks:supportType", "eks:zonalShiftEnabled" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1111,7 +1112,7 @@
     }
   }, {
     "Name" : "UpdateClusterConfig",
-    "ActionConditionKeys" : [ "eks:authenticationMode", "eks:blockStorageEnabled", "eks:computeConfigEnabled", "eks:elasticLoadBalancingEnabled", "eks:loggingType/${type}", "eks:supportType" ],
+    "ActionConditionKeys" : [ "eks:authenticationMode", "eks:blockStorageEnabled", "eks:computeConfigEnabled", "eks:controlPlaneScalingTier", "eks:deletionProtection", "eks:elasticLoadBalancingEnabled", "eks:endpointPrivateAccess", "eks:endpointPublicAccess", "eks:loggingType/${type}", "eks:supportType", "eks:zonalShiftEnabled" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1129,6 +1130,7 @@
     }
   }, {
     "Name" : "UpdateClusterVersion",
+    "ActionConditionKeys" : [ "eks:kubernetesVersion" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1250,7 +1252,22 @@
     "Name" : "eks:computeConfigEnabled",
     "Types" : [ "Bool" ]
   }, {
+    "Name" : "eks:controlPlaneScalingTier",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "eks:deletionProtection",
+    "Types" : [ "Bool" ]
+  }, {
     "Name" : "eks:elasticLoadBalancingEnabled",
+    "Types" : [ "Bool" ]
+  }, {
+    "Name" : "eks:encryptionConfigProviderKeyArns",
+    "Types" : [ "ArrayOfARN" ]
+  }, {
+    "Name" : "eks:endpointPrivateAccess",
+    "Types" : [ "Bool" ]
+  }, {
+    "Name" : "eks:endpointPublicAccess",
     "Types" : [ "Bool" ]
   }, {
     "Name" : "eks:issuerUrl",
@@ -1258,6 +1275,9 @@
   }, {
     "Name" : "eks:kubernetesGroups",
     "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "eks:kubernetesVersion",
+    "Types" : [ "String" ]
   }, {
     "Name" : "eks:loggingType/${type}",
     "Types" : [ "Bool" ]
@@ -1276,6 +1296,9 @@
   }, {
     "Name" : "eks:username",
     "Types" : [ "String" ]
+  }, {
+    "Name" : "eks:zonalShiftEnabled",
+    "Types" : [ "Bool" ]
   } ],
   "Operations" : [ {
     "Name" : "AssociateAccessPolicy",

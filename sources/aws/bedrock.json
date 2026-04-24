@@ -2586,6 +2586,8 @@
       "Name" : "prompt-router"
     }, {
       "Name" : "provisioned-model"
+    }, {
+      "Name" : "system-tool"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2620,6 +2622,8 @@
       "Name" : "prompt-router"
     }, {
       "Name" : "provisioned-model"
+    }, {
+      "Name" : "system-tool"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -6793,9 +6797,6 @@
   }, {
     "Name" : "ListPrompts",
     "AuthorizedActions" : [ {
-      "Name" : "CallWithBearerToken",
-      "Service" : "bedrock"
-    }, {
       "Name" : "ListPrompts",
       "Service" : "bedrock"
     } ],

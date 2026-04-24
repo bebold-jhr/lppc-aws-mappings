@@ -2726,6 +2726,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateContactMethod",
       "Service" : "lightsail"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "lightsail"
     } ],
     "SDK" : [ {
       "Name" : "lightsail",

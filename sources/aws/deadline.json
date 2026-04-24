@@ -2786,6 +2786,10 @@
     } ]
   }, {
     "Name" : "GetMonitorSettings",
+    "AuthorizedActions" : [ {
+      "Name" : "GetMonitorSettings",
+      "Service" : "deadline"
+    } ],
     "SDK" : [ {
       "Name" : "deadline",
       "Method" : "get_monitor_settings",
@@ -3404,6 +3408,10 @@
     } ]
   }, {
     "Name" : "UpdateMonitorSettings",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateMonitorSettings",
+      "Service" : "deadline"
+    } ],
     "SDK" : [ {
       "Name" : "deadline",
       "Method" : "update_monitor_settings",

@@ -756,6 +756,10 @@
   } ],
   "Operations" : [ {
     "Name" : "AssociateCreatedArtifact",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateCreatedArtifact",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "associate_created_artifact",
@@ -810,6 +814,10 @@
     } ]
   }, {
     "Name" : "DeleteProgressUpdateStream",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteProgressUpdateStream",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "delete_progress_update_stream",
@@ -846,6 +854,10 @@
     } ]
   }, {
     "Name" : "DisassociateCreatedArtifact",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateCreatedArtifact",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "disassociate_created_artifact",
@@ -860,6 +872,10 @@
     } ]
   }, {
     "Name" : "DisassociateSourceResource",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateSourceResource",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "disassociate_source_resource",
@@ -900,6 +916,10 @@
     } ]
   }, {
     "Name" : "ListCreatedArtifacts",
+    "AuthorizedActions" : [ {
+      "Name" : "ListCreatedArtifacts",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "list_created_artifacts",
@@ -918,6 +938,10 @@
     } ]
   }, {
     "Name" : "ListMigrationTaskUpdates",
+    "AuthorizedActions" : [ {
+      "Name" : "ListMigrationTaskUpdates",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "list_migration_task_updates",
@@ -947,6 +971,10 @@
     } ]
   }, {
     "Name" : "ListSourceResources",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSourceResources",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "list_source_resources",
@@ -976,6 +1004,10 @@
     } ]
   }, {
     "Name" : "PutResourceAttributes",
+    "AuthorizedActions" : [ {
+      "Name" : "PutResourceAttributes",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "put_resource_attributes",

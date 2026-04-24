@@ -7837,6 +7837,10 @@
     } ]
   }, {
     "Name" : "UpdateAppInstanceUserEndpoint",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAppInstanceUserEndpoint",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime-sdk-identity",
       "Method" : "update_app_instance_user_endpoint",

@@ -896,6 +896,10 @@
     } ]
   }, {
     "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "tnb"
+    } ],
     "SDK" : [ {
       "Name" : "tnb",
       "Method" : "tag_resource",
@@ -917,6 +921,10 @@
     } ]
   }, {
     "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "tnb"
+    } ],
     "SDK" : [ {
       "Name" : "tnb",
       "Method" : "untag_resource",

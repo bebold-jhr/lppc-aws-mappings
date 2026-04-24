@@ -209,6 +209,46 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateRecommenderFilter",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domains"
+    }, {
+      "Name" : "recommender-filters"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateRecommenderSchema",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domains"
+    }, {
+      "Name" : "recommender-schemas"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateSegmentDefinition",
     "Annotations" : {
       "Properties" : {
@@ -519,6 +559,44 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteRecommenderFilter",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domains"
+    }, {
+      "Name" : "recommender-filters"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteRecommenderSchema",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domains"
+    }, {
+      "Name" : "recommender-schemas"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteSegmentDefinition",
@@ -897,6 +975,44 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetRecommenderFilter",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domains"
+    }, {
+      "Name" : "recommender-filters"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetRecommenderSchema",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domains"
+    }, {
+      "Name" : "recommender-schemas"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "GetSegmentDefinition",
@@ -1380,6 +1496,23 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListRecommenderFilters",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domains"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListRecommenderRecipes",
     "Annotations" : {
       "Properties" : {
@@ -1392,6 +1525,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListRecommenderSchemas",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domains"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ListRecommenders",
@@ -1470,6 +1620,10 @@
       "Name" : "layouts"
     }, {
       "Name" : "object-types"
+    }, {
+      "Name" : "recommender-filters"
+    }, {
+      "Name" : "recommender-schemas"
     }, {
       "Name" : "recommenders"
     }, {
@@ -1726,6 +1880,10 @@
     }, {
       "Name" : "object-types"
     }, {
+      "Name" : "recommender-filters"
+    }, {
+      "Name" : "recommender-schemas"
+    }, {
       "Name" : "recommenders"
     }, {
       "Name" : "segment-definitions"
@@ -1761,6 +1919,10 @@
       "Name" : "layouts"
     }, {
       "Name" : "object-types"
+    }, {
+      "Name" : "recommender-filters"
+    }, {
+      "Name" : "recommender-schemas"
     }, {
       "Name" : "recommenders"
     }, {
@@ -2038,6 +2200,10 @@
     } ]
   }, {
     "Name" : "CreateRecommenderFilter",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateRecommenderFilter",
+      "Service" : "profile"
+    } ],
     "SDK" : [ {
       "Name" : "customer-profiles",
       "Method" : "create_recommender_filter",
@@ -2237,6 +2403,10 @@
     } ]
   }, {
     "Name" : "DeleteRecommenderFilter",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteRecommenderFilter",
+      "Service" : "profile"
+    } ],
     "SDK" : [ {
       "Name" : "customer-profiles",
       "Method" : "delete_recommender_filter",
@@ -2471,6 +2641,10 @@
     } ]
   }, {
     "Name" : "GetRecommenderFilter",
+    "AuthorizedActions" : [ {
+      "Name" : "GetRecommenderFilter",
+      "Service" : "profile"
+    } ],
     "SDK" : [ {
       "Name" : "customer-profiles",
       "Method" : "get_recommender_filter",
@@ -2771,6 +2945,10 @@
     } ]
   }, {
     "Name" : "ListRecommenderFilters",
+    "AuthorizedActions" : [ {
+      "Name" : "ListRecommenderFilters",
+      "Service" : "profile"
+    } ],
     "SDK" : [ {
       "Name" : "customer-profiles",
       "Method" : "list_recommender_filters",
@@ -3099,6 +3277,14 @@
   }, {
     "Name" : "object-types",
     "ARNFormats" : [ "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}/object-types/${ObjectTypeName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "recommender-filters",
+    "ARNFormats" : [ "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}/recommender-filters/${RecommenderFilterName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "recommender-schemas",
+    "ARNFormats" : [ "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}/recommender-schemas/${RecommenderSchemaName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "recommenders",

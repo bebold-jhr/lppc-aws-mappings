@@ -470,6 +470,10 @@
     } ]
   }, {
     "Name" : "DeregisterCapability",
+    "AuthorizedActions" : [ {
+      "Name" : "DeregisterCapability",
+      "Service" : "es"
+    } ],
     "SDK" : [ {
       "Name" : "opensearch",
       "Method" : "deregister_capability",
@@ -1062,6 +1066,13 @@
     "SDK" : [ {
       "Name" : "opensearch",
       "Method" : "revoke_vpc_endpoint_access",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "RollbackServiceSoftwareUpdate",
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "rollback_service_software_update",
       "Package" : "Boto3"
     } ]
   }, {

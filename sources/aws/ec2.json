@@ -15778,6 +15778,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "AcceptTransitGatewayClientVpnAttachment",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "accept_transit_gateway_client_vpn_attachment",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "AcceptTransitGatewayMulticastDomainAssociations",
     "AuthorizedActions" : [ {
       "Name" : "AcceptTransitGatewayMulticastDomainAssociations",
@@ -18555,6 +18562,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "delete_transit_gateway",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteTransitGatewayClientVpnAttachment",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "delete_transit_gateway_client_vpn_attachment",
       "Package" : "Boto3"
     } ]
   }, {
@@ -22237,6 +22251,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetManagedResourceVisibility",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "get_managed_resource_visibility",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetNetworkInsightsAccessScopeAnalysisFindings",
     "AuthorizedActions" : [ {
       "Name" : "GetNetworkInsightsAccessScopeAnalysisFindings",
@@ -23049,6 +23070,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ModifyManagedResourceVisibility",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "modify_managed_resource_visibility",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ModifyNetworkInterfaceAttribute",
     "AuthorizedActions" : [ {
       "Name" : "ModifyNetworkInterfaceAttribute",
@@ -23711,6 +23739,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "reject_capacity_reservation_billing_ownership",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "RejectTransitGatewayClientVpnAttachment",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "reject_transit_gateway_client_vpn_attachment",
       "Package" : "Boto3"
     } ]
   }, {

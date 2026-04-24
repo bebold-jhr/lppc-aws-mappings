@@ -925,10 +925,6 @@
     } ]
   }, {
     "Name" : "UpdateBackendStorage",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateBackendStorage",
-      "Service" : "amplifybackend"
-    } ],
     "SDK" : [ {
       "Name" : "amplifybackend",
       "Method" : "update_backend_storage",

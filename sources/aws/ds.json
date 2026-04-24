@@ -1639,9 +1639,6 @@
   }, {
     "Name" : "CreateHybridAD",
     "AuthorizedActions" : [ {
-      "Name" : "AddTagsToResource",
-      "Service" : "ds"
-    }, {
       "Name" : "CreateHybridAD",
       "Service" : "ds"
     } ],
@@ -2216,6 +2213,10 @@
     } ]
   }, {
     "Name" : "RejectSharedDirectory",
+    "AuthorizedActions" : [ {
+      "Name" : "RejectSharedDirectory",
+      "Service" : "ds"
+    } ],
     "SDK" : [ {
       "Name" : "ds",
       "Method" : "reject_shared_directory",
