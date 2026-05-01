@@ -767,6 +767,10 @@
     } ]
   }, {
     "Name" : "DeleteApplicationInputProcessingConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteApplicationInputProcessingConfiguration",
+      "Service" : "kinesisanalytics"
+    } ],
     "SDK" : [ {
       "Name" : "kinesisanalytics",
       "Method" : "delete_application_input_processing_configuration",

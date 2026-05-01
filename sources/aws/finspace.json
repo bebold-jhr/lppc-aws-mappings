@@ -1551,6 +1551,10 @@
     } ]
   }, {
     "Name" : "UpdateEnvironment",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateEnvironment",
+      "Service" : "finspace"
+    } ],
     "SDK" : [ {
       "Name" : "finspace",
       "Method" : "update_environment",
@@ -1569,6 +1573,10 @@
     } ]
   }, {
     "Name" : "UpdateKxClusterDatabases",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateKxClusterDatabases",
+      "Service" : "finspace"
+    } ],
     "SDK" : [ {
       "Name" : "finspace",
       "Method" : "update_kx_cluster_databases",

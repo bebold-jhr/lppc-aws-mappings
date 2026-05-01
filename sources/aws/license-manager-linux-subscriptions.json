@@ -185,6 +185,10 @@
   } ],
   "Operations" : [ {
     "Name" : "DeregisterSubscriptionProvider",
+    "AuthorizedActions" : [ {
+      "Name" : "DeregisterSubscriptionProvider",
+      "Service" : "license-manager-linux-subscriptions"
+    } ],
     "SDK" : [ {
       "Name" : "license-manager-linux-subscriptions",
       "Method" : "deregister_subscription_provider",
@@ -258,6 +262,10 @@
     } ]
   }, {
     "Name" : "RegisterSubscriptionProvider",
+    "AuthorizedActions" : [ {
+      "Name" : "RegisterSubscriptionProvider",
+      "Service" : "license-manager-linux-subscriptions"
+    } ],
     "SDK" : [ {
       "Name" : "license-manager-linux-subscriptions",
       "Method" : "register_subscription_provider",
@@ -272,6 +280,10 @@
     } ]
   }, {
     "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "license-manager-linux-subscriptions"
+    } ],
     "SDK" : [ {
       "Name" : "license-manager-linux-subscriptions",
       "Method" : "untag_resource",
@@ -279,6 +291,10 @@
     } ]
   }, {
     "Name" : "UpdateServiceSettings",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateServiceSettings",
+      "Service" : "license-manager-linux-subscriptions"
+    } ],
     "SDK" : [ {
       "Name" : "license-manager-linux-subscriptions",
       "Method" : "update_service_settings",

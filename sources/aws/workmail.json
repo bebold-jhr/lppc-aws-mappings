@@ -2205,6 +2205,10 @@
     } ]
   }, {
     "Name" : "CreateAvailabilityConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAvailabilityConfiguration",
+      "Service" : "workmail"
+    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "create_availability_configuration",
@@ -2245,6 +2249,10 @@
     } ]
   }, {
     "Name" : "CreateMobileDeviceAccessRule",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateMobileDeviceAccessRule",
+      "Service" : "workmail"
+    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "create_mobile_device_access_rule",
@@ -2962,6 +2970,10 @@
     } ]
   }, {
     "Name" : "PutMobileDeviceAccessOverride",
+    "AuthorizedActions" : [ {
+      "Name" : "PutMobileDeviceAccessOverride",
+      "Service" : "workmail"
+    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "put_mobile_device_access_override",
@@ -3063,6 +3075,10 @@
     } ]
   }, {
     "Name" : "UpdateAvailabilityConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAvailabilityConfiguration",
+      "Service" : "workmail"
+    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "update_availability_configuration",
@@ -3092,6 +3108,10 @@
     } ]
   }, {
     "Name" : "UpdateImpersonationRole",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateImpersonationRole",
+      "Service" : "workmail"
+    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "update_impersonation_role",
@@ -3110,6 +3130,10 @@
     } ]
   }, {
     "Name" : "UpdateMobileDeviceAccessRule",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateMobileDeviceAccessRule",
+      "Service" : "workmail"
+    } ],
     "SDK" : [ {
       "Name" : "workmail",
       "Method" : "update_mobile_device_access_rule",

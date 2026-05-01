@@ -1078,6 +1078,10 @@
   } ],
   "Operations" : [ {
     "Name" : "AcceptResourceGroupingRecommendations",
+    "AuthorizedActions" : [ {
+      "Name" : "AcceptResourceGroupingRecommendations",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "accept_resource_grouping_recommendations",
@@ -1138,6 +1142,10 @@
     } ]
   }, {
     "Name" : "CreateAppVersionResource",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAppVersionResource",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "create_app_version_resource",
@@ -1145,6 +1153,10 @@
     } ]
   }, {
     "Name" : "CreateRecommendationTemplate",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateRecommendationTemplate",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "create_recommendation_template",
@@ -1221,6 +1233,10 @@
     } ]
   }, {
     "Name" : "DeleteRecommendationTemplate",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteRecommendationTemplate",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "delete_recommendation_template",
@@ -1283,6 +1299,10 @@
     } ]
   }, {
     "Name" : "DescribeAppVersionResource",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAppVersionResource",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "describe_app_version_resource",
@@ -1620,6 +1640,10 @@
     } ]
   }, {
     "Name" : "RejectResourceGroupingRecommendations",
+    "AuthorizedActions" : [ {
+      "Name" : "RejectResourceGroupingRecommendations",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "reject_resource_grouping_recommendations",
@@ -1627,6 +1651,10 @@
     } ]
   }, {
     "Name" : "RemoveDraftAppVersionResourceMappings",
+    "AuthorizedActions" : [ {
+      "Name" : "RemoveDraftAppVersionResourceMappings",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "remove_draft_app_version_resource_mappings",
@@ -1731,6 +1759,10 @@
     } ]
   }, {
     "Name" : "UpdateAppVersionAppComponent",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAppVersionAppComponent",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "update_app_version_app_component",

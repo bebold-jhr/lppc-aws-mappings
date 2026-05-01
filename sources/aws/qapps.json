@@ -826,6 +826,10 @@
     } ]
   }, {
     "Name" : "DeleteLibraryItem",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteLibraryItem",
+      "Service" : "qapps"
+    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "delete_library_item",
@@ -862,6 +866,10 @@
     } ]
   }, {
     "Name" : "DisassociateQAppFromUser",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateQAppFromUser",
+      "Service" : "qapps"
+    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "disassociate_q_app_from_user",
@@ -975,6 +983,10 @@
     } ]
   }, {
     "Name" : "ListTagsForResource",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTagsForResource",
+      "Service" : "qapps"
+    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "list_tags_for_resource",
@@ -1011,6 +1023,10 @@
     } ]
   }, {
     "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "qapps"
+    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "tag_resource",
@@ -1018,6 +1034,10 @@
     } ]
   }, {
     "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "qapps"
+    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "untag_resource",
@@ -1036,6 +1056,10 @@
     } ]
   }, {
     "Name" : "UpdateLibraryItemMetadata",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateLibraryItemMetadata",
+      "Service" : "qapps"
+    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "update_library_item_metadata",
@@ -1076,6 +1100,10 @@
     } ]
   }, {
     "Name" : "UpdateQAppSessionMetadata",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateQAppSessionMetadata",
+      "Service" : "qapps"
+    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "update_q_app_session_metadata",

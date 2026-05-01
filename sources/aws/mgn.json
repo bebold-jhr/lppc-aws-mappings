@@ -3090,6 +3090,10 @@
     } ]
   }, {
     "Name" : "StartNetworkMigrationMappingUpdate",
+    "AuthorizedActions" : [ {
+      "Name" : "StartNetworkMigrationMappingUpdate",
+      "Service" : "mgn"
+    } ],
     "SDK" : [ {
       "Name" : "mgn",
       "Method" : "start_network_migration_mapping_update",
@@ -3235,6 +3239,10 @@
     } ]
   }, {
     "Name" : "UpdateNetworkMigrationDefinition",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateNetworkMigrationDefinition",
+      "Service" : "mgn"
+    } ],
     "SDK" : [ {
       "Name" : "mgn",
       "Method" : "update_network_migration_definition",
@@ -3242,6 +3250,10 @@
     } ]
   }, {
     "Name" : "UpdateNetworkMigrationMapperSegment",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateNetworkMigrationMapperSegment",
+      "Service" : "mgn"
+    } ],
     "SDK" : [ {
       "Name" : "mgn",
       "Method" : "update_network_migration_mapper_segment",

@@ -1315,6 +1315,19 @@
     } ]
   }, {
     "Name" : "CreateDataset",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateDataset",
+      "Service" : "forecast"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "forecast.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "create_dataset",
@@ -1322,6 +1335,13 @@
     } ]
   }, {
     "Name" : "CreateDatasetGroup",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateDatasetGroup",
+      "Service" : "forecast"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "create_dataset_group",
@@ -1329,6 +1349,19 @@
     } ]
   }, {
     "Name" : "CreateDatasetImportJob",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateDatasetImportJob",
+      "Service" : "forecast"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "forecast.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "create_dataset_import_job",
@@ -1350,6 +1383,13 @@
     } ]
   }, {
     "Name" : "CreateForecast",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateForecast",
+      "Service" : "forecast"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "create_forecast",
@@ -1406,6 +1446,10 @@
     } ]
   }, {
     "Name" : "DeleteDataset",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteDataset",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "delete_dataset",
@@ -1413,6 +1457,10 @@
     } ]
   }, {
     "Name" : "DeleteDatasetGroup",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteDatasetGroup",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "delete_dataset_group",
@@ -1420,6 +1468,10 @@
     } ]
   }, {
     "Name" : "DeleteDatasetImportJob",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteDatasetImportJob",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "delete_dataset_import_job",
@@ -1427,6 +1479,10 @@
     } ]
   }, {
     "Name" : "DeleteExplainability",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteExplainability",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "delete_explainability",
@@ -1434,6 +1490,10 @@
     } ]
   }, {
     "Name" : "DeleteExplainabilityExport",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteExplainabilityExport",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "delete_explainability_export",
@@ -1441,6 +1501,10 @@
     } ]
   }, {
     "Name" : "DeleteForecast",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteForecast",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "delete_forecast",
@@ -1448,6 +1512,10 @@
     } ]
   }, {
     "Name" : "DeleteForecastExportJob",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteForecastExportJob",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "delete_forecast_export_job",
@@ -1455,6 +1523,10 @@
     } ]
   }, {
     "Name" : "DeleteMonitor",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteMonitor",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "delete_monitor",
@@ -1462,6 +1534,10 @@
     } ]
   }, {
     "Name" : "DeletePredictor",
+    "AuthorizedActions" : [ {
+      "Name" : "DeletePredictor",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "delete_predictor",
@@ -1469,6 +1545,10 @@
     } ]
   }, {
     "Name" : "DeletePredictorBacktestExportJob",
+    "AuthorizedActions" : [ {
+      "Name" : "DeletePredictorBacktestExportJob",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "delete_predictor_backtest_export_job",
@@ -1476,6 +1556,10 @@
     } ]
   }, {
     "Name" : "DeleteResourceTree",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteResourceTree",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "delete_resource_tree",
@@ -1483,6 +1567,10 @@
     } ]
   }, {
     "Name" : "DeleteWhatIfAnalysis",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteWhatIfAnalysis",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "delete_what_if_analysis",
@@ -1504,6 +1592,10 @@
     } ]
   }, {
     "Name" : "DescribeAutoPredictor",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAutoPredictor",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "describe_auto_predictor",
@@ -1511,6 +1603,10 @@
     } ]
   }, {
     "Name" : "DescribeDataset",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeDataset",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "describe_dataset",
@@ -1518,6 +1614,10 @@
     } ]
   }, {
     "Name" : "DescribeDatasetGroup",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeDatasetGroup",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "describe_dataset_group",
@@ -1525,6 +1625,10 @@
     } ]
   }, {
     "Name" : "DescribeDatasetImportJob",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeDatasetImportJob",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "describe_dataset_import_job",
@@ -1532,6 +1636,10 @@
     } ]
   }, {
     "Name" : "DescribeExplainability",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeExplainability",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "describe_explainability",
@@ -1539,6 +1647,10 @@
     } ]
   }, {
     "Name" : "DescribeExplainabilityExport",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeExplainabilityExport",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "describe_explainability_export",
@@ -1546,6 +1658,10 @@
     } ]
   }, {
     "Name" : "DescribeForecast",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeForecast",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "describe_forecast",
@@ -1553,6 +1669,10 @@
     } ]
   }, {
     "Name" : "DescribeForecastExportJob",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeForecastExportJob",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "describe_forecast_export_job",
@@ -1560,6 +1680,10 @@
     } ]
   }, {
     "Name" : "DescribeMonitor",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeMonitor",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "describe_monitor",
@@ -1567,6 +1691,10 @@
     } ]
   }, {
     "Name" : "DescribePredictor",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribePredictor",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "describe_predictor",
@@ -1574,6 +1702,10 @@
     } ]
   }, {
     "Name" : "DescribePredictorBacktestExportJob",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribePredictorBacktestExportJob",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "describe_predictor_backtest_export_job",
@@ -1581,6 +1713,10 @@
     } ]
   }, {
     "Name" : "DescribeWhatIfAnalysis",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeWhatIfAnalysis",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "describe_what_if_analysis",
@@ -1602,6 +1738,10 @@
     } ]
   }, {
     "Name" : "GetAccuracyMetrics",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAccuracyMetrics",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "get_accuracy_metrics",
@@ -1609,6 +1749,10 @@
     } ]
   }, {
     "Name" : "ListDatasetGroups",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDatasetGroups",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "list_dataset_groups",
@@ -1616,6 +1760,10 @@
     } ]
   }, {
     "Name" : "ListDatasetImportJobs",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDatasetImportJobs",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "list_dataset_import_jobs",
@@ -1623,6 +1771,10 @@
     } ]
   }, {
     "Name" : "ListDatasets",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDatasets",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "list_datasets",
@@ -1630,6 +1782,10 @@
     } ]
   }, {
     "Name" : "ListExplainabilities",
+    "AuthorizedActions" : [ {
+      "Name" : "ListExplainabilities",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "list_explainabilities",
@@ -1637,6 +1793,10 @@
     } ]
   }, {
     "Name" : "ListExplainabilityExports",
+    "AuthorizedActions" : [ {
+      "Name" : "ListExplainabilityExports",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "list_explainability_exports",
@@ -1644,6 +1804,10 @@
     } ]
   }, {
     "Name" : "ListForecastExportJobs",
+    "AuthorizedActions" : [ {
+      "Name" : "ListForecastExportJobs",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "list_forecast_export_jobs",
@@ -1651,6 +1815,10 @@
     } ]
   }, {
     "Name" : "ListForecasts",
+    "AuthorizedActions" : [ {
+      "Name" : "ListForecasts",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "list_forecasts",
@@ -1658,6 +1826,10 @@
     } ]
   }, {
     "Name" : "ListMonitorEvaluations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListMonitorEvaluations",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "list_monitor_evaluations",
@@ -1665,6 +1837,10 @@
     } ]
   }, {
     "Name" : "ListMonitors",
+    "AuthorizedActions" : [ {
+      "Name" : "ListMonitors",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "list_monitors",
@@ -1672,6 +1848,10 @@
     } ]
   }, {
     "Name" : "ListPredictorBacktestExportJobs",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPredictorBacktestExportJobs",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "list_predictor_backtest_export_jobs",
@@ -1679,6 +1859,10 @@
     } ]
   }, {
     "Name" : "ListPredictors",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPredictors",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "list_predictors",
@@ -1686,6 +1870,10 @@
     } ]
   }, {
     "Name" : "ListTagsForResource",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTagsForResource",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "list_tags_for_resource",
@@ -1693,6 +1881,10 @@
     } ]
   }, {
     "Name" : "ListWhatIfAnalyses",
+    "AuthorizedActions" : [ {
+      "Name" : "ListWhatIfAnalyses",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "list_what_if_analyses",
@@ -1700,6 +1892,10 @@
     } ]
   }, {
     "Name" : "ListWhatIfForecastExports",
+    "AuthorizedActions" : [ {
+      "Name" : "ListWhatIfForecastExports",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "list_what_if_forecast_exports",
@@ -1707,6 +1903,10 @@
     } ]
   }, {
     "Name" : "ListWhatIfForecasts",
+    "AuthorizedActions" : [ {
+      "Name" : "ListWhatIfForecasts",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "list_what_if_forecasts",
@@ -1725,6 +1925,10 @@
     } ]
   }, {
     "Name" : "QueryWhatIfForecast",
+    "AuthorizedActions" : [ {
+      "Name" : "QueryWhatIfForecast",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecastquery",
       "Method" : "query_what_if_forecast",
@@ -1732,6 +1936,10 @@
     } ]
   }, {
     "Name" : "ResumeResource",
+    "AuthorizedActions" : [ {
+      "Name" : "ResumeResource",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "resume_resource",
@@ -1739,6 +1947,10 @@
     } ]
   }, {
     "Name" : "StopResource",
+    "AuthorizedActions" : [ {
+      "Name" : "StopResource",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "stop_resource",
@@ -1746,6 +1958,10 @@
     } ]
   }, {
     "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "tag_resource",
@@ -1753,6 +1969,10 @@
     } ]
   }, {
     "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "untag_resource",
@@ -1760,6 +1980,10 @@
     } ]
   }, {
     "Name" : "UpdateDatasetGroup",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateDatasetGroup",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "update_dataset_group",

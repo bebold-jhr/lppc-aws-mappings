@@ -358,6 +358,10 @@
     } ]
   }, {
     "Name" : "DeleteSupplementalTaxRegistration",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteSupplementalTaxRegistration",
+      "Service" : "tax"
+    } ],
     "SDK" : [ {
       "Name" : "taxsettings",
       "Method" : "delete_supplemental_tax_registration",
@@ -453,6 +457,10 @@
     } ]
   }, {
     "Name" : "PutSupplementalTaxRegistration",
+    "AuthorizedActions" : [ {
+      "Name" : "PutSupplementalTaxRegistration",
+      "Service" : "tax"
+    } ],
     "SDK" : [ {
       "Name" : "taxsettings",
       "Method" : "put_supplemental_tax_registration",

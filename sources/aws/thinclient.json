@@ -348,6 +348,10 @@
     } ]
   }, {
     "Name" : "DeleteDevice",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteDevice",
+      "Service" : "thinclient"
+    } ],
     "SDK" : [ {
       "Name" : "workspaces-thin-client",
       "Method" : "delete_device",
@@ -366,6 +370,10 @@
     } ]
   }, {
     "Name" : "DeregisterDevice",
+    "AuthorizedActions" : [ {
+      "Name" : "DeregisterDevice",
+      "Service" : "thinclient"
+    } ],
     "SDK" : [ {
       "Name" : "workspaces-thin-client",
       "Method" : "deregister_device",
@@ -450,6 +458,10 @@
     } ]
   }, {
     "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "thinclient"
+    } ],
     "SDK" : [ {
       "Name" : "workspaces-thin-client",
       "Method" : "tag_resource",
@@ -457,6 +469,10 @@
     } ]
   }, {
     "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "thinclient"
+    } ],
     "SDK" : [ {
       "Name" : "workspaces-thin-client",
       "Method" : "untag_resource",
@@ -464,6 +480,10 @@
     } ]
   }, {
     "Name" : "UpdateDevice",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateDevice",
+      "Service" : "thinclient"
+    } ],
     "SDK" : [ {
       "Name" : "workspaces-thin-client",
       "Method" : "update_device",
@@ -478,6 +498,10 @@
     } ]
   }, {
     "Name" : "UpdateSoftwareSet",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateSoftwareSet",
+      "Service" : "thinclient"
+    } ],
     "SDK" : [ {
       "Name" : "workspaces-thin-client",
       "Method" : "update_software_set",

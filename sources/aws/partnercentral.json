@@ -2039,6 +2039,10 @@
     } ]
   }, {
     "Name" : "CancelChannelHandshake",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelChannelHandshake",
+      "Service" : "partnercentral"
+    } ],
     "SDK" : [ {
       "Name" : "partnercentral-channel",
       "Method" : "cancel_channel_handshake",
@@ -2068,6 +2072,10 @@
     } ]
   }, {
     "Name" : "CancelProfileUpdateTask",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelProfileUpdateTask",
+      "Service" : "partnercentral"
+    } ],
     "SDK" : [ {
       "Name" : "partnercentral-account",
       "Method" : "cancel_profile_update_task",
@@ -2245,6 +2253,10 @@
     } ]
   }, {
     "Name" : "DeleteProgramManagementAccount",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteProgramManagementAccount",
+      "Service" : "partnercentral"
+    } ],
     "SDK" : [ {
       "Name" : "partnercentral-channel",
       "Method" : "delete_program_management_account",
@@ -2252,6 +2264,10 @@
     } ]
   }, {
     "Name" : "DeleteRelationship",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteRelationship",
+      "Service" : "partnercentral"
+    } ],
     "SDK" : [ {
       "Name" : "partnercentral-channel",
       "Method" : "delete_relationship",
@@ -2270,6 +2286,10 @@
     } ]
   }, {
     "Name" : "DisassociateAwsTrainingCertificationEmailDomain",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateAwsTrainingCertificationEmailDomain",
+      "Service" : "partnercentral"
+    } ],
     "SDK" : [ {
       "Name" : "partnercentral-account",
       "Method" : "disassociate_aws_training_certification_email_domain",
@@ -2761,6 +2781,10 @@
     } ]
   }, {
     "Name" : "PutProfileVisibility",
+    "AuthorizedActions" : [ {
+      "Name" : "PutProfileVisibility",
+      "Service" : "partnercentral"
+    } ],
     "SDK" : [ {
       "Name" : "partnercentral-account",
       "Method" : "put_profile_visibility",
@@ -2796,6 +2820,10 @@
     } ]
   }, {
     "Name" : "RejectChannelHandshake",
+    "AuthorizedActions" : [ {
+      "Name" : "RejectChannelHandshake",
+      "Service" : "partnercentral"
+    } ],
     "SDK" : [ {
       "Name" : "partnercentral-channel",
       "Method" : "reject_channel_handshake",
@@ -2999,6 +3027,10 @@
     } ]
   }, {
     "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "partnercentral"
+    } ],
     "SDK" : [ {
       "Name" : "partnercentral-account",
       "Method" : "untag_resource",
@@ -3058,6 +3090,10 @@
     } ]
   }, {
     "Name" : "UpdateProgramManagementAccount",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateProgramManagementAccount",
+      "Service" : "partnercentral"
+    } ],
     "SDK" : [ {
       "Name" : "partnercentral-channel",
       "Method" : "update_program_management_account",
@@ -3065,6 +3101,10 @@
     } ]
   }, {
     "Name" : "UpdateRelationship",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateRelationship",
+      "Service" : "partnercentral"
+    } ],
     "SDK" : [ {
       "Name" : "partnercentral-channel",
       "Method" : "update_relationship",

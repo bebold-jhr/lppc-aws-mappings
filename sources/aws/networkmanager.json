@@ -1777,6 +1777,10 @@
     } ]
   }, {
     "Name" : "AssociateConnectPeer",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateConnectPeer",
+      "Service" : "networkmanager"
+    } ],
     "SDK" : [ {
       "Name" : "networkmanager",
       "Method" : "associate_connect_peer",
@@ -2063,6 +2067,10 @@
     } ]
   }, {
     "Name" : "DeleteCoreNetworkPolicyVersion",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteCoreNetworkPolicyVersion",
+      "Service" : "networkmanager"
+    } ],
     "SDK" : [ {
       "Name" : "networkmanager",
       "Method" : "delete_core_network_policy_version",
@@ -2631,6 +2639,10 @@
     } ]
   }, {
     "Name" : "PutAttachmentRoutingPolicyLabel",
+    "AuthorizedActions" : [ {
+      "Name" : "PutAttachmentRoutingPolicyLabel",
+      "Service" : "networkmanager"
+    } ],
     "SDK" : [ {
       "Name" : "networkmanager",
       "Method" : "put_attachment_routing_policy_label",
@@ -2682,6 +2694,10 @@
     } ]
   }, {
     "Name" : "RemoveAttachmentRoutingPolicyLabel",
+    "AuthorizedActions" : [ {
+      "Name" : "RemoveAttachmentRoutingPolicyLabel",
+      "Service" : "networkmanager"
+    } ],
     "SDK" : [ {
       "Name" : "networkmanager",
       "Method" : "remove_attachment_routing_policy_label",
@@ -2689,6 +2705,10 @@
     } ]
   }, {
     "Name" : "RestoreCoreNetworkPolicyVersion",
+    "AuthorizedActions" : [ {
+      "Name" : "RestoreCoreNetworkPolicyVersion",
+      "Service" : "networkmanager"
+    } ],
     "SDK" : [ {
       "Name" : "networkmanager",
       "Method" : "restore_core_network_policy_version",
@@ -2740,6 +2760,10 @@
     } ]
   }, {
     "Name" : "UpdateConnection",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateConnection",
+      "Service" : "networkmanager"
+    } ],
     "SDK" : [ {
       "Name" : "networkmanager",
       "Method" : "update_connection",

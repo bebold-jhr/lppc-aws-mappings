@@ -15,48 +15,6 @@
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "CreateEngagement",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "CreateEngagementAttachment",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "CreateEngagementCommunication",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
     "Name" : "DeleteNotificationConfigurationForDelegatedAdmin",
     "Annotations" : {
       "Properties" : {
@@ -352,48 +310,6 @@
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetEngagement",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "GetEngagementAttachment",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "GetEngagementType",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
     "Name" : "GetOrganizationRecommendation",
     "Annotations" : {
       "Properties" : {
@@ -457,48 +373,6 @@
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "ListEngagementCommunications",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "ListEngagementTypes",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "ListEngagements",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false
@@ -639,34 +513,6 @@
     }
   }, {
     "Name" : "SetOrganizationAccess",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "UpdateEngagement",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "UpdateEngagementStatus",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -875,6 +721,10 @@
     } ]
   }, {
     "Name" : "UpdateOrganizationRecommendationLifecycle",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateOrganizationRecommendationLifecycle",
+      "Service" : "trustedadvisor"
+    } ],
     "SDK" : [ {
       "Name" : "trustedadvisor",
       "Method" : "update_organization_recommendation_lifecycle",
@@ -882,6 +732,10 @@
     } ]
   }, {
     "Name" : "UpdateRecommendationLifecycle",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateRecommendationLifecycle",
+      "Service" : "trustedadvisor"
+    } ],
     "SDK" : [ {
       "Name" : "trustedadvisor",
       "Method" : "update_recommendation_lifecycle",

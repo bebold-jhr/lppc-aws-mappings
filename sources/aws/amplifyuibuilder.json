@@ -593,6 +593,10 @@
     } ]
   }, {
     "Name" : "ExchangeCodeForToken",
+    "AuthorizedActions" : [ {
+      "Name" : "ExchangeCodeForToken",
+      "Service" : "amplifyuibuilder"
+    } ],
     "SDK" : [ {
       "Name" : "amplifyuibuilder",
       "Method" : "exchange_code_for_token",
@@ -743,6 +747,10 @@
     } ]
   }, {
     "Name" : "PutMetadataFlag",
+    "AuthorizedActions" : [ {
+      "Name" : "PutMetadataFlag",
+      "Service" : "amplifyuibuilder"
+    } ],
     "SDK" : [ {
       "Name" : "amplifyuibuilder",
       "Method" : "put_metadata_flag",
@@ -750,6 +758,10 @@
     } ]
   }, {
     "Name" : "RefreshToken",
+    "AuthorizedActions" : [ {
+      "Name" : "RefreshToken",
+      "Service" : "amplifyuibuilder"
+    } ],
     "SDK" : [ {
       "Name" : "amplifyuibuilder",
       "Method" : "refresh_token",

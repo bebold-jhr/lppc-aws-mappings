@@ -764,6 +764,10 @@
     } ]
   }, {
     "Name" : "DisableNotificationsAccessForOrganization",
+    "AuthorizedActions" : [ {
+      "Name" : "DisableNotificationsAccessForOrganization",
+      "Service" : "notifications"
+    } ],
     "SDK" : [ {
       "Name" : "notifications",
       "Method" : "disable_notifications_access_for_organization",
@@ -1046,6 +1050,10 @@
     } ]
   }, {
     "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "notifications"
+    } ],
     "SDK" : [ {
       "Name" : "notifications",
       "Method" : "tag_resource",
@@ -1053,6 +1061,10 @@
     } ]
   }, {
     "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "notifications"
+    } ],
     "SDK" : [ {
       "Name" : "notifications",
       "Method" : "untag_resource",

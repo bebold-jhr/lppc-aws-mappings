@@ -1861,6 +1861,10 @@
     } ]
   }, {
     "Name" : "AcceptShare",
+    "AuthorizedActions" : [ {
+      "Name" : "AcceptShare",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "accept_share",
@@ -1901,6 +1905,10 @@
     } ]
   }, {
     "Name" : "CancelRunBatch",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelRunBatch",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "cancel_run_batch",
@@ -2129,6 +2137,10 @@
     } ]
   }, {
     "Name" : "DeleteBatch",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteBatch",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "delete_batch",
@@ -2180,6 +2192,10 @@
     } ]
   }, {
     "Name" : "DeleteRunBatch",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteRunBatch",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "delete_run_batch",
@@ -2187,6 +2203,10 @@
     } ]
   }, {
     "Name" : "DeleteRunCache",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteRunCache",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "delete_run_cache",
@@ -3032,6 +3052,10 @@
     } ]
   }, {
     "Name" : "UpdateRunCache",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateRunCache",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "update_run_cache",
@@ -3072,6 +3096,10 @@
     } ]
   }, {
     "Name" : "UpdateWorkflow",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateWorkflow",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "update_workflow",
@@ -3079,6 +3107,10 @@
     } ]
   }, {
     "Name" : "UpdateWorkflowVersion",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateWorkflowVersion",
+      "Service" : "omics"
+    } ],
     "SDK" : [ {
       "Name" : "omics",
       "Method" : "update_workflow_version",

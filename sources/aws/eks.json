@@ -1539,6 +1539,10 @@
     } ]
   }, {
     "Name" : "DeleteEksAnywhereSubscription",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteEksAnywhereSubscription",
+      "Service" : "eks"
+    } ],
     "SDK" : [ {
       "Name" : "eks",
       "Method" : "delete_eks_anywhere_subscription",

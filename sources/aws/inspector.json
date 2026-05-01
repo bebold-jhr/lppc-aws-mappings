@@ -1087,6 +1087,10 @@
     } ]
   }, {
     "Name" : "UnsubscribeFromEvent",
+    "AuthorizedActions" : [ {
+      "Name" : "UnsubscribeFromEvent",
+      "Service" : "inspector"
+    } ],
     "SDK" : [ {
       "Name" : "inspector",
       "Method" : "unsubscribe_from_event",

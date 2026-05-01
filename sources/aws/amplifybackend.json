@@ -607,6 +607,10 @@
   } ],
   "Operations" : [ {
     "Name" : "CloneBackend",
+    "AuthorizedActions" : [ {
+      "Name" : "CloneBackend",
+      "Service" : "amplifybackend"
+    } ],
     "SDK" : [ {
       "Name" : "amplifybackend",
       "Method" : "clone_backend",
@@ -658,6 +662,10 @@
     } ]
   }, {
     "Name" : "CreateBackendStorage",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateBackendStorage",
+      "Service" : "amplifybackend"
+    } ],
     "SDK" : [ {
       "Name" : "amplifybackend",
       "Method" : "create_backend_storage",
@@ -830,6 +838,10 @@
     } ]
   }, {
     "Name" : "ImportBackendStorage",
+    "AuthorizedActions" : [ {
+      "Name" : "ImportBackendStorage",
+      "Service" : "amplifybackend"
+    } ],
     "SDK" : [ {
       "Name" : "amplifybackend",
       "Method" : "import_backend_storage",
@@ -925,6 +937,10 @@
     } ]
   }, {
     "Name" : "UpdateBackendStorage",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateBackendStorage",
+      "Service" : "amplifybackend"
+    } ],
     "SDK" : [ {
       "Name" : "amplifybackend",
       "Method" : "update_backend_storage",

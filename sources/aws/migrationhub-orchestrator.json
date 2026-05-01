@@ -838,6 +838,10 @@
     } ]
   }, {
     "Name" : "StartWorkflow",
+    "AuthorizedActions" : [ {
+      "Name" : "StartWorkflow",
+      "Service" : "migrationhub-orchestrator"
+    } ],
     "SDK" : [ {
       "Name" : "migrationhuborchestrator",
       "Method" : "start_workflow",
@@ -856,6 +860,10 @@
     } ]
   }, {
     "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "migrationhub-orchestrator"
+    } ],
     "SDK" : [ {
       "Name" : "migrationhuborchestrator",
       "Method" : "tag_resource",
@@ -863,6 +871,10 @@
     } ]
   }, {
     "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "migrationhub-orchestrator"
+    } ],
     "SDK" : [ {
       "Name" : "migrationhuborchestrator",
       "Method" : "untag_resource",
@@ -899,6 +911,10 @@
     } ]
   }, {
     "Name" : "UpdateWorkflowStepGroup",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateWorkflowStepGroup",
+      "Service" : "migrationhub-orchestrator"
+    } ],
     "SDK" : [ {
       "Name" : "migrationhuborchestrator",
       "Method" : "update_workflow_step_group",

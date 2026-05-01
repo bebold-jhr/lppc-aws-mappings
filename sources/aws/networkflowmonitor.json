@@ -558,6 +558,10 @@
     } ]
   }, {
     "Name" : "GetQueryStatusWorkloadInsightsTopContributors",
+    "AuthorizedActions" : [ {
+      "Name" : "GetQueryStatusWorkloadInsightsTopContributors",
+      "Service" : "networkflowmonitor"
+    } ],
     "SDK" : [ {
       "Name" : "networkflowmonitor",
       "Method" : "get_query_status_workload_insights_top_contributors",
@@ -565,6 +569,10 @@
     } ]
   }, {
     "Name" : "GetQueryStatusWorkloadInsightsTopContributorsData",
+    "AuthorizedActions" : [ {
+      "Name" : "GetQueryStatusWorkloadInsightsTopContributorsData",
+      "Service" : "networkflowmonitor"
+    } ],
     "SDK" : [ {
       "Name" : "networkflowmonitor",
       "Method" : "get_query_status_workload_insights_top_contributors_data",
@@ -605,6 +613,10 @@
     } ]
   }, {
     "Name" : "ListTagsForResource",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTagsForResource",
+      "Service" : "networkflowmonitor"
+    } ],
     "SDK" : [ {
       "Name" : "networkflowmonitor",
       "Method" : "list_tags_for_resource",
@@ -678,6 +690,10 @@
     } ]
   }, {
     "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "networkflowmonitor"
+    } ],
     "SDK" : [ {
       "Name" : "networkflowmonitor",
       "Method" : "tag_resource",
@@ -685,6 +701,10 @@
     } ]
   }, {
     "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "networkflowmonitor"
+    } ],
     "SDK" : [ {
       "Name" : "networkflowmonitor",
       "Method" : "untag_resource",
@@ -692,6 +712,10 @@
     } ]
   }, {
     "Name" : "UpdateMonitor",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateMonitor",
+      "Service" : "networkflowmonitor"
+    } ],
     "SDK" : [ {
       "Name" : "networkflowmonitor",
       "Method" : "update_monitor",

@@ -478,6 +478,10 @@
     } ]
   }, {
     "Name" : "ListTagsForResource",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTagsForResource",
+      "Service" : "sagemaker-geospatial"
+    } ],
     "SDK" : [ {
       "Name" : "sagemaker-geospatial",
       "Method" : "list_tags_for_resource",
@@ -569,6 +573,10 @@
     } ]
   }, {
     "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "sagemaker-geospatial"
+    } ],
     "SDK" : [ {
       "Name" : "sagemaker-geospatial",
       "Method" : "tag_resource",

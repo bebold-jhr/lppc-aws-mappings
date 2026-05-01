@@ -120,6 +120,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreatePrivateConnection",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "private-connection"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteAgentSpace",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
@@ -155,6 +173,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeletePrivateConnection",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "private-connection"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeregisterService",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
@@ -167,6 +203,24 @@
     },
     "Resources" : [ {
       "Name" : "service"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribePrivateConnection",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "private-connection"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -598,6 +652,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListPrivateConnections",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListRecommendations",
     "Annotations" : {
       "Properties" : {
@@ -641,6 +709,9 @@
     },
     "Resources" : [ {
       "Name" : "agentspace",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+    }, {
+      "Name" : "private-connection",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
     }, {
       "Name" : "service",
@@ -733,6 +804,9 @@
       "Name" : "agentspace",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
     }, {
+      "Name" : "private-connection",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+    }, {
       "Name" : "service",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
     } ],
@@ -753,6 +827,9 @@
     },
     "Resources" : [ {
       "Name" : "agentspace",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+    }, {
+      "Name" : "private-connection",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
     }, {
       "Name" : "service",
@@ -868,6 +945,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdatePrivateConnectionCertificate",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "private-connection"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateRecommendation",
     "Annotations" : {
       "Properties" : {
@@ -959,6 +1054,13 @@
     } ]
   }, {
     "Name" : "CreatePrivateConnection",
+    "AuthorizedActions" : [ {
+      "Name" : "CreatePrivateConnection",
+      "Service" : "aidevops"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "aidevops"
+    } ],
     "SDK" : [ {
       "Name" : "devops-agent",
       "Method" : "create_private_connection",
@@ -977,6 +1079,10 @@
     } ]
   }, {
     "Name" : "DeletePrivateConnection",
+    "AuthorizedActions" : [ {
+      "Name" : "DeletePrivateConnection",
+      "Service" : "aidevops"
+    } ],
     "SDK" : [ {
       "Name" : "devops-agent",
       "Method" : "delete_private_connection",
@@ -995,6 +1101,10 @@
     } ]
   }, {
     "Name" : "DescribePrivateConnection",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribePrivateConnection",
+      "Service" : "aidevops"
+    } ],
     "SDK" : [ {
       "Name" : "devops-agent",
       "Method" : "describe_private_connection",
@@ -1170,6 +1280,10 @@
     } ]
   }, {
     "Name" : "ListPrivateConnections",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPrivateConnections",
+      "Service" : "aidevops"
+    } ],
     "SDK" : [ {
       "Name" : "devops-agent",
       "Method" : "list_private_connections",
@@ -1315,6 +1429,10 @@
     } ]
   }, {
     "Name" : "UpdatePrivateConnectionCertificate",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdatePrivateConnectionCertificate",
+      "Service" : "aidevops"
+    } ],
     "SDK" : [ {
       "Name" : "devops-agent",
       "Method" : "update_private_connection_certificate",
@@ -1346,6 +1464,10 @@
   }, {
     "Name" : "associations",
     "ARNFormats" : [ "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}/associations/${AssociationId}" ]
+  }, {
+    "Name" : "private-connection",
+    "ARNFormats" : [ "arn:${Partition}:aidevops:${Region}:${Account}:private-connection/${Name}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "service",
     "ARNFormats" : [ "arn:${Partition}:aidevops:${Region}:${Account}:service/${ServiceId}" ],

@@ -1392,6 +1392,10 @@
     } ]
   }, {
     "Name" : "CancelLifecycleExecution",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelLifecycleExecution",
+      "Service" : "imagebuilder"
+    } ],
     "SDK" : [ {
       "Name" : "imagebuilder",
       "Method" : "cancel_lifecycle_execution",
@@ -2203,6 +2207,10 @@
     } ]
   }, {
     "Name" : "PutContainerRecipePolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "PutContainerRecipePolicy",
+      "Service" : "imagebuilder"
+    } ],
     "SDK" : [ {
       "Name" : "imagebuilder",
       "Method" : "put_container_recipe_policy",
@@ -2221,6 +2229,10 @@
     } ]
   }, {
     "Name" : "PutImageRecipePolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "PutImageRecipePolicy",
+      "Service" : "imagebuilder"
+    } ],
     "SDK" : [ {
       "Name" : "imagebuilder",
       "Method" : "put_image_recipe_policy",

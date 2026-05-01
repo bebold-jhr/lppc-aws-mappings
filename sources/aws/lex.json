@@ -2650,6 +2650,10 @@
     } ]
   }, {
     "Name" : "BatchUpdateCustomVocabularyItem",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchUpdateCustomVocabularyItem",
+      "Service" : "lex"
+    } ],
     "SDK" : [ {
       "Name" : "lexv2-models",
       "Method" : "batch_update_custom_vocabulary_item",
@@ -2821,6 +2825,10 @@
     } ]
   }, {
     "Name" : "CreateSlotTypeVersion",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateSlotTypeVersion",
+      "Service" : "lex"
+    } ],
     "SDK" : [ {
       "Name" : "lex-models",
       "Method" : "create_slot_type_version",
@@ -2910,6 +2918,10 @@
     } ]
   }, {
     "Name" : "DeleteBotAnalyzerRecommendation",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteBotAnalyzerRecommendation",
+      "Service" : "lex"
+    } ],
     "SDK" : [ {
       "Name" : "lexv2-models",
       "Method" : "delete_bot_analyzer_recommendation",
@@ -2917,6 +2929,10 @@
     } ]
   }, {
     "Name" : "DeleteBotChannelAssociation",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteBotChannelAssociation",
+      "Service" : "lex"
+    } ],
     "SDK" : [ {
       "Name" : "lex-models",
       "Method" : "delete_bot_channel_association",
@@ -4125,6 +4141,10 @@
     } ]
   }, {
     "Name" : "StartBotAnalyzer",
+    "AuthorizedActions" : [ {
+      "Name" : "StartBotAnalyzer",
+      "Service" : "lex"
+    } ],
     "SDK" : [ {
       "Name" : "lexv2-models",
       "Method" : "start_bot_analyzer",
@@ -4302,6 +4322,10 @@
     } ]
   }, {
     "Name" : "StopBotAnalyzer",
+    "AuthorizedActions" : [ {
+      "Name" : "StopBotAnalyzer",
+      "Service" : "lex"
+    } ],
     "SDK" : [ {
       "Name" : "lexv2-models",
       "Method" : "stop_bot_analyzer",

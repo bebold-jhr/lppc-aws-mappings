@@ -538,6 +538,10 @@
     } ]
   }, {
     "Name" : "CreateEvaluation",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateEvaluation",
+      "Service" : "machinelearning"
+    } ],
     "SDK" : [ {
       "Name" : "machinelearning",
       "Method" : "create_evaluation",
@@ -545,6 +549,10 @@
     } ]
   }, {
     "Name" : "CreateMLModel",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateMLModel",
+      "Service" : "machinelearning"
+    } ],
     "SDK" : [ {
       "Name" : "machinelearning",
       "Method" : "create_ml_model",
@@ -552,6 +560,10 @@
     } ]
   }, {
     "Name" : "CreateRealtimeEndpoint",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateRealtimeEndpoint",
+      "Service" : "machinelearning"
+    } ],
     "SDK" : [ {
       "Name" : "machinelearning",
       "Method" : "create_realtime_endpoint",
@@ -559,6 +571,10 @@
     } ]
   }, {
     "Name" : "DeleteBatchPrediction",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteBatchPrediction",
+      "Service" : "machinelearning"
+    } ],
     "SDK" : [ {
       "Name" : "machinelearning",
       "Method" : "delete_batch_prediction",
@@ -566,6 +582,10 @@
     } ]
   }, {
     "Name" : "DeleteDataSource",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteDataSource",
+      "Service" : "machinelearning"
+    } ],
     "SDK" : [ {
       "Name" : "machinelearning",
       "Method" : "delete_data_source",
@@ -573,6 +593,10 @@
     } ]
   }, {
     "Name" : "DeleteEvaluation",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteEvaluation",
+      "Service" : "machinelearning"
+    } ],
     "SDK" : [ {
       "Name" : "machinelearning",
       "Method" : "delete_evaluation",
@@ -591,6 +615,10 @@
     } ]
   }, {
     "Name" : "DeleteRealtimeEndpoint",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteRealtimeEndpoint",
+      "Service" : "machinelearning"
+    } ],
     "SDK" : [ {
       "Name" : "machinelearning",
       "Method" : "delete_realtime_endpoint",

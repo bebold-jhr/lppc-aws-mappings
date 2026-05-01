@@ -873,7 +873,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "PurchaseOption"
+      "Name" : "AllPurchaseOptions"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1065,7 +1065,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Listing"
+      "Name" : "AllListings"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1082,7 +1082,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Listing"
+      "Name" : "AllListings"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1350,6 +1350,10 @@
     } ]
   }, {
     "Name" : "CancelAgreementCancellationRequest",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelAgreementCancellationRequest",
+      "Service" : "aws-marketplace"
+    } ],
     "SDK" : [ {
       "Name" : "marketplace-agreement",
       "Method" : "cancel_agreement_cancellation_request",
@@ -1845,6 +1849,12 @@
     } ]
   } ],
   "Resources" : [ {
+    "Name" : "AllListings",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/listing/*" ]
+  }, {
+    "Name" : "AllPurchaseOptions",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/purchaseOption/*" ]
+  }, {
     "Name" : "Assessment",
     "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}::${Catalog}/Assessment/${ResourceId}" ]
   }, {

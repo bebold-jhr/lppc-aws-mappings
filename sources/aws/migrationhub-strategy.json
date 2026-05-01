@@ -624,6 +624,10 @@
     } ]
   }, {
     "Name" : "StartImportFileTask",
+    "AuthorizedActions" : [ {
+      "Name" : "StartImportFileTask",
+      "Service" : "migrationhub-strategy"
+    } ],
     "SDK" : [ {
       "Name" : "migrationhubstrategy",
       "Method" : "start_import_file_task",
@@ -660,6 +664,10 @@
     } ]
   }, {
     "Name" : "UpdateServerConfig",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateServerConfig",
+      "Service" : "migrationhub-strategy"
+    } ],
     "SDK" : [ {
       "Name" : "migrationhubstrategy",
       "Method" : "update_server_config",

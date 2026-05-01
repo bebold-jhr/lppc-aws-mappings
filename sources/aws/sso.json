@@ -2245,6 +2245,9 @@
     "AuthorizedActions" : [ {
       "Name" : "AttachManagedPolicyToPermissionSet",
       "Service" : "sso"
+    }, {
+      "Name" : "PutPermissionsPolicy",
+      "Service" : "sso"
     } ],
     "SDK" : [ {
       "Name" : "sso-admin",
@@ -2254,7 +2257,34 @@
   }, {
     "Name" : "CreateAccountAssignment",
     "AuthorizedActions" : [ {
+      "Name" : "AssociateProfile",
+      "Service" : "sso"
+    }, {
       "Name" : "CreateAccountAssignment",
+      "Service" : "sso"
+    }, {
+      "Name" : "CreateApplicationInstance",
+      "Service" : "sso"
+    }, {
+      "Name" : "CreateProfile",
+      "Service" : "sso"
+    }, {
+      "Name" : "CreateTrust",
+      "Service" : "sso"
+    }, {
+      "Name" : "GetApplicationInstance",
+      "Service" : "sso"
+    }, {
+      "Name" : "GetProfile",
+      "Service" : "sso"
+    }, {
+      "Name" : "GetTrust",
+      "Service" : "sso"
+    }, {
+      "Name" : "UpdateProfile",
+      "Service" : "sso"
+    }, {
+      "Name" : "UpdateTrust",
       "Service" : "sso"
     } ],
     "SDK" : [ {
@@ -2356,6 +2386,9 @@
     "Name" : "DeleteAccountAssignment",
     "AuthorizedActions" : [ {
       "Name" : "DeleteAccountAssignment",
+      "Service" : "sso"
+    }, {
+      "Name" : "DeleteProfile",
       "Service" : "sso"
     } ],
     "SDK" : [ {
@@ -2593,6 +2626,9 @@
     "AuthorizedActions" : [ {
       "Name" : "DescribePermissionSet",
       "Service" : "sso"
+    }, {
+      "Name" : "GetPermissionSet",
+      "Service" : "sso"
     } ],
     "SDK" : [ {
       "Name" : "sso-admin",
@@ -2765,6 +2801,9 @@
     "AuthorizedActions" : [ {
       "Name" : "ListAccountAssignments",
       "Service" : "sso"
+    }, {
+      "Name" : "ListProfileAssociations",
+      "Service" : "sso"
     } ],
     "SDK" : [ {
       "Name" : "sso-admin",
@@ -2799,7 +2838,13 @@
   }, {
     "Name" : "ListAccountsForProvisionedPermissionSet",
     "AuthorizedActions" : [ {
+      "Name" : "GetApplicationInstance",
+      "Service" : "sso"
+    }, {
       "Name" : "ListAccountsForProvisionedPermissionSet",
+      "Service" : "sso"
+    }, {
+      "Name" : "ListApplicationInstances",
       "Service" : "sso"
     } ],
     "SDK" : [ {
@@ -2960,7 +3005,13 @@
   }, {
     "Name" : "ListPermissionSetsProvisionedToAccount",
     "AuthorizedActions" : [ {
+      "Name" : "GetProfile",
+      "Service" : "sso"
+    }, {
       "Name" : "ListPermissionSetsProvisionedToAccount",
+      "Service" : "sso"
+    }, {
+      "Name" : "ListProfiles",
       "Service" : "sso"
     } ],
     "SDK" : [ {
@@ -3085,6 +3136,9 @@
     "AuthorizedActions" : [ {
       "Name" : "PutInlinePolicyToPermissionSet",
       "Service" : "sso"
+    }, {
+      "Name" : "PutPermissionsPolicy",
+      "Service" : "sso"
     } ],
     "SDK" : [ {
       "Name" : "sso-admin",
@@ -3193,6 +3247,10 @@
     } ]
   }, {
     "Name" : "UpdateTrustedTokenIssuer",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateTrustedTokenIssuer",
+      "Service" : "sso"
+    } ],
     "SDK" : [ {
       "Name" : "sso-admin",
       "Method" : "update_trusted_token_issuer",

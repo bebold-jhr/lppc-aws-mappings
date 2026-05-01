@@ -1056,6 +1056,10 @@
     } ]
   }, {
     "Name" : "BatchDisassociateAssessmentReportEvidence",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchDisassociateAssessmentReportEvidence",
+      "Service" : "auditmanager"
+    } ],
     "SDK" : [ {
       "Name" : "auditmanager",
       "Method" : "batch_disassociate_assessment_report_evidence",
@@ -1556,6 +1560,10 @@
     } ]
   }, {
     "Name" : "RegisterOrganizationAdminAccount",
+    "AuthorizedActions" : [ {
+      "Name" : "RegisterOrganizationAdminAccount",
+      "Service" : "auditmanager"
+    } ],
     "SDK" : [ {
       "Name" : "auditmanager",
       "Method" : "register_organization_admin_account",
@@ -1563,6 +1571,10 @@
     } ]
   }, {
     "Name" : "StartAssessmentFrameworkShare",
+    "AuthorizedActions" : [ {
+      "Name" : "StartAssessmentFrameworkShare",
+      "Service" : "auditmanager"
+    } ],
     "SDK" : [ {
       "Name" : "auditmanager",
       "Method" : "start_assessment_framework_share",
@@ -1680,6 +1692,10 @@
     } ]
   }, {
     "Name" : "ValidateAssessmentReportIntegrity",
+    "AuthorizedActions" : [ {
+      "Name" : "ValidateAssessmentReportIntegrity",
+      "Service" : "auditmanager"
+    } ],
     "SDK" : [ {
       "Name" : "auditmanager",
       "Method" : "validate_assessment_report_integrity",

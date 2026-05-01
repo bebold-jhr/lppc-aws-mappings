@@ -940,6 +940,10 @@
     } ]
   }, {
     "Name" : "UpdateDataLakeDataset",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateDataLakeDataset",
+      "Service" : "scn"
+    } ],
     "SDK" : [ {
       "Name" : "supplychain",
       "Method" : "update_data_lake_dataset",

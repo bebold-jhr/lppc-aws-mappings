@@ -899,6 +899,10 @@
   } ],
   "Operations" : [ {
     "Name" : "AcceptMarketplaceRegistration",
+    "AuthorizedActions" : [ {
+      "Name" : "AcceptMarketplaceRegistration",
+      "Service" : "odb"
+    } ],
     "SDK" : [ {
       "Name" : "odb",
       "Method" : "accept_marketplace_registration",

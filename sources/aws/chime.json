@@ -5210,6 +5210,10 @@
     } ]
   }, {
     "Name" : "AssociatePhoneNumberWithUser",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociatePhoneNumberWithUser",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "associate_phone_number_with_user",
@@ -5239,6 +5243,10 @@
     } ]
   }, {
     "Name" : "AssociateSigninDelegateGroupsWithAccount",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateSigninDelegateGroupsWithAccount",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "associate_signin_delegate_groups_with_account",
@@ -5301,6 +5309,10 @@
     } ]
   }, {
     "Name" : "BatchUnsuspendUser",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchUnsuspendUser",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "batch_unsuspend_user",
@@ -5747,6 +5759,10 @@
     } ]
   }, {
     "Name" : "CreateUser",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateUser",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "create_user",
@@ -5785,6 +5801,10 @@
     } ]
   }, {
     "Name" : "CreateVoiceProfile",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateVoiceProfile",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime-sdk-voice",
       "Method" : "create_voice_profile",
@@ -6261,6 +6281,10 @@
     } ]
   }, {
     "Name" : "DescribeAppInstanceUserEndpoint",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAppInstanceUserEndpoint",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime-sdk-identity",
       "Method" : "describe_app_instance_user_endpoint",
@@ -6356,6 +6380,10 @@
     } ]
   }, {
     "Name" : "DisassociatePhoneNumberFromUser",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociatePhoneNumberFromUser",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "disassociate_phone_number_from_user",
@@ -6385,6 +6413,10 @@
     } ]
   }, {
     "Name" : "DisassociateSigninDelegateGroupsFromAccount",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateSigninDelegateGroupsFromAccount",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "disassociate_signin_delegate_groups_from_account",
@@ -6889,6 +6921,10 @@
     } ]
   }, {
     "Name" : "InviteUsers",
+    "AuthorizedActions" : [ {
+      "Name" : "InviteUsers",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "invite_users",
@@ -7957,6 +7993,10 @@
     } ]
   }, {
     "Name" : "UpdateMediaPipelineKinesisVideoStreamPool",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateMediaPipelineKinesisVideoStreamPool",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime-sdk-media-pipelines",
       "Method" : "update_media_pipeline_kinesis_video_stream_pool",
@@ -8060,6 +8100,10 @@
     } ]
   }, {
     "Name" : "UpdateUser",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateUser",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "update_user",

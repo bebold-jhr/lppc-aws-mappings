@@ -589,6 +589,10 @@
     } ]
   }, {
     "Name" : "DescribeTrustedAdvisorCheckRefreshStatuses",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeTrustedAdvisorCheckRefreshStatuses",
+      "Service" : "support"
+    } ],
     "SDK" : [ {
       "Name" : "support",
       "Method" : "describe_trusted_advisor_check_refresh_statuses",
@@ -617,6 +621,10 @@
     } ]
   }, {
     "Name" : "RefreshTrustedAdvisorCheck",
+    "AuthorizedActions" : [ {
+      "Name" : "RefreshTrustedAdvisorCheck",
+      "Service" : "support"
+    } ],
     "SDK" : [ {
       "Name" : "support",
       "Method" : "refresh_trusted_advisor_check",

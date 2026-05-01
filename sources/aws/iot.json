@@ -5004,6 +5004,10 @@
     } ]
   }, {
     "Name" : "AssociateTargetsWithJob",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateTargetsWithJob",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "associate_targets_with_job",
@@ -5055,6 +5059,10 @@
     } ]
   }, {
     "Name" : "CancelAuditMitigationActionsTask",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelAuditMitigationActionsTask",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "cancel_audit_mitigation_actions_task",
@@ -5146,6 +5154,10 @@
     } ]
   }, {
     "Name" : "CreateAuditSuppression",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAuditSuppression",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "create_audit_suppression",
@@ -5637,6 +5649,10 @@
     } ]
   }, {
     "Name" : "DeleteAuditSuppression",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAuditSuppression",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "delete_audit_suppression",
@@ -5710,6 +5726,10 @@
     } ]
   }, {
     "Name" : "DeleteCommandExecution",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteCommandExecution",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "delete_command_execution",
@@ -6501,6 +6521,10 @@
     } ]
   }, {
     "Name" : "EnableTopicRule",
+    "AuthorizedActions" : [ {
+      "Name" : "EnableTopicRule",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "enable_topic_rule",
@@ -7526,6 +7550,10 @@
     } ]
   }, {
     "Name" : "PutVerificationStateOnViolation",
+    "AuthorizedActions" : [ {
+      "Name" : "PutVerificationStateOnViolation",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "put_verification_state_on_violation",
@@ -7725,6 +7753,10 @@
     } ]
   }, {
     "Name" : "StartAuditMitigationActionsTask",
+    "AuthorizedActions" : [ {
+      "Name" : "StartAuditMitigationActionsTask",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "start_audit_mitigation_actions_task",
@@ -7743,6 +7775,10 @@
     } ]
   }, {
     "Name" : "StartOnDemandAuditTask",
+    "AuthorizedActions" : [ {
+      "Name" : "StartOnDemandAuditTask",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "start_on_demand_audit_task",
@@ -7948,6 +7984,10 @@
     } ]
   }, {
     "Name" : "UpdateDimension",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateDimension",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "update_dimension",
@@ -8128,6 +8168,10 @@
     } ]
   }, {
     "Name" : "UpdateScheduledAudit",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateScheduledAudit",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "update_scheduled_audit",
@@ -8220,6 +8264,10 @@
     } ]
   }, {
     "Name" : "UpdateTopicRuleDestination",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateTopicRuleDestination",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "update_topic_rule_destination",
@@ -8227,6 +8275,10 @@
     } ]
   }, {
     "Name" : "ValidateSecurityProfileBehaviors",
+    "AuthorizedActions" : [ {
+      "Name" : "ValidateSecurityProfileBehaviors",
+      "Service" : "iot"
+    } ],
     "SDK" : [ {
       "Name" : "iot",
       "Method" : "validate_security_profile_behaviors",

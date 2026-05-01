@@ -767,6 +767,10 @@
     } ]
   }, {
     "Name" : "AssociateDiscoveredResource",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateDiscoveredResource",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "associate_discovered_resource",
@@ -825,6 +829,10 @@
     } ]
   }, {
     "Name" : "DescribeApplicationState",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeApplicationState",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "describe_application_state",
@@ -865,6 +873,10 @@
     } ]
   }, {
     "Name" : "DisassociateDiscoveredResource",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateDiscoveredResource",
+      "Service" : "mgh"
+    } ],
     "SDK" : [ {
       "Name" : "mgh",
       "Method" : "disassociate_discovered_resource",

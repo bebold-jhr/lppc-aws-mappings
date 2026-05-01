@@ -1274,12 +1274,6 @@
     "AuthorizedActions" : [ {
       "Name" : "POST",
       "Service" : "apigateway"
-    }, {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "apigateway.amazonaws.com" ]
-      },
-      "Service" : "iam"
     } ],
     "SDK" : [ {
       "Name" : "apigatewayv2",
@@ -2083,6 +2077,10 @@
     } ]
   }, {
     "Name" : "DisablePortal",
+    "AuthorizedActions" : [ {
+      "Name" : "DisablePortal",
+      "Service" : "apigateway"
+    } ],
     "SDK" : [ {
       "Name" : "apigatewayv2",
       "Method" : "disable_portal",

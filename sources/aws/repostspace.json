@@ -378,6 +378,10 @@
     } ]
   }, {
     "Name" : "CreateChannel",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateChannel",
+      "Service" : "repostspace"
+    } ],
     "SDK" : [ {
       "Name" : "repostspace",
       "Method" : "create_channel",

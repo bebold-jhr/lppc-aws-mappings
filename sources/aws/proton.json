@@ -1937,6 +1937,10 @@
   } ],
   "Operations" : [ {
     "Name" : "AcceptEnvironmentAccountConnection",
+    "AuthorizedActions" : [ {
+      "Name" : "AcceptEnvironmentAccountConnection",
+      "Service" : "proton"
+    } ],
     "SDK" : [ {
       "Name" : "proton",
       "Method" : "accept_environment_account_connection",
@@ -2746,6 +2750,10 @@
     } ]
   }, {
     "Name" : "RejectEnvironmentAccountConnection",
+    "AuthorizedActions" : [ {
+      "Name" : "RejectEnvironmentAccountConnection",
+      "Service" : "proton"
+    } ],
     "SDK" : [ {
       "Name" : "proton",
       "Method" : "reject_environment_account_connection",

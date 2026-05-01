@@ -690,6 +690,10 @@
     } ]
   }, {
     "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "refactor-spaces"
+    } ],
     "SDK" : [ {
       "Name" : "migration-hub-refactor-spaces",
       "Method" : "untag_resource",
@@ -697,6 +701,10 @@
     } ]
   }, {
     "Name" : "UpdateRoute",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateRoute",
+      "Service" : "refactor-spaces"
+    } ],
     "SDK" : [ {
       "Name" : "migration-hub-refactor-spaces",
       "Method" : "update_route",

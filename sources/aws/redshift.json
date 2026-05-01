@@ -2907,6 +2907,10 @@
     } ]
   }, {
     "Name" : "BatchModifyClusterSnapshots",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchModifyClusterSnapshots",
+      "Service" : "redshift"
+    } ],
     "SDK" : [ {
       "Name" : "redshift",
       "Method" : "batch_modify_cluster_snapshots",

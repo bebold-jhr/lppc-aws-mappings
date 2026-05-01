@@ -1469,6 +1469,10 @@
     } ]
   }, {
     "Name" : "PutTableRecordExpirationConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "PutTableRecordExpirationConfiguration",
+      "Service" : "s3tables"
+    } ],
     "SDK" : [ {
       "Name" : "s3tables",
       "Method" : "put_table_record_expiration_configuration",

@@ -744,13 +744,13 @@
     "Types" : [ "ArrayOfString" ]
   }, {
     "Name" : "iottwinmaker:destinationType",
-    "Types" : [ "ArrayOfString" ]
+    "Types" : [ "String" ]
   }, {
     "Name" : "iottwinmaker:linkedServices",
     "Types" : [ "ArrayOfString" ]
   }, {
     "Name" : "iottwinmaker:sourceType",
-    "Types" : [ "ArrayOfString" ]
+    "Types" : [ "String" ]
   } ],
   "Operations" : [ {
     "Name" : "BatchPutPropertyValues",

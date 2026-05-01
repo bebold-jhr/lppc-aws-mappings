@@ -698,6 +698,10 @@
     } ]
   }, {
     "Name" : "AssociateThirdPartyFirewall",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateThirdPartyFirewall",
+      "Service" : "fms"
+    } ],
     "SDK" : [ {
       "Name" : "fms",
       "Method" : "associate_third_party_firewall",
@@ -793,6 +797,10 @@
     } ]
   }, {
     "Name" : "DisassociateThirdPartyFirewall",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateThirdPartyFirewall",
+      "Service" : "fms"
+    } ],
     "SDK" : [ {
       "Name" : "fms",
       "Method" : "disassociate_third_party_firewall",

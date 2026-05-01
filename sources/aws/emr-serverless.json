@@ -527,6 +527,10 @@
     } ]
   }, {
     "Name" : "GetResourceDashboard",
+    "AuthorizedActions" : [ {
+      "Name" : "GetResourceDashboard",
+      "Service" : "emr-serverless"
+    } ],
     "SDK" : [ {
       "Name" : "emr-serverless",
       "Method" : "get_resource_dashboard",
@@ -589,6 +593,10 @@
     } ]
   }, {
     "Name" : "ListSessions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSessions",
+      "Service" : "emr-serverless"
+    } ],
     "SDK" : [ {
       "Name" : "emr-serverless",
       "Method" : "list_sessions",

@@ -229,6 +229,10 @@
     } ]
   }, {
     "Name" : "GetSearchResultExportJob",
+    "AuthorizedActions" : [ {
+      "Name" : "GetSearchResultExportJob",
+      "Service" : "backup-search"
+    } ],
     "SDK" : [ {
       "Name" : "backupsearch",
       "Method" : "get_search_result_export_job",
@@ -323,6 +327,10 @@
     } ]
   }, {
     "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "backup-search"
+    } ],
     "SDK" : [ {
       "Name" : "backupsearch",
       "Method" : "tag_resource",

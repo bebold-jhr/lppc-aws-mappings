@@ -4026,6 +4026,10 @@
     } ]
   }, {
     "Name" : "DisassociateEnvironmentRole",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateEnvironmentRole",
+      "Service" : "datazone"
+    } ],
     "SDK" : [ {
       "Name" : "datazone",
       "Method" : "disassociate_environment_role",
@@ -4337,6 +4341,13 @@
     "SDK" : [ {
       "Name" : "datazone",
       "Method" : "get_metadata_generation_run",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetNotebookRun",
+    "SDK" : [ {
+      "Name" : "datazone",
+      "Method" : "get_notebook_run",
       "Package" : "Boto3"
     } ]
   }, {
@@ -4670,6 +4681,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListNotebookRuns",
+    "SDK" : [ {
+      "Name" : "datazone",
+      "Method" : "list_notebook_runs",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListNotifications",
     "AuthorizedActions" : [ {
       "Name" : "ListNotifications",
@@ -4992,6 +5010,20 @@
     "SDK" : [ {
       "Name" : "datazone",
       "Method" : "start_metadata_generation_run",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartNotebookRun",
+    "SDK" : [ {
+      "Name" : "datazone",
+      "Method" : "start_notebook_run",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StopNotebookRun",
+    "SDK" : [ {
+      "Name" : "datazone",
+      "Method" : "stop_notebook_run",
       "Package" : "Boto3"
     } ]
   }, {

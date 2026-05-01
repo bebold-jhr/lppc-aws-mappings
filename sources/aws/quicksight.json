@@ -4970,6 +4970,10 @@
     } ]
   }, {
     "Name" : "CreateTemplateAlias",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateTemplateAlias",
+      "Service" : "quicksight"
+    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "create_template_alias",
@@ -4991,6 +4995,10 @@
     } ]
   }, {
     "Name" : "CreateThemeAlias",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateThemeAlias",
+      "Service" : "quicksight"
+    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "create_theme_alias",
@@ -5181,6 +5189,10 @@
     } ]
   }, {
     "Name" : "DeleteDefaultQBusinessApplication",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteDefaultQBusinessApplication",
+      "Service" : "quicksight"
+    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "delete_default_q_business_application",
@@ -5258,6 +5270,10 @@
     } ]
   }, {
     "Name" : "DeleteIdentityPropagationConfig",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteIdentityPropagationConfig",
+      "Service" : "quicksight"
+    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "delete_identity_propagation_config",
@@ -5323,6 +5339,10 @@
     } ]
   }, {
     "Name" : "DeleteTemplateAlias",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteTemplateAlias",
+      "Service" : "quicksight"
+    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "delete_template_alias",
@@ -5958,6 +5978,10 @@
     } ]
   }, {
     "Name" : "DescribeThemeAlias",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeThemeAlias",
+      "Service" : "quicksight"
+    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "describe_theme_alias",
@@ -6417,6 +6441,10 @@
     } ]
   }, {
     "Name" : "ListTemplateAliases",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTemplateAliases",
+      "Service" : "quicksight"
+    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "list_template_aliases",
@@ -6866,6 +6894,10 @@
     } ]
   }, {
     "Name" : "UpdateApplicationWithTokenExchangeGrant",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateApplicationWithTokenExchangeGrant",
+      "Service" : "quicksight"
+    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_application_with_token_exchange_grant",
@@ -7037,6 +7069,10 @@
     } ]
   }, {
     "Name" : "UpdateDefaultQBusinessApplication",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateDefaultQBusinessApplication",
+      "Service" : "quicksight"
+    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_default_q_business_application",
@@ -7276,6 +7312,10 @@
     } ]
   }, {
     "Name" : "UpdateThemeAlias",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateThemeAlias",
+      "Service" : "quicksight"
+    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_theme_alias",

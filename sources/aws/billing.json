@@ -503,6 +503,10 @@
     } ]
   }, {
     "Name" : "DisassociateSourceViews",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateSourceViews",
+      "Service" : "billing"
+    } ],
     "SDK" : [ {
       "Name" : "billing",
       "Method" : "disassociate_source_views",

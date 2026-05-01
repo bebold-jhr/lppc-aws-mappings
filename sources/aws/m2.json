@@ -631,6 +631,10 @@
   } ],
   "Operations" : [ {
     "Name" : "CancelBatchJobExecution",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelBatchJobExecution",
+      "Service" : "m2"
+    } ],
     "SDK" : [ {
       "Name" : "m2",
       "Method" : "cancel_batch_job_execution",
@@ -658,6 +662,10 @@
     } ]
   }, {
     "Name" : "CreateDataSetExportTask",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateDataSetExportTask",
+      "Service" : "m2"
+    } ],
     "SDK" : [ {
       "Name" : "m2",
       "Method" : "create_data_set_export_task",
@@ -665,6 +673,10 @@
     } ]
   }, {
     "Name" : "CreateDataSetImportTask",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateDataSetImportTask",
+      "Service" : "m2"
+    } ],
     "SDK" : [ {
       "Name" : "m2",
       "Method" : "create_data_set_import_task",

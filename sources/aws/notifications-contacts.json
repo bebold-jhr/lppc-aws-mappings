@@ -251,6 +251,10 @@
     } ]
   }, {
     "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "notifications-contacts"
+    } ],
     "SDK" : [ {
       "Name" : "notificationscontacts",
       "Method" : "untag_resource",

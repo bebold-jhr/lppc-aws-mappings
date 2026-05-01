@@ -1976,6 +1976,10 @@
     } ]
   }, {
     "Name" : "StartSourceNetworkReplication",
+    "AuthorizedActions" : [ {
+      "Name" : "StartSourceNetworkReplication",
+      "Service" : "drs"
+    } ],
     "SDK" : [ {
       "Name" : "drs",
       "Method" : "start_source_network_replication",
@@ -2005,6 +2009,10 @@
     } ]
   }, {
     "Name" : "StopSourceNetworkReplication",
+    "AuthorizedActions" : [ {
+      "Name" : "StopSourceNetworkReplication",
+      "Service" : "drs"
+    } ],
     "SDK" : [ {
       "Name" : "drs",
       "Method" : "stop_source_network_replication",

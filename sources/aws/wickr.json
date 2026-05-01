@@ -393,6 +393,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetOpentdfConfig",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "network"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetSecurityGroup",
     "Annotations" : {
       "Properties" : {
@@ -612,6 +629,23 @@
     }
   }, {
     "Name" : "RegisterOidcConfigTest",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "network"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "RegisterOpentdfConfig",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -996,6 +1030,10 @@
     } ]
   }, {
     "Name" : "GetGuestUserHistoryCount",
+    "AuthorizedActions" : [ {
+      "Name" : "GetGuestUserHistoryCount",
+      "Service" : "wickr"
+    } ],
     "SDK" : [ {
       "Name" : "wickr",
       "Method" : "get_guest_user_history_count",
@@ -1025,6 +1063,10 @@
     } ]
   }, {
     "Name" : "GetOidcInfo",
+    "AuthorizedActions" : [ {
+      "Name" : "GetOidcInfo",
+      "Service" : "wickr"
+    } ],
     "SDK" : [ {
       "Name" : "wickr",
       "Method" : "get_oidc_info",
@@ -1032,6 +1074,10 @@
     } ]
   }, {
     "Name" : "GetOpentdfConfig",
+    "AuthorizedActions" : [ {
+      "Name" : "GetOpentdfConfig",
+      "Service" : "wickr"
+    } ],
     "SDK" : [ {
       "Name" : "wickr",
       "Method" : "get_opentdf_config",
@@ -1072,6 +1118,10 @@
     } ]
   }, {
     "Name" : "ListBlockedGuestUsers",
+    "AuthorizedActions" : [ {
+      "Name" : "ListBlockedGuestUsers",
+      "Service" : "wickr"
+    } ],
     "SDK" : [ {
       "Name" : "wickr",
       "Method" : "list_blocked_guest_users",
@@ -1156,6 +1206,10 @@
     } ]
   }, {
     "Name" : "RegisterOidcConfig",
+    "AuthorizedActions" : [ {
+      "Name" : "RegisterOidcConfig",
+      "Service" : "wickr"
+    } ],
     "SDK" : [ {
       "Name" : "wickr",
       "Method" : "register_oidc_config",
@@ -1163,6 +1217,10 @@
     } ]
   }, {
     "Name" : "RegisterOidcConfigTest",
+    "AuthorizedActions" : [ {
+      "Name" : "RegisterOidcConfigTest",
+      "Service" : "wickr"
+    } ],
     "SDK" : [ {
       "Name" : "wickr",
       "Method" : "register_oidc_config_test",
@@ -1170,6 +1228,10 @@
     } ]
   }, {
     "Name" : "RegisterOpentdfConfig",
+    "AuthorizedActions" : [ {
+      "Name" : "RegisterOpentdfConfig",
+      "Service" : "wickr"
+    } ],
     "SDK" : [ {
       "Name" : "wickr",
       "Method" : "register_opentdf_config",

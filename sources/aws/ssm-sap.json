@@ -669,6 +669,10 @@
     } ]
   }, {
     "Name" : "PutResourcePermission",
+    "AuthorizedActions" : [ {
+      "Name" : "PutResourcePermission",
+      "Service" : "ssm-sap"
+    } ],
     "SDK" : [ {
       "Name" : "ssm-sap",
       "Method" : "put_resource_permission",
@@ -690,6 +694,10 @@
     } ]
   }, {
     "Name" : "StartApplication",
+    "AuthorizedActions" : [ {
+      "Name" : "StartApplication",
+      "Service" : "ssm-sap"
+    } ],
     "SDK" : [ {
       "Name" : "ssm-sap",
       "Method" : "start_application",
@@ -697,6 +705,10 @@
     } ]
   }, {
     "Name" : "StartApplicationRefresh",
+    "AuthorizedActions" : [ {
+      "Name" : "StartApplicationRefresh",
+      "Service" : "ssm-sap"
+    } ],
     "SDK" : [ {
       "Name" : "ssm-sap",
       "Method" : "start_application_refresh",
@@ -704,6 +716,10 @@
     } ]
   }, {
     "Name" : "StartConfigurationChecks",
+    "AuthorizedActions" : [ {
+      "Name" : "StartConfigurationChecks",
+      "Service" : "ssm-sap"
+    } ],
     "SDK" : [ {
       "Name" : "ssm-sap",
       "Method" : "start_configuration_checks",
@@ -744,6 +760,10 @@
     } ]
   }, {
     "Name" : "UpdateApplicationSettings",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateApplicationSettings",
+      "Service" : "ssm-sap"
+    } ],
     "SDK" : [ {
       "Name" : "ssm-sap",
       "Method" : "update_application_settings",
