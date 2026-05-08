@@ -4069,6 +4069,9 @@
     "AuthorizedActions" : [ {
       "Name" : "PutAlarm",
       "Service" : "lightsail"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "lightsail"
     } ],
     "SDK" : [ {
       "Name" : "lightsail",

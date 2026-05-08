@@ -1072,6 +1072,10 @@
     } ]
   }, {
     "Name" : "GetMpaTeamAssociation",
+    "AuthorizedActions" : [ {
+      "Name" : "GetMpaTeamAssociation",
+      "Service" : "payment-cryptography"
+    } ],
     "SDK" : [ {
       "Name" : "payment-cryptography",
       "Method" : "get_mpa_team_association",

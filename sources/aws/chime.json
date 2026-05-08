@@ -5210,10 +5210,6 @@
     } ]
   }, {
     "Name" : "AssociatePhoneNumberWithUser",
-    "AuthorizedActions" : [ {
-      "Name" : "AssociatePhoneNumberWithUser",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "associate_phone_number_with_user",
@@ -5243,10 +5239,6 @@
     } ]
   }, {
     "Name" : "AssociateSigninDelegateGroupsWithAccount",
-    "AuthorizedActions" : [ {
-      "Name" : "AssociateSigninDelegateGroupsWithAccount",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "associate_signin_delegate_groups_with_account",
@@ -5309,10 +5301,6 @@
     } ]
   }, {
     "Name" : "BatchUnsuspendUser",
-    "AuthorizedActions" : [ {
-      "Name" : "BatchUnsuspendUser",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "batch_unsuspend_user",
@@ -5759,10 +5747,6 @@
     } ]
   }, {
     "Name" : "CreateUser",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateUser",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "create_user",
@@ -6380,10 +6364,6 @@
     } ]
   }, {
     "Name" : "DisassociatePhoneNumberFromUser",
-    "AuthorizedActions" : [ {
-      "Name" : "DisassociatePhoneNumberFromUser",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "disassociate_phone_number_from_user",
@@ -6413,10 +6393,6 @@
     } ]
   }, {
     "Name" : "DisassociateSigninDelegateGroupsFromAccount",
-    "AuthorizedActions" : [ {
-      "Name" : "DisassociateSigninDelegateGroupsFromAccount",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "disassociate_signin_delegate_groups_from_account",
@@ -8100,10 +8076,6 @@
     } ]
   }, {
     "Name" : "UpdateUser",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateUser",
-      "Service" : "chime"
-    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "update_user",

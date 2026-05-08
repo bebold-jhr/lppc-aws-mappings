@@ -32,6 +32,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CallWithBearerToken",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateServiceLevelObjective",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -696,6 +710,8 @@
     }, {
       "Name" : "alarm-mute-rule"
     }, {
+      "Name" : "dashboard"
+    }, {
       "Name" : "insight-rule"
     }, {
       "Name" : "slo"
@@ -758,6 +774,7 @@
     }
   }, {
     "Name" : "PutDashboard",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -952,6 +969,8 @@
     }, {
       "Name" : "alarm-mute-rule"
     }, {
+      "Name" : "dashboard"
+    }, {
       "Name" : "insight-rule"
     }, {
       "Name" : "slo"
@@ -975,6 +994,8 @@
       "Name" : "alarm"
     }, {
       "Name" : "alarm-mute-rule"
+    }, {
+      "Name" : "dashboard"
     }, {
       "Name" : "insight-rule"
     }, {
@@ -1561,7 +1582,8 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "dashboard",
-    "ARNFormats" : [ "arn:${Partition}:cloudwatch::${Account}:dashboard/${DashboardName}" ]
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch::${Account}:dashboard/${DashboardName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "insight-rule",
     "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:insight-rule/${InsightRuleName}" ],

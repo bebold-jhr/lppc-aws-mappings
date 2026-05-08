@@ -6610,12 +6610,6 @@
   }, {
     "Name" : "RestoreAnalysis",
     "AuthorizedActions" : [ {
-      "Name" : "CreateFolderMembership",
-      "Service" : "quicksight"
-    }, {
-      "Name" : "ListFoldersForResource",
-      "Service" : "quicksight"
-    }, {
       "Name" : "RestoreAnalysis",
       "Service" : "quicksight"
     } ],
@@ -6836,12 +6830,6 @@
   }, {
     "Name" : "UpdateActionConnector",
     "AuthorizedActions" : [ {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "quicksight.amazonaws.com" ]
-      },
-      "Service" : "iam"
-    }, {
       "Name" : "UpdateActionConnector",
       "Service" : "quicksight"
     } ],

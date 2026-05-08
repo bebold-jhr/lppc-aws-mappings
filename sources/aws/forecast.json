@@ -1397,6 +1397,19 @@
     } ]
   }, {
     "Name" : "CreateForecastExportJob",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateForecastExportJob",
+      "Service" : "forecast"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "forecast.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "create_forecast_export_job",
@@ -1411,6 +1424,19 @@
     } ]
   }, {
     "Name" : "CreatePredictor",
+    "AuthorizedActions" : [ {
+      "Name" : "CreatePredictor",
+      "Service" : "forecast"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "forecast.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "create_predictor",

@@ -906,6 +906,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GenerateRecommendedPolicyV2",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "hubv2"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetAdhocInsightResults",
     "Annotations" : {
       "Properties" : {
@@ -1264,6 +1281,23 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetRecommendedPolicyV2",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "hubv2"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetResourcesStatisticsV2",
     "Annotations" : {
       "Properties" : {
@@ -1346,6 +1380,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetUsageV2",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "hubv2"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "InviteMembers",
     "Annotations" : {
       "Properties" : {
@@ -1361,6 +1412,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListAccountUsageV2",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "hubv2"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ListAggregatorsV2",
@@ -2555,6 +2623,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GenerateRecommendedPolicyV2",
+    "AuthorizedActions" : [ {
+      "Name" : "GenerateRecommendedPolicyV2",
+      "Service" : "securityhub"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityhub",
+      "Method" : "generate_recommended_policy_v2",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetAdministratorAccount",
     "AuthorizedActions" : [ {
       "Name" : "GetAdministratorAccount",
@@ -2750,6 +2829,17 @@
     "SDK" : [ {
       "Name" : "securityhub",
       "Method" : "get_members",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetRecommendedPolicyV2",
+    "AuthorizedActions" : [ {
+      "Name" : "GetRecommendedPolicyV2",
+      "Service" : "securityhub"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityhub",
+      "Method" : "get_recommended_policy_v2",
       "Package" : "Boto3"
     } ]
   }, {

@@ -2,6 +2,7 @@
   "Name" : "networkmonitor",
   "Actions" : [ {
     "Name" : "CreateMonitor",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -19,6 +20,7 @@
     }
   }, {
     "Name" : "CreateProbe",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -134,6 +136,7 @@
     }
   }, {
     "Name" : "TagResource",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,

@@ -2211,6 +2211,10 @@
     } ]
   }, {
     "Name" : "CreateRecommenderSchema",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateRecommenderSchema",
+      "Service" : "profile"
+    } ],
     "SDK" : [ {
       "Name" : "customer-profiles",
       "Method" : "create_recommender_schema",
@@ -2656,6 +2660,10 @@
     } ]
   }, {
     "Name" : "GetRecommenderSchema",
+    "AuthorizedActions" : [ {
+      "Name" : "GetRecommenderSchema",
+      "Service" : "profile"
+    } ],
     "SDK" : [ {
       "Name" : "customer-profiles",
       "Method" : "get_recommender_schema",
@@ -2971,6 +2979,10 @@
     } ]
   }, {
     "Name" : "ListRecommenderSchemas",
+    "AuthorizedActions" : [ {
+      "Name" : "ListRecommenderSchemas",
+      "Service" : "profile"
+    } ],
     "SDK" : [ {
       "Name" : "customer-profiles",
       "Method" : "list_recommender_schemas",

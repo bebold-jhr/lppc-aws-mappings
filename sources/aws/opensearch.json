@@ -1070,6 +1070,13 @@
     } ]
   }, {
     "Name" : "RollbackServiceSoftwareUpdate",
+    "AuthorizedActions" : [ {
+      "Name" : "RollbackElasticsearchServiceSoftwareUpdate",
+      "Service" : "es"
+    }, {
+      "Name" : "RollbackServiceSoftwareUpdate",
+      "Service" : "es"
+    } ],
     "SDK" : [ {
       "Name" : "opensearch",
       "Method" : "rollback_service_software_update",

@@ -227,6 +227,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DescribeServices",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DescribeSupportLevel",
     "Annotations" : {
       "Properties" : {
@@ -1463,7 +1480,7 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "associations",
-    "ARNFormats" : [ "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}/associations/${AssociationId}" ]
+    "ARNFormats" : [ "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}/association/${AssociationId}" ]
   }, {
     "Name" : "private-connection",
     "ARNFormats" : [ "arn:${Partition}:aidevops:${Region}:${Account}:private-connection/${Name}" ],

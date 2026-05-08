@@ -741,6 +741,8 @@
     },
     "Resources" : [ {
       "Name" : "cloud-vm-cluster"
+    }, {
+      "Name" : "db-node"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,

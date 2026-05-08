@@ -111,7 +111,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "integration"
+      "Name" : "namespace"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -460,6 +460,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "namespace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false

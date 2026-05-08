@@ -16613,6 +16613,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateDelegateMacVolumeOwnershipTask",
       "Service" : "ec2"
+    }, {
+      "Name" : "CreateTags",
+      "Service" : "ec2"
     } ],
     "SDK" : [ {
       "Name" : "ec2",

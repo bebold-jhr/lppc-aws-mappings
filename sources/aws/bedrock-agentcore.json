@@ -12,6 +12,8 @@
     },
     "Resources" : [ {
       "Name" : "memory"
+    }, {
+      "Name" : "payment-manager"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -410,6 +412,92 @@
         "IsWrite" : true
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreatePaymentConnector",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreatePaymentCredentialProvider",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "paymentcredentialprovider"
+    }, {
+      "Name" : "token-vault"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreatePaymentInstrument",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreatePaymentManager",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreatePaymentSession",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -821,6 +909,93 @@
     },
     "Resources" : [ {
       "Name" : "online-evaluation-config"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeletePaymentConnector",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeletePaymentCredentialProvider",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "paymentcredentialprovider"
+    }, {
+      "Name" : "token-vault"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeletePaymentInstrument",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeletePaymentManager",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeletePaymentSession",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1375,6 +1550,110 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetPaymentConnector",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetPaymentCredentialProvider",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "paymentcredentialprovider"
+    }, {
+      "Name" : "token-vault"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetPaymentInstrument",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetPaymentInstrumentBalance",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetPaymentManager",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetPaymentSession",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetPolicy",
     "Annotations" : {
       "Properties" : {
@@ -1515,6 +1794,29 @@
     },
     "Resources" : [ {
       "Name" : "oauth2credentialprovider"
+    }, {
+      "Name" : "token-vault"
+    }, {
+      "Name" : "workload-identity"
+    }, {
+      "Name" : "workload-identity-directory"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetResourcePaymentToken",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "paymentcredentialprovider"
     }, {
       "Name" : "token-vault"
     }, {
@@ -2196,6 +2498,90 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListPaymentConnectors",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListPaymentCredentialProviders",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "paymentcredentialprovider"
+    }, {
+      "Name" : "token-vault"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListPaymentInstruments",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListPaymentManagers",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListPaymentSessions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListPolicies",
     "Annotations" : {
       "Properties" : {
@@ -2356,6 +2742,10 @@
     }, {
       "Name" : "online-evaluation-config"
     }, {
+      "Name" : "payment-manager"
+    }, {
+      "Name" : "paymentcredentialprovider"
+    }, {
       "Name" : "runtime"
     }, {
       "Name" : "runtime-endpoint"
@@ -2434,6 +2824,23 @@
       "Name" : "gateway"
     }, {
       "Name" : "policy-engine"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ProcessPayment",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2523,7 +2930,7 @@
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
-        "IsWrite" : false
+        "IsWrite" : true
       }
     },
     "Resources" : [ {
@@ -2776,6 +3183,10 @@
     }, {
       "Name" : "online-evaluation-config"
     }, {
+      "Name" : "payment-manager"
+    }, {
+      "Name" : "paymentcredentialprovider"
+    }, {
       "Name" : "runtime"
     }, {
       "Name" : "runtime-endpoint"
@@ -2821,6 +3232,10 @@
       "Name" : "oauth2credentialprovider"
     }, {
       "Name" : "online-evaluation-config"
+    }, {
+      "Name" : "payment-manager"
+    }, {
+      "Name" : "paymentcredentialprovider"
     }, {
       "Name" : "runtime"
     }, {
@@ -3084,6 +3499,59 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdatePaymentConnector",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdatePaymentCredentialProvider",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "paymentcredentialprovider"
+    }, {
+      "Name" : "token-vault"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdatePaymentManager",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "payment-manager"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdatePolicy",
     "Annotations" : {
       "Properties" : {
@@ -3291,10 +3759,6 @@
     } ]
   }, {
     "Name" : "CreateABTest",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateABTest",
-      "Service" : "bedrock-agentcore"
-    } ],
     "SDK" : [ {
       "Name" : "bedrock-agentcore",
       "Method" : "create_ab_test",
@@ -3564,6 +4028,57 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreatePaymentConnector",
+    "AuthorizedActions" : [ {
+      "Name" : "CreatePaymentConnector",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "create_payment_connector",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreatePaymentCredentialProvider",
+    "AuthorizedActions" : [ {
+      "Name" : "CreatePaymentCredentialProvider",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "create_payment_credential_provider",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreatePaymentInstrument",
+    "AuthorizedActions" : [ {
+      "Name" : "CreatePaymentInstrument",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore",
+      "Method" : "create_payment_instrument",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreatePaymentManager",
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "create_payment_manager",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreatePaymentSession",
+    "AuthorizedActions" : [ {
+      "Name" : "CreatePaymentSession",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore",
+      "Method" : "create_payment_session",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreatePolicy",
     "AuthorizedActions" : [ {
       "Name" : "CreatePolicy",
@@ -3590,6 +4105,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateRegistry",
       "Service" : "bedrock-agentcore"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "bedrock-agentcore"
     } ],
     "SDK" : [ {
       "Name" : "bedrock-agentcore-control",
@@ -3607,6 +4125,9 @@
         "iam:PassedToService" : [ "bedrock-agentcore.amazonaws.com" ]
       },
       "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "bedrock-agentcore"
     } ],
     "SDK" : [ {
       "Name" : "bedrock-agentcore-control",
@@ -3679,6 +4200,10 @@
     } ]
   }, {
     "Name" : "DeleteBatchEvaluation",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteBatchEvaluation",
+      "Service" : "bedrock-agentcore"
+    } ],
     "SDK" : [ {
       "Name" : "bedrock-agentcore",
       "Method" : "delete_batch_evaluation",
@@ -3839,6 +4364,53 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeletePaymentConnector",
+    "AuthorizedActions" : [ {
+      "Name" : "DeletePaymentConnector",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "delete_payment_connector",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeletePaymentCredentialProvider",
+    "AuthorizedActions" : [ {
+      "Name" : "DeletePaymentCredentialProvider",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "delete_payment_credential_provider",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeletePaymentInstrument",
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore",
+      "Method" : "delete_payment_instrument",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeletePaymentManager",
+    "AuthorizedActions" : [ {
+      "Name" : "DeletePaymentManager",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "delete_payment_manager",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeletePaymentSession",
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore",
+      "Method" : "delete_payment_session",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeletePolicy",
     "AuthorizedActions" : [ {
       "Name" : "DeletePolicy",
@@ -3862,6 +4434,10 @@
     } ]
   }, {
     "Name" : "DeleteRecommendation",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteRecommendation",
+      "Service" : "bedrock-agentcore"
+    } ],
     "SDK" : [ {
       "Name" : "bedrock-agentcore",
       "Method" : "delete_recommendation",
@@ -4176,6 +4752,72 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetPaymentConnector",
+    "AuthorizedActions" : [ {
+      "Name" : "GetPaymentConnector",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "get_payment_connector",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetPaymentCredentialProvider",
+    "AuthorizedActions" : [ {
+      "Name" : "GetPaymentCredentialProvider",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "get_payment_credential_provider",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetPaymentInstrument",
+    "AuthorizedActions" : [ {
+      "Name" : "GetPaymentInstrument",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore",
+      "Method" : "get_payment_instrument",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetPaymentInstrumentBalance",
+    "AuthorizedActions" : [ {
+      "Name" : "GetPaymentInstrumentBalance",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore",
+      "Method" : "get_payment_instrument_balance",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetPaymentManager",
+    "AuthorizedActions" : [ {
+      "Name" : "GetPaymentManager",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "get_payment_manager",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetPaymentSession",
+    "AuthorizedActions" : [ {
+      "Name" : "GetPaymentSession",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore",
+      "Method" : "get_payment_session",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetPolicy",
     "AuthorizedActions" : [ {
       "Name" : "GetPolicy",
@@ -4261,6 +4903,17 @@
     "SDK" : [ {
       "Name" : "bedrock-agentcore",
       "Method" : "get_resource_oauth2_token",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetResourcePaymentToken",
+    "AuthorizedActions" : [ {
+      "Name" : "GetResourcePaymentToken",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore",
+      "Method" : "get_resource_payment_token",
       "Package" : "Boto3"
     } ]
   }, {
@@ -4523,6 +5176,10 @@
     } ]
   }, {
     "Name" : "ListConfigurationBundleVersions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListConfigurationBundleVersions",
+      "Service" : "bedrock-agentcore"
+    } ],
     "SDK" : [ {
       "Name" : "bedrock-agentcore-control",
       "Method" : "list_configuration_bundle_versions",
@@ -4661,6 +5318,61 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListPaymentConnectors",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPaymentConnectors",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "list_payment_connectors",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListPaymentCredentialProviders",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPaymentCredentialProviders",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "list_payment_credential_providers",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListPaymentInstruments",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPaymentInstruments",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore",
+      "Method" : "list_payment_instruments",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListPaymentManagers",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPaymentManagers",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "list_payment_managers",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListPaymentSessions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPaymentSessions",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore",
+      "Method" : "list_payment_sessions",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListPolicies",
     "AuthorizedActions" : [ {
       "Name" : "ListPolicies",
@@ -4768,6 +5480,17 @@
     "SDK" : [ {
       "Name" : "bedrock-agentcore-control",
       "Method" : "list_workload_identities",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ProcessPayment",
+    "AuthorizedActions" : [ {
+      "Name" : "ProcessPayment",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore",
+      "Method" : "process_payment",
       "Package" : "Boto3"
     } ]
   }, {
@@ -4893,6 +5616,10 @@
     } ]
   }, {
     "Name" : "StopBatchEvaluation",
+    "AuthorizedActions" : [ {
+      "Name" : "StopBatchEvaluation",
+      "Service" : "bedrock-agentcore"
+    } ],
     "SDK" : [ {
       "Name" : "bedrock-agentcore",
       "Method" : "stop_batch_evaluation",
@@ -5163,6 +5890,35 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdatePaymentConnector",
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "update_payment_connector",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdatePaymentCredentialProvider",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdatePaymentCredentialProvider",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "update_payment_credential_provider",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdatePaymentManager",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdatePaymentManager",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "update_payment_manager",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdatePolicy",
     "AuthorizedActions" : [ {
       "Name" : "UpdatePolicy",
@@ -5289,6 +6045,14 @@
   }, {
     "Name" : "online-evaluation-config",
     "ARNFormats" : [ "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:online-evaluation-config/${OnlineEvaluationConfigId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "payment-manager",
+    "ARNFormats" : [ "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:payment-manager/${PaymentManagerId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "paymentcredentialprovider",
+    "ARNFormats" : [ "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:token-vault/${TokenVaultId}/paymentcredentialprovider/${Name}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "policy",

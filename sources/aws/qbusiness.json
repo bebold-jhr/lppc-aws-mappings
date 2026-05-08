@@ -1941,6 +1941,9 @@
         "iam:PassedToService" : [ "qbusiness.amazonaws.com" ]
       },
       "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "qbusiness"
     } ],
     "SDK" : [ {
       "Name" : "qbusiness",

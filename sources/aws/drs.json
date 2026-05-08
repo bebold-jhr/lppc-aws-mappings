@@ -1569,6 +1569,13 @@
     } ]
   }, {
     "Name" : "CreateExtendedSourceServer",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateExtendedSourceServer",
+      "Service" : "drs"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "drs"
+    } ],
     "SDK" : [ {
       "Name" : "drs",
       "Method" : "create_extended_source_server",

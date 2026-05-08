@@ -1976,6 +1976,9 @@
       "Name" : "DescribeSubnets",
       "Service" : "ec2"
     }, {
+      "Name" : "PassConnection",
+      "Service" : "codeconnections"
+    }, {
       "Name" : "TagResource",
       "Service" : "omics"
     } ],
@@ -3009,6 +3012,9 @@
   }, {
     "Name" : "TagResource",
     "AuthorizedActions" : [ {
+      "Name" : "CreateRunGroup",
+      "Service" : "omics"
+    }, {
       "Name" : "TagResource",
       "Service" : "omics"
     } ],
