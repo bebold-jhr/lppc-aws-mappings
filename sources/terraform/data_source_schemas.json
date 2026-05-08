@@ -269,6 +269,7 @@
   "aws_fsx_windows_file_system",
   "aws_globalaccelerator_accelerator",
   "aws_globalaccelerator_custom_routing_accelerator",
+  "aws_glue_catalog",
   "aws_glue_catalog_table",
   "aws_glue_connection",
   "aws_glue_data_catalog_encryption_settings",
