@@ -3236,6 +3236,10 @@
     } ]
   }, {
     "Name" : "RejectInputDeviceTransfer",
+    "AuthorizedActions" : [ {
+      "Name" : "RejectInputDeviceTransfer",
+      "Service" : "medialive"
+    } ],
     "SDK" : [ {
       "Name" : "medialive",
       "Method" : "reject_input_device_transfer",

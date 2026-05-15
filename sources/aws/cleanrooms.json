@@ -1788,6 +1788,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateConfiguredAudienceModelAssociation",
       "Service" : "cleanrooms"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "cleanrooms"
     } ],
     "SDK" : [ {
       "Name" : "cleanrooms",

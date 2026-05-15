@@ -1187,6 +1187,7 @@
     }
   }, {
     "Name" : "IntegrateWithS3Table",
+    "ActionConditionKeys" : [ "logs:data_source_name", "logs:data_source_type" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1424,6 +1425,7 @@
     }
   }, {
     "Name" : "ProcessWithPipeline",
+    "ActionConditionKeys" : [ "logs:data_source_name", "logs:data_source_type" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2076,6 +2078,12 @@
   }, {
     "Name" : "logs:LogGeneratingResourceArns",
     "Types" : [ "ArrayOfARN" ]
+  }, {
+    "Name" : "logs:data_source_name",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "logs:data_source_type",
+    "Types" : [ "String" ]
   } ],
   "Operations" : [ {
     "Name" : "AssociateKmsKey",

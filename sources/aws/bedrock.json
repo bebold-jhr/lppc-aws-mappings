@@ -4444,6 +4444,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "BatchDeleteAdvancedPromptOptimizationJob",
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "batch_delete_advanced_prompt_optimization_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "BatchDeleteEvaluationJob",
     "AuthorizedActions" : [ {
       "Name" : "BatchDeleteEvaluationJob",
@@ -4528,6 +4535,13 @@
     "SDK" : [ {
       "Name" : "bedrock-runtime",
       "Method" : "count_tokens",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateAdvancedPromptOptimizationJob",
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "create_advanced_prompt_optimization_job",
       "Package" : "Boto3"
     } ]
   }, {
@@ -5441,9 +5455,6 @@
   }, {
     "Name" : "DeregisterMarketplaceModelEndpoint",
     "AuthorizedActions" : [ {
-      "Name" : "CallWithBearerToken",
-      "Service" : "bedrock"
-    }, {
       "Name" : "DeregisterMarketplaceModelEndpoint",
       "Service" : "bedrock"
     } ],
@@ -5511,6 +5522,13 @@
     "SDK" : [ {
       "Name" : "bedrock-agent-runtime",
       "Method" : "generate_query",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetAdvancedPromptOptimizationJob",
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "get_advanced_prompt_optimization_job",
       "Package" : "Boto3"
     } ]
   }, {
@@ -6291,6 +6309,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListAdvancedPromptOptimizationJobs",
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "list_advanced_prompt_optimization_jobs",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListAgentActionGroups",
     "AuthorizedActions" : [ {
       "Name" : "ListAgentActionGroups",
@@ -6960,9 +6985,6 @@
   }, {
     "Name" : "RegisterMarketplaceModelEndpoint",
     "AuthorizedActions" : [ {
-      "Name" : "CallWithBearerToken",
-      "Service" : "bedrock"
-    }, {
       "Name" : "RegisterMarketplaceModelEndpoint",
       "Service" : "bedrock"
     } ],
@@ -7080,6 +7102,13 @@
     "SDK" : [ {
       "Name" : "bedrock-agent",
       "Method" : "start_ingestion_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StopAdvancedPromptOptimizationJob",
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "stop_advanced_prompt_optimization_job",
       "Package" : "Boto3"
     } ]
   }, {

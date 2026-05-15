@@ -1420,6 +1420,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateAdConfiguration",
       "Service" : "ivs"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "ivs"
     } ],
     "SDK" : [ {
       "Name" : "ivs",

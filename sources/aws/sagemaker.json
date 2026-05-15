@@ -1,6 +1,23 @@
 {
   "Name" : "sagemaker",
   "Actions" : [ {
+    "Name" : "AccessModelPackage",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "model-package"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "AddAssociation",
     "Annotations" : {
       "Properties" : {
@@ -8435,6 +8452,19 @@
     } ]
   }, {
     "Name" : "CreateInferenceRecommendationsJob",
+    "AuthorizedActions" : [ {
+      "Name" : "AddTags",
+      "Service" : "sagemaker"
+    }, {
+      "Name" : "CreateInferenceRecommendationsJob",
+      "Service" : "sagemaker"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "sagemaker.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    } ],
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "create_inference_recommendations_job",

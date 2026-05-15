@@ -232,6 +232,7 @@
     }
   }, {
     "Name" : "CreateFunction",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -294,6 +295,7 @@
     }
   }, {
     "Name" : "CreateKeyValueStore",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2165,6 +2167,10 @@
     }, {
       "Name" : "distribution-tenant"
     }, {
+      "Name" : "function"
+    }, {
+      "Name" : "key-value-store"
+    }, {
       "Name" : "trust-store"
     }, {
       "Name" : "vpcorigin"
@@ -2288,6 +2294,10 @@
     }, {
       "Name" : "distribution-tenant"
     }, {
+      "Name" : "function"
+    }, {
+      "Name" : "key-value-store"
+    }, {
       "Name" : "streaming-distribution"
     }, {
       "Name" : "trust-store"
@@ -2353,6 +2363,10 @@
       "Name" : "distribution"
     }, {
       "Name" : "distribution-tenant"
+    }, {
+      "Name" : "function"
+    }, {
+      "Name" : "key-value-store"
     }, {
       "Name" : "streaming-distribution"
     }, {
@@ -4513,6 +4527,9 @@
   }, {
     "Name" : "UpdateDistributionTenant",
     "AuthorizedActions" : [ {
+      "Name" : "GetVpcOrigin",
+      "Service" : "cloudfront"
+    }, {
       "Name" : "UpdateDistributionTenant",
       "Service" : "cloudfront"
     } ],
@@ -4746,10 +4763,12 @@
     "ARNFormats" : [ "arn:${Partition}:cloudfront::${Account}:field-level-encryption-profile/${Id}" ]
   }, {
     "Name" : "function",
-    "ARNFormats" : [ "arn:${Partition}:cloudfront::${Account}:function/${Name}" ]
+    "ARNFormats" : [ "arn:${Partition}:cloudfront::${Account}:function/${Name}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "key-value-store",
-    "ARNFormats" : [ "arn:${Partition}:cloudfront::${Account}:key-value-store/${Name}" ]
+    "ARNFormats" : [ "arn:${Partition}:cloudfront::${Account}:key-value-store/${Name}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "origin-access-control",
     "ARNFormats" : [ "arn:${Partition}:cloudfront::${Account}:origin-access-control/${Id}" ]

@@ -1351,6 +1351,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "BatchDeleteCodeReviews",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchDeleteCodeReviews",
+      "Service" : "securityagent"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityagent",
+      "Method" : "batch_delete_code_reviews",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "BatchDeletePentests",
     "AuthorizedActions" : [ {
       "Name" : "BatchDeletePentests",
@@ -1381,6 +1392,39 @@
     "SDK" : [ {
       "Name" : "securityagent",
       "Method" : "batch_get_artifact_metadata",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "BatchGetCodeReviewJobTasks",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchGetCodeReviewJobTasks",
+      "Service" : "securityagent"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityagent",
+      "Method" : "batch_get_code_review_job_tasks",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "BatchGetCodeReviewJobs",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchGetCodeReviewJobs",
+      "Service" : "securityagent"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityagent",
+      "Method" : "batch_get_code_review_jobs",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "BatchGetCodeReviews",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchGetCodeReviews",
+      "Service" : "securityagent"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityagent",
+      "Method" : "batch_get_code_reviews",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1476,6 +1520,17 @@
     "SDK" : [ {
       "Name" : "securityagent",
       "Method" : "create_application",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateCodeReview",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateCodeReview",
+      "Service" : "securityagent"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityagent",
+      "Method" : "create_code_review",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1672,6 +1727,39 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListCodeReviewJobTasks",
+    "AuthorizedActions" : [ {
+      "Name" : "ListCodeReviewJobTasks",
+      "Service" : "securityagent"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityagent",
+      "Method" : "list_code_review_job_tasks",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListCodeReviewJobsForCodeReview",
+    "AuthorizedActions" : [ {
+      "Name" : "ListCodeReviewJobsForCodeReview",
+      "Service" : "securityagent"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityagent",
+      "Method" : "list_code_review_jobs_for_code_review",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListCodeReviews",
+    "AuthorizedActions" : [ {
+      "Name" : "ListCodeReviews",
+      "Service" : "securityagent"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityagent",
+      "Method" : "list_code_reviews",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListDiscoveredEndpoints",
     "AuthorizedActions" : [ {
       "Name" : "ListDiscoveredEndpoints",
@@ -1793,6 +1881,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "StartCodeReviewJob",
+    "AuthorizedActions" : [ {
+      "Name" : "StartCodeReviewJob",
+      "Service" : "securityagent"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityagent",
+      "Method" : "start_code_review_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StartPentestJob",
     "AuthorizedActions" : [ {
       "Name" : "StartPentestJob",
@@ -1801,6 +1900,17 @@
     "SDK" : [ {
       "Name" : "securityagent",
       "Method" : "start_pentest_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StopCodeReviewJob",
+    "AuthorizedActions" : [ {
+      "Name" : "StopCodeReviewJob",
+      "Service" : "securityagent"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityagent",
+      "Method" : "stop_code_review_job",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1868,6 +1978,17 @@
     "SDK" : [ {
       "Name" : "securityagent",
       "Method" : "update_application",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateCodeReview",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateCodeReview",
+      "Service" : "securityagent"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityagent",
+      "Method" : "update_code_review",
       "Package" : "Boto3"
     } ]
   }, {

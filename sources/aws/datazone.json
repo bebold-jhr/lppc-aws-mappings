@@ -2717,6 +2717,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "domain"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -3628,6 +3631,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateNotebook",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateNotebook",
+      "Service" : "datazone"
+    } ],
+    "SDK" : [ {
+      "Name" : "datazone",
+      "Method" : "create_notebook",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateProject",
     "AuthorizedActions" : [ {
       "Name" : "CreateProject",
@@ -3934,6 +3948,17 @@
     "SDK" : [ {
       "Name" : "datazone",
       "Method" : "delete_listing",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteNotebook",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteNotebook",
+      "Service" : "datazone"
+    } ],
+    "SDK" : [ {
+      "Name" : "datazone",
+      "Method" : "delete_notebook",
       "Package" : "Boto3"
     } ]
   }, {
@@ -4344,6 +4369,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetNotebook",
+    "AuthorizedActions" : [ {
+      "Name" : "GetNotebook",
+      "Service" : "datazone"
+    } ],
+    "SDK" : [ {
+      "Name" : "datazone",
+      "Method" : "get_notebook",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetNotebookExport",
+    "AuthorizedActions" : [ {
+      "Name" : "GetNotebookExport",
+      "Service" : "datazone"
+    } ],
+    "SDK" : [ {
+      "Name" : "datazone",
+      "Method" : "get_notebook_export",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetNotebookRun",
     "SDK" : [ {
       "Name" : "datazone",
@@ -4688,6 +4735,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListNotebooks",
+    "AuthorizedActions" : [ {
+      "Name" : "ListNotebooks",
+      "Service" : "datazone"
+    } ],
+    "SDK" : [ {
+      "Name" : "datazone",
+      "Method" : "list_notebooks",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListNotifications",
     "AuthorizedActions" : [ {
       "Name" : "ListNotifications",
@@ -5013,6 +5071,24 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "StartNotebookExport",
+    "SDK" : [ {
+      "Name" : "datazone",
+      "Method" : "start_notebook_export",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartNotebookImport",
+    "AuthorizedActions" : [ {
+      "Name" : "StartNotebookImport",
+      "Service" : "datazone"
+    } ],
+    "SDK" : [ {
+      "Name" : "datazone",
+      "Method" : "start_notebook_import",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StartNotebookRun",
     "SDK" : [ {
       "Name" : "datazone",
@@ -5207,6 +5283,17 @@
     "SDK" : [ {
       "Name" : "datazone",
       "Method" : "update_group_profile",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateNotebook",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateNotebook",
+      "Service" : "datazone"
+    } ],
+    "SDK" : [ {
+      "Name" : "datazone",
+      "Method" : "update_notebook",
       "Package" : "Boto3"
     } ]
   }, {

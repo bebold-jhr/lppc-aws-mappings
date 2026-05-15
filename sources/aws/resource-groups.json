@@ -529,13 +529,6 @@
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "DescribeReportCreation",
-    "SDK" : [ {
-      "Name" : "resourcegroupstaggingapi",
-      "Method" : "describe_report_creation",
-      "Package" : "Boto3"
-    } ]
-  }, {
     "Name" : "GetAccountSettings",
     "AuthorizedActions" : [ {
       "Name" : "GetAccountSettings",
@@ -544,13 +537,6 @@
     "SDK" : [ {
       "Name" : "resource-groups",
       "Method" : "get_account_settings",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "GetComplianceSummary",
-    "SDK" : [ {
-      "Name" : "resourcegroupstaggingapi",
-      "Method" : "get_compliance_summary",
       "Package" : "Boto3"
     } ]
   }, {
@@ -587,20 +573,6 @@
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "GetResources",
-    "SDK" : [ {
-      "Name" : "resourcegroupstaggingapi",
-      "Method" : "get_resources",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "GetTagKeys",
-    "SDK" : [ {
-      "Name" : "resourcegroupstaggingapi",
-      "Method" : "get_tag_keys",
-      "Package" : "Boto3"
-    } ]
-  }, {
     "Name" : "GetTagSyncTask",
     "AuthorizedActions" : [ {
       "Name" : "GetTagSyncTask",
@@ -609,13 +581,6 @@
     "SDK" : [ {
       "Name" : "resource-groups",
       "Method" : "get_tag_sync_task",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "GetTagValues",
-    "SDK" : [ {
-      "Name" : "resourcegroupstaggingapi",
-      "Method" : "get_tag_values",
       "Package" : "Boto3"
     } ]
   }, {
@@ -674,13 +639,6 @@
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "ListRequiredTags",
-    "SDK" : [ {
-      "Name" : "resourcegroupstaggingapi",
-      "Method" : "list_required_tags",
-      "Package" : "Boto3"
-    } ]
-  }, {
     "Name" : "ListTagSyncTasks",
     "AuthorizedActions" : [ {
       "Name" : "ListTagSyncTasks",
@@ -711,13 +669,6 @@
     "SDK" : [ {
       "Name" : "resource-groups",
       "Method" : "search_resources",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "StartReportCreation",
-    "SDK" : [ {
-      "Name" : "resourcegroupstaggingapi",
-      "Method" : "start_report_creation",
       "Package" : "Boto3"
     } ]
   }, {
@@ -752,13 +703,6 @@
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "TagResources",
-    "SDK" : [ {
-      "Name" : "resourcegroupstaggingapi",
-      "Method" : "tag_resources",
-      "Package" : "Boto3"
-    } ]
-  }, {
     "Name" : "UngroupResources",
     "AuthorizedActions" : [ {
       "Name" : "UngroupResources",
@@ -778,13 +722,6 @@
     "SDK" : [ {
       "Name" : "resource-groups",
       "Method" : "untag",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "UntagResources",
-    "SDK" : [ {
-      "Name" : "resourcegroupstaggingapi",
-      "Method" : "untag_resources",
       "Package" : "Boto3"
     } ]
   }, {

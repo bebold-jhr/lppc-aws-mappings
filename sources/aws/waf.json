@@ -1494,6 +1494,10 @@
     } ]
   }, {
     "Name" : "DeletePermissionPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "DeletePermissionPolicy",
+      "Service" : "waf"
+    } ],
     "SDK" : [ {
       "Name" : "waf",
       "Method" : "delete_permission_policy",

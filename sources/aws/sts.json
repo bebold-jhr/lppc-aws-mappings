@@ -141,8 +141,6 @@
     },
     "Resources" : [ {
       "Name" : "federated-user"
-    }, {
-      "Name" : "user"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -225,8 +223,6 @@
     },
     "Resources" : [ {
       "Name" : "role"
-    }, {
-      "Name" : "user"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -260,8 +256,6 @@
     },
     "Resources" : [ {
       "Name" : "role"
-    }, {
-      "Name" : "user"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -429,7 +423,7 @@
     "Types" : [ "String" ]
   }, {
     "Name" : "sts:TaskPolicyArn",
-    "Types" : [ "String" ]
+    "Types" : [ "ARN" ]
   }, {
     "Name" : "sts:TransitiveTagKeys",
     "Types" : [ "ArrayOfString" ]
@@ -585,9 +579,6 @@
   }, {
     "Name" : "self-session",
     "ARNFormats" : [ "arn:${Partition}:sts::${Account}:self" ]
-  }, {
-    "Name" : "user",
-    "ARNFormats" : [ "arn:${Partition}:iam::${Account}:user/${UserNameWithPath}" ]
   } ],
   "Version" : "v1.4"
 }

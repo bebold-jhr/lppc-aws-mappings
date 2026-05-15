@@ -1287,6 +1287,9 @@
   }, {
     "Name" : "StopDeployment",
     "AuthorizedActions" : [ {
+      "Name" : "CreateCloudFormationDeployment",
+      "Service" : "codedeploy"
+    }, {
       "Name" : "StopDeployment",
       "Service" : "codedeploy"
     } ],

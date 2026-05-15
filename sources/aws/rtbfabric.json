@@ -18,6 +18,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "AssociateCertificate",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ResponderGateway"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateInboundExternalLink",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -46,6 +63,24 @@
         "IsWrite" : true
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateLinkRoutingRule",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Link"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -135,6 +170,25 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteLinkRoutingRule",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Link"
+    }, {
+      "Name" : "LinkRoutingRule"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteOutboundExternalLink",
     "Annotations" : {
       "Properties" : {
@@ -188,6 +242,40 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DisassociateCertificate",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ResponderGateway"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetCertificateAssociation",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ResponderGateway"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetInboundExternalLink",
     "Annotations" : {
       "Properties" : {
@@ -218,6 +306,25 @@
     },
     "Resources" : [ {
       "Name" : "Link"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetLinkRoutingRule",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Link"
+    }, {
+      "Name" : "LinkRoutingRule"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -271,6 +378,40 @@
     },
     "Resources" : [ {
       "Name" : "ResponderGateway"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListCertificateAssociations",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ResponderGateway"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListLinkRoutingRules",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Link"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -333,6 +474,8 @@
     }, {
       "Name" : "Link"
     }, {
+      "Name" : "LinkRoutingRule"
+    }, {
       "Name" : "OutboundExternalLink"
     }, {
       "Name" : "RequesterGateway"
@@ -376,6 +519,8 @@
     }, {
       "Name" : "Link"
     }, {
+      "Name" : "LinkRoutingRule"
+    }, {
       "Name" : "OutboundExternalLink"
     }, {
       "Name" : "RequesterGateway"
@@ -401,6 +546,8 @@
       "Name" : "InboundExternalLink"
     }, {
       "Name" : "Link"
+    }, {
+      "Name" : "LinkRoutingRule"
     }, {
       "Name" : "OutboundExternalLink"
     }, {
@@ -441,6 +588,25 @@
     },
     "Resources" : [ {
       "Name" : "Link"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateLinkRoutingRule",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Link"
+    }, {
+      "Name" : "LinkRoutingRule"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -500,6 +666,9 @@
     "Name" : "rtbfabric:LinkLinkId",
     "Types" : [ "String" ]
   }, {
+    "Name" : "rtbfabric:LinkRoutingRuleRuleId",
+    "Types" : [ "String" ]
+  }, {
     "Name" : "rtbfabric:OutboundExternalLinkLinkId",
     "Types" : [ "String" ]
   }, {
@@ -518,6 +687,17 @@
     "SDK" : [ {
       "Name" : "rtbfabric",
       "Method" : "accept_link",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "AssociateCertificate",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateCertificate",
+      "Service" : "rtbfabric"
+    } ],
+    "SDK" : [ {
+      "Name" : "rtbfabric",
+      "Method" : "associate_certificate",
       "Package" : "Boto3"
     } ]
   }, {
@@ -546,6 +726,17 @@
     "SDK" : [ {
       "Name" : "rtbfabric",
       "Method" : "create_link",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateLinkRoutingRule",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateLinkRoutingRule",
+      "Service" : "rtbfabric"
+    } ],
+    "SDK" : [ {
+      "Name" : "rtbfabric",
+      "Method" : "create_link_routing_rule",
       "Package" : "Boto3"
     } ]
   }, {
@@ -613,6 +804,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteLinkRoutingRule",
+    "SDK" : [ {
+      "Name" : "rtbfabric",
+      "Method" : "delete_link_routing_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteOutboundExternalLink",
     "AuthorizedActions" : [ {
       "Name" : "DeleteOutboundExternalLink",
@@ -646,6 +844,24 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DisassociateCertificate",
+    "SDK" : [ {
+      "Name" : "rtbfabric",
+      "Method" : "disassociate_certificate",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetCertificateAssociation",
+    "AuthorizedActions" : [ {
+      "Name" : "GetCertificateAssociation",
+      "Service" : "rtbfabric"
+    } ],
+    "SDK" : [ {
+      "Name" : "rtbfabric",
+      "Method" : "get_certificate_association",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetInboundExternalLink",
     "AuthorizedActions" : [ {
       "Name" : "GetInboundExternalLink",
@@ -665,6 +881,17 @@
     "SDK" : [ {
       "Name" : "rtbfabric",
       "Method" : "get_link",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetLinkRoutingRule",
+    "AuthorizedActions" : [ {
+      "Name" : "GetLinkRoutingRule",
+      "Service" : "rtbfabric"
+    } ],
+    "SDK" : [ {
+      "Name" : "rtbfabric",
+      "Method" : "get_link_routing_rule",
       "Package" : "Boto3"
     } ]
   }, {
@@ -698,6 +925,28 @@
     "SDK" : [ {
       "Name" : "rtbfabric",
       "Method" : "get_responder_gateway",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListCertificateAssociations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListCertificateAssociations",
+      "Service" : "rtbfabric"
+    } ],
+    "SDK" : [ {
+      "Name" : "rtbfabric",
+      "Method" : "list_certificate_associations",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListLinkRoutingRules",
+    "AuthorizedActions" : [ {
+      "Name" : "ListLinkRoutingRules",
+      "Service" : "rtbfabric"
+    } ],
+    "SDK" : [ {
+      "Name" : "rtbfabric",
+      "Method" : "list_link_routing_rules",
       "Package" : "Boto3"
     } ]
   }, {
@@ -800,6 +1049,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateLinkRoutingRule",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateLinkRoutingRule",
+      "Service" : "rtbfabric"
+    } ],
+    "SDK" : [ {
+      "Name" : "rtbfabric",
+      "Method" : "update_link_routing_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateRequesterGateway",
     "AuthorizedActions" : [ {
       "Name" : "UpdateRequesterGateway",
@@ -830,6 +1090,10 @@
     "Name" : "Link",
     "ARNFormats" : [ "arn:${Partition}:rtbfabric:${Region}:${Account}:gateway/${GatewayId}/link/${LinkId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "rtbfabric:LinkLinkId", "rtbfabric:RequesterGatewayGatewayId", "rtbfabric:ResponderGatewayGatewayId" ]
+  }, {
+    "Name" : "LinkRoutingRule",
+    "ARNFormats" : [ "arn:${Partition}:rtbfabric:${Region}:${Account}:gateway/${GatewayId}/link/${LinkId}/routing-rule/${RuleId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "rtbfabric:LinkLinkId", "rtbfabric:LinkRoutingRuleRuleId" ]
   }, {
     "Name" : "OutboundExternalLink",
     "ARNFormats" : [ "arn:${Partition}:rtbfabric:${Region}:${Account}:gateway/${GatewayId}/link/${LinkId}" ],
