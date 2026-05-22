@@ -712,6 +712,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateServiceLinkedAnalyzer",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateServiceLinkedAnalyzer",
+      "Service" : "access-analyzer"
+    } ],
+    "SDK" : [ {
+      "Name" : "accessanalyzer",
+      "Method" : "create_service_linked_analyzer",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteAnalyzer",
     "AuthorizedActions" : [ {
       "Name" : "DeleteAnalyzer",
@@ -731,6 +742,17 @@
     "SDK" : [ {
       "Name" : "accessanalyzer",
       "Method" : "delete_archive_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteServiceLinkedAnalyzer",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteServiceLinkedAnalyzer",
+      "Service" : "access-analyzer"
+    } ],
+    "SDK" : [ {
+      "Name" : "accessanalyzer",
+      "Method" : "delete_service_linked_analyzer",
       "Package" : "Boto3"
     } ]
   }, {

@@ -4205,6 +4205,9 @@
   }, {
     "Name" : "StartAccessRequest",
     "AuthorizedActions" : [ {
+      "Name" : "AddTagsToResource",
+      "Service" : "ssm"
+    }, {
       "Name" : "StartAccessRequest",
       "Service" : "ssm"
     } ],

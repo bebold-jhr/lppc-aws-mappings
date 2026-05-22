@@ -70,7 +70,7 @@
     }
   }, {
     "Name" : "CreateGrant",
-    "ActionConditionKeys" : [ "kms:CallerAccount", "kms:EncryptionContext:${EncryptionContextKey}", "kms:EncryptionContextKeys", "kms:GrantConstraintType", "kms:GrantIsForAWSResource", "kms:GrantOperations", "kms:GranteePrincipal", "kms:RetiringPrincipal", "kms:ViaService" ],
+    "ActionConditionKeys" : [ "kms:CallerAccount", "kms:EncryptionContext:${EncryptionContextKey}", "kms:EncryptionContextKeys", "kms:GrantConstraintSourceArn", "kms:GrantConstraintType", "kms:GrantIsForAWSResource", "kms:GrantOperations", "kms:GranteePrincipal", "kms:GranteeServicePrincipal", "kms:RetiringPrincipal", "kms:RetiringServicePrincipal", "kms:ViaService" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1015,6 +1015,9 @@
     "Name" : "kms:ExpirationModel",
     "Types" : [ "String" ]
   }, {
+    "Name" : "kms:GrantConstraintSourceArn",
+    "Types" : [ "ARN" ]
+  }, {
     "Name" : "kms:GrantConstraintType",
     "Types" : [ "String" ]
   }, {
@@ -1025,6 +1028,9 @@
     "Types" : [ "ArrayOfString" ]
   }, {
     "Name" : "kms:GranteePrincipal",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "kms:GranteeServicePrincipal",
     "Types" : [ "String" ]
   }, {
     "Name" : "kms:KeyAgreementAlgorithm",
@@ -1238,6 +1244,9 @@
     "Types" : [ "ArrayOfString" ]
   }, {
     "Name" : "kms:RetiringPrincipal",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "kms:RetiringServicePrincipal",
     "Types" : [ "String" ]
   }, {
     "Name" : "kms:RotationPeriodInDays",

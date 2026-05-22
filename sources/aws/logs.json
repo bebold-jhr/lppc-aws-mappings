@@ -2259,6 +2259,9 @@
       "Name" : "DeleteIndexPolicy",
       "Service" : "logs"
     }, {
+      "Name" : "DeleteRetentionPolicy",
+      "Service" : "logs"
+    }, {
       "Name" : "DeleteSubscriptionFilter",
       "Service" : "logs"
     }, {
@@ -3054,6 +3057,9 @@
       "Service" : "logs"
     }, {
       "Name" : "PutIndexPolicy",
+      "Service" : "logs"
+    }, {
+      "Name" : "PutRetentionPolicy",
       "Service" : "logs"
     }, {
       "Name" : "PutSubscriptionFilter",

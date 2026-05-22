@@ -1126,6 +1126,8 @@
     }, {
       "Name" : "ConformancePack"
     }, {
+      "Name" : "Connector"
+    }, {
       "Name" : "OrganizationConfigRule"
     }, {
       "Name" : "OrganizationConformancePack"
@@ -1528,6 +1530,8 @@
     }, {
       "Name" : "ConformancePack"
     }, {
+      "Name" : "Connector"
+    }, {
       "Name" : "OrganizationConfigRule"
     }, {
       "Name" : "OrganizationConformancePack"
@@ -1559,6 +1563,8 @@
       "Name" : "ConfigurationRecorder"
     }, {
       "Name" : "ConformancePack"
+    }, {
+      "Name" : "Connector"
     }, {
       "Name" : "OrganizationConfigRule"
     }, {

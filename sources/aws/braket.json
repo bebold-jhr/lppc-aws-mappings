@@ -558,10 +558,10 @@
   } ],
   "Resources" : [ {
     "Name" : "device",
-    "ARNFormats" : [ "arn:${Partition}:braket:*:${Account}:device/${DeviceType}/${Provider}/${DeviceId}" ]
+    "ARNFormats" : [ "arn:${Partition}:braket:*:*:device/${DeviceType}/${Provider}/${DeviceId}" ]
   }, {
     "Name" : "job",
-    "ARNFormats" : [ "arn:${Partition}:braket:${Region}:${Account}:job/${JobName}" ],
+    "ARNFormats" : [ "arn:${Partition}:braket:${Region}:${Account}:job/${RandomId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "quantum-task",

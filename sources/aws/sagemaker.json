@@ -1210,8 +1210,6 @@
     "Resources" : [ {
       "Name" : "model-package",
       "ConditionKeys" : [ "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}", "sagemaker:CurrentModelLifeCycleStage", "sagemaker:CurrentModelLifeCycleStageStatus" ]
-    }, {
-      "Name" : "model-package-group"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,

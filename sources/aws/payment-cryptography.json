@@ -1003,6 +1003,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GenerateAuthRequestCryptogram",
+    "SDK" : [ {
+      "Name" : "payment-cryptography-data",
+      "Method" : "generate_auth_request_cryptogram",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GenerateCardValidationData",
     "SDK" : [ {
       "Name" : "payment-cryptography-data",

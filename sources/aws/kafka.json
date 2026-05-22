@@ -1093,9 +1093,6 @@
     }, {
       "Name" : "CreateTopic",
       "Service" : "kafka-cluster"
-    }, {
-      "Name" : "TagResource",
-      "Service" : "kafka"
     } ],
     "SDK" : [ {
       "Name" : "kafka",

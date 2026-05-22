@@ -1,6 +1,27 @@
 {
   "Name" : "ecs",
   "Actions" : [ {
+    "Name" : "ContinueServiceDeployment",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ]
+    }, {
+      "Name" : "service-deployment",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster", "ecs:service" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateCapacityProvider",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ecs:instance-metadata-tags-propagation", "ecs:propagate-tags" ],
     "Annotations" : {
@@ -1511,6 +1532,9 @@
     "Name" : "ecs:fargate-ephemeral-storage-kms-key",
     "Types" : [ "String" ]
   }, {
+    "Name" : "ecs:gateway",
+    "Types" : [ "ARN" ]
+  }, {
     "Name" : "ecs:instance-metadata-tags-propagation",
     "Types" : [ "Bool" ]
   }, {
@@ -1542,6 +1566,17 @@
     "Types" : [ "Numeric" ]
   } ],
   "Operations" : [ {
+    "Name" : "ContinueServiceDeployment",
+    "AuthorizedActions" : [ {
+      "Name" : "ContinueServiceDeployment",
+      "Service" : "ecs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ecs",
+      "Method" : "continue_service_deployment",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateCapacityProvider",
     "AuthorizedActions" : [ {
       "Name" : "CreateCapacityProvider",

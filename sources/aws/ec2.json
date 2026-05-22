@@ -19779,6 +19779,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeIpamPoolAllocations",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "describe_ipam_pool_allocations",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeIpamPools",
     "AuthorizedActions" : [ {
       "Name" : "DescribeIpamPools",
@@ -22999,6 +23006,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "modify_ipam_pool",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ModifyIpamPoolAllocation",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "modify_ipam_pool_allocation",
       "Package" : "Boto3"
     } ]
   }, {

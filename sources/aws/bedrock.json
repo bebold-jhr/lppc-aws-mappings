@@ -4539,6 +4539,10 @@
     } ]
   }, {
     "Name" : "CreateAdvancedPromptOptimizationJob",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "bedrock"
+    } ],
     "SDK" : [ {
       "Name" : "bedrock",
       "Method" : "create_advanced_prompt_optimization_job",
@@ -4950,6 +4954,9 @@
         "iam:PassedToService" : [ "bedrock.amazonaws.com" ]
       },
       "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "bedrock"
     } ],
     "SDK" : [ {
       "Name" : "bedrock",
