@@ -15,7 +15,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : true
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "BatchGetItem",
@@ -977,7 +977,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : true
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ReplicateSettings",
@@ -994,7 +994,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : true
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "RestoreTableFromAwsBackup",
@@ -1334,7 +1334,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : true
+      "IAM Action Last Accessed" : false
     }
   } ],
   "ConditionKeys" : [ {

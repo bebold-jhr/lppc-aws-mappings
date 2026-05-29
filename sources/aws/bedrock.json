@@ -4540,6 +4540,9 @@
   }, {
     "Name" : "CreateAdvancedPromptOptimizationJob",
     "AuthorizedActions" : [ {
+      "Name" : "CallWithBearerToken",
+      "Service" : "bedrock"
+    }, {
       "Name" : "TagResource",
       "Service" : "bedrock"
     } ],
@@ -6950,9 +6953,6 @@
   }, {
     "Name" : "PutModelInvocationLoggingConfiguration",
     "AuthorizedActions" : [ {
-      "Name" : "CallWithBearerToken",
-      "Service" : "bedrock"
-    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "bedrock.amazonaws.com" ]

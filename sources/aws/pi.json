@@ -158,6 +158,23 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListPerformanceAnalysisReportRecommendations",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "perf-reports-resource"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListPerformanceAnalysisReports",
     "Annotations" : {
       "Properties" : {
@@ -352,6 +369,17 @@
     "SDK" : [ {
       "Name" : "pi",
       "Method" : "list_available_resource_metrics",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListPerformanceAnalysisReportRecommendations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPerformanceAnalysisReportRecommendations",
+      "Service" : "pi"
+    } ],
+    "SDK" : [ {
+      "Name" : "pi",
+      "Method" : "list_performance_analysis_report_recommendations",
       "Package" : "Boto3"
     } ]
   }, {

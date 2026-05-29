@@ -1371,9 +1371,6 @@
     "AuthorizedActions" : [ {
       "Name" : "AcceptAgreementPaymentRequest",
       "Service" : "aws-marketplace"
-    }, {
-      "Name" : "UpdatePurchaseOrders",
-      "Service" : "aws-marketplace"
     } ],
     "SDK" : [ {
       "Name" : "marketplace-agreement",

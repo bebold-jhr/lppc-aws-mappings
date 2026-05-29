@@ -1450,6 +1450,13 @@
     } ]
   }, {
     "Name" : "CreateMonitor",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateMonitor",
+      "Service" : "forecast"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "forecast"
+    } ],
     "SDK" : [ {
       "Name" : "forecast",
       "Method" : "create_monitor",

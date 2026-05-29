@@ -383,7 +383,7 @@
     }, {
       "Name" : "PassRole",
       "Context" : {
-        "iam:PassedToService" : [ "braket.amazonaws.com" ]
+        "iam:PassedToService" : [ "braket.amazonaws.com", "sagemaker.amazonaws.com" ]
       },
       "Service" : "iam"
     }, {

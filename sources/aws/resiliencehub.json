@@ -104,6 +104,60 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateAssertion",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateInputSource",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreatePolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "policy",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateRecommendationTemplate",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -122,6 +176,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateReport",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateResiliencyPolicy",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -138,6 +210,105 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "CreateService",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "policy",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
+    }, {
+      "Name" : "system",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateServiceFunction",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateServiceFunctionResources",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateSystem",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "system",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateUserJourney",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "policy",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "system",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteApp",
@@ -225,6 +396,60 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DeleteAssertion",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteInputSource",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeletePolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "policy",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteRecommendationTemplate",
     "Annotations" : {
       "Properties" : {
@@ -257,6 +482,96 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteService",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteServiceFunction",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteServiceFunctionResources",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteSystem",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "system",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteUserJourney",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "system",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DescribeApp",
@@ -441,6 +756,138 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetFailureModeFinding",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "policy",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetService",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetSystem",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "system",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetUserJourney",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "system",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ImportApp",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "application",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ImportPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "policy",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
+    }, {
+      "Name" : "resiliency-policy",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ImportResourcesToDraftAppVersion",
@@ -658,6 +1105,92 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListAssertions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListDependencies",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListFailureModeAssessments",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListFailureModeFindings",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListInputSources",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListMetrics",
     "Annotations" : {
       "Properties" : {
@@ -670,6 +1203,20 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListPolicies",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ListRecommendationTemplates",
@@ -687,6 +1234,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListReports",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ListResiliencyPolicies",
@@ -720,6 +1285,92 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListResources",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListServiceEvents",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListServiceFunctions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListServiceTopologyEdges",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListServices",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListSopRecommendations",
     "Annotations" : {
       "Properties" : {
@@ -751,6 +1402,38 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListSystemEvents",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "system",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListSystems",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
@@ -760,6 +1443,21 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "app-assessment"
+    }, {
+      "Name" : "application"
+    }, {
+      "Name" : "policy"
+    }, {
+      "Name" : "recommendation-template"
+    }, {
+      "Name" : "resiliency-policy"
+    }, {
+      "Name" : "service"
+    }, {
+      "Name" : "system"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
@@ -797,6 +1495,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListUserJourneys",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "system",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "PublishAppVersion",
@@ -902,6 +1618,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "StartFailureModeAssessment",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StartMetricsExport",
     "Annotations" : {
       "Properties" : {
@@ -948,9 +1682,15 @@
     }, {
       "Name" : "application"
     }, {
+      "Name" : "policy"
+    }, {
       "Name" : "recommendation-template"
     }, {
       "Name" : "resiliency-policy"
+    }, {
+      "Name" : "service"
+    }, {
+      "Name" : "system"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -972,9 +1712,15 @@
     }, {
       "Name" : "application"
     }, {
+      "Name" : "policy"
+    }, {
       "Name" : "recommendation-template"
     }, {
       "Name" : "resiliency-policy"
+    }, {
+      "Name" : "service"
+    }, {
+      "Name" : "system"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1049,6 +1795,78 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "UpdateAssertion",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateDependency",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateFailureModeFinding",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdatePolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "policy",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateResiliencyPolicy",
     "Annotations" : {
       "Properties" : {
@@ -1064,6 +1882,87 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "UpdateService",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "policy",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "system",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateServiceFunction",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateSystem",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "system",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateUserJourney",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "policy",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "system",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   } ],
   "ConditionKeys" : [ {
@@ -1152,6 +2051,35 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateAssertion",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "create_assertion",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateInputSource",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateInputSource",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "create_input_source",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreatePolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "CreatePolicy",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "create_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateRecommendationTemplate",
     "AuthorizedActions" : [ {
       "Name" : "CreateRecommendationTemplate",
@@ -1160,6 +2088,13 @@
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "create_recommendation_template",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateReport",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "create_report",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1174,6 +2109,49 @@
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "create_resiliency_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateService",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "create_service",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateServiceFunction",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "create_service_function",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateServiceFunctionResources",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "create_service_function_resources",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateSystem",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateSystem",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "create_system",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateUserJourney",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateUserJourney",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "create_user_journey",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1232,6 +2210,31 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteAssertion",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "delete_assertion",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteInputSource",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "delete_input_source",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeletePolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "DeletePolicy",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "delete_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteRecommendationTemplate",
     "AuthorizedActions" : [ {
       "Name" : "DeleteRecommendationTemplate",
@@ -1251,6 +2254,49 @@
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "delete_resiliency_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteService",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "delete_service",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteServiceFunction",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteServiceFunction",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "delete_service_function",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteServiceFunctionResources",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "delete_service_function_resources",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteSystem",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteSystem",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "delete_system",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteUserJourney",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "delete_user_journey",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1372,6 +2418,67 @@
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "describe_resource_grouping_recommendation_task",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetFailureModeFinding",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "get_failure_mode_finding",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "GetPolicy",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "get_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetService",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "get_service",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetSystem",
+    "AuthorizedActions" : [ {
+      "Name" : "GetSystem",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "get_system",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetUserJourney",
+    "AuthorizedActions" : [ {
+      "Name" : "GetUserJourney",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "get_user_journey",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ImportApp",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "import_app",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ImportPolicy",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "import_policy",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1518,6 +2625,57 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListAssertions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAssertions",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_assertions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListDependencies",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDependencies",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_dependencies",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListFailureModeAssessments",
+    "AuthorizedActions" : [ {
+      "Name" : "ListFailureModeAssessments",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_failure_mode_assessments",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListFailureModeFindings",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_failure_mode_findings",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListInputSources",
+    "AuthorizedActions" : [ {
+      "Name" : "ListInputSources",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_input_sources",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListMetrics",
     "AuthorizedActions" : [ {
       "Name" : "ListMetrics",
@@ -1529,6 +2687,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListPolicies",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPolicies",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_policies",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListRecommendationTemplates",
     "AuthorizedActions" : [ {
       "Name" : "ListRecommendationTemplates",
@@ -1537,6 +2706,13 @@
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "list_recommendation_templates",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListReports",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_reports",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1562,6 +2738,49 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListResources",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_resources",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListServiceEvents",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_service_events",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListServiceFunctions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListServiceFunctions",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_service_functions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListServiceTopologyEdges",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_service_topology_edges",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListServices",
+    "AuthorizedActions" : [ {
+      "Name" : "ListServices",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_services",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListSopRecommendations",
     "AuthorizedActions" : [ {
       "Name" : "ListSopRecommendations",
@@ -1584,6 +2803,24 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListSystemEvents",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_system_events",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListSystems",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSystems",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_systems",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListTagsForResource",
     "AuthorizedActions" : [ {
       "Name" : "ListTagsForResource",
@@ -1591,6 +2828,10 @@
     } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
+      "Method" : "list_tags_for_resource",
+      "Package" : "Boto3"
+    }, {
+      "Name" : "resiliencehubv2",
       "Method" : "list_tags_for_resource",
       "Package" : "Boto3"
     } ]
@@ -1614,6 +2855,17 @@
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "list_unsupported_app_version_resources",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListUserJourneys",
+    "AuthorizedActions" : [ {
+      "Name" : "ListUserJourneys",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_user_journeys",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1686,6 +2938,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "StartFailureModeAssessment",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "start_failure_mode_assessment",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StartMetricsExport",
     "AuthorizedActions" : [ {
       "Name" : "StartMetricsExport",
@@ -1717,6 +2976,10 @@
       "Name" : "resiliencehub",
       "Method" : "tag_resource",
       "Package" : "Boto3"
+    }, {
+      "Name" : "resiliencehubv2",
+      "Method" : "tag_resource",
+      "Package" : "Boto3"
     } ]
   }, {
     "Name" : "UntagResource",
@@ -1726,6 +2989,10 @@
     } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
+      "Method" : "untag_resource",
+      "Package" : "Boto3"
+    }, {
+      "Name" : "resiliencehubv2",
       "Method" : "untag_resource",
       "Package" : "Boto3"
     } ]
@@ -1780,6 +3047,38 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateAssertion",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "update_assertion",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateDependency",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "update_dependency",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateFailureModeFinding",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "update_failure_mode_finding",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdatePolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdatePolicy",
+      "Service" : "resiliencehub"
+    } ],
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "update_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateResiliencyPolicy",
     "AuthorizedActions" : [ {
       "Name" : "UpdateResiliencyPolicy",
@@ -1788,6 +3087,34 @@
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "update_resiliency_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateService",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "update_service",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateServiceFunction",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "update_service_function",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateSystem",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "update_system",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateUserJourney",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "update_user_journey",
       "Package" : "Boto3"
     } ]
   } ],
@@ -1800,12 +3127,24 @@
     "ARNFormats" : [ "arn:${Partition}:resiliencehub:${Region}:${Account}:app/${AppId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
+    "Name" : "policy",
+    "ARNFormats" : [ "arn:${Partition}:resiliencehub:${Region}:${Account}:policy/${PolicyId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "recommendation-template",
     "ARNFormats" : [ "arn:${Partition}:resiliencehub:${Region}:${Account}:recommendation-template/${RecommendationTemplateId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "resiliency-policy",
     "ARNFormats" : [ "arn:${Partition}:resiliencehub:${Region}:${Account}:resiliency-policy/${ResiliencyPolicyId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "service",
+    "ARNFormats" : [ "arn:${Partition}:resiliencehub:${Region}:${Account}:service/${ServiceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "system",
+    "ARNFormats" : [ "arn:${Partition}:resiliencehub:${Region}:${Account}:system/${SystemId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.4"

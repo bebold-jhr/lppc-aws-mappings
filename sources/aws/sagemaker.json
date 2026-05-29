@@ -12539,6 +12539,9 @@
   }, {
     "Name" : "UpdateProject",
     "AuthorizedActions" : [ {
+      "Name" : "AddTags",
+      "Service" : "sagemaker"
+    }, {
       "Name" : "UpdateProject",
       "Service" : "sagemaker"
     } ],

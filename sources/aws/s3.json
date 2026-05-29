@@ -3038,7 +3038,7 @@
     }
   }, {
     "Name" : "UpdateObjectEncryption",
-    "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256", "s3:x-amz-server-side-encryption", "s3:x-amz-server-side-encryption-aws-kms-key-id" ],
+    "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256", "s3:x-amz-server-side-encryption", "s3:x-amz-server-side-encryption-aws-kms-key-id" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,

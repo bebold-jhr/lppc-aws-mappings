@@ -68,7 +68,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : true
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "CreateApi",
@@ -458,7 +458,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : true
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "EvaluateCode",
@@ -816,7 +816,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : true
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "GraphQL",
@@ -981,7 +981,7 @@
     },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : true
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ListSourceApiAssociations",

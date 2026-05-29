@@ -1201,7 +1201,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : true
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "Link",
@@ -1439,7 +1439,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
-      "IAM Action Last Accessed" : true
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "PutAccountPolicy",
@@ -2162,7 +2162,7 @@
     }, {
       "Name" : "PassRole",
       "Context" : {
-        "iam:PassedToService" : [ "cloudtrail.amazonaws.com" ]
+        "iam:PassedToService" : [ "cloudtrail.amazonaws.com", "logs.amazonaws.com" ]
       },
       "Service" : "iam"
     } ],
@@ -3048,6 +3048,9 @@
     "Name" : "PutAccountPolicy",
     "AuthorizedActions" : [ {
       "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "logs.amazonaws.com" ]
+      },
       "Service" : "iam"
     }, {
       "Name" : "PutAccountPolicy",
@@ -3138,6 +3141,9 @@
     "Name" : "PutDestination",
     "AuthorizedActions" : [ {
       "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "logs.amazonaws.com" ]
+      },
       "Service" : "iam"
     }, {
       "Name" : "PutDestination",
@@ -3254,6 +3260,9 @@
     "Name" : "PutSubscriptionFilter",
     "AuthorizedActions" : [ {
       "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "logs.amazonaws.com" ]
+      },
       "Service" : "iam"
     }, {
       "Name" : "PutSubscriptionFilter",
