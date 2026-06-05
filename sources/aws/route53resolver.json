@@ -732,6 +732,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListFirewallRuleTypes",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListFirewallRules",
     "Annotations" : {
       "Properties" : {
@@ -1245,6 +1259,39 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "BatchCreateFirewallRule",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateFirewallRule",
+      "Service" : "route53resolver"
+    } ],
+    "SDK" : [ {
+      "Name" : "route53resolver",
+      "Method" : "batch_create_firewall_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "BatchDeleteFirewallRule",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteFirewallRule",
+      "Service" : "route53resolver"
+    } ],
+    "SDK" : [ {
+      "Name" : "route53resolver",
+      "Method" : "batch_delete_firewall_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "BatchUpdateFirewallRule",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateFirewallRule",
+      "Service" : "route53resolver"
+    } ],
+    "SDK" : [ {
+      "Name" : "route53resolver",
+      "Method" : "batch_update_firewall_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateFirewallDomainList",
     "AuthorizedActions" : [ {
       "Name" : "CreateFirewallDomainList",
@@ -1689,6 +1736,17 @@
     "SDK" : [ {
       "Name" : "route53resolver",
       "Method" : "list_firewall_rule_groups",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListFirewallRuleTypes",
+    "AuthorizedActions" : [ {
+      "Name" : "ListFirewallRuleTypes",
+      "Service" : "route53resolver"
+    } ],
+    "SDK" : [ {
+      "Name" : "route53resolver",
+      "Method" : "list_firewall_rule_types",
       "Package" : "Boto3"
     } ]
   }, {

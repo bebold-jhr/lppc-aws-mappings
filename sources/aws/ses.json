@@ -988,7 +988,7 @@
     }
   }, {
     "Name" : "DeleteSuppressedDestination",
-    "ActionConditionKeys" : [ "ses:ApiVersion" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -997,6 +997,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "tenant"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -1936,7 +1939,7 @@
     }
   }, {
     "Name" : "GetSuppressedDestination",
-    "ActionConditionKeys" : [ "ses:ApiVersion" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1945,6 +1948,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "tenant"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -2465,7 +2471,7 @@
     }
   }, {
     "Name" : "ListSuppressedDestinations",
-    "ActionConditionKeys" : [ "ses:ApiVersion" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2474,6 +2480,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "tenant"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -2981,7 +2990,7 @@
     }
   }, {
     "Name" : "PutSuppressedDestination",
-    "ActionConditionKeys" : [ "ses:ApiVersion" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2990,9 +2999,30 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "tenant"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "PutTenantSuppressionAttributes",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "tenant"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "RegisterMemberToAddressList",
@@ -6158,6 +6188,17 @@
     "SDK" : [ {
       "Name" : "sesv2",
       "Method" : "put_suppressed_destination",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutTenantSuppressionAttributes",
+    "AuthorizedActions" : [ {
+      "Name" : "PutTenantSuppressionAttributes",
+      "Service" : "ses"
+    } ],
+    "SDK" : [ {
+      "Name" : "sesv2",
+      "Method" : "put_tenant_suppression_attributes",
       "Package" : "Boto3"
     } ]
   }, {

@@ -2158,6 +2158,10 @@
     } ]
   }, {
     "Name" : "CreateTemplateSyncConfig",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateTemplateSyncConfig",
+      "Service" : "proton"
+    } ],
     "SDK" : [ {
       "Name" : "proton",
       "Method" : "create_template_sync_config",

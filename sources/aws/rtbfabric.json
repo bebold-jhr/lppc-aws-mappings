@@ -730,10 +730,6 @@
     } ]
   }, {
     "Name" : "CreateLinkRoutingRule",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateLinkRoutingRule",
-      "Service" : "rtbfabric"
-    } ],
     "SDK" : [ {
       "Name" : "rtbfabric",
       "Method" : "create_link_routing_rule",
@@ -805,6 +801,10 @@
     } ]
   }, {
     "Name" : "DeleteLinkRoutingRule",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteLinkRoutingRule",
+      "Service" : "rtbfabric"
+    } ],
     "SDK" : [ {
       "Name" : "rtbfabric",
       "Method" : "delete_link_routing_rule",
@@ -845,6 +845,10 @@
     } ]
   }, {
     "Name" : "DisassociateCertificate",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateCertificate",
+      "Service" : "rtbfabric"
+    } ],
     "SDK" : [ {
       "Name" : "rtbfabric",
       "Method" : "disassociate_certificate",

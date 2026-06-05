@@ -5445,6 +5445,9 @@
     "AuthorizedActions" : [ {
       "Name" : "DeleteResourcePolicy",
       "Service" : "bedrock"
+    }, {
+      "Name" : "PutResourcePolicy",
+      "Service" : "bedrock"
     } ],
     "SDK" : [ {
       "Name" : "bedrock",
@@ -6981,6 +6984,9 @@
   }, {
     "Name" : "PutUseCaseForModelAccess",
     "AuthorizedActions" : [ {
+      "Name" : "CallWithBearerToken",
+      "Service" : "bedrock"
+    }, {
       "Name" : "PutUseCaseForModelAccess",
       "Service" : "bedrock"
     } ],

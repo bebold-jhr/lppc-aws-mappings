@@ -635,6 +635,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteVolume",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "volume"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteWorker",
     "Annotations" : {
       "Properties" : {
@@ -1083,6 +1100,23 @@
     },
     "Resources" : [ {
       "Name" : "job"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetVolume",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "volume"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1580,6 +1614,8 @@
     }, {
       "Name" : "queue"
     }, {
+      "Name" : "volume"
+    }, {
       "Name" : "worker"
     } ],
     "SupportedBy" : {
@@ -1598,6 +1634,23 @@
     },
     "Resources" : [ {
       "Name" : "job"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListVolumes",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "volume"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1751,6 +1804,8 @@
     }, {
       "Name" : "queue"
     }, {
+      "Name" : "volume"
+    }, {
       "Name" : "worker"
     } ],
     "SupportedBy" : {
@@ -1782,6 +1837,8 @@
       "Name" : "monitor"
     }, {
       "Name" : "queue"
+    }, {
+      "Name" : "volume"
     }, {
       "Name" : "worker"
     } ],
@@ -2657,6 +2714,10 @@
     } ]
   }, {
     "Name" : "DeleteVolume",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteVolume",
+      "Service" : "deadline"
+    } ],
     "SDK" : [ {
       "Name" : "deadline",
       "Method" : "delete_volume",
@@ -2928,6 +2989,10 @@
     } ]
   }, {
     "Name" : "GetVolume",
+    "AuthorizedActions" : [ {
+      "Name" : "GetVolume",
+      "Service" : "deadline"
+    } ],
     "SDK" : [ {
       "Name" : "deadline",
       "Method" : "get_volume",
@@ -3254,6 +3319,10 @@
     } ]
   }, {
     "Name" : "ListVolumes",
+    "AuthorizedActions" : [ {
+      "Name" : "ListVolumes",
+      "Service" : "deadline"
+    } ],
     "SDK" : [ {
       "Name" : "deadline",
       "Method" : "list_volumes",
@@ -3592,6 +3661,10 @@
     "Name" : "queue",
     "ARNFormats" : [ "arn:${Partition}:deadline:${Region}:${Account}:farm/${FarmId}/queue/${QueueId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "deadline:FarmMembershipLevels", "deadline:QueueMembershipLevels" ]
+  }, {
+    "Name" : "volume",
+    "ARNFormats" : [ "arn:${Partition}:deadline:${Region}:${Account}:farm/${FarmId}/fleet/${FleetId}/volume/${VolumeId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "deadline:FarmMembershipLevels", "deadline:FleetMembershipLevels" ]
   }, {
     "Name" : "worker",
     "ARNFormats" : [ "arn:${Partition}:deadline:${Region}:${Account}:farm/${FarmId}/fleet/${FleetId}/worker/${WorkerId}" ],

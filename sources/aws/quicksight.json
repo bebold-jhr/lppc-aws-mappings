@@ -47,6 +47,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "BatchDeleteKnowledgeBase",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "knowledgeBase"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "BatchDeleteTopicReviewedAnswer",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -170,6 +187,23 @@
     },
     "Resources" : [ {
       "Name" : "user"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateAgent",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "agent"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -316,6 +350,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateFlow",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "flow"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateFolder",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -429,6 +480,7 @@
     }
   }, {
     "Name" : "CreateNamespace",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -440,6 +492,21 @@
     "Resources" : [ {
       "Name" : "namespace"
     } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateOAuthClientApplication",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -489,6 +556,23 @@
         "IsWrite" : true
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateSpace",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "space"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -698,6 +782,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteAgent",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "agent"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteAnalysis",
     "Annotations" : {
       "Properties" : {
@@ -878,6 +979,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteFlow",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "flow"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteFolder",
     "Annotations" : {
       "Properties" : {
@@ -984,6 +1102,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteKnowledgeBase",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "knowledgeBase"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteNamespace",
     "Annotations" : {
       "Properties" : {
@@ -995,6 +1130,24 @@
     },
     "Resources" : [ {
       "Name" : "namespace"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteOAuthClientApplication",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "oauthClientApplication"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1042,6 +1195,23 @@
         "IsWrite" : true
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteSpace",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "space"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -1732,6 +1902,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DescribeFlow",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "flow"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DescribeFolder",
     "Annotations" : {
       "Properties" : {
@@ -1881,6 +2068,40 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DescribeKnowledgeBase",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "knowledgeBase"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeKnowledgeBasePermissions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "knowledgeBase"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DescribeNamespace",
     "Annotations" : {
       "Properties" : {
@@ -1892,6 +2113,24 @@
     },
     "Resources" : [ {
       "Name" : "namespace"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeOAuthClientApplication",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "oauthClientApplication"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1980,6 +2219,40 @@
         "IsWrite" : false
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeSpace",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "space"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeSpacePermissions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "space"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -2777,7 +3050,36 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListKnowledgeBases",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListNamespaces",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListOAuthClientApplications",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -2836,6 +3138,37 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListSpaceResources",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "space"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListSpaces",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
@@ -2868,11 +3201,17 @@
     }, {
       "Name" : "folder"
     }, {
+      "Name" : "namespace"
+    }, {
+      "Name" : "oauthClientApplication"
+    }, {
       "Name" : "template"
     }, {
       "Name" : "theme"
     }, {
       "Name" : "topic"
+    }, {
+      "Name" : "user"
     }, {
       "Name" : "vpcconnection"
     } ],
@@ -3061,6 +3400,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListUsersIndexCapacity",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListVPCConnections",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -3177,6 +3530,7 @@
     }
   }, {
     "Name" : "RegisterUser",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -3403,6 +3757,37 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "SearchKnowledgeBases",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "knowledgeBase"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "SearchSpaces",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "SearchTopics",
     "Annotations" : {
       "Properties" : {
@@ -3583,11 +3968,17 @@
     }, {
       "Name" : "ingestion"
     }, {
+      "Name" : "namespace"
+    }, {
+      "Name" : "oauthClientApplication"
+    }, {
       "Name" : "template"
     }, {
       "Name" : "theme"
     }, {
       "Name" : "topic"
+    }, {
+      "Name" : "user"
     }, {
       "Name" : "vpcconnection"
     } ],
@@ -3662,11 +4053,17 @@
     }, {
       "Name" : "ingestion"
     }, {
+      "Name" : "namespace"
+    }, {
+      "Name" : "oauthClientApplication"
+    }, {
       "Name" : "template"
     }, {
       "Name" : "theme"
     }, {
       "Name" : "topic"
+    }, {
+      "Name" : "user"
     }, {
       "Name" : "vpcconnection"
     } ],
@@ -3748,6 +4145,23 @@
     },
     "Resources" : [ {
       "Name" : "actionconnector"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateAgent",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "agent"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -4102,6 +4516,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateFlow",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "flow"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateFlowPermissions",
     "Annotations" : {
       "Properties" : {
@@ -4224,6 +4655,41 @@
         "IsWrite" : true
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateKnowledgeBasePermissions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "knowledgeBase"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateOAuthClientApplication",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "oauthClientApplication"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -4370,6 +4836,57 @@
         "IsWrite" : true
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateSpace",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "space"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateSpacePermissions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "space"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateSpaceResources",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "space"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -4673,6 +5190,9 @@
     }, {
       "Name" : "Subscribe",
       "Service" : "quicksight"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "quicksight"
     } ],
     "SDK" : [ {
       "Name" : "quicksight",
@@ -4697,6 +5217,13 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "create_action_connector",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateAgent",
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "create_agent",
       "Package" : "Boto3"
     } ]
   }, {
@@ -4826,6 +5353,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateFlow",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateFlow",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "create_flow",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateFolder",
     "AuthorizedActions" : [ {
       "Name" : "CreateFolder",
@@ -4924,6 +5462,23 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateOAuthClientApplication",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateDataSource",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "CreateOAuthClientApplication",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "create_o_auth_client_application",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateRefreshSchedule",
     "AuthorizedActions" : [ {
       "Name" : "CreateRefreshSchedule",
@@ -4946,6 +5501,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "create_role_membership",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateSpace",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateSpace",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "create_space",
       "Package" : "Boto3"
     } ]
   }, {
@@ -5100,6 +5666,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteAgent",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAgent",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "delete_agent",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteAnalysis",
     "AuthorizedActions" : [ {
       "Name" : "DeleteAnalysis",
@@ -5199,6 +5776,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteFlow",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteFlow",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "delete_flow",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteFolder",
     "AuthorizedActions" : [ {
       "Name" : "DeleteFolder",
@@ -5291,6 +5879,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteOAuthClientApplication",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteDataSource",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "DeleteOAuthClientApplication",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "delete_o_auth_client_application",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteRefreshSchedule",
     "AuthorizedActions" : [ {
       "Name" : "DeleteRefreshSchedule",
@@ -5324,6 +5926,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "delete_role_membership",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteSpace",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteSpace",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "delete_space",
       "Package" : "Boto3"
     } ]
   }, {
@@ -5509,6 +6122,28 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "describe_action_connector_permissions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeAgent",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAgent",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_agent",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeAgentPermissions",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAgentPermissions",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_agent_permissions",
       "Package" : "Boto3"
     } ]
   }, {
@@ -5754,6 +6389,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeFlow",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeFlow",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_flow",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeFolder",
     "AuthorizedActions" : [ {
       "Name" : "DescribeFolder",
@@ -5867,6 +6513,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeOAuthClientApplication",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeDataSource",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "DescribeOAuthClientApplication",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_o_auth_client_application",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeQPersonalizationConfiguration",
     "AuthorizedActions" : [ {
       "Name" : "DescribeQPersonalizationConfiguration",
@@ -5919,6 +6579,28 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "describe_self_upgrade_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeSpace",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeSpace",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_space",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeSpacePermissions",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeSpacePermissions",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_space_permissions",
       "Package" : "Boto3"
     } ]
   }, {
@@ -6173,6 +6855,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListAgents",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAgents",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_agents",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListAnalyses",
     "AuthorizedActions" : [ {
       "Name" : "ListAnalyses",
@@ -6393,6 +7086,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListOAuthClientApplications",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDataSources",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "ListOAuthClientApplications",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_o_auth_client_applications",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListRefreshSchedules",
     "AuthorizedActions" : [ {
       "Name" : "ListRefreshSchedules",
@@ -6426,6 +7133,28 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "list_self_upgrades",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListSpaceResources",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSpaceResources",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_space_resources",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListSpaces",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSpaces",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_spaces",
       "Package" : "Boto3"
     } ]
   }, {
@@ -6636,6 +7365,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "SearchAgents",
+    "AuthorizedActions" : [ {
+      "Name" : "SearchAgents",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "search_agents",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "SearchAnalyses",
     "AuthorizedActions" : [ {
       "Name" : "SearchAnalyses",
@@ -6710,6 +7450,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "search_groups",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "SearchSpaces",
+    "AuthorizedActions" : [ {
+      "Name" : "SearchSpaces",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "search_spaces",
       "Package" : "Boto3"
     } ]
   }, {
@@ -6853,6 +7604,28 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_action_connector_permissions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateAgent",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAgent",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_agent",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateAgentPermissions",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAgentPermissions",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_agent_permissions",
       "Package" : "Boto3"
     } ]
   }, {
@@ -7073,6 +7846,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateFlow",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateFlow",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_flow",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateFlowPermissions",
     "AuthorizedActions" : [ {
       "Name" : "UpdateFlowPermissions",
@@ -7167,6 +7951,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateOAuthClientApplication",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateDataSource",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "UpdateOAuthClientApplication",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_o_auth_client_application",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdatePublicSharingSettings",
     "AuthorizedActions" : [ {
       "Name" : "UpdatePublicSharingSettings",
@@ -7252,6 +8050,39 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_self_upgrade_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateSpace",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateSpace",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_space",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateSpacePermissions",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateSpacePermissions",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_space_permissions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateSpaceResources",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateSpaceResources",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_space_resources",
       "Package" : "Boto3"
     } ]
   }, {
@@ -7420,6 +8251,9 @@
     "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:analysis/${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
+    "Name" : "approvalPolicy",
+    "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:approval-policy/${ResourceId}" ]
+  }, {
     "Name" : "assetBundleExportJob",
     "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:asset-bundle-export-job/${ResourceId}" ]
   }, {
@@ -7488,11 +8322,23 @@
     "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:dataset/${DatasetId}/ingestion/${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
+    "Name" : "knowledgeBase",
+    "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:knowledge-base/${ResourceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "namespace",
-    "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:namespace/${ResourceId}" ]
+    "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:namespace/${ResourceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "oauthClientApplication",
+    "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:oauthClientApplication/${ResourceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "refreshschedule",
     "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:dataset/${DatasetId}/refresh-schedule/${ResourceId}" ]
+  }, {
+    "Name" : "space",
+    "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:space/${ResourceId}" ]
   }, {
     "Name" : "template",
     "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:template/${ResourceId}" ],
@@ -7507,7 +8353,8 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "user",
-    "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:user/${ResourceId}" ]
+    "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:user/${ResourceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "vpcconnection",
     "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:vpcConnection/${ResourceId}" ],

@@ -1,7 +1,25 @@
 {
   "Name" : "transform",
   "Actions" : [ {
+    "Name" : "AccessTransformProfile",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "profile"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "AssociateConnectorResource",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -50,6 +68,7 @@
     }
   }, {
     "Name" : "DeleteConnector",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -126,6 +145,7 @@
     }
   }, {
     "Name" : "GetConnector",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -171,6 +191,7 @@
     }
   }, {
     "Name" : "ListConnectors",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -230,6 +251,7 @@
     }
   }, {
     "Name" : "RejectConnector",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -331,12 +353,16 @@
     "Name" : "aws:RequestTag/${TagKey}",
     "Types" : [ "String" ]
   }, {
+    "Name" : "aws:ResourceTag/${TagKey}",
+    "Types" : [ "String" ]
+  }, {
     "Name" : "aws:TagKeys",
     "Types" : [ "ArrayOfString" ]
   } ],
   "Resources" : [ {
     "Name" : "connector",
-    "ARNFormats" : [ "arn:${Partition}:transform:${Region}:${Account}:connector/${WorkspaceId}/${ConnectorId}" ]
+    "ARNFormats" : [ "arn:${Partition}:transform:${Region}:${Account}:connector/${WorkspaceId}/${ConnectorId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "profile",
     "ARNFormats" : [ "arn:${Partition}:transform:${Region}:${Account}:profile/${Identifier}" ]
