@@ -58,6 +58,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "AcceptTransitGatewayClientVpnAttachment",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "transit-gateway-attachment",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:transitGatewayAttachmentId" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "AcceptTransitGatewayMulticastDomainAssociations",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -231,6 +250,9 @@
     "Resources" : [ {
       "Name" : "ipam-pool",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "ipam-pool-allocation",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1031,6 +1053,9 @@
     "Resources" : [ {
       "Name" : "capacity-reservation",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:CapacityReservationFleet" ]
+    }, {
+      "Name" : "capacity-reservation-cancellation-quote",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1357,6 +1382,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateCapacityReservationCancellationQuote",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "capacity-reservation-cancellation-quote",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateCapacityReservationFleet",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -1414,6 +1458,9 @@
     }, {
       "Name" : "security-group",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:SecurityGroupID" ]
+    }, {
+      "Name" : "transit-gateway",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:transitGatewayId" ]
     }, {
       "Name" : "vpc",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:VpcID" ]
@@ -2912,6 +2959,9 @@
       "Name" : "capacity-reservation",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
     }, {
+      "Name" : "capacity-reservation-cancellation-quote",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
+    }, {
       "Name" : "capacity-reservation-fleet",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
     }, {
@@ -2994,6 +3044,9 @@
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "ipam-pool",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "ipam-pool-allocation",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "ipam-prefix-list-resolver",
@@ -5178,6 +5231,9 @@
       "Name" : "capacity-reservation",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
     }, {
+      "Name" : "capacity-reservation-cancellation-quote",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
+    }, {
       "Name" : "capacity-reservation-fleet",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
     }, {
@@ -5260,6 +5316,9 @@
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "ipam-pool",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "ipam-pool-allocation",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "ipam-prefix-list-resolver",
@@ -5576,6 +5635,25 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteTransitGatewayClientVpnAttachment",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "transit-gateway-attachment",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:transitGatewayAttachmentId" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteTransitGatewayConnect",
@@ -6510,6 +6588,21 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DescribeCapacityReservationCancellationQuotes",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DescribeCapacityReservationFleets",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -7399,6 +7492,21 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeIpamPoolAllocations",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DescribeIpamPools",
@@ -10725,6 +10833,21 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetCapacityManagerMonitoredTagKeys",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetCapacityReservationUsage",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -11321,6 +11444,21 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetManagedResourceVisibility",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "GetNetworkInsightsAccessScopeAnalysisFindings",
@@ -12187,6 +12325,9 @@
       "Name" : "security-group",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:SecurityGroupID", "ec2:Vpc" ]
     }, {
+      "Name" : "transit-gateway",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:transitGatewayId" ]
+    }, {
       "Name" : "vpc",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:Tenancy", "ec2:VpcID" ]
     } ],
@@ -12642,6 +12783,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ModifyIpamPoolAllocation",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ipam-pool-allocation",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ModifyIpamPrefixListResolver",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -12804,6 +12964,21 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ModifyManagedResourceVisibility",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ModifyNetworkInterfaceAttribute",
@@ -14069,6 +14244,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "RejectTransitGatewayClientVpnAttachment",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "transit-gateway-attachment",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:transitGatewayAttachmentId" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "RejectTransitGatewayMulticastDomainAssociations",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -15212,6 +15406,21 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "UpdateCapacityManagerMonitoredTagKeys",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateCapacityManagerOrganizationsAccess",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -15779,6 +15988,10 @@
     } ]
   }, {
     "Name" : "AcceptTransitGatewayClientVpnAttachment",
+    "AuthorizedActions" : [ {
+      "Name" : "AcceptTransitGatewayClientVpnAttachment",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "accept_transit_gateway_client_vpn_attachment",
@@ -16166,6 +16379,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "AttachImageWatermark",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "attach_image_watermark",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "AttachInternetGateway",
     "AuthorizedActions" : [ {
       "Name" : "AttachInternetGateway",
@@ -16500,6 +16720,9 @@
   }, {
     "Name" : "CreateCapacityReservationCancellationQuote",
     "AuthorizedActions" : [ {
+      "Name" : "CreateCapacityReservationCancellationQuote",
+      "Service" : "ec2"
+    }, {
       "Name" : "CreateTags",
       "Service" : "ec2"
     } ],
@@ -18589,6 +18812,10 @@
     } ]
   }, {
     "Name" : "DeleteTransitGatewayClientVpnAttachment",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteTransitGatewayClientVpnAttachment",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "delete_transit_gateway_client_vpn_attachment",
@@ -19168,6 +19395,10 @@
     } ]
   }, {
     "Name" : "DescribeCapacityReservationCancellationQuotes",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeCapacityReservationCancellationQuotes",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "describe_capacity_reservation_cancellation_quotes",
@@ -19798,6 +20029,10 @@
     } ]
   }, {
     "Name" : "DescribeIpamPoolAllocations",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeIpamPoolAllocations",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "describe_ipam_pool_allocations",
@@ -21043,6 +21278,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DetachImageWatermark",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "detach_image_watermark",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DetachInternetGateway",
     "AuthorizedActions" : [ {
       "Name" : "DetachInternetGateway",
@@ -21927,6 +22169,10 @@
     } ]
   }, {
     "Name" : "GetCapacityManagerMonitoredTagKeys",
+    "AuthorizedActions" : [ {
+      "Name" : "GetCapacityManagerMonitoredTagKeys",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "get_capacity_manager_monitored_tag_keys",
@@ -22297,6 +22543,10 @@
     } ]
   }, {
     "Name" : "GetManagedResourceVisibility",
+    "AuthorizedActions" : [ {
+      "Name" : "GetManagedResourceVisibility",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "get_managed_resource_visibility",
@@ -23028,6 +23278,10 @@
     } ]
   }, {
     "Name" : "ModifyIpamPoolAllocation",
+    "AuthorizedActions" : [ {
+      "Name" : "ModifyIpamPoolAllocation",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "modify_ipam_pool_allocation",
@@ -23123,6 +23377,10 @@
     } ]
   }, {
     "Name" : "ModifyManagedResourceVisibility",
+    "AuthorizedActions" : [ {
+      "Name" : "ModifyManagedResourceVisibility",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "modify_managed_resource_visibility",
@@ -23795,6 +24053,10 @@
     } ]
   }, {
     "Name" : "RejectTransitGatewayClientVpnAttachment",
+    "AuthorizedActions" : [ {
+      "Name" : "RejectTransitGatewayClientVpnAttachment",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "reject_transit_gateway_client_vpn_attachment",
@@ -24434,6 +24696,10 @@
     } ]
   }, {
     "Name" : "UpdateCapacityManagerMonitoredTagKeys",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateCapacityManagerMonitoredTagKeys",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "update_capacity_manager_monitored_tag_keys",
@@ -24507,6 +24773,10 @@
     "Name" : "capacity-reservation",
     "ARNFormats" : [ "arn:${Partition}:ec2:${Region}:${Account}:capacity-reservation/${CapacityReservationId}" ],
     "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:AvailabilityZone", "ec2:AvailabilityZoneId", "ec2:CapacityReservationFleet", "ec2:CommitmentDuration", "ec2:CreateDate", "ec2:DestinationCapacityReservationId", "ec2:EbsOptimized", "ec2:EndDate", "ec2:EndDateType", "ec2:EphemeralStorage", "ec2:InstanceCount", "ec2:InstanceMatchCriteria", "ec2:InstancePlatform", "ec2:InstanceType", "ec2:InterruptibleCapacityReservationId", "ec2:InterruptionType", "ec2:IsInterruptible", "ec2:IsLaunchTemplateResource", "ec2:LaunchTemplate", "ec2:OutpostArn", "ec2:PlacementGroup", "ec2:Region", "ec2:ResourceTag/${TagKey}", "ec2:SourceCapacityReservationId", "ec2:TargetInstanceCount", "ec2:Tenancy" ]
+  }, {
+    "Name" : "capacity-reservation-cancellation-quote",
+    "ARNFormats" : [ "arn:${Partition}:ec2:${Region}:${Account}:capacity-reservation-cancellation-quote/${CapacityReservationCancellationQuoteId}" ],
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:Region", "ec2:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "capacity-reservation-fleet",
     "ARNFormats" : [ "arn:${Partition}:ec2:${Region}:${Account}:capacity-reservation-fleet/${CapacityReservationFleetId}" ],
@@ -24627,6 +24897,10 @@
   }, {
     "Name" : "ipam-pool",
     "ARNFormats" : [ "arn:${Partition}:ec2::${Account}:ipam-pool/${IpamPoolId}" ],
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:Region", "ec2:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "ipam-pool-allocation",
+    "ARNFormats" : [ "arn:${Partition}:ec2:${Region}:${Account}:ipam-pool-allocation/${IpamPoolAllocationId}" ],
     "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:Region", "ec2:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "ipam-prefix-list-resolver",

@@ -2099,6 +2099,10 @@
     } ]
   }, {
     "Name" : "CreateReport",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateReport",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehubv2",
       "Method" : "create_report",
@@ -2309,6 +2313,10 @@
     } ]
   }, {
     "Name" : "DeleteServiceFunctionResources",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteServiceFunctionResources",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehubv2",
       "Method" : "delete_service_function_resources",

@@ -84,6 +84,37 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateQuote",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateRenewal",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "outpost"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateSite",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -114,6 +145,20 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteQuote",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteSite",
@@ -277,6 +322,37 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetQuote",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetRenewalPricing",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "outpost"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetSite",
     "Annotations" : {
       "Properties" : {
@@ -390,6 +466,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListOrderableInstanceTypes",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListOrders",
     "Annotations" : {
       "Properties" : {
@@ -416,6 +506,20 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListQuotes",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ListSites",
@@ -534,6 +638,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "UpdateQuote",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateSite",
     "Annotations" : {
       "Properties" : {
@@ -643,7 +761,22 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateQuote",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateQuote",
+      "Service" : "outposts"
+    } ],
+    "SDK" : [ {
+      "Name" : "outposts",
+      "Method" : "create_quote",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateRenewal",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateRenewal",
+      "Service" : "outposts"
+    } ],
     "SDK" : [ {
       "Name" : "outposts",
       "Method" : "create_renewal",
@@ -672,6 +805,17 @@
     "SDK" : [ {
       "Name" : "outposts",
       "Method" : "delete_outpost",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteQuote",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteQuote",
+      "Service" : "outposts"
+    } ],
+    "SDK" : [ {
+      "Name" : "outposts",
+      "Method" : "delete_quote",
       "Package" : "Boto3"
     } ]
   }, {
@@ -774,7 +918,22 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetQuote",
+    "AuthorizedActions" : [ {
+      "Name" : "GetQuote",
+      "Service" : "outposts"
+    } ],
+    "SDK" : [ {
+      "Name" : "outposts",
+      "Method" : "get_quote",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetRenewalPricing",
+    "AuthorizedActions" : [ {
+      "Name" : "GetRenewalPricing",
+      "Service" : "outposts"
+    } ],
     "SDK" : [ {
       "Name" : "outposts",
       "Method" : "get_renewal_pricing",
@@ -858,6 +1017,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListOrderableInstanceTypes",
+    "AuthorizedActions" : [ {
+      "Name" : "ListOrderableInstanceTypes",
+      "Service" : "outposts"
+    } ],
+    "SDK" : [ {
+      "Name" : "outposts",
+      "Method" : "list_orderable_instance_types",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListOrders",
     "AuthorizedActions" : [ {
       "Name" : "ListOrders",
@@ -877,6 +1047,17 @@
     "SDK" : [ {
       "Name" : "outposts",
       "Method" : "list_outposts",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListQuotes",
+    "AuthorizedActions" : [ {
+      "Name" : "ListQuotes",
+      "Service" : "outposts"
+    } ],
+    "SDK" : [ {
+      "Name" : "outposts",
+      "Method" : "list_quotes",
       "Package" : "Boto3"
     } ]
   }, {
@@ -961,6 +1142,17 @@
     "SDK" : [ {
       "Name" : "outposts",
       "Method" : "update_outpost",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateQuote",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateQuote",
+      "Service" : "outposts"
+    } ],
+    "SDK" : [ {
+      "Name" : "outposts",
+      "Method" : "update_quote",
       "Package" : "Boto3"
     } ]
   }, {

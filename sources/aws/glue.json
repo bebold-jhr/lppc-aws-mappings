@@ -1423,7 +1423,13 @@
       }
     },
     "Resources" : [ {
+      "Name" : "catalog"
+    }, {
+      "Name" : "database"
+    }, {
       "Name" : "rootcatalog"
+    }, {
+      "Name" : "table"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2846,7 +2852,13 @@
       }
     },
     "Resources" : [ {
+      "Name" : "catalog"
+    }, {
+      "Name" : "database"
+    }, {
       "Name" : "rootcatalog"
+    }, {
+      "Name" : "table"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -4039,7 +4051,13 @@
       }
     },
     "Resources" : [ {
+      "Name" : "catalog"
+    }, {
+      "Name" : "database"
+    }, {
       "Name" : "rootcatalog"
+    }, {
+      "Name" : "table"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,

@@ -943,6 +943,8 @@
     }, {
       "Name" : "Code Security Scan Configuration"
     }, {
+      "Name" : "Connector"
+    }, {
       "Name" : "Filter"
     } ],
     "SupportedBy" : {
@@ -966,6 +968,8 @@
       "Name" : "Code Security Integration"
     }, {
       "Name" : "Code Security Scan Configuration"
+    }, {
+      "Name" : "Connector"
     }, {
       "Name" : "Filter"
     } ],
@@ -1975,6 +1979,10 @@
   }, {
     "Name" : "Code Security Scan Configuration",
     "ARNFormats" : [ "arn:${Partition}:inspector2:${Region}:${Account}:owner/${OwnerId}/codesecurity-configuration/${CodeSecurityScanConfigurationId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "Connector",
+    "ARNFormats" : [ "arn:${Partition}:inspector2:${Region}:${Account}:connector/${ConnectorId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "Filter",

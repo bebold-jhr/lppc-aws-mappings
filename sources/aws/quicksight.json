@@ -1788,9 +1788,9 @@
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
-        "IsPermissionManagement" : true,
+        "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
-        "IsWrite" : true
+        "IsWrite" : false
       }
     },
     "Resources" : [ {
@@ -1841,9 +1841,9 @@
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
-        "IsPermissionManagement" : true,
+        "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
-        "IsWrite" : true
+        "IsWrite" : false
       }
     },
     "Resources" : [ {
@@ -5147,6 +5147,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "BatchDeleteKnowledgeBase",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchDeleteKnowledgeBase",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "DeleteKnowledgeBase",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "batch_delete_knowledge_base",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "BatchDeleteTopicReviewedAnswer",
     "AuthorizedActions" : [ {
       "Name" : "BatchDeleteTopicReviewedAnswer",
@@ -5868,6 +5882,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteKnowledgeBase",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteKnowledgeBase",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "delete_knowledge_base",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteNamespace",
     "AuthorizedActions" : [ {
       "Name" : "DeleteNamespace",
@@ -6502,6 +6527,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeKnowledgeBase",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeKnowledgeBase",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_knowledge_base",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeKnowledgeBasePermissions",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeKnowledgeBasePermissions",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_knowledge_base_permissions",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeNamespace",
     "AuthorizedActions" : [ {
       "Name" : "DescribeNamespace",
@@ -7075,6 +7122,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListKnowledgeBases",
+    "AuthorizedActions" : [ {
+      "Name" : "ListKnowledgeBases",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_knowledge_bases",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListNamespaces",
     "AuthorizedActions" : [ {
       "Name" : "ListNamespaces",
@@ -7290,6 +7348,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListUsersIndexCapacity",
+    "AuthorizedActions" : [ {
+      "Name" : "ListUsersIndexCapacity",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_users_index_capacity",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListVPCConnections",
     "AuthorizedActions" : [ {
       "Name" : "ListVPCConnections",
@@ -7450,6 +7519,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "search_groups",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "SearchKnowledgeBases",
+    "AuthorizedActions" : [ {
+      "Name" : "SearchKnowledgeBases",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "search_knowledge_bases",
       "Package" : "Boto3"
     } ]
   }, {
@@ -7948,6 +8028,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_key_registration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateKnowledgeBasePermissions",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateKnowledgeBasePermissions",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_knowledge_base_permissions",
       "Package" : "Boto3"
     } ]
   }, {

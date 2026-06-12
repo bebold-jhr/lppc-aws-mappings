@@ -735,7 +735,7 @@
     }
   }, {
     "Name" : "PutEvents",
-    "ActionConditionKeys" : [ "events:detail-type", "events:eventBusInvocation", "events:source" ],
+    "ActionConditionKeys" : [ "events:ResourceArn", "events:SystemMetadata/EventGroupId", "events:detail-type", "events:eventBusInvocation", "events:source" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -746,6 +746,8 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
+    }, {
+      "Name" : "event-busv2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,

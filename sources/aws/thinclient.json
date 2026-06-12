@@ -491,6 +491,10 @@
     } ]
   }, {
     "Name" : "UpdateEnvironment",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateEnvironment",
+      "Service" : "thinclient"
+    } ],
     "SDK" : [ {
       "Name" : "workspaces-thin-client",
       "Method" : "update_environment",
