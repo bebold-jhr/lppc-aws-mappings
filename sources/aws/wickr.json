@@ -1257,6 +1257,10 @@
     } ]
   }, {
     "Name" : "UpdateGuestUser",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateGuestUser",
+      "Service" : "wickr"
+    } ],
     "SDK" : [ {
       "Name" : "wickr",
       "Method" : "update_guest_user",

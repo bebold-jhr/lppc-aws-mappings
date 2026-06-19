@@ -1530,9 +1530,6 @@
         "iam:PassedToService" : [ "personalize.amazonaws.com" ]
       },
       "Service" : "iam"
-    }, {
-      "Name" : "TagResource",
-      "Service" : "personalize"
     } ],
     "SDK" : [ {
       "Name" : "personalize",

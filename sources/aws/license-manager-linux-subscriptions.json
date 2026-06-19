@@ -269,6 +269,10 @@
     } ]
   }, {
     "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "license-manager-linux-subscriptions"
+    } ],
     "SDK" : [ {
       "Name" : "license-manager-linux-subscriptions",
       "Method" : "tag_resource",

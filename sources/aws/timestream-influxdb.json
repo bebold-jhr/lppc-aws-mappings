@@ -355,6 +355,9 @@
       "Name" : "CreateDbInstance",
       "Service" : "timestream-influxdb"
     }, {
+      "Name" : "CreateDbParameterGroup",
+      "Service" : "timestream-influxdb"
+    }, {
       "Name" : "TagResource",
       "Service" : "timestream-influxdb"
     } ],

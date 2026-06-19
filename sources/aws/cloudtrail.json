@@ -1212,7 +1212,7 @@
     }, {
       "Name" : "PassRole",
       "Context" : {
-        "iam:PassedToService" : [ "cloudtrail.amazonaws.com" ]
+        "iam:PassedToService" : [ "cloudtrail.amazonaws.com", "cloudtrail.preprod.amazonaws.com" ]
       },
       "Service" : "iam"
     } ],
@@ -1328,7 +1328,7 @@
     }, {
       "Name" : "PassRole",
       "Context" : {
-        "iam:PassedToService" : [ "cloudtrail.amazonaws.com" ]
+        "iam:PassedToService" : [ "cloudtrail.amazonaws.com", "cloudtrail.preprod.amazonaws.com" ]
       },
       "Service" : "iam"
     } ],
@@ -1722,7 +1722,7 @@
     "AuthorizedActions" : [ {
       "Name" : "PassRole",
       "Context" : {
-        "iam:PassedToService" : [ "cloudtrail.amazonaws.com" ]
+        "iam:PassedToService" : [ "cloudtrail.amazonaws.com", "cloudtrail.preprod.amazonaws.com" ]
       },
       "Service" : "iam"
     }, {
@@ -1833,7 +1833,7 @@
     "AuthorizedActions" : [ {
       "Name" : "PassRole",
       "Context" : {
-        "iam:PassedToService" : [ "cloudtrail.amazonaws.com" ]
+        "iam:PassedToService" : [ "cloudtrail.amazonaws.com", "cloudtrail.preprod.amazonaws.com" ]
       },
       "Service" : "iam"
     }, {

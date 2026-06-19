@@ -2152,6 +2152,10 @@
     } ]
   }, {
     "Name" : "CreateServiceFunctionResources",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateServiceFunctionResources",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehubv2",
       "Method" : "create_service_function_resources",
@@ -2529,6 +2533,10 @@
     } ]
   }, {
     "Name" : "ImportPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "ImportPolicy",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehubv2",
       "Method" : "import_policy",
@@ -3132,6 +3140,10 @@
     } ]
   }, {
     "Name" : "UpdateDependency",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateDependency",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehubv2",
       "Method" : "update_dependency",
@@ -3139,6 +3151,10 @@
     } ]
   }, {
     "Name" : "UpdateFailureModeFinding",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateFailureModeFinding",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehubv2",
       "Method" : "update_failure_mode_finding",

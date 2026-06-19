@@ -2035,9 +2035,6 @@
         "iam:PassedToService" : [ "proton.amazonaws.com" ]
       },
       "Service" : "iam"
-    }, {
-      "Name" : "TagResource",
-      "Service" : "proton"
     } ],
     "SDK" : [ {
       "Name" : "proton",
@@ -2080,9 +2077,6 @@
     }, {
       "Name" : "PassConnection",
       "Service" : "codestar-connections"
-    }, {
-      "Name" : "TagResource",
-      "Service" : "proton"
     } ],
     "SDK" : [ {
       "Name" : "proton",

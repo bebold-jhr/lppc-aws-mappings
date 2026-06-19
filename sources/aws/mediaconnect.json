@@ -1715,6 +1715,9 @@
     "AuthorizedActions" : [ {
       "Name" : "DeleteRouterInput",
       "Service" : "mediaconnect"
+    }, {
+      "Name" : "UpdateFlowOutput",
+      "Service" : "mediaconnect"
     } ],
     "SDK" : [ {
       "Name" : "mediaconnect",
@@ -1736,6 +1739,9 @@
     "Name" : "DeleteRouterOutput",
     "AuthorizedActions" : [ {
       "Name" : "DeleteRouterOutput",
+      "Service" : "mediaconnect"
+    }, {
+      "Name" : "UpdateFlowSource",
       "Service" : "mediaconnect"
     } ],
     "SDK" : [ {

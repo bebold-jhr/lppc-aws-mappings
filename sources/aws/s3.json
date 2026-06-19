@@ -21,6 +21,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "AllowVendedLogDeliveryForResource",
+    "ActionConditionKeys" : [ "s3:deliverySourceArn", "s3:logType", "s3:resourceArnBeingAuthorized" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "bucket"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "AssociateAccessGrantsIdentityCenter",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
@@ -505,6 +523,26 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteObjectAnnotation",
+    "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256", "s3:x-amz-object-if-match" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "accesspointobject"
+    }, {
+      "Name" : "object"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteObjectTagging",
     "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
@@ -527,6 +565,26 @@
   }, {
     "Name" : "DeleteObjectVersion",
     "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:versionid", "s3:x-amz-content-sha256" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "accesspointobject"
+    }, {
+      "Name" : "object"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteObjectVersionAnnotation",
+    "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:versionid", "s3:x-amz-content-sha256", "s3:x-amz-object-if-match" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1473,6 +1531,26 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetObjectAnnotation",
+    "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "accesspointobject"
+    }, {
+      "Name" : "object"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetObjectAttributes",
     "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
@@ -1604,6 +1682,44 @@
     "Resources" : [ {
       "Name" : "accesspointobject"
     }, {
+      "Name" : "object"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetObjectVersionAnnotation",
+    "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:versionid", "s3:x-amz-content-sha256" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "accesspointobject"
+    }, {
+      "Name" : "object"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetObjectVersionAnnotationForReplication",
+    "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
       "Name" : "object"
     } ],
     "SupportedBy" : {
@@ -1999,6 +2115,46 @@
   }, {
     "Name" : "ListMultipartUploadParts",
     "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "accesspointobject"
+    }, {
+      "Name" : "object"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListObjectAnnotations",
+    "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:annotation-prefix", "s3:authType", "s3:max-annotation-results", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "accesspointobject"
+    }, {
+      "Name" : "object"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListObjectVersionAnnotations",
+    "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:annotation-prefix", "s3:authType", "s3:max-annotation-results", "s3:signatureAge", "s3:signatureversion", "s3:versionid", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -2609,7 +2765,7 @@
     }
   }, {
     "Name" : "PutObject",
-    "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ObjectCreationOperation", "s3:RequestObjectTag/<key>", "s3:RequestObjectTagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:if-match", "s3:if-none-match", "s3:object-lock-legal-hold", "s3:object-lock-mode", "s3:object-lock-remaining-retention-days", "s3:object-lock-retain-until-date", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-acl", "s3:x-amz-content-sha256", "s3:x-amz-copy-source", "s3:x-amz-grant-full-control", "s3:x-amz-grant-read", "s3:x-amz-grant-read-acp", "s3:x-amz-grant-write", "s3:x-amz-grant-write-acp", "s3:x-amz-metadata-directive", "s3:x-amz-server-side-encryption", "s3:x-amz-server-side-encryption-aws-kms-key-id", "s3:x-amz-server-side-encryption-customer-algorithm", "s3:x-amz-storage-class", "s3:x-amz-website-redirect-location" ],
+    "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ObjectCreationOperation", "s3:RequestObjectTag/<key>", "s3:RequestObjectTagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:if-match", "s3:if-none-match", "s3:object-lock-legal-hold", "s3:object-lock-mode", "s3:object-lock-remaining-retention-days", "s3:object-lock-retain-until-date", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-acl", "s3:x-amz-content-sha256", "s3:x-amz-copy-source", "s3:x-amz-grant-full-control", "s3:x-amz-grant-read", "s3:x-amz-grant-read-acp", "s3:x-amz-grant-write", "s3:x-amz-grant-write-acp", "s3:x-amz-metadata-directive", "s3:x-amz-object-annotation-directive", "s3:x-amz-server-side-encryption", "s3:x-amz-server-side-encryption-aws-kms-key-id", "s3:x-amz-server-side-encryption-customer-algorithm", "s3:x-amz-storage-class", "s3:x-amz-website-redirect-location" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2634,6 +2790,26 @@
       "Properties" : {
         "IsList" : false,
         "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "accesspointobject"
+    }, {
+      "Name" : "object"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutObjectAnnotation",
+    "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256", "s3:x-amz-object-if-match" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : true
       }
@@ -2714,6 +2890,26 @@
       "Properties" : {
         "IsList" : false,
         "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "accesspointobject"
+    }, {
+      "Name" : "object"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutObjectVersionAnnotation",
+    "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:versionid", "s3:x-amz-content-sha256", "s3:x-amz-object-if-match" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : true
       }
@@ -2819,6 +3015,24 @@
   }, {
     "Name" : "ReplicateObject",
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256", "s3:x-amz-server-side-encryption", "s3:x-amz-server-side-encryption-aws-kms-key-id", "s3:x-amz-server-side-encryption-customer-algorithm" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "object"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ReplicateObjectAnnotation",
+    "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2963,6 +3177,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "UpdateBucketMetadataAnnotationTableConfiguration",
+    "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "bucket"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "UpdateBucketMetadataInventoryTableConfiguration",
@@ -3145,11 +3377,17 @@
     "Name" : "s3:TlsVersion",
     "Types" : [ "Numeric" ]
   }, {
+    "Name" : "s3:annotation-prefix",
+    "Types" : [ "String" ]
+  }, {
     "Name" : "s3:authType",
     "Types" : [ "String" ]
   }, {
     "Name" : "s3:delimiter",
     "Types" : [ "String" ]
+  }, {
+    "Name" : "s3:deliverySourceArn",
+    "Types" : [ "ARN" ]
   }, {
     "Name" : "s3:destinationRegion",
     "Types" : [ "String" ]
@@ -3165,6 +3403,12 @@
   }, {
     "Name" : "s3:locationconstraint",
     "Types" : [ "String" ]
+  }, {
+    "Name" : "s3:logType",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "s3:max-annotation-results",
+    "Types" : [ "Numeric" ]
   }, {
     "Name" : "s3:max-keys",
     "Types" : [ "Numeric" ]
@@ -3183,6 +3427,9 @@
   }, {
     "Name" : "s3:prefix",
     "Types" : [ "String" ]
+  }, {
+    "Name" : "s3:resourceArnBeingAuthorized",
+    "Types" : [ "ARN" ]
   }, {
     "Name" : "s3:signatureAge",
     "Types" : [ "Numeric" ]
@@ -3221,6 +3468,12 @@
     "Types" : [ "String" ]
   }, {
     "Name" : "s3:x-amz-metadata-directive",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "s3:x-amz-object-annotation-directive",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "s3:x-amz-object-if-match",
     "Types" : [ "String" ]
   }, {
     "Name" : "s3:x-amz-object-ownership",
@@ -3871,6 +4124,13 @@
     "SDK" : [ {
       "Name" : "s3",
       "Method" : "delete_object",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteObjectAnnotation",
+    "SDK" : [ {
+      "Name" : "s3",
+      "Method" : "delete_object_annotation",
       "Package" : "Boto3"
     } ]
   }, {
@@ -4534,6 +4794,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetObjectAnnotation",
+    "SDK" : [ {
+      "Name" : "s3",
+      "Method" : "get_object_annotation",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetObjectAttributes",
     "AuthorizedActions" : [ {
       "Name" : "GetObject",
@@ -4862,6 +5129,13 @@
     "SDK" : [ {
       "Name" : "s3",
       "Method" : "list_multipart_uploads",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListObjectAnnotations",
+    "SDK" : [ {
+      "Name" : "s3",
+      "Method" : "list_object_annotations",
       "Package" : "Boto3"
     } ]
   }, {
@@ -5325,6 +5599,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "PutObjectAnnotation",
+    "SDK" : [ {
+      "Name" : "s3",
+      "Method" : "put_object_annotation",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "PutObjectLegalHold",
     "AuthorizedActions" : [ {
       "Name" : "PutObjectLegalHold",
@@ -5494,6 +5775,13 @@
     "SDK" : [ {
       "Name" : "s3control",
       "Method" : "update_access_grants_location",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateBucketMetadataAnnotationTableConfiguration",
+    "SDK" : [ {
+      "Name" : "s3",
+      "Method" : "update_bucket_metadata_annotation_table_configuration",
       "Package" : "Boto3"
     } ]
   }, {
