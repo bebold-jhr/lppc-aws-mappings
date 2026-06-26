@@ -8835,6 +8835,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetEvaluationFormValidation",
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "get_evaluation_form_validation",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetFederationToken",
     "AuthorizedActions" : [ {
       "Name" : "GetFederationToken",
@@ -10252,6 +10259,13 @@
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "start_email_contact",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartEvaluationFormValidation",
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "start_evaluation_form_validation",
       "Package" : "Boto3"
     } ]
   }, {

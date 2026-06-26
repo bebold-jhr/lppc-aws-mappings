@@ -2091,6 +2091,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateRecommendationTemplate",
       "Service" : "resiliencehub"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "resiliencehub"
     } ],
     "SDK" : [ {
       "Name" : "resiliencehub",
@@ -2165,6 +2168,9 @@
     "Name" : "CreateSystem",
     "AuthorizedActions" : [ {
       "Name" : "CreateSystem",
+      "Service" : "resiliencehub"
+    }, {
+      "Name" : "TagResource",
       "Service" : "resiliencehub"
     } ],
     "SDK" : [ {
@@ -2526,6 +2532,10 @@
     } ]
   }, {
     "Name" : "ImportApp",
+    "AuthorizedActions" : [ {
+      "Name" : "ImportApp",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehubv2",
       "Method" : "import_app",

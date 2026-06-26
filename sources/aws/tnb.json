@@ -798,13 +798,6 @@
     } ]
   }, {
     "Name" : "InstantiateSolNetworkInstance",
-    "AuthorizedActions" : [ {
-      "Name" : "InstantiateSolNetworkInstance",
-      "Service" : "tnb"
-    }, {
-      "Name" : "TagResource",
-      "Service" : "tnb"
-    } ],
     "SDK" : [ {
       "Name" : "tnb",
       "Method" : "instantiate_sol_network_instance",

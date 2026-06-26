@@ -2313,6 +2313,12 @@
   }, {
     "Name" : "UpdateDistributionConfiguration",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "vmie.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateDistributionConfiguration",
       "Service" : "imagebuilder"
     } ],

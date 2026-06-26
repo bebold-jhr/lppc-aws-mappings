@@ -808,6 +808,10 @@
     } ]
   }, {
     "Name" : "CreatePresignedUrl",
+    "AuthorizedActions" : [ {
+      "Name" : "ImportDocument",
+      "Service" : "qapps"
+    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "create_presigned_url",

@@ -241,6 +241,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "AttachDataSource",
+    "AuthorizedActions" : [ {
+      "Name" : "AttachDataSource",
+      "Service" : "es"
+    } ],
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "attach_data_source",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "AuthorizeVpcEndpointAccess",
     "AuthorizedActions" : [ {
       "Name" : "AuthorizeVpcEndpointAccess",
@@ -480,6 +491,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeDataSourceAttachment",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeDataSourceAttachment",
+      "Service" : "es"
+    } ],
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "describe_data_source_attachment",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeDomain",
     "AuthorizedActions" : [ {
       "Name" : "DescribeDomain",
@@ -680,6 +702,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DetachDataSource",
+    "AuthorizedActions" : [ {
+      "Name" : "DetachDataSource",
+      "Service" : "es"
+    } ],
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "detach_data_source",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DissociatePackage",
     "AuthorizedActions" : [ {
       "Name" : "DissociatePackage",
@@ -834,6 +867,17 @@
     "SDK" : [ {
       "Name" : "opensearch",
       "Method" : "list_applications",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListDataSourceAttachments",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDataSourceAttachments",
+      "Service" : "es"
+    } ],
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "list_data_source_attachments",
       "Package" : "Boto3"
     } ]
   }, {

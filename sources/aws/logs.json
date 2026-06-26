@@ -566,6 +566,23 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DeleteSyslogConfiguration",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "log-group"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteTransformer",
     "Annotations" : {
       "Properties" : {
@@ -1378,6 +1395,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListSyslogConfigurations",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
@@ -1733,6 +1764,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "PutSyslogConfiguration",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "log-group"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "PutTransformer",
@@ -2472,6 +2520,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteSyslogConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteSyslogConfiguration",
+      "Service" : "logs"
+    } ],
+    "SDK" : [ {
+      "Name" : "logs",
+      "Method" : "delete_syslog_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteTransformer",
     "AuthorizedActions" : [ {
       "Name" : "DeleteTransformer",
@@ -3023,6 +3082,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListSyslogConfigurations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSyslogConfigurations",
+      "Service" : "logs"
+    } ],
+    "SDK" : [ {
+      "Name" : "logs",
+      "Method" : "list_syslog_configurations",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListTagsForResource",
     "AuthorizedActions" : [ {
       "Name" : "ListTagsForResource",
@@ -3271,6 +3341,17 @@
     "SDK" : [ {
       "Name" : "logs",
       "Method" : "put_subscription_filter",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutSyslogConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "PutSyslogConfiguration",
+      "Service" : "logs"
+    } ],
+    "SDK" : [ {
+      "Name" : "logs",
+      "Method" : "put_syslog_configuration",
       "Package" : "Boto3"
     } ]
   }, {

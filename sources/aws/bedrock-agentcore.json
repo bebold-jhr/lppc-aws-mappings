@@ -6372,6 +6372,9 @@
   }, {
     "Name" : "UpdateHarness",
     "AuthorizedActions" : [ {
+      "Name" : "GetMemory",
+      "Service" : "bedrock-agentcore"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "bedrock-agentcore.amazonaws.com" ]

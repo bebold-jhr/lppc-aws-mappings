@@ -129,7 +129,7 @@
     }
   }, {
     "Name" : "CreateCluster",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "eks:authenticationMode", "eks:blockStorageEnabled", "eks:bootstrapClusterCreatorAdminPermissions", "eks:bootstrapSelfManagedAddons", "eks:computeConfigEnabled", "eks:controlPlaneScalingTier", "eks:deletionProtection", "eks:elasticLoadBalancingEnabled", "eks:encryptionConfigProviderKeyArns", "eks:endpointPrivateAccess", "eks:endpointPublicAccess", "eks:kubernetesVersion", "eks:loggingType/${type}", "eks:supportType", "eks:zonalShiftEnabled" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "eks:authenticationMode", "eks:blockStorageEnabled", "eks:bootstrapClusterCreatorAdminPermissions", "eks:bootstrapSelfManagedAddons", "eks:computeConfigEnabled", "eks:controlPlaneEgressMode", "eks:controlPlaneScalingTier", "eks:deletionProtection", "eks:elasticLoadBalancingEnabled", "eks:encryptionConfigProviderKeyArns", "eks:endpointPrivateAccess", "eks:endpointPublicAccess", "eks:kubernetesVersion", "eks:loggingType/${type}", "eks:supportType", "eks:zonalShiftEnabled" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1112,7 +1112,7 @@
     }
   }, {
     "Name" : "UpdateClusterConfig",
-    "ActionConditionKeys" : [ "eks:authenticationMode", "eks:blockStorageEnabled", "eks:computeConfigEnabled", "eks:controlPlaneScalingTier", "eks:deletionProtection", "eks:elasticLoadBalancingEnabled", "eks:endpointPrivateAccess", "eks:endpointPublicAccess", "eks:loggingType/${type}", "eks:supportType", "eks:zonalShiftEnabled" ],
+    "ActionConditionKeys" : [ "eks:authenticationMode", "eks:blockStorageEnabled", "eks:computeConfigEnabled", "eks:controlPlaneEgressMode", "eks:controlPlaneScalingTier", "eks:deletionProtection", "eks:elasticLoadBalancingEnabled", "eks:endpointPrivateAccess", "eks:endpointPublicAccess", "eks:loggingType/${type}", "eks:supportType", "eks:zonalShiftEnabled" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1251,6 +1251,9 @@
   }, {
     "Name" : "eks:computeConfigEnabled",
     "Types" : [ "Bool" ]
+  }, {
+    "Name" : "eks:controlPlaneEgressMode",
+    "Types" : [ "String" ]
   }, {
     "Name" : "eks:controlPlaneScalingTier",
     "Types" : [ "String" ]

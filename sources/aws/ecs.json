@@ -2476,7 +2476,7 @@
     "AuthorizedActions" : [ {
       "Name" : "PassRole",
       "Context" : {
-        "iam:PassedToService" : [ "ecs.amazonaws.com" ]
+        "iam:PassedToService" : [ "ecs-tasks.amazonaws.com", "ecs.amazonaws.com" ]
       },
       "Service" : "iam"
     }, {
