@@ -16,6 +16,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateWhatsAppFlow",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "waba"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateWhatsAppMessageTemplate",
     "Annotations" : {
       "Properties" : {
@@ -67,6 +84,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteWhatsAppFlow",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "waba"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteWhatsAppMessageMedia",
     "Annotations" : {
       "Properties" : {
@@ -85,6 +119,23 @@
     }
   }, {
     "Name" : "DeleteWhatsAppMessageTemplate",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "waba"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeprecateWhatsAppFlow",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -146,6 +197,40 @@
     },
     "Resources" : [ {
       "Name" : "phone-number-id"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetWhatsAppFlow",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "waba"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetWhatsAppFlowPreview",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "waba"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -219,6 +304,40 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListWhatsAppFlowAssets",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "waba"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListWhatsAppFlows",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "waba"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListWhatsAppMessageTemplates",
     "Annotations" : {
       "Properties" : {
@@ -264,6 +383,23 @@
     },
     "Resources" : [ {
       "Name" : "phone-number-id"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PublishWhatsAppFlow",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "waba"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -344,6 +480,40 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateWhatsAppFlow",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "waba"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateWhatsAppFlowAssets",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "waba"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateWhatsAppMessageTemplate",
     "Annotations" : {
       "Properties" : {
@@ -393,6 +563,10 @@
     } ]
   }, {
     "Name" : "CreateWhatsAppFlow",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateWhatsAppFlow",
+      "Service" : "social-messaging"
+    } ],
     "SDK" : [ {
       "Name" : "socialmessaging",
       "Method" : "create_whatsapp_flow",
@@ -433,6 +607,10 @@
     } ]
   }, {
     "Name" : "DeleteWhatsAppFlow",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteWhatsAppFlow",
+      "Service" : "social-messaging"
+    } ],
     "SDK" : [ {
       "Name" : "socialmessaging",
       "Method" : "delete_whatsapp_flow",
@@ -462,6 +640,10 @@
     } ]
   }, {
     "Name" : "DeprecateWhatsAppFlow",
+    "AuthorizedActions" : [ {
+      "Name" : "DeprecateWhatsAppFlow",
+      "Service" : "social-messaging"
+    } ],
     "SDK" : [ {
       "Name" : "socialmessaging",
       "Method" : "deprecate_whatsapp_flow",
@@ -502,6 +684,10 @@
     } ]
   }, {
     "Name" : "GetWhatsAppFlow",
+    "AuthorizedActions" : [ {
+      "Name" : "GetWhatsAppFlow",
+      "Service" : "social-messaging"
+    } ],
     "SDK" : [ {
       "Name" : "socialmessaging",
       "Method" : "get_whatsapp_flow",
@@ -509,6 +695,10 @@
     } ]
   }, {
     "Name" : "GetWhatsAppFlowPreview",
+    "AuthorizedActions" : [ {
+      "Name" : "GetWhatsAppFlowPreview",
+      "Service" : "social-messaging"
+    } ],
     "SDK" : [ {
       "Name" : "socialmessaging",
       "Method" : "get_whatsapp_flow_preview",
@@ -560,6 +750,10 @@
     } ]
   }, {
     "Name" : "ListWhatsAppFlowAssets",
+    "AuthorizedActions" : [ {
+      "Name" : "ListWhatsAppFlowAssets",
+      "Service" : "social-messaging"
+    } ],
     "SDK" : [ {
       "Name" : "socialmessaging",
       "Method" : "list_whatsapp_flow_assets",
@@ -567,6 +761,10 @@
     } ]
   }, {
     "Name" : "ListWhatsAppFlows",
+    "AuthorizedActions" : [ {
+      "Name" : "ListWhatsAppFlows",
+      "Service" : "social-messaging"
+    } ],
     "SDK" : [ {
       "Name" : "socialmessaging",
       "Method" : "list_whatsapp_flows",
@@ -607,6 +805,10 @@
     } ]
   }, {
     "Name" : "PublishWhatsAppFlow",
+    "AuthorizedActions" : [ {
+      "Name" : "PublishWhatsAppFlow",
+      "Service" : "social-messaging"
+    } ],
     "SDK" : [ {
       "Name" : "socialmessaging",
       "Method" : "publish_whatsapp_flow",
@@ -664,6 +866,10 @@
     } ]
   }, {
     "Name" : "UpdateWhatsAppFlow",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateWhatsAppFlow",
+      "Service" : "social-messaging"
+    } ],
     "SDK" : [ {
       "Name" : "socialmessaging",
       "Method" : "update_whatsapp_flow",
@@ -671,6 +877,10 @@
     } ]
   }, {
     "Name" : "UpdateWhatsAppFlowAssets",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateWhatsAppFlowAssets",
+      "Service" : "social-messaging"
+    } ],
     "SDK" : [ {
       "Name" : "socialmessaging",
       "Method" : "update_whatsapp_flow_assets",

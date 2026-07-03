@@ -747,6 +747,9 @@
       },
       "Service" : "iam"
     }, {
+      "Name" : "PutPipelineRule",
+      "Service" : "cloudwatch"
+    }, {
       "Name" : "TagResource",
       "Service" : "observabilityadmin"
     } ],
@@ -808,6 +811,9 @@
   }, {
     "Name" : "DeleteTelemetryPipeline",
     "AuthorizedActions" : [ {
+      "Name" : "DeletePipelineRule",
+      "Service" : "cloudwatch"
+    }, {
       "Name" : "DeleteTelemetryPipeline",
       "Service" : "observabilityadmin"
     } ],
@@ -1132,6 +1138,9 @@
         "iam:PassedToService" : [ "logs.amazonaws.com", "telemetry-pipelines.observabilityadmin.amazonaws.com" ]
       },
       "Service" : "iam"
+    }, {
+      "Name" : "PutPipelineRule",
+      "Service" : "cloudwatch"
     }, {
       "Name" : "UpdateTelemetryPipeline",
       "Service" : "observabilityadmin"

@@ -72,6 +72,23 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CancelUpdate",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateAccessEntry",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "eks:accessEntryType", "eks:kubernetesGroups", "eks:principalArn", "eks:username" ],
     "Annotations" : {
@@ -1337,6 +1354,17 @@
     "SDK" : [ {
       "Name" : "eks",
       "Method" : "associate_identity_provider_config",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CancelUpdate",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelUpdate",
+      "Service" : "eks"
+    } ],
+    "SDK" : [ {
+      "Name" : "eks",
+      "Method" : "cancel_update",
       "Package" : "Boto3"
     } ]
   }, {

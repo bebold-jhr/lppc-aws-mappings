@@ -11,6 +11,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "agentcore-gateway"
+    }, {
       "Name" : "amplify-app"
     }, {
       "Name" : "apigateway"
@@ -347,6 +349,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "agentcore-gateway"
+    }, {
       "Name" : "amplify-app"
     }, {
       "Name" : "apigateway"
@@ -636,6 +640,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "agentcore-gateway"
+    }, {
       "Name" : "amplify-app"
     }, {
       "Name" : "apigateway"
@@ -780,6 +786,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "agentcore-gateway"
+    }, {
       "Name" : "amplify-app"
     }, {
       "Name" : "apprunner"
@@ -1802,6 +1810,9 @@
     } ]
   } ],
   "Resources" : [ {
+    "Name" : "agentcore-gateway",
+    "ARNFormats" : [ "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:gateway/${GatewayId}" ]
+  }, {
     "Name" : "amplify-app",
     "ARNFormats" : [ "arn:${Partition}:amplify:${Region}:${Account}:apps/${AppId}" ]
   }, {

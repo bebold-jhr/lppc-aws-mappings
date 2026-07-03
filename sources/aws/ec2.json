@@ -818,6 +818,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "AttachImageWatermark",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "image",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "AttachInternetGateway",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -1393,6 +1412,9 @@
       }
     },
     "Resources" : [ {
+      "Name" : "capacity-reservation",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    }, {
       "Name" : "capacity-reservation-cancellation-quote",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     } ],
@@ -9288,6 +9310,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DetachImageWatermark",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "image",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DetachInternetGateway",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -15025,6 +15066,9 @@
       "Name" : "placement-group",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:IsLaunchTemplateResource", "ec2:LaunchTemplate", "ec2:PlacementGroupName", "ec2:PlacementGroupStrategy", "ec2:ResourceTag/${TagKey}" ]
     }, {
+      "Name" : "secondary-interface",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
+    }, {
       "Name" : "secondary-subnet",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     }, {
@@ -15033,6 +15077,9 @@
     }, {
       "Name" : "snapshot",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:IsLaunchTemplateResource", "ec2:LaunchTemplate", "ec2:Owner", "ec2:ParentVolume", "ec2:ResourceTag/${TagKey}", "ec2:SnapshotID", "ec2:SnapshotTime", "ec2:VolumeSize" ]
+    }, {
+      "Name" : "spot-instances-request",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     }, {
       "Name" : "subnet",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:AvailabilityZone", "ec2:AvailabilityZoneId", "ec2:IsLaunchTemplateResource", "ec2:LaunchTemplate", "ec2:ResourceTag/${TagKey}", "ec2:SubnetID", "ec2:Vpc" ]
@@ -16380,6 +16427,10 @@
     } ]
   }, {
     "Name" : "AttachImageWatermark",
+    "AuthorizedActions" : [ {
+      "Name" : "AttachImageWatermark",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "attach_image_watermark",
@@ -19229,6 +19280,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeAccountVpcEncryptionControl",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "describe_account_vpc_encryption_control",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeAddressTransfers",
     "AuthorizedActions" : [ {
       "Name" : "DescribeAddressTransfers",
@@ -21279,6 +21337,10 @@
     } ]
   }, {
     "Name" : "DetachImageWatermark",
+    "AuthorizedActions" : [ {
+      "Name" : "DetachImageWatermark",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "detach_image_watermark",
@@ -22969,6 +23031,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ModifyAccountVpcEncryptionControl",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "modify_account_vpc_encryption_control",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ModifyAddressAttribute",
     "AuthorizedActions" : [ {
       "Name" : "ModifyAddressAttribute",
@@ -23736,6 +23805,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "modify_vpc_endpoint_connection_notification",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ModifyVpcEndpointPayerResponsibility",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "modify_vpc_endpoint_payer_responsibility",
       "Package" : "Boto3"
     } ]
   }, {

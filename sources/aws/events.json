@@ -141,6 +141,8 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
+    }, {
+      "Name" : "event-busv2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -277,6 +279,8 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
+    }, {
+      "Name" : "event-busv2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -401,6 +405,8 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
+    }, {
+      "Name" : "event-busv2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -705,9 +711,15 @@
     "Resources" : [ {
       "Name" : "event-bus"
     }, {
+      "Name" : "event-busv2"
+    }, {
+      "Name" : "publisher"
+    }, {
       "Name" : "rule-on-custom-event-bus"
     }, {
       "Name" : "rule-on-default-event-bus"
+    }, {
+      "Name" : "subscriber"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -907,9 +919,15 @@
     "Resources" : [ {
       "Name" : "event-bus"
     }, {
+      "Name" : "event-busv2"
+    }, {
+      "Name" : "publisher"
+    }, {
       "Name" : "rule-on-custom-event-bus"
     }, {
       "Name" : "rule-on-default-event-bus"
+    }, {
+      "Name" : "subscriber"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -943,9 +961,15 @@
     "Resources" : [ {
       "Name" : "event-bus"
     }, {
+      "Name" : "event-busv2"
+    }, {
+      "Name" : "publisher"
+    }, {
       "Name" : "rule-on-custom-event-bus"
     }, {
       "Name" : "rule-on-default-event-bus"
+    }, {
+      "Name" : "subscriber"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1036,6 +1060,8 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
+    }, {
+      "Name" : "event-busv2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,

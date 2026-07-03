@@ -4494,6 +4494,13 @@
     } ]
   }, {
     "Name" : "GetBucketLifecycleConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "GetLifecycleConfiguration",
+      "Service" : "s3"
+    }, {
+      "Name" : "GetLifecycleConfiguration",
+      "Service" : "s3express"
+    } ],
     "SDK" : [ {
       "Name" : "s3",
       "Method" : "get_bucket_lifecycle_configuration",
@@ -5385,6 +5392,13 @@
     } ]
   }, {
     "Name" : "PutBucketLifecycleConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "PutLifecycleConfiguration",
+      "Service" : "s3"
+    }, {
+      "Name" : "PutLifecycleConfiguration",
+      "Service" : "s3express"
+    } ],
     "SDK" : [ {
       "Name" : "s3",
       "Method" : "put_bucket_lifecycle_configuration",

@@ -8508,6 +8508,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateAsset",
+    "SDK" : [ {
+      "Name" : "glue",
+      "Method" : "update_asset",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateBlueprint",
     "AuthorizedActions" : [ {
       "Name" : "UpdateBlueprint",

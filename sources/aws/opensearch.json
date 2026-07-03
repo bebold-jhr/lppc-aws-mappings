@@ -859,6 +859,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "InsightFeedback",
+    "AuthorizedActions" : [ {
+      "Name" : "InsightFeedback",
+      "Service" : "es"
+    } ],
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "insight_feedback",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListApplications",
     "AuthorizedActions" : [ {
       "Name" : "ListApplications",

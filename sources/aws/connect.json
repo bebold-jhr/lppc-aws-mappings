@@ -643,6 +643,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateAttachedFile",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "attached-file"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateAuthenticationProfile",
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
@@ -3080,6 +3098,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetEvaluationFormValidation",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "evaluation-form"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetFederationToken",
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
@@ -5169,6 +5205,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "StartContactConversationalAnalyticsJob",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "contact"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StartContactEvaluation",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
@@ -5263,6 +5317,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "StartEvaluationFormValidation",
+    "ActionConditionKeys" : [ "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "evaluation-form"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "StartForecastingPlanningSchedulingIntegration",
@@ -7293,6 +7365,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateAttachedFile",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAttachedFile",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "create_attached_file",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateContact",
     "AuthorizedActions" : [ {
       "Name" : "CreateContact",
@@ -8836,6 +8919,10 @@
     } ]
   }, {
     "Name" : "GetEvaluationFormValidation",
+    "AuthorizedActions" : [ {
+      "Name" : "GetEvaluationFormValidation",
+      "Service" : "connect"
+    } ],
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "get_evaluation_form_validation",
@@ -10172,6 +10259,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "SendOutboundWebNotification",
+    "AuthorizedActions" : [ {
+      "Name" : "SendOutboundWebNotification",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "send_outbound_web_notification",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StartAttachedFileUpload",
     "AuthorizedActions" : [ {
       "Name" : "StartAttachedFileUpload",
@@ -10201,6 +10299,17 @@
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "start_chat_contact",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartContactConversationalAnalyticsJob",
+    "AuthorizedActions" : [ {
+      "Name" : "StartContactConversationalAnalyticsJob",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "start_contact_conversational_analytics_job",
       "Package" : "Boto3"
     } ]
   }, {
@@ -10263,6 +10372,10 @@
     } ]
   }, {
     "Name" : "StartEvaluationFormValidation",
+    "AuthorizedActions" : [ {
+      "Name" : "StartEvaluationFormValidation",
+      "Service" : "connect"
+    } ],
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "start_evaluation_form_validation",
@@ -11172,7 +11285,8 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "ai-agent",
-    "ARNFormats" : [ "arn:${Partition}:wisdom:${Region}:${Account}:ai-agent/${AssistantId}/${AIAgentId}:${Version}" ]
+    "ARNFormats" : [ "arn:${Partition}:wisdom:${Region}:${Account}:ai-agent/${AssistantId}/${AIAgentId}:${Version}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "attached-file",
     "ARNFormats" : [ "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/file/${FileId}" ],

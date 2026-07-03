@@ -5153,6 +5153,10 @@
     } ]
   }, {
     "Name" : "StartNotebookExport",
+    "AuthorizedActions" : [ {
+      "Name" : "StartNotebookExport",
+      "Service" : "datazone"
+    } ],
     "SDK" : [ {
       "Name" : "datazone",
       "Method" : "start_notebook_export",

@@ -91,6 +91,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateContainerAssociation",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ContainerAssociation"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateFirewall",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -262,6 +280,23 @@
       "Name" : "Firewall"
     }, {
       "Name" : "VpcEndpointAssociation"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteContainerAssociation",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ContainerAssociation"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -457,6 +492,23 @@
     },
     "Resources" : [ {
       "Name" : "VpcEndpointAssociation"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeContainerAssociation",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ContainerAssociation"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -823,6 +875,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListContainerAssociations",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListFirewallPolicies",
     "Annotations" : {
       "Properties" : {
@@ -983,6 +1049,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "ContainerAssociation"
+    }, {
       "Name" : "Firewall"
     }, {
       "Name" : "FirewallPolicy"
@@ -1119,6 +1187,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "ContainerAssociation"
+    }, {
       "Name" : "Firewall"
     }, {
       "Name" : "FirewallPolicy"
@@ -1153,6 +1223,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "ContainerAssociation"
+    }, {
       "Name" : "Firewall"
     }, {
       "Name" : "FirewallPolicy"
@@ -1187,6 +1259,23 @@
     },
     "Resources" : [ {
       "Name" : "Firewall"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateContainerAssociation",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ContainerAssociation"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1522,6 +1611,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateContainerAssociation",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateContainerAssociation",
+      "Service" : "network-firewall"
+    } ],
+    "SDK" : [ {
+      "Name" : "network-firewall",
+      "Method" : "create_container_association",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateFirewall",
     "AuthorizedActions" : [ {
       "Name" : "AssociateFirewallPolicy",
@@ -1660,6 +1760,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteContainerAssociation",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteContainerAssociation",
+      "Service" : "network-firewall"
+    } ],
+    "SDK" : [ {
+      "Name" : "network-firewall",
+      "Method" : "delete_container_association",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteFirewall",
     "AuthorizedActions" : [ {
       "Name" : "DeleteFirewall",
@@ -1778,6 +1889,17 @@
     "SDK" : [ {
       "Name" : "network-firewall",
       "Method" : "delete_vpc_endpoint_association",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeContainerAssociation",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeContainerAssociation",
+      "Service" : "network-firewall"
+    } ],
+    "SDK" : [ {
+      "Name" : "network-firewall",
+      "Method" : "describe_container_association",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2001,6 +2123,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListContainerAssociations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListContainerAssociations",
+      "Service" : "network-firewall"
+    } ],
+    "SDK" : [ {
+      "Name" : "network-firewall",
+      "Method" : "list_container_associations",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListFirewallPolicies",
     "AuthorizedActions" : [ {
       "Name" : "ListFirewallPolicies",
@@ -2210,6 +2343,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateContainerAssociation",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateContainerAssociation",
+      "Service" : "network-firewall"
+    } ],
+    "SDK" : [ {
+      "Name" : "network-firewall",
+      "Method" : "update_container_association",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateFirewallAnalysisSettings",
     "AuthorizedActions" : [ {
       "Name" : "UpdateFirewallAnalysisSettings",
@@ -2382,6 +2526,10 @@
     } ]
   } ],
   "Resources" : [ {
+    "Name" : "ContainerAssociation",
+    "ARNFormats" : [ "arn:${Partition}:network-firewall:${Region}:${Account}:container-association/${Name}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "Firewall",
     "ARNFormats" : [ "arn:${Partition}:network-firewall:${Region}:${Account}:firewall/${Name}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]

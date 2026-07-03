@@ -1585,6 +1585,10 @@
     } ]
   }, {
     "Name" : "GetAutonomousDatabaseBackup",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAutonomousDatabaseBackup",
+      "Service" : "odb"
+    } ],
     "SDK" : [ {
       "Name" : "odb",
       "Method" : "get_autonomous_database_backup",
@@ -1929,6 +1933,10 @@
     } ]
   }, {
     "Name" : "RestoreAutonomousDatabase",
+    "AuthorizedActions" : [ {
+      "Name" : "RestoreAutonomousDatabase",
+      "Service" : "odb"
+    } ],
     "SDK" : [ {
       "Name" : "odb",
       "Method" : "restore_autonomous_database",

@@ -372,16 +372,6 @@
     } ]
   }, {
     "Name" : "ExportEarthObservationJob",
-    "AuthorizedActions" : [ {
-      "Name" : "ExportEarthObservationJob",
-      "Service" : "sagemaker-geospatial"
-    }, {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "sagemaker-geospatial.amazonaws.com" ]
-      },
-      "Service" : "iam"
-    } ],
     "SDK" : [ {
       "Name" : "sagemaker-geospatial",
       "Method" : "export_earth_observation_job",

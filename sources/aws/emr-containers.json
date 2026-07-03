@@ -495,6 +495,12 @@
       "Name" : "DeleteSecurityGroup",
       "Service" : "ec2"
     }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "pods.eks.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "RevokeSecurityGroupEgress",
       "Service" : "ec2"
     }, {

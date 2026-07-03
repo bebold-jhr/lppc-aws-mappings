@@ -35,6 +35,8 @@
       "Name" : "configuredtableassociation"
     }, {
       "Name" : "idmappingtable"
+    }, {
+      "Name" : "intermediatetable"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -56,6 +58,8 @@
       "Name" : "configuredtableassociation"
     }, {
       "Name" : "idmappingtable"
+    }, {
+      "Name" : "intermediatetable"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -253,6 +257,46 @@
     }, {
       "Name" : "membership",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateIntermediateTable",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "analysistemplate"
+    }, {
+      "Name" : "intermediatetable",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+    }, {
+      "Name" : "membership",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateIntermediateTableAnalysisRule",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "intermediatetable"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -458,6 +502,42 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteIntermediateTable",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "intermediatetable"
+    }, {
+      "Name" : "membership"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteIntermediateTableAnalysisRule",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "intermediatetable"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteMember",
     "Annotations" : {
       "Properties" : {
@@ -503,6 +583,23 @@
     },
     "Resources" : [ {
       "Name" : "privacybudgettemplate"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DisallowIntermediateTable",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "membership"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -753,6 +850,42 @@
       "Name" : "idnamespaceassociation"
     }, {
       "Name" : "membership"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetIntermediateTable",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "intermediatetable"
+    }, {
+      "Name" : "membership"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetIntermediateTableAnalysisRule",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "intermediatetable"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1090,6 +1223,44 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListIntermediateTableVersions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "intermediatetable"
+    }, {
+      "Name" : "membership"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListIntermediateTables",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "intermediatetable"
+    }, {
+      "Name" : "membership"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListMembers",
     "Annotations" : {
       "Properties" : {
@@ -1228,6 +1399,8 @@
     }, {
       "Name" : "configuredtableassociation"
     }, {
+      "Name" : "intermediatetable"
+    }, {
       "Name" : "membership"
     }, {
       "Name" : "privacybudgettemplate"
@@ -1290,6 +1463,29 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "PopulateIntermediateTable",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "configuredtableassociation"
+    }, {
+      "Name" : "idmappingtable"
+    }, {
+      "Name" : "intermediatetable"
+    }, {
+      "Name" : "membership"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "PreviewPrivacyImpact",
     "Annotations" : {
       "Properties" : {
@@ -1321,6 +1517,8 @@
     }, {
       "Name" : "configuredtableassociation"
     }, {
+      "Name" : "intermediatetable"
+    }, {
       "Name" : "membership"
     } ],
     "SupportedBy" : {
@@ -1343,6 +1541,8 @@
       "Name" : "configuredtableassociation"
     }, {
       "Name" : "idmappingtable"
+    }, {
+      "Name" : "intermediatetable"
     }, {
       "Name" : "membership"
     } ],
@@ -1375,6 +1575,8 @@
       "Name" : "idmappingtable"
     }, {
       "Name" : "idnamespaceassociation"
+    }, {
+      "Name" : "intermediatetable"
     }, {
       "Name" : "membership"
     }, {
@@ -1409,6 +1611,8 @@
       "Name" : "idmappingtable"
     }, {
       "Name" : "idnamespaceassociation"
+    }, {
+      "Name" : "intermediatetable"
     }, {
       "Name" : "membership"
     }, {
@@ -1621,6 +1825,42 @@
       "Name" : "idnamespaceassociation"
     }, {
       "Name" : "membership"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateIntermediateTable",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "intermediatetable"
+    }, {
+      "Name" : "membership"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateIntermediateTableAnalysisRule",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "intermediatetable"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1882,6 +2122,31 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateIntermediateTable",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateIntermediateTable",
+      "Service" : "cleanrooms"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "cleanrooms"
+    } ],
+    "SDK" : [ {
+      "Name" : "cleanrooms",
+      "Method" : "create_intermediate_table",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateIntermediateTableAnalysisRule",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateIntermediateTableAnalysisRule",
+      "Service" : "cleanrooms"
+    } ],
+    "SDK" : [ {
+      "Name" : "cleanrooms",
+      "Method" : "create_intermediate_table_analysis_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateMembership",
     "AuthorizedActions" : [ {
       "Name" : "CreateMembership",
@@ -2015,6 +2280,24 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteIntermediateTable",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteIntermediateTable",
+      "Service" : "cleanrooms"
+    } ],
+    "SDK" : [ {
+      "Name" : "cleanrooms",
+      "Method" : "delete_intermediate_table",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteIntermediateTableAnalysisRule",
+    "SDK" : [ {
+      "Name" : "cleanrooms",
+      "Method" : "delete_intermediate_table_analysis_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteMember",
     "AuthorizedActions" : [ {
       "Name" : "DeleteMember",
@@ -2045,6 +2328,13 @@
     "SDK" : [ {
       "Name" : "cleanrooms",
       "Method" : "delete_privacy_budget_template",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DisallowIntermediateTable",
+    "SDK" : [ {
+      "Name" : "cleanrooms",
+      "Method" : "disallow_intermediate_table",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2199,6 +2489,24 @@
     "SDK" : [ {
       "Name" : "cleanrooms",
       "Method" : "get_id_namespace_association",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetIntermediateTable",
+    "AuthorizedActions" : [ {
+      "Name" : "GetIntermediateTable",
+      "Service" : "cleanrooms"
+    } ],
+    "SDK" : [ {
+      "Name" : "cleanrooms",
+      "Method" : "get_intermediate_table",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetIntermediateTableAnalysisRule",
+    "SDK" : [ {
+      "Name" : "cleanrooms",
+      "Method" : "get_intermediate_table_analysis_rule",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2411,6 +2719,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListIntermediateTableVersions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListIntermediateTableVersions",
+      "Service" : "cleanrooms"
+    } ],
+    "SDK" : [ {
+      "Name" : "cleanrooms",
+      "Method" : "list_intermediate_table_versions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListIntermediateTables",
+    "AuthorizedActions" : [ {
+      "Name" : "ListIntermediateTables",
+      "Service" : "cleanrooms"
+    } ],
+    "SDK" : [ {
+      "Name" : "cleanrooms",
+      "Method" : "list_intermediate_tables",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListMembers",
     "AuthorizedActions" : [ {
       "Name" : "ListMembers",
@@ -2507,6 +2837,17 @@
     "SDK" : [ {
       "Name" : "cleanrooms",
       "Method" : "populate_id_mapping_table",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PopulateIntermediateTable",
+    "AuthorizedActions" : [ {
+      "Name" : "PopulateIntermediateTable",
+      "Service" : "cleanrooms"
+    } ],
+    "SDK" : [ {
+      "Name" : "cleanrooms",
+      "Method" : "populate_intermediate_table",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2687,6 +3028,24 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateIntermediateTable",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateIntermediateTable",
+      "Service" : "cleanrooms"
+    } ],
+    "SDK" : [ {
+      "Name" : "cleanrooms",
+      "Method" : "update_intermediate_table",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateIntermediateTableAnalysisRule",
+    "SDK" : [ {
+      "Name" : "cleanrooms",
+      "Method" : "update_intermediate_table_analysis_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateMembership",
     "AuthorizedActions" : [ {
       "Name" : "PassRole",
@@ -2764,6 +3123,10 @@
   }, {
     "Name" : "idnamespaceassociation",
     "ARNFormats" : [ "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/idnamespaceassociation/${IdNamespaceAssociationId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "intermediatetable",
+    "ARNFormats" : [ "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/intermediatetable/${IntermediateTableId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "membership",
