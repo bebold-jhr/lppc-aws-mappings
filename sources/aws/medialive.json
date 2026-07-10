@@ -2457,9 +2457,6 @@
     "AuthorizedActions" : [ {
       "Name" : "CreatePartnerInput",
       "Service" : "medialive"
-    }, {
-      "Name" : "CreateTags",
-      "Service" : "medialive"
     } ],
     "SDK" : [ {
       "Name" : "medialive",
@@ -3291,6 +3288,10 @@
     } ]
   }, {
     "Name" : "StartInputDeviceMaintenanceWindow",
+    "AuthorizedActions" : [ {
+      "Name" : "StartInputDeviceMaintenanceWindow",
+      "Service" : "medialive"
+    } ],
     "SDK" : [ {
       "Name" : "medialive",
       "Method" : "start_input_device_maintenance_window",

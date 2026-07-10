@@ -266,9 +266,6 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateScan",
       "Service" : "codeguru-security"
-    }, {
-      "Name" : "TagResource",
-      "Service" : "codeguru-security"
     } ],
     "SDK" : [ {
       "Name" : "codeguru-security",

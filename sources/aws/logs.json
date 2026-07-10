@@ -1186,6 +1186,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetStorageTierPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetTransformer",
     "Annotations" : {
       "Properties" : {
@@ -1745,6 +1759,20 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "PutStorageTierPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "PutSubscriptionFilter",
@@ -2980,6 +3008,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetStorageTierPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "GetStorageTierPolicy",
+      "Service" : "logs"
+    } ],
+    "SDK" : [ {
+      "Name" : "logs",
+      "Method" : "get_storage_tier_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetTransformer",
     "AuthorizedActions" : [ {
       "Name" : "GetTransformer",
@@ -3324,6 +3363,17 @@
     "SDK" : [ {
       "Name" : "logs",
       "Method" : "put_retention_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutStorageTierPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "PutStorageTierPolicy",
+      "Service" : "logs"
+    } ],
+    "SDK" : [ {
+      "Name" : "logs",
+      "Method" : "put_storage_tier_policy",
       "Package" : "Boto3"
     } ]
   }, {

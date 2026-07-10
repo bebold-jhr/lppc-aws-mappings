@@ -2035,6 +2035,9 @@
         "iam:PassedToService" : [ "proton.amazonaws.com" ]
       },
       "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "proton"
     } ],
     "SDK" : [ {
       "Name" : "proton",

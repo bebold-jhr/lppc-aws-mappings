@@ -492,6 +492,9 @@
   }, {
     "Name" : "UpdateEnvironment",
     "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "thinclient"
+    }, {
       "Name" : "UpdateEnvironment",
       "Service" : "thinclient"
     } ],

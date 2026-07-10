@@ -1646,9 +1646,6 @@
   }, {
     "Name" : "CopyServerlessCacheSnapshot",
     "AuthorizedActions" : [ {
-      "Name" : "AddTagsToResource",
-      "Service" : "elasticache"
-    }, {
       "Name" : "CopyServerlessCacheSnapshot",
       "Service" : "elasticache"
     } ],

@@ -6057,9 +6057,6 @@
   }, {
     "Name" : "GetEvaluationJob",
     "AuthorizedActions" : [ {
-      "Name" : "CallWithBearerToken",
-      "Service" : "bedrock"
-    }, {
       "Name" : "GetEvaluationJob",
       "Service" : "bedrock"
     } ],
@@ -6525,6 +6522,9 @@
     }, {
       "Name" : "InvokeModel",
       "Service" : "bedrock"
+    }, {
+      "Name" : "InvokeTool",
+      "Service" : "bedrock"
     } ],
     "SDK" : [ {
       "Name" : "bedrock-runtime",
@@ -6556,6 +6556,9 @@
     }, {
       "Name" : "InvokeModelWithResponseStream",
       "Service" : "bedrock"
+    }, {
+      "Name" : "InvokeTool",
+      "Service" : "bedrock"
     } ],
     "SDK" : [ {
       "Name" : "bedrock-runtime",
@@ -6565,6 +6568,9 @@
   }, {
     "Name" : "ListAdvancedPromptOptimizationJobs",
     "AuthorizedActions" : [ {
+      "Name" : "CallWithBearerToken",
+      "Service" : "bedrock"
+    }, {
       "Name" : "ListAdvancedPromptOptimizationJobs",
       "Service" : "bedrock"
     } ],

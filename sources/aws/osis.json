@@ -564,6 +564,10 @@
     } ]
   }, {
     "Name" : "RevokePipelineEndpointConnections",
+    "AuthorizedActions" : [ {
+      "Name" : "RevokePipelineEndpointConnections",
+      "Service" : "osis"
+    } ],
     "SDK" : [ {
       "Name" : "osis",
       "Method" : "revoke_pipeline_endpoint_connections",

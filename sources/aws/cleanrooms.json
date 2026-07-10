@@ -2504,6 +2504,10 @@
     } ]
   }, {
     "Name" : "GetIntermediateTableAnalysisRule",
+    "AuthorizedActions" : [ {
+      "Name" : "GetIntermediateTableAnalysisRule",
+      "Service" : "cleanrooms"
+    } ],
     "SDK" : [ {
       "Name" : "cleanrooms",
       "Method" : "get_intermediate_table_analysis_rule",

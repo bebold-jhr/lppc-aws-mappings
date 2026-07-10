@@ -1226,6 +1226,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetProvisionedLimit",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetSigningCertificate",
     "Annotations" : {
       "Properties" : {
@@ -1895,6 +1909,20 @@
     "Resources" : [ {
       "Name" : "userpool"
     } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateProvisionedLimit",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -2878,6 +2906,10 @@
     } ]
   }, {
     "Name" : "GetProvisionedLimit",
+    "AuthorizedActions" : [ {
+      "Name" : "GetProvisionedLimit",
+      "Service" : "cognito-idp"
+    } ],
     "SDK" : [ {
       "Name" : "cognito-idp",
       "Method" : "get_provisioned_limit",
@@ -3352,6 +3384,10 @@
     } ]
   }, {
     "Name" : "UpdateProvisionedLimit",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateProvisionedLimit",
+      "Service" : "cognito-idp"
+    } ],
     "SDK" : [ {
       "Name" : "cognito-idp",
       "Method" : "update_provisioned_limit",

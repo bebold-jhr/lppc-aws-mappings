@@ -2097,6 +2097,12 @@
     "AuthorizedActions" : [ {
       "Name" : "AssociatePackage",
       "Service" : "es"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "es.amazonaws.com" ]
+      },
+      "Service" : "iam"
     } ],
     "SDK" : [ {
       "Name" : "es",

@@ -1,7 +1,7 @@
 {
-  "Name" : "purchase-orders",
+  "Name" : "supportauthz",
   "Actions" : [ {
-    "Name" : "AddPurchaseOrder",
+    "Name" : "CreateSupportPermit",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
@@ -11,15 +11,12 @@
         "IsWrite" : true
       }
     },
-    "Resources" : [ {
-      "Name" : "purchase-order"
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "DeletePurchaseOrder",
+    "Name" : "DeleteSupportPermit",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
@@ -30,14 +27,14 @@
       }
     },
     "Resources" : [ {
-      "Name" : "purchase-order"
+      "Name" : "supportpermit"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetConsoleActionSetEnforced",
+    "Name" : "GetAction",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -51,7 +48,7 @@
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetPurchaseOrder",
+    "Name" : "GetSupportPermit",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
@@ -62,15 +59,14 @@
       }
     },
     "Resources" : [ {
-      "Name" : "purchase-order"
+      "Name" : "supportpermit"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "ListPurchaseOrderInvoices",
-    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Name" : "ListActions",
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -79,15 +75,26 @@
         "IsWrite" : false
       }
     },
-    "Resources" : [ {
-      "Name" : "purchase-order"
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "ListPurchaseOrders",
+    "Name" : "ListSupportPermitRequests",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListSupportPermits",
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -112,15 +119,28 @@
       }
     },
     "Resources" : [ {
-      "Name" : "purchase-order"
+      "Name" : "supportpermit"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "ModifyPurchaseOrders",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
+    "Name" : "RegisterKey",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "RejectSupportPermitRequest",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -130,7 +150,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "purchase-order"
+      "Name" : "supportpermitrequest"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -148,7 +168,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "purchase-order"
+      "Name" : "supportpermit"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -166,75 +186,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "purchase-order"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "UpdateConsoleActionSetEnforced",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "UpdatePurchaseOrder",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "Resources" : [ {
-      "Name" : "purchase-order"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "UpdatePurchaseOrderStatus",
-    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "Resources" : [ {
-      "Name" : "purchase-order"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "ViewPurchaseOrders",
-    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "Resources" : [ {
-      "Name" : "purchase-order"
+      "Name" : "supportpermit"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -251,10 +203,138 @@
     "Name" : "aws:TagKeys",
     "Types" : [ "ArrayOfString" ]
   } ],
+  "Operations" : [ {
+    "Name" : "CreateSupportPermit",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateSupportPermit",
+      "Service" : "supportauthz"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "supportauthz"
+    } ],
+    "SDK" : [ {
+      "Name" : "supportauthz",
+      "Method" : "create_support_permit",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteSupportPermit",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteSupportPermit",
+      "Service" : "supportauthz"
+    } ],
+    "SDK" : [ {
+      "Name" : "supportauthz",
+      "Method" : "delete_support_permit",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetAction",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAction",
+      "Service" : "supportauthz"
+    } ],
+    "SDK" : [ {
+      "Name" : "supportauthz",
+      "Method" : "get_action",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetSupportPermit",
+    "AuthorizedActions" : [ {
+      "Name" : "GetSupportPermit",
+      "Service" : "supportauthz"
+    } ],
+    "SDK" : [ {
+      "Name" : "supportauthz",
+      "Method" : "get_support_permit",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListActions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListActions",
+      "Service" : "supportauthz"
+    } ],
+    "SDK" : [ {
+      "Name" : "supportauthz",
+      "Method" : "list_actions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListSupportPermitRequests",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSupportPermitRequests",
+      "Service" : "supportauthz"
+    } ],
+    "SDK" : [ {
+      "Name" : "supportauthz",
+      "Method" : "list_support_permit_requests",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListSupportPermits",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSupportPermits",
+      "Service" : "supportauthz"
+    } ],
+    "SDK" : [ {
+      "Name" : "supportauthz",
+      "Method" : "list_support_permits",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListTagsForResource",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTagsForResource",
+      "Service" : "supportauthz"
+    } ],
+    "SDK" : [ {
+      "Name" : "supportauthz",
+      "Method" : "list_tags_for_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "RejectSupportPermitRequest",
+    "AuthorizedActions" : [ {
+      "Name" : "RejectSupportPermitRequest",
+      "Service" : "supportauthz"
+    } ],
+    "SDK" : [ {
+      "Name" : "supportauthz",
+      "Method" : "reject_support_permit_request",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "supportauthz"
+    } ],
+    "SDK" : [ {
+      "Name" : "supportauthz",
+      "Method" : "tag_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "supportauthz"
+    } ],
+    "SDK" : [ {
+      "Name" : "supportauthz",
+      "Method" : "untag_resource",
+      "Package" : "Boto3"
+    } ]
+  } ],
   "Resources" : [ {
-    "Name" : "purchase-order",
-    "ARNFormats" : [ "arn:${Partition}:purchase-orders::${Account}:purchase-order/${ResourceName}" ],
+    "Name" : "supportpermit",
+    "ARNFormats" : [ "arn:${Partition}:supportauthz:${Region}:${Account}:supportpermit/${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "supportpermitrequest",
+    "ARNFormats" : [ "arn:${Partition}:supportauthz:${Region}:${Account}:supportpermitrequest/${ResourceId}" ]
   } ],
   "Version" : "v1.4"
 }

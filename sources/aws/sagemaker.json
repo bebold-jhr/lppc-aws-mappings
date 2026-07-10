@@ -8566,6 +8566,9 @@
   }, {
     "Name" : "CreateFlowDefinition",
     "AuthorizedActions" : [ {
+      "Name" : "AddTags",
+      "Service" : "sagemaker"
+    }, {
       "Name" : "CreateFlowDefinition",
       "Service" : "sagemaker"
     }, {

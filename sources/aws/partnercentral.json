@@ -2480,6 +2480,31 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateMarketplaceRevenueShare",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateMarketplaceRevenueShare",
+      "Service" : "partnercentral"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "create_marketplace_revenue_share",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateMarketplaceRevenueShareAllocation",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateMarketplaceRevenueShareAllocation",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "create_marketplace_revenue_share_allocation",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateOpportunity",
     "AuthorizedActions" : [ {
       "Name" : "CreateOpportunity",
@@ -2573,6 +2598,20 @@
     "SDK" : [ {
       "Name" : "partnercentral-selling",
       "Method" : "create_resource_snapshot_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateRevenueAttribution",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateRevenueAttribution",
+      "Service" : "partnercentral"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "create_revenue_attribution",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2752,6 +2791,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetMarketplaceRevenueShare",
+    "AuthorizedActions" : [ {
+      "Name" : "GetMarketplaceRevenueShare",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "get_marketplace_revenue_share",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetMarketplaceRevenueShareAllocation",
+    "AuthorizedActions" : [ {
+      "Name" : "GetMarketplaceRevenueShareAllocation",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "get_marketplace_revenue_share_allocation",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetOpportunity",
     "AuthorizedActions" : [ {
       "Name" : "GetOpportunity",
@@ -2837,6 +2898,39 @@
     "SDK" : [ {
       "Name" : "partnercentral-selling",
       "Method" : "get_resource_snapshot_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetRevenueAttribution",
+    "AuthorizedActions" : [ {
+      "Name" : "GetRevenueAttribution",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "get_revenue_attribution",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetRevenueAttributionAllocation",
+    "AuthorizedActions" : [ {
+      "Name" : "GetRevenueAttributionAllocation",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "get_revenue_attribution_allocation",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetRevenueAttributionAllocationsTask",
+    "AuthorizedActions" : [ {
+      "Name" : "GetRevenueAttributionAllocationsTask",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "get_revenue_attribution_allocations_task",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2994,6 +3088,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListMarketplaceRevenueShareAllocations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListMarketplaceRevenueShareAllocations",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "list_marketplace_revenue_share_allocations",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListMarketplaceRevenueShares",
+    "AuthorizedActions" : [ {
+      "Name" : "ListMarketplaceRevenueShares",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "list_marketplace_revenue_shares",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListOpportunities",
     "AuthorizedActions" : [ {
       "Name" : "ListOpportunities",
@@ -3078,6 +3194,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListRevenueAttributionAllocations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListRevenueAttributionAllocations",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "list_revenue_attribution_allocations",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListRevenueAttributions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListRevenueAttributions",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "list_revenue_attributions",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListSolutions",
     "AuthorizedActions" : [ {
       "Name" : "ListSolutions",
@@ -3104,6 +3242,10 @@
       "Package" : "Boto3"
     }, {
       "Name" : "partnercentral-channel",
+      "Method" : "list_tags_for_resource",
+      "Package" : "Boto3"
+    }, {
+      "Name" : "partnercentral-revenue-measurement",
       "Method" : "list_tags_for_resource",
       "Package" : "Boto3"
     }, {
@@ -3313,6 +3455,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "StartRevenueAttributionAllocationsTask",
+    "AuthorizedActions" : [ {
+      "Name" : "StartRevenueAttributionAllocationsTask",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "start_revenue_attribution_allocations_task",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StartVerification",
     "AuthorizedActions" : [ {
       "Name" : "StartVerification",
@@ -3375,6 +3528,10 @@
       "Method" : "tag_resource",
       "Package" : "Boto3"
     }, {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "tag_resource",
+      "Package" : "Boto3"
+    }, {
       "Name" : "partnercentral-selling",
       "Method" : "tag_resource",
       "Package" : "Boto3"
@@ -3395,6 +3552,10 @@
       "Package" : "Boto3"
     }, {
       "Name" : "partnercentral-channel",
+      "Method" : "untag_resource",
+      "Package" : "Boto3"
+    }, {
+      "Name" : "partnercentral-revenue-measurement",
       "Method" : "untag_resource",
       "Package" : "Boto3"
     }, {
@@ -3439,6 +3600,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateMarketplaceRevenueShareAllocation",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateMarketplaceRevenueShareAllocation",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "update_marketplace_revenue_share_allocation",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateOpportunity",
     "AuthorizedActions" : [ {
       "Name" : "UpdateOpportunity",
@@ -3469,6 +3641,17 @@
     "SDK" : [ {
       "Name" : "partnercentral-channel",
       "Method" : "update_relationship",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateRevenueAttribution",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateRevenueAttribution",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-revenue-measurement",
+      "Method" : "update_revenue_attribution",
       "Package" : "Boto3"
     } ]
   } ],

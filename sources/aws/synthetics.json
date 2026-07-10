@@ -467,6 +467,9 @@
     "AuthorizedActions" : [ {
       "Name" : "DescribeCanaries",
       "Service" : "synthetics"
+    }, {
+      "Name" : "ListTagsForResource",
+      "Service" : "synthetics"
     } ],
     "SDK" : [ {
       "Name" : "synthetics",
@@ -532,6 +535,9 @@
     "Name" : "GetGroup",
     "AuthorizedActions" : [ {
       "Name" : "GetGroup",
+      "Service" : "synthetics"
+    }, {
+      "Name" : "ListTagsForResource",
       "Service" : "synthetics"
     } ],
     "SDK" : [ {

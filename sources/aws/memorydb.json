@@ -912,9 +912,6 @@
     "AuthorizedActions" : [ {
       "Name" : "CopySnapshot",
       "Service" : "memorydb"
-    }, {
-      "Name" : "TagResource",
-      "Service" : "memorydb"
     } ],
     "SDK" : [ {
       "Name" : "memorydb",

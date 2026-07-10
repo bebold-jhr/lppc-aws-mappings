@@ -549,6 +549,10 @@
     } ]
   }, {
     "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "artifact"
+    } ],
     "SDK" : [ {
       "Name" : "artifact",
       "Method" : "tag_resource",
@@ -556,6 +560,10 @@
     } ]
   }, {
     "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "artifact"
+    } ],
     "SDK" : [ {
       "Name" : "artifact",
       "Method" : "untag_resource",
