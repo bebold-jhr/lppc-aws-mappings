@@ -2049,6 +2049,10 @@
     } ]
   }, {
     "Name" : "UpdateAutonomousDatabaseBackup",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAutonomousDatabaseBackup",
+      "Service" : "odb"
+    } ],
     "SDK" : [ {
       "Name" : "odb",
       "Method" : "update_autonomous_database_backup",

@@ -362,7 +362,6 @@
     }
   }, {
     "Name" : "DeleteFileCache",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -382,7 +381,6 @@
     }
   }, {
     "Name" : "DeleteFileSystem",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -392,7 +390,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "backup"
+      "Name" : "backup",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     }, {
       "Name" : "file-system"
     } ],
@@ -453,7 +452,6 @@
     }
   }, {
     "Name" : "DeleteVolume",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "fsx:ParentVolumeId", "fsx:StorageVirtualMachineId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -463,9 +461,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "backup"
+      "Name" : "backup",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     }, {
-      "Name" : "volume"
+      "Name" : "volume",
+      "ConditionKeys" : [ "fsx:ParentVolumeId", "fsx:StorageVirtualMachineId" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,

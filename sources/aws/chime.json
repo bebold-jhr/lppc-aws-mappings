@@ -5551,6 +5551,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateMediaInsightsPipeline",
       "Service" : "chime"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "chime"
     } ],
     "SDK" : [ {
       "Name" : "chime-sdk-media-pipelines",

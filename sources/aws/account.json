@@ -483,6 +483,9 @@
     "AuthorizedActions" : [ {
       "Name" : "StartPrimaryEmailUpdate",
       "Service" : "account"
+    }, {
+      "Name" : "UpdateAccountEmailAddress",
+      "Service" : "iam"
     } ],
     "SDK" : [ {
       "Name" : "account",

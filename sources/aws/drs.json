@@ -1976,6 +1976,13 @@
     } ]
   }, {
     "Name" : "StartSourceNetworkRecovery",
+    "AuthorizedActions" : [ {
+      "Name" : "StartSourceNetworkRecovery",
+      "Service" : "drs"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "drs"
+    } ],
     "SDK" : [ {
       "Name" : "drs",
       "Method" : "start_source_network_recovery",

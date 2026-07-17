@@ -10142,6 +10142,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "SearchRules",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeRule",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "search_rules",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "SearchSecurityProfiles",
     "AuthorizedActions" : [ {
       "Name" : "DescribeSecurityProfile",

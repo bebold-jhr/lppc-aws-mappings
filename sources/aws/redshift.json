@@ -2994,6 +2994,13 @@
     } ]
   }, {
     "Name" : "CreateClusterSecurityGroup",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateClusterSecurityGroup",
+      "Service" : "redshift"
+    }, {
+      "Name" : "CreateTags",
+      "Service" : "redshift"
+    } ],
     "SDK" : [ {
       "Name" : "redshift",
       "Method" : "create_cluster_security_group",

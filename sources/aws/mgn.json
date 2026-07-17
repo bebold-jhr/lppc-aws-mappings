@@ -2338,6 +2338,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateLaunchConfigurationTemplate",
       "Service" : "mgn"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "mgn"
     } ],
     "SDK" : [ {
       "Name" : "mgn",

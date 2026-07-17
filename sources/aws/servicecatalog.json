@@ -3078,6 +3078,12 @@
   }, {
     "Name" : "UpdatePortfolio",
     "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "servicecatalog"
+    }, {
+      "Name" : "UntagResource",
+      "Service" : "servicecatalog"
+    }, {
       "Name" : "UpdatePortfolio",
       "Service" : "servicecatalog"
     } ],
@@ -3102,6 +3108,12 @@
     "AuthorizedActions" : [ {
       "Name" : "PassConnection",
       "Service" : "codestar-connections"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "servicecatalog"
+    }, {
+      "Name" : "UntagResource",
+      "Service" : "servicecatalog"
     }, {
       "Name" : "UpdateProduct",
       "Service" : "servicecatalog"

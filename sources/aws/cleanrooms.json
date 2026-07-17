@@ -3044,6 +3044,10 @@
     } ]
   }, {
     "Name" : "UpdateIntermediateTableAnalysisRule",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateIntermediateTableAnalysisRule",
+      "Service" : "cleanrooms"
+    } ],
     "SDK" : [ {
       "Name" : "cleanrooms",
       "Method" : "update_intermediate_table_analysis_rule",

@@ -371,6 +371,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateDesignation",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateDomain",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -779,6 +793,20 @@
     }
   }, {
     "Name" : "DeleteDataSource",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteDesignation",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1285,6 +1313,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetCurrentEffectivePolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetDataExportConfiguration",
     "Annotations" : {
       "Properties" : {
@@ -1328,6 +1370,20 @@
     }
   }, {
     "Name" : "GetDataSourceRun",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetDesignation",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1989,6 +2045,20 @@
     }
   }, {
     "Name" : "ListDataSources",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListDesignations",
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -3041,6 +3111,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateDesignation",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateDomain",
     "Annotations" : {
       "Properties" : {
@@ -3317,6 +3401,20 @@
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ValidatePolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
       }
     },
     "SupportedBy" : {

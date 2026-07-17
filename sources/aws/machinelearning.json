@@ -524,6 +524,13 @@
     } ]
   }, {
     "Name" : "CreateDataSourceFromRedshift",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateDataSourceFromRedshift",
+      "Service" : "machinelearning"
+    }, {
+      "Name" : "PassRole",
+      "Service" : "iam"
+    } ],
     "SDK" : [ {
       "Name" : "machinelearning",
       "Method" : "create_data_source_from_redshift",

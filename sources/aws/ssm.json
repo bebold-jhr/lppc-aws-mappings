@@ -4524,6 +4524,9 @@
   }, {
     "Name" : "UpdateDocument",
     "AuthorizedActions" : [ {
+      "Name" : "GetDocument",
+      "Service" : "ssm"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "justintimeaccess.ssm.amazonaws.com", "ssm.amazonaws.com" ]

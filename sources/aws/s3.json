@@ -88,7 +88,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "accessgrantslocation"
+      "Name" : "accessgrant"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -124,7 +124,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "accessgrantsinstance"
+      "Name" : "accessgrantslocation"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,

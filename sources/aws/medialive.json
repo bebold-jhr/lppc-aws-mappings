@@ -2318,6 +2318,9 @@
       "Name" : "CreateCluster",
       "Service" : "medialive"
     }, {
+      "Name" : "CreateTags",
+      "Service" : "medialive"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "medialive.amazonaws.com" ]
@@ -2421,6 +2424,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateNetwork",
       "Service" : "medialive"
+    }, {
+      "Name" : "CreateTags",
+      "Service" : "medialive"
     } ],
     "SDK" : [ {
       "Name" : "medialive",
@@ -2456,6 +2462,9 @@
     "Name" : "CreatePartnerInput",
     "AuthorizedActions" : [ {
       "Name" : "CreatePartnerInput",
+      "Service" : "medialive"
+    }, {
+      "Name" : "CreateTags",
       "Service" : "medialive"
     } ],
     "SDK" : [ {

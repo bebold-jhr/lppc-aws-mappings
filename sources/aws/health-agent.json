@@ -535,6 +535,25 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListPatientMedications",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListProviders",
     "Annotations" : {
       "Properties" : {
@@ -662,6 +681,25 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ResetPassword",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ScheduleAppointment",
     "Annotations" : {
       "Properties" : {
@@ -713,6 +751,25 @@
       "Name" : "Domain"
     }, {
       "Name" : "PatientInsightsJob"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "SubmitMedicationRenewal",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Domain"
+    }, {
+      "Name" : "Integration"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,

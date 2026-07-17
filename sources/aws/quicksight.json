@@ -513,6 +513,26 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateKnowledgeBase",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "datasource"
+    }, {
+      "Name" : "knowledgeBase"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateLimitsProfile",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -4876,6 +4896,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateKnowledgeBase",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "knowledgeBase"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateKnowledgeBasePermissions",
     "Annotations" : {
       "Properties" : {
@@ -5699,6 +5736,23 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "create_ingestion",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateKnowledgeBase",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateKnowledgeBase",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "PassDataSource",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "create_knowledge_base",
       "Package" : "Boto3"
     } ]
   }, {
@@ -8271,6 +8325,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_key_registration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateKnowledgeBase",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateKnowledgeBase",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_knowledge_base",
       "Package" : "Boto3"
     } ]
   }, {

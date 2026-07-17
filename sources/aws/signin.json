@@ -297,16 +297,24 @@
   } ],
   "Operations" : [ {
     "Name" : "CreateOAuth2Token",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateOAuth2Token",
+      "Service" : "signin"
+    } ],
     "SDK" : [ {
       "Name" : "signin",
-      "Method" : "create_o_auth2_token",
+      "Method" : "create_oauth2_token",
       "Package" : "Boto3"
     } ]
   }, {
     "Name" : "CreateOAuth2TokenWithIAM",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateOAuth2Token",
+      "Service" : "signin"
+    } ],
     "SDK" : [ {
       "Name" : "signin",
-      "Method" : "create_o_auth2_token_with_iam",
+      "Method" : "create_oauth2_token_with_iam",
       "Package" : "Boto3"
     } ]
   }, {
@@ -355,9 +363,13 @@
     } ]
   }, {
     "Name" : "IntrospectOAuth2TokenWithIAM",
+    "AuthorizedActions" : [ {
+      "Name" : "IntrospectOAuth2Token",
+      "Service" : "signin"
+    } ],
     "SDK" : [ {
       "Name" : "signin",
-      "Method" : "introspect_o_auth2_token_with_iam",
+      "Method" : "introspect_oauth2_token_with_iam",
       "Package" : "Boto3"
     } ]
   }, {
@@ -395,9 +407,13 @@
     } ]
   }, {
     "Name" : "RevokeOAuth2TokenWithIAM",
+    "AuthorizedActions" : [ {
+      "Name" : "RevokeOAuth2Token",
+      "Service" : "signin"
+    } ],
     "SDK" : [ {
       "Name" : "signin",
-      "Method" : "revoke_o_auth2_token_with_iam",
+      "Method" : "revoke_oauth2_token_with_iam",
       "Package" : "Boto3"
     } ]
   } ],

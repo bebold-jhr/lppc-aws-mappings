@@ -2080,6 +2080,9 @@
     }, {
       "Name" : "PassConnection",
       "Service" : "codestar-connections"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "proton"
     } ],
     "SDK" : [ {
       "Name" : "proton",
@@ -2951,6 +2954,10 @@
     } ]
   }, {
     "Name" : "UpdateTemplateSyncConfig",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateTemplateSyncConfig",
+      "Service" : "proton"
+    } ],
     "SDK" : [ {
       "Name" : "proton",
       "Method" : "update_template_sync_config",

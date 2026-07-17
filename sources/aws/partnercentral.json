@@ -1039,6 +1039,60 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetQualificationsAssociationDetails",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Partner"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetQualificationsAssociationTask",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Partner"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetQualificationsDisassociationTask",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Partner"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetRelationship",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
@@ -1898,6 +1952,42 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StartQualificationsAssociationTask",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Partner"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StartQualificationsDisassociationTask",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Partner"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StartResourceSnapshotJob",
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
@@ -2729,6 +2819,9 @@
     "AuthorizedActions" : [ {
       "Name" : "GetBenefitApplication",
       "Service" : "partnercentral"
+    }, {
+      "Name" : "ListTagsForResource",
+      "Service" : "partnercentral"
     } ],
     "SDK" : [ {
       "Name" : "partnercentral-benefits",
@@ -3416,6 +3509,31 @@
     } ]
   }, {
     "Name" : "StartOpportunityFromEngagementTask",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateOpportunity",
+      "Service" : "partnercentral"
+    }, {
+      "Name" : "CreateResourceSnapshot",
+      "Service" : "partnercentral"
+    }, {
+      "Name" : "CreateResourceSnapshotJob",
+      "Service" : "partnercentral"
+    }, {
+      "Name" : "GetEngagement",
+      "Service" : "partnercentral"
+    }, {
+      "Name" : "GetOpportunity",
+      "Service" : "partnercentral"
+    }, {
+      "Name" : "StartOpportunityFromEngagementTask",
+      "Service" : "partnercentral"
+    }, {
+      "Name" : "StartResourceSnapshotJob",
+      "Service" : "partnercentral"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "partnercentral"
+    } ],
     "SDK" : [ {
       "Name" : "partnercentral-selling",
       "Method" : "start_opportunity_from_engagement_task",
