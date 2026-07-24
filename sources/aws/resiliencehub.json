@@ -2136,6 +2136,9 @@
         "iam:PassedToService" : [ "resiliencehub.amazonaws.com" ]
       },
       "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "resiliencehub"
     } ],
     "SDK" : [ {
       "Name" : "resiliencehubv2",
@@ -3147,6 +3150,10 @@
     } ]
   }, {
     "Name" : "UpdateAssertion",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAssertion",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehubv2",
       "Method" : "update_assertion",

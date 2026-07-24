@@ -961,6 +961,10 @@
     } ]
   }, {
     "Name" : "DisassociateMpaTeam",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateMpaTeam",
+      "Service" : "payment-cryptography"
+    } ],
     "SDK" : [ {
       "Name" : "payment-cryptography",
       "Method" : "disassociate_mpa_team",

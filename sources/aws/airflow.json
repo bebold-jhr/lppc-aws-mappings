@@ -210,6 +210,21 @@
     }
   } ],
   "ConditionKeys" : [ {
+    "Name" : "airflow:DagAccessEntity",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "airflow:ResourceAction",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "airflow:ResourceId",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "airflow:ResourceType",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "airflow:TeamName",
+    "Types" : [ "String" ]
+  }, {
     "Name" : "aws:RequestTag/${TagKey}",
     "Types" : [ "String" ]
   }, {
@@ -369,10 +384,12 @@
   } ],
   "Resources" : [ {
     "Name" : "environment",
-    "ARNFormats" : [ "arn:${Partition}:airflow:${Region}:${Account}:environment/${EnvironmentName}" ]
+    "ARNFormats" : [ "arn:${Partition}:airflow:${Region}:${Account}:environment/${EnvironmentName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "rbac-role",
-    "ARNFormats" : [ "arn:${Partition}:airflow:${Region}:${Account}:role/${EnvironmentName}/${RoleName}" ]
+    "ARNFormats" : [ "arn:${Partition}:airflow:${Region}:${Account}:role/${EnvironmentName}/${RoleName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.4"
 }

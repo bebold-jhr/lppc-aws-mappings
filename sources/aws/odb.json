@@ -1391,6 +1391,12 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateAutonomousDatabaseWallet",
       "Service" : "odb"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "odb.amazonaws.com" ]
+      },
+      "Service" : "iam"
     } ],
     "SDK" : [ {
       "Name" : "odb",
@@ -1596,6 +1602,10 @@
     } ]
   }, {
     "Name" : "GetAutonomousDatabaseWalletDetails",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAutonomousDatabaseWalletDetails",
+      "Service" : "odb"
+    } ],
     "SDK" : [ {
       "Name" : "odb",
       "Method" : "get_autonomous_database_wallet_details",

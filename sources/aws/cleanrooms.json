@@ -2292,6 +2292,10 @@
     } ]
   }, {
     "Name" : "DeleteIntermediateTableAnalysisRule",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteIntermediateTableAnalysisRule",
+      "Service" : "cleanrooms"
+    } ],
     "SDK" : [ {
       "Name" : "cleanrooms",
       "Method" : "delete_intermediate_table_analysis_rule",
@@ -2332,6 +2336,10 @@
     } ]
   }, {
     "Name" : "DisallowIntermediateTable",
+    "AuthorizedActions" : [ {
+      "Name" : "DisallowIntermediateTable",
+      "Service" : "cleanrooms"
+    } ],
     "SDK" : [ {
       "Name" : "cleanrooms",
       "Method" : "disallow_intermediate_table",

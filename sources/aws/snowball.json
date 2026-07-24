@@ -647,6 +647,12 @@
   }, {
     "Name" : "UpdateCluster",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "importexport.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateCluster",
       "Service" : "snowball"
     } ],
@@ -658,6 +664,12 @@
   }, {
     "Name" : "UpdateJob",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "importexport.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateJob",
       "Service" : "snowball"
     } ],

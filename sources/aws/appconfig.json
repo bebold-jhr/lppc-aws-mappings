@@ -1382,6 +1382,10 @@
     } ]
   }, {
     "Name" : "StartExperimentRun",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "appconfig"
+    } ],
     "SDK" : [ {
       "Name" : "appconfig",
       "Method" : "start_experiment_run",

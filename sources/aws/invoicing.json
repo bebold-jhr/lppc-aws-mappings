@@ -219,6 +219,8 @@
     },
     "Resources" : [ {
       "Name" : "invoice-unit"
+    }, {
+      "Name" : "procurement-portal-preference"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -240,6 +242,21 @@
     }
   }, {
     "Name" : "PutProcurementPortalPreference",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "SendProcurementPortalValidation",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
@@ -280,6 +297,8 @@
     },
     "Resources" : [ {
       "Name" : "invoice-unit"
+    }, {
+      "Name" : "procurement-portal-preference"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -298,6 +317,8 @@
     },
     "Resources" : [ {
       "Name" : "invoice-unit"
+    }, {
+      "Name" : "procurement-portal-preference"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -323,6 +344,21 @@
     }
   }, {
     "Name" : "UpdateProcurementPortalPreferenceStatus",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "VerifyProcurementPortalValidation",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
@@ -536,6 +572,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "SendProcurementPortalValidation",
+    "AuthorizedActions" : [ {
+      "Name" : "SendProcurementPortalValidation",
+      "Service" : "invoicing"
+    } ],
+    "SDK" : [ {
+      "Name" : "invoicing",
+      "Method" : "send_procurement_portal_validation",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "TagResource",
     "AuthorizedActions" : [ {
       "Name" : "ModifyBilling",
@@ -589,6 +636,17 @@
     "SDK" : [ {
       "Name" : "invoicing",
       "Method" : "update_procurement_portal_preference_status",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "VerifyProcurementPortalValidation",
+    "AuthorizedActions" : [ {
+      "Name" : "VerifyProcurementPortalValidation",
+      "Service" : "invoicing"
+    } ],
+    "SDK" : [ {
+      "Name" : "invoicing",
+      "Method" : "verify_procurement_portal_validation",
       "Package" : "Boto3"
     } ]
   } ],

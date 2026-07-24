@@ -2961,6 +2961,39 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetQualificationsAssociationDetails",
+    "AuthorizedActions" : [ {
+      "Name" : "GetQualificationsAssociationDetails",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-account",
+      "Method" : "get_qualifications_association_details",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetQualificationsAssociationTask",
+    "AuthorizedActions" : [ {
+      "Name" : "GetQualificationsAssociationTask",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-account",
+      "Method" : "get_qualifications_association_task",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetQualificationsDisassociationTask",
+    "AuthorizedActions" : [ {
+      "Name" : "GetQualificationsDisassociationTask",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-account",
+      "Method" : "get_qualifications_disassociation_task",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetRelationship",
     "AuthorizedActions" : [ {
       "Name" : "GetRelationship",
@@ -3559,6 +3592,28 @@
     "SDK" : [ {
       "Name" : "partnercentral-selling",
       "Method" : "start_prospecting_from_engagement_task",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartQualificationsAssociationTask",
+    "AuthorizedActions" : [ {
+      "Name" : "StartQualificationsAssociationTask",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-account",
+      "Method" : "start_qualifications_association_task",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartQualificationsDisassociationTask",
+    "AuthorizedActions" : [ {
+      "Name" : "StartQualificationsDisassociationTask",
+      "Service" : "partnercentral"
+    } ],
+    "SDK" : [ {
+      "Name" : "partnercentral-account",
+      "Method" : "start_qualifications_disassociation_task",
       "Package" : "Boto3"
     } ]
   }, {

@@ -160,6 +160,21 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListSessions",
+    "ActionConditionKeys" : [ "redshift-data:session-owner-iam-userid" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListStatements",
     "ActionConditionKeys" : [ "redshift-data:statement-owner-iam-userid" ],
     "Annotations" : {
@@ -304,6 +319,17 @@
     "SDK" : [ {
       "Name" : "redshift-data",
       "Method" : "list_schemas",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListSessions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSessions",
+      "Service" : "redshift-data"
+    } ],
+    "SDK" : [ {
+      "Name" : "redshift-data",
+      "Method" : "list_sessions",
       "Package" : "Boto3"
     } ]
   }, {

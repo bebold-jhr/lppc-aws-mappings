@@ -5912,6 +5912,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "PutAccountPricingAttributes",
+    "SDK" : [ {
+      "Name" : "sesv2",
+      "Method" : "put_account_pricing_attributes",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "PutAccountSendingAttributes",
     "AuthorizedActions" : [ {
       "Name" : "PutAccountSendingAttributes",

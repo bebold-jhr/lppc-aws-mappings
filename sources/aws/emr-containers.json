@@ -575,6 +575,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteSecurityConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteSecurityConfiguration",
+      "Service" : "emr-containers"
+    } ],
+    "SDK" : [ {
+      "Name" : "emr-containers",
+      "Method" : "delete_security_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteVirtualCluster",
     "AuthorizedActions" : [ {
       "Name" : "AssociateAccessPolicy",

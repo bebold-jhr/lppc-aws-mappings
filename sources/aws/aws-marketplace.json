@@ -652,6 +652,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetTaxComplianceProfile",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "TaxComplianceProfile"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetVerification",
     "ActionConditionKeys" : [ "aws-marketplace:VerificationType" ],
     "Annotations" : {
@@ -982,8 +999,40 @@
     }, {
       "Name" : "IssuedTaxInvoice"
     }, {
+      "Name" : "TaxComplianceProfile"
+    }, {
+      "Name" : "TaxComplianceProfileChangeTask"
+    }, {
       "Name" : "VerificationEvidence"
     } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListTaxComplianceProfileChangeTasks",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListTaxComplianceProfiles",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -1283,6 +1332,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StartTaxComplianceProfileChangeTask",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "TaxComplianceProfileChangeTask"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StartVerification",
     "ActionConditionKeys" : [ "aws-marketplace:VerificationType" ],
     "Annotations" : {
@@ -1337,6 +1404,10 @@
     }, {
       "Name" : "IssuedTaxInvoice"
     }, {
+      "Name" : "TaxComplianceProfile"
+    }, {
+      "Name" : "TaxComplianceProfileChangeTask"
+    }, {
       "Name" : "VerificationEvidence"
     } ],
     "SupportedBy" : {
@@ -1379,6 +1450,10 @@
       "Name" : "InvoiceSubmissionTask"
     }, {
       "Name" : "IssuedTaxInvoice"
+    }, {
+      "Name" : "TaxComplianceProfile"
+    }, {
+      "Name" : "TaxComplianceProfileChangeTask"
     }, {
       "Name" : "VerificationEvidence"
     } ],
@@ -2195,6 +2270,14 @@
   }, {
     "Name" : "SellerDashboard",
     "ARNFormats" : [ "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dashboard/${DashboardName}" ]
+  }, {
+    "Name" : "TaxComplianceProfile",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}:${Account}:tax-compliance-profile/${ResourceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "TaxComplianceProfileChangeTask",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}:${Account}:tax-compliance-profile-change-task/${ResourceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "VerificationEvidence",
     "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}:${Account}:verification-type/${VerificationType}/verification-evidence/${ResourceId}" ],

@@ -141,8 +141,6 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
-    }, {
-      "Name" : "event-busv2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -279,8 +277,6 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
-    }, {
-      "Name" : "event-busv2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -405,8 +401,6 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
-    }, {
-      "Name" : "event-busv2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -711,15 +705,9 @@
     "Resources" : [ {
       "Name" : "event-bus"
     }, {
-      "Name" : "event-busv2"
-    }, {
-      "Name" : "publisher"
-    }, {
       "Name" : "rule-on-custom-event-bus"
     }, {
       "Name" : "rule-on-default-event-bus"
-    }, {
-      "Name" : "subscriber"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -747,7 +735,7 @@
     }
   }, {
     "Name" : "PutEvents",
-    "ActionConditionKeys" : [ "events:ResourceArn", "events:SystemMetadata/EventGroupId", "events:detail-type", "events:eventBusInvocation", "events:source" ],
+    "ActionConditionKeys" : [ "events:detail-type", "events:eventBusInvocation", "events:source" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -758,8 +746,6 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
-    }, {
-      "Name" : "event-busv2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -919,15 +905,9 @@
     "Resources" : [ {
       "Name" : "event-bus"
     }, {
-      "Name" : "event-busv2"
-    }, {
-      "Name" : "publisher"
-    }, {
       "Name" : "rule-on-custom-event-bus"
     }, {
       "Name" : "rule-on-default-event-bus"
-    }, {
-      "Name" : "subscriber"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -961,15 +941,9 @@
     "Resources" : [ {
       "Name" : "event-bus"
     }, {
-      "Name" : "event-busv2"
-    }, {
-      "Name" : "publisher"
-    }, {
       "Name" : "rule-on-custom-event-bus"
     }, {
       "Name" : "rule-on-default-event-bus"
-    }, {
-      "Name" : "subscriber"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1060,8 +1034,6 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
-    }, {
-      "Name" : "event-busv2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,

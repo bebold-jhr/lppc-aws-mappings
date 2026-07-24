@@ -91,7 +91,6 @@
     }
   }, {
     "Name" : "CopyWorkspaceImage",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -101,7 +100,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workspaceimage"
+      "Name" : "workspaceimage",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -187,7 +187,6 @@
     }
   }, {
     "Name" : "CreateStandbyWorkspaces",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -197,9 +196,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "directoryid"
-    }, {
-      "Name" : "workspaceid"
+      "Name" : "directoryid",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -222,7 +220,6 @@
     }
   }, {
     "Name" : "CreateUpdatedWorkspaceImage",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -232,7 +229,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workspaceimage"
+      "Name" : "workspaceimage",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -240,7 +238,6 @@
     }
   }, {
     "Name" : "CreateWorkspaceBundle",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -250,9 +247,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workspacebundle"
-    }, {
-      "Name" : "workspaceimage"
+      "Name" : "workspaceimage",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -260,7 +256,6 @@
     }
   }, {
     "Name" : "CreateWorkspaceImage",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -270,7 +265,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workspaceid"
+      "Name" : "workspaceid",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -278,7 +274,6 @@
     }
   }, {
     "Name" : "CreateWorkspaces",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -293,9 +288,6 @@
     }, {
       "Name" : "workspacebundle",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
-    }, {
-      "Name" : "workspaceid",
-      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -303,7 +295,6 @@
     }
   }, {
     "Name" : "CreateWorkspacesPool",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -313,11 +304,11 @@
       }
     },
     "Resources" : [ {
-      "Name" : "directoryid"
+      "Name" : "directoryid",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     }, {
-      "Name" : "workspacebundle"
-    }, {
-      "Name" : "workspacespoolid"
+      "Name" : "workspacebundle",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -876,7 +867,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workspacespoolid"
+      "Name" : "workspacespool"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1438,7 +1429,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workspacespoolid"
+      "Name" : "workspacespool"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1472,7 +1463,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workspacespoolid"
+      "Name" : "workspacespool"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1524,7 +1515,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workspacespoolid"
+      "Name" : "workspacespool"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1673,7 +1664,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "workspacespoolid"
+      "Name" : "workspacespool"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -2757,7 +2748,8 @@
   } ],
   "Resources" : [ {
     "Name" : "certificateid",
-    "ARNFormats" : [ "arn:${Partition}:workspaces:${Region}:${Account}:workspacecertificate/${CertificateId}" ]
+    "ARNFormats" : [ "arn:${Partition}:workspaces:${Region}:${Account}:workspacecertificate/${CertificateId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "connectionalias",
     "ARNFormats" : [ "arn:${Partition}:workspaces:${Region}:${Account}:connectionalias/${ConnectionAliasId}" ],
@@ -2787,7 +2779,7 @@
     "ARNFormats" : [ "arn:${Partition}:workspaces:${Region}:${Account}:workspaceipgroup/${GroupId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
-    "Name" : "workspacespoolid",
+    "Name" : "workspacespool",
     "ARNFormats" : [ "arn:${Partition}:workspaces:${Region}:${Account}:workspacespool/${PoolId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],

@@ -4957,6 +4957,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "SearchRules",
+    "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "instance"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "SearchSecurityProfiles",
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
@@ -10145,6 +10163,9 @@
     "Name" : "SearchRules",
     "AuthorizedActions" : [ {
       "Name" : "DescribeRule",
+      "Service" : "connect"
+    }, {
+      "Name" : "SearchRules",
       "Service" : "connect"
     } ],
     "SDK" : [ {
