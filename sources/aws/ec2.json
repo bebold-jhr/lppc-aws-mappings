@@ -73,8 +73,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:transitGatewayAttachmentId" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "AcceptTransitGatewayMulticastDomainAssociations",
@@ -833,8 +833,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "AttachInternetGateway",
@@ -1419,8 +1419,8 @@
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateCapacityReservationFleet",
@@ -2788,8 +2788,8 @@
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateSecondarySubnet",
@@ -2810,8 +2810,8 @@
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateSecurityGroup",
@@ -5123,8 +5123,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteSecondarySubnet",
@@ -5142,8 +5142,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteSecurityGroup",
@@ -5674,8 +5674,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:transitGatewayAttachmentId" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteTransitGatewayConnect",
@@ -6621,8 +6621,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeCapacityReservationFleets",
@@ -7527,8 +7527,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeIpamPools",
@@ -8277,8 +8277,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeSecondaryNetworks",
@@ -8292,8 +8292,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeSecondarySubnets",
@@ -8307,8 +8307,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeSecurityGroupReferences",
@@ -9325,8 +9325,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DetachInternetGateway",
@@ -10885,7 +10885,7 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
     }
   }, {
@@ -11498,8 +11498,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetNetworkInsightsAccessScopeAnalysisFindings",
@@ -12839,8 +12839,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ModifyIpamPrefixListResolver",
@@ -13018,8 +13018,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ModifyNetworkInterfaceAttribute",
@@ -14300,8 +14300,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:transitGatewayAttachmentId" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "RejectTransitGatewayMulticastDomainAssociations",
@@ -15464,7 +15464,7 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
     }
   }, {
@@ -17879,6 +17879,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateTransitGatewayPolicyTableEntry",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "create_transit_gateway_policy_table_entry",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateTransitGatewayPrefixListReference",
     "AuthorizedActions" : [ {
       "Name" : "CreateTransitGatewayPrefixListReference",
@@ -18950,6 +18957,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "delete_transit_gateway_policy_table",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteTransitGatewayPolicyTableEntry",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "delete_transit_gateway_policy_table_entry",
       "Package" : "Boto3"
     } ]
   }, {
@@ -23621,6 +23635,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "modify_transit_gateway_metering_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ModifyTransitGatewayPolicyTableEntry",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "modify_transit_gateway_policy_table_entry",
       "Package" : "Boto3"
     } ]
   }, {

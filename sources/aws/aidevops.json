@@ -2014,6 +2014,9 @@
     "ARNFormats" : [ "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
+    "Name" : "asset",
+    "ARNFormats" : [ "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}/asset/${AssetId}" ]
+  }, {
     "Name" : "associations",
     "ARNFormats" : [ "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}/association/${AssociationId}" ]
   }, {
@@ -2024,6 +2027,9 @@
     "Name" : "service",
     "ARNFormats" : [ "arn:${Partition}:aidevops:${Region}:${Account}:service/${ServiceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "trigger",
+    "ARNFormats" : [ "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}/trigger/${TriggerId}" ]
   } ],
   "Version" : "v1.4"
 }

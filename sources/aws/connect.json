@@ -273,8 +273,8 @@
       "Name" : "queue"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "AssociateQueueQuickConnects",
@@ -657,8 +657,8 @@
       "Name" : "attached-file"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateAuthenticationProfile",
@@ -1657,8 +1657,8 @@
       "Name" : "notification"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeletePredefinedAttribute",
@@ -2023,6 +2023,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DescribeAttachedFilesConfiguration",
+    "ActionConditionKeys" : [ "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "instance"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
     "Name" : "DescribeAuthenticationProfile",
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
@@ -2327,8 +2345,8 @@
       "Name" : "notification"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribePhoneNumber",
@@ -2800,8 +2818,8 @@
       "Name" : "queue"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DisassociateQueueQuickConnects",
@@ -3112,8 +3130,8 @@
       "Name" : "evaluation-form"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetFederationToken",
@@ -3369,6 +3387,24 @@
     },
     "Resources" : [ {
       "Name" : "contact"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListAttachedFilesConfigurations",
+    "ActionConditionKeys" : [ "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "instance"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -3856,8 +3892,8 @@
       "Name" : "instance"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListPhoneNumbers",
@@ -3944,8 +3980,8 @@
       "Name" : "queue"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListQueueQuickConnects",
@@ -4356,8 +4392,8 @@
       "Name" : "user"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListUserProficiencies",
@@ -4971,8 +5007,8 @@
       "Name" : "instance"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "SearchSecurityProfiles",
@@ -5181,7 +5217,7 @@
       "Name" : "instance"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
     }
   }, {
@@ -5237,8 +5273,8 @@
       "Name" : "contact"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "StartContactEvaluation",
@@ -5825,6 +5861,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "UpdateAttachedFilesConfiguration",
+    "ActionConditionKeys" : [ "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "instance"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
+    }
+  }, {
     "Name" : "UpdateAuthenticationProfile",
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
@@ -6219,8 +6273,8 @@
       "Name" : "notification"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "UpdateParticipantAuthentication",
@@ -6745,8 +6799,8 @@
       "Name" : "user"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "UpdateUserPhoneConfig",
@@ -8296,6 +8350,10 @@
     } ]
   }, {
     "Name" : "DescribeAttachedFilesConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAttachedFilesConfiguration",
+      "Service" : "connect"
+    } ],
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "describe_attached_files_configuration",
@@ -9140,6 +9198,10 @@
     } ]
   }, {
     "Name" : "ListAttachedFilesConfigurations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAttachedFilesConfigurations",
+      "Service" : "connect"
+    } ],
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "list_attached_files_configurations",
@@ -10648,6 +10710,10 @@
     } ]
   }, {
     "Name" : "UpdateAttachedFilesConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAttachedFilesConfiguration",
+      "Service" : "connect"
+    } ],
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "update_attached_files_configuration",
@@ -11346,13 +11412,15 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "authentication-profile",
-    "ARNFormats" : [ "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/authentication-profile/${AuthenticationProfileId}" ]
+    "ARNFormats" : [ "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/authentication-profile/${AuthenticationProfileId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "aws-managed-view",
     "ARNFormats" : [ "arn:${Partition}:connect:${Region}:aws:view/${ViewId}" ]
   }, {
     "Name" : "contact",
-    "ARNFormats" : [ "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/contact/${ContactId}" ]
+    "ARNFormats" : [ "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/contact/${ContactId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "contact-evaluation",
     "ARNFormats" : [ "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/contact-evaluation/${EvaluationId}" ],

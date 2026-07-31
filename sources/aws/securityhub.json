@@ -50,7 +50,7 @@
       "Name" : "hubv2"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
     }
   }, {
@@ -166,7 +166,7 @@
       "Name" : "hubv2"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
     }
   }, {
@@ -368,8 +368,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateConnectorV2",
@@ -550,8 +550,8 @@
       "Name" : "connector"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteConnectorV2",
@@ -836,8 +836,8 @@
       "Name" : "hubv2"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DisableSecurityHubV2",
@@ -970,8 +970,8 @@
       "Name" : "hubv2"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "EnableSecurityHubV2",
@@ -1120,8 +1120,8 @@
       "Name" : "connector"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetConnectorV2",
@@ -1171,7 +1171,7 @@
       "Name" : "hubv2"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
     }
   }, {
@@ -1510,7 +1510,7 @@
       "Name" : "hubv2"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
     }
   }, {
@@ -1544,7 +1544,7 @@
       "Name" : "hubv2"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
     }
   }, {
@@ -1628,8 +1628,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListConnectorsV2",
@@ -2005,8 +2005,8 @@
       "Name" : "connector"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "UpdateConnectorV2",

@@ -686,7 +686,7 @@
     "Name" : "ListAutonomousDatabaseCharacterSets",
     "Annotations" : {
       "Properties" : {
-        "IsList" : false,
+        "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false
@@ -700,7 +700,7 @@
     "Name" : "ListAutonomousDatabaseClones",
     "Annotations" : {
       "Properties" : {
-        "IsList" : false,
+        "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false
@@ -717,7 +717,7 @@
     "Name" : "ListAutonomousDatabasePeers",
     "Annotations" : {
       "Properties" : {
-        "IsList" : false,
+        "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false
@@ -734,7 +734,7 @@
     "Name" : "ListAutonomousDatabaseVersions",
     "Annotations" : {
       "Properties" : {
-        "IsList" : false,
+        "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false
@@ -762,7 +762,7 @@
     "Name" : "ListAutonomousVirtualMachines",
     "Annotations" : {
       "Properties" : {
-        "IsList" : false,
+        "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false
@@ -844,7 +844,7 @@
     "Name" : "ListDbServers",
     "Annotations" : {
       "Properties" : {
-        "IsList" : false,
+        "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false
@@ -861,7 +861,21 @@
     "Name" : "ListDbSystemShapes",
     "Annotations" : {
       "Properties" : {
-        "IsList" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListFlexComponents",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false
@@ -875,7 +889,7 @@
     "Name" : "ListGiVersions",
     "Annotations" : {
       "Properties" : {
-        "IsList" : false,
+        "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false
@@ -920,7 +934,7 @@
     "Name" : "ListSystemVersions",
     "Annotations" : {
       "Properties" : {
-        "IsList" : false,
+        "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false

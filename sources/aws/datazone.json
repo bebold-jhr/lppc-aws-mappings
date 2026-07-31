@@ -1736,6 +1736,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetNotebookRun",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetProject",
     "Annotations" : {
       "Properties" : {
@@ -2272,6 +2286,20 @@
     }
   }, {
     "Name" : "ListMetadataGenerationRuns",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListNotebookRuns",
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -2921,6 +2949,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StartNotebookRun",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StartNotebookSync",
     "Annotations" : {
       "Properties" : {
@@ -2964,6 +3006,20 @@
     }
   }, {
     "Name" : "StopNotebookCompute",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StopNotebookRun",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -4571,6 +4627,10 @@
     } ]
   }, {
     "Name" : "GetNotebookRun",
+    "AuthorizedActions" : [ {
+      "Name" : "GetNotebookRun",
+      "Service" : "datazone"
+    } ],
     "SDK" : [ {
       "Name" : "datazone",
       "Method" : "get_notebook_run",
@@ -4908,6 +4968,10 @@
     } ]
   }, {
     "Name" : "ListNotebookRuns",
+    "AuthorizedActions" : [ {
+      "Name" : "ListNotebookRuns",
+      "Service" : "datazone"
+    } ],
     "SDK" : [ {
       "Name" : "datazone",
       "Method" : "list_notebook_runs",
@@ -5273,6 +5337,10 @@
     } ]
   }, {
     "Name" : "StartNotebookRun",
+    "AuthorizedActions" : [ {
+      "Name" : "StartNotebookRun",
+      "Service" : "datazone"
+    } ],
     "SDK" : [ {
       "Name" : "datazone",
       "Method" : "start_notebook_run",

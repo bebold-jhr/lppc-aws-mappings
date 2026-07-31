@@ -2776,7 +2776,7 @@
       "Name" : "cluster"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
     }
   } ],

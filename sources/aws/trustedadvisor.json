@@ -467,6 +467,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListRecommendationsForResource",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListRoots",
     "Annotations" : {
       "Properties" : {
@@ -717,6 +731,23 @@
     "SDK" : [ {
       "Name" : "trustedadvisor",
       "Method" : "list_recommendations",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListRecommendationsForResource",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeCheckItems",
+      "Service" : "trustedadvisor"
+    }, {
+      "Name" : "DescribeTrustedAdvisorCheckResult",
+      "Service" : "support"
+    }, {
+      "Name" : "ListRecommendationsForResource",
+      "Service" : "trustedadvisor"
+    } ],
+    "SDK" : [ {
+      "Name" : "trustedadvisor",
+      "Method" : "list_recommendations_for_resource",
       "Package" : "Boto3"
     } ]
   }, {

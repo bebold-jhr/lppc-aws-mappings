@@ -5657,6 +5657,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "BatchGetDataQualityRulesetEvaluationRun",
+    "SDK" : [ {
+      "Name" : "glue",
+      "Method" : "batch_get_data_quality_ruleset_evaluation_run",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "BatchGetDevEndpoints",
     "AuthorizedActions" : [ {
       "Name" : "BatchGetDevEndpoints",

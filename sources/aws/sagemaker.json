@@ -8139,6 +8139,13 @@
     } ]
   }, {
     "Name" : "BatchWriteRecord",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchWriteRecord",
+      "Service" : "sagemaker"
+    }, {
+      "Name" : "PutRecord",
+      "Service" : "sagemaker"
+    } ],
     "SDK" : [ {
       "Name" : "sagemaker-featurestore-runtime",
       "Method" : "batch_write_record",
@@ -8834,6 +8841,9 @@
       "Service" : "sagemaker"
     }, {
       "Name" : "CreateModel",
+      "Service" : "sagemaker"
+    }, {
+      "Name" : "DeployHubModel",
       "Service" : "sagemaker"
     }, {
       "Name" : "PassRole",
@@ -11861,6 +11871,10 @@
     } ]
   }, {
     "Name" : "ListRecords",
+    "AuthorizedActions" : [ {
+      "Name" : "ListRecords",
+      "Service" : "sagemaker"
+    } ],
     "SDK" : [ {
       "Name" : "sagemaker-featurestore-runtime",
       "Method" : "list_records",

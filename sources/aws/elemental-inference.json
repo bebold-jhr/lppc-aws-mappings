@@ -341,6 +341,12 @@
       "Name" : "CreateFeed",
       "Service" : "elemental-inference"
     }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "elemental-inference.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "TagResource",
       "Service" : "elemental-inference"
     } ],
@@ -484,6 +490,12 @@
   }, {
     "Name" : "UpdateFeed",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "elemental-inference.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateFeed",
       "Service" : "elemental-inference"
     } ],

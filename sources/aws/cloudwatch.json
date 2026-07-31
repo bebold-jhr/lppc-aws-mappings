@@ -75,7 +75,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteAlarms",
@@ -394,7 +394,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetDashboard",
@@ -429,7 +429,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetInsightRuleReport",
@@ -633,7 +633,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListDashboards",
@@ -795,7 +795,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "PutAnomalyDetector",
@@ -881,7 +881,7 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "PutManagedInsightRules",

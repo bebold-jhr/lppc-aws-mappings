@@ -3541,6 +3541,9 @@
   }, {
     "Name" : "CreateDBCluster",
     "AuthorizedActions" : [ {
+      "Name" : "AddRoleToDBCluster",
+      "Service" : "rds"
+    }, {
       "Name" : "AddTagsToResource",
       "Service" : "rds"
     }, {

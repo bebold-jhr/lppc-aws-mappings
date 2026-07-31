@@ -3397,7 +3397,8 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "durable execution",
-    "ARNFormats" : [ "arn:${Partition}:lambda:${Region}:${Account}:function:${FunctionName}:${Version}/durable-execution/${ExecutionName}/${ExecutionId}" ]
+    "ARNFormats" : [ "arn:${Partition}:lambda:${Region}:${Account}:function:${FunctionName}:${Version}/durable-execution/${ExecutionName}/${ExecutionId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "eventSourceMapping",
     "ARNFormats" : [ "arn:${Partition}:lambda:${Region}:${Account}:event-source-mapping:${UUID}" ],

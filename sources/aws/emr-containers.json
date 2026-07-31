@@ -142,8 +142,8 @@
       "Name" : "securityConfiguration"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteVirtualCluster",
@@ -786,6 +786,13 @@
     "SDK" : [ {
       "Name" : "emr-containers",
       "Method" : "untag_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateVirtualCluster",
+    "SDK" : [ {
+      "Name" : "emr-containers",
+      "Method" : "update_virtual_cluster",
       "Package" : "Boto3"
     } ]
   } ],

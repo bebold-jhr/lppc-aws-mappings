@@ -2836,6 +2836,10 @@
     } ]
   }, {
     "Name" : "UpdateConfigurationSetEventDestination",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateConfigurationSetEventDestination",
+      "Service" : "sms-voice"
+    } ],
     "SDK" : [ {
       "Name" : "pinpoint-sms-voice",
       "Method" : "update_configuration_set_event_destination",

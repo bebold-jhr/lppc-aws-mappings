@@ -14,7 +14,7 @@
       "Name" : "cluster"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
     }
   }, {
@@ -35,8 +35,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster", "ecs:service" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateCapacityProvider",
@@ -92,8 +92,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateExpressGatewayService",
@@ -235,8 +235,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteDaemonTaskDefinition",
@@ -253,8 +253,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteExpressGatewayService",
@@ -429,8 +429,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeDaemonDeployments",
@@ -450,8 +450,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster", "ecs:daemon" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeDaemonRevisions",
@@ -471,8 +471,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster", "ecs:daemon" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeDaemonTaskDefinition",
@@ -489,8 +489,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeExpressGatewayService",
@@ -751,8 +751,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListDaemonTaskDefinitions",
@@ -765,8 +765,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListDaemons",
@@ -780,8 +780,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListServiceDeployments",
@@ -1048,8 +1048,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "RegisterTaskDefinition",
@@ -1392,8 +1392,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "UpdateExpressGatewayService",

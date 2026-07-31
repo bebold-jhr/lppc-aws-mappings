@@ -4803,6 +4803,9 @@
   }, {
     "Name" : "CreateAutomatedReasoningPolicyTestCase",
     "AuthorizedActions" : [ {
+      "Name" : "CallWithBearerToken",
+      "Service" : "bedrock"
+    }, {
       "Name" : "CreateAutomatedReasoningPolicyTestCase",
       "Service" : "bedrock"
     } ],
@@ -4935,6 +4938,9 @@
   }, {
     "Name" : "CreateEvaluationJob",
     "AuthorizedActions" : [ {
+      "Name" : "CallWithBearerToken",
+      "Service" : "bedrock"
+    }, {
       "Name" : "CreateEvaluationJob",
       "Service" : "bedrock"
     }, {
@@ -6701,6 +6707,9 @@
   }, {
     "Name" : "ListAutomatedReasoningPolicyTestResults",
     "AuthorizedActions" : [ {
+      "Name" : "CallWithBearerToken",
+      "Service" : "bedrock"
+    }, {
       "Name" : "ListAutomatedReasoningPolicyTestResults",
       "Service" : "bedrock"
     } ],
@@ -7224,6 +7233,9 @@
   }, {
     "Name" : "PutModelInvocationLoggingConfiguration",
     "AuthorizedActions" : [ {
+      "Name" : "CallWithBearerToken",
+      "Service" : "bedrock"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "bedrock.amazonaws.com" ]
@@ -7353,6 +7365,9 @@
   }, {
     "Name" : "StartAutomatedReasoningPolicyTestWorkflow",
     "AuthorizedActions" : [ {
+      "Name" : "CallWithBearerToken",
+      "Service" : "bedrock"
+    }, {
       "Name" : "InvokeAutomatedReasoningPolicy",
       "Service" : "bedrock"
     }, {

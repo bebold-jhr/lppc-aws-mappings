@@ -31,8 +31,8 @@
       "Name" : "userpool"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "AdminAddUserToGroup",
@@ -235,8 +235,8 @@
       "Name" : "userpool"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "AdminInitiateAuth",
@@ -747,8 +747,8 @@
       "Name" : "userpool"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteGroup",
@@ -911,8 +911,8 @@
       "Name" : "userpool"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteUserPoolDomain",
@@ -945,8 +945,8 @@
       "Name" : "userpool"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeIdentityProvider",
@@ -1253,8 +1253,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetSigningCertificate",
@@ -1541,8 +1541,8 @@
       "Name" : "userpool"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListUserPoolClients",
@@ -1575,8 +1575,8 @@
       "Name" : "userpool"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListUserPools",
@@ -1941,8 +1941,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "UpdateResourceServer",
@@ -2058,8 +2058,8 @@
       "Name" : "userpool"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "VerifySoftwareToken",
@@ -2241,6 +2241,17 @@
     "SDK" : [ {
       "Name" : "cognito-idp",
       "Method" : "admin_get_user",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "AdminGetUserAuthFactors",
+    "AuthorizedActions" : [ {
+      "Name" : "AdminGetUserAuthFactors",
+      "Service" : "cognito-idp"
+    } ],
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "admin_get_user_auth_factors",
       "Package" : "Boto3"
     } ]
   }, {

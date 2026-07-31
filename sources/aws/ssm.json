@@ -316,8 +316,8 @@
       "Name" : "cloud-connector"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteDocument",
@@ -1226,8 +1226,8 @@
       "Name" : "cloud-connector"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetCommandInvocation",
@@ -1699,8 +1699,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListCommandInvocations",
@@ -2541,8 +2541,8 @@
       "Name" : "cloud-connector"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "UpdateDocument",
@@ -2816,8 +2816,8 @@
       "Name" : "cloud-connector"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   } ],
   "ConditionKeys" : [ {
@@ -4524,9 +4524,6 @@
   }, {
     "Name" : "UpdateDocument",
     "AuthorizedActions" : [ {
-      "Name" : "GetDocument",
-      "Service" : "ssm"
-    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "justintimeaccess.ssm.amazonaws.com", "ssm.amazonaws.com" ]

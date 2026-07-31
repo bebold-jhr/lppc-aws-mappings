@@ -2513,6 +2513,9 @@
     }, {
       "Name" : "GetRelationship",
       "Service" : "partnercentral"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "partnercentral"
     } ],
     "SDK" : [ {
       "Name" : "partnercentral-channel",
@@ -3501,6 +3504,9 @@
       "Service" : "partnercentral"
     }, {
       "Name" : "SubmitOpportunity",
+      "Service" : "partnercentral"
+    }, {
+      "Name" : "TagResource",
       "Service" : "partnercentral"
     } ],
     "SDK" : [ {
