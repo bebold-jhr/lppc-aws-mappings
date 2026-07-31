@@ -241,6 +241,7 @@
   "aws_eip",
   "aws_eips",
   "aws_eks_access_entry",
+  "aws_eks_access_policies",
   "aws_eks_addon",
   "aws_eks_addon_version",
   "aws_eks_cluster",
