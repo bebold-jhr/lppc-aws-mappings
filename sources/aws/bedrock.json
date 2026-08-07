@@ -212,6 +212,13 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "application-inference-profile"
+    }, {
+      "Name" : "foundation-model"
+    }, {
+      "Name" : "inference-profile"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -6501,6 +6508,9 @@
   }, {
     "Name" : "InvokeGuardrailChecks",
     "AuthorizedActions" : [ {
+      "Name" : "CallWithBearerToken",
+      "Service" : "bedrock"
+    }, {
       "Name" : "InvokeGuardrailChecks",
       "Service" : "bedrock"
     } ],

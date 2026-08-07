@@ -223,7 +223,7 @@
     "Types" : [ "String" ]
   }, {
     "Name" : "airflow:TeamName",
-    "Types" : [ "String" ]
+    "Types" : [ "ArrayOfString" ]
   }, {
     "Name" : "aws:RequestTag/${TagKey}",
     "Types" : [ "String" ]

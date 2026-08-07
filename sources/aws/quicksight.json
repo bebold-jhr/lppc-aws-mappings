@@ -29,23 +29,6 @@
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "BatchAssignLimitsProfile",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "Resources" : [ {
-      "Name" : "limitsProfile"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
     "Name" : "BatchCreateTopicReviewedAnswer",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -99,6 +82,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "BatchDescribeUserLimits",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "limitsProfile"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "BatchGetPreferences",
     "Annotations" : {
       "Properties" : {
@@ -108,23 +108,6 @@
         "IsWrite" : false
       }
     },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "BatchUnassignLimitsProfile",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "Resources" : [ {
-      "Name" : "limitsProfile"
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -344,6 +327,24 @@
         "IsWrite" : true
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateDlpSetting",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dlpSetting"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -1028,6 +1029,23 @@
         "IsWrite" : true
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteDlpSetting",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dlpSetting"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -2036,6 +2054,40 @@
         "IsWrite" : false
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeDlpJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dlpSetting"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeDlpSetting",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dlpSetting"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -3090,6 +3142,37 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListDlpLabels",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListDlpSettings",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dlpSetting"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListExtensionAccesses",
     "Annotations" : {
       "Properties" : {
@@ -3469,6 +3552,8 @@
     }, {
       "Name" : "datasource"
     }, {
+      "Name" : "dlpSetting"
+    }, {
       "Name" : "emailCustomizationTemplate"
     }, {
       "Name" : "flow"
@@ -3733,6 +3818,24 @@
     },
     "Resources" : [ {
       "Name" : "datasource"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PassTopic",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "topic"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -4223,6 +4326,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StartDlpJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dlpSetting"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "Subscribe",
     "ActionConditionKeys" : [ "quicksight:DirectoryType", "quicksight:Edition" ],
     "Annotations" : {
@@ -4266,6 +4386,8 @@
       "Name" : "dataset"
     }, {
       "Name" : "datasource"
+    }, {
+      "Name" : "dlpSetting"
     }, {
       "Name" : "emailCustomizationTemplate"
     }, {
@@ -4353,6 +4475,8 @@
       "Name" : "dataset"
     }, {
       "Name" : "datasource"
+    }, {
+      "Name" : "dlpSetting"
     }, {
       "Name" : "emailCustomizationTemplate"
     }, {
@@ -4820,6 +4944,23 @@
         "IsWrite" : true
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateDlpSetting",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dlpSetting"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -6017,6 +6158,23 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateTopicV2",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateTopic",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "PassDataSet",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "create_topic_v2",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateVPCConnection",
     "AuthorizedActions" : [ {
       "Name" : "CreateVPCConnection",
@@ -6432,6 +6590,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "delete_topic_refresh_schedule",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteTopicV2",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteTopic",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "delete_topic_v2",
       "Package" : "Boto3"
     } ]
   }, {
@@ -7154,6 +7323,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeTopicPermissionsV2",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeTopicPermissions",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_topic_permissions_v2",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeTopicRefresh",
     "AuthorizedActions" : [ {
       "Name" : "DescribeTopicRefresh",
@@ -7173,6 +7353,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "describe_topic_refresh_schedule",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeTopicV2",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeTopic",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_topic_v2",
       "Package" : "Boto3"
     } ]
   }, {
@@ -7730,6 +7921,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListTopicsV2",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTopics",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_topics_v2",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListUserGroups",
     "AuthorizedActions" : [ {
       "Name" : "ListUserGroups",
@@ -7956,6 +8158,13 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "search_topics",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "SearchTopicsV2",
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "search_topics_v2",
       "Package" : "Boto3"
     } ]
   }, {
@@ -8695,6 +8904,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateTopicPermissionsV2",
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_topic_permissions_v2",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateTopicRefreshSchedule",
     "AuthorizedActions" : [ {
       "Name" : "UpdateTopicRefreshSchedule",
@@ -8703,6 +8919,13 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_topic_refresh_schedule",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateTopicV2",
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_topic_v2",
       "Package" : "Boto3"
     } ]
   }, {
@@ -8814,6 +9037,10 @@
   }, {
     "Name" : "datasource",
     "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:datasource/${ResourceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "dlpSetting",
+    "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:dlpsetting/${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "emailCustomizationTemplate",

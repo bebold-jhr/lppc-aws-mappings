@@ -87,6 +87,8 @@
     }, {
       "Name" : "notebook-execution"
     }, {
+      "Name" : "session"
+    }, {
       "Name" : "studio"
     } ],
     "SupportedBy" : {
@@ -615,6 +617,40 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetSession",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "session"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetSessionEndpoint",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "session"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetStudioSessionMapping",
     "Annotations" : {
       "Properties" : {
@@ -793,6 +829,23 @@
         "IsWrite" : false
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListSessions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -1094,6 +1147,8 @@
     }, {
       "Name" : "notebook-execution"
     }, {
+      "Name" : "session"
+    }, {
       "Name" : "studio"
     } ],
     "SupportedBy" : {
@@ -1223,6 +1278,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StartSession",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "elasticmapreduce:ExecutionRoleArn", "elasticmapreduce:RequestTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StopEditor",
     "Annotations" : {
       "Properties" : {
@@ -1268,6 +1341,23 @@
     },
     "Resources" : [ {
       "Name" : "cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "TerminateSession",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "session"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1686,6 +1776,10 @@
     } ]
   }, {
     "Name" : "GetSession",
+    "AuthorizedActions" : [ {
+      "Name" : "GetSession",
+      "Service" : "elasticmapreduce"
+    } ],
     "SDK" : [ {
       "Name" : "emr",
       "Method" : "get_session",
@@ -1693,6 +1787,10 @@
     } ]
   }, {
     "Name" : "GetSessionEndpoint",
+    "AuthorizedActions" : [ {
+      "Name" : "GetSessionEndpoint",
+      "Service" : "elasticmapreduce"
+    } ],
     "SDK" : [ {
       "Name" : "emr",
       "Method" : "get_session_endpoint",
@@ -1799,6 +1897,10 @@
     } ]
   }, {
     "Name" : "ListSessions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSessions",
+      "Service" : "elasticmapreduce"
+    } ],
     "SDK" : [ {
       "Name" : "emr",
       "Method" : "list_sessions",
@@ -2061,6 +2163,9 @@
         "iam:PassedToService" : [ "elasticmapreduce.amazonaws.com" ]
       },
       "Service" : "iam"
+    }, {
+      "Name" : "StartSession",
+      "Service" : "elasticmapreduce"
     } ],
     "SDK" : [ {
       "Name" : "emr",
@@ -2091,6 +2196,10 @@
     } ]
   }, {
     "Name" : "TerminateSession",
+    "AuthorizedActions" : [ {
+      "Name" : "TerminateSession",
+      "Service" : "elasticmapreduce"
+    } ],
     "SDK" : [ {
       "Name" : "emr",
       "Method" : "terminate_session",
@@ -2133,6 +2242,10 @@
   }, {
     "Name" : "notebook-execution",
     "ARNFormats" : [ "arn:${Partition}:elasticmapreduce:${Region}:${Account}:notebook-execution/${NotebookExecutionId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "elasticmapreduce:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "session",
+    "ARNFormats" : [ "arn:${Partition}:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}/session/${SessionId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "elasticmapreduce:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "studio",

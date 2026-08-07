@@ -1,6 +1,24 @@
 {
   "Name" : "timestream-influxdb",
   "Actions" : [ {
+    "Name" : "CreateDbBackup",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "db-backup"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateDbCluster",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -52,6 +70,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteDbBackup",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "db-backup"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteDbCluster",
     "Annotations" : {
       "Properties" : {
@@ -80,6 +115,23 @@
     },
     "Resources" : [ {
       "Name" : "db-instance"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetDbBackup",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "db-backup"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -132,6 +184,20 @@
     "Resources" : [ {
       "Name" : "db-parameter-group"
     } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListDbBackups",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -207,6 +273,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "db-backup"
+    }, {
       "Name" : "db-cluster"
     }, {
       "Name" : "db-instance"
@@ -254,6 +322,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "RestoreFromDbBackup",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "timestream-influxdb:RestoreMode" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "db-backup"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "TagResource",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -265,6 +351,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "db-backup"
+    }, {
       "Name" : "db-cluster"
     }, {
       "Name" : "db-instance"
@@ -287,6 +375,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "db-backup"
+    }, {
       "Name" : "db-cluster"
     }, {
       "Name" : "db-instance"
@@ -345,8 +435,22 @@
   }, {
     "Name" : "aws:TagKeys",
     "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "timestream-influxdb:RestoreMode",
+    "Types" : [ "String" ]
   } ],
   "Operations" : [ {
+    "Name" : "CreateDbBackup",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateDbBackup",
+      "Service" : "timestream-influxdb"
+    } ],
+    "SDK" : [ {
+      "Name" : "timestream-influxdb",
+      "Method" : "create_db_backup",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateDbCluster",
     "AuthorizedActions" : [ {
       "Name" : "CreateDbCluster",
@@ -395,6 +499,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteDbBackup",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteDbBackup",
+      "Service" : "timestream-influxdb"
+    } ],
+    "SDK" : [ {
+      "Name" : "timestream-influxdb",
+      "Method" : "delete_db_backup",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteDbCluster",
     "AuthorizedActions" : [ {
       "Name" : "DeleteDbCluster",
@@ -417,6 +532,17 @@
     "SDK" : [ {
       "Name" : "timestream-influxdb",
       "Method" : "delete_db_instance",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetDbBackup",
+    "AuthorizedActions" : [ {
+      "Name" : "GetDbBackup",
+      "Service" : "timestream-influxdb"
+    } ],
+    "SDK" : [ {
+      "Name" : "timestream-influxdb",
+      "Method" : "get_db_backup",
       "Package" : "Boto3"
     } ]
   }, {
@@ -450,6 +576,17 @@
     "SDK" : [ {
       "Name" : "timestream-influxdb",
       "Method" : "get_db_parameter_group",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListDbBackups",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDbBackups",
+      "Service" : "timestream-influxdb"
+    } ],
+    "SDK" : [ {
+      "Name" : "timestream-influxdb",
+      "Method" : "list_db_backups",
       "Package" : "Boto3"
     } ]
   }, {
@@ -533,6 +670,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "RestoreFromDbBackup",
+    "AuthorizedActions" : [ {
+      "Name" : "RestoreFromDbBackup",
+      "Service" : "timestream-influxdb"
+    } ],
+    "SDK" : [ {
+      "Name" : "timestream-influxdb",
+      "Method" : "restore_from_db_backup",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "TagResource",
     "AuthorizedActions" : [ {
       "Name" : "TagResource",
@@ -581,6 +729,10 @@
     } ]
   } ],
   "Resources" : [ {
+    "Name" : "db-backup",
+    "ARNFormats" : [ "arn:${Partition}:timestream-influxdb:${Region}:${Account}:db-backup/${DbBackupId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "db-cluster",
     "ARNFormats" : [ "arn:${Partition}:timestream-influxdb:${Region}:${Account}:db-cluster/${DbClusterId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]

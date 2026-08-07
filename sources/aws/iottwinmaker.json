@@ -1211,6 +1211,12 @@
   }, {
     "Name" : "UpdateWorkspace",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "iottwinmaker.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateWorkspace",
       "Service" : "iottwinmaker"
     } ],

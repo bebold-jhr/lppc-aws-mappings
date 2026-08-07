@@ -149,7 +149,7 @@
     }
   }, {
     "Name" : "CreateAutoScalingGroup",
-    "ActionConditionKeys" : [ "autoscaling:CapacityReservationIds", "autoscaling:CapacityReservationResourceGroupArns", "autoscaling:ImageId", "autoscaling:InstanceTypes", "autoscaling:LaunchConfigurationName", "autoscaling:LaunchTemplateVersionSpecified", "autoscaling:LoadBalancerNames", "autoscaling:MaxSize", "autoscaling:MinSize", "autoscaling:TargetGroupARNs", "autoscaling:TrafficSourceIdentifiers", "autoscaling:VPCZoneIdentifiers", "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "autoscaling:CapacityReservationIds", "autoscaling:CapacityReservationResourceGroupArns", "autoscaling:ImageId", "autoscaling:InstanceTypes", "autoscaling:LaunchConfigurationName", "autoscaling:LaunchTemplateVersionSpecified", "autoscaling:LoadBalancerNames", "autoscaling:MaxSize", "autoscaling:MinSize", "autoscaling:OperatorPrincipal", "autoscaling:TargetGroupARNs", "autoscaling:TrafficSourceIdentifiers", "autoscaling:VPCZoneIdentifiers", "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1182,6 +1182,9 @@
   }, {
     "Name" : "autoscaling:MinSize",
     "Types" : [ "Numeric" ]
+  }, {
+    "Name" : "autoscaling:OperatorPrincipal",
+    "Types" : [ "String" ]
   }, {
     "Name" : "autoscaling:ResourceTag/${TagKey}",
     "Types" : [ "String" ]

@@ -1738,6 +1738,8 @@
     },
     "Resources" : [ {
       "Name" : "AgentSpace"
+    }, {
+      "Name" : "Integration"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,

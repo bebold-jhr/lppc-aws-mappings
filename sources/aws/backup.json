@@ -73,6 +73,7 @@
     }
   }, {
     "Name" : "CreateBackupAccessPoint",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -294,6 +295,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "backupAccessPoint"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
@@ -529,6 +533,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "backupAccessPoint"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : false
@@ -1053,6 +1060,48 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListBackupAccessPoints",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListBackupAccessPointsByRecoveryPoint",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListBackupAccessPointsByResource",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListBackupJobSummaries",
     "Annotations" : {
       "Properties" : {
@@ -1476,6 +1525,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "backupAccessPoint"
+    }, {
       "Name" : "backupPlan"
     }, {
       "Name" : "backupVault"
@@ -1738,6 +1789,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "backupAccessPoint"
+    }, {
       "Name" : "backupPlan"
     }, {
       "Name" : "backupVault"
@@ -1770,6 +1823,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "backupAccessPoint"
+    }, {
       "Name" : "backupPlan"
     }, {
       "Name" : "backupVault"
@@ -2014,6 +2069,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateBackupAccessPoint",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateBackupAccessPoint",
+      "Service" : "backup"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "backup"
+    } ],
+    "SDK" : [ {
+      "Name" : "backup",
+      "Method" : "create_backup_access_point",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateBackupPlan",
     "AuthorizedActions" : [ {
       "Name" : "CreateBackupPlan",
@@ -2180,6 +2249,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteBackupAccessPoint",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteBackupAccessPoint",
+      "Service" : "backup"
+    } ],
+    "SDK" : [ {
+      "Name" : "backup",
+      "Method" : "delete_backup_access_point",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteBackupPlan",
     "AuthorizedActions" : [ {
       "Name" : "DeleteBackupPlan",
@@ -2309,6 +2389,17 @@
     "SDK" : [ {
       "Name" : "backup",
       "Method" : "delete_tiering_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeBackupAccessPoint",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeBackupAccessPoint",
+      "Service" : "backup"
+    } ],
+    "SDK" : [ {
+      "Name" : "backup",
+      "Method" : "describe_backup_access_point",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2661,6 +2752,39 @@
     "SDK" : [ {
       "Name" : "backup",
       "Method" : "get_tiering_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListBackupAccessPoints",
+    "AuthorizedActions" : [ {
+      "Name" : "ListBackupAccessPoints",
+      "Service" : "backup"
+    } ],
+    "SDK" : [ {
+      "Name" : "backup",
+      "Method" : "list_backup_access_points",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListBackupAccessPointsByRecoveryPoint",
+    "AuthorizedActions" : [ {
+      "Name" : "ListBackupAccessPointsByRecoveryPoint",
+      "Service" : "backup"
+    } ],
+    "SDK" : [ {
+      "Name" : "backup",
+      "Method" : "list_backup_access_points_by_recovery_point",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListBackupAccessPointsByResource",
+    "AuthorizedActions" : [ {
+      "Name" : "ListBackupAccessPointsByResource",
+      "Service" : "backup"
+    } ],
+    "SDK" : [ {
+      "Name" : "backup",
+      "Method" : "list_backup_access_points_by_resource",
       "Package" : "Boto3"
     } ]
   }, {
@@ -3279,6 +3403,10 @@
     } ]
   } ],
   "Resources" : [ {
+    "Name" : "backupAccessPoint",
+    "ARNFormats" : [ "arn:${Partition}:backup:${Region}:${Account}:accesspoint/${AccessPointName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "backupPlan",
     "ARNFormats" : [ "arn:${Partition}:backup:${Region}:${Account}:backup-plan:${BackupPlanId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]

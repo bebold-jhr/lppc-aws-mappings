@@ -899,7 +899,7 @@
     }, {
       "Name" : "PassRole",
       "Context" : {
-        "iam:PassedToService" : [ "batch.amazonaws.com", "ec2.amazonaws.com", "spotfleet.amazonaws.com" ]
+        "iam:PassedToService" : [ "batch.amazonaws.com", "ec2.amazonaws.com", "ecs.amazonaws.com", "spotfleet.amazonaws.com" ]
       },
       "Service" : "iam"
     }, {

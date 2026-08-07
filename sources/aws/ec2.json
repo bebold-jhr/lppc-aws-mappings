@@ -2675,8 +2675,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "instance"
-    }, {
       "Name" : "route-table",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:RouteTableID", "ec2:Vpc" ]
     } ],
@@ -14545,8 +14543,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "instance"
-    }, {
       "Name" : "route-table",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:RouteTableID", "ec2:Vpc" ]
     } ],
@@ -16208,6 +16204,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "AssociateApplicationStatusCheck",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "associate_application_status_check",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "AssociateCapacityReservationBillingOwner",
     "AuthorizedActions" : [ {
       "Name" : "AssociateCapacityReservationBillingOwner",
@@ -16724,6 +16727,17 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "copy_volumes",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateApplicationStatusCheck",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateTags",
+      "Service" : "ec2"
+    } ],
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "create_application_status_check",
       "Package" : "Boto3"
     } ]
   }, {
@@ -18168,6 +18182,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteApplicationStatusCheck",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "delete_application_status_check",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteCapacityManagerDataExport",
     "AuthorizedActions" : [ {
       "Name" : "DeleteCapacityManagerDataExport",
@@ -19345,6 +19366,27 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "describe_aggregate_id_format",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeApplicationStatus",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "describe_application_status",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeApplicationStatusCheckAssociations",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "describe_application_status_check_associations",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeApplicationStatusChecks",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "describe_application_status_checks",
       "Package" : "Boto3"
     } ]
   }, {
@@ -21441,6 +21483,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DisableApplicationStatusCheckSuppression",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "disable_application_status_check_suppression",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DisableAwsNetworkPerformanceMetricSubscription",
     "AuthorizedActions" : [ {
       "Name" : "DisableAwsNetworkPerformanceMetricSubscription",
@@ -21661,6 +21710,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DisassociateApplicationStatusCheck",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "disassociate_application_status_check",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DisassociateCapacityReservationBillingOwner",
     "AuthorizedActions" : [ {
       "Name" : "DisassociateCapacityReservationBillingOwner",
@@ -21867,6 +21923,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "enable_allowed_images_settings",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "EnableApplicationStatusCheckSuppression",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "enable_application_status_check_suppression",
       "Package" : "Boto3"
     } ]
   }, {
@@ -23063,6 +23126,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "modify_address_attribute",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ModifyApplicationStatusCheck",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "modify_application_status_check",
       "Package" : "Boto3"
     } ]
   }, {

@@ -4050,9 +4050,6 @@
     "AuthorizedActions" : [ {
       "Name" : "PutBot",
       "Service" : "lex"
-    }, {
-      "Name" : "TagResource",
-      "Service" : "lex"
     } ],
     "SDK" : [ {
       "Name" : "lex-models",

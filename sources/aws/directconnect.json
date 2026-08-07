@@ -1764,6 +1764,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListVirtualInterfaceRoutes",
+    "AuthorizedActions" : [ {
+      "Name" : "ListVirtualInterfaceRoutes",
+      "Service" : "directconnect"
+    } ],
+    "SDK" : [ {
+      "Name" : "directconnect",
+      "Method" : "list_virtual_interface_routes",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListVirtualInterfaceTestHistory",
     "AuthorizedActions" : [ {
       "Name" : "ListVirtualInterfaceTestHistory",

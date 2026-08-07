@@ -562,6 +562,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateWhatsAppDataset",
+    "SDK" : [ {
+      "Name" : "socialmessaging",
+      "Method" : "create_whats_app_dataset",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateWhatsAppFlow",
     "AuthorizedActions" : [ {
       "Name" : "CreateWhatsAppFlow",
@@ -829,6 +836,13 @@
     "SDK" : [ {
       "Name" : "socialmessaging",
       "Method" : "put_whatsapp_business_account_event_destinations",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "SendWhatsAppConversionEvent",
+    "SDK" : [ {
+      "Name" : "socialmessaging",
+      "Method" : "send_whats_app_conversion_event",
       "Package" : "Boto3"
     } ]
   }, {

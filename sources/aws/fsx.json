@@ -286,7 +286,6 @@
     }
   }, {
     "Name" : "CreateVolume",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "fsx:ParentVolumeId", "fsx:StorageVirtualMachineId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -298,7 +297,10 @@
     "Resources" : [ {
       "Name" : "snapshot"
     }, {
-      "Name" : "volume"
+      "Name" : "storage-virtual-machine"
+    }, {
+      "Name" : "volume",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "fsx:ParentVolumeId", "fsx:StorageVirtualMachineId" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,

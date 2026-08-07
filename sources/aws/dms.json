@@ -185,6 +185,11 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "Certificate"
+    }, {
+      "Name" : "Endpoint"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -200,6 +205,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "EventSubscription"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -297,6 +305,11 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "ReplicationInstance"
+    }, {
+      "Name" : "ReplicationSubnetGroup"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -312,6 +325,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "ReplicationSubnetGroup"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -1202,6 +1218,23 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetMetadataModel",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "MigrationProject"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetTargetSelectionRules",
     "Annotations" : {
       "Properties" : {
@@ -1229,6 +1262,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "Certificate"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -1457,6 +1493,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "EventSubscription"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -1547,6 +1586,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "ReplicationSubnetGroup"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
