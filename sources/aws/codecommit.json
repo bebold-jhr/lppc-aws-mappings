@@ -1813,6 +1813,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetBlobDifferences",
+    "SDK" : [ {
+      "Name" : "codecommit",
+      "Method" : "get_blob_differences",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetBranch",
     "AuthorizedActions" : [ {
       "Name" : "GetBranch",

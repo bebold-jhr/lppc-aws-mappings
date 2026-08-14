@@ -2,6 +2,7 @@
   "Name" : "agent-registry",
   "Actions" : [ {
     "Name" : "CreateRegistry",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -16,6 +17,7 @@
     }
   }, {
     "Name" : "CreateRegistryRecord",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -367,6 +369,12 @@
       "Name" : "CreateRegistryRecord",
       "Service" : "agent-registry"
     }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "agent-registry.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "TagResource",
       "Service" : "agent-registry"
     } ],
@@ -521,6 +529,12 @@
   }, {
     "Name" : "UpdateRegistryRecord",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "agent-registry.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateRegistryRecord",
       "Service" : "agent-registry"
     } ],

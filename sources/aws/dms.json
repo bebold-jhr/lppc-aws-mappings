@@ -2388,6 +2388,12 @@
     }, {
       "Name" : "CreateReplicationInstance",
       "Service" : "dms"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "dms.amazonaws.com" ]
+      },
+      "Service" : "iam"
     } ],
     "SDK" : [ {
       "Name" : "dms",
@@ -3268,6 +3274,12 @@
     "AuthorizedActions" : [ {
       "Name" : "ModifyReplicationInstance",
       "Service" : "dms"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "dms.amazonaws.com" ]
+      },
+      "Service" : "iam"
     } ],
     "SDK" : [ {
       "Name" : "dms",

@@ -936,6 +936,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateMetric",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "metric"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateNotification",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
@@ -1643,6 +1661,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DeleteMetric",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "metric"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteNotification",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
@@ -2329,6 +2365,26 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeMetric",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "metric"
+    }, {
+      "Name" : "qualified-metric"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DescribeNotification",
@@ -3878,6 +3934,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListMetrics",
+    "ActionConditionKeys" : [ "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "instance"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListNotifications",
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
@@ -4262,6 +4336,8 @@
       "Name" : "hours-of-operation"
     }, {
       "Name" : "integration-association"
+    }, {
+      "Name" : "metric"
     }, {
       "Name" : "phone-number"
     }, {
@@ -4865,6 +4941,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "SearchMetrics",
+    "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "instance"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "SearchNotifications",
@@ -5708,6 +5802,8 @@
     }, {
       "Name" : "integration-association"
     }, {
+      "Name" : "metric"
+    }, {
       "Name" : "phone-number"
     }, {
       "Name" : "prompt"
@@ -5811,6 +5907,8 @@
       "Name" : "instance"
     }, {
       "Name" : "integration-association"
+    }, {
+      "Name" : "metric"
     }, {
       "Name" : "phone-number"
     }, {
@@ -6257,6 +6355,46 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "UpdateMetricContent",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "metric"
+    }, {
+      "Name" : "qualified-metric"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateMetricMetadata",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "metric"
+    }, {
+      "Name" : "qualified-metric"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "UpdateNotificationContent",
@@ -7633,6 +7771,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateMetric",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateMetric",
+      "Service" : "connect"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "create_metric",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateNotification",
     "AuthorizedActions" : [ {
       "Name" : "CreateNotification",
@@ -8104,6 +8256,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteMetric",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteMetric",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "delete_metric",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteNotification",
     "AuthorizedActions" : [ {
       "Name" : "DeleteNotification",
@@ -8522,6 +8685,17 @@
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "describe_instance_storage_config",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeMetric",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeMetric",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "describe_metric",
       "Package" : "Boto3"
     } ]
   }, {
@@ -9501,6 +9675,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListMetrics",
+    "AuthorizedActions" : [ {
+      "Name" : "ListMetrics",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "list_metrics",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListNotifications",
     "AuthorizedActions" : [ {
       "Name" : "ListNotifications",
@@ -10127,6 +10312,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "SearchMetrics",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeMetric",
+      "Service" : "connect"
+    }, {
+      "Name" : "SearchMetrics",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "search_metrics",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "SearchNotifications",
     "AuthorizedActions" : [ {
       "Name" : "DescribeNotification",
@@ -10382,6 +10581,13 @@
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "send_outbound_web_notification",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartAssistantContact",
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "start_assistant_contact",
       "Package" : "Boto3"
     } ]
   }, {
@@ -10852,6 +11058,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateContactTaskTemplate",
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "update_contact_task_template",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateDataTableAttribute",
     "AuthorizedActions" : [ {
       "Name" : "UpdateDataTableAttribute",
@@ -10948,6 +11161,28 @@
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "update_instance_storage_config",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateMetricContent",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateMetricContent",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "update_metric_content",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateMetricMetadata",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateMetricMetadata",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "update_metric_metadata",
       "Package" : "Boto3"
     } ]
   }, {
@@ -11473,6 +11708,10 @@
     "Name" : "legacy-phone-number",
     "ARNFormats" : [ "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/phone-number/${PhoneNumberId}" ]
   }, {
+    "Name" : "metric",
+    "ARNFormats" : [ "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/metric/${MetricId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "notification",
     "ARNFormats" : [ "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/notification/${NotificationId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
@@ -11490,6 +11729,10 @@
   }, {
     "Name" : "qualified-customer-managed-view",
     "ARNFormats" : [ "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/view/${ViewId}:${ViewQualifier}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "qualified-metric",
+    "ARNFormats" : [ "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/metric/${MetricId}:${MetricQualifier}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "queue",

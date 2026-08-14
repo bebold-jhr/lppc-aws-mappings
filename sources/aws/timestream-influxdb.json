@@ -444,6 +444,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateDbBackup",
       "Service" : "timestream-influxdb"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "timestream-influxdb"
     } ],
     "SDK" : [ {
       "Name" : "timestream-influxdb",

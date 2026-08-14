@@ -2600,9 +2600,6 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateUserPoolReplica",
       "Service" : "cognito-idp"
-    }, {
-      "Name" : "TagResource",
-      "Service" : "cognito-idp"
     } ],
     "SDK" : [ {
       "Name" : "cognito-idp",

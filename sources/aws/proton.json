@@ -2150,6 +2150,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateServiceTemplateVersion",
       "Service" : "proton"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "proton"
     } ],
     "SDK" : [ {
       "Name" : "proton",

@@ -750,6 +750,10 @@
   } ],
   "Operations" : [ {
     "Name" : "AssociateLibraryItemReview",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateLibraryItemReview",
+      "Service" : "qapps"
+    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "associate_library_item_review",
@@ -757,6 +761,10 @@
     } ]
   }, {
     "Name" : "AssociateQAppWithUser",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateQAppWithUser",
+      "Service" : "qapps"
+    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "associate_q_app_with_user",
@@ -863,6 +871,10 @@
     } ]
   }, {
     "Name" : "DisassociateLibraryItemReview",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateLibraryItemReview",
+      "Service" : "qapps"
+    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "disassociate_library_item_review",
@@ -881,6 +893,10 @@
     } ]
   }, {
     "Name" : "ExportQAppSessionData",
+    "AuthorizedActions" : [ {
+      "Name" : "ExportQAppSessionData",
+      "Service" : "qapps"
+    } ],
     "SDK" : [ {
       "Name" : "qapps",
       "Method" : "export_q_app_session_data",

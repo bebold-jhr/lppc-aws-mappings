@@ -105,7 +105,7 @@
     }
   }, {
     "Name" : "AttachRolePolicy",
-    "ActionConditionKeys" : [ "iam:PermissionsBoundary", "iam:PolicyARN" ],
+    "ActionConditionKeys" : [ "iam:PermissionsBoundary", "iam:PolicyARN", "iam:RoleTemplateARN" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -312,7 +312,7 @@
     }
   }, {
     "Name" : "CreateRole",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "iam:PermissionsBoundary" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "iam:PermissionsBoundary", "iam:RoleTemplateARN" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1127,6 +1127,21 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetAccountProperties",
+    "ActionConditionKeys" : [ "iam:AccountPropertyNamespaces" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetAccountSummary",
     "Annotations" : {
       "Properties" : {
@@ -1403,7 +1418,7 @@
     }
   }, {
     "Name" : "GetRole",
-    "ActionConditionKeys" : [ "iam:PermissionsBoundary" ],
+    "ActionConditionKeys" : [ "iam:PermissionsBoundary", "iam:RoleTemplateARN" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1435,6 +1450,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetRoleTemplateVersion",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "role-template"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "GetSAMLProvider",
@@ -2194,6 +2226,21 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "PutAccountProperties",
+    "ActionConditionKeys" : [ "iam:AccountPropertyNamespaces" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "PutGroupPolicy",
     "Annotations" : {
       "Properties" : {
@@ -2212,7 +2259,7 @@
     }
   }, {
     "Name" : "PutRolePermissionsBoundary",
-    "ActionConditionKeys" : [ "iam:PermissionsBoundary" ],
+    "ActionConditionKeys" : [ "iam:PermissionsBoundary", "iam:RoleTemplateARN" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2230,7 +2277,7 @@
     }
   }, {
     "Name" : "PutRolePolicy",
-    "ActionConditionKeys" : [ "iam:PermissionsBoundary" ],
+    "ActionConditionKeys" : [ "iam:PermissionsBoundary", "iam:RoleTemplateARN" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2556,7 +2603,7 @@
     }
   }, {
     "Name" : "TagRole",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "iam:RoleTemplateARN" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -3131,6 +3178,9 @@
     "Name" : "iam:AWSServiceName",
     "Types" : [ "String" ]
   }, {
+    "Name" : "iam:AccountPropertyNamespaces",
+    "Types" : [ "ArrayOfString" ]
+  }, {
     "Name" : "iam:AssociatedResourceArn",
     "Types" : [ "ARN" ]
   }, {
@@ -3170,6 +3220,9 @@
     "Name" : "iam:ResourceTag/${TagKey}",
     "Types" : [ "String" ]
   }, {
+    "Name" : "iam:RoleTemplateARN",
+    "Types" : [ "ARN" ]
+  }, {
     "Name" : "iam:ServiceSpecificCredentialAgeDays",
     "Types" : [ "Numeric" ]
   }, {
@@ -3188,6 +3241,35 @@
     "SDK" : [ {
       "Name" : "iam",
       "Method" : "accept_delegation_request",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "AcquireRole",
+    "AuthorizedActions" : [ {
+      "Name" : "AttachRolePolicy",
+      "Service" : "iam"
+    }, {
+      "Name" : "CreateRole",
+      "Service" : "iam"
+    }, {
+      "Name" : "GetRole",
+      "Service" : "iam"
+    }, {
+      "Name" : "GetRoleTemplateVersion",
+      "Service" : "iam"
+    }, {
+      "Name" : "PutRolePermissionsBoundary",
+      "Service" : "iam"
+    }, {
+      "Name" : "PutRolePolicy",
+      "Service" : "iam"
+    }, {
+      "Name" : "TagRole",
+      "Service" : "iam"
+    } ],
+    "SDK" : [ {
+      "Name" : "iam",
+      "Method" : "acquire_role",
       "Package" : "Boto3"
     } ]
   }, {
@@ -3898,6 +3980,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetAccountProperties",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAccountProperties",
+      "Service" : "iam"
+    } ],
+    "SDK" : [ {
+      "Name" : "iam",
+      "Method" : "get_account_properties",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetAccountSummary",
     "AuthorizedActions" : [ {
       "Name" : "GetAccountSummary",
@@ -4093,6 +4186,17 @@
     "SDK" : [ {
       "Name" : "iam",
       "Method" : "get_role_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetRoleTemplateVersion",
+    "AuthorizedActions" : [ {
+      "Name" : "GetRoleTemplateVersion",
+      "Service" : "iam"
+    } ],
+    "SDK" : [ {
+      "Name" : "iam",
+      "Method" : "get_role_template_version",
       "Package" : "Boto3"
     } ]
   }, {
@@ -4573,6 +4677,20 @@
     "SDK" : [ {
       "Name" : "iam",
       "Method" : "list_virtual_mfa_devices",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutAccountProperties",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateServiceLinkedRole",
+      "Service" : "iam"
+    }, {
+      "Name" : "PutAccountProperties",
+      "Service" : "iam"
+    } ],
+    "SDK" : [ {
+      "Name" : "iam",
+      "Method" : "put_account_properties",
       "Package" : "Boto3"
     } ]
   }, {
@@ -5161,6 +5279,9 @@
     "Name" : "role",
     "ARNFormats" : [ "arn:${Partition}:iam::${Account}:role/${RoleNameWithPath}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "iam:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "role-template",
+    "ARNFormats" : [ "arn:${Partition}:iam::aws:role-template/${AWSServicePrincipal}/${RoleTemplateName}:${RoleTemplateMajorVersion}" ]
   }, {
     "Name" : "saml-provider",
     "ARNFormats" : [ "arn:${Partition}:iam::${Account}:saml-provider/${SamlProviderName}" ],

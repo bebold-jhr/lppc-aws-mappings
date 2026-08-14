@@ -245,6 +245,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateApprovalPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "approvalPolicy"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateBrand",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -899,6 +916,23 @@
     },
     "Resources" : [ {
       "Name" : "app"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteApprovalPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "approvalPolicy"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1704,6 +1738,23 @@
     },
     "Resources" : [ {
       "Name" : "app"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeApprovalPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "approvalPolicy"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2954,6 +3005,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListApprovalPolicies",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "approvalPolicy"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListApps",
     "Annotations" : {
       "Properties" : {
@@ -2999,23 +3067,6 @@
     },
     "Resources" : [ {
       "Name" : "assetBundleImportJob"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "ListAssignmentsForPrincipal",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : true,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "Resources" : [ {
-      "Name" : "limitsProfile"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -3426,23 +3477,6 @@
         "IsWrite" : false
       }
     },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "ListProfileAssignments",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : true,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "Resources" : [ {
-      "Name" : "limitsProfile"
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -4683,6 +4717,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateApprovalPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "approvalPolicy"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateAutomationGroupPermissions",
     "Annotations" : {
       "Properties" : {
@@ -5690,6 +5741,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "BatchDescribeUserLimits",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchDescribeUserLimits",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "batch_describe_user_limits",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CancelIngestion",
     "AuthorizedActions" : [ {
       "Name" : "CancelIngestion",
@@ -5756,6 +5818,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateAgent",
       "Service" : "quicksight"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "quicksight"
     } ],
     "SDK" : [ {
       "Name" : "quicksight",
@@ -5786,6 +5851,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "create_analysis",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateApprovalPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateApprovalPolicy",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "create_approval_policy",
       "Package" : "Boto3"
     } ]
   }, {
@@ -5886,6 +5962,20 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "create_data_source",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateDlpSetting",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateDlpSetting",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "create_dlp_setting",
       "Package" : "Boto3"
     } ]
   }, {
@@ -6001,6 +6091,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "create_knowledge_base",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateLimitsProfile",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateLimitsProfile",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "create_limits_profile",
       "Package" : "Boto3"
     } ]
   }, {
@@ -6160,6 +6261,9 @@
   }, {
     "Name" : "CreateTopicV2",
     "AuthorizedActions" : [ {
+      "Name" : "CreateFolderMembership",
+      "Service" : "quicksight"
+    }, {
       "Name" : "CreateTopic",
       "Service" : "quicksight"
     }, {
@@ -6264,6 +6368,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteApprovalPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteApprovalPolicy",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "delete_approval_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteBrand",
     "AuthorizedActions" : [ {
       "Name" : "DeleteBrand",
@@ -6349,6 +6464,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "delete_default_q_business_application",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteDlpSetting",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteDlpSetting",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "delete_dlp_setting",
       "Package" : "Boto3"
     } ]
   }, {
@@ -6452,6 +6578,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "delete_knowledge_base",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteLimitsProfile",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteLimitsProfile",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "delete_limits_profile",
       "Package" : "Boto3"
     } ]
   }, {
@@ -6778,6 +6915,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeApprovalPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeApprovalPolicy",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_approval_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeAssetBundleExportJob",
     "AuthorizedActions" : [ {
       "Name" : "DescribeAssetBundleExportJob",
@@ -6987,6 +7135,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeDlpSetting",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeDlpSetting",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_dlp_setting",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeFlow",
     "AuthorizedActions" : [ {
       "Name" : "DescribeFlow",
@@ -7119,6 +7278,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "describe_knowledge_base_permissions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeLimitsProfile",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeLimitsProfile",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_limits_profile",
       "Package" : "Boto3"
     } ]
   }, {
@@ -7519,6 +7689,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListApprovalPolicies",
+    "AuthorizedActions" : [ {
+      "Name" : "ListApprovalPolicies",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_approval_policies",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListAssetBundleExportJobs",
     "AuthorizedActions" : [ {
       "Name" : "ListAssetBundleExportJobs",
@@ -7604,6 +7785,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "list_data_sources",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListDlpSettings",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDlpSettings",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_dlp_settings",
       "Package" : "Boto3"
     } ]
   }, {
@@ -7725,6 +7917,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "list_knowledge_bases",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListLimitsProfiles",
+    "AuthorizedActions" : [ {
+      "Name" : "ListLimitsProfiles",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_limits_profiles",
       "Package" : "Boto3"
     } ]
   }, {
@@ -8370,6 +8573,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateApprovalPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateApprovalPolicy",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_approval_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateBrand",
     "AuthorizedActions" : [ {
       "Name" : "UpdateBrand",
@@ -8545,6 +8759,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateDlpSetting",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateDlpSetting",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_dlp_setting",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateFlow",
     "AuthorizedActions" : [ {
       "Name" : "UpdateFlow",
@@ -8669,6 +8894,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_knowledge_base_permissions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateLimitsProfile",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateLimitsProfile",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_limits_profile",
       "Package" : "Boto3"
     } ]
   }, {
@@ -8905,6 +9141,10 @@
     } ]
   }, {
     "Name" : "UpdateTopicPermissionsV2",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateTopicPermissions",
+      "Service" : "quicksight"
+    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_topic_permissions_v2",
@@ -8923,6 +9163,13 @@
     } ]
   }, {
     "Name" : "UpdateTopicV2",
+    "AuthorizedActions" : [ {
+      "Name" : "PassDataSet",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "UpdateTopic",
+      "Service" : "quicksight"
+    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_topic_v2",
