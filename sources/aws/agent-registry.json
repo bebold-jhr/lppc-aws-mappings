@@ -369,6 +369,12 @@
       "Name" : "CreateRegistryRecord",
       "Service" : "agent-registry"
     }, {
+      "Name" : "GetResourceOauth2Token",
+      "Service" : "bedrock-agentcore"
+    }, {
+      "Name" : "GetWorkloadAccessToken",
+      "Service" : "bedrock-agentcore"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "agent-registry.amazonaws.com" ]
@@ -529,6 +535,12 @@
   }, {
     "Name" : "UpdateRegistryRecord",
     "AuthorizedActions" : [ {
+      "Name" : "GetResourceOauth2Token",
+      "Service" : "bedrock-agentcore"
+    }, {
+      "Name" : "GetWorkloadAccessToken",
+      "Service" : "bedrock-agentcore"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "agent-registry.amazonaws.com" ]

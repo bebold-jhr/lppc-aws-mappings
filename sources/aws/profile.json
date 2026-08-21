@@ -2221,6 +2221,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateRecommenderSchema",
       "Service" : "profile"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "profile"
     } ],
     "SDK" : [ {
       "Name" : "customer-profiles",

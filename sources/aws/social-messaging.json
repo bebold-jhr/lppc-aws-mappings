@@ -565,7 +565,7 @@
     "Name" : "CreateWhatsAppDataset",
     "SDK" : [ {
       "Name" : "socialmessaging",
-      "Method" : "create_whats_app_dataset",
+      "Method" : "create_whatsapp_dataset",
       "Package" : "Boto3"
     } ]
   }, {
@@ -842,7 +842,7 @@
     "Name" : "SendWhatsAppConversionEvent",
     "SDK" : [ {
       "Name" : "socialmessaging",
-      "Method" : "send_whats_app_conversion_event",
+      "Method" : "send_whatsapp_conversion_event",
       "Package" : "Boto3"
     } ]
   }, {

@@ -67,6 +67,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateExperimentDefinition",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "application"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateExtension",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -186,6 +204,25 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteExperimentDefinition",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "application"
+    }, {
+      "Name" : "experimentdefinition"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteExtension",
@@ -377,6 +414,48 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetExperimentDefinition",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "application"
+    }, {
+      "Name" : "experimentdefinition"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetExperimentRun",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "application"
+    }, {
+      "Name" : "experimentdefinition"
+    }, {
+      "Name" : "experimentrun"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetExtension",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
@@ -533,6 +612,60 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListExperimentDefinitions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListExperimentRunEvents",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "application"
+    }, {
+      "Name" : "experimentdefinition"
+    }, {
+      "Name" : "experimentrun"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListExperimentRuns",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "application"
+    }, {
+      "Name" : "experimentdefinition"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListExtensionAssociations",
     "Annotations" : {
       "Properties" : {
@@ -601,6 +734,10 @@
     }, {
       "Name" : "environment"
     }, {
+      "Name" : "experimentdefinition"
+    }, {
+      "Name" : "experimentrun"
+    }, {
       "Name" : "extension"
     }, {
       "Name" : "extensionassociation"
@@ -652,6 +789,26 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "StartExperimentRun",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "application"
+    }, {
+      "Name" : "experimentdefinition"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StopDeployment",
     "Annotations" : {
       "Properties" : {
@@ -671,6 +828,28 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "StopExperimentRun",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "application"
+    }, {
+      "Name" : "experimentdefinition"
+    }, {
+      "Name" : "experimentrun"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "TagResource",
@@ -695,6 +874,10 @@
       "Name" : "deploymentstrategy"
     }, {
       "Name" : "environment"
+    }, {
+      "Name" : "experimentdefinition"
+    }, {
+      "Name" : "experimentrun"
     }, {
       "Name" : "extension"
     }, {
@@ -727,6 +910,10 @@
       "Name" : "deploymentstrategy"
     }, {
       "Name" : "environment"
+    }, {
+      "Name" : "experimentdefinition"
+    }, {
+      "Name" : "experimentrun"
     }, {
       "Name" : "extension"
     }, {
@@ -825,6 +1012,48 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "UpdateExperimentDefinition",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "application"
+    }, {
+      "Name" : "experimentdefinition"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateExperimentRun",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "application"
+    }, {
+      "Name" : "experimentdefinition"
+    }, {
+      "Name" : "experimentrun"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "UpdateExtension",
@@ -963,6 +1192,9 @@
   }, {
     "Name" : "CreateExperimentDefinition",
     "AuthorizedActions" : [ {
+      "Name" : "CreateExperimentDefinition",
+      "Service" : "appconfig"
+    }, {
       "Name" : "TagResource",
       "Service" : "appconfig"
     } ],
@@ -1062,6 +1294,10 @@
     } ]
   }, {
     "Name" : "DeleteExperimentDefinition",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteExperimentDefinition",
+      "Service" : "appconfig"
+    } ],
     "SDK" : [ {
       "Name" : "appconfig",
       "Method" : "delete_experiment_definition",
@@ -1179,6 +1415,10 @@
     } ]
   }, {
     "Name" : "GetExperimentDefinition",
+    "AuthorizedActions" : [ {
+      "Name" : "GetExperimentDefinition",
+      "Service" : "appconfig"
+    } ],
     "SDK" : [ {
       "Name" : "appconfig",
       "Method" : "get_experiment_definition",
@@ -1186,6 +1426,10 @@
     } ]
   }, {
     "Name" : "GetExperimentRun",
+    "AuthorizedActions" : [ {
+      "Name" : "GetExperimentRun",
+      "Service" : "appconfig"
+    } ],
     "SDK" : [ {
       "Name" : "appconfig",
       "Method" : "get_experiment_run",
@@ -1292,6 +1536,10 @@
     } ]
   }, {
     "Name" : "ListExperimentDefinitions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListExperimentDefinitions",
+      "Service" : "appconfig"
+    } ],
     "SDK" : [ {
       "Name" : "appconfig",
       "Method" : "list_experiment_definitions",
@@ -1299,6 +1547,10 @@
     } ]
   }, {
     "Name" : "ListExperimentRunEvents",
+    "AuthorizedActions" : [ {
+      "Name" : "ListExperimentRunEvents",
+      "Service" : "appconfig"
+    } ],
     "SDK" : [ {
       "Name" : "appconfig",
       "Method" : "list_experiment_run_events",
@@ -1306,6 +1558,10 @@
     } ]
   }, {
     "Name" : "ListExperimentRuns",
+    "AuthorizedActions" : [ {
+      "Name" : "ListExperimentRuns",
+      "Service" : "appconfig"
+    } ],
     "SDK" : [ {
       "Name" : "appconfig",
       "Method" : "list_experiment_runs",
@@ -1383,6 +1639,9 @@
   }, {
     "Name" : "StartExperimentRun",
     "AuthorizedActions" : [ {
+      "Name" : "StartExperimentRun",
+      "Service" : "appconfig"
+    }, {
       "Name" : "TagResource",
       "Service" : "appconfig"
     } ],
@@ -1404,6 +1663,10 @@
     } ]
   }, {
     "Name" : "StopExperimentRun",
+    "AuthorizedActions" : [ {
+      "Name" : "StopExperimentRun",
+      "Service" : "appconfig"
+    } ],
     "SDK" : [ {
       "Name" : "appconfig",
       "Method" : "stop_experiment_run",
@@ -1500,6 +1763,10 @@
     } ]
   }, {
     "Name" : "UpdateExperimentDefinition",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateExperimentDefinition",
+      "Service" : "appconfig"
+    } ],
     "SDK" : [ {
       "Name" : "appconfig",
       "Method" : "update_experiment_definition",
@@ -1507,6 +1774,10 @@
     } ]
   }, {
     "Name" : "UpdateExperimentRun",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateExperimentRun",
+      "Service" : "appconfig"
+    } ],
     "SDK" : [ {
       "Name" : "appconfig",
       "Method" : "update_experiment_run",
@@ -1575,6 +1846,14 @@
   }, {
     "Name" : "environment",
     "ARNFormats" : [ "arn:${Partition}:appconfig:${Region}:${Account}:application/${ApplicationId}/environment/${EnvironmentId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "experimentdefinition",
+    "ARNFormats" : [ "arn:${Partition}:appconfig:${Region}:${Account}:application/${ApplicationId}/experimentdefinition/${ExperimentDefinitionId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "experimentrun",
+    "ARNFormats" : [ "arn:${Partition}:appconfig:${Region}:${Account}:application/${ApplicationId}/experimentdefinition/${ExperimentDefinitionId}/experimentrun/${ExperimentRunNumber}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "extension",

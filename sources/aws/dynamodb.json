@@ -2291,7 +2291,8 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "stream",
-    "ARNFormats" : [ "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/stream/${StreamLabel}" ]
+    "ARNFormats" : [ "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/stream/${StreamLabel}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "table",
     "ARNFormats" : [ "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}" ],

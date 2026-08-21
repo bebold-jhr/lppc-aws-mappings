@@ -26,8 +26,6 @@
     },
     "Resources" : [ {
       "Name" : "agentspace"
-    }, {
-      "Name" : "associations"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,

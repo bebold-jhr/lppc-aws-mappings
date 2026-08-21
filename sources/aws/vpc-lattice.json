@@ -30,7 +30,7 @@
     }
   }, {
     "Name" : "CreateAccessLogSubscription",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -54,7 +54,7 @@
     }
   }, {
     "Name" : "CreateListener",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:Protocol", "vpc-lattice:TargetGroupArns" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:Protocol", "vpc-lattice:TargetGroupArns" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -72,7 +72,7 @@
     }
   }, {
     "Name" : "CreateResourceConfiguration",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -94,7 +94,7 @@
     }
   }, {
     "Name" : "CreateResourceGateway",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:VpcId" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:VpcId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -112,7 +112,7 @@
     }
   }, {
     "Name" : "CreateRule",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:TargetGroupArns" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:TargetGroupArns" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -130,7 +130,7 @@
     }
   }, {
     "Name" : "CreateService",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:AuthType", "vpc-lattice:CreateAction" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:AuthType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -148,7 +148,7 @@
     }
   }, {
     "Name" : "CreateServiceNetwork",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:AuthType", "vpc-lattice:CreateAction" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:AuthType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -166,7 +166,7 @@
     }
   }, {
     "Name" : "CreateServiceNetworkResourceAssociation",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:ResourceConfigurationArn", "vpc-lattice:ServiceNetworkArn" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:ResourceConfigurationArn", "vpc-lattice:ServiceNetworkArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -188,7 +188,7 @@
     }
   }, {
     "Name" : "CreateServiceNetworkServiceAssociation",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:ServiceArn", "vpc-lattice:ServiceNetworkArn" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:ServiceArn", "vpc-lattice:ServiceNetworkArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -210,7 +210,7 @@
     }
   }, {
     "Name" : "CreateServiceNetworkVpcAssociation",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:PrivateDnsPreference", "vpc-lattice:PrivateDnsSpecifiedDomains", "vpc-lattice:SecurityGroupIds", "vpc-lattice:ServiceNetworkArn", "vpc-lattice:VpcId" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:PrivateDnsPreference", "vpc-lattice:PrivateDnsSpecifiedDomains", "vpc-lattice:SecurityGroupIds", "vpc-lattice:ServiceNetworkArn", "vpc-lattice:VpcId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -244,7 +244,7 @@
     }
   }, {
     "Name" : "CreateTargetGroup",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:VpcId" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:VpcId" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1096,7 +1096,7 @@
     }
   }, {
     "Name" : "StartDomainVerification",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:DomainName" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "vpc-lattice:DomainName" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1114,7 +1114,7 @@
     }
   }, {
     "Name" : "TagResource",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2257,19 +2257,19 @@
   "Resources" : [ {
     "Name" : "AccessLogSubscription",
     "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:accesslogsubscription/${AccessLogSubscriptionId}" ],
-    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction" ]
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
   }, {
     "Name" : "DomainVerification",
     "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:domainverification/${DomainVerificationId}" ],
-    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:DomainName" ]
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:DomainName" ]
   }, {
     "Name" : "Listener",
     "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:service/${ServiceId}/listener/${ListenerId}" ],
-    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:Protocol", "vpc-lattice:TargetGroupArns" ]
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:Protocol", "vpc-lattice:TargetGroupArns" ]
   }, {
     "Name" : "ResourceConfiguration",
     "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:resourceconfiguration/${ResourceConfigurationId}" ],
-    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction" ]
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
   }, {
     "Name" : "ResourceEndpointAssociation",
     "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:resourceendpointassociation/${ResourceEndpointAssociationId}" ],
@@ -2277,35 +2277,35 @@
   }, {
     "Name" : "ResourceGateway",
     "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:resourcegateway/${ResourceGatewayId}" ],
-    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:VpcId" ]
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:VpcId" ]
   }, {
     "Name" : "Rule",
     "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:service/${ServiceId}/listener/${ListenerId}/rule/${RuleId}" ],
-    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:TargetGroupArns" ]
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:TargetGroupArns" ]
   }, {
     "Name" : "Service",
     "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:service/${ServiceId}" ],
-    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:AuthType", "vpc-lattice:CreateAction" ]
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:AuthType" ]
   }, {
     "Name" : "ServiceNetwork",
     "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:servicenetwork/${ServiceNetworkId}" ],
-    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:AuthType", "vpc-lattice:CreateAction" ]
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:AuthType" ]
   }, {
     "Name" : "ServiceNetworkResourceAssociation",
     "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:servicenetworkresourceassociation/${ServiceNetworkResourceAssociationId}" ],
-    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:ResourceConfigurationArn", "vpc-lattice:ServiceNetworkArn" ]
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:ResourceConfigurationArn", "vpc-lattice:ServiceNetworkArn" ]
   }, {
     "Name" : "ServiceNetworkServiceAssociation",
     "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:servicenetworkserviceassociation/${ServiceNetworkServiceAssociationId}" ],
-    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:ServiceArn", "vpc-lattice:ServiceNetworkArn" ]
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:ServiceArn", "vpc-lattice:ServiceNetworkArn" ]
   }, {
     "Name" : "ServiceNetworkVpcAssociation",
     "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:servicenetworkvpcassociation/${ServiceNetworkVpcAssociationId}" ],
-    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:PrivateDnsPreference", "vpc-lattice:PrivateDnsSpecifiedDomains", "vpc-lattice:SecurityGroupIds", "vpc-lattice:ServiceNetworkArn", "vpc-lattice:VpcId" ]
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:PrivateDnsPreference", "vpc-lattice:PrivateDnsSpecifiedDomains", "vpc-lattice:SecurityGroupIds", "vpc-lattice:ServiceNetworkArn", "vpc-lattice:VpcId" ]
   }, {
     "Name" : "TargetGroup",
     "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:targetgroup/${TargetGroupId}" ],
-    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:CreateAction", "vpc-lattice:VpcId" ]
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "vpc-lattice:VpcId" ]
   } ],
   "Version" : "v1.4"
 }

@@ -950,8 +950,8 @@
       "Name" : "metric"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateNotification",
@@ -1675,8 +1675,8 @@
       "Name" : "metric"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteNotification",
@@ -2383,8 +2383,8 @@
       "Name" : "qualified-metric"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeNotification",
@@ -3948,8 +3948,8 @@
       "Name" : "instance"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListNotifications",
@@ -4957,8 +4957,8 @@
       "Name" : "instance"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "SearchNotifications",
@@ -6373,8 +6373,8 @@
       "Name" : "qualified-metric"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "UpdateMetricMetadata",
@@ -6393,8 +6393,8 @@
       "Name" : "qualified-metric"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "UpdateNotificationContent",
@@ -7579,6 +7579,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateAttachedFile",
       "Service" : "connect"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "connect"
     } ],
     "SDK" : [ {
       "Name" : "connect",
@@ -7715,6 +7718,13 @@
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "create_evaluation_form",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateExtractionDefinition",
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "create_extraction_definition",
       "Package" : "Boto3"
     } ]
   }, {
@@ -7909,6 +7919,9 @@
     "Name" : "CreateRule",
     "AuthorizedActions" : [ {
       "Name" : "CreateRule",
+      "Service" : "connect"
+    }, {
+      "Name" : "TagResource",
       "Service" : "connect"
     } ],
     "SDK" : [ {
@@ -8209,6 +8222,13 @@
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "delete_evaluation_form",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteExtractionDefinition",
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "delete_extraction_definition",
       "Package" : "Boto3"
     } ]
   }, {
@@ -8630,6 +8650,13 @@
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "describe_evaluation_form",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeExtractionDefinition",
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "describe_extraction_definition",
       "Package" : "Boto3"
     } ]
   }, {
@@ -9573,6 +9600,13 @@
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "list_evaluation_forms",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListExtractionDefinitions",
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "list_extraction_definitions",
       "Package" : "Boto3"
     } ]
   }, {
@@ -11117,6 +11151,13 @@
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "update_evaluation_form",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateExtractionDefinition",
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "update_extraction_definition",
       "Package" : "Boto3"
     } ]
   }, {

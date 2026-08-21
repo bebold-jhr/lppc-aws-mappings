@@ -576,6 +576,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "outpost"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
@@ -761,6 +764,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreatePrivateConnectivityConfig",
+    "AuthorizedActions" : [ {
+      "Name" : "CreatePrivateConnectivityConfig",
+      "Service" : "outposts"
+    } ],
+    "SDK" : [ {
+      "Name" : "outposts",
+      "Method" : "create_private_connectivity_config",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateQuote",
     "AuthorizedActions" : [ {
       "Name" : "CreateQuote",
@@ -915,6 +929,17 @@
     "SDK" : [ {
       "Name" : "outposts",
       "Method" : "get_outpost_supported_instance_types",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetPrivateConnectivityConfig",
+    "AuthorizedActions" : [ {
+      "Name" : "GetPrivateConnectivityConfig",
+      "Service" : "outposts"
+    } ],
+    "SDK" : [ {
+      "Name" : "outposts",
+      "Method" : "get_private_connectivity_config",
       "Package" : "Boto3"
     } ]
   }, {

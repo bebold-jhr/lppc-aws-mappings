@@ -239,6 +239,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateNotificationRule",
       "Service" : "codestar-notifications"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "codestar-notifications"
     } ],
     "SDK" : [ {
       "Name" : "codestar-notifications",

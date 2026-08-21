@@ -18,6 +18,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ActivateCertificateAuthority",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "AssociateAccessPolicy",
     "ActionConditionKeys" : [ "eks:accessScope", "eks:namespaces", "eks:policyArn" ],
     "Annotations" : {
@@ -129,6 +146,23 @@
   }, {
     "Name" : "CreateCapability",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateCertificateAuthority",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -280,6 +314,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteCertificateAuthority",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteCluster",
@@ -461,6 +512,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeCertificateAuthority",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DescribeCluster",
@@ -751,6 +819,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListCertificateAuthorities",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ListClusters",
@@ -1330,6 +1415,17 @@
     "Types" : [ "Bool" ]
   } ],
   "Operations" : [ {
+    "Name" : "ActivateCertificateAuthority",
+    "AuthorizedActions" : [ {
+      "Name" : "ActivateCertificateAuthority",
+      "Service" : "eks"
+    } ],
+    "SDK" : [ {
+      "Name" : "eks",
+      "Method" : "activate_certificate_authority",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "AssociateAccessPolicy",
     "AuthorizedActions" : [ {
       "Name" : "AssociateAccessPolicy",
@@ -1434,6 +1530,17 @@
     "SDK" : [ {
       "Name" : "eks",
       "Method" : "create_capability",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateCertificateAuthority",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateCertificateAuthority",
+      "Service" : "eks"
+    } ],
+    "SDK" : [ {
+      "Name" : "eks",
+      "Method" : "create_certificate_authority",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1567,6 +1674,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteCertificateAuthority",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteCertificateAuthority",
+      "Service" : "eks"
+    } ],
+    "SDK" : [ {
+      "Name" : "eks",
+      "Method" : "delete_certificate_authority",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteCluster",
     "AuthorizedActions" : [ {
       "Name" : "DeleteCluster",
@@ -1685,6 +1803,17 @@
     "SDK" : [ {
       "Name" : "eks",
       "Method" : "describe_capability",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeCertificateAuthority",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeCertificateAuthority",
+      "Service" : "eks"
+    } ],
+    "SDK" : [ {
+      "Name" : "eks",
+      "Method" : "describe_certificate_authority",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1872,6 +2001,17 @@
     "SDK" : [ {
       "Name" : "eks",
       "Method" : "list_capabilities",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListCertificateAuthorities",
+    "AuthorizedActions" : [ {
+      "Name" : "ListCertificateAuthorities",
+      "Service" : "eks"
+    } ],
+    "SDK" : [ {
+      "Name" : "eks",
+      "Method" : "list_certificate_authorities",
       "Package" : "Boto3"
     } ]
   }, {

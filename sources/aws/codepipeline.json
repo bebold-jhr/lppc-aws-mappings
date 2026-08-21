@@ -786,7 +786,7 @@
     }, {
       "Name" : "PassRole",
       "Context" : {
-        "iam:PassedToService" : [ "cloudformation.amazonaws.com", "codepipeline.amazonaws.com" ]
+        "iam:PassedToService" : [ "cloudformation.amazonaws.com", "codebuild.amazonaws.com", "codepipeline.amazonaws.com" ]
       },
       "Service" : "iam"
     }, {
@@ -1241,7 +1241,7 @@
     }, {
       "Name" : "PassRole",
       "Context" : {
-        "iam:PassedToService" : [ "cloudformation.amazonaws.com", "codepipeline.amazonaws.com" ]
+        "iam:PassedToService" : [ "cloudformation.amazonaws.com", "codebuild.amazonaws.com", "codepipeline.amazonaws.com" ]
       },
       "Service" : "iam"
     }, {

@@ -1711,7 +1711,7 @@
     }
   }, {
     "Name" : "UntagResource",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
