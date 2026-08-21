@@ -439,6 +439,7 @@
   "aws_odb_db_servers",
   "aws_odb_db_system_shapes",
   "aws_odb_gi_versions",
+  "aws_odb_iam_role_association",
   "aws_odb_network",
   "aws_odb_network_peering_connection",
   "aws_odb_network_peering_connections",
