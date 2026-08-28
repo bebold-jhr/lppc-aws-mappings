@@ -1915,6 +1915,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateApprovalAction",
+    "SDK" : [ {
+      "Name" : "devops-agent",
+      "Method" : "update_approval_action",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateAsset",
     "SDK" : [ {
       "Name" : "devops-agent",

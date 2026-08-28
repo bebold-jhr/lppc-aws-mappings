@@ -422,6 +422,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetFixture",
+    "SDK" : [ {
+      "Name" : "elementalinference",
+      "Method" : "get_fixture",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListDictionaries",
     "AuthorizedActions" : [ {
       "Name" : "ListDictionaries",

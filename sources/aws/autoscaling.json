@@ -149,7 +149,7 @@
     }
   }, {
     "Name" : "CreateAutoScalingGroup",
-    "ActionConditionKeys" : [ "autoscaling:CapacityReservationIds", "autoscaling:CapacityReservationResourceGroupArns", "autoscaling:ImageId", "autoscaling:InstanceTypes", "autoscaling:LaunchConfigurationName", "autoscaling:LaunchTemplateVersionSpecified", "autoscaling:LoadBalancerNames", "autoscaling:MaxSize", "autoscaling:MinSize", "autoscaling:OperatorPrincipal", "autoscaling:TargetGroupARNs", "autoscaling:TrafficSourceIdentifiers", "autoscaling:VPCZoneIdentifiers", "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "autoscaling:CapacityReservationIds", "autoscaling:CapacityReservationResourceGroupArns", "autoscaling:ImageId", "autoscaling:InstanceTypes", "autoscaling:LaunchConfigurationName", "autoscaling:LaunchTemplateVersionSpecified", "autoscaling:LoadBalancerNames", "autoscaling:MaxSize", "autoscaling:MinSize", "autoscaling:OperatorPrincipal", "autoscaling:TargetCapacityTypes", "autoscaling:TargetGroupARNs", "autoscaling:TrafficSourceIdentifiers", "autoscaling:VPCZoneIdentifiers", "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1067,7 +1067,7 @@
     }
   }, {
     "Name" : "StartInstanceRefresh",
-    "ActionConditionKeys" : [ "autoscaling:ImageId" ],
+    "ActionConditionKeys" : [ "autoscaling:ImageId", "autoscaling:TargetCapacityTypes" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1122,7 +1122,7 @@
     }
   }, {
     "Name" : "UpdateAutoScalingGroup",
-    "ActionConditionKeys" : [ "autoscaling:CapacityReservationIds", "autoscaling:CapacityReservationResourceGroupArns", "autoscaling:ImageId", "autoscaling:InstanceTypes", "autoscaling:LaunchConfigurationName", "autoscaling:LaunchTemplateVersionSpecified", "autoscaling:MaxSize", "autoscaling:MinSize", "autoscaling:VPCZoneIdentifiers" ],
+    "ActionConditionKeys" : [ "autoscaling:CapacityReservationIds", "autoscaling:CapacityReservationResourceGroupArns", "autoscaling:ImageId", "autoscaling:InstanceTypes", "autoscaling:LaunchConfigurationName", "autoscaling:LaunchTemplateVersionSpecified", "autoscaling:MaxSize", "autoscaling:MinSize", "autoscaling:TargetCapacityTypes", "autoscaling:VPCZoneIdentifiers" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1191,6 +1191,9 @@
   }, {
     "Name" : "autoscaling:SpotPrice",
     "Types" : [ "Numeric" ]
+  }, {
+    "Name" : "autoscaling:TargetCapacityTypes",
+    "Types" : [ "ArrayOfString" ]
   }, {
     "Name" : "autoscaling:TargetGroupARNs",
     "Types" : [ "ArrayOfARN" ]

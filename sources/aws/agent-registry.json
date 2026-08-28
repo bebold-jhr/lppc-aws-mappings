@@ -68,6 +68,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteResourcePolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "registry"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetDiscoverableRegistryRecord",
     "Annotations" : {
       "Properties" : {
@@ -113,6 +130,23 @@
     },
     "Resources" : [ {
       "Name" : "registry-record"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetResourcePolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "registry"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -197,6 +231,23 @@
       "Name" : "registry"
     }, {
       "Name" : "registry-record"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutResourcePolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "registry"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -329,6 +380,9 @@
     }
   } ],
   "ConditionKeys" : [ {
+    "Name" : "agent-registry:RecordCreatorAccount",
+    "Types" : [ "String" ]
+  }, {
     "Name" : "aws:RequestTag/${TagKey}",
     "Types" : [ "String" ]
   }, {

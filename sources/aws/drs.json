@@ -1951,6 +1951,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateRecoveryPlan",
       "Service" : "drs"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "drs"
     } ],
     "SDK" : [ {
       "Name" : "drs",
@@ -2465,10 +2468,6 @@
     } ]
   }, {
     "Name" : "StartRecoveryPlanExecution",
-    "AuthorizedActions" : [ {
-      "Name" : "StartRecoveryPlanExecution",
-      "Service" : "drs"
-    } ],
     "SDK" : [ {
       "Name" : "drs",
       "Method" : "start_recovery_plan_execution",
@@ -2622,10 +2621,6 @@
     } ]
   }, {
     "Name" : "UpdateRecoveryPlanExecutionStep",
-    "AuthorizedActions" : [ {
-      "Name" : "UpdateRecoveryPlanExecutionStep",
-      "Service" : "drs"
-    } ],
     "SDK" : [ {
       "Name" : "drs",
       "Method" : "update_recovery_plan_execution_step",

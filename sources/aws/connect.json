@@ -7722,6 +7722,10 @@
     } ]
   }, {
     "Name" : "CreateExtractionDefinition",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "connect"
+    } ],
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "create_extraction_definition",

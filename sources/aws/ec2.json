@@ -24799,6 +24799,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ReplaceImageInstanceTypeSpecification",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "replace_image_instance_type_specification",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ReplaceNetworkAclAssociation",
     "AuthorizedActions" : [ {
       "Name" : "ReplaceNetworkAclAssociation",

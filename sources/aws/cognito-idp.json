@@ -2156,6 +2156,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "AdminDeleteSoftwareToken",
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "admin_delete_software_token",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "AdminDeleteUser",
     "AuthorizedActions" : [ {
       "Name" : "AdminDeleteUser",
