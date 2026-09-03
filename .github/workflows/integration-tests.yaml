@@ -36,7 +36,7 @@ jobs:
             core.setOutput('base_ref', pr.base.ref);
             core.setOutput('head_sha', pr.head.sha);
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ steps.get-pr.outputs.head_ref }}
           fetch-depth: 0
@@ -181,7 +181,7 @@ jobs:
             }
             core.setOutput('head_ref', pr.head.ref);
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ steps.get-pr.outputs.head_ref }}
 
