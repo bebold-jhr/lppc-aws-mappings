@@ -18,6 +18,23 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "AssociateStreamForSegments",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domains"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "BatchGetCalculatedAttributeForProfile",
     "Annotations" : {
       "Properties" : {
@@ -618,6 +635,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DeleteSegmentSubscription",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domains"
+    }, {
+      "Name" : "segment-definitions"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteWorkflow",
     "Annotations" : {
       "Properties" : {
@@ -650,6 +686,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DisassociateStreamForSegments",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domains"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "GetAutoMergingPreview",
@@ -1089,6 +1142,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetSegmentSubscription",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domains"
+    }, {
+      "Name" : "segment-definitions"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetSimilarProfiles",
     "Annotations" : {
       "Properties" : {
@@ -1120,6 +1192,23 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetStreamForSegments",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domains"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
@@ -1595,6 +1684,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListSegmentSubscriptionEvents",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domains"
+    }, {
+      "Name" : "segment-definitions"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
@@ -1762,6 +1870,25 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "PutSegmentSubscription",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domains"
+    }, {
+      "Name" : "segment-definitions"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "SearchProfiles",
@@ -2062,6 +2189,17 @@
     "SDK" : [ {
       "Name" : "customer-profiles",
       "Method" : "add_profile_key",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "AssociateStreamForSegments",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateStreamForSegments",
+      "Service" : "profile"
+    } ],
+    "SDK" : [ {
+      "Name" : "customer-profiles",
+      "Method" : "associate_stream_for_segments",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2449,6 +2587,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteSegmentSubscription",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteSegmentSubscription",
+      "Service" : "profile"
+    } ],
+    "SDK" : [ {
+      "Name" : "customer-profiles",
+      "Method" : "delete_segment_subscription",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteWorkflow",
     "AuthorizedActions" : [ {
       "Name" : "DeleteWorkflow",
@@ -2468,6 +2617,17 @@
     "SDK" : [ {
       "Name" : "customer-profiles",
       "Method" : "detect_profile_object_type",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DisassociateStreamForSegments",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateStreamForSegments",
+      "Service" : "profile"
+    } ],
+    "SDK" : [ {
+      "Name" : "customer-profiles",
+      "Method" : "disassociate_stream_for_segments",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2724,6 +2884,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetSegmentSubscription",
+    "AuthorizedActions" : [ {
+      "Name" : "GetSegmentSubscription",
+      "Service" : "profile"
+    } ],
+    "SDK" : [ {
+      "Name" : "customer-profiles",
+      "Method" : "get_segment_subscription",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetSimilarProfiles",
     "AuthorizedActions" : [ {
       "Name" : "GetSimilarProfiles",
@@ -2732,6 +2903,17 @@
     "SDK" : [ {
       "Name" : "customer-profiles",
       "Method" : "get_similar_profiles",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetStreamForSegments",
+    "AuthorizedActions" : [ {
+      "Name" : "GetStreamForSegments",
+      "Service" : "profile"
+    } ],
+    "SDK" : [ {
+      "Name" : "customer-profiles",
+      "Method" : "get_stream_for_segments",
       "Package" : "Boto3"
     } ]
   }, {
@@ -3032,6 +3214,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListSegmentSubscriptionEvents",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSegmentSubscriptionEvents",
+      "Service" : "profile"
+    } ],
+    "SDK" : [ {
+      "Name" : "customer-profiles",
+      "Method" : "list_segment_subscription_events",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListTagsForResource",
     "AuthorizedActions" : [ {
       "Name" : "ListTagsForResource",
@@ -3126,6 +3319,17 @@
     "SDK" : [ {
       "Name" : "customer-profiles",
       "Method" : "put_profile_object_type",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutSegmentSubscription",
+    "AuthorizedActions" : [ {
+      "Name" : "PutSegmentSubscription",
+      "Service" : "profile"
+    } ],
+    "SDK" : [ {
+      "Name" : "customer-profiles",
+      "Method" : "put_segment_subscription",
       "Package" : "Boto3"
     } ]
   }, {

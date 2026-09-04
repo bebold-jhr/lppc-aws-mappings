@@ -86,6 +86,23 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "AdminDeleteSoftwareToken",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "userpool"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "AdminDeleteUser",
     "Annotations" : {
       "Properties" : {
@@ -2157,6 +2174,10 @@
     } ]
   }, {
     "Name" : "AdminDeleteSoftwareToken",
+    "AuthorizedActions" : [ {
+      "Name" : "AdminDeleteSoftwareToken",
+      "Service" : "cognito-idp"
+    } ],
     "SDK" : [ {
       "Name" : "cognito-idp",
       "Method" : "admin_delete_software_token",
@@ -2819,6 +2840,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeTermsByClient",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeTerms",
+      "Service" : "cognito-idp"
+    } ],
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "describe_terms_by_client",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeUserImportJob",
     "AuthorizedActions" : [ {
       "Name" : "DescribeUserImportJob",
@@ -2893,6 +2925,13 @@
     "SDK" : [ {
       "Name" : "cognito-idp",
       "Method" : "get_csv_header",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetClientToken",
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "get_client_token",
       "Package" : "Boto3"
     } ]
   }, {

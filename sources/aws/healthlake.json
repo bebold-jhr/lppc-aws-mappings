@@ -1317,6 +1317,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "RestoreFHIRDatastore",
+    "AuthorizedActions" : [ {
+      "Name" : "RestoreFHIRDatastore",
+      "Service" : "healthlake"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "healthlake"
+    } ],
+    "SDK" : [ {
+      "Name" : "healthlake",
+      "Method" : "restore_fhir_datastore",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StartDataTransformationJob",
     "AuthorizedActions" : [ {
       "Name" : "PassRole",

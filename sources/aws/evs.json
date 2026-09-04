@@ -169,6 +169,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetAccountSettings",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetDepotUrl",
     "Annotations" : {
       "Properties" : {
@@ -311,6 +325,20 @@
     "Resources" : [ {
       "Name" : "environment"
     } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutAccountSettings",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -493,6 +521,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetAccountSettings",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAccountSettings",
+      "Service" : "evs"
+    } ],
+    "SDK" : [ {
+      "Name" : "evs",
+      "Method" : "get_account_settings",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetDepotUrl",
     "AuthorizedActions" : [ {
       "Name" : "GetDepotUrl",
@@ -589,6 +628,17 @@
     "SDK" : [ {
       "Name" : "evs",
       "Method" : "list_vm_entitlements",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutAccountSettings",
+    "AuthorizedActions" : [ {
+      "Name" : "PutAccountSettings",
+      "Service" : "evs"
+    } ],
+    "SDK" : [ {
+      "Name" : "evs",
+      "Method" : "put_account_settings",
       "Package" : "Boto3"
     } ]
   }, {

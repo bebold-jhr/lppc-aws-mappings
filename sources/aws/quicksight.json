@@ -385,6 +385,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateExtension",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "extension"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateExtensionAccess",
     "Annotations" : {
       "Properties" : {
@@ -1096,6 +1113,23 @@
     },
     "Resources" : [ {
       "Name" : "emailCustomizationTemplate"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteExtension",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "extension"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2127,6 +2161,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DescribeExtension",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "extension"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DescribeExtensionAccess",
     "Annotations" : {
       "Properties" : {
@@ -2138,6 +2189,23 @@
     },
     "Resources" : [ {
       "Name" : "extensionaccess"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeExtensionPermissions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "extension"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -3191,6 +3259,20 @@
     }
   }, {
     "Name" : "ListExtensionAccesses",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListExtensions",
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -4329,6 +4411,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StartExtensionInstallation",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "extension"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "Subscribe",
     "ActionConditionKeys" : [ "quicksight:DirectoryType", "quicksight:Edition" ],
     "Annotations" : {
@@ -4969,6 +5068,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateExtension",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "extension"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateExtensionAccess",
     "Annotations" : {
       "Properties" : {
@@ -4980,6 +5096,23 @@
     },
     "Resources" : [ {
       "Name" : "extensionaccess"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateExtensionPermissions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "extension"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -6309,6 +6442,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteApp",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteApp",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "delete_app",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteApprovalPolicy",
     "AuthorizedActions" : [ {
       "Name" : "DeleteApprovalPolicy",
@@ -6853,6 +6997,28 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "describe_analysis_permissions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeApp",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeApp",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_app",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeAppPermissions",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAppPermissions",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_app_permissions",
       "Package" : "Boto3"
     } ]
   }, {
@@ -7641,6 +7807,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListApps",
+    "AuthorizedActions" : [ {
+      "Name" : "ListApps",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_apps",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListAssetBundleExportJobs",
     "AuthorizedActions" : [ {
       "Name" : "ListAssetBundleExportJobs",
@@ -8206,6 +8383,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "SearchApps",
+    "AuthorizedActions" : [ {
+      "Name" : "SearchApps",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "search_apps",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "SearchDashboards",
     "AuthorizedActions" : [ {
       "Name" : "SearchDashboards",
@@ -8306,6 +8494,10 @@
     } ]
   }, {
     "Name" : "SearchTopicsV2",
+    "AuthorizedActions" : [ {
+      "Name" : "SearchTopics",
+      "Service" : "quicksight"
+    } ],
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "search_topics_v2",
@@ -8503,6 +8695,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_analysis_permissions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateAppPermissions",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAppPermissions",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_app_permissions",
       "Package" : "Boto3"
     } ]
   }, {
@@ -9237,6 +9440,9 @@
     "Name" : "emailCustomizationTemplate",
     "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:email-customization-template/${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "extension",
+    "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:extension/${ResourceId}" ]
   }, {
     "Name" : "extensionaccess",
     "ARNFormats" : [ "arn:${Partition}:quicksight:${Region}:${Account}:extension-access/${ResourceId}" ]

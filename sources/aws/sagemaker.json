@@ -327,6 +327,40 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "BatchRebootClusterNodes",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "BatchReplaceClusterNodes",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "BatchWriteRecord",
     "Annotations" : {
       "Properties" : {
@@ -743,7 +777,7 @@
     }
   }, {
     "Name" : "CreateDomain",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "sagemaker:AppNetworkAccessType", "sagemaker:DomainSharingOutputKmsKeyArn", "sagemaker:ImageArns", "sagemaker:ImageVersionArns", "sagemaker:InstanceTypes", "sagemaker:StudioLifecycleConfigArns", "sagemaker:VolumeKmsKeyArn", "sagemaker:VpcSecurityGroupIds", "sagemaker:VpcSubnets" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "sagemaker:AppNetworkAccessType", "sagemaker:AuthMode", "sagemaker:DomainSharingOutputKmsKeyArn", "sagemaker:ImageArns", "sagemaker:ImageVersionArns", "sagemaker:InstanceTypes", "sagemaker:StudioLifecycleConfigArns", "sagemaker:VolumeKmsKeyArn", "sagemaker:VpcSecurityGroupIds", "sagemaker:VpcSubnets" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -4288,6 +4322,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DescribeTrainingPlanExtensionHistory",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "training-plan"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DescribeTransformJob",
     "Annotations" : {
       "Properties" : {
@@ -4443,6 +4494,20 @@
     }
   }, {
     "Name" : "EnableSagemakerServicecatalogPortfolio",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ExtendTrainingPlan",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -6238,6 +6303,7 @@
     }
   }, {
     "Name" : "PutRecord",
+    "ActionConditionKeys" : [ "sagemaker:IsUpdateRecord", "sagemaker:UpdatableFeatures" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -7833,6 +7899,9 @@
     "Name" : "sagemaker:AppNetworkAccessType",
     "Types" : [ "String" ]
   }, {
+    "Name" : "sagemaker:AuthMode",
+    "Types" : [ "String" ]
+  }, {
     "Name" : "sagemaker:BearerTokenType",
     "Types" : [ "String" ]
   }, {
@@ -7920,6 +7989,9 @@
     "Name" : "sagemaker:InterContainerTrafficEncryption",
     "Types" : [ "Bool" ]
   }, {
+    "Name" : "sagemaker:IsUpdateRecord",
+    "Types" : [ "Bool" ]
+  }, {
     "Name" : "sagemaker:KeepAlivePeriod",
     "Types" : [ "Numeric" ]
   }, {
@@ -7991,6 +8063,9 @@
   }, {
     "Name" : "sagemaker:TargetModel",
     "Types" : [ "String" ]
+  }, {
+    "Name" : "sagemaker:UpdatableFeatures",
+    "Types" : [ "ArrayOfString" ]
   }, {
     "Name" : "sagemaker:UserProfileName",
     "Types" : [ "String" ]
@@ -8125,6 +8200,10 @@
     } ]
   }, {
     "Name" : "BatchRebootClusterNodes",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchRebootClusterNodes",
+      "Service" : "sagemaker"
+    } ],
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "batch_reboot_cluster_nodes",
@@ -8132,6 +8211,10 @@
     } ]
   }, {
     "Name" : "BatchReplaceClusterNodes",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchReplaceClusterNodes",
+      "Service" : "sagemaker"
+    } ],
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "batch_replace_cluster_nodes",
@@ -10795,6 +10878,10 @@
     } ]
   }, {
     "Name" : "DescribeTrainingPlanExtensionHistory",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeTrainingPlanExtensionHistory",
+      "Service" : "sagemaker"
+    } ],
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "describe_training_plan_extension_history",
@@ -10912,6 +10999,10 @@
     } ]
   }, {
     "Name" : "ExtendTrainingPlan",
+    "AuthorizedActions" : [ {
+      "Name" : "ExtendTrainingPlan",
+      "Service" : "sagemaker"
+    } ],
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "extend_training_plan",
@@ -12965,6 +13056,13 @@
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "update_project",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateRecord",
+    "SDK" : [ {
+      "Name" : "sagemaker-featurestore-runtime",
+      "Method" : "update_record",
       "Package" : "Boto3"
     } ]
   }, {

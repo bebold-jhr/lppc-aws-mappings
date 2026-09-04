@@ -1051,6 +1051,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "BatchModifyIpamRoutingPolicyRegistrations",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ipam-internet-registry-association",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "BundleInstance",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -2018,6 +2037,28 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateIpamInternetRegistryAssociation",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ipam",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "ipam-internet-registry-association",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateIpamPolicy",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -2126,6 +2167,25 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "CreateIpamRoutingPolicyRegistration",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ipam-internet-registry-association",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "CreateIpamScope",
@@ -3108,6 +3168,9 @@
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "ipam-external-resource-verification-token",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "ipam-internet-registry-association",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "ipam-policy",
@@ -4504,6 +4567,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DeleteIpamInternetRegistryAssociation",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ipam-internet-registry-association",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteIpamPolicy",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -4597,6 +4679,25 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteIpamRoutingPolicyRegistration",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ipam-internet-registry-association",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteIpamScope",
@@ -5424,6 +5525,9 @@
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "ipam-external-resource-verification-token",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "ipam-internet-registry-association",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "ipam-policy",
@@ -6490,6 +6594,21 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeAccountVpcEncryptionControl",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DescribeAddressTransfers",
@@ -7655,6 +7774,21 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeIpamInternetRegistryAssociations",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DescribeIpamPolicies",
@@ -10660,6 +10794,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "EnableIpamInternetRegistryAssociation",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ipam-internet-registry-association",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "EnableIpamOrganizationAdminAccount",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -11491,6 +11644,63 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetIpamDiscoveredRoutes",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ipam-resource-discovery",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetIpamInternetRegistryAssociationAsns",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ipam-internet-registry-association",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetIpamInternetRegistryAssociationCidrs",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ipam-internet-registry-association",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetIpamPolicyAllocationRules",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -11644,6 +11854,82 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetIpamRouteOriginAuthorizations",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ipam-internet-registry-association",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetIpamRouteProtectionFindings",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ipam",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetIpamRoutingPolicyRegistrationDeltas",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ipam-internet-registry-association",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetIpamRoutingPolicyRegistrations",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ipam-internet-registry-association",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "GetLaunchTemplateData",
@@ -12493,6 +12779,21 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ModifyAccountVpcEncryptionControl",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ModifyAddressAttribute",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -13161,6 +13462,25 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ModifyIpamRoutingPolicyRegistration",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ipam-internet-registry-association",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ModifyIpamScope",
@@ -16825,6 +17145,10 @@
     } ]
   }, {
     "Name" : "BatchModifyIpamRoutingPolicyRegistrations",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchModifyIpamRoutingPolicyRegistrations",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "batch_modify_ipam_routing_policy_registrations",
@@ -17429,6 +17753,9 @@
   }, {
     "Name" : "CreateIpamInternetRegistryAssociation",
     "AuthorizedActions" : [ {
+      "Name" : "CreateIpamInternetRegistryAssociation",
+      "Service" : "ec2"
+    }, {
       "Name" : "CreateTags",
       "Service" : "ec2"
     } ],
@@ -17509,6 +17836,10 @@
     } ]
   }, {
     "Name" : "CreateIpamRoutingPolicyRegistration",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateIpamRoutingPolicyRegistration",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "create_ipam_routing_policy_registration",
@@ -18714,6 +19045,10 @@
     } ]
   }, {
     "Name" : "DeleteIpamInternetRegistryAssociation",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteIpamInternetRegistryAssociation",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "delete_ipam_internet_registry_association",
@@ -18776,6 +19111,10 @@
     } ]
   }, {
     "Name" : "DeleteIpamRoutingPolicyRegistration",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteIpamRoutingPolicyRegistration",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "delete_ipam_routing_policy_registration",
@@ -19663,6 +20002,10 @@
     } ]
   }, {
     "Name" : "DescribeAccountVpcEncryptionControl",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAccountVpcEncryptionControl",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "describe_account_vpc_encryption_control",
@@ -20491,6 +20834,10 @@
     } ]
   }, {
     "Name" : "DescribeIpamInternetRegistryAssociations",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeIpamInternetRegistryAssociations",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "describe_ipam_internet_registry_associations",
@@ -22419,6 +22766,10 @@
     } ]
   }, {
     "Name" : "EnableIpamInternetRegistryAssociation",
+    "AuthorizedActions" : [ {
+      "Name" : "EnableIpamInternetRegistryAssociation",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "enable_ipam_internet_registry_association",
@@ -22946,6 +23297,10 @@
     } ]
   }, {
     "Name" : "GetIpamDiscoveredRoutes",
+    "AuthorizedActions" : [ {
+      "Name" : "GetIpamDiscoveredRoutes",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "get_ipam_discovered_routes",
@@ -22953,6 +23308,10 @@
     } ]
   }, {
     "Name" : "GetIpamInternetRegistryAssociationAsns",
+    "AuthorizedActions" : [ {
+      "Name" : "GetIpamInternetRegistryAssociationAsns",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "get_ipam_internet_registry_association_asns",
@@ -22960,6 +23319,10 @@
     } ]
   }, {
     "Name" : "GetIpamInternetRegistryAssociationCidrs",
+    "AuthorizedActions" : [ {
+      "Name" : "GetIpamInternetRegistryAssociationCidrs",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "get_ipam_internet_registry_association_cidrs",
@@ -23055,6 +23418,10 @@
     } ]
   }, {
     "Name" : "GetIpamRouteOriginAuthorizations",
+    "AuthorizedActions" : [ {
+      "Name" : "GetIpamRouteOriginAuthorizations",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "get_ipam_route_origin_authorizations",
@@ -23062,6 +23429,10 @@
     } ]
   }, {
     "Name" : "GetIpamRouteProtectionFindings",
+    "AuthorizedActions" : [ {
+      "Name" : "GetIpamRouteProtectionFindings",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "get_ipam_route_protection_findings",
@@ -23069,6 +23440,10 @@
     } ]
   }, {
     "Name" : "GetIpamRoutingPolicyRegistrationDeltas",
+    "AuthorizedActions" : [ {
+      "Name" : "GetIpamRoutingPolicyRegistrationDeltas",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "get_ipam_routing_policy_registration_deltas",
@@ -23076,6 +23451,10 @@
     } ]
   }, {
     "Name" : "GetIpamRoutingPolicyRegistrations",
+    "AuthorizedActions" : [ {
+      "Name" : "GetIpamRoutingPolicyRegistrations",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "get_ipam_routing_policy_registrations",
@@ -23543,6 +23922,10 @@
     } ]
   }, {
     "Name" : "ModifyAccountVpcEncryptionControl",
+    "AuthorizedActions" : [ {
+      "Name" : "ModifyAccountVpcEncryptionControl",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "modify_account_vpc_encryption_control",
@@ -23924,6 +24307,10 @@
     } ]
   }, {
     "Name" : "ModifyIpamRoutingPolicyRegistration",
+    "AuthorizedActions" : [ {
+      "Name" : "ModifyIpamRoutingPolicyRegistration",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "modify_ipam_routing_policy_registration",
@@ -25520,6 +25907,10 @@
   }, {
     "Name" : "ipam-external-resource-verification-token",
     "ARNFormats" : [ "arn:${Partition}:ec2::${Account}:ipam-external-resource-verification-token/${IpamExternalResourceVerificationTokenId}" ],
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:Region", "ec2:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "ipam-internet-registry-association",
+    "ARNFormats" : [ "arn:${Partition}:ec2::${Account}:ipam-internet-registry-association/${IpamInternetRegistryAssociationId}" ],
     "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:Region", "ec2:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "ipam-policy",

@@ -4737,6 +4737,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateConsentPortal",
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "create_consent_portal",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateDataset",
     "AuthorizedActions" : [ {
       "Name" : "CreateDataset",
@@ -5207,6 +5214,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteConsentPortal",
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "delete_consent_portal",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteDataset",
     "AuthorizedActions" : [ {
       "Name" : "DeleteDataset",
@@ -5661,6 +5675,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetConsentPortal",
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "get_consent_portal",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetDataset",
     "AuthorizedActions" : [ {
       "Name" : "GetDataset",
@@ -6068,6 +6089,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "IngestData",
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore",
+      "Method" : "ingest_data",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "InvokeAgentRuntime",
     "AuthorizedActions" : [ {
       "Name" : "InvokeAgentRuntime",
@@ -6301,6 +6329,13 @@
     "SDK" : [ {
       "Name" : "bedrock-agentcore-control",
       "Method" : "list_configuration_bundles",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListConsentPortals",
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "list_consent_portals",
       "Package" : "Boto3"
     } ]
   }, {
@@ -6998,6 +7033,13 @@
     "SDK" : [ {
       "Name" : "bedrock-agentcore-control",
       "Method" : "update_configuration_bundle",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateConsentPortal",
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "update_consent_portal",
       "Package" : "Boto3"
     } ]
   }, {

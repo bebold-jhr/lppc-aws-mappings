@@ -383,6 +383,9 @@
     "Name" : "agent-registry:RecordCreatorAccount",
     "Types" : [ "String" ]
   }, {
+    "Name" : "agent-registry:RecordSourceAccount",
+    "Types" : [ "String" ]
+  }, {
     "Name" : "aws:RequestTag/${TagKey}",
     "Types" : [ "String" ]
   }, {
