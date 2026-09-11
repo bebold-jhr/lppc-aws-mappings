@@ -8122,6 +8122,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "AttachClusterNodeNetworkInterface",
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "attach_cluster_node_network_interface",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "AttachClusterNodeVolume",
     "AuthorizedActions" : [ {
       "Name" : "AttachClusterNodeVolume",

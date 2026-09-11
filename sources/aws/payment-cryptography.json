@@ -58,7 +58,7 @@
     }
   }, {
     "Name" : "CreateKey",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "payment-cryptography:KeyAlgorithm", "payment-cryptography:KeyClass", "payment-cryptography:KeyUsage" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "payment-cryptography:DeriveKeyUsage", "payment-cryptography:KeyAlgorithm", "payment-cryptography:KeyClass", "payment-cryptography:KeyUsage" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -211,7 +211,7 @@
     }
   }, {
     "Name" : "ExportKey",
-    "ActionConditionKeys" : [ "payment-cryptography:CertificateAuthorityPublicKeyIdentifier", "payment-cryptography:RequestAlias", "payment-cryptography:WrappingKeyIdentifier" ],
+    "ActionConditionKeys" : [ "payment-cryptography:CertificateAuthorityPublicKeyIdentifier", "payment-cryptography:ExportDukptInitialKey", "payment-cryptography:ExportKeyMaterial", "payment-cryptography:PrivateKeyIdentifier", "payment-cryptography:RequestAlias", "payment-cryptography:SigningKeyIdentifier", "payment-cryptography:WrappingKeyIdentifier" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -229,6 +229,26 @@
     }
   }, {
     "Name" : "GenerateAs2805KekValidation",
+    "ActionConditionKeys" : [ "payment-cryptography:RequestAlias" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "alias"
+    }, {
+      "Name" : "key"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GenerateAuthRequestCryptogram",
     "ActionConditionKeys" : [ "payment-cryptography:RequestAlias" ],
     "Annotations" : {
       "Properties" : {
@@ -481,7 +501,7 @@
     }
   }, {
     "Name" : "ImportKey",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "payment-cryptography:CertificateAuthorityPublicKeyIdentifier", "payment-cryptography:ImportKeyMaterial", "payment-cryptography:WrappingKeyIdentifier" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "payment-cryptography:CertificateAuthorityPublicKeyIdentifier", "payment-cryptography:ImportKeyMaterial", "payment-cryptography:PrivateKeyIdentifier", "payment-cryptography:WrappingKeyIdentifier" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -840,6 +860,15 @@
     "Name" : "payment-cryptography:CertificateAuthorityPublicKeyIdentifier",
     "Types" : [ "String" ]
   }, {
+    "Name" : "payment-cryptography:DeriveKeyUsage",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "payment-cryptography:ExportDukptInitialKey",
+    "Types" : [ "Bool" ]
+  }, {
+    "Name" : "payment-cryptography:ExportKeyMaterial",
+    "Types" : [ "String" ]
+  }, {
     "Name" : "payment-cryptography:ImportKeyMaterial",
     "Types" : [ "String" ]
   }, {
@@ -852,11 +881,17 @@
     "Name" : "payment-cryptography:KeyUsage",
     "Types" : [ "String" ]
   }, {
+    "Name" : "payment-cryptography:PrivateKeyIdentifier",
+    "Types" : [ "String" ]
+  }, {
     "Name" : "payment-cryptography:RequestAlias",
     "Types" : [ "String" ]
   }, {
     "Name" : "payment-cryptography:ResourceAliases",
     "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "payment-cryptography:SigningKeyIdentifier",
+    "Types" : [ "String" ]
   }, {
     "Name" : "payment-cryptography:WrappingKeyIdentifier",
     "Types" : [ "String" ]

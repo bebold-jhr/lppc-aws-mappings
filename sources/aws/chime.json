@@ -5750,6 +5750,10 @@
     } ]
   }, {
     "Name" : "CreateUser",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateUser",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "create_user",

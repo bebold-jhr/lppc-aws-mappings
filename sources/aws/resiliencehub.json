@@ -2908,6 +2908,9 @@
     "AuthorizedActions" : [ {
       "Name" : "ImportApp",
       "Service" : "resiliencehub"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "resiliencehub"
     } ],
     "SDK" : [ {
       "Name" : "resiliencehubv2",
@@ -3326,6 +3329,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListTestRunDependencies",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_test_run_dependencies",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListTestRunEvents",
     "AuthorizedActions" : [ {
       "Name" : "ListTestRunEvents",
@@ -3334,6 +3344,13 @@
     "SDK" : [ {
       "Name" : "resiliencehubv2",
       "Method" : "list_test_run_events",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListTestRunSourceEvents",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_test_run_source_events",
       "Package" : "Boto3"
     } ]
   }, {
@@ -3725,6 +3742,12 @@
   }, {
     "Name" : "UpdateTest",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "fis.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateTest",
       "Service" : "resiliencehub"
     } ],

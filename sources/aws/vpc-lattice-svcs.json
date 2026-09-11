@@ -38,6 +38,9 @@
     }
   } ],
   "ConditionKeys" : [ {
+    "Name" : "aws:ResourceTag/${TagKey}",
+    "Types" : [ "String" ]
+  }, {
     "Name" : "vpc-lattice-svcs:Port",
     "Types" : [ "Numeric" ]
   }, {
@@ -67,10 +70,12 @@
   } ],
   "Resources" : [ {
     "Name" : "Service",
-    "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:service/${ServiceId}/${RequestPath}" ]
+    "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:service/${ServiceId}/${RequestPath}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "TCP Service",
-    "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:service/${ServiceId}" ]
+    "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:service/${ServiceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.4"
 }

@@ -5362,6 +5362,10 @@
     } ]
   }, {
     "Name" : "StartNotebookSync",
+    "AuthorizedActions" : [ {
+      "Name" : "StartNotebookSync",
+      "Service" : "datazone"
+    } ],
     "SDK" : [ {
       "Name" : "datazone",
       "Method" : "start_notebook_sync",

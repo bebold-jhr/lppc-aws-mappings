@@ -2765,7 +2765,7 @@
     }
   }, {
     "Name" : "PutObject",
-    "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ObjectCreationOperation", "s3:RequestObjectTag/<key>", "s3:RequestObjectTagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:if-match", "s3:if-none-match", "s3:object-lock-legal-hold", "s3:object-lock-mode", "s3:object-lock-remaining-retention-days", "s3:object-lock-retain-until-date", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-acl", "s3:x-amz-content-sha256", "s3:x-amz-copy-source", "s3:x-amz-grant-full-control", "s3:x-amz-grant-read", "s3:x-amz-grant-read-acp", "s3:x-amz-grant-write", "s3:x-amz-grant-write-acp", "s3:x-amz-metadata-directive", "s3:x-amz-object-annotation-directive", "s3:x-amz-server-side-encryption", "s3:x-amz-server-side-encryption-aws-kms-key-id", "s3:x-amz-server-side-encryption-customer-algorithm", "s3:x-amz-storage-class", "s3:x-amz-website-redirect-location" ],
+    "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ObjectCreationOperation", "s3:RequestObjectTag/<key>", "s3:RequestObjectTagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:if-match", "s3:if-none-match", "s3:object-lock-event-hold", "s3:object-lock-event-hold-duration-days", "s3:object-lock-legal-hold", "s3:object-lock-mode", "s3:object-lock-remaining-retention-days", "s3:object-lock-retain-until-date", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-acl", "s3:x-amz-content-sha256", "s3:x-amz-copy-source", "s3:x-amz-grant-full-control", "s3:x-amz-grant-read", "s3:x-amz-grant-read-acp", "s3:x-amz-grant-write", "s3:x-amz-grant-write-acp", "s3:x-amz-metadata-directive", "s3:x-amz-object-annotation-directive", "s3:x-amz-server-side-encryption", "s3:x-amz-server-side-encryption-aws-kms-key-id", "s3:x-amz-server-side-encryption-customer-algorithm", "s3:x-amz-storage-class", "s3:x-amz-website-redirect-location" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2845,7 +2845,7 @@
     }
   }, {
     "Name" : "PutObjectRetention",
-    "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:object-lock-mode", "s3:object-lock-remaining-retention-days", "s3:object-lock-retain-until-date", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
+    "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:object-lock-event-hold", "s3:object-lock-event-hold-duration-days", "s3:object-lock-mode", "s3:object-lock-remaining-retention-days", "s3:object-lock-retain-until-date", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -3014,7 +3014,7 @@
     }
   }, {
     "Name" : "ReplicateObject",
-    "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256", "s3:x-amz-server-side-encryption", "s3:x-amz-server-side-encryption-aws-kms-key-id", "s3:x-amz-server-side-encryption-customer-algorithm" ],
+    "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:object-lock-event-hold", "s3:object-lock-event-hold-duration-days", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256", "s3:x-amz-server-side-encryption", "s3:x-amz-server-side-encryption-aws-kms-key-id", "s3:x-amz-server-side-encryption-customer-algorithm" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -3411,6 +3411,12 @@
     "Types" : [ "Numeric" ]
   }, {
     "Name" : "s3:max-keys",
+    "Types" : [ "Numeric" ]
+  }, {
+    "Name" : "s3:object-lock-event-hold",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "s3:object-lock-event-hold-duration-days",
     "Types" : [ "Numeric" ]
   }, {
     "Name" : "s3:object-lock-legal-hold",
