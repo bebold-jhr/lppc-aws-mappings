@@ -22,7 +22,7 @@ jobs:
   terraform-fmt:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: hashicorp/setup-terraform@v4
       - name: Terraform validate
         working-directory: integration-tests/modules/deployer-role
