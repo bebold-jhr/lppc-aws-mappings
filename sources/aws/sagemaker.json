@@ -9143,9 +9143,6 @@
   }, {
     "Name" : "CreatePartnerApp",
     "AuthorizedActions" : [ {
-      "Name" : "AddTags",
-      "Service" : "sagemaker"
-    }, {
       "Name" : "CreatePartnerApp",
       "Service" : "sagemaker"
     }, {
@@ -13067,6 +13064,10 @@
     } ]
   }, {
     "Name" : "UpdateRecord",
+    "AuthorizedActions" : [ {
+      "Name" : "PutRecord",
+      "Service" : "sagemaker"
+    } ],
     "SDK" : [ {
       "Name" : "sagemaker-featurestore-runtime",
       "Method" : "update_record",

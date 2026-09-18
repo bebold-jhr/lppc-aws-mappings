@@ -416,9 +416,6 @@
     "AuthorizedActions" : [ {
       "Name" : "BatchGetInvoiceProfile",
       "Service" : "invoicing"
-    }, {
-      "Name" : "ViewBilling",
-      "Service" : "aws-portal"
     } ],
     "SDK" : [ {
       "Name" : "invoicing",
@@ -433,9 +430,6 @@
     }, {
       "Name" : "TagResource",
       "Service" : "invoicing"
-    }, {
-      "Name" : "ViewBilling",
-      "Service" : "aws-portal"
     } ],
     "SDK" : [ {
       "Name" : "invoicing",
@@ -447,9 +441,6 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateProcurementPortalPreference",
       "Service" : "invoicing"
-    }, {
-      "Name" : "ModifyBilling",
-      "Service" : "aws-portal"
     }, {
       "Name" : "TagResource",
       "Service" : "invoicing"
@@ -464,9 +455,6 @@
     "AuthorizedActions" : [ {
       "Name" : "DeleteInvoiceUnit",
       "Service" : "invoicing"
-    }, {
-      "Name" : "ViewBilling",
-      "Service" : "aws-portal"
     } ],
     "SDK" : [ {
       "Name" : "invoicing",
@@ -478,9 +466,6 @@
     "AuthorizedActions" : [ {
       "Name" : "DeleteProcurementPortalPreference",
       "Service" : "invoicing"
-    }, {
-      "Name" : "ModifyBilling",
-      "Service" : "aws-portal"
     } ],
     "SDK" : [ {
       "Name" : "invoicing",
@@ -506,9 +491,6 @@
     "AuthorizedActions" : [ {
       "Name" : "GetInvoiceUnit",
       "Service" : "invoicing"
-    }, {
-      "Name" : "ViewBilling",
-      "Service" : "aws-portal"
     } ],
     "SDK" : [ {
       "Name" : "invoicing",
@@ -520,9 +502,6 @@
     "AuthorizedActions" : [ {
       "Name" : "GetProcurementPortalPreference",
       "Service" : "invoicing"
-    }, {
-      "Name" : "ViewBilling",
-      "Service" : "aws-portal"
     } ],
     "SDK" : [ {
       "Name" : "invoicing",
@@ -548,9 +527,6 @@
     "AuthorizedActions" : [ {
       "Name" : "ListInvoiceUnits",
       "Service" : "invoicing"
-    }, {
-      "Name" : "ViewBilling",
-      "Service" : "aws-portal"
     } ],
     "SDK" : [ {
       "Name" : "invoicing",
@@ -562,9 +538,6 @@
     "AuthorizedActions" : [ {
       "Name" : "ListProcurementPortalPreferences",
       "Service" : "invoicing"
-    }, {
-      "Name" : "ViewBilling",
-      "Service" : "aws-portal"
     } ],
     "SDK" : [ {
       "Name" : "invoicing",
@@ -572,13 +545,32 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListProcurementPortalSuppliers",
+    "AuthorizedActions" : [ {
+      "Name" : "ListProcurementPortalSuppliers",
+      "Service" : "invoicing"
+    } ],
+    "SDK" : [ {
+      "Name" : "invoicing",
+      "Method" : "list_procurement_portal_suppliers",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListProcurementPortals",
+    "AuthorizedActions" : [ {
+      "Name" : "ListProcurementPortals",
+      "Service" : "invoicing"
+    } ],
+    "SDK" : [ {
+      "Name" : "invoicing",
+      "Method" : "list_procurement_portals",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListTagsForResource",
     "AuthorizedActions" : [ {
       "Name" : "ListTagsForResource",
       "Service" : "invoicing"
-    }, {
-      "Name" : "ViewBilling",
-      "Service" : "aws-portal"
     } ],
     "SDK" : [ {
       "Name" : "invoicing",
@@ -588,9 +580,6 @@
   }, {
     "Name" : "PutProcurementPortalPreference",
     "AuthorizedActions" : [ {
-      "Name" : "ModifyBilling",
-      "Service" : "aws-portal"
-    }, {
       "Name" : "PutProcurementPortalPreference",
       "Service" : "invoicing"
     } ],
@@ -613,9 +602,6 @@
   }, {
     "Name" : "TagResource",
     "AuthorizedActions" : [ {
-      "Name" : "ModifyBilling",
-      "Service" : "aws-portal"
-    }, {
       "Name" : "TagResource",
       "Service" : "invoicing"
     } ],
@@ -627,9 +613,6 @@
   }, {
     "Name" : "UntagResource",
     "AuthorizedActions" : [ {
-      "Name" : "ModifyBilling",
-      "Service" : "aws-portal"
-    }, {
       "Name" : "UntagResource",
       "Service" : "invoicing"
     } ],
@@ -643,9 +626,6 @@
     "AuthorizedActions" : [ {
       "Name" : "UpdateInvoiceUnit",
       "Service" : "invoicing"
-    }, {
-      "Name" : "ViewBilling",
-      "Service" : "aws-portal"
     } ],
     "SDK" : [ {
       "Name" : "invoicing",
@@ -655,9 +635,6 @@
   }, {
     "Name" : "UpdateProcurementPortalPreferenceStatus",
     "AuthorizedActions" : [ {
-      "Name" : "ModifyBilling",
-      "Service" : "aws-portal"
-    }, {
       "Name" : "UpdateProcurementPortalPreferenceStatus",
       "Service" : "invoicing"
     } ],

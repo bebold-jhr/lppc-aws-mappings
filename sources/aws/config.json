@@ -2639,6 +2639,9 @@
     "AuthorizedActions" : [ {
       "Name" : "PutOrganizationConfigRule",
       "Service" : "config"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "config"
     } ],
     "SDK" : [ {
       "Name" : "config",

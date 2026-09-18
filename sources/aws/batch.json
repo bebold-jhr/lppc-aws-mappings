@@ -910,6 +910,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CancelJobs",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelJob",
+      "Service" : "batch"
+    } ],
+    "SDK" : [ {
+      "Name" : "batch",
+      "Method" : "cancel_jobs",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateComputeEnvironment",
     "AuthorizedActions" : [ {
       "Name" : "CreateComputeEnvironment",
@@ -1343,6 +1354,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "TerminateJobs",
+    "AuthorizedActions" : [ {
+      "Name" : "TerminateJob",
+      "Service" : "batch"
+    } ],
+    "SDK" : [ {
+      "Name" : "batch",
+      "Method" : "terminate_jobs",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "TerminateServiceJob",
     "AuthorizedActions" : [ {
       "Name" : "TerminateServiceJob",
@@ -1351,6 +1373,17 @@
     "SDK" : [ {
       "Name" : "batch",
       "Method" : "terminate_service_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "TerminateServiceJobs",
+    "AuthorizedActions" : [ {
+      "Name" : "TerminateServiceJob",
+      "Service" : "batch"
+    } ],
+    "SDK" : [ {
+      "Name" : "batch",
+      "Method" : "terminate_service_jobs",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1372,6 +1405,9 @@
         "iam:PassedToService" : [ "batch.amazonaws.com", "ec2.amazonaws.com", "ecs.amazonaws.com" ]
       },
       "Service" : "iam"
+    }, {
+      "Name" : "SetCapacityTags",
+      "Service" : "batch"
     }, {
       "Name" : "UpdateComputeEnvironment",
       "Service" : "batch"

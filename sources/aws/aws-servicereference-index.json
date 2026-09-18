@@ -49,7 +49,7 @@
 }, {
   "service" : "aidevops",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/aidevops/aidevops.json",
-  "modified" : 1787691698
+  "modified" : 1789164101
 }, {
   "service" : "aiops",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/aiops/aiops.json",
@@ -189,7 +189,7 @@
 }, {
   "service" : "aws-marketplace",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/aws-marketplace/aws-marketplace.json",
-  "modified" : 1787090491
+  "modified" : 1789362094
 }, {
   "service" : "aws-marketplace-management",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/aws-marketplace-management/aws-marketplace-management.json",
@@ -217,7 +217,7 @@
 }, {
   "service" : "backup-search",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/backup-search/backup-search.json",
-  "modified" : 1784523695
+  "modified" : 1789704101
 }, {
   "service" : "backup-storage",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/backup-storage/backup-storage.json",
@@ -225,7 +225,7 @@
 }, {
   "service" : "batch",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/batch/batch.json",
-  "modified" : 1787594499
+  "modified" : 1789358497
 }, {
   "service" : "bcm-dashboards",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/bcm-dashboards/bcm-dashboards.json",
@@ -245,7 +245,7 @@
 }, {
   "service" : "bedrock",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/bedrock/bedrock.json",
-  "modified" : 1788584495
+  "modified" : 1789531299
 }, {
   "service" : "bedrock-agentcore",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/bedrock-agentcore/bedrock-agentcore.json",
@@ -297,7 +297,7 @@
 }, {
   "service" : "chime",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/chime/chime.json",
-  "modified" : 1789102894
+  "modified" : 1789275695
 }, {
   "service" : "cleanrooms",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/cleanrooms/cleanrooms.json",
@@ -441,11 +441,11 @@
 }, {
   "service" : "config",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/config/config.json",
-  "modified" : 1785355295
+  "modified" : 1789617694
 }, {
   "service" : "connect",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/connect/connect.json",
-  "modified" : 1789074095
+  "modified" : 1789189293
 }, {
   "service" : "connect-campaigns",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/connect-campaigns/connect-campaigns.json",
@@ -525,7 +525,7 @@
 }, {
   "service" : "directconnect",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/directconnect/directconnect.json",
-  "modified" : 1786989702
+  "modified" : 1789707706
 }, {
   "service" : "discovery",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/discovery/discovery.json",
@@ -569,7 +569,7 @@
 }, {
   "service" : "ec2",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/ec2/ec2.json",
-  "modified" : 1788552100
+  "modified" : 1789448503
 }, {
   "service" : "ec2-instance-connect",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/ec2-instance-connect/ec2-instance-connect.json",
@@ -737,7 +737,7 @@
 }, {
   "service" : "gameliftstreams",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/gameliftstreams/gameliftstreams.json",
-  "modified" : 1785902499
+  "modified" : 1789531301
 }, {
   "service" : "geo",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/geo/geo.json",
@@ -765,7 +765,7 @@
 }, {
   "service" : "glue",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/glue/glue.json",
-  "modified" : 1785960098
+  "modified" : 1789707701
 }, {
   "service" : "grafana",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/grafana/grafana.json",
@@ -777,7 +777,7 @@
 }, {
   "service" : "groundstation",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/groundstation/groundstation.json",
-  "modified" : 1785355298
+  "modified" : 1789707699
 }, {
   "service" : "groundtruthlabeling",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/groundtruthlabeling/groundtruthlabeling.json",
@@ -797,7 +797,7 @@
 }, {
   "service" : "healthlake",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/healthlake/healthlake.json",
-  "modified" : 1788498101
+  "modified" : 1789603297
 }, {
   "service" : "honeycode",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/honeycode/honeycode.json",
@@ -813,7 +813,7 @@
 }, {
   "service" : "identitystore",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/identitystore/identitystore.json",
-  "modified" : 1774454957
+  "modified" : 1789488097
 }, {
   "service" : "identitystore-auth",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/identitystore-auth/identitystore-auth.json",
@@ -853,7 +853,7 @@
 }, {
   "service" : "invoicing",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/invoicing/invoicing.json",
-  "modified" : 1785438094
+  "modified" : 1789707699
 }, {
   "service" : "iot",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/iot/iot.json",
@@ -1153,7 +1153,7 @@
 }, {
   "service" : "notifications",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/notifications/notifications.json",
-  "modified" : 1777479065
+  "modified" : 1789675303
 }, {
   "service" : "notifications-contacts",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/notifications-contacts/notifications-contacts.json",
@@ -1269,7 +1269,7 @@
 }, {
   "service" : "profile",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/profile/profile.json",
-  "modified" : 1788206495
+  "modified" : 1789592494
 }, {
   "service" : "proton",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/proton/proton.json",
@@ -1353,7 +1353,7 @@
 }, {
   "service" : "resiliencehub",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/resiliencehub/resiliencehub.json",
-  "modified" : 1789070497
+  "modified" : 1789592494
 }, {
   "service" : "resource-explorer",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/resource-explorer/resource-explorer.json",
@@ -1449,7 +1449,7 @@
 }, {
   "service" : "sagemaker",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/sagemaker/sagemaker.json",
-  "modified" : 1789070502
+  "modified" : 1789707702
 }, {
   "service" : "sagemaker-data-science-assistant",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/sagemaker-data-science-assistant/sagemaker-data-science-assistant.json",
@@ -1497,7 +1497,7 @@
 }, {
   "service" : "securityagent",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/securityagent/securityagent.json",
-  "modified" : 1785963696
+  "modified" : 1789668103
 }, {
   "service" : "securityhub",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/securityhub/securityhub.json",
@@ -1529,7 +1529,7 @@
 }, {
   "service" : "ses",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/ses/ses.json",
-  "modified" : 1788292899
+  "modified" : 1789484496
 }, {
   "service" : "shield",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/shield/shield.json",
@@ -1553,7 +1553,7 @@
 }, {
   "service" : "sms-voice",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/sms-voice/sms-voice.json",
-  "modified" : 1788897704
+  "modified" : 1789668106
 }, {
   "service" : "snow-device-management",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/snow-device-management/snow-device-management.json",
@@ -1569,7 +1569,7 @@
 }, {
   "service" : "social-messaging",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/social-messaging/social-messaging.json",
-  "modified" : 1788465698
+  "modified" : 1789675300
 }, {
   "service" : "sqlworkbench",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/sqlworkbench/sqlworkbench.json",
@@ -1725,7 +1725,7 @@
 }, {
   "service" : "user-subscriptions",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/user-subscriptions/user-subscriptions.json",
-  "modified" : 1782500510
+  "modified" : 1789635702
 }, {
   "service" : "uxc",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/uxc/uxc.json",

@@ -1602,7 +1602,43 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListTestRunDependencies",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListTestRunEvents",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListTestRunSourceEvents",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2816,6 +2852,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetDependencyInsights",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "get_dependency_insights",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetFailureModeFinding",
     "AuthorizedActions" : [ {
       "Name" : "GetFailureModeFinding",
@@ -3149,6 +3192,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListPolicyEvents",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "list_policy_events",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListRecommendationTemplates",
     "AuthorizedActions" : [ {
       "Name" : "ListRecommendationTemplates",
@@ -3330,6 +3380,10 @@
     } ]
   }, {
     "Name" : "ListTestRunDependencies",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTestRunDependencies",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehubv2",
       "Method" : "list_test_run_dependencies",
@@ -3348,6 +3402,10 @@
     } ]
   }, {
     "Name" : "ListTestRunSourceEvents",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTestRunSourceEvents",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehubv2",
       "Method" : "list_test_run_source_events",
@@ -3508,6 +3566,13 @@
     "SDK" : [ {
       "Name" : "resiliencehub",
       "Method" : "start_app_assessment",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartDependencyInsights",
+    "SDK" : [ {
+      "Name" : "resiliencehubv2",
+      "Method" : "start_dependency_insights",
       "Package" : "Boto3"
     } ]
   }, {

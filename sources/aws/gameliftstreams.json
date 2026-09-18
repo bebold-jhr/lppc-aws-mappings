@@ -601,6 +601,19 @@
     } ]
   }, {
     "Name" : "CreateStreamUrl",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateStreamUrl",
+      "Service" : "gameliftstreams"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "gameliftstreams.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "StartStreamSession",
+      "Service" : "gameliftstreams"
+    } ],
     "SDK" : [ {
       "Name" : "gameliftstreams",
       "Method" : "create_stream_url",

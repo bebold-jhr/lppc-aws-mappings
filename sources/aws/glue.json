@@ -5658,6 +5658,10 @@
     } ]
   }, {
     "Name" : "BatchGetDataQualityRulesetEvaluationRun",
+    "AuthorizedActions" : [ {
+      "Name" : "GetDataQualityRulesetEvaluationRun",
+      "Service" : "glue"
+    } ],
     "SDK" : [ {
       "Name" : "glue",
       "Method" : "batch_get_data_quality_ruleset_evaluation_run",
@@ -7893,6 +7897,13 @@
     "SDK" : [ {
       "Name" : "glue",
       "Method" : "list_integration_resource_properties",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListIntegrationTableProperties",
+    "SDK" : [ {
+      "Name" : "glue",
+      "Method" : "list_integration_table_properties",
       "Package" : "Boto3"
     } ]
   }, {

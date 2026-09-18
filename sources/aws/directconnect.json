@@ -134,6 +134,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "AssociateConnectionsToResiliencyGroup",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dx-resiliency-group"
+    }, {
+      "Name" : "dxcon"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "AssociateHostedConnection",
     "Annotations" : {
       "Properties" : {
@@ -437,6 +456,21 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateResiliencyGroup",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateTransitVirtualInterface",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -571,6 +605,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteResiliencyGroup",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dx-resiliency-group"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteVirtualInterface",
@@ -855,6 +906,8 @@
     "Resources" : [ {
       "Name" : "dx-gateway"
     }, {
+      "Name" : "dx-resiliency-group"
+    }, {
       "Name" : "dxcon"
     }, {
       "Name" : "dxlag"
@@ -920,6 +973,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DisassociateConnectionsFromResiliencyGroup",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dx-resiliency-group"
+    }, {
+      "Name" : "dxcon"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DisassociateMacSecKey",
     "Annotations" : {
       "Properties" : {
@@ -937,6 +1009,54 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetResiliencyGroup",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dx-resiliency-group"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListResiliencyGroupAssociations",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dx-resiliency-group"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListResiliencyGroups",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ListVirtualInterfaceRoutes",
@@ -1020,6 +1140,8 @@
     "Resources" : [ {
       "Name" : "dx-gateway"
     }, {
+      "Name" : "dx-resiliency-group"
+    }, {
       "Name" : "dxcon"
     }, {
       "Name" : "dxlag"
@@ -1043,6 +1165,8 @@
     },
     "Resources" : [ {
       "Name" : "dx-gateway"
+    }, {
+      "Name" : "dx-resiliency-group"
     }, {
       "Name" : "dxcon"
     }, {
@@ -1070,6 +1194,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "UpdateConnectionsBillingMode",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dxcon"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "UpdateDirectConnectGateway",
@@ -1118,6 +1259,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "UpdateResiliencyGroup",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dx-resiliency-group"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "UpdateVirtualInterfaceAttributes",
@@ -1234,6 +1392,17 @@
     "SDK" : [ {
       "Name" : "directconnect",
       "Method" : "associate_connection_with_lag",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "AssociateConnectionsToResiliencyGroup",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateConnectionsToResiliencyGroup",
+      "Service" : "directconnect"
+    } ],
+    "SDK" : [ {
+      "Name" : "directconnect",
+      "Method" : "associate_connections_to_resiliency_group",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1442,6 +1611,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateResiliencyGroup",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateResiliencyGroup",
+      "Service" : "directconnect"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "directconnect"
+    } ],
+    "SDK" : [ {
+      "Name" : "directconnect",
+      "Method" : "create_resiliency_group",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateTransitVirtualInterface",
     "AuthorizedActions" : [ {
       "Name" : "CreateTransitVirtualInterface",
@@ -1530,6 +1713,17 @@
     "SDK" : [ {
       "Name" : "directconnect",
       "Method" : "delete_lag",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteResiliencyGroup",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteResiliencyGroup",
+      "Service" : "directconnect"
+    } ],
+    "SDK" : [ {
+      "Name" : "directconnect",
+      "Method" : "delete_resiliency_group",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1753,6 +1947,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DisassociateConnectionsFromResiliencyGroup",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateConnectionsFromResiliencyGroup",
+      "Service" : "directconnect"
+    } ],
+    "SDK" : [ {
+      "Name" : "directconnect",
+      "Method" : "disassociate_connections_from_resiliency_group",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DisassociateMacSecKey",
     "AuthorizedActions" : [ {
       "Name" : "DisassociateMacSecKey",
@@ -1761,6 +1966,39 @@
     "SDK" : [ {
       "Name" : "directconnect",
       "Method" : "disassociate_mac_sec_key",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetResiliencyGroup",
+    "AuthorizedActions" : [ {
+      "Name" : "GetResiliencyGroup",
+      "Service" : "directconnect"
+    } ],
+    "SDK" : [ {
+      "Name" : "directconnect",
+      "Method" : "get_resiliency_group",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListResiliencyGroupAssociations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListResiliencyGroupAssociations",
+      "Service" : "directconnect"
+    } ],
+    "SDK" : [ {
+      "Name" : "directconnect",
+      "Method" : "list_resiliency_group_associations",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListResiliencyGroups",
+    "AuthorizedActions" : [ {
+      "Name" : "ListResiliencyGroups",
+      "Service" : "directconnect"
+    } ],
+    "SDK" : [ {
+      "Name" : "directconnect",
+      "Method" : "list_resiliency_groups",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1841,6 +2079,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateConnectionsBillingMode",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateConnectionsBillingMode",
+      "Service" : "directconnect"
+    } ],
+    "SDK" : [ {
+      "Name" : "directconnect",
+      "Method" : "update_connections_billing_mode",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateDirectConnectGateway",
     "AuthorizedActions" : [ {
       "Name" : "UpdateDirectConnectGateway",
@@ -1874,6 +2123,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateResiliencyGroup",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateResiliencyGroup",
+      "Service" : "directconnect"
+    } ],
+    "SDK" : [ {
+      "Name" : "directconnect",
+      "Method" : "update_resiliency_group",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateVirtualInterfaceAttributes",
     "AuthorizedActions" : [ {
       "Name" : "UpdateVirtualInterfaceAttributes",
@@ -1888,6 +2148,10 @@
   "Resources" : [ {
     "Name" : "dx-gateway",
     "ARNFormats" : [ "arn:${Partition}:directconnect::${Account}:dx-gateway/${DirectConnectGatewayId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "dx-resiliency-group",
+    "ARNFormats" : [ "arn:${Partition}:directconnect::${Account}:dx-resiliency-group/${ResiliencyGroupId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "dxcon",

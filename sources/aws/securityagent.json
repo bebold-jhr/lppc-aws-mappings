@@ -392,6 +392,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "BatchGetValidationRuns",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "AgentSpace"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "BatchUpdateSecurityRequirements",
     "Annotations" : {
       "Properties" : {
@@ -1146,6 +1163,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListDiscoveredDomains",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "AgentSpace"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListDiscoveredEndpoints",
     "Annotations" : {
       "Properties" : {
@@ -1535,6 +1569,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StartValidationRun",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "AgentSpace"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StopCodeReviewJob",
     "Annotations" : {
       "Properties" : {
@@ -1694,6 +1745,23 @@
     }
   }, {
     "Name" : "UpdateCodeReview",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "AgentSpace"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateDiscoveredDomains",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,

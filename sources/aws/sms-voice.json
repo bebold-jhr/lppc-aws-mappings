@@ -1146,6 +1146,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListAvailablePhoneNumbers",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListConfigurationSets",
     "Annotations" : {
       "Properties" : {
@@ -2840,6 +2854,10 @@
     } ]
   }, {
     "Name" : "ListAvailablePhoneNumbers",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAvailablePhoneNumbers",
+      "Service" : "sms-voice"
+    } ],
     "SDK" : [ {
       "Name" : "pinpoint-sms-voice-v2",
       "Method" : "list_available_phone_numbers",

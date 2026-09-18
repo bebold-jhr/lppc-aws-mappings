@@ -309,6 +309,19 @@
     } ]
   }, {
     "Name" : "StartSearchResultExportJob",
+    "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "backup-search.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "StartSearchResultExportJob",
+      "Service" : "backup-search"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "backup-search"
+    } ],
     "SDK" : [ {
       "Name" : "backupsearch",
       "Method" : "start_search_result_export_job",

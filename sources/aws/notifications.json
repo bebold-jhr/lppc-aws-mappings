@@ -1,6 +1,20 @@
 {
   "Name" : "notifications",
   "Actions" : [ {
+    "Name" : "AccessSensitiveEvents",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "AssociateChannel",
     "Annotations" : {
       "Properties" : {
@@ -580,6 +594,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "SubscribeSensitiveEvents",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ManagedNotificationConfiguration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "TagResource",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -633,6 +664,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateManagedNotificationChannelAssociation",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ManagedNotificationConfiguration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateNotificationConfiguration",
     "Annotations" : {
       "Properties" : {
@@ -676,6 +724,9 @@
     "AuthorizedActions" : [ {
       "Name" : "AssociateManagedNotificationAccountContact",
       "Service" : "notifications"
+    }, {
+      "Name" : "SubscribeSensitiveEvents",
+      "Service" : "notifications"
     } ],
     "SDK" : [ {
       "Name" : "notifications",
@@ -686,6 +737,9 @@
     "Name" : "AssociateManagedNotificationAdditionalChannel",
     "AuthorizedActions" : [ {
       "Name" : "AssociateManagedNotificationAdditionalChannel",
+      "Service" : "notifications"
+    }, {
+      "Name" : "SubscribeSensitiveEvents",
       "Service" : "notifications"
     } ],
     "SDK" : [ {
@@ -864,6 +918,9 @@
   }, {
     "Name" : "GetManagedNotificationEvent",
     "AuthorizedActions" : [ {
+      "Name" : "AccessSensitiveEvents",
+      "Service" : "notifications"
+    }, {
       "Name" : "GetManagedNotificationEvent",
       "Service" : "notifications"
     } ],
@@ -963,6 +1020,9 @@
   }, {
     "Name" : "ListManagedNotificationEvents",
     "AuthorizedActions" : [ {
+      "Name" : "AccessSensitiveEvents",
+      "Service" : "notifications"
+    }, {
       "Name" : "ListManagedNotificationEvents",
       "Service" : "notifications"
     } ],
@@ -1079,6 +1139,13 @@
     "SDK" : [ {
       "Name" : "notifications",
       "Method" : "update_event_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateManagedNotificationChannelAssociation",
+    "SDK" : [ {
+      "Name" : "notifications",
+      "Method" : "update_managed_notification_channel_association",
       "Package" : "Boto3"
     } ]
   }, {
