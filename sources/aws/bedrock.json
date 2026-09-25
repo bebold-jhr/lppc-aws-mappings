@@ -4857,9 +4857,6 @@
   }, {
     "Name" : "CreateAdvancedPromptOptimizationJob",
     "AuthorizedActions" : [ {
-      "Name" : "CallWithBearerToken",
-      "Service" : "bedrock"
-    }, {
       "Name" : "CreateAdvancedPromptOptimizationJob",
       "Service" : "bedrock"
     }, {

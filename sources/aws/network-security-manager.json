@@ -1,25 +1,7 @@
 {
-  "Name" : "observabilityadmin",
+  "Name" : "network-security-manager",
   "Actions" : [ {
-    "Name" : "CreateCentralizationRuleForOrganization",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "observabilityadmin:CentralizationBackupRegion", "observabilityadmin:CentralizationDestinationAccount", "observabilityadmin:CentralizationDestinationRegion", "observabilityadmin:CentralizationRuleName", "observabilityadmin:CentralizationSourceId", "observabilityadmin:CentralizationSourceRegions" ],
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "Resources" : [ {
-      "Name" : "organization-centralization-rule"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "CreateDatasetIntegration",
+    "Name" : "CreateDeployment",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
@@ -30,14 +12,20 @@
       }
     },
     "Resources" : [ {
-      "Name" : "dataset-integration"
+      "Name" : "policy"
+    }, {
+      "Name" : "policy-snapshot"
+    }, {
+      "Name" : "scope"
+    }, {
+      "Name" : "scope-snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "CreateS3TableIntegration",
+    "Name" : "CreateDeploymentSnapshot",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
@@ -48,15 +36,15 @@
       }
     },
     "Resources" : [ {
-      "Name" : "s3tableintegration"
+      "Name" : "deployment"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "CreateTelemetryPipeline",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "observabilityadmin:SourceType" ],
+    "Name" : "CreatePolicy",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -66,15 +54,21 @@
       }
     },
     "Resources" : [ {
-      "Name" : "telemetry-pipeline"
+      "Name" : "rule"
+    }, {
+      "Name" : "rule-snapshot"
+    }, {
+      "Name" : "template"
+    }, {
+      "Name" : "template-snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "CreateTelemetryRule",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "observabilityadmin:TargetRegions" ],
+    "Name" : "CreatePolicySnapshot",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -84,15 +78,30 @@
       }
     },
     "Resources" : [ {
-      "Name" : "telemetry-rule"
+      "Name" : "policy"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "CreateTelemetryRuleForOrganization",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "observabilityadmin:TargetRegions" ],
+    "Name" : "CreateRule",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateRuleSnapshot",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -102,15 +111,30 @@
       }
     },
     "Resources" : [ {
-      "Name" : "organization-telemetry-rule"
+      "Name" : "rule"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "DeleteCentralizationRuleForOrganization",
-    "ActionConditionKeys" : [ "observabilityadmin:CentralizationRuleName" ],
+    "Name" : "CreateScope",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateScopeSnapshot",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -120,14 +144,15 @@
       }
     },
     "Resources" : [ {
-      "Name" : "organization-centralization-rule"
+      "Name" : "scope"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "DeleteDatasetIntegration",
+    "Name" : "CreateTemplate",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -137,14 +162,17 @@
       }
     },
     "Resources" : [ {
-      "Name" : "dataset-integration"
+      "Name" : "rule"
+    }, {
+      "Name" : "rule-snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "DeleteS3TableIntegration",
+    "Name" : "CreateTemplateSnapshot",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -154,14 +182,28 @@
       }
     },
     "Resources" : [ {
-      "Name" : "s3tableintegration"
+      "Name" : "template"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "DeleteTelemetryPipeline",
+    "Name" : "DeleteAdminAccount",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteDeployment",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -171,14 +213,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "telemetry-pipeline"
+      "Name" : "deployment"
+    }, {
+      "Name" : "deployment-snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "DeleteTelemetryRule",
+    "Name" : "DeletePolicy",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -188,14 +232,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "telemetry-rule"
+      "Name" : "policy"
+    }, {
+      "Name" : "policy-snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "DeleteTelemetryRuleForOrganization",
+    "Name" : "DeleteRule",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -205,15 +251,82 @@
       }
     },
     "Resources" : [ {
-      "Name" : "organization-telemetry-rule"
+      "Name" : "rule"
+    }, {
+      "Name" : "rule-snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetCentralizationRuleForOrganization",
-    "ActionConditionKeys" : [ "observabilityadmin:CentralizationRuleName" ],
+    "Name" : "DeleteScope",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "scope"
+    }, {
+      "Name" : "scope-snapshot"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteTemplate",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "template"
+    }, {
+      "Name" : "template-snapshot"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GenerateRuleConfiguration",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetAdminAccount",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetDeployment",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -223,14 +336,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "organization-centralization-rule"
+      "Name" : "deployment"
+    }, {
+      "Name" : "deployment-snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetDatasetIntegration",
+    "Name" : "GetPolicy",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -240,14 +355,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "dataset-integration"
+      "Name" : "policy"
+    }, {
+      "Name" : "policy-snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetS3TableIntegration",
+    "Name" : "GetRule",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -257,56 +374,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "s3tableintegration"
+      "Name" : "rule"
+    }, {
+      "Name" : "rule-snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetTelemetryEnrichmentStatus",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "GetTelemetryEvaluationStatus",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "GetTelemetryEvaluationStatusForOrganization",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "GetTelemetryPipeline",
+    "Name" : "GetScope",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -316,14 +393,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "telemetry-pipeline"
+      "Name" : "scope"
+    }, {
+      "Name" : "scope-snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetTelemetryRule",
+    "Name" : "GetTemplate",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -333,31 +412,16 @@
       }
     },
     "Resources" : [ {
-      "Name" : "telemetry-rule"
+      "Name" : "template"
+    }, {
+      "Name" : "template-snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "GetTelemetryRuleForOrganization",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "Resources" : [ {
-      "Name" : "organization-telemetry-rule"
-    } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "ListCentralizationRulesForOrganization",
+    "Name" : "ListAdminAccounts",
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -371,7 +435,38 @@
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "ListDatasetIntegrations",
+    "Name" : "ListAggregateResourceSynchronizationStatuses",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListDeploymentSnapshots",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "deployment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListDeployments",
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -385,11 +480,10 @@
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "ListResourceTelemetry",
-    "ActionConditionKeys" : [ "observabilityadmin:TargetRegions" ],
+    "Name" : "ListPolicies",
     "Annotations" : {
       "Properties" : {
-        "IsList" : false,
+        "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false
@@ -400,11 +494,100 @@
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "ListResourceTelemetryForOrganization",
-    "ActionConditionKeys" : [ "observabilityadmin:TargetRegions" ],
+    "Name" : "ListPolicySnapshots",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "policy"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListResourceAssociations",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "deployment"
+    }, {
+      "Name" : "deployment-snapshot"
+    }, {
+      "Name" : "policy"
+    }, {
+      "Name" : "policy-snapshot"
+    }, {
+      "Name" : "rule"
+    }, {
+      "Name" : "rule-snapshot"
+    }, {
+      "Name" : "scope"
+    }, {
+      "Name" : "scope-snapshot"
+    }, {
+      "Name" : "template"
+    }, {
+      "Name" : "template-snapshot"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListResourceSynchronizationStatuses",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "deployment"
+    }, {
+      "Name" : "deployment-snapshot"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListRuleSnapshots",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "rule"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListRules",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false
@@ -415,7 +598,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "ListS3TableIntegrations",
+    "Name" : "ListScopeSnapshots",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "scope"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListScopes",
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -430,33 +630,59 @@
     }
   }, {
     "Name" : "ListTagsForResource",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
-        "IsList" : true,
+        "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : false
       }
     },
     "Resources" : [ {
-      "Name" : "dataset-integration"
+      "Name" : "deployment"
     }, {
-      "Name" : "organization-centralization-rule"
+      "Name" : "deployment-snapshot"
     }, {
-      "Name" : "organization-telemetry-rule"
+      "Name" : "policy"
     }, {
-      "Name" : "s3tableintegration"
+      "Name" : "policy-snapshot"
     }, {
-      "Name" : "telemetry-pipeline"
+      "Name" : "rule"
     }, {
-      "Name" : "telemetry-rule"
+      "Name" : "rule-snapshot"
+    }, {
+      "Name" : "scope"
+    }, {
+      "Name" : "scope-snapshot"
+    }, {
+      "Name" : "template"
+    }, {
+      "Name" : "template-snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "ListTelemetryPipelines",
+    "Name" : "ListTemplateSnapshots",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "template"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListTemplates",
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -470,107 +696,7 @@
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "ListTelemetryRules",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : true,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "ListTelemetryRulesForOrganization",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : true,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "StartTelemetryEnrichment",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "StartTelemetryEvaluation",
-    "ActionConditionKeys" : [ "observabilityadmin:TargetRegions" ],
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "StartTelemetryEvaluationForOrganization",
-    "ActionConditionKeys" : [ "observabilityadmin:TargetRegions" ],
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "StopTelemetryEnrichment",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "StopTelemetryEvaluation",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : true
-      }
-    },
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "StopTelemetryEvaluationForOrganization",
+    "Name" : "PutAdminAccount",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -585,7 +711,7 @@
     }
   }, {
     "Name" : "TagResource",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -595,39 +721,33 @@
       }
     },
     "Resources" : [ {
-      "Name" : "dataset-integration"
+      "Name" : "deployment"
     }, {
-      "Name" : "organization-centralization-rule"
+      "Name" : "deployment-snapshot"
     }, {
-      "Name" : "organization-telemetry-rule"
+      "Name" : "policy"
     }, {
-      "Name" : "s3tableintegration"
+      "Name" : "policy-snapshot"
     }, {
-      "Name" : "telemetry-pipeline"
+      "Name" : "rule"
     }, {
-      "Name" : "telemetry-rule"
+      "Name" : "rule-snapshot"
+    }, {
+      "Name" : "scope"
+    }, {
+      "Name" : "scope-snapshot"
+    }, {
+      "Name" : "template"
+    }, {
+      "Name" : "template-snapshot"
     } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "TestTelemetryPipeline",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "UntagResource",
-    "ActionConditionKeys" : [ "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -637,25 +757,32 @@
       }
     },
     "Resources" : [ {
-      "Name" : "dataset-integration"
+      "Name" : "deployment"
     }, {
-      "Name" : "organization-centralization-rule"
+      "Name" : "deployment-snapshot"
     }, {
-      "Name" : "organization-telemetry-rule"
+      "Name" : "policy"
     }, {
-      "Name" : "s3tableintegration"
+      "Name" : "policy-snapshot"
     }, {
-      "Name" : "telemetry-pipeline"
+      "Name" : "rule"
     }, {
-      "Name" : "telemetry-rule"
+      "Name" : "rule-snapshot"
+    }, {
+      "Name" : "scope"
+    }, {
+      "Name" : "scope-snapshot"
+    }, {
+      "Name" : "template"
+    }, {
+      "Name" : "template-snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "UpdateCentralizationRuleForOrganization",
-    "ActionConditionKeys" : [ "observabilityadmin:CentralizationBackupRegion", "observabilityadmin:CentralizationDestinationAccount", "observabilityadmin:CentralizationDestinationRegion", "observabilityadmin:CentralizationRuleName", "observabilityadmin:CentralizationSourceId", "observabilityadmin:CentralizationSourceRegions" ],
+    "Name" : "UpdateDeployment",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -665,14 +792,22 @@
       }
     },
     "Resources" : [ {
-      "Name" : "organization-centralization-rule"
+      "Name" : "deployment"
+    }, {
+      "Name" : "policy"
+    }, {
+      "Name" : "policy-snapshot"
+    }, {
+      "Name" : "scope"
+    }, {
+      "Name" : "scope-snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "UpdateDatasetIntegration",
+    "Name" : "UpdatePolicy",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -682,14 +817,22 @@
       }
     },
     "Resources" : [ {
-      "Name" : "dataset-integration"
+      "Name" : "policy"
+    }, {
+      "Name" : "rule"
+    }, {
+      "Name" : "rule-snapshot"
+    }, {
+      "Name" : "template"
+    }, {
+      "Name" : "template-snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "UpdateTelemetryPipeline",
+    "Name" : "UpdateRule",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -699,15 +842,14 @@
       }
     },
     "Resources" : [ {
-      "Name" : "telemetry-pipeline"
+      "Name" : "rule"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "UpdateTelemetryRule",
-    "ActionConditionKeys" : [ "observabilityadmin:TargetRegions" ],
+    "Name" : "UpdateScope",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -717,15 +859,14 @@
       }
     },
     "Resources" : [ {
-      "Name" : "telemetry-rule"
+      "Name" : "scope"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
-    "Name" : "UpdateTelemetryRuleForOrganization",
-    "ActionConditionKeys" : [ "observabilityadmin:TargetRegions" ],
+    "Name" : "UpdateTemplate",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -735,22 +876,12 @@
       }
     },
     "Resources" : [ {
-      "Name" : "organization-telemetry-rule"
+      "Name" : "rule"
+    }, {
+      "Name" : "rule-snapshot"
+    }, {
+      "Name" : "template"
     } ],
-    "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
-    }
-  }, {
-    "Name" : "ValidateTelemetryPipelineConfiguration",
-    "Annotations" : {
-      "Properties" : {
-        "IsList" : false,
-        "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
-        "IsWrite" : false
-      }
-    },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -765,598 +896,583 @@
   }, {
     "Name" : "aws:TagKeys",
     "Types" : [ "ArrayOfString" ]
-  }, {
-    "Name" : "observabilityadmin:CentralizationBackupRegion",
-    "Types" : [ "String" ]
-  }, {
-    "Name" : "observabilityadmin:CentralizationDestinationAccount",
-    "Types" : [ "String" ]
-  }, {
-    "Name" : "observabilityadmin:CentralizationDestinationRegion",
-    "Types" : [ "String" ]
-  }, {
-    "Name" : "observabilityadmin:CentralizationRuleName",
-    "Types" : [ "String" ]
-  }, {
-    "Name" : "observabilityadmin:CentralizationSourceId",
-    "Types" : [ "ArrayOfString" ]
-  }, {
-    "Name" : "observabilityadmin:CentralizationSourceRegions",
-    "Types" : [ "ArrayOfString" ]
-  }, {
-    "Name" : "observabilityadmin:SourceType",
-    "Types" : [ "String" ]
-  }, {
-    "Name" : "observabilityadmin:TargetRegions",
-    "Types" : [ "String" ]
   } ],
   "Operations" : [ {
-    "Name" : "CreateCentralizationRuleForOrganization",
+    "Name" : "CreateDeployment",
     "AuthorizedActions" : [ {
-      "Name" : "CreateCentralizationRuleForOrganization",
-      "Service" : "observabilityadmin"
+      "Name" : "CreateDeployment",
+      "Service" : "network-security-manager"
     }, {
       "Name" : "TagResource",
-      "Service" : "observabilityadmin"
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "create_centralization_rule_for_organization",
+      "Name" : "network-security-manager",
+      "Method" : "create_deployment",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "CreateDatasetIntegration",
+    "Name" : "CreateDeploymentSnapshot",
     "AuthorizedActions" : [ {
-      "Name" : "CreateDatasetIntegration",
-      "Service" : "observabilityadmin"
-    }, {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "logs.amazonaws.com", "test.logs.amazonaws.com" ]
-      },
-      "Service" : "iam"
+      "Name" : "CreateDeploymentSnapshot",
+      "Service" : "network-security-manager"
     }, {
       "Name" : "TagResource",
-      "Service" : "observabilityadmin"
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "create_dataset_integration",
+      "Name" : "network-security-manager",
+      "Method" : "create_deployment_snapshot",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "CreateS3TableIntegration",
+    "Name" : "CreatePolicy",
     "AuthorizedActions" : [ {
-      "Name" : "CreateS3TableIntegration",
-      "Service" : "observabilityadmin"
-    }, {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "logs.amazonaws.com", "test.logs.amazonaws.com" ]
-      },
-      "Service" : "iam"
+      "Name" : "CreatePolicy",
+      "Service" : "network-security-manager"
     }, {
       "Name" : "TagResource",
-      "Service" : "observabilityadmin"
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "create_s3_table_integration",
+      "Name" : "network-security-manager",
+      "Method" : "create_policy",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "CreateTelemetryPipeline",
+    "Name" : "CreatePolicySnapshot",
     "AuthorizedActions" : [ {
-      "Name" : "CreateTelemetryPipeline",
-      "Service" : "observabilityadmin"
-    }, {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "logs.amazonaws.com", "telemetry-pipelines.observabilityadmin.amazonaws.com" ]
-      },
-      "Service" : "iam"
+      "Name" : "CreatePolicySnapshot",
+      "Service" : "network-security-manager"
     }, {
       "Name" : "TagResource",
-      "Service" : "observabilityadmin"
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "create_telemetry_pipeline",
+      "Name" : "network-security-manager",
+      "Method" : "create_policy_snapshot",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "CreateTelemetryRule",
+    "Name" : "CreateRule",
     "AuthorizedActions" : [ {
-      "Name" : "CreateTelemetryRule",
-      "Service" : "observabilityadmin"
+      "Name" : "CreateRule",
+      "Service" : "network-security-manager"
     }, {
       "Name" : "TagResource",
-      "Service" : "observabilityadmin"
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "create_telemetry_rule",
+      "Name" : "network-security-manager",
+      "Method" : "create_rule",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "CreateTelemetryRuleForOrganization",
+    "Name" : "CreateRuleSnapshot",
     "AuthorizedActions" : [ {
-      "Name" : "CreateTelemetryRuleForOrganization",
-      "Service" : "observabilityadmin"
+      "Name" : "CreateRuleSnapshot",
+      "Service" : "network-security-manager"
     }, {
       "Name" : "TagResource",
-      "Service" : "observabilityadmin"
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "create_telemetry_rule_for_organization",
+      "Name" : "network-security-manager",
+      "Method" : "create_rule_snapshot",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "DeleteCentralizationRuleForOrganization",
+    "Name" : "CreateScope",
     "AuthorizedActions" : [ {
-      "Name" : "DeleteCentralizationRuleForOrganization",
-      "Service" : "observabilityadmin"
+      "Name" : "CreateScope",
+      "Service" : "network-security-manager"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "delete_centralization_rule_for_organization",
+      "Name" : "network-security-manager",
+      "Method" : "create_scope",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "DeleteDatasetIntegration",
+    "Name" : "CreateScopeSnapshot",
     "AuthorizedActions" : [ {
-      "Name" : "DeleteDatasetIntegration",
-      "Service" : "observabilityadmin"
+      "Name" : "CreateScopeSnapshot",
+      "Service" : "network-security-manager"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "delete_dataset_integration",
+      "Name" : "network-security-manager",
+      "Method" : "create_scope_snapshot",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "DeleteS3TableIntegration",
+    "Name" : "CreateTemplate",
     "AuthorizedActions" : [ {
-      "Name" : "DeleteS3TableIntegration",
-      "Service" : "observabilityadmin"
+      "Name" : "CreateTemplate",
+      "Service" : "network-security-manager"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "delete_s3_table_integration",
+      "Name" : "network-security-manager",
+      "Method" : "create_template",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "DeleteTelemetryPipeline",
+    "Name" : "CreateTemplateSnapshot",
     "AuthorizedActions" : [ {
-      "Name" : "DeleteTelemetryPipeline",
-      "Service" : "observabilityadmin"
+      "Name" : "CreateTemplateSnapshot",
+      "Service" : "network-security-manager"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "delete_telemetry_pipeline",
+      "Name" : "network-security-manager",
+      "Method" : "create_template_snapshot",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "DeleteTelemetryRule",
+    "Name" : "DeleteAdminAccount",
     "AuthorizedActions" : [ {
-      "Name" : "DeleteTelemetryRule",
-      "Service" : "observabilityadmin"
+      "Name" : "DeleteAdminAccount",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "delete_telemetry_rule",
+      "Name" : "network-security-manager",
+      "Method" : "delete_admin_account",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "DeleteTelemetryRuleForOrganization",
+    "Name" : "DeleteDeployment",
     "AuthorizedActions" : [ {
-      "Name" : "DeleteTelemetryRuleForOrganization",
-      "Service" : "observabilityadmin"
+      "Name" : "DeleteDeployment",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "delete_telemetry_rule_for_organization",
+      "Name" : "network-security-manager",
+      "Method" : "delete_deployment",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "GetCentralizationRuleForOrganization",
+    "Name" : "DeletePolicy",
     "AuthorizedActions" : [ {
-      "Name" : "GetCentralizationRuleForOrganization",
-      "Service" : "observabilityadmin"
+      "Name" : "DeletePolicy",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "get_centralization_rule_for_organization",
+      "Name" : "network-security-manager",
+      "Method" : "delete_policy",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "GetDatasetIntegration",
+    "Name" : "DeleteRule",
     "AuthorizedActions" : [ {
-      "Name" : "GetDatasetIntegration",
-      "Service" : "observabilityadmin"
+      "Name" : "DeleteRule",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "get_dataset_integration",
+      "Name" : "network-security-manager",
+      "Method" : "delete_rule",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "GetS3TableIntegration",
+    "Name" : "DeleteScope",
     "AuthorizedActions" : [ {
-      "Name" : "GetS3TableIntegration",
-      "Service" : "observabilityadmin"
+      "Name" : "DeleteScope",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "get_s3_table_integration",
+      "Name" : "network-security-manager",
+      "Method" : "delete_scope",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "GetTelemetryEnrichmentStatus",
+    "Name" : "DeleteTemplate",
     "AuthorizedActions" : [ {
-      "Name" : "GetTelemetryEnrichmentStatus",
-      "Service" : "observabilityadmin"
+      "Name" : "DeleteTemplate",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "get_telemetry_enrichment_status",
+      "Name" : "network-security-manager",
+      "Method" : "delete_template",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "GetTelemetryEvaluationStatus",
+    "Name" : "GenerateRuleConfiguration",
     "AuthorizedActions" : [ {
-      "Name" : "GetTelemetryEvaluationStatus",
-      "Service" : "observabilityadmin"
+      "Name" : "GenerateRuleConfiguration",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "get_telemetry_evaluation_status",
+      "Name" : "network-security-manager",
+      "Method" : "generate_rule_configuration",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "GetTelemetryEvaluationStatusForOrganization",
+    "Name" : "GetAdminAccount",
     "AuthorizedActions" : [ {
-      "Name" : "GetTelemetryEvaluationStatusForOrganization",
-      "Service" : "observabilityadmin"
+      "Name" : "GetAdminAccount",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "get_telemetry_evaluation_status_for_organization",
+      "Name" : "network-security-manager",
+      "Method" : "get_admin_account",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "GetTelemetryPipeline",
+    "Name" : "GetDeployment",
     "AuthorizedActions" : [ {
-      "Name" : "GetTelemetryPipeline",
-      "Service" : "observabilityadmin"
+      "Name" : "GetDeployment",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "get_telemetry_pipeline",
+      "Name" : "network-security-manager",
+      "Method" : "get_deployment",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "GetTelemetryRule",
+    "Name" : "GetPolicy",
     "AuthorizedActions" : [ {
-      "Name" : "GetTelemetryRule",
-      "Service" : "observabilityadmin"
+      "Name" : "GetPolicy",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "get_telemetry_rule",
+      "Name" : "network-security-manager",
+      "Method" : "get_policy",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "GetTelemetryRuleForOrganization",
+    "Name" : "GetRule",
     "AuthorizedActions" : [ {
-      "Name" : "GetTelemetryRuleForOrganization",
-      "Service" : "observabilityadmin"
+      "Name" : "GetRule",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "get_telemetry_rule_for_organization",
+      "Name" : "network-security-manager",
+      "Method" : "get_rule",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "ListCentralizationRulesForOrganization",
+    "Name" : "GetScope",
     "AuthorizedActions" : [ {
-      "Name" : "ListCentralizationRulesForOrganization",
-      "Service" : "observabilityadmin"
+      "Name" : "GetScope",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "list_centralization_rules_for_organization",
+      "Name" : "network-security-manager",
+      "Method" : "get_scope",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "ListDatasetIntegrations",
+    "Name" : "GetTemplate",
     "AuthorizedActions" : [ {
-      "Name" : "ListDatasetIntegrations",
-      "Service" : "observabilityadmin"
+      "Name" : "GetTemplate",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "list_dataset_integrations",
+      "Name" : "network-security-manager",
+      "Method" : "get_template",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "ListResourceTelemetry",
+    "Name" : "ListAdminAccounts",
     "AuthorizedActions" : [ {
-      "Name" : "ListResourceTelemetry",
-      "Service" : "observabilityadmin"
+      "Name" : "ListAdminAccounts",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "list_resource_telemetry",
+      "Name" : "network-security-manager",
+      "Method" : "list_admin_accounts",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "ListResourceTelemetryForOrganization",
+    "Name" : "ListAggregateResourceSynchronizationStatuses",
     "AuthorizedActions" : [ {
-      "Name" : "ListResourceTelemetryForOrganization",
-      "Service" : "observabilityadmin"
+      "Name" : "ListAggregateResourceSynchronizationStatuses",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "list_resource_telemetry_for_organization",
+      "Name" : "network-security-manager",
+      "Method" : "list_aggregate_resource_synchronization_statuses",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "ListS3TableIntegrations",
+    "Name" : "ListDeploymentSnapshots",
     "AuthorizedActions" : [ {
-      "Name" : "ListS3TableIntegrations",
-      "Service" : "observabilityadmin"
+      "Name" : "ListDeploymentSnapshots",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "list_s3_table_integrations",
+      "Name" : "network-security-manager",
+      "Method" : "list_deployment_snapshots",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListDeployments",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDeployments",
+      "Service" : "network-security-manager"
+    } ],
+    "SDK" : [ {
+      "Name" : "network-security-manager",
+      "Method" : "list_deployments",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListPolicies",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPolicies",
+      "Service" : "network-security-manager"
+    } ],
+    "SDK" : [ {
+      "Name" : "network-security-manager",
+      "Method" : "list_policies",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListPolicySnapshots",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPolicySnapshots",
+      "Service" : "network-security-manager"
+    } ],
+    "SDK" : [ {
+      "Name" : "network-security-manager",
+      "Method" : "list_policy_snapshots",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListResourceAssociations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListResourceAssociations",
+      "Service" : "network-security-manager"
+    } ],
+    "SDK" : [ {
+      "Name" : "network-security-manager",
+      "Method" : "list_resource_associations",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListResourceSynchronizationStatuses",
+    "AuthorizedActions" : [ {
+      "Name" : "ListResourceSynchronizationStatuses",
+      "Service" : "network-security-manager"
+    } ],
+    "SDK" : [ {
+      "Name" : "network-security-manager",
+      "Method" : "list_resource_synchronization_statuses",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListRuleSnapshots",
+    "AuthorizedActions" : [ {
+      "Name" : "ListRuleSnapshots",
+      "Service" : "network-security-manager"
+    } ],
+    "SDK" : [ {
+      "Name" : "network-security-manager",
+      "Method" : "list_rule_snapshots",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListRules",
+    "AuthorizedActions" : [ {
+      "Name" : "ListRules",
+      "Service" : "network-security-manager"
+    } ],
+    "SDK" : [ {
+      "Name" : "network-security-manager",
+      "Method" : "list_rules",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListScopeSnapshots",
+    "AuthorizedActions" : [ {
+      "Name" : "ListScopeSnapshots",
+      "Service" : "network-security-manager"
+    } ],
+    "SDK" : [ {
+      "Name" : "network-security-manager",
+      "Method" : "list_scope_snapshots",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListScopes",
+    "AuthorizedActions" : [ {
+      "Name" : "ListScopes",
+      "Service" : "network-security-manager"
+    } ],
+    "SDK" : [ {
+      "Name" : "network-security-manager",
+      "Method" : "list_scopes",
       "Package" : "Boto3"
     } ]
   }, {
     "Name" : "ListTagsForResource",
     "AuthorizedActions" : [ {
       "Name" : "ListTagsForResource",
-      "Service" : "observabilityadmin"
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
+      "Name" : "network-security-manager",
       "Method" : "list_tags_for_resource",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "ListTelemetryPipelines",
+    "Name" : "ListTemplateSnapshots",
     "AuthorizedActions" : [ {
-      "Name" : "ListTelemetryPipelines",
-      "Service" : "observabilityadmin"
+      "Name" : "ListTemplateSnapshots",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "list_telemetry_pipelines",
+      "Name" : "network-security-manager",
+      "Method" : "list_template_snapshots",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "ListTelemetryRules",
+    "Name" : "ListTemplates",
     "AuthorizedActions" : [ {
-      "Name" : "ListTelemetryRules",
-      "Service" : "observabilityadmin"
+      "Name" : "ListTemplates",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "list_telemetry_rules",
+      "Name" : "network-security-manager",
+      "Method" : "list_templates",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "ListTelemetryRulesForOrganization",
+    "Name" : "PutAdminAccount",
     "AuthorizedActions" : [ {
-      "Name" : "ListTelemetryRulesForOrganization",
-      "Service" : "observabilityadmin"
+      "Name" : "PutAdminAccount",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "list_telemetry_rules_for_organization",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "StartTelemetryEnrichment",
-    "AuthorizedActions" : [ {
-      "Name" : "StartTelemetryEnrichment",
-      "Service" : "observabilityadmin"
-    } ],
-    "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "start_telemetry_enrichment",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "StartTelemetryEvaluation",
-    "AuthorizedActions" : [ {
-      "Name" : "StartTelemetryEvaluation",
-      "Service" : "observabilityadmin"
-    } ],
-    "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "start_telemetry_evaluation",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "StartTelemetryEvaluationForOrganization",
-    "AuthorizedActions" : [ {
-      "Name" : "StartTelemetryEvaluationForOrganization",
-      "Service" : "observabilityadmin"
-    } ],
-    "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "start_telemetry_evaluation_for_organization",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "StopTelemetryEnrichment",
-    "AuthorizedActions" : [ {
-      "Name" : "StopTelemetryEnrichment",
-      "Service" : "observabilityadmin"
-    } ],
-    "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "stop_telemetry_enrichment",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "StopTelemetryEvaluation",
-    "AuthorizedActions" : [ {
-      "Name" : "StopTelemetryEvaluation",
-      "Service" : "observabilityadmin"
-    } ],
-    "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "stop_telemetry_evaluation",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "StopTelemetryEvaluationForOrganization",
-    "AuthorizedActions" : [ {
-      "Name" : "StopTelemetryEvaluationForOrganization",
-      "Service" : "observabilityadmin"
-    } ],
-    "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "stop_telemetry_evaluation_for_organization",
+      "Name" : "network-security-manager",
+      "Method" : "put_admin_account",
       "Package" : "Boto3"
     } ]
   }, {
     "Name" : "TagResource",
     "AuthorizedActions" : [ {
       "Name" : "TagResource",
-      "Service" : "observabilityadmin"
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
+      "Name" : "network-security-manager",
       "Method" : "tag_resource",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "TestTelemetryPipeline",
-    "AuthorizedActions" : [ {
-      "Name" : "TestTelemetryPipeline",
-      "Service" : "observabilityadmin"
-    } ],
-    "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "test_telemetry_pipeline",
       "Package" : "Boto3"
     } ]
   }, {
     "Name" : "UntagResource",
     "AuthorizedActions" : [ {
       "Name" : "UntagResource",
-      "Service" : "observabilityadmin"
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
+      "Name" : "network-security-manager",
       "Method" : "untag_resource",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "UpdateCentralizationRuleForOrganization",
+    "Name" : "UpdateDeployment",
     "AuthorizedActions" : [ {
-      "Name" : "UpdateCentralizationRuleForOrganization",
-      "Service" : "observabilityadmin"
+      "Name" : "UpdateDeployment",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "update_centralization_rule_for_organization",
+      "Name" : "network-security-manager",
+      "Method" : "update_deployment",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "UpdateDatasetIntegration",
+    "Name" : "UpdatePolicy",
     "AuthorizedActions" : [ {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "logs.amazonaws.com", "test.logs.amazonaws.com" ]
-      },
-      "Service" : "iam"
-    }, {
-      "Name" : "UpdateDatasetIntegration",
-      "Service" : "observabilityadmin"
+      "Name" : "UpdatePolicy",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "update_dataset_integration",
+      "Name" : "network-security-manager",
+      "Method" : "update_policy",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "UpdateTelemetryPipeline",
+    "Name" : "UpdateRule",
     "AuthorizedActions" : [ {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "logs.amazonaws.com", "telemetry-pipelines.observabilityadmin.amazonaws.com" ]
-      },
-      "Service" : "iam"
-    }, {
-      "Name" : "UpdateTelemetryPipeline",
-      "Service" : "observabilityadmin"
+      "Name" : "UpdateRule",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "update_telemetry_pipeline",
+      "Name" : "network-security-manager",
+      "Method" : "update_rule",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "UpdateTelemetryRule",
+    "Name" : "UpdateScope",
     "AuthorizedActions" : [ {
-      "Name" : "UpdateTelemetryRule",
-      "Service" : "observabilityadmin"
+      "Name" : "UpdateScope",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "update_telemetry_rule",
+      "Name" : "network-security-manager",
+      "Method" : "update_scope",
       "Package" : "Boto3"
     } ]
   }, {
-    "Name" : "UpdateTelemetryRuleForOrganization",
+    "Name" : "UpdateTemplate",
     "AuthorizedActions" : [ {
-      "Name" : "UpdateTelemetryRuleForOrganization",
-      "Service" : "observabilityadmin"
+      "Name" : "UpdateTemplate",
+      "Service" : "network-security-manager"
     } ],
     "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "update_telemetry_rule_for_organization",
-      "Package" : "Boto3"
-    } ]
-  }, {
-    "Name" : "ValidateTelemetryPipelineConfiguration",
-    "AuthorizedActions" : [ {
-      "Name" : "ValidateTelemetryPipelineConfiguration",
-      "Service" : "observabilityadmin"
-    } ],
-    "SDK" : [ {
-      "Name" : "observabilityadmin",
-      "Method" : "validate_telemetry_pipeline_configuration",
+      "Name" : "network-security-manager",
+      "Method" : "update_template",
       "Package" : "Boto3"
     } ]
   } ],
   "Resources" : [ {
-    "Name" : "dataset-integration",
-    "ARNFormats" : [ "arn:${Partition}:observabilityadmin:${Region}:${Account}:dataset-integration/${DatasetIntegrationIdentifier}" ],
+    "Name" : "deployment",
+    "ARNFormats" : [ "arn:${Partition}:network-security-manager:${Region}:${Account}:deployment:${DeploymentId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
-    "Name" : "organization-centralization-rule",
-    "ARNFormats" : [ "arn:${Partition}:observabilityadmin:${Region}:${Account}:organization-centralization-rule/${CentralizationRuleName}" ],
+    "Name" : "deployment-snapshot",
+    "ARNFormats" : [ "arn:${Partition}:network-security-manager:${Region}:${Account}:deployment:${DeploymentId}:${VersionNumber}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
-    "Name" : "organization-telemetry-rule",
-    "ARNFormats" : [ "arn:${Partition}:observabilityadmin:${Region}:${Account}:organization-telemetry-rule/${TelemetryRuleName}" ],
+    "Name" : "policy",
+    "ARNFormats" : [ "arn:${Partition}:network-security-manager:${Region}:${Account}:policy:${PolicyId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
-    "Name" : "s3tableintegration",
-    "ARNFormats" : [ "arn:${Partition}:observabilityadmin:${Region}:${Account}:s3tableintegration/${S3TableIntegrationIdentifier}" ],
+    "Name" : "policy-snapshot",
+    "ARNFormats" : [ "arn:${Partition}:network-security-manager:${Region}:${Account}:policy:${PolicyId}:${VersionNumber}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
-    "Name" : "telemetry-pipeline",
-    "ARNFormats" : [ "arn:${Partition}:observabilityadmin:${Region}:${Account}:telemetry-pipeline/${TelemetryPipelineIdentifier}" ],
+    "Name" : "rule",
+    "ARNFormats" : [ "arn:${Partition}:network-security-manager:${Region}:${Account}:rule:${RuleId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
-    "Name" : "telemetry-rule",
-    "ARNFormats" : [ "arn:${Partition}:observabilityadmin:${Region}:${Account}:telemetry-rule/${TelemetryRuleName}" ],
+    "Name" : "rule-snapshot",
+    "ARNFormats" : [ "arn:${Partition}:network-security-manager:${Region}:${Account}:rule:${RuleId}:${VersionNumber}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "scope",
+    "ARNFormats" : [ "arn:${Partition}:network-security-manager:${Region}:${Account}:scope:${ScopeId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "scope-snapshot",
+    "ARNFormats" : [ "arn:${Partition}:network-security-manager:${Region}:${Account}:scope:${ScopeId}:${VersionNumber}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "template",
+    "ARNFormats" : [ "arn:${Partition}:network-security-manager:${Region}:${Account}:template:${TemplateId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "template-snapshot",
+    "ARNFormats" : [ "arn:${Partition}:network-security-manager:${Region}:${Account}:template:${TemplateId}:${VersionNumber}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.4"

@@ -29,6 +29,8 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
+    }, {
+      "Name" : "subscriber"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -141,10 +143,32 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
+    }, {
+      "Name" : "event-busv2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "CreateEventSource",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "events:source" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "event-busv2"
+    }, {
+      "Name" : "event-sourcev2"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "CreatePartnerEventSource",
@@ -162,6 +186,26 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "CreateSubscriber",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "events:ContentFilterPresent", "events:Metadata/${MetadataKey}", "events:Metadata/${MetadataKey}/Matcher" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "event-busv2"
+    }, {
+      "Name" : "subscriber"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeactivateEventSource",
@@ -277,10 +321,29 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
+    }, {
+      "Name" : "event-busv2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteEventSource",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "event-sourcev2"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeletePartnerEventSource",
@@ -298,6 +361,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteResourcePolicy",
+    "ActionConditionKeys" : [ "events:PolicyName" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "event-busv2"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteRule",
@@ -318,6 +399,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteSubscriber",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "subscriber"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DescribeApiDestination",
@@ -401,6 +499,8 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
+    }, {
+      "Name" : "event-busv2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -418,6 +518,8 @@
     },
     "Resources" : [ {
       "Name" : "event-source"
+    }, {
+      "Name" : "event-sourcev2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -478,6 +580,23 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DescribeSubscriber",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "subscriber"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DisableRule",
     "ActionConditionKeys" : [ "events:ManagedBy", "events:creatorAccount" ],
     "Annotations" : {
@@ -516,6 +635,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetResourcePolicy",
+    "ActionConditionKeys" : [ "events:PolicyName" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "event-busv2"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "InvokeApiDestination",
@@ -664,6 +801,23 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListResourcePolicies",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "event-busv2"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListRuleNamesByTarget",
     "Annotations" : {
       "Properties" : {
@@ -692,6 +846,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListSubscribers",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListTagsForResource",
     "ActionConditionKeys" : [ "events:creatorAccount" ],
     "Annotations" : {
@@ -705,9 +873,15 @@
     "Resources" : [ {
       "Name" : "event-bus"
     }, {
+      "Name" : "event-busv2"
+    }, {
+      "Name" : "event-sourcev2"
+    }, {
       "Name" : "rule-on-custom-event-bus"
     }, {
       "Name" : "rule-on-default-event-bus"
+    }, {
+      "Name" : "subscriber"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -735,7 +909,7 @@
     }
   }, {
     "Name" : "PutEvents",
-    "ActionConditionKeys" : [ "events:detail-type", "events:eventBusInvocation", "events:source" ],
+    "ActionConditionKeys" : [ "events:SystemMetadata/AwsDetailType", "events:SystemMetadata/AwsSource", "events:SystemMetadata/ContentType", "events:detail-type", "events:eventBusInvocation", "events:source" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -746,6 +920,8 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
+    }, {
+      "Name" : "event-busv2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -778,6 +954,42 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "PutRawEvents",
+    "ActionConditionKeys" : [ "events:Metadata/${MetadataKey}", "events:SystemMetadata/AwsDetailType", "events:SystemMetadata/AwsSource", "events:SystemMetadata/ContentType", "events:eventBusInvocation" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "event-busv2"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutResourcePolicy",
+    "ActionConditionKeys" : [ "events:PolicyName" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "event-busv2"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "PutRule",
@@ -871,6 +1083,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "RevokeResource",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "event-busv2"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StartReplay",
     "Annotations" : {
       "Properties" : {
@@ -905,9 +1134,15 @@
     "Resources" : [ {
       "Name" : "event-bus"
     }, {
+      "Name" : "event-busv2"
+    }, {
+      "Name" : "event-sourcev2"
+    }, {
       "Name" : "rule-on-custom-event-bus"
     }, {
       "Name" : "rule-on-default-event-bus"
+    }, {
+      "Name" : "subscriber"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -941,9 +1176,15 @@
     "Resources" : [ {
       "Name" : "event-bus"
     }, {
+      "Name" : "event-busv2"
+    }, {
+      "Name" : "event-sourcev2"
+    }, {
       "Name" : "rule-on-custom-event-bus"
     }, {
       "Name" : "rule-on-default-event-bus"
+    }, {
+      "Name" : "subscriber"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1034,10 +1275,52 @@
     },
     "Resources" : [ {
       "Name" : "event-bus"
+    }, {
+      "Name" : "event-busv2"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "UpdateEventSource",
+    "ActionConditionKeys" : [ "events:source" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "event-busv2"
+    }, {
+      "Name" : "event-sourcev2"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateSubscriber",
+    "ActionConditionKeys" : [ "events:ContentFilterPresent", "events:Metadata/${MetadataKey}", "events:Metadata/${MetadataKey}/Matcher" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "event-busv2"
+    }, {
+      "Name" : "subscriber"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   } ],
   "ConditionKeys" : [ {
@@ -1050,10 +1333,31 @@
     "Name" : "aws:TagKeys",
     "Types" : [ "ArrayOfString" ]
   }, {
+    "Name" : "events:ContentFilterPresent",
+    "Types" : [ "Bool" ]
+  }, {
     "Name" : "events:EventBusArn",
     "Types" : [ "ArrayOfARN" ]
   }, {
     "Name" : "events:ManagedBy",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "events:Metadata/${MetadataKey}",
+    "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "events:Metadata/${MetadataKey}/Matcher",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "events:PolicyName",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "events:SystemMetadata/AwsDetailType",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "events:SystemMetadata/AwsSource",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "events:SystemMetadata/ContentType",
     "Types" : [ "String" ]
   }, {
     "Name" : "events:TargetArn",
@@ -1162,8 +1466,26 @@
       "Service" : "events"
     } ],
     "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "create_event_bus",
+      "Package" : "Boto3"
+    }, {
       "Name" : "events",
       "Method" : "create_event_bus",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateEventSource",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateEventSource",
+      "Service" : "events"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "events"
+    } ],
+    "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "create_event_source",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1175,6 +1497,26 @@
     "SDK" : [ {
       "Name" : "events",
       "Method" : "create_partner_event_source",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateSubscriber",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateSubscriber",
+      "Service" : "events"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "events.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "events"
+    } ],
+    "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "create_subscriber",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1250,8 +1592,23 @@
       "Service" : "events"
     } ],
     "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "delete_event_bus",
+      "Package" : "Boto3"
+    }, {
       "Name" : "events",
       "Method" : "delete_event_bus",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteEventSource",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteEventSource",
+      "Service" : "events"
+    } ],
+    "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "delete_event_source",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1266,6 +1623,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteResourcePolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteResourcePolicy",
+      "Service" : "events"
+    } ],
+    "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "delete_resource_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteRule",
     "AuthorizedActions" : [ {
       "Name" : "DeleteRule",
@@ -1274,6 +1642,17 @@
     "SDK" : [ {
       "Name" : "events",
       "Method" : "delete_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteSubscriber",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteSubscriber",
+      "Service" : "events"
+    } ],
+    "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "delete_subscriber",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1327,6 +1706,10 @@
       "Service" : "events"
     } ],
     "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "describe_event_bus",
+      "Package" : "Boto3"
+    }, {
       "Name" : "events",
       "Method" : "describe_event_bus",
       "Package" : "Boto3"
@@ -1338,6 +1721,10 @@
       "Service" : "events"
     } ],
     "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "describe_event_source",
+      "Package" : "Boto3"
+    }, {
       "Name" : "events",
       "Method" : "describe_event_source",
       "Package" : "Boto3"
@@ -1376,6 +1763,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeSubscriber",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeSubscriber",
+      "Service" : "events"
+    } ],
+    "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "describe_subscriber",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DisableRule",
     "AuthorizedActions" : [ {
       "Name" : "DisableRule",
@@ -1395,6 +1793,17 @@
     "SDK" : [ {
       "Name" : "events",
       "Method" : "enable_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetResourcePolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "GetResourcePolicy",
+      "Service" : "events"
+    } ],
+    "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "get_resource_policy",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1448,6 +1857,10 @@
       "Service" : "events"
     } ],
     "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "list_event_buses",
+      "Package" : "Boto3"
+    }, {
       "Name" : "events",
       "Method" : "list_event_buses",
       "Package" : "Boto3"
@@ -1459,6 +1872,10 @@
       "Service" : "events"
     } ],
     "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "list_event_sources",
+      "Package" : "Boto3"
+    }, {
       "Name" : "events",
       "Method" : "list_event_sources",
       "Package" : "Boto3"
@@ -1497,6 +1914,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListResourcePolicies",
+    "AuthorizedActions" : [ {
+      "Name" : "ListResourcePolicies",
+      "Service" : "events"
+    } ],
+    "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "list_resource_policies",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListRuleNamesByTarget",
     "AuthorizedActions" : [ {
       "Name" : "ListRuleNamesByTarget",
@@ -1519,12 +1947,27 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListSubscribers",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSubscribers",
+      "Service" : "events"
+    } ],
+    "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "list_subscribers",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListTagsForResource",
     "AuthorizedActions" : [ {
       "Name" : "ListTagsForResource",
       "Service" : "events"
     } ],
     "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "list_tags_for_resource",
+      "Package" : "Boto3"
+    }, {
       "Name" : "events",
       "Method" : "list_tags_for_resource",
       "Package" : "Boto3"
@@ -1547,6 +1990,10 @@
       "Service" : "events"
     } ],
     "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "put_events",
+      "Package" : "Boto3"
+    }, {
       "Name" : "events",
       "Method" : "put_events",
       "Package" : "Boto3"
@@ -1571,6 +2018,28 @@
     "SDK" : [ {
       "Name" : "events",
       "Method" : "put_permission",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutRawEvents",
+    "AuthorizedActions" : [ {
+      "Name" : "PutRawEvents",
+      "Service" : "events"
+    } ],
+    "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "put_raw_events",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutResourcePolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "PutResourcePolicy",
+      "Service" : "events"
+    } ],
+    "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "put_resource_policy",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1633,6 +2102,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "RevokeResource",
+    "AuthorizedActions" : [ {
+      "Name" : "RevokeResource",
+      "Service" : "events"
+    } ],
+    "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "revoke_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StartReplay",
     "AuthorizedActions" : [ {
       "Name" : "StartReplay",
@@ -1650,6 +2130,10 @@
       "Service" : "events"
     } ],
     "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "tag_resource",
+      "Package" : "Boto3"
+    }, {
       "Name" : "events",
       "Method" : "tag_resource",
       "Package" : "Boto3"
@@ -1672,6 +2156,10 @@
       "Service" : "events"
     } ],
     "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "untag_resource",
+      "Package" : "Boto3"
+    }, {
       "Name" : "events",
       "Method" : "untag_resource",
       "Package" : "Boto3"
@@ -1733,8 +2221,40 @@
       "Service" : "events"
     } ],
     "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "update_event_bus",
+      "Package" : "Boto3"
+    }, {
       "Name" : "events",
       "Method" : "update_event_bus",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateEventSource",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateEventSource",
+      "Service" : "events"
+    } ],
+    "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "update_event_source",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateSubscriber",
+    "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "events.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "UpdateSubscriber",
+      "Service" : "events"
+    } ],
+    "SDK" : [ {
+      "Name" : "eventbridgev2",
+      "Method" : "update_subscriber",
       "Package" : "Boto3"
     } ]
   } ],
@@ -1761,8 +2281,16 @@
     "ARNFormats" : [ "arn:${Partition}:events:${Region}:${Account}:event-bus/${EventBusName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
+    "Name" : "event-busv2",
+    "ARNFormats" : [ "arn:${Partition}:events:${Region}:${Account}:event-busv2/${EventBusName}/${OpaqueId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "event-source",
     "ARNFormats" : [ "arn:${Partition}:events:${Region}::event-source/${EventSourceName}" ]
+  }, {
+    "Name" : "event-sourcev2",
+    "ARNFormats" : [ "arn:${Partition}:events:${Region}:${Account}:event-sourcev2/${SourceType}/${EventSourceName}/${OpaqueId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "key",
     "ARNFormats" : [ "arn:${Partition}:kms:${Region}:${Account}:key/${KeyId}" ]
@@ -1783,6 +2311,10 @@
   }, {
     "Name" : "stop-instance",
     "ARNFormats" : [ "arn:${Partition}:events:${Region}:${Account}:target/stop-instance" ]
+  }, {
+    "Name" : "subscriber",
+    "ARNFormats" : [ "arn:${Partition}:events:${Region}:${Account}:subscriber/${SubscriberName}/${OpaqueId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "terminate-instance",
     "ARNFormats" : [ "arn:${Partition}:events:${Region}:${Account}:target/terminate-instance" ]

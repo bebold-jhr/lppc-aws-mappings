@@ -177,6 +177,7 @@
     }
   }, {
     "Name" : "CreateMultipartReadSetUpload",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1491,6 +1492,7 @@
     }
   }, {
     "Name" : "StartReadSetImportJob",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1508,6 +1510,7 @@
     }
   }, {
     "Name" : "StartReferenceImportJob",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,

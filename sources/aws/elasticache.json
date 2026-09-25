@@ -14,6 +14,8 @@
     "Resources" : [ {
       "Name" : "cluster"
     }, {
+      "Name" : "globalreplicationgroup"
+    }, {
       "Name" : "parametergroup"
     }, {
       "Name" : "replicationgroup"
@@ -271,7 +273,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "globalreplicationgroup"
+      "Name" : "globalreplicationgroup",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     }, {
       "Name" : "replicationgroup"
     } ],
@@ -427,7 +430,7 @@
     }
   }, {
     "Name" : "DecreaseNodeGroupsInGlobalReplicationGroup",
-    "ActionConditionKeys" : [ "elasticache:NumNodeGroups" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "elasticache:NumNodeGroups" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -537,6 +540,7 @@
     }
   }, {
     "Name" : "DeleteGlobalReplicationGroup",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -798,6 +802,7 @@
     }
   }, {
     "Name" : "DescribeGlobalReplicationGroups",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -992,6 +997,7 @@
     }
   }, {
     "Name" : "DisassociateGlobalReplicationGroup",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1027,6 +1033,7 @@
     }
   }, {
     "Name" : "FailoverGlobalReplicationGroup",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1044,7 +1051,7 @@
     }
   }, {
     "Name" : "IncreaseNodeGroupsInGlobalReplicationGroup",
-    "ActionConditionKeys" : [ "elasticache:NumNodeGroups" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "elasticache:NumNodeGroups" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1215,7 +1222,7 @@
     }
   }, {
     "Name" : "ModifyGlobalReplicationGroup",
-    "ActionConditionKeys" : [ "elasticache:AutomaticFailoverEnabled", "elasticache:CacheNodeType", "elasticache:EngineVersion" ],
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "elasticache:AutomaticFailoverEnabled", "elasticache:CacheNodeType", "elasticache:EngineVersion" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1353,6 +1360,7 @@
     }
   }, {
     "Name" : "RebalanceSlotsInGlobalReplicationGroup",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1399,6 +1407,8 @@
     },
     "Resources" : [ {
       "Name" : "cluster"
+    }, {
+      "Name" : "globalreplicationgroup"
     }, {
       "Name" : "parametergroup"
     }, {
@@ -1730,6 +1740,9 @@
   }, {
     "Name" : "CreateGlobalReplicationGroup",
     "AuthorizedActions" : [ {
+      "Name" : "AddTagsToResource",
+      "Service" : "elasticache"
+    }, {
       "Name" : "CreateGlobalReplicationGroup",
       "Service" : "elasticache"
     } ],
@@ -2469,7 +2482,7 @@
   }, {
     "Name" : "globalreplicationgroup",
     "ARNFormats" : [ "arn:${Partition}:elasticache::${Account}:globalreplicationgroup:${GlobalReplicationGroupId}" ],
-    "ConditionKeys" : [ "elasticache:AtRestEncryptionEnabled", "elasticache:AuthTokenEnabled", "elasticache:AutomaticFailoverEnabled", "elasticache:CacheNodeType", "elasticache:CacheParameterGroupName", "elasticache:ClusterModeEnabled", "elasticache:EngineType", "elasticache:EngineVersion", "elasticache:KmsKeyId", "elasticache:MultiAZEnabled", "elasticache:NumNodeGroups", "elasticache:ReplicasPerNodeGroup", "elasticache:SnapshotRetentionLimit", "elasticache:TransitEncryptionEnabled" ]
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "elasticache:AtRestEncryptionEnabled", "elasticache:AuthTokenEnabled", "elasticache:AutomaticFailoverEnabled", "elasticache:CacheNodeType", "elasticache:CacheParameterGroupName", "elasticache:ClusterModeEnabled", "elasticache:EngineType", "elasticache:EngineVersion", "elasticache:KmsKeyId", "elasticache:MultiAZEnabled", "elasticache:NumNodeGroups", "elasticache:ReplicasPerNodeGroup", "elasticache:SnapshotRetentionLimit", "elasticache:TransitEncryptionEnabled" ]
   }, {
     "Name" : "parametergroup",
     "ARNFormats" : [ "arn:${Partition}:elasticache:${Region}:${Account}:parametergroup:${CacheParameterGroupName}" ],

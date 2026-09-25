@@ -1,6 +1,21 @@
 {
   "Name" : "cloudwatch",
   "Actions" : [ {
+    "Name" : "AssumeAccessProfile",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "BatchGetServiceLevelIndicatorReport",
     "Annotations" : {
       "Properties" : {
@@ -46,6 +61,167 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateAccessGrant",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateAccessProfile",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateAlert",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateDomain",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateDomainAccessGrantForOrganization",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateDomainForOrganization",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateIngestionEndpoint",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateIntegration",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateOmniDashboard",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateOmniThread",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateOneTimeDeepLinkCode",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateServiceLevelObjective",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -56,6 +232,71 @@
         "IsWrite" : true
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateSpace",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateView",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteAccessGrant",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "access-grant"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteAccessProfile",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "access-profile"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -95,6 +336,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DeleteAlert",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "alert"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteAnomalyDetector",
     "Annotations" : {
       "Properties" : {
@@ -126,6 +385,75 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DeleteDomain",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domain"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteDomainAccessGrantForOrganization",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "organization-access-grant"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteDomainForOrganization",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "organization-domain"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteIngestionEndpoint",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ingestion-endpoint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteInsightRules",
     "Annotations" : {
       "Properties" : {
@@ -143,6 +471,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DeleteIntegration",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "integration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteMetricStream",
     "Annotations" : {
       "Properties" : {
@@ -158,6 +504,39 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteOmniDashboard",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "omni-dashboard"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteOmniThread",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeletePipelineRule",
@@ -188,6 +567,41 @@
     },
     "Resources" : [ {
       "Name" : "slo"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteSpace",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "space"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteView",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "view"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -380,6 +794,56 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetAccessGrant",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "access-grant"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetAccessProfile",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "access-profile"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetAgentGraph",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetAlarmMuteRule",
     "Annotations" : {
       "Properties" : {
@@ -395,6 +859,39 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetAlert",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "alert"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetContextGraph",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "GetDashboard",
@@ -432,6 +929,76 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetDomain",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domain"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetDomainAccessGrantForOrganization",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "organization-access-grant"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetDomainForOrganization",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "organization-domain"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetIngestionEndpoint",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ingestion-endpoint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetInsightRuleReport",
     "Annotations" : {
       "Properties" : {
@@ -449,7 +1016,41 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetIntegration",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "integration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetIntelligenceConfiguration",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetMetricData",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -526,6 +1127,69 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetOmniDashboard",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "omni-dashboard"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetOmniThread",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetPreferences",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetRecords",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetService",
     "Annotations" : {
       "Properties" : {
@@ -577,6 +1241,67 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetSpace",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "space"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetSpaceCredentials",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetSpaceCredentialsForOrganization",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetTelemetryQueryResults",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetTopologyDiscoveryStatus",
     "Annotations" : {
       "Properties" : {
@@ -605,6 +1330,39 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetView",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "view"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "InvokeIntegration",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "Link",
     "Annotations" : {
       "Properties" : {
@@ -612,6 +1370,36 @@
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAccessGrants",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAccessProfiles",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
       }
     },
     "SupportedBy" : {
@@ -636,6 +1424,36 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListAlertContributors",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAlerts",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListDashboards",
     "Annotations" : {
       "Properties" : {
@@ -650,7 +1468,65 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListDomainAccessGrantsForOrganization",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListDomains",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListEntitiesForMetric",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListIngestionEndpoints",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListIntegrations",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -694,6 +1570,7 @@
     }
   }, {
     "Name" : "ListMetrics",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -706,6 +1583,36 @@
       "Name" : "dataset",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListOmniDashboards",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListOmniThreads",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -739,7 +1646,53 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListSpaceAccess",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListSpaces",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListSpacesForOrganization",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListTagsForResource",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -773,6 +1726,51 @@
       "Name" : "slo",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListTelemetryFields",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListTelemetryQuerySessions",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListViews",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -864,6 +1862,21 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "PutIntelligenceConfiguration",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "PutLogAlarm",
@@ -974,6 +1987,35 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "QueryTraces",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "SearchPrincipals",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "SetAlarmState",
     "Annotations" : {
       "Properties" : {
@@ -1022,6 +2064,51 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StartOmniThreadSession",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StartTelemetryQuery",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StartTelemetryQuerySession",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StopMetricStreams",
     "Annotations" : {
       "Properties" : {
@@ -1053,8 +2140,53 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StopTelemetryQuery",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StopTelemetryQuerySession",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "SubmitFeedback",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "TagResource",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "cloudwatch:HasAccessGrant" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1094,7 +2226,7 @@
     }
   }, {
     "Name" : "UntagResource",
-    "ActionConditionKeys" : [ "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:TagKeys", "cloudwatch:HasAccessGrant" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1133,6 +2265,159 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateAccessProfile",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "access-profile"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateAlert",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "alert"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateDomain",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "domain"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateDomainForOrganization",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "organization-domain"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateIngestionEndpoint",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "ingestion-endpoint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateIntegration",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "integration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateOmniDashboard",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "omni-dashboard"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateOmniThread",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdatePreferences",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateServiceLevelObjective",
     "Annotations" : {
       "Properties" : {
@@ -1144,6 +2429,42 @@
     },
     "Resources" : [ {
       "Name" : "slo"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateSpace",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "space"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateView",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "view"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1163,6 +2484,9 @@
     "Name" : "cloudwatch:AlarmActions",
     "Types" : [ "ArrayOfString" ]
   }, {
+    "Name" : "cloudwatch:HasAccessGrant",
+    "Types" : [ "String" ]
+  }, {
     "Name" : "cloudwatch:namespace",
     "Types" : [ "String" ]
   }, {
@@ -1177,6 +2501,198 @@
     "SDK" : [ {
       "Name" : "cloudwatch",
       "Method" : "associate_dataset_kms_key",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateAccessGrant",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAccessGrant",
+      "Service" : "cloudwatch"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "create_access_grant",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateAccessProfile",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAccessProfile",
+      "Service" : "cloudwatch"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "create_access_profile",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateAlert",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAlert",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "create_alert",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateDomain",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateDomain",
+      "Service" : "cloudwatch"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "create_domain",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateDomainAccessGrantForOrganization",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateDomainAccessGrantForOrganization",
+      "Service" : "cloudwatch"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "create_domain_access_grant_for_organization",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateDomainForOrganization",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateDomainForOrganization",
+      "Service" : "cloudwatch"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "cloudwatch.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "create_domain_for_organization",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateIntegration",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateIntegration",
+      "Service" : "cloudwatch"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "cloudwatch.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "create_integration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateOmniDashboard",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateOmniDashboard",
+      "Service" : "cloudwatch"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "create_omni_dashboard",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateOneTimeDeepLinkCode",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateOneTimeDeepLinkCode",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "create_one_time_deep_link_code",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateResourceMetricsConfiguration",
+    "SDK" : [ {
+      "Name" : "cloudwatch",
+      "Method" : "create_resource_metrics_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateSpace",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateSpace",
+      "Service" : "cloudwatch"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "cloudwatch.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "create_space",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateView",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateView",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "create_view",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteAccessGrant",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAccessGrant",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "delete_access_grant",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteAccessProfile",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAccessProfile",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "delete_access_profile",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1202,6 +2718,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteAlert",
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "delete_alert",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteAnomalyDetector",
     "AuthorizedActions" : [ {
       "Name" : "DeleteAnomalyDetector",
@@ -1224,6 +2747,39 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteDomain",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteDomain",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "delete_domain",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteDomainAccessGrantForOrganization",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteDomainAccessGrantForOrganization",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "delete_domain_access_grant_for_organization",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteDomainForOrganization",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteDomainForOrganization",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "delete_domain_for_organization",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteInsightRules",
     "AuthorizedActions" : [ {
       "Name" : "DeleteInsightRules",
@@ -1235,6 +2791,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteIntegration",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteIntegration",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "delete_integration",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteMetricStream",
     "AuthorizedActions" : [ {
       "Name" : "DeleteMetricStream",
@@ -1243,6 +2810,46 @@
     "SDK" : [ {
       "Name" : "cloudwatch",
       "Method" : "delete_metric_stream",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteOmniDashboard",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteOmniDashboard",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "delete_omni_dashboard",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteResourceMetricsConfiguration",
+    "SDK" : [ {
+      "Name" : "cloudwatch",
+      "Method" : "delete_resource_metrics_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteSpace",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteSpace",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "delete_space",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteView",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteView",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "delete_view",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1359,6 +2966,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetAccessGrant",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAccessGrant",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "get_access_grant",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetAccessProfile",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAccessProfile",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "get_access_profile",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetAlarmMuteRule",
     "AuthorizedActions" : [ {
       "Name" : "GetAlarmMuteRule",
@@ -1367,6 +2996,28 @@
     "SDK" : [ {
       "Name" : "cloudwatch",
       "Method" : "get_alarm_mute_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetAlert",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAlert",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "get_alert",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetContextGraph",
+    "AuthorizedActions" : [ {
+      "Name" : "GetContextGraph",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "get_context_graph",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1392,6 +3043,39 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetDomain",
+    "AuthorizedActions" : [ {
+      "Name" : "GetDomain",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "get_domain",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetDomainAccessGrantForOrganization",
+    "AuthorizedActions" : [ {
+      "Name" : "GetDomainAccessGrantForOrganization",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "get_domain_access_grant_for_organization",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetDomainForOrganization",
+    "AuthorizedActions" : [ {
+      "Name" : "GetDomainForOrganization",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "get_domain_for_organization",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetInsightRuleReport",
     "AuthorizedActions" : [ {
       "Name" : "GetInsightRuleReport",
@@ -1400,6 +3084,28 @@
     "SDK" : [ {
       "Name" : "cloudwatch",
       "Method" : "get_insight_rule_report",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetIntegration",
+    "AuthorizedActions" : [ {
+      "Name" : "GetIntegration",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "get_integration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetIntelligenceConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "GetIntelligenceConfiguration",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "get_intelligence_configuration",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1458,6 +3164,90 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetOmniDashboard",
+    "AuthorizedActions" : [ {
+      "Name" : "GetOmniDashboard",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "get_omni_dashboard",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetResourceMetricsConfiguration",
+    "SDK" : [ {
+      "Name" : "cloudwatch",
+      "Method" : "get_resource_metrics_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetSpace",
+    "AuthorizedActions" : [ {
+      "Name" : "GetSpace",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "get_space",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetSpaceCredentialsForOrganization",
+    "AuthorizedActions" : [ {
+      "Name" : "GetSpaceCredentialsForOrganization",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "get_space_credentials_for_organization",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetTelemetryQueryResults",
+    "AuthorizedActions" : [ {
+      "Name" : "GetTelemetryQueryResults",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "get_telemetry_query_results",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetView",
+    "AuthorizedActions" : [ {
+      "Name" : "GetView",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "get_view",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListAccessGrants",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAccessGrants",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "list_access_grants",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListAccessProfiles",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAccessProfiles",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "list_access_profiles",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListAlarmMuteRules",
     "AuthorizedActions" : [ {
       "Name" : "ListAlarmMuteRules",
@@ -1469,6 +3259,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListAlerts",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAlerts",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "list_alerts",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListDashboards",
     "AuthorizedActions" : [ {
       "Name" : "ListDashboards",
@@ -1477,6 +3278,39 @@
     "SDK" : [ {
       "Name" : "cloudwatch",
       "Method" : "list_dashboards",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListDomainAccessGrantsForOrganization",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDomainAccessGrantsForOrganization",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "list_domain_access_grants_for_organization",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListDomains",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDomains",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "list_domains",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListIntegrations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListIntegrations",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "list_integrations",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1513,6 +3347,39 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListOmniDashboards",
+    "AuthorizedActions" : [ {
+      "Name" : "ListOmniDashboards",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "list_omni_dashboards",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListSpaces",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSpaces",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "list_spaces",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListSpacesForOrganization",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSpacesForOrganization",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "list_spaces_for_organization",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListTagsForResource",
     "AuthorizedActions" : [ {
       "Name" : "ListTagsForResource",
@@ -1524,6 +3391,45 @@
     "SDK" : [ {
       "Name" : "cloudwatch",
       "Method" : "list_tags_for_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListTelemetryFields",
+    "AuthorizedActions" : [ {
+      "Name" : "GetRecords",
+      "Service" : "cloudwatch"
+    }, {
+      "Name" : "ListMetrics",
+      "Service" : "cloudwatch"
+    }, {
+      "Name" : "ListTelemetryFields",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "list_telemetry_fields",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListTelemetryQuerySessions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTelemetryQuerySessions",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "list_telemetry_query_sessions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListViews",
+    "AuthorizedActions" : [ {
+      "Name" : "ListViews",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "list_views",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1591,6 +3497,17 @@
     "SDK" : [ {
       "Name" : "cloudwatch",
       "Method" : "put_insight_rule",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutIntelligenceConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "PutIntelligenceConfiguration",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "put_intelligence_configuration",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1670,6 +3587,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "SearchPrincipals",
+    "AuthorizedActions" : [ {
+      "Name" : "SearchPrincipals",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "search_principals",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "SetAlarmState",
     "AuthorizedActions" : [ {
       "Name" : "SetAlarmState",
@@ -1703,6 +3631,34 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "StartTelemetryQuery",
+    "AuthorizedActions" : [ {
+      "Name" : "GetMetricData",
+      "Service" : "cloudwatch"
+    }, {
+      "Name" : "GetRecords",
+      "Service" : "cloudwatch"
+    }, {
+      "Name" : "ListMetrics",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "start_telemetry_query",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartTelemetryQuerySession",
+    "AuthorizedActions" : [ {
+      "Name" : "StartTelemetryQuerySession",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "start_telemetry_query_session",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StopMetricStreams",
     "AuthorizedActions" : [ {
       "Name" : "StopMetricStreams",
@@ -1722,6 +3678,28 @@
     "SDK" : [ {
       "Name" : "cloudwatch",
       "Method" : "stop_otel_enrichment",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StopTelemetryQuery",
+    "AuthorizedActions" : [ {
+      "Name" : "StopTelemetryQuery",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "stop_telemetry_query",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StopTelemetryQuerySession",
+    "AuthorizedActions" : [ {
+      "Name" : "StopTelemetryQuerySession",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "stop_telemetry_query_session",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1752,14 +3730,134 @@
       "Method" : "untag_resource",
       "Package" : "Boto3"
     } ]
+  }, {
+    "Name" : "UpdateAccessProfile",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAccessProfile",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "update_access_profile",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateAlert",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAlert",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "update_alert",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateDomain",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateDomain",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "update_domain",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateDomainForOrganization",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateDomainForOrganization",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "update_domain_for_organization",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateIntegration",
+    "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "cloudwatch.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "UpdateIntegration",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "update_integration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateOTelEnrichment",
+    "SDK" : [ {
+      "Name" : "cloudwatch",
+      "Method" : "update_o_tel_enrichment",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateOmniDashboard",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateOmniDashboard",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "update_omni_dashboard",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateResourceMetricsConfiguration",
+    "SDK" : [ {
+      "Name" : "cloudwatch",
+      "Method" : "update_resource_metrics_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateSpace",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateSpace",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "update_space",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateView",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateView",
+      "Service" : "cloudwatch"
+    } ],
+    "SDK" : [ {
+      "Name" : "cloudwatchomni",
+      "Method" : "update_view",
+      "Package" : "Boto3"
+    } ]
   } ],
   "Resources" : [ {
+    "Name" : "access-grant",
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:access-grant/${GrantId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "access-profile",
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:access-profile/${ProfileId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "alarm",
     "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:alarm:${AlarmName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "alarm-mute-rule",
     "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:alarm-mute-rule:${AlarmMuteRuleName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "alert",
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:alert/${AlertId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "dashboard",
@@ -1770,12 +3868,36 @@
     "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:dataset/${DatasetId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
+    "Name" : "domain",
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:domain/${DomainId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "ingestion-endpoint",
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:ingestion-endpoint/${IngestionEndpointName}/${IngestionEndpointId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "insight-rule",
     "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:insight-rule/${InsightRuleName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
+    "Name" : "integration",
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:integration/${IntegrationId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "metric-stream",
     "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:metric-stream/${MetricStreamName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "omni-dashboard",
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:omni-dashboard/${DashboardId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "organization-access-grant",
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:organization-access-grant/${GrantId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "organization-domain",
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:organization-domain/${DomainId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "service",
@@ -1784,6 +3906,14 @@
   }, {
     "Name" : "slo",
     "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:slo/${SloName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "space",
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:space/${SpaceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "view",
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:view/${ViewName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.4"

@@ -384,8 +384,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:AvailabilityZone", "ec2:AvailabilityZoneId", "ec2:EbsOptimized", "ec2:InstanceAutoRecovery", "ec2:InstanceBandwidthWeighting", "ec2:InstanceMarketType", "ec2:InstanceMetadataTags", "ec2:InstanceProfile", "ec2:InstanceType", "ec2:MetadataHttpEndpoint", "ec2:MetadataHttpPutResponseHopLimit", "ec2:MetadataHttpTokens", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType", "ec2:Tenancy" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "AssociateCapacityReservationBillingOwner",
@@ -1066,8 +1066,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "BundleInstance",
@@ -1406,8 +1406,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:AvailabilityZone", "ec2:AvailabilityZoneId", "ec2:ResourceTag/${TagKey}", "ec2:Vpc" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateCapacityManagerDataExport",
@@ -2055,8 +2055,8 @@
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateIpamPolicy",
@@ -2184,8 +2184,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateIpamScope",
@@ -3685,8 +3685,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:transitGatewayRouteTableId" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateTransitGatewayPrefixListReference",
@@ -4199,8 +4199,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteCapacityManagerDataExport",
@@ -4582,8 +4582,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteIpamPolicy",
@@ -4696,8 +4696,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteIpamScope",
@@ -6022,8 +6022,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:transitGatewayPolicyTableId" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteTransitGatewayPrefixListReference",
@@ -6607,8 +6607,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeAddressTransfers",
@@ -6682,8 +6682,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeApplicationStatusCheckAssociations",
@@ -6697,8 +6697,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeApplicationStatusChecks",
@@ -6712,8 +6712,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeAvailabilityZones",
@@ -7787,8 +7787,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeIpamPolicies",
@@ -9797,8 +9797,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:AvailabilityZone", "ec2:AvailabilityZoneId", "ec2:EbsOptimized", "ec2:InstanceAutoRecovery", "ec2:InstanceBandwidthWeighting", "ec2:InstanceMarketType", "ec2:InstanceMetadataTags", "ec2:InstanceProfile", "ec2:InstanceType", "ec2:MetadataHttpEndpoint", "ec2:MetadataHttpPutResponseHopLimit", "ec2:MetadataHttpTokens", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType", "ec2:Tenancy" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DisableAwsNetworkPerformanceMetricSubscription",
@@ -10186,8 +10186,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:AvailabilityZone", "ec2:AvailabilityZoneId", "ec2:EbsOptimized", "ec2:InstanceAutoRecovery", "ec2:InstanceBandwidthWeighting", "ec2:InstanceMarketType", "ec2:InstanceMetadataTags", "ec2:InstanceProfile", "ec2:InstanceType", "ec2:MetadataHttpEndpoint", "ec2:MetadataHttpPutResponseHopLimit", "ec2:MetadataHttpTokens", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType", "ec2:Tenancy" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DisassociateCapacityReservationBillingOwner",
@@ -10613,8 +10613,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:AvailabilityZone", "ec2:AvailabilityZoneId", "ec2:EbsOptimized", "ec2:InstanceAutoRecovery", "ec2:InstanceBandwidthWeighting", "ec2:InstanceMarketType", "ec2:InstanceMetadataTags", "ec2:InstanceProfile", "ec2:InstanceType", "ec2:MetadataHttpEndpoint", "ec2:MetadataHttpPutResponseHopLimit", "ec2:MetadataHttpTokens", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType", "ec2:Tenancy" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "EnableAwsNetworkPerformanceMetricSubscription",
@@ -10809,8 +10809,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "EnableIpamOrganizationAdminAccount",
@@ -11659,8 +11659,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetIpamInternetRegistryAssociationAsns",
@@ -11678,8 +11678,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetIpamInternetRegistryAssociationCidrs",
@@ -11697,8 +11697,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetIpamPolicyAllocationRules",
@@ -11871,8 +11871,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetIpamRouteProtectionFindings",
@@ -11890,8 +11890,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetIpamRoutingPolicyRegistrationDeltas",
@@ -11909,8 +11909,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetIpamRoutingPolicyRegistrations",
@@ -11928,8 +11928,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetLaunchTemplateData",
@@ -12790,8 +12790,8 @@
       }
     },
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ModifyAddressAttribute",
@@ -12834,8 +12834,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:AvailabilityZone", "ec2:AvailabilityZoneId", "ec2:ResourceTag/${TagKey}", "ec2:Vpc" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ModifyAvailabilityZoneGroup",
@@ -13479,8 +13479,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ModifyIpamScope",
@@ -13941,8 +13941,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:transitGatewayRouteTableId" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ModifyTransitGatewayPrefixListReference",
@@ -14309,8 +14309,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:VpceMultiRegion", "ec2:VpceSupportedRegion" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ModifyVpcEndpointServiceConfiguration",
@@ -17421,6 +17421,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateCapacityReservationDateChangeQuote",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateTags",
+      "Service" : "ec2"
+    } ],
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "create_capacity_reservation_date_change_quote",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateCapacityReservationFleet",
     "AuthorizedActions" : [ {
       "Name" : "CreateCapacityReservationFleet",
@@ -20218,6 +20229,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "describe_capacity_reservation_cancellation_quotes",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeCapacityReservationDateChangeQuotes",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "describe_capacity_reservation_date_change_quotes",
       "Package" : "Boto3"
     } ]
   }, {

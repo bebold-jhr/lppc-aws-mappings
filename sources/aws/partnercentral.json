@@ -3249,9 +3249,6 @@
   }, {
     "Name" : "ListOpportunityFromEngagementTasks",
     "AuthorizedActions" : [ {
-      "Name" : "ListEngagementFromOpportunityTasks",
-      "Service" : "partnercentral"
-    }, {
       "Name" : "ListOpportunityFromEngagementTasks",
       "Service" : "partnercentral"
     } ],

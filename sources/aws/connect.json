@@ -877,8 +877,8 @@
       "Name" : "extraction-definition"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateHoursOfOperation",
@@ -1185,6 +1185,12 @@
       }
     },
     "Resources" : [ {
+      "Name" : "application"
+    }, {
+      "Name" : "contact-flow-module"
+    }, {
+      "Name" : "hierarchy-group"
+    }, {
       "Name" : "security-profile"
     } ],
     "SupportedBy" : {
@@ -1617,8 +1623,8 @@
       "Name" : "extraction-definition"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteHoursOfOperation",
@@ -2307,8 +2313,8 @@
       "Name" : "extraction-definition"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeForecastingPlanningSchedulingIntegration",
@@ -3176,8 +3182,8 @@
       "Name" : "instance"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetCurrentMetricData",
@@ -3824,8 +3830,8 @@
       "Name" : "instance"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListEvaluationFormVersions",
@@ -3878,8 +3884,8 @@
       "Name" : "instance"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListFlowAssociations",
@@ -4342,6 +4348,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListSecurityProfileAIAgents",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "security-profile"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ListSecurityProfileApplications",
@@ -6321,8 +6345,8 @@
       "Name" : "instance"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "UpdateDataTableAttribute",
@@ -6429,8 +6453,8 @@
       "Name" : "extraction-definition"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "UpdateHoursOfOperation",
@@ -6956,6 +6980,12 @@
       }
     },
     "Resources" : [ {
+      "Name" : "application"
+    }, {
+      "Name" : "contact-flow-module"
+    }, {
+      "Name" : "hierarchy-group"
+    }, {
       "Name" : "security-profile"
     } ],
     "SupportedBy" : {
@@ -10090,6 +10120,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListSecurityProfileAIAgents",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSecurityProfileAIAgents",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "list_security_profile_ai_agents",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListSecurityProfileApplications",
     "AuthorizedActions" : [ {
       "Name" : "ListSecurityProfileApplications",
@@ -11890,6 +11931,10 @@
   }, {
     "Name" : "ai-agent",
     "ARNFormats" : [ "arn:${Partition}:wisdom:${Region}:${Account}:ai-agent/${AssistantId}/${AIAgentId}:${Version}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "application",
+    "ARNFormats" : [ "arn:${Partition}:app-integrations:${Region}:${Account}:application/${ApplicationId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "attached-file",

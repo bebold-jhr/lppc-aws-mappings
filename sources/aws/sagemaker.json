@@ -8852,7 +8852,7 @@
     }, {
       "Name" : "PassRole",
       "Context" : {
-        "iam:PassedToService" : [ "job.sagemaker.amazonaws.com", "sagemaker.amazonaws.com" ]
+        "iam:PassedToService" : [ "job.sagemaker.amazonaws.com" ]
       },
       "Service" : "iam"
     }, {

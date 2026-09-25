@@ -5350,6 +5350,10 @@
     } ]
   }, {
     "Name" : "BatchUpdateUser",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchUpdateUser",
+      "Service" : "chime"
+    } ],
     "SDK" : [ {
       "Name" : "chime",
       "Method" : "batch_update_user",

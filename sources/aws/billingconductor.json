@@ -261,6 +261,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetBillingTransferPreference",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListAccountAssociations",
     "Annotations" : {
       "Properties" : {
@@ -502,6 +516,21 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateBillingTransferPreference",
+    "ActionConditionKeys" : [ "billingconductor:PricingPlanArn" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateCustomLineItem",
     "Annotations" : {
       "Properties" : {
@@ -562,6 +591,9 @@
   }, {
     "Name" : "aws:TagKeys",
     "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "billingconductor:PricingPlanArn",
+    "Types" : [ "ARN" ]
   } ],
   "Operations" : [ {
     "Name" : "AssociateAccounts",
@@ -741,6 +773,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetBillingTransferPreference",
+    "AuthorizedActions" : [ {
+      "Name" : "GetBillingTransferPreference",
+      "Service" : "billingconductor"
+    } ],
+    "SDK" : [ {
+      "Name" : "billingconductor",
+      "Method" : "get_billing_transfer_preference",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListAccountAssociations",
     "AuthorizedActions" : [ {
       "Name" : "ListAccountAssociations",
@@ -895,6 +938,17 @@
     "SDK" : [ {
       "Name" : "billingconductor",
       "Method" : "update_billing_group",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateBillingTransferPreference",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateBillingTransferPreference",
+      "Service" : "billingconductor"
+    } ],
+    "SDK" : [ {
+      "Name" : "billingconductor",
+      "Method" : "update_billing_transfer_preference",
       "Package" : "Boto3"
     } ]
   }, {
