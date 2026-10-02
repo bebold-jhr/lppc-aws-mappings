@@ -1090,7 +1090,7 @@
     }
   }, {
     "Name" : "StartTask",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ecs:cluster", "ecs:container-instances", "ecs:enable-ebs-volumes", "ecs:enable-execute-command" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ecs:cluster", "ecs:container-instances", "ecs:enable-ebs-volumes", "ecs:enable-execute-command", "ecs:task-cpu", "ecs:task-memory" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,

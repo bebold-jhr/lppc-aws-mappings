@@ -290,12 +290,6 @@
     },
     "Resources" : [ {
       "Name" : "association"
-    }, {
-      "Name" : "document"
-    }, {
-      "Name" : "instance"
-    }, {
-      "Name" : "managed-instance"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -594,12 +588,6 @@
     },
     "Resources" : [ {
       "Name" : "association"
-    }, {
-      "Name" : "document"
-    }, {
-      "Name" : "instance"
-    }, {
-      "Name" : "managed-instance"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,

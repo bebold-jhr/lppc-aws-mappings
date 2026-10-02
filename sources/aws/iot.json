@@ -7615,6 +7615,9 @@
     "AuthorizedActions" : [ {
       "Name" : "OpenTunnel",
       "Service" : "iot"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "iot"
     } ],
     "SDK" : [ {
       "Name" : "iotsecuretunneling",

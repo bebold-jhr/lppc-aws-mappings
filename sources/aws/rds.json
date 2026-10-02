@@ -3464,9 +3464,6 @@
       "Name" : "AddTagsToResource",
       "Service" : "rds"
     }, {
-      "Name" : "CopyCustomDBEngineVersion",
-      "Service" : "rds"
-    }, {
       "Name" : "CopyDBSnapshot",
       "Service" : "rds"
     } ],

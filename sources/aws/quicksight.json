@@ -5981,6 +5981,9 @@
       "Name" : "PassDataSet",
       "Service" : "quicksight"
     }, {
+      "Name" : "PassTopic",
+      "Service" : "quicksight"
+    }, {
       "Name" : "TagResource",
       "Service" : "quicksight"
     } ],
@@ -6192,9 +6195,6 @@
   }, {
     "Name" : "CreateOAuthClientApplication",
     "AuthorizedActions" : [ {
-      "Name" : "CreateDataSource",
-      "Service" : "quicksight"
-    }, {
       "Name" : "CreateOAuthClientApplication",
       "Service" : "quicksight"
     }, {
@@ -6690,9 +6690,6 @@
   }, {
     "Name" : "DeleteOAuthClientApplication",
     "AuthorizedActions" : [ {
-      "Name" : "DeleteDataSource",
-      "Service" : "quicksight"
-    }, {
       "Name" : "DeleteOAuthClientApplication",
       "Service" : "quicksight"
     } ],
@@ -7412,9 +7409,6 @@
   }, {
     "Name" : "DescribeOAuthClientApplication",
     "AuthorizedActions" : [ {
-      "Name" : "DescribeDataSource",
-      "Service" : "quicksight"
-    }, {
       "Name" : "DescribeOAuthClientApplication",
       "Service" : "quicksight"
     } ],
@@ -8062,9 +8056,6 @@
   }, {
     "Name" : "ListOAuthClientApplications",
     "AuthorizedActions" : [ {
-      "Name" : "ListDataSources",
-      "Service" : "quicksight"
-    }, {
       "Name" : "ListOAuthClientApplications",
       "Service" : "quicksight"
     } ],
@@ -9057,9 +9048,6 @@
   }, {
     "Name" : "UpdateOAuthClientApplication",
     "AuthorizedActions" : [ {
-      "Name" : "UpdateDataSource",
-      "Service" : "quicksight"
-    }, {
       "Name" : "UpdateOAuthClientApplication",
       "Service" : "quicksight"
     } ],

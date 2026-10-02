@@ -204,7 +204,7 @@
     }
   }, {
     "Name" : "CreateLoadBalancer",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "elasticloadbalancing:ListenerProtocol", "elasticloadbalancing:ResourceTag/${TagKey}", "elasticloadbalancing:Scheme", "elasticloadbalancing:SecurityGroup", "elasticloadbalancing:Subnet" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "elasticloadbalancing:ResourceTag/${TagKey}", "elasticloadbalancing:Scheme", "elasticloadbalancing:SecurityGroup", "elasticloadbalancing:Subnet" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -214,7 +214,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "loadbalancer"
+      "Name" : "loadbalancer",
+      "ConditionKeys" : [ "elasticloadbalancing:ListenerProtocol" ]
     }, {
       "Name" : "loadbalancer/app/"
     }, {

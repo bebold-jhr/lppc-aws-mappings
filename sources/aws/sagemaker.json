@@ -203,6 +203,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "AttachClusterNodeNetworkInterface",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "AttachClusterNodeVolume",
     "Annotations" : {
       "Properties" : {
@@ -2207,7 +2224,6 @@
     }
   }, {
     "Name" : "DeleteFeatureGroup",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -8123,6 +8139,10 @@
     } ]
   }, {
     "Name" : "AttachClusterNodeNetworkInterface",
+    "AuthorizedActions" : [ {
+      "Name" : "AttachClusterNodeNetworkInterface",
+      "Service" : "sagemaker"
+    } ],
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "attach_cluster_node_network_interface",
@@ -9143,6 +9163,9 @@
   }, {
     "Name" : "CreatePartnerApp",
     "AuthorizedActions" : [ {
+      "Name" : "AddTags",
+      "Service" : "sagemaker"
+    }, {
       "Name" : "CreatePartnerApp",
       "Service" : "sagemaker"
     }, {

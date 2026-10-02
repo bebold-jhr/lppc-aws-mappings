@@ -328,10 +328,6 @@
         "IsWrite" : true
       }
     },
-    "Resources" : [ {
-      "Name" : "workspace",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -346,10 +342,6 @@
         "IsWrite" : true
       }
     },
-    "Resources" : [ {
-      "Name" : "workspace",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -747,10 +739,6 @@
         "IsWrite" : false
       }
     },
-    "Resources" : [ {
-      "Name" : "workspace",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -995,10 +983,6 @@
         "IsWrite" : false
       }
     },
-    "Resources" : [ {
-      "Name" : "workspace",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -1256,10 +1240,6 @@
         "IsWrite" : true
       }
     },
-    "Resources" : [ {
-      "Name" : "workspace",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false

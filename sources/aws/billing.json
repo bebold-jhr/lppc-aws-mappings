@@ -334,6 +334,34 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListBusinessSupportAccountCharges",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListBusinessSupportSubscriptionHistory",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListEnterpriseSupportLinkedAccountCharges",
     "Annotations" : {
       "Properties" : {
@@ -692,6 +720,28 @@
     "SDK" : [ {
       "Name" : "billing",
       "Method" : "list_billing_views",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListBusinessSupportAccountCharges",
+    "AuthorizedActions" : [ {
+      "Name" : "ListBusinessSupportAccountCharges",
+      "Service" : "billing"
+    } ],
+    "SDK" : [ {
+      "Name" : "billing",
+      "Method" : "list_business_support_account_charges",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListBusinessSupportSubscriptionHistory",
+    "AuthorizedActions" : [ {
+      "Name" : "ListBusinessSupportSubscriptionHistory",
+      "Service" : "billing"
+    } ],
+    "SDK" : [ {
+      "Name" : "billing",
+      "Method" : "list_business_support_subscription_history",
       "Package" : "Boto3"
     } ]
   }, {

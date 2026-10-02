@@ -304,6 +304,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "SendPhoneNumberVerification",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "account"
+    }, {
+      "Name" : "accountInOrganization"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StartPrimaryEmailUpdate",
     "ActionConditionKeys" : [ "account:EmailTargetDomain" ],
     "Annotations" : {
@@ -320,6 +339,25 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "VerifyPhoneNumber",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "account"
+    }, {
+      "Name" : "accountInOrganization"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   } ],
   "ConditionKeys" : [ {
@@ -510,6 +548,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "SendPhoneNumberVerification",
+    "AuthorizedActions" : [ {
+      "Name" : "SendPhoneNumberVerification",
+      "Service" : "account"
+    } ],
+    "SDK" : [ {
+      "Name" : "account",
+      "Method" : "send_phone_number_verification",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StartPrimaryEmailUpdate",
     "AuthorizedActions" : [ {
       "Name" : "StartPrimaryEmailUpdate",
@@ -521,6 +570,17 @@
     "SDK" : [ {
       "Name" : "account",
       "Method" : "start_primary_email_update",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "VerifyPhoneNumber",
+    "AuthorizedActions" : [ {
+      "Name" : "VerifyPhoneNumber",
+      "Service" : "account"
+    } ],
+    "SDK" : [ {
+      "Name" : "account",
+      "Method" : "verify_phone_number",
       "Package" : "Boto3"
     } ]
   } ],

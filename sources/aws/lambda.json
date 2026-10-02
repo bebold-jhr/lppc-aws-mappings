@@ -235,6 +235,59 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateWebFunction",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "lambda:Request/WebFunctionAuthType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "webFunction"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateWebFunctionEndpoint",
+    "ActionConditionKeys" : [ "lambda:Request/WebFunctionAuthType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "webFunction"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateWebFunctionRevision",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "webFunction"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteAlias",
     "Annotations" : {
       "Properties" : {
@@ -489,6 +542,60 @@
     },
     "Resources" : [ {
       "Name" : "function"
+    }, {
+      "Name" : "webFunction"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteWebFunction",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "webFunction"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteWebFunctionEndpoint",
+    "ActionConditionKeys" : [ "lambda:Resource/WebFunctionAuthType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "webFunctionEndpoint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteWebFunctionRevision",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "webFunctionRevision"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -966,6 +1073,8 @@
     },
     "Resources" : [ {
       "Name" : "function"
+    }, {
+      "Name" : "webFunction"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -987,6 +1096,72 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetWebAccountSettings",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetWebFunction",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "webFunction"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetWebFunctionEndpoint",
+    "ActionConditionKeys" : [ "lambda:Resource/WebFunctionAuthType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "webFunctionEndpoint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetWebFunctionRevision",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "webFunctionRevision"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "InvokeAsync",
@@ -1036,6 +1211,24 @@
     },
     "Resources" : [ {
       "Name" : "function"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "InvokeWebFunctionEndpoint",
+    "ActionConditionKeys" : [ "lambda:Resource/WebFunctionAuthType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "webFunctionEndpoint"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1374,6 +1567,8 @@
       "Name" : "microvmImage"
     }, {
       "Name" : "networkConnector"
+    }, {
+      "Name" : "webFunction"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1395,6 +1590,54 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListWebFunctionEndpoints",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "webFunction"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListWebFunctionRevisions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "webFunction"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListWebFunctions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "PassCapacityProvider",
@@ -1581,6 +1824,8 @@
     },
     "Resources" : [ {
       "Name" : "function"
+    }, {
+      "Name" : "webFunction"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1780,6 +2025,8 @@
       "Name" : "microvmImage"
     }, {
       "Name" : "networkConnector"
+    }, {
+      "Name" : "webFunction"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1825,6 +2072,8 @@
       "Name" : "microvmImage"
     }, {
       "Name" : "networkConnector"
+    }, {
+      "Name" : "webFunction"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -2039,6 +2288,24 @@
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
+  }, {
+    "Name" : "UpdateWebFunctionEndpoint",
+    "ActionConditionKeys" : [ "lambda:Request/WebFunctionAuthType", "lambda:Resource/WebFunctionAuthType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "webFunctionEndpoint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
   } ],
   "ConditionKeys" : [ {
     "Name" : "aws:RequestTag/${TagKey}",
@@ -2069,6 +2336,12 @@
     "Types" : [ "ArrayOfString" ]
   }, {
     "Name" : "lambda:Principal",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "lambda:Request/WebFunctionAuthType",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "lambda:Resource/WebFunctionAuthType",
     "Types" : [ "String" ]
   }, {
     "Name" : "lambda:SecurityGroupIds",
@@ -2247,6 +2520,9 @@
       "Service" : "lambda"
     }, {
       "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "lambda.amazonaws.com" ]
+      },
       "Service" : "iam"
     }, {
       "Name" : "TagResource",
@@ -2286,6 +2562,54 @@
     "SDK" : [ {
       "Name" : "lambda-core",
       "Method" : "create_network_connector",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateWebFunction",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateWebFunction",
+      "Service" : "lambda"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "lambda.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "lambda"
+    } ],
+    "SDK" : [ {
+      "Name" : "lambda-web",
+      "Method" : "create_web_function",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateWebFunctionEndpoint",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateWebFunctionEndpoint",
+      "Service" : "lambda"
+    } ],
+    "SDK" : [ {
+      "Name" : "lambda-web",
+      "Method" : "create_web_function_endpoint",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateWebFunctionRevision",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateWebFunctionRevision",
+      "Service" : "lambda"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "lambda.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    } ],
+    "SDK" : [ {
+      "Name" : "lambda-web",
+      "Method" : "create_web_function_revision",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2454,6 +2778,43 @@
     "SDK" : [ {
       "Name" : "lambda",
       "Method" : "delete_resource_policy",
+      "Package" : "Boto3"
+    }, {
+      "Name" : "lambda-web",
+      "Method" : "delete_resource_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteWebFunction",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteWebFunction",
+      "Service" : "lambda"
+    } ],
+    "SDK" : [ {
+      "Name" : "lambda-web",
+      "Method" : "delete_web_function",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteWebFunctionEndpoint",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteWebFunctionEndpoint",
+      "Service" : "lambda"
+    } ],
+    "SDK" : [ {
+      "Name" : "lambda-web",
+      "Method" : "delete_web_function_endpoint",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteWebFunctionRevision",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteWebFunctionRevision",
+      "Service" : "lambda"
+    } ],
+    "SDK" : [ {
+      "Name" : "lambda-web",
+      "Method" : "delete_web_function_revision",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2765,6 +3126,10 @@
       "Name" : "lambda",
       "Method" : "get_resource_policy",
       "Package" : "Boto3"
+    }, {
+      "Name" : "lambda-web",
+      "Method" : "get_resource_policy",
+      "Package" : "Boto3"
     } ]
   }, {
     "Name" : "GetRuntimeManagementConfig",
@@ -2775,6 +3140,50 @@
     "SDK" : [ {
       "Name" : "lambda",
       "Method" : "get_runtime_management_config",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetWebAccountSettings",
+    "AuthorizedActions" : [ {
+      "Name" : "GetWebAccountSettings",
+      "Service" : "lambda"
+    } ],
+    "SDK" : [ {
+      "Name" : "lambda-web",
+      "Method" : "get_web_account_settings",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetWebFunction",
+    "AuthorizedActions" : [ {
+      "Name" : "GetWebFunction",
+      "Service" : "lambda"
+    } ],
+    "SDK" : [ {
+      "Name" : "lambda-web",
+      "Method" : "get_web_function",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetWebFunctionEndpoint",
+    "AuthorizedActions" : [ {
+      "Name" : "GetWebFunctionEndpoint",
+      "Service" : "lambda"
+    } ],
+    "SDK" : [ {
+      "Name" : "lambda-web",
+      "Method" : "get_web_function_endpoint",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetWebFunctionRevision",
+    "AuthorizedActions" : [ {
+      "Name" : "GetWebFunctionRevision",
+      "Service" : "lambda"
+    } ],
+    "SDK" : [ {
+      "Name" : "lambda-web",
+      "Method" : "get_web_function_revision",
       "Package" : "Boto3"
     } ]
   }, {
@@ -3051,6 +3460,10 @@
       "Name" : "lambda-microvms",
       "Method" : "list_tags",
       "Package" : "Boto3"
+    }, {
+      "Name" : "lambda-web",
+      "Method" : "list_tags",
+      "Package" : "Boto3"
     } ]
   }, {
     "Name" : "ListVersionsByFunction",
@@ -3061,6 +3474,39 @@
     "SDK" : [ {
       "Name" : "lambda",
       "Method" : "list_versions_by_function",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListWebFunctionEndpoints",
+    "AuthorizedActions" : [ {
+      "Name" : "ListWebFunctionEndpoints",
+      "Service" : "lambda"
+    } ],
+    "SDK" : [ {
+      "Name" : "lambda-web",
+      "Method" : "list_web_function_endpoints",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListWebFunctionRevisions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListWebFunctionRevisions",
+      "Service" : "lambda"
+    } ],
+    "SDK" : [ {
+      "Name" : "lambda-web",
+      "Method" : "list_web_function_revisions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListWebFunctions",
+    "AuthorizedActions" : [ {
+      "Name" : "ListWebFunctions",
+      "Service" : "lambda"
+    } ],
+    "SDK" : [ {
+      "Name" : "lambda-web",
+      "Method" : "list_web_functions",
       "Package" : "Boto3"
     } ]
   }, {
@@ -3167,6 +3613,10 @@
       "Name" : "lambda",
       "Method" : "put_resource_policy",
       "Package" : "Boto3"
+    }, {
+      "Name" : "lambda-web",
+      "Method" : "put_resource_policy",
+      "Package" : "Boto3"
     } ]
   }, {
     "Name" : "PutRuntimeManagementConfig",
@@ -3226,6 +3676,9 @@
       "Service" : "lambda"
     }, {
       "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "lambda.amazonaws.com" ]
+      },
       "Service" : "iam"
     }, {
       "Name" : "RunMicrovm",
@@ -3305,6 +3758,10 @@
       "Name" : "lambda-microvms",
       "Method" : "tag_resource",
       "Package" : "Boto3"
+    }, {
+      "Name" : "lambda-web",
+      "Method" : "tag_resource",
+      "Package" : "Boto3"
     } ]
   }, {
     "Name" : "TerminateMicrovm",
@@ -3329,6 +3786,10 @@
       "Package" : "Boto3"
     }, {
       "Name" : "lambda-microvms",
+      "Method" : "untag_resource",
+      "Package" : "Boto3"
+    }, {
+      "Name" : "lambda-web",
       "Method" : "untag_resource",
       "Package" : "Boto3"
     } ]
@@ -3439,6 +3900,9 @@
       "Service" : "lambda"
     }, {
       "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "lambda.amazonaws.com" ]
+      },
       "Service" : "iam"
     }, {
       "Name" : "UpdateMicrovmImage",
@@ -3475,6 +3939,17 @@
     "SDK" : [ {
       "Name" : "lambda-core",
       "Method" : "update_network_connector",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateWebFunctionEndpoint",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateWebFunctionEndpoint",
+      "Service" : "lambda"
+    } ],
+    "SDK" : [ {
+      "Name" : "lambda-web",
+      "Method" : "update_web_function_endpoint",
       "Package" : "Boto3"
     } ]
   }, {
@@ -3526,6 +4001,18 @@
   }, {
     "Name" : "networkConnector",
     "ARNFormats" : [ "arn:${Partition}:lambda:${Region}:${Account}:network-connector:${NetworkConnectorId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "webFunction",
+    "ARNFormats" : [ "arn:${Partition}:lambda:${Region}:${Account}:web-function/${FunctionName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "webFunctionEndpoint",
+    "ARNFormats" : [ "arn:${Partition}:lambda:${Region}:${Account}:web-function/${FunctionName}/endpoint/${EndpointName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "webFunctionRevision",
+    "ARNFormats" : [ "arn:${Partition}:lambda:${Region}:${Account}:web-function/${FunctionName}/revision/${RevisionId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.4"

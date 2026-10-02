@@ -1136,6 +1136,7 @@
     }
   }, {
     "Name" : "SendMessage",
+    "ActionConditionKeys" : [ "aidevops:SourceAgentSpaceArn", "aidevops:TargetAgentSpaceArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1291,6 +1292,7 @@
     }
   }, {
     "Name" : "UpdateBacklogTask",
+    "ActionConditionKeys" : [ "aidevops:SourceAgentSpaceArn", "aidevops:TargetAgentSpaceArn" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1429,10 +1431,10 @@
   } ],
   "ConditionKeys" : [ {
     "Name" : "aidevops:SourceAgentSpaceArn",
-    "Types" : [ "String" ]
+    "Types" : [ "ARN" ]
   }, {
     "Name" : "aidevops:TargetAgentSpaceArn",
-    "Types" : [ "String" ]
+    "Types" : [ "ARN" ]
   }, {
     "Name" : "aws:RequestTag/${TagKey}",
     "Types" : [ "String" ]

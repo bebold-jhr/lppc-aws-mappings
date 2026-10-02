@@ -329,7 +329,7 @@
     },
     "Resources" : [ {
       "Name" : "serverlesscache",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "elasticache:DataStorageUnit", "elasticache:EngineType", "elasticache:EngineVersion", "elasticache:KmsKeyId", "elasticache:MaximumDataStorage", "elasticache:MaximumECPUPerSecond", "elasticache:MinimumDataStorage", "elasticache:MinimumECPUPerSecond", "elasticache:SnapshotRetentionLimit" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "elasticache:ConnectionType", "elasticache:DataStorageUnit", "elasticache:EngineType", "elasticache:EngineVersion", "elasticache:KmsKeyId", "elasticache:MaximumDataStorage", "elasticache:MaximumECPUPerSecond", "elasticache:MinimumDataStorage", "elasticache:MinimumECPUPerSecond", "elasticache:SnapshotRetentionLimit" ]
     }, {
       "Name" : "serverlesscachesnapshot",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
@@ -1552,6 +1552,9 @@
   }, {
     "Name" : "elasticache:ClusterModeEnabled",
     "Types" : [ "Bool" ]
+  }, {
+    "Name" : "elasticache:ConnectionType",
+    "Types" : [ "String" ]
   }, {
     "Name" : "elasticache:DataStorageUnit",
     "Types" : [ "String" ]

@@ -265,6 +265,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListServiceQuotaWarnings",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListTagsForResource",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
@@ -575,6 +589,17 @@
     "SDK" : [ {
       "Name" : "arc-region-switch",
       "Method" : "list_route53_health_checks_in_region",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListServiceQuotaWarnings",
+    "AuthorizedActions" : [ {
+      "Name" : "ListServiceQuotaWarnings",
+      "Service" : "arc-region-switch"
+    } ],
+    "SDK" : [ {
+      "Name" : "arc-region-switch",
+      "Method" : "list_service_quota_warnings",
       "Package" : "Boto3"
     } ]
   }, {

@@ -11,8 +11,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "KnowledgeBase"
-    }, {
       "Name" : "MessageTemplate"
     } ],
     "SupportedBy" : {
@@ -196,8 +194,6 @@
     },
     "Resources" : [ {
       "Name" : "Content"
-    }, {
-      "Name" : "KnowledgeBase"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -247,8 +243,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "KnowledgeBase"
-    }, {
       "Name" : "MessageTemplate"
     } ],
     "SupportedBy" : {
@@ -266,8 +260,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "KnowledgeBase"
-    }, {
       "Name" : "MessageTemplate"
     } ],
     "SupportedBy" : {
@@ -315,8 +307,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "KnowledgeBase"
-    }, {
       "Name" : "MessageTemplate"
     } ],
     "SupportedBy" : {
@@ -471,8 +461,6 @@
     },
     "Resources" : [ {
       "Name" : "Content"
-    }, {
-      "Name" : "KnowledgeBase"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -492,8 +480,6 @@
       "Name" : "Content"
     }, {
       "Name" : "ContentAssociation"
-    }, {
-      "Name" : "KnowledgeBase"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -544,8 +530,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "KnowledgeBase"
-    }, {
       "Name" : "MessageTemplate"
     } ],
     "SupportedBy" : {
@@ -563,8 +547,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "KnowledgeBase"
-    }, {
       "Name" : "MessageTemplate"
     } ],
     "SupportedBy" : {
@@ -582,8 +564,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "KnowledgeBase"
-    }, {
       "Name" : "QuickResponse"
     } ],
     "SupportedBy" : {
@@ -687,8 +667,6 @@
     },
     "Resources" : [ {
       "Name" : "Content"
-    }, {
-      "Name" : "KnowledgeBase"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -708,8 +686,6 @@
       "Name" : "Content"
     }, {
       "Name" : "ContentAssociation"
-    }, {
-      "Name" : "KnowledgeBase"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -727,8 +703,6 @@
     },
     "Resources" : [ {
       "Name" : "Content"
-    }, {
-      "Name" : "KnowledgeBase"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -780,8 +754,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "KnowledgeBase"
-    }, {
       "Name" : "MessageTemplate"
     } ],
     "SupportedBy" : {
@@ -816,8 +788,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "KnowledgeBase"
-    }, {
       "Name" : "QuickResponse"
     } ],
     "SupportedBy" : {
@@ -991,8 +961,6 @@
     },
     "Resources" : [ {
       "Name" : "Content"
-    }, {
-      "Name" : "KnowledgeBase"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1057,8 +1025,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "KnowledgeBase"
-    }, {
       "Name" : "MessageTemplate"
     } ],
     "SupportedBy" : {
@@ -1261,8 +1227,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "KnowledgeBase"
-    }, {
       "Name" : "MessageTemplate"
     } ],
     "SupportedBy" : {
@@ -1549,8 +1513,6 @@
     },
     "Resources" : [ {
       "Name" : "Content"
-    }, {
-      "Name" : "KnowledgeBase"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1584,8 +1546,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "KnowledgeBase"
-    }, {
       "Name" : "MessageTemplate"
     } ],
     "SupportedBy" : {
@@ -1603,8 +1563,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "KnowledgeBase"
-    }, {
       "Name" : "MessageTemplate"
     } ],
     "SupportedBy" : {
@@ -1622,8 +1580,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "KnowledgeBase"
-    }, {
       "Name" : "QuickResponse"
     } ],
     "SupportedBy" : {
