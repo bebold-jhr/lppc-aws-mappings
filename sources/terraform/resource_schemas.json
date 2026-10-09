@@ -1079,6 +1079,8 @@
   "aws_observabilityadmin_telemetry_pipeline",
   "aws_observabilityadmin_telemetry_rule",
   "aws_observabilityadmin_telemetry_rule_for_organization",
+  "aws_odb_autonomous_database",
+  "aws_odb_autonomous_database_secrets_manager_integration",
   "aws_odb_cloud_autonomous_vm_cluster",
   "aws_odb_cloud_exadata_infrastructure",
   "aws_odb_cloud_vm_cluster",
