@@ -267,6 +267,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CancelExportJobV2",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ConnectorRegistrationsV2",
     "Annotations" : {
       "Properties" : {
@@ -1192,6 +1206,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetExportJobV2",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetFindingAggregator",
     "Annotations" : {
       "Properties" : {
@@ -1697,6 +1725,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListExportJobsV2",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListExposuresByRemediationV2",
     "Annotations" : {
       "Properties" : {
@@ -1911,6 +1953,23 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "StartExportJobV2",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "hubv2"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "TagResource",
@@ -2373,6 +2432,17 @@
     "SDK" : [ {
       "Name" : "securityhub",
       "Method" : "batch_update_standards_control_associations",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CancelExportJobV2",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelExportJobV2",
+      "Service" : "securityhub"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityhub",
+      "Method" : "cancel_export_job_v2",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2972,6 +3042,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetExportJobV2",
+    "AuthorizedActions" : [ {
+      "Name" : "GetExportJobV2",
+      "Service" : "securityhub"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityhub",
+      "Method" : "get_export_job_v2",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetFindingAggregator",
     "AuthorizedActions" : [ {
       "Name" : "GetFindingAggregator",
@@ -3258,6 +3339,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListExportJobsV2",
+    "AuthorizedActions" : [ {
+      "Name" : "ListExportJobsV2",
+      "Service" : "securityhub"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityhub",
+      "Method" : "list_export_jobs_v2",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListExposuresByRemediationV2",
     "AuthorizedActions" : [ {
       "Name" : "ListExposuresByRemediationV2",
@@ -3386,6 +3478,20 @@
     "SDK" : [ {
       "Name" : "securityhub",
       "Method" : "start_configuration_policy_disassociation",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartExportJobV2",
+    "AuthorizedActions" : [ {
+      "Name" : "GetFindings",
+      "Service" : "securityhub"
+    }, {
+      "Name" : "StartExportJobV2",
+      "Service" : "securityhub"
+    } ],
+    "SDK" : [ {
+      "Name" : "securityhub",
+      "Method" : "start_export_job_v2",
       "Package" : "Boto3"
     } ]
   }, {

@@ -46,8 +46,6 @@
     },
     "Resources" : [ {
       "Name" : "calculated-attributes"
-    }, {
-      "Name" : "domains"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -83,8 +81,6 @@
     "Resources" : [ {
       "Name" : "calculated-attributes",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
-    }, {
-      "Name" : "domains"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -119,8 +115,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "layouts",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     } ],
@@ -139,8 +133,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "event-streams",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     } ],
@@ -159,8 +151,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "event-triggers",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     } ],
@@ -216,8 +206,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "recommenders",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     } ],
@@ -237,8 +225,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "recommender-filters"
     } ],
     "SupportedBy" : {
@@ -257,8 +243,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "recommender-schemas"
     } ],
     "SupportedBy" : {
@@ -276,8 +260,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "segment-definitions",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     } ],
@@ -313,8 +295,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "segment-definitions"
     } ],
     "SupportedBy" : {
@@ -367,8 +347,6 @@
     },
     "Resources" : [ {
       "Name" : "calculated-attributes"
-    }, {
-      "Name" : "domains"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -402,8 +380,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "layouts"
     } ],
     "SupportedBy" : {
@@ -422,8 +398,6 @@
     },
     "Resources" : [ {
       "Name" : "domain-object-types"
-    }, {
-      "Name" : "domains"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -440,8 +414,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "event-streams"
     } ],
     "SupportedBy" : {
@@ -459,8 +431,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "event-triggers"
     } ],
     "SupportedBy" : {
@@ -478,8 +448,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "integrations"
     } ],
     "SupportedBy" : {
@@ -531,8 +499,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "object-types"
     } ],
     "SupportedBy" : {
@@ -550,8 +516,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "object-types"
     } ],
     "SupportedBy" : {
@@ -569,8 +533,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "recommenders"
     } ],
     "SupportedBy" : {
@@ -588,8 +550,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "recommender-filters"
     } ],
     "SupportedBy" : {
@@ -607,8 +567,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "recommender-schemas"
     } ],
     "SupportedBy" : {
@@ -626,8 +584,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "segment-definitions"
     } ],
     "SupportedBy" : {
@@ -733,8 +689,6 @@
     },
     "Resources" : [ {
       "Name" : "calculated-attributes"
-    }, {
-      "Name" : "domains"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -752,8 +706,6 @@
     },
     "Resources" : [ {
       "Name" : "calculated-attributes"
-    }, {
-      "Name" : "domains"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -787,8 +739,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "layouts"
     } ],
     "SupportedBy" : {
@@ -807,8 +757,6 @@
     },
     "Resources" : [ {
       "Name" : "domain-object-types"
-    }, {
-      "Name" : "domains"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -825,8 +773,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "event-streams"
     } ],
     "SupportedBy" : {
@@ -844,8 +790,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "event-triggers"
     } ],
     "SupportedBy" : {
@@ -880,8 +824,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "integrations"
     } ],
     "SupportedBy" : {
@@ -916,8 +858,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "object-types"
     } ],
     "SupportedBy" : {
@@ -969,8 +909,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "object-types"
     } ],
     "SupportedBy" : {
@@ -1002,8 +940,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "recommenders"
     } ],
     "SupportedBy" : {
@@ -1021,8 +957,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "recommenders"
     } ],
     "SupportedBy" : {
@@ -1040,8 +974,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "recommender-filters"
     } ],
     "SupportedBy" : {
@@ -1059,8 +991,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "recommender-schemas"
     } ],
     "SupportedBy" : {
@@ -1078,8 +1008,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "segment-definitions"
     } ],
     "SupportedBy" : {
@@ -1133,8 +1061,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "segment-definitions"
     } ],
     "SupportedBy" : {
@@ -1373,8 +1299,6 @@
     },
     "Resources" : [ {
       "Name" : "domain-object-types"
-    }, {
-      "Name" : "domains"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1473,8 +1397,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "object-types"
     } ],
     "SupportedBy" : {
@@ -1492,8 +1414,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "object-types"
     } ],
     "SupportedBy" : {
@@ -1576,8 +1496,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "object-types"
     } ],
     "SupportedBy" : {
@@ -1805,8 +1723,6 @@
     "Resources" : [ {
       "Name" : "domain-object-types",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
-    }, {
-      "Name" : "domains"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1823,8 +1739,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "integrations",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     } ],
@@ -1843,8 +1757,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "object-types"
     } ],
     "SupportedBy" : {
@@ -1862,8 +1774,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "object-types",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     } ],
@@ -1918,8 +1828,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "recommenders"
     } ],
     "SupportedBy" : {
@@ -1954,8 +1862,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "recommenders"
     } ],
     "SupportedBy" : {
@@ -2071,8 +1977,6 @@
     },
     "Resources" : [ {
       "Name" : "calculated-attributes"
-    }, {
-      "Name" : "domains"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -2106,8 +2010,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "layouts"
     } ],
     "SupportedBy" : {
@@ -2125,8 +2027,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "event-triggers"
     } ],
     "SupportedBy" : {
@@ -2161,8 +2061,6 @@
       }
     },
     "Resources" : [ {
-      "Name" : "domains"
-    }, {
       "Name" : "recommenders"
     } ],
     "SupportedBy" : {

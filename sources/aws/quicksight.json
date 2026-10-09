@@ -8777,6 +8777,9 @@
       "Name" : "PassDataSet",
       "Service" : "quicksight"
     }, {
+      "Name" : "PassTopic",
+      "Service" : "quicksight"
+    }, {
       "Name" : "UpdateDashboard",
       "Service" : "quicksight"
     } ],

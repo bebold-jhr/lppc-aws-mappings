@@ -2032,6 +2032,21 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "PutRecords",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "QueryTraces",
     "Annotations" : {
       "Properties" : {
@@ -2202,6 +2217,20 @@
   }, {
     "Name" : "StopTelemetryQuerySession",
     "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "SubmitAlarmFeedback",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -3605,6 +3634,9 @@
   }, {
     "Name" : "PutLogAlarm",
     "AuthorizedActions" : [ {
+      "Name" : "ListTagsForResource",
+      "Service" : "cloudwatch"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "cloudwatch.amazonaws.com" ]
@@ -3891,7 +3923,7 @@
     } ],
     "SDK" : [ {
       "Name" : "cloudwatch",
-      "Method" : "update_o_tel_enrichment",
+      "Method" : "update_otel_enrichment",
       "Package" : "Boto3"
     } ]
   }, {
@@ -3919,6 +3951,12 @@
   }, {
     "Name" : "UpdateSpace",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "cloudwatch.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateSpace",
       "Service" : "cloudwatch"
     } ],

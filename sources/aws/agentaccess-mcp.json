@@ -61,6 +61,21 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetSessionInfo",
+    "ActionConditionKeys" : [ "agentaccess-mcp:StackArn" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "HoldKey",
     "ActionConditionKeys" : [ "agentaccess-mcp:StackArn" ],
     "Annotations" : {
@@ -92,6 +107,21 @@
     }
   }, {
     "Name" : "KeyPress",
+    "ActionConditionKeys" : [ "agentaccess-mcp:StackArn" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "LaunchApplication",
     "ActionConditionKeys" : [ "agentaccess-mcp:StackArn" ],
     "Annotations" : {
       "Properties" : {
@@ -212,6 +242,21 @@
     }
   }, {
     "Name" : "Scroll",
+    "ActionConditionKeys" : [ "agentaccess-mcp:StackArn" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ToggleAppSwitcher",
     "ActionConditionKeys" : [ "agentaccess-mcp:StackArn" ],
     "Annotations" : {
       "Properties" : {
