@@ -197,6 +197,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetDomainPrices",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetDomainSuggestions",
     "Annotations" : {
       "Properties" : {
@@ -629,6 +643,17 @@
     "SDK" : [ {
       "Name" : "route53domains",
       "Method" : "get_domain_detail",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetDomainPrices",
+    "AuthorizedActions" : [ {
+      "Name" : "GetDomainPrices",
+      "Service" : "route53domains"
+    } ],
+    "SDK" : [ {
+      "Name" : "route53domains",
+      "Method" : "get_domain_prices",
       "Package" : "Boto3"
     } ]
   }, {

@@ -938,6 +938,36 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetPartnerCentralContentDocument",
+    "ActionConditionKeys" : [ "partnercentral:Catalog" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetPartnerCentralContentMetadata",
+    "ActionConditionKeys" : [ "partnercentral:Catalog" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetPartnerDashboard",
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
@@ -1520,6 +1550,21 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListPartnerCentralContent",
+    "ActionConditionKeys" : [ "partnercentral:Catalog" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListPartnerPaths",
     "Annotations" : {
       "Properties" : {
@@ -1828,6 +1873,21 @@
     "Resources" : [ {
       "Name" : "engagement-invitation"
     } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "SearchPartnerCentralContent",
+    "ActionConditionKeys" : [ "partnercentral:Catalog" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false

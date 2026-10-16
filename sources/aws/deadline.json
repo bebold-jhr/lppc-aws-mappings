@@ -1327,6 +1327,21 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListMemberships",
+    "ActionConditionKeys" : [ "deadline:PrincipalId", "deadline:RequesterPrincipalId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListMeteredProducts",
     "Annotations" : {
       "Properties" : {
@@ -3128,6 +3143,17 @@
     "SDK" : [ {
       "Name" : "deadline",
       "Method" : "list_limits",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListMemberships",
+    "AuthorizedActions" : [ {
+      "Name" : "ListMemberships",
+      "Service" : "deadline"
+    } ],
+    "SDK" : [ {
+      "Name" : "deadline",
+      "Method" : "list_memberships",
       "Package" : "Boto3"
     } ]
   }, {

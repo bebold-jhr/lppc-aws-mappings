@@ -2042,9 +2042,6 @@
       "Name" : "CreateBuild",
       "Service" : "gamelift"
     }, {
-      "Name" : "CreateBuild",
-      "Service" : "gamelift"
-    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "gamelift.amazonaws.com" ]
@@ -2062,9 +2059,6 @@
   }, {
     "Name" : "CreateContainerFleet",
     "AuthorizedActions" : [ {
-      "Name" : "CreateContainerFleet",
-      "Service" : "gamelift"
-    }, {
       "Name" : "CreateContainerFleet",
       "Service" : "gamelift"
     }, {
@@ -2088,9 +2082,6 @@
       "Name" : "CreateContainerGroupDefinition",
       "Service" : "gamelift"
     }, {
-      "Name" : "CreateContainerGroupDefinition",
-      "Service" : "gamelift"
-    }, {
       "Name" : "TagResource",
       "Service" : "gamelift"
     } ],
@@ -2102,9 +2093,6 @@
   }, {
     "Name" : "CreateFleet",
     "AuthorizedActions" : [ {
-      "Name" : "CreateFleet",
-      "Service" : "gamelift"
-    }, {
       "Name" : "CreateFleet",
       "Service" : "gamelift"
     }, {
@@ -2139,9 +2127,6 @@
       "Name" : "CreateGameServerGroup",
       "Service" : "gamelift"
     }, {
-      "Name" : "CreateGameServerGroup",
-      "Service" : "gamelift"
-    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "gamelift.amazonaws.com" ]
@@ -2173,9 +2158,6 @@
       "Name" : "CreateGameSessionQueue",
       "Service" : "gamelift"
     }, {
-      "Name" : "CreateGameSessionQueue",
-      "Service" : "gamelift"
-    }, {
       "Name" : "TagResource",
       "Service" : "gamelift"
     } ],
@@ -2204,9 +2186,6 @@
       "Name" : "CreateMatchmakingConfiguration",
       "Service" : "gamelift"
     }, {
-      "Name" : "CreateMatchmakingConfiguration",
-      "Service" : "gamelift"
-    }, {
       "Name" : "TagResource",
       "Service" : "gamelift"
     } ],
@@ -2218,9 +2197,6 @@
   }, {
     "Name" : "CreateMatchmakingRuleSet",
     "AuthorizedActions" : [ {
-      "Name" : "CreateMatchmakingRuleSet",
-      "Service" : "gamelift"
-    }, {
       "Name" : "CreateMatchmakingRuleSet",
       "Service" : "gamelift"
     }, {
@@ -2257,9 +2233,6 @@
   }, {
     "Name" : "CreateScript",
     "AuthorizedActions" : [ {
-      "Name" : "CreateScript",
-      "Service" : "gamelift"
-    }, {
       "Name" : "CreateScript",
       "Service" : "gamelift"
     }, {
@@ -3217,9 +3190,6 @@
     "AuthorizedActions" : [ {
       "Name" : "TagResource",
       "Service" : "gamelift"
-    }, {
-      "Name" : "TagResource",
-      "Service" : "gamelift"
     } ],
     "SDK" : [ {
       "Name" : "gamelift",
@@ -3240,9 +3210,6 @@
   }, {
     "Name" : "UntagResource",
     "AuthorizedActions" : [ {
-      "Name" : "UntagResource",
-      "Service" : "gamelift"
-    }, {
       "Name" : "UntagResource",
       "Service" : "gamelift"
     } ],

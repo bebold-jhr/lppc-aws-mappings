@@ -699,9 +699,6 @@
       "Name" : "DescribeScalableTargets",
       "Service" : "application-autoscaling"
     }, {
-      "Name" : "DescribeScalableTargets",
-      "Service" : "application-autoscaling"
-    }, {
       "Name" : "DescribeScalingPolicies",
       "Service" : "application-autoscaling"
     }, {

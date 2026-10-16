@@ -16,6 +16,7 @@
     }
   }, {
     "Name" : "AssociateService",
+    "ActionConditionKeys" : [ "aidevops:ServiceType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -397,6 +398,7 @@
     }
   }, {
     "Name" : "DisassociateService",
+    "ActionConditionKeys" : [ "aidevops:ServiceType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -570,6 +572,7 @@
     }
   }, {
     "Name" : "GetAssociation",
+    "ActionConditionKeys" : [ "aidevops:ServiceType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1051,6 +1054,7 @@
     }
   }, {
     "Name" : "ListWebhooks",
+    "ActionConditionKeys" : [ "aidevops:ServiceType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : true,
@@ -1273,6 +1277,7 @@
     }
   }, {
     "Name" : "UpdateAssociation",
+    "ActionConditionKeys" : [ "aidevops:ServiceType" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1430,6 +1435,9 @@
     }
   } ],
   "ConditionKeys" : [ {
+    "Name" : "aidevops:ServiceType",
+    "Types" : [ "String" ]
+  }, {
     "Name" : "aidevops:SourceAgentSpaceArn",
     "Types" : [ "ARN" ]
   }, {

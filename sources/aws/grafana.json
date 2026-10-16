@@ -657,6 +657,15 @@
   }, {
     "Name" : "TagResource",
     "AuthorizedActions" : [ {
+      "Name" : "CreateWorkspace",
+      "Service" : "grafana"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "grafana.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "TagResource",
       "Service" : "grafana"
     } ],

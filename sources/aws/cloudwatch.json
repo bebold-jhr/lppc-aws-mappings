@@ -1856,7 +1856,7 @@
     }
   }, {
     "Name" : "PutCompositeAlarm",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "cloudwatch:AlarmActions" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "cloudwatch:AlarmActions", "cloudwatch:AlarmTagsPropagationEnabled" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1925,7 +1925,7 @@
     }
   }, {
     "Name" : "PutLogAlarm",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "cloudwatch:AlarmActions" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "cloudwatch:AlarmActions", "cloudwatch:AlarmTagsPropagationEnabled" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -1958,7 +1958,7 @@
     }
   }, {
     "Name" : "PutMetricAlarm",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "cloudwatch:AlarmActions" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "cloudwatch:AlarmActions", "cloudwatch:AlarmTagsPropagationEnabled" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -2586,6 +2586,9 @@
   }, {
     "Name" : "cloudwatch:AlarmActions",
     "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "cloudwatch:AlarmTagsPropagationEnabled",
+    "Types" : [ "Bool" ]
   }, {
     "Name" : "cloudwatch:HasAccessGrant",
     "Types" : [ "String" ]

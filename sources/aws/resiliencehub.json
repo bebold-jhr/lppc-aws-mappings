@@ -812,6 +812,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetDependencyInsights",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetFailureModeFinding",
     "Annotations" : {
       "Properties" : {
@@ -1318,6 +1336,24 @@
         "IsWrite" : false
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListPolicyEvents",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "policy",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -1896,6 +1932,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "StartDependencyInsights",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "StartFailureModeAssessment",
@@ -2853,6 +2907,10 @@
     } ]
   }, {
     "Name" : "GetDependencyInsights",
+    "AuthorizedActions" : [ {
+      "Name" : "GetDependencyInsights",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehubv2",
       "Method" : "get_dependency_insights",
@@ -3193,6 +3251,10 @@
     } ]
   }, {
     "Name" : "ListPolicyEvents",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPolicyEvents",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehubv2",
       "Method" : "list_policy_events",
@@ -3570,6 +3632,10 @@
     } ]
   }, {
     "Name" : "StartDependencyInsights",
+    "AuthorizedActions" : [ {
+      "Name" : "StartDependencyInsights",
+      "Service" : "resiliencehub"
+    } ],
     "SDK" : [ {
       "Name" : "resiliencehubv2",
       "Method" : "start_dependency_insights",
