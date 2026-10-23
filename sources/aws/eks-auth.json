@@ -1,9 +1,11 @@
 {
   "Name" : "eks-auth",
+  "ServiceName" : "EKS Auth",
   "Actions" : [ {
     "Name" : "AssumeRoleForPodIdentity",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -39,5 +41,5 @@
     "ARNFormats" : [ "arn:${Partition}:eks:${Region}:${Account}:cluster/${ClusterName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

@@ -1,5 +1,6 @@
 {
   "Name" : "aoss",
+  "ServiceName" : "OpenSearch Serverless",
   "Actions" : [ {
     "Name" : "APIAccessAll",
     "ActionConditionKeys" : [ "aoss:CollectionId", "aoss:collection" ],
@@ -23,6 +24,7 @@
     "ActionConditionKeys" : [ "aoss:collection-group" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -41,6 +43,7 @@
     "ActionConditionKeys" : [ "aoss:collection" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -56,6 +59,7 @@
     "ActionConditionKeys" : [ "aoss:collection-group" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -70,6 +74,7 @@
     "Name" : "BatchGetEffectiveLifecyclePolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -84,6 +89,7 @@
     "Name" : "BatchGetLifecyclePolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -98,6 +104,7 @@
     "Name" : "BatchGetVpcEndpoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -113,6 +120,7 @@
     "ActionConditionKeys" : [ "aoss:collection", "aoss:index" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -128,6 +136,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -143,6 +152,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -157,6 +167,7 @@
     "Name" : "CreateIndex",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -172,6 +183,7 @@
     "ActionConditionKeys" : [ "aoss:index" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -186,6 +198,7 @@
     "Name" : "CreateSecurityConfig",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -201,6 +214,7 @@
     "ActionConditionKeys" : [ "aoss:collection" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -215,6 +229,7 @@
     "Name" : "CreateVpcEndpoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -248,6 +263,7 @@
     "ActionConditionKeys" : [ "aoss:collection", "aoss:index" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -262,6 +278,7 @@
     "Name" : "DeleteCollection",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -279,6 +296,7 @@
     "Name" : "DeleteCollectionGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -296,6 +314,7 @@
     "Name" : "DeleteIndex",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -311,6 +330,7 @@
     "ActionConditionKeys" : [ "aoss:index" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -325,6 +345,7 @@
     "Name" : "DeleteSecurityConfig",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -340,6 +361,7 @@
     "ActionConditionKeys" : [ "aoss:collection" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -354,6 +376,7 @@
     "Name" : "DeleteVpcEndpoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -369,6 +392,7 @@
     "ActionConditionKeys" : [ "aoss:collection", "aoss:index" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -383,6 +407,7 @@
     "Name" : "GetAccountSettings",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -397,6 +422,7 @@
     "Name" : "GetIndex",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -411,6 +437,7 @@
     "Name" : "GetPoliciesStats",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -425,6 +452,7 @@
     "Name" : "GetSecurityConfig",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -440,6 +468,7 @@
     "ActionConditionKeys" : [ "aoss:collection" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -454,6 +483,7 @@
     "Name" : "ListAccessPolicies",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -468,6 +498,7 @@
     "Name" : "ListCollectionGroups",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -482,6 +513,7 @@
     "Name" : "ListCollections",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -496,6 +528,7 @@
     "Name" : "ListLifecyclePolicies",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -510,6 +543,7 @@
     "Name" : "ListSecurityConfigs",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -524,6 +558,7 @@
     "Name" : "ListSecurityPolicies",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -538,6 +573,7 @@
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -552,6 +588,7 @@
     "Name" : "ListVpcEndpoints",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -567,6 +604,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -582,6 +620,7 @@
     "ActionConditionKeys" : [ "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -597,6 +636,7 @@
     "ActionConditionKeys" : [ "aoss:collection", "aoss:index" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -611,6 +651,7 @@
     "Name" : "UpdateAccountSettings",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -625,6 +666,7 @@
     "Name" : "UpdateCollection",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -642,6 +684,7 @@
     "Name" : "UpdateCollectionGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -659,6 +702,7 @@
     "Name" : "UpdateIndex",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -674,6 +718,7 @@
     "ActionConditionKeys" : [ "aoss:index" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -688,6 +733,7 @@
     "Name" : "UpdateSecurityConfig",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -703,6 +749,7 @@
     "ActionConditionKeys" : [ "aoss:collection" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -717,6 +764,7 @@
     "Name" : "UpdateVpcEndpoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -806,6 +854,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CancelIngestionJob",
+    "SDK" : [ {
+      "Name" : "opensearchserverless",
+      "Method" : "cancel_ingestion_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateAccessPolicy",
     "AuthorizedActions" : [ {
       "Name" : "CreateAccessPolicy",
@@ -856,6 +911,28 @@
     "SDK" : [ {
       "Name" : "opensearchserverless",
       "Method" : "create_index",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateIngestionJob",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "aoss"
+    } ],
+    "SDK" : [ {
+      "Name" : "opensearchserverless",
+      "Method" : "create_ingestion_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateIngestionStream",
+    "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Service" : "iam"
+    } ],
+    "SDK" : [ {
+      "Name" : "opensearchserverless",
+      "Method" : "create_ingestion_stream",
       "Package" : "Boto3"
     } ]
   }, {
@@ -947,6 +1024,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteIngestionStream",
+    "SDK" : [ {
+      "Name" : "opensearchserverless",
+      "Method" : "delete_ingestion_stream",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteLifecyclePolicy",
     "AuthorizedActions" : [ {
       "Name" : "DeleteLifecyclePolicy",
@@ -1024,6 +1108,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetIngestionJob",
+    "SDK" : [ {
+      "Name" : "opensearchserverless",
+      "Method" : "get_ingestion_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetIngestionStream",
+    "SDK" : [ {
+      "Name" : "opensearchserverless",
+      "Method" : "get_ingestion_stream",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetPoliciesStats",
     "AuthorizedActions" : [ {
       "Name" : "GetPoliciesStats",
@@ -1087,6 +1185,20 @@
     "SDK" : [ {
       "Name" : "opensearchserverless",
       "Method" : "list_collections",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListIngestionJobs",
+    "SDK" : [ {
+      "Name" : "opensearchserverless",
+      "Method" : "list_ingestion_jobs",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListIngestionStreams",
+    "SDK" : [ {
+      "Name" : "opensearchserverless",
+      "Method" : "list_ingestion_streams",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1278,5 +1390,5 @@
     "Name" : "Dashboards",
     "ARNFormats" : [ "arn:${Partition}:aoss:${Region}:${Account}:dashboards/default" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

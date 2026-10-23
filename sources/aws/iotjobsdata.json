@@ -1,5 +1,6 @@
 {
   "Name" : "iotjobsdata",
+  "ServiceName" : "IoT Jobs DataPlane",
   "Actions" : [ {
     "Name" : "DescribeJobExecution",
     "ActionConditionKeys" : [ "iot:JobId" ],
@@ -135,5 +136,5 @@
     "Name" : "thing",
     "ARNFormats" : [ "arn:${Partition}:iot:${Region}:${Account}:thing/${ThingName}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

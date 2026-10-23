@@ -1,5 +1,6 @@
 {
   "Name" : "transform",
+  "ServiceName" : "Transform",
   "Actions" : [ {
     "Name" : "AccessTransformProfile",
     "Annotations" : {
@@ -367,5 +368,5 @@
     "Name" : "profile",
     "ARNFormats" : [ "arn:${Partition}:transform:${Region}:${Account}:profile/${Identifier}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

@@ -1,5 +1,6 @@
 {
   "Name" : "application-signals-mcp",
+  "ServiceName" : "Application Signals MCP",
   "Actions" : [ {
     "Name" : "CallReadOnlyTool",
     "Annotations" : {
@@ -44,5 +45,5 @@
     "ARNFormats" : [ "arn:${Partition}:application-signals-mcp:${Region}:${Account}:mcp-server/*" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

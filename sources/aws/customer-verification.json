@@ -1,5 +1,6 @@
 {
   "Name" : "customer-verification",
+  "ServiceName" : "Customer Verification Service",
   "Actions" : [ {
     "Name" : "CreateCustomerVerificationDetails",
     "Annotations" : {
@@ -99,5 +100,5 @@
       "IAM Action Last Accessed" : false
     }
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

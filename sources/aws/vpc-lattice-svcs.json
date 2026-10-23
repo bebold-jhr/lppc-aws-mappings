@@ -1,5 +1,6 @@
 {
   "Name" : "vpc-lattice-svcs",
+  "ServiceName" : "VPC Lattice Services",
   "Actions" : [ {
     "Name" : "Connect",
     "ActionConditionKeys" : [ "vpc-lattice-svcs:Port", "vpc-lattice-svcs:ServiceArn", "vpc-lattice-svcs:ServiceNetworkArn", "vpc-lattice-svcs:SourceVpc", "vpc-lattice-svcs:SourceVpcOwnerAccount" ],
@@ -77,5 +78,5 @@
     "ARNFormats" : [ "arn:${Partition}:vpc-lattice:${Region}:${Account}:service/${ServiceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

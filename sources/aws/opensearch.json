@@ -1,5 +1,6 @@
 {
   "Name" : "opensearch",
+  "ServiceName" : "OpenSearch",
   "Actions" : [ {
     "Name" : "ApplicationAccessAll",
     "Annotations" : {
@@ -1354,5 +1355,5 @@
     "Name" : "datasource",
     "ARNFormats" : [ "arn:${Partition}:opensearch:${Region}:${Account}:datasource/${DataSourceName}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

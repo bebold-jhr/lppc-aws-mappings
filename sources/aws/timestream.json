@@ -1,9 +1,11 @@
 {
   "Name" : "timestream",
+  "ServiceName" : "Timestream",
   "Actions" : [ {
     "Name" : "CancelQuery",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -18,6 +20,7 @@
     "Name" : "CreateBatchLoadTask",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -36,6 +39,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -54,6 +58,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -69,6 +74,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -86,6 +92,7 @@
     "Name" : "DeleteDatabase",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -103,6 +110,7 @@
     "Name" : "DeleteScheduledQuery",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -120,6 +128,7 @@
     "Name" : "DeleteTable",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -137,6 +146,7 @@
     "Name" : "DescribeAccountSettings",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -151,6 +161,7 @@
     "Name" : "DescribeBatchLoadTask",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -165,6 +176,7 @@
     "Name" : "DescribeDatabase",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -182,6 +194,7 @@
     "Name" : "DescribeEndpoints",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -196,6 +209,7 @@
     "Name" : "DescribeScheduledQuery",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -213,6 +227,7 @@
     "Name" : "DescribeTable",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -230,6 +245,7 @@
     "Name" : "ExecuteScheduledQuery",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -275,6 +291,7 @@
     "Name" : "ListBatchLoadTasks",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -289,6 +306,7 @@
     "Name" : "ListDatabases",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -303,6 +321,7 @@
     "Name" : "ListMeasures",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -320,6 +339,7 @@
     "Name" : "ListScheduledQueries",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -334,6 +354,7 @@
     "Name" : "ListTables",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -351,6 +372,7 @@
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -403,6 +425,7 @@
     "Name" : "Select",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -420,6 +443,7 @@
     "Name" : "SelectValues",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -469,6 +493,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -490,6 +515,7 @@
     "Name" : "Unload",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -508,6 +534,7 @@
     "ActionConditionKeys" : [ "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -529,6 +556,7 @@
     "Name" : "UpdateAccountSettings",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -543,6 +571,7 @@
     "Name" : "UpdateDatabase",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -560,6 +589,7 @@
     "Name" : "UpdateScheduledQuery",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -577,6 +607,7 @@
     "Name" : "UpdateTable",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -594,6 +625,7 @@
     "Name" : "WriteRecords",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1010,5 +1042,5 @@
     "ARNFormats" : [ "arn:${Partition}:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

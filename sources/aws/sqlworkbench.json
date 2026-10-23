@@ -1,5 +1,6 @@
 {
   "Name" : "sqlworkbench",
+  "ServiceName" : "SQL Workbench",
   "Actions" : [ {
     "Name" : "AssociateConnectionWithChart",
     "Annotations" : {
@@ -1294,5 +1295,5 @@
     "ARNFormats" : [ "arn:${Partition}:sqlworkbench:${Region}:${Account}:query/${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

@@ -1,5 +1,6 @@
 {
   "Name" : "ec2-instance-connect",
+  "ServiceName" : "EC2 Instance Connect",
   "Actions" : [ {
     "Name" : "OpenTunnel",
     "Annotations" : {
@@ -25,6 +26,7 @@
     "ActionConditionKeys" : [ "ec2:osuser" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -42,6 +44,7 @@
     "Name" : "SendSerialConsoleSSHPublicKey",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -107,5 +110,5 @@
     "ARNFormats" : [ "arn:${Partition}:ec2:${Region}:${Account}:instance-connect-endpoint/${InstanceConnectEndpointId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

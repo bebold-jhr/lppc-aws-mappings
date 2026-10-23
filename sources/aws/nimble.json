@@ -1,5 +1,6 @@
 {
   "Name" : "nimble",
+  "ServiceName" : "Nimble Studio",
   "Actions" : [ {
     "Name" : "AcceptEulas",
     "Annotations" : {
@@ -968,5 +969,5 @@
     "ARNFormats" : [ "arn:${Partition}:nimble:${Region}:${Account}:studio-component/${StudioComponentId}" ],
     "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "nimble:studioId" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

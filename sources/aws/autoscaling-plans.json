@@ -1,9 +1,11 @@
 {
   "Name" : "autoscaling-plans",
+  "ServiceName" : "Auto Scaling",
   "Actions" : [ {
     "Name" : "CreateScalingPlan",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -18,6 +20,7 @@
     "Name" : "DeleteScalingPlan",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -32,6 +35,7 @@
     "Name" : "DescribeScalingPlanResources",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -46,6 +50,7 @@
     "Name" : "DescribeScalingPlans",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -60,6 +65,7 @@
     "Name" : "GetScalingPlanResourceForecastData",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -74,6 +80,7 @@
     "Name" : "UpdateScalingPlan",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -152,5 +159,5 @@
       "Package" : "Boto3"
     } ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

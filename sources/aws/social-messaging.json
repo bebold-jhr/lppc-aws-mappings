@@ -1,10 +1,12 @@
 {
   "Name" : "social-messaging",
+  "ServiceName" : "Social Messaging",
   "Actions" : [ {
     "Name" : "AssociateWhatsAppBusinessAccount",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -19,6 +21,7 @@
     "Name" : "CreateWhatsAppDataset",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -36,6 +39,7 @@
     "Name" : "CreateWhatsAppFlow",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -53,6 +57,7 @@
     "Name" : "CreateWhatsAppMessageTemplate",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -70,6 +75,7 @@
     "Name" : "CreateWhatsAppMessageTemplateFromLibrary",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -87,6 +93,7 @@
     "Name" : "CreateWhatsAppMessageTemplateMedia",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -104,6 +111,7 @@
     "Name" : "DeleteWhatsAppFlow",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -121,6 +129,7 @@
     "Name" : "DeleteWhatsAppMessageMedia",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -138,6 +147,7 @@
     "Name" : "DeleteWhatsAppMessageTemplate",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -155,6 +165,7 @@
     "Name" : "DeprecateWhatsAppFlow",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -172,6 +183,7 @@
     "Name" : "DisassociateWhatsAppBusinessAccount",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -189,6 +201,7 @@
     "Name" : "GetLinkedWhatsAppBusinessAccount",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -206,6 +219,7 @@
     "Name" : "GetLinkedWhatsAppBusinessAccountPhoneNumber",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -223,6 +237,7 @@
     "Name" : "GetWhatsAppBusinessPublicKey",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -240,6 +255,7 @@
     "Name" : "GetWhatsAppCallPermission",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -257,6 +273,7 @@
     "Name" : "GetWhatsAppFlow",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -274,6 +291,7 @@
     "Name" : "GetWhatsAppFlowPreview",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -291,6 +309,7 @@
     "Name" : "GetWhatsAppMessageMedia",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -308,6 +327,7 @@
     "Name" : "GetWhatsAppMessageTemplate",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -325,6 +345,7 @@
     "Name" : "ListLinkedWhatsAppBusinessAccounts",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -339,6 +360,7 @@
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -358,6 +380,7 @@
     "Name" : "ListWhatsAppFlowAssets",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -375,6 +398,7 @@
     "Name" : "ListWhatsAppFlows",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -392,6 +416,7 @@
     "Name" : "ListWhatsAppMessageTemplates",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -409,6 +434,7 @@
     "Name" : "ListWhatsAppTemplateLibrary",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -426,6 +452,7 @@
     "Name" : "PostWhatsAppMessageMedia",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -443,6 +470,7 @@
     "Name" : "PublishWhatsAppFlow",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -460,6 +488,7 @@
     "Name" : "PutWhatsAppBusinessAccountEventDestinations",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -477,6 +506,7 @@
     "Name" : "PutWhatsAppBusinessPublicKey",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -494,6 +524,7 @@
     "Name" : "SendWhatsAppCallEvent",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -511,6 +542,7 @@
     "Name" : "SendWhatsAppConversionEvent",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -528,6 +560,7 @@
     "Name" : "SendWhatsAppMessage",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -546,6 +579,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -566,6 +600,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -585,6 +620,7 @@
     "Name" : "UpdateLinkedWhatsAppBusinessAccountPhoneNumber",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -602,6 +638,7 @@
     "Name" : "UpdateWhatsAppFlow",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -619,6 +656,7 @@
     "Name" : "UpdateWhatsAppFlowAssets",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -636,6 +674,7 @@
     "Name" : "UpdateWhatsAppMessageTemplate",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1103,5 +1142,5 @@
     "ARNFormats" : [ "arn:${Partition}:social-messaging:${Region}:${Account}:waba/${WabaId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

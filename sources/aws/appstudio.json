@@ -1,5 +1,6 @@
 {
   "Name" : "appstudio",
+  "ServiceName" : "App Studio",
   "Actions" : [ {
     "Name" : "GetAccountStatus",
     "Annotations" : {
@@ -81,5 +82,5 @@
     "Name" : "instance",
     "ARNFormats" : [ "arn:${Partition}:appstudio:${Region}:${Account}:instance/${InstanceId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

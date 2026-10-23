@@ -1,5 +1,6 @@
 {
   "Name" : "kafka-cluster",
+  "ServiceName" : "Apache Kafka APIs for MSK",
   "Actions" : [ {
     "Name" : "AlterCluster",
     "Annotations" : {
@@ -342,5 +343,5 @@
     "Name" : "transactional-id",
     "ARNFormats" : [ "arn:${Partition}:kafka:${Region}:${Account}:transactional-id/${ClusterName}/${ClusterUuid}/${TransactionalId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

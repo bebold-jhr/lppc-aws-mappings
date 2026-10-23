@@ -1,5 +1,6 @@
 {
   "Name" : "bugbust",
+  "ServiceName" : "BugBust",
   "Actions" : [ {
     "Name" : "CreateEvent",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
@@ -316,5 +317,5 @@
     "ARNFormats" : [ "arn:${Partition}:bugbust:${Region}:${Account}:events/${EventId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

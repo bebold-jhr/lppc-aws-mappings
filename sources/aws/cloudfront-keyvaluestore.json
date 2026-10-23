@@ -1,9 +1,11 @@
 {
   "Name" : "cloudfront-keyvaluestore",
+  "ServiceName" : "CloudFront KeyValueStore",
   "Actions" : [ {
     "Name" : "DeleteKey",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -21,6 +23,7 @@
     "Name" : "DescribeKeyValueStore",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -38,6 +41,7 @@
     "Name" : "GetKey",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -55,6 +59,7 @@
     "Name" : "ListKeys",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -72,6 +77,7 @@
     "Name" : "PutKey",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -89,6 +95,7 @@
     "Name" : "UpdateKeys",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -174,5 +181,5 @@
     "Name" : "key-value-store",
     "ARNFormats" : [ "arn:${Partition}:cloudfront::${Account}:key-value-store/${ResourceId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

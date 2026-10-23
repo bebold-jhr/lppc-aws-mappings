@@ -1,5 +1,6 @@
 {
   "Name" : "ssmmessages",
+  "ServiceName" : "SSM Messages",
   "Actions" : [ {
     "Name" : "CreateControlChannel",
     "ActionConditionKeys" : [ "ec2:SourceInstanceARN", "ssm:SourceInstanceARN" ],
@@ -65,5 +66,5 @@
     "Name" : "ssm:SourceInstanceARN",
     "Types" : [ "ARN" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

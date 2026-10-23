@@ -1,10 +1,12 @@
 {
   "Name" : "deadline",
+  "ServiceName" : "Deadline Cloud",
   "Actions" : [ {
     "Name" : "AssociateMemberToFarm",
     "ActionConditionKeys" : [ "deadline:AssociatedMembershipLevel", "deadline:MembershipLevel" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -23,6 +25,7 @@
     "ActionConditionKeys" : [ "deadline:AssociatedMembershipLevel", "deadline:MembershipLevel" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -41,6 +44,7 @@
     "ActionConditionKeys" : [ "deadline:AssociatedMembershipLevel", "deadline:MembershipLevel" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -59,6 +63,7 @@
     "ActionConditionKeys" : [ "deadline:AssociatedMembershipLevel", "deadline:MembershipLevel" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -76,6 +81,7 @@
     "Name" : "AssumeFleetRoleForRead",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -93,6 +99,7 @@
     "Name" : "AssumeFleetRoleForWorker",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -110,6 +117,7 @@
     "Name" : "AssumeQueueRoleForRead",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -127,6 +135,7 @@
     "Name" : "AssumeQueueRoleForUser",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -144,6 +153,7 @@
     "Name" : "AssumeQueueRoleForWorker",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -163,6 +173,7 @@
     "Name" : "BatchGetJobEntity",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -180,6 +191,7 @@
     "Name" : "CopyJobTemplate",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -198,6 +210,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -216,6 +229,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -234,6 +248,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -252,6 +267,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -270,6 +286,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -287,6 +304,7 @@
     "Name" : "CreateLimit",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -305,6 +323,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -323,6 +342,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -340,6 +360,7 @@
     "Name" : "CreateQueueEnvironment",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -357,6 +378,7 @@
     "Name" : "CreateQueueFleetAssociation",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -376,6 +398,7 @@
     "Name" : "CreateQueueLimitAssociation",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -395,6 +418,7 @@
     "Name" : "CreateStorageProfile",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -413,6 +437,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -430,6 +455,7 @@
     "Name" : "DeleteBudget",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -447,6 +473,7 @@
     "Name" : "DeleteFarm",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -464,6 +491,7 @@
     "Name" : "DeleteFleet",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -481,6 +509,7 @@
     "Name" : "DeleteLicenseEndpoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -498,6 +527,7 @@
     "Name" : "DeleteLimit",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -515,6 +545,7 @@
     "Name" : "DeleteMeteredProduct",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -532,6 +563,7 @@
     "Name" : "DeleteMonitor",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -549,6 +581,7 @@
     "Name" : "DeleteQueue",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -566,6 +599,7 @@
     "Name" : "DeleteQueueEnvironment",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -583,6 +617,7 @@
     "Name" : "DeleteQueueFleetAssociation",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -602,6 +637,7 @@
     "Name" : "DeleteQueueLimitAssociation",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -621,6 +657,7 @@
     "Name" : "DeleteStorageProfile",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -638,6 +675,7 @@
     "Name" : "DeleteVolume",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -655,6 +693,7 @@
     "Name" : "DeleteWorker",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -673,6 +712,7 @@
     "ActionConditionKeys" : [ "deadline:AssociatedMembershipLevel" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -691,6 +731,7 @@
     "ActionConditionKeys" : [ "deadline:AssociatedMembershipLevel" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -709,6 +750,7 @@
     "ActionConditionKeys" : [ "deadline:AssociatedMembershipLevel" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -727,6 +769,7 @@
     "ActionConditionKeys" : [ "deadline:AssociatedMembershipLevel" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -761,6 +804,7 @@
     "Name" : "GetBudget",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -778,6 +822,7 @@
     "Name" : "GetFarm",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -795,6 +840,7 @@
     "Name" : "GetFleet",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -812,6 +858,7 @@
     "Name" : "GetJob",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -829,6 +876,7 @@
     "Name" : "GetJobTemplate",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -846,6 +894,7 @@
     "Name" : "GetLicenseEndpoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -863,6 +912,7 @@
     "Name" : "GetLimit",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -880,6 +930,7 @@
     "Name" : "GetMonitor",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -897,6 +948,7 @@
     "Name" : "GetMonitorSettings",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -914,6 +966,7 @@
     "Name" : "GetQueue",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -931,6 +984,7 @@
     "Name" : "GetQueueEnvironment",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -948,6 +1002,7 @@
     "Name" : "GetQueueFleetAssociation",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -967,6 +1022,7 @@
     "Name" : "GetQueueLimitAssociation",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -986,6 +1042,7 @@
     "Name" : "GetSession",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1003,6 +1060,7 @@
     "Name" : "GetSessionAction",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1020,6 +1078,7 @@
     "Name" : "GetSessionsStatisticsAggregation",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1041,6 +1100,7 @@
     "Name" : "GetStep",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1058,6 +1118,7 @@
     "Name" : "GetStorageProfile",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1075,6 +1136,7 @@
     "Name" : "GetStorageProfileForQueue",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1092,6 +1154,7 @@
     "Name" : "GetTask",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1109,6 +1172,7 @@
     "Name" : "GetVolume",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1126,6 +1190,7 @@
     "Name" : "GetWorker",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1143,6 +1208,7 @@
     "Name" : "ListAvailableMeteredProducts",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1157,6 +1223,7 @@
     "Name" : "ListBudgets",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1174,6 +1241,7 @@
     "Name" : "ListFarmMembers",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1192,6 +1260,7 @@
     "ActionConditionKeys" : [ "deadline:PrincipalId", "deadline:RequesterPrincipalId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1209,6 +1278,7 @@
     "Name" : "ListFleetMembers",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1227,6 +1297,7 @@
     "ActionConditionKeys" : [ "deadline:PrincipalId", "deadline:RequesterPrincipalId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1244,6 +1315,7 @@
     "Name" : "ListJobMembers",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1261,6 +1333,7 @@
     "Name" : "ListJobParameterDefinitions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1279,6 +1352,7 @@
     "ActionConditionKeys" : [ "deadline:PrincipalId", "deadline:RequesterPrincipalId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1296,6 +1370,7 @@
     "Name" : "ListLicenseEndpoints",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1313,6 +1388,7 @@
     "Name" : "ListLimits",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1331,6 +1407,7 @@
     "ActionConditionKeys" : [ "deadline:PrincipalId", "deadline:RequesterPrincipalId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1345,6 +1422,7 @@
     "Name" : "ListMeteredProducts",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1362,6 +1440,7 @@
     "Name" : "ListMonitors",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1379,6 +1458,7 @@
     "Name" : "ListQueueEnvironments",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1396,6 +1476,7 @@
     "Name" : "ListQueueFleetAssociations",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1417,6 +1498,7 @@
     "Name" : "ListQueueLimitAssociations",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1436,6 +1518,7 @@
     "Name" : "ListQueueMembers",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1454,6 +1537,7 @@
     "ActionConditionKeys" : [ "deadline:PrincipalId", "deadline:RequesterPrincipalId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1471,6 +1555,7 @@
     "Name" : "ListSessionActions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1488,6 +1573,7 @@
     "Name" : "ListSessions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1505,6 +1591,7 @@
     "Name" : "ListSessionsForWorker",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1522,6 +1609,7 @@
     "Name" : "ListStepConsumers",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1539,6 +1627,7 @@
     "Name" : "ListStepDependencies",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1556,6 +1645,7 @@
     "Name" : "ListSteps",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1573,6 +1663,7 @@
     "Name" : "ListStorageProfiles",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1590,6 +1681,7 @@
     "Name" : "ListStorageProfilesForQueue",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1608,6 +1700,7 @@
     "ActionConditionKeys" : [ "deadline:CalledAction" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1641,6 +1734,7 @@
     "Name" : "ListTasks",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1658,6 +1752,7 @@
     "Name" : "ListVolumes",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1675,6 +1770,7 @@
     "Name" : "ListWorkers",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1692,6 +1788,7 @@
     "Name" : "PutMeteredProduct",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1709,6 +1806,7 @@
     "Name" : "SearchJobs",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1726,6 +1824,7 @@
     "Name" : "SearchSteps",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1745,6 +1844,7 @@
     "Name" : "SearchTasks",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1764,6 +1864,7 @@
     "Name" : "SearchWorkers",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1778,6 +1879,7 @@
     "Name" : "StartSessionsStatisticsAggregation",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1798,6 +1900,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "deadline:CalledAction" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -1832,6 +1935,7 @@
     "ActionConditionKeys" : [ "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -1865,6 +1969,7 @@
     "Name" : "UpdateBudget",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1882,6 +1987,7 @@
     "Name" : "UpdateFarm",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1899,6 +2005,7 @@
     "Name" : "UpdateFleet",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1916,6 +2023,7 @@
     "Name" : "UpdateJob",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1933,6 +2041,7 @@
     "Name" : "UpdateLimit",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1950,6 +2059,7 @@
     "Name" : "UpdateMonitor",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1967,6 +2077,7 @@
     "Name" : "UpdateMonitorSettings",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1984,6 +2095,7 @@
     "Name" : "UpdateQueue",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2001,6 +2113,7 @@
     "Name" : "UpdateQueueEnvironment",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2018,6 +2131,7 @@
     "Name" : "UpdateQueueFleetAssociation",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2037,6 +2151,7 @@
     "Name" : "UpdateQueueLimitAssociation",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2056,6 +2171,7 @@
     "Name" : "UpdateSession",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2073,6 +2189,7 @@
     "Name" : "UpdateStep",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2090,6 +2207,7 @@
     "Name" : "UpdateStorageProfile",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2107,6 +2225,7 @@
     "Name" : "UpdateTask",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2124,6 +2243,7 @@
     "Name" : "UpdateWorker",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2141,6 +2261,7 @@
     "Name" : "UpdateWorkerSchedule",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3696,5 +3817,5 @@
     "ARNFormats" : [ "arn:${Partition}:deadline:${Region}:${Account}:farm/${FarmId}/fleet/${FleetId}/worker/${WorkerId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "deadline:FarmMembershipLevels", "deadline:FleetMembershipLevels" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

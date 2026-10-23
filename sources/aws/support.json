@@ -1,9 +1,11 @@
 {
   "Name" : "support",
+  "ServiceName" : "Support",
   "Actions" : [ {
     "Name" : "AddAttachmentsToSet",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -18,6 +20,7 @@
     "Name" : "AddCommunicationToCase",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -46,6 +49,7 @@
     "Name" : "CreateCase",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -60,6 +64,7 @@
     "Name" : "DescribeAttachment",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -102,6 +107,7 @@
     "Name" : "DescribeCases",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -130,6 +136,7 @@
     "Name" : "DescribeCommunications",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -144,6 +151,7 @@
     "Name" : "DescribeCreateCaseOptions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -186,6 +194,7 @@
     "Name" : "DescribeServices",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -200,6 +209,7 @@
     "Name" : "DescribeSeverityLevels",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -228,6 +238,7 @@
     "Name" : "DescribeSupportedLanguages",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -242,6 +253,7 @@
     "Name" : "DescribeTrustedAdvisorCheckRefreshStatuses",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -256,6 +268,7 @@
     "Name" : "DescribeTrustedAdvisorCheckResult",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -270,6 +283,7 @@
     "Name" : "DescribeTrustedAdvisorCheckSummaries",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -284,6 +298,7 @@
     "Name" : "DescribeTrustedAdvisorChecks",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -312,6 +327,7 @@
     "Name" : "DownloadAttachment",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -438,6 +454,7 @@
     "Name" : "RefreshTrustedAdvisorCheck",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -452,6 +469,7 @@
     "Name" : "ResolveCase",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -536,6 +554,7 @@
     "Name" : "UploadAttachment",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -804,5 +823,5 @@
       "Package" : "Boto3"
     } ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

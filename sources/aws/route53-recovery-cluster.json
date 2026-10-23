@@ -1,9 +1,11 @@
 {
   "Name" : "route53-recovery-cluster",
+  "ServiceName" : "Route 53 Recovery Cluster",
   "Actions" : [ {
     "Name" : "GetRoutingControlState",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -21,6 +23,7 @@
     "Name" : "ListRoutingControls",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -36,6 +39,7 @@
     "ActionConditionKeys" : [ "route53-recovery-cluster:AllowSafetyRulesOverrides" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -54,6 +58,7 @@
     "ActionConditionKeys" : [ "route53-recovery-cluster:AllowSafetyRulesOverrides" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -121,5 +126,5 @@
     "Name" : "routingcontrol",
     "ARNFormats" : [ "arn:${Partition}:route53-recovery-control::${Account}:controlpanel/${ControlPanelId}/routingcontrol/${RoutingControlId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

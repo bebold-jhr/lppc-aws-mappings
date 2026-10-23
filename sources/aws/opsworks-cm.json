@@ -1,5 +1,6 @@
 {
   "Name" : "opsworks-cm",
+  "ServiceName" : "OpsworksCM",
   "Actions" : [ {
     "Name" : "AssociateNode",
     "Annotations" : {
@@ -274,5 +275,5 @@
     "Name" : "server",
     "ARNFormats" : [ "arn:${Partition}:opsworks-cm::${Account}:server/${ServerName}/${UniqueId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

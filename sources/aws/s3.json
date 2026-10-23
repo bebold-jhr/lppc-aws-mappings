@@ -1,10 +1,12 @@
 {
   "Name" : "s3",
+  "ServiceName" : "S3",
   "Actions" : [ {
     "Name" : "AbortMultipartUpload",
     "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -43,6 +45,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -61,6 +64,7 @@
     "ActionConditionKeys" : [ "s3:RequestObjectTag/<key>", "s3:RequestObjectTagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-acl", "s3:x-amz-content-sha256", "s3:x-amz-copy-source", "s3:x-amz-grant-full-control", "s3:x-amz-grant-read", "s3:x-amz-grant-read-acp", "s3:x-amz-grant-write", "s3:x-amz-grant-write-acp", "s3:x-amz-metadata-directive", "s3:x-amz-server-side-encryption", "s3:x-amz-server-side-encryption-aws-kms-key-id", "s3:x-amz-server-side-encryption-customer-algorithm", "s3:x-amz-storage-class", "s3:x-amz-website-redirect-location" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -81,6 +85,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "s3:AccessGrantScope", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -99,6 +104,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -117,6 +123,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "s3:AccessGrantsLocationScope", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -135,6 +142,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "s3:AccessPointNetworkOrigin", "s3:AccessPointTag/${TagKey}", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:locationconstraint", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-acl", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -153,6 +161,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -171,6 +180,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:locationconstraint", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-acl", "s3:x-amz-bucket-namespace", "s3:x-amz-content-sha256", "s3:x-amz-grant-full-control", "s3:x-amz-grant-read", "s3:x-amz-grant-read-acp", "s3:x-amz-grant-write", "s3:x-amz-grant-write-acp", "s3:x-amz-object-ownership" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -189,6 +199,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -207,6 +218,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "s3:RequestJobOperation", "s3:RequestJobPriority", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -222,6 +234,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -240,6 +253,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -255,6 +269,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:AccessGrantScope", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -273,6 +288,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -291,6 +307,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -309,6 +326,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:AccessGrantsLocationScope", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -327,6 +345,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:AccessPointNetworkOrigin", "s3:AccessPointTag/${TagKey}", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -345,6 +364,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -363,6 +383,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:AccessPointNetworkOrigin", "s3:AccessPointTag/${TagKey}", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -381,6 +402,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -399,6 +421,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -417,6 +440,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -435,6 +459,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -453,6 +478,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -471,6 +497,7 @@
     "ActionConditionKeys" : [ "s3:ExistingJobOperation", "s3:ExistingJobPriority", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -489,6 +516,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -507,6 +535,7 @@
     "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:if-match", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -547,6 +576,7 @@
     "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -567,6 +597,7 @@
     "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:versionid", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -607,6 +638,7 @@
     "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:versionid", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -627,6 +659,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -645,6 +678,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -663,6 +697,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -681,6 +716,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -699,6 +735,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -717,6 +754,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -753,6 +791,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:AccessGrantScope", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -771,6 +810,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -789,6 +829,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -807,6 +848,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -825,6 +867,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:AccessGrantsLocationScope", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -843,6 +886,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:AccessPointNetworkOrigin", "s3:AccessPointTag/${TagKey}", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -858,6 +902,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -876,6 +921,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -894,6 +940,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:AccessPointNetworkOrigin", "s3:AccessPointTag/${TagKey}", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -912,6 +959,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -930,6 +978,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:AccessPointNetworkOrigin", "s3:AccessPointTag/${TagKey}", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -948,6 +997,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -981,6 +1031,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1017,6 +1068,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1037,6 +1089,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1057,6 +1110,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1077,6 +1131,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1095,6 +1150,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1113,6 +1169,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1151,6 +1208,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1169,6 +1227,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1189,6 +1248,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1225,6 +1285,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1243,6 +1304,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1261,6 +1323,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1279,6 +1342,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1297,6 +1361,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1315,6 +1380,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1333,6 +1399,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1351,6 +1418,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1369,6 +1437,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1387,6 +1456,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1405,6 +1475,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1423,6 +1494,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1441,6 +1513,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1459,6 +1532,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1477,6 +1551,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1495,6 +1570,7 @@
     "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1515,6 +1591,7 @@
     "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1575,6 +1652,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1595,6 +1673,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1615,6 +1694,7 @@
     "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1653,6 +1733,7 @@
     "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:versionid", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1673,6 +1754,7 @@
     "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:versionid", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1769,6 +1851,7 @@
     "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:versionid", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1807,6 +1890,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1825,6 +1909,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1843,6 +1928,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1879,6 +1965,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1915,6 +2002,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1933,6 +2021,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1948,6 +2037,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1966,6 +2056,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1981,6 +2072,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1996,6 +2088,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2011,6 +2104,7 @@
     "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:delimiter", "s3:max-keys", "s3:prefix", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2031,6 +2125,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:AccessGrantsInstanceArn", "s3:AccessPointNetworkOrigin", "s3:AccessPointTag/${TagKey}", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2049,6 +2144,7 @@
     "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:delimiter", "s3:max-keys", "s3:prefix", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2069,6 +2165,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2087,6 +2184,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2102,6 +2200,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2117,6 +2216,7 @@
     "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2177,6 +2277,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2192,6 +2293,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2207,6 +2309,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2289,6 +2392,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -2307,6 +2411,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2325,6 +2430,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -2343,6 +2449,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -2390,6 +2497,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2426,6 +2534,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-acl", "s3:x-amz-content-sha256", "s3:x-amz-grant-full-control", "s3:x-amz-grant-read", "s3:x-amz-grant-read-acp", "s3:x-amz-grant-write", "s3:x-amz-grant-write-acp" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -2444,6 +2553,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2462,6 +2572,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2498,6 +2609,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2516,6 +2628,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -2534,6 +2647,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -2570,6 +2684,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2588,6 +2703,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -2606,6 +2722,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2624,6 +2741,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2642,6 +2760,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2660,6 +2779,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2678,6 +2798,7 @@
     "ActionConditionKeys" : [ "s3:InventoryAccessibleOptionalFields", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2696,6 +2817,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "s3:ExistingJobOperation", "s3:ExistingJobPriority", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -2714,6 +2836,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2732,6 +2855,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2750,6 +2874,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -2768,6 +2893,7 @@
     "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ObjectCreationOperation", "s3:RequestObjectTag/<key>", "s3:RequestObjectTagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:if-match", "s3:if-none-match", "s3:object-lock-event-hold", "s3:object-lock-event-hold-duration-days", "s3:object-lock-legal-hold", "s3:object-lock-mode", "s3:object-lock-remaining-retention-days", "s3:object-lock-retain-until-date", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-acl", "s3:x-amz-content-sha256", "s3:x-amz-copy-source", "s3:x-amz-grant-full-control", "s3:x-amz-grant-read", "s3:x-amz-grant-read-acp", "s3:x-amz-grant-write", "s3:x-amz-grant-write-acp", "s3:x-amz-metadata-directive", "s3:x-amz-object-annotation-directive", "s3:x-amz-server-side-encryption", "s3:x-amz-server-side-encryption-aws-kms-key-id", "s3:x-amz-server-side-encryption-customer-algorithm", "s3:x-amz-storage-class", "s3:x-amz-website-redirect-location" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2788,6 +2914,7 @@
     "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-acl", "s3:x-amz-content-sha256", "s3:x-amz-grant-full-control", "s3:x-amz-grant-read", "s3:x-amz-grant-read-acp", "s3:x-amz-grant-write", "s3:x-amz-grant-write-acp", "s3:x-amz-storage-class" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -2828,6 +2955,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:object-lock-legal-hold", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2848,6 +2976,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:object-lock-event-hold", "s3:object-lock-event-hold-duration-days", "s3:object-lock-mode", "s3:object-lock-remaining-retention-days", "s3:object-lock-retain-until-date", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2868,6 +2997,7 @@
     "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:RequestObjectTag/<key>", "s3:RequestObjectTagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -2888,6 +3018,7 @@
     "ActionConditionKeys" : [ "s3:AccessGrantsInstanceArn", "s3:ExistingObjectTag/<key>", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:versionid", "s3:x-amz-acl", "s3:x-amz-content-sha256", "s3:x-amz-grant-full-control", "s3:x-amz-grant-read", "s3:x-amz-grant-read-acp", "s3:x-amz-grant-write", "s3:x-amz-grant-write-acp", "s3:x-amz-storage-class" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -2928,6 +3059,7 @@
     "ActionConditionKeys" : [ "s3:ExistingObjectTag/<key>", "s3:RequestObjectTag/<key>", "s3:RequestObjectTagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:versionid", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -2948,6 +3080,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:isReplicationPauseRequest", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2966,6 +3099,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2981,6 +3115,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -3071,6 +3206,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3091,6 +3227,7 @@
     "ActionConditionKeys" : [ "s3:AccessPointNetworkOrigin", "s3:DataAccessPointAccount", "s3:DataAccessPointArn", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3109,6 +3246,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -3137,6 +3275,7 @@
     "ActionConditionKeys" : [ "aws:TagKeys", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -3165,6 +3304,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3:AccessGrantsLocationScope", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -3201,6 +3341,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3219,6 +3360,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3237,6 +3379,7 @@
     "ActionConditionKeys" : [ "s3:ExistingJobOperation", "s3:ExistingJobPriority", "s3:RequestJobPriority", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3255,6 +3398,7 @@
     "ActionConditionKeys" : [ "s3:ExistingJobOperation", "s3:ExistingJobPriority", "s3:JobSuspendedCause", "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3293,6 +3437,7 @@
     "ActionConditionKeys" : [ "s3:ResourceAccount", "s3:TlsVersion", "s3:authType", "s3:signatureAge", "s3:signatureversion", "s3:x-amz-content-sha256" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5973,5 +6118,5 @@
     "ARNFormats" : [ "arn:${Partition}:s3:${Region}:${Account}:storage-lens-group/${Name}" ],
     "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

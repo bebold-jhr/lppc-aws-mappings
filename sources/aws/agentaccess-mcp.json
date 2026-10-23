@@ -1,5 +1,6 @@
 {
   "Name" : "agentaccess-mcp",
+  "ServiceName" : "WorkSpaces AgentAccess MCP",
   "Actions" : [ {
     "Name" : "CallForwardedTool",
     "ActionConditionKeys" : [ "agentaccess-mcp:StackArn" ],
@@ -305,5 +306,5 @@
     "Name" : "agentaccess-mcp:StackArn",
     "Types" : [ "ARN" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

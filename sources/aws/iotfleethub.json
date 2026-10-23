@@ -1,5 +1,6 @@
 {
   "Name" : "iotfleethub",
+  "ServiceName" : "IoT Fleet Hub",
   "Actions" : [ {
     "Name" : "CreateApplication",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
@@ -149,5 +150,5 @@
     "ARNFormats" : [ "arn:${Partition}:iotfleethub:${Region}:${Account}:application/${ApplicationId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

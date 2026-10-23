@@ -1,5 +1,6 @@
 {
   "Name" : "iot-device-tester",
+  "ServiceName" : "IoT Device Tester",
   "Actions" : [ {
     "Name" : "CheckVersion",
     "Annotations" : {
@@ -71,5 +72,5 @@
       "IAM Action Last Accessed" : false
     }
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

@@ -1,5 +1,6 @@
 {
   "Name" : "iotanalytics",
+  "ServiceName" : "IoT Analytics",
   "Actions" : [ {
     "Name" : "BatchPutMessage",
     "Annotations" : {
@@ -609,5 +610,5 @@
     "ARNFormats" : [ "arn:${Partition}:iotanalytics:${Region}:${Account}:pipeline/${PipelineName}" ],
     "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "iotanalytics:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

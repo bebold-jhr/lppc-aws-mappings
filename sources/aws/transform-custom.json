@@ -1,5 +1,6 @@
 {
   "Name" : "transform-custom",
+  "ServiceName" : "Transform custom",
   "Actions" : [ {
     "Name" : "BatchCreateFindings",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
@@ -989,5 +990,5 @@
     "ARNFormats" : [ "arn:${Partition}:transform-custom:${Region}:${Account}:source/${Name}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

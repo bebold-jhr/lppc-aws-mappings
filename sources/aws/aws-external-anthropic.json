@@ -1,5 +1,6 @@
 {
   "Name" : "aws-external-anthropic",
+  "ServiceName" : "Claude Platform on AWS",
   "Actions" : [ {
     "Name" : "ArchiveAgent",
     "Annotations" : {
@@ -1471,5 +1472,5 @@
     "ARNFormats" : [ "arn:${Partition}:aws-external-anthropic:${Region}:${Account}:workspace/${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

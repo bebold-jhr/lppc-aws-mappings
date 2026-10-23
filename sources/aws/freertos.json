@@ -1,5 +1,6 @@
 {
   "Name" : "freertos",
+  "ServiceName" : "FreeRTOS",
   "Actions" : [ {
     "Name" : "CreateSoftwareConfiguration",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
@@ -317,5 +318,5 @@
     "ARNFormats" : [ "arn:${Partition}:freertos:${Region}:${Account}:subscription/${SubscriptionID}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

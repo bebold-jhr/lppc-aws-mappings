@@ -1,5 +1,6 @@
 {
   "Name" : "sagemaker-mlflow",
+  "ServiceName" : "SageMaker MLflow",
   "Actions" : [ {
     "Name" : "AccessUI",
     "Annotations" : {
@@ -1103,5 +1104,5 @@
     "Name" : "mlflow-tracking-server",
     "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-tracking-server/${MlflowTrackingServerName}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

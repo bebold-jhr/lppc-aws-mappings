@@ -1,5 +1,6 @@
 {
   "Name" : "elasticbeanstalk",
+  "ServiceName" : "Elastic Beanstalk",
   "Actions" : [ {
     "Name" : "AbortEnvironmentUpdate",
     "Annotations" : {
@@ -477,6 +478,7 @@
     "Name" : "DescribeEnvironments",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1321,5 +1323,5 @@
     "Name" : "solutionstack",
     "ARNFormats" : [ "arn:${Partition}:elasticbeanstalk:${Region}::solutionstack/${SolutionStackName}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

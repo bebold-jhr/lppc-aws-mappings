@@ -1,5 +1,6 @@
 {
   "Name" : "opsworks",
+  "ServiceName" : "OpsWorks",
   "Actions" : [ {
     "Name" : "AssignInstance",
     "Annotations" : {
@@ -1239,5 +1240,5 @@
     "Name" : "stack",
     "ARNFormats" : [ "arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

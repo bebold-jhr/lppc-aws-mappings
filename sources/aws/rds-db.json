@@ -1,5 +1,6 @@
 {
   "Name" : "rds-db",
+  "ServiceName" : "RDS IAM Authentication",
   "Actions" : [ {
     "Name" : "connect",
     "Annotations" : {
@@ -11,16 +12,22 @@
       }
     },
     "Resources" : [ {
-      "Name" : "db-user"
+      "Name" : "db-user",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   } ],
+  "ConditionKeys" : [ {
+    "Name" : "aws:ResourceTag/${TagKey}",
+    "Types" : [ "String" ]
+  } ],
   "Resources" : [ {
     "Name" : "db-user",
-    "ARNFormats" : [ "arn:${Partition}:rds-db:${Region}:${Account}:dbuser:${DbiResourceId}/${DbUserName}" ]
+    "ARNFormats" : [ "arn:${Partition}:rds-db:${Region}:${Account}:dbuser:${DbiResourceId}/${DbUserName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

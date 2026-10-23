@@ -1,5 +1,6 @@
 {
   "Name" : "ses",
+  "ServiceName" : "SES",
   "Actions" : [ {
     "Name" : "AllowVendedLogDeliveryForResource",
     "Annotations" : {
@@ -41,6 +42,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion", "ses:FromAddress" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -59,6 +61,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -79,6 +82,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion", "ses:ExportSourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -97,6 +101,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -112,6 +117,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ses:AddonSubscriptionArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -131,6 +137,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -150,6 +157,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -168,6 +176,7 @@
     "Name" : "CreateAddressListImportJob",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -187,6 +196,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -206,6 +216,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -228,6 +239,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -246,6 +258,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -261,6 +274,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -279,6 +293,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -297,6 +312,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -315,6 +331,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -333,6 +350,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -351,6 +369,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -369,6 +388,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -387,6 +407,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -405,6 +426,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion", "ses:ExportSourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -420,6 +442,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -435,6 +458,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ses:MailManagerRuleSetArn", "ses:MailManagerTrafficPolicyArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -454,6 +478,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -469,6 +494,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -484,6 +510,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -499,6 +526,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -514,6 +542,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -533,6 +562,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -552,6 +582,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -567,6 +598,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -585,6 +617,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -609,6 +642,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -627,6 +661,7 @@
     "Name" : "DeleteAddonInstance",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -645,6 +680,7 @@
     "Name" : "DeleteAddonSubscription",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -663,6 +699,7 @@
     "Name" : "DeleteAddressList",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -681,6 +718,7 @@
     "Name" : "DeleteArchive",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -700,6 +738,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -718,6 +757,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -736,6 +776,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -751,6 +792,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -769,6 +811,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -787,6 +830,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -805,6 +849,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -823,6 +868,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -841,6 +887,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -859,6 +906,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -877,6 +925,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -892,6 +941,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -906,6 +956,7 @@
     "Name" : "DeleteIngressPoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -925,6 +976,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -943,6 +995,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -958,6 +1011,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -973,6 +1027,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -987,6 +1042,7 @@
     "Name" : "DeleteRelay",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1005,6 +1061,7 @@
     "Name" : "DeleteRuleSet",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1024,6 +1081,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1042,6 +1100,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1057,6 +1116,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1075,6 +1135,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1098,6 +1159,7 @@
     "Name" : "DeleteTrafficPolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1117,6 +1179,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1131,6 +1194,7 @@
     "Name" : "DeregisterMemberFromAddressList",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1150,6 +1214,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1165,6 +1230,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1180,6 +1246,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1195,6 +1262,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1210,6 +1278,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion", "ses:FromAddress" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1228,6 +1297,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1243,6 +1313,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1257,6 +1328,7 @@
     "Name" : "GetAddonInstance",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1275,6 +1347,7 @@
     "Name" : "GetAddonSubscription",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1293,6 +1366,7 @@
     "Name" : "GetAddressList",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1311,6 +1385,7 @@
     "Name" : "GetAddressListImportJob",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1329,6 +1404,7 @@
     "Name" : "GetArchive",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1347,6 +1423,7 @@
     "Name" : "GetArchiveExport",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1365,6 +1442,7 @@
     "Name" : "GetArchiveMessage",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1383,6 +1461,7 @@
     "Name" : "GetArchiveMessageContent",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1401,6 +1480,7 @@
     "Name" : "GetArchiveSearch",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1419,6 +1499,7 @@
     "Name" : "GetArchiveSearchResults",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1438,6 +1519,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1453,6 +1535,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1471,6 +1554,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1489,6 +1573,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1507,6 +1592,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1525,6 +1611,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1543,6 +1630,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1558,6 +1646,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1576,6 +1665,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1594,6 +1684,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1609,6 +1700,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1627,6 +1719,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1642,6 +1735,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1660,6 +1754,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1675,6 +1770,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1693,6 +1789,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1711,6 +1808,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1729,6 +1827,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion", "ses:ExportSourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1747,6 +1846,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1762,6 +1862,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1777,6 +1878,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1792,6 +1894,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1807,6 +1910,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1822,6 +1926,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1839,6 +1944,7 @@
     "Name" : "GetIngressPoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1857,6 +1963,7 @@
     "Name" : "GetMemberOfAddressList",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1876,6 +1983,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1891,6 +1999,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1908,6 +2017,7 @@
     "Name" : "GetRelay",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1927,6 +2037,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1944,6 +2055,7 @@
     "Name" : "GetRuleSet",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1963,6 +2075,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1978,6 +2091,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1993,6 +2107,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2011,6 +2126,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2026,6 +2142,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2043,6 +2160,7 @@
     "Name" : "GetTrafficPolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2061,6 +2179,7 @@
     "Name" : "ListAddonInstances",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2075,6 +2194,7 @@
     "Name" : "ListAddonSubscriptions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2089,6 +2209,7 @@
     "Name" : "ListAddressListImportJobs",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2107,6 +2228,7 @@
     "Name" : "ListAddressLists",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2121,6 +2243,7 @@
     "Name" : "ListArchiveExports",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2135,6 +2258,7 @@
     "Name" : "ListArchiveSearches",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2149,6 +2273,7 @@
     "Name" : "ListArchives",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2164,6 +2289,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2179,6 +2305,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2194,6 +2321,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2212,6 +2340,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2227,6 +2356,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2242,6 +2372,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2257,6 +2388,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2272,6 +2404,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2287,6 +2420,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2305,6 +2439,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2320,6 +2455,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion", "ses:ExportSourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2335,6 +2471,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2350,6 +2487,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2365,6 +2503,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2379,6 +2518,7 @@
     "Name" : "ListIngressPoints",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2393,6 +2533,7 @@
     "Name" : "ListMembersOfAddressList",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2412,6 +2553,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2427,6 +2569,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2442,6 +2585,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2457,6 +2601,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2474,6 +2619,7 @@
     "Name" : "ListRelays",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2489,6 +2635,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2507,6 +2654,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2528,6 +2676,7 @@
     "Name" : "ListRuleSets",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2543,6 +2692,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2561,6 +2711,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2607,6 +2758,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2622,6 +2774,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2640,6 +2793,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2654,6 +2808,7 @@
     "Name" : "ListTrafficPolicies",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2669,6 +2824,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2684,6 +2840,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2699,6 +2856,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2714,6 +2872,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2729,6 +2888,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2744,6 +2904,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2759,6 +2920,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2774,6 +2936,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2794,6 +2957,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2814,6 +2978,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2832,6 +2997,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2850,6 +3016,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2868,6 +3035,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2886,6 +3054,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2904,6 +3073,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2922,6 +3092,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2940,6 +3111,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2955,6 +3127,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2970,6 +3143,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2990,6 +3164,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3008,6 +3183,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3026,6 +3202,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3044,6 +3221,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3062,6 +3240,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -3077,6 +3256,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3095,6 +3275,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3112,6 +3293,7 @@
     "Name" : "RegisterMemberToAddressList",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3131,6 +3313,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3182,6 +3365,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion", "ses:MultiRegionEndpointId", "ses:TenantName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3226,6 +3410,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion", "ses:FeedbackAddress", "ses:FromAddress", "ses:FromDisplayName", "ses:Recipients" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3288,6 +3473,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion", "ses:FeedbackAddress", "ses:FromAddress", "ses:FromDisplayName", "ses:Recipients" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3310,6 +3496,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3325,6 +3512,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3340,6 +3528,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3355,6 +3544,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3370,6 +3560,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3385,6 +3576,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3400,6 +3592,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3414,6 +3607,7 @@
     "Name" : "StartAddressListImportJob",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3432,6 +3626,7 @@
     "Name" : "StartArchiveExport",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3450,6 +3645,7 @@
     "Name" : "StartArchiveSearch",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3468,6 +3664,7 @@
     "Name" : "StopAddressListImportJob",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3486,6 +3683,7 @@
     "Name" : "StopArchiveExport",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3504,6 +3702,7 @@
     "Name" : "StopArchiveSearch",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3523,6 +3722,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -3571,6 +3771,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3589,6 +3790,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3604,6 +3806,7 @@
     "ActionConditionKeys" : [ "aws:TagKeys", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -3652,6 +3855,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3666,6 +3870,7 @@
     "Name" : "UpdateArchive",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3685,6 +3890,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion", "ses:ConfigurationSetOptions" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3703,6 +3909,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3721,6 +3928,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3736,6 +3944,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3751,6 +3960,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3766,6 +3976,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3784,6 +3995,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3802,6 +4014,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3820,6 +4033,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -3838,6 +4052,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3856,6 +4071,7 @@
     "ActionConditionKeys" : [ "ses:MailManagerRuleSetArn", "ses:MailManagerTrafficPolicyArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3875,6 +4091,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3889,6 +4106,7 @@
     "Name" : "UpdateRelay",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3908,6 +4126,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3926,6 +4145,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3945,6 +4165,7 @@
     "Name" : "UpdateRuleSet",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3964,6 +4185,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3978,6 +4200,7 @@
     "Name" : "UpdateTrafficPolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3997,6 +4220,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4012,6 +4236,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4027,6 +4252,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4042,6 +4268,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7026,5 +7253,5 @@
     "ARNFormats" : [ "arn:${Partition}:ses:${Region}:${Account}:tenant/${TenantName}/${TenantId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

@@ -1,9 +1,11 @@
 {
   "Name" : "s3tables",
+  "ServiceName" : "S3 Tables",
   "Actions" : [ {
     "Name" : "CreateNamespace",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -22,6 +24,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "s3tables:KMSKeyArn", "s3tables:SSEAlgorithm", "s3tables:TableBucketTag/${TagKey}", "s3tables:namespace" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -40,6 +43,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "s3tables:KMSKeyArn", "s3tables:SSEAlgorithm", "s3tables:TableBucketTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -58,6 +62,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -76,6 +81,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -93,6 +99,7 @@
     "Name" : "DeleteTableBucket",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -110,6 +117,7 @@
     "Name" : "DeleteTableBucketEncryption",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -127,6 +135,7 @@
     "Name" : "DeleteTableBucketMetricsConfiguration",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -144,6 +153,7 @@
     "Name" : "DeleteTableBucketPolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -161,6 +171,7 @@
     "Name" : "DeleteTableBucketReplication",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -179,6 +190,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -197,6 +209,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -215,6 +228,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -233,6 +247,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -250,6 +265,7 @@
     "Name" : "GetTableBucket",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -267,6 +283,7 @@
     "Name" : "GetTableBucketEncryption",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -284,6 +301,7 @@
     "Name" : "GetTableBucketMaintenanceConfiguration",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -301,6 +319,7 @@
     "Name" : "GetTableBucketMetricsConfiguration",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -318,6 +337,7 @@
     "Name" : "GetTableBucketPolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -335,6 +355,7 @@
     "Name" : "GetTableBucketReplication",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -352,6 +373,7 @@
     "Name" : "GetTableBucketStorageClass",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -388,6 +410,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -406,6 +429,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -424,6 +448,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -442,6 +467,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -460,6 +486,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -478,6 +505,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -496,6 +524,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -514,6 +543,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -532,6 +562,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -550,6 +581,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -567,6 +599,7 @@
     "Name" : "ListNamespaces",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -584,6 +617,7 @@
     "Name" : "ListTableBuckets",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -599,6 +633,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -617,6 +652,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3tables:TableBucketTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -637,6 +673,7 @@
     "ActionConditionKeys" : [ "s3tables:KMSKeyArn", "s3tables:SSEAlgorithm" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -654,6 +691,7 @@
     "Name" : "PutTableBucketMaintenanceConfiguration",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -671,6 +709,7 @@
     "Name" : "PutTableBucketMetricsConfiguration",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -688,6 +727,7 @@
     "Name" : "PutTableBucketPolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -705,6 +745,7 @@
     "Name" : "PutTableBucketReplication",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -723,6 +764,7 @@
     "ActionConditionKeys" : [ "s3tables:StorageClass" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -759,6 +801,7 @@
     "ActionConditionKeys" : [ "s3tables:KMSKeyArn", "s3tables:SSEAlgorithm", "s3tables:namespace" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -777,6 +820,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -795,6 +839,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -813,6 +858,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -831,6 +877,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -849,6 +896,7 @@
     "ActionConditionKeys" : [ "s3tables:StorageClass", "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -867,6 +915,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -885,6 +934,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "s3tables:TableBucketTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -905,6 +955,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys", "s3tables:TableBucketTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -925,6 +976,7 @@
     "ActionConditionKeys" : [ "s3tables:namespace", "s3tables:tableName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1549,5 +1601,5 @@
     "ARNFormats" : [ "arn:${Partition}:s3tables:${Region}:${Account}:bucket/${TableBucketName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3tables:TableBucketTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

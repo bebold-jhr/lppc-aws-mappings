@@ -1,10 +1,12 @@
 {
   "Name" : "cognito-identity",
+  "ServiceName" : "Cognito Identity",
   "Actions" : [ {
     "Name" : "CreateIdentityPool",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -20,6 +22,7 @@
     "ActionConditionKeys" : [ "cognito-identity:IdentityPoolArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -34,6 +37,7 @@
     "Name" : "DeleteIdentityPool",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -52,6 +56,7 @@
     "ActionConditionKeys" : [ "cognito-identity:IdentityPoolArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -66,6 +71,7 @@
     "Name" : "DescribeIdentityPool",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -84,6 +90,7 @@
     "ActionConditionKeys" : [ "cognito-identity-auth:AccountId", "cognito-identity-auth:IdentityPoolArn", "cognito-identity-unauth:AccountId", "cognito-identity-unauth:IdentityPoolArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -99,6 +106,7 @@
     "ActionConditionKeys" : [ "cognito-identity-auth:AccountId", "cognito-identity-auth:IdentityPoolArn", "cognito-identity-unauth:AccountId", "cognito-identity-unauth:IdentityPoolArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -147,6 +155,7 @@
     "Name" : "GetIdentityPoolRoles",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -182,6 +191,7 @@
     "ActionConditionKeys" : [ "cognito-identity-auth:AccountId", "cognito-identity-auth:IdentityPoolArn", "cognito-identity-unauth:AccountId", "cognito-identity-unauth:IdentityPoolArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -196,6 +206,7 @@
     "Name" : "GetOpenIdTokenForDeveloperIdentity",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -213,6 +224,7 @@
     "Name" : "GetPrincipalTagAttributeMap",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -230,6 +242,7 @@
     "Name" : "ListIdentities",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -247,6 +260,7 @@
     "Name" : "ListIdentityPools",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -261,6 +275,7 @@
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -278,6 +293,7 @@
     "Name" : "LookupDeveloperIdentity",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -295,6 +311,7 @@
     "Name" : "MergeDeveloperIdentities",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -312,6 +329,7 @@
     "Name" : "SetIdentityPoolRoles",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -326,6 +344,7 @@
     "Name" : "SetPrincipalTagAttributeMap",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -341,6 +360,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -358,6 +378,7 @@
     "Name" : "UnlinkDeveloperIdentity",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -376,6 +397,7 @@
     "ActionConditionKeys" : [ "cognito-identity-auth:AccountId", "cognito-identity-auth:IdentityPoolArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -391,6 +413,7 @@
     "ActionConditionKeys" : [ "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -408,6 +431,7 @@
     "Name" : "UpdateIdentityPool",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -718,5 +742,5 @@
     "ARNFormats" : [ "arn:${Partition}:cognito-identity:${Region}:${Account}:identitypool/${IdentityPoolId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

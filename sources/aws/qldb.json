@@ -1,5 +1,6 @@
 {
   "Name" : "qldb",
+  "ServiceName" : "QLDB",
   "Actions" : [ {
     "Name" : "CancelJournalKinesisStream",
     "Annotations" : {
@@ -647,5 +648,5 @@
     "ARNFormats" : [ "arn:${Partition}:qldb:${Region}:${Account}:ledger/${LedgerName}/table/${TableId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

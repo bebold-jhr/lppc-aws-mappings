@@ -1,10 +1,12 @@
 {
   "Name" : "partnercentral",
+  "ServiceName" : "Partner Central",
   "Actions" : [ {
     "Name" : "AcceptChannelHandshake",
     "ActionConditionKeys" : [ "partnercentral:Catalog", "partnercentral:ChannelHandshakeType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -23,6 +25,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -41,6 +44,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -59,6 +63,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog", "partnercentral:FulfillmentTypes", "partnercentral:Programs" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -77,6 +82,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -95,6 +101,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -113,6 +120,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog", "partnercentral:FulfillmentTypes", "partnercentral:Programs" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -135,6 +143,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog", "partnercentral:RelatedEntityType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -153,6 +162,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog", "partnercentral:FulfillmentTypes", "partnercentral:Programs" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -171,6 +181,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog", "partnercentral:ChannelHandshakeType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -189,6 +200,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -207,6 +219,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -225,6 +238,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -243,6 +257,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "partnercentral:Catalog", "partnercentral:FulfillmentTypes", "partnercentral:Programs" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -272,6 +287,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "partnercentral:Catalog", "partnercentral:ChannelHandshakeType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -320,6 +336,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -335,6 +352,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -353,6 +371,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -371,6 +390,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -389,6 +409,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -404,6 +425,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -422,6 +444,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -440,6 +463,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -455,6 +479,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -470,6 +495,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -488,6 +514,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -506,6 +533,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -524,6 +552,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -539,6 +568,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -557,6 +587,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -575,6 +606,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -593,6 +625,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -611,6 +644,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog", "partnercentral:FulfillmentTypes", "partnercentral:Programs" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -633,6 +667,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog", "partnercentral:RelatedEntityType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -665,6 +700,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -683,6 +719,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -701,6 +738,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog", "partnercentral:FulfillmentTypes", "partnercentral:Programs" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -719,6 +757,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog", "partnercentral:FulfillmentTypes" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -737,6 +776,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog", "partnercentral:FulfillmentTypes", "partnercentral:Programs" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -783,6 +823,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -801,6 +842,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -819,6 +861,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -834,6 +877,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -852,6 +896,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -870,6 +915,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -888,6 +934,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -906,6 +953,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -924,6 +972,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1004,6 +1053,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1022,6 +1072,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1040,6 +1091,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1055,6 +1107,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1073,6 +1126,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1091,6 +1145,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1109,6 +1164,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1127,6 +1183,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1145,6 +1202,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1163,6 +1221,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1181,6 +1240,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1199,6 +1259,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1217,6 +1278,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1235,6 +1297,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1250,6 +1313,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog", "partnercentral:VerificationType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1265,6 +1329,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog", "partnercentral:FulfillmentTypes" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1283,6 +1348,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog", "partnercentral:FulfillmentTypes", "partnercentral:Programs" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1301,6 +1367,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog", "partnercentral:FulfillmentTypes", "partnercentral:Programs" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1333,6 +1400,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog", "partnercentral:ChannelHandshakeType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1365,6 +1433,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1380,6 +1449,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1395,6 +1465,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1410,6 +1481,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1425,6 +1497,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1440,6 +1513,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1458,6 +1532,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1476,6 +1551,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1491,6 +1567,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1509,6 +1586,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1524,6 +1602,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1539,6 +1618,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1583,6 +1663,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1598,6 +1679,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1616,6 +1698,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1631,6 +1714,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1649,6 +1733,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1664,6 +1749,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1682,6 +1768,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1700,6 +1787,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1715,6 +1803,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1730,6 +1819,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys", "partnercentral:Catalog", "partnercentral:FulfillmentTypes", "partnercentral:Programs" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1745,6 +1835,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1777,6 +1868,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1795,6 +1887,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1810,6 +1903,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog", "partnercentral:FulfillmentTypes", "partnercentral:Programs" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1828,6 +1922,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog", "partnercentral:ChannelHandshakeType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1846,6 +1941,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1864,6 +1960,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1911,6 +2008,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1926,6 +2024,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1944,6 +2043,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1962,6 +2062,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1980,6 +2081,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1998,6 +2100,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2016,6 +2119,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2034,6 +2138,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2052,6 +2157,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2070,6 +2176,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2088,6 +2195,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog", "partnercentral:VerificationType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2103,6 +2211,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2121,6 +2230,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog", "partnercentral:FulfillmentTypes", "partnercentral:Programs" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2139,6 +2249,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2157,6 +2268,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "partnercentral:Catalog", "partnercentral:FulfillmentTypes", "partnercentral:Programs" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -2191,6 +2303,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys", "partnercentral:Catalog", "partnercentral:FulfillmentTypes", "partnercentral:Programs" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -2225,6 +2338,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog", "partnercentral:FulfillmentTypes", "partnercentral:Programs" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2243,6 +2357,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2258,6 +2373,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2276,6 +2392,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2294,6 +2411,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2312,6 +2430,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2330,6 +2449,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2348,6 +2468,7 @@
     "ActionConditionKeys" : [ "partnercentral:Catalog" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3974,5 +4095,5 @@
     "ARNFormats" : [ "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/resource-snapshot-job/${Identifier}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

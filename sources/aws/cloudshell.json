@@ -1,5 +1,6 @@
 {
   "Name" : "cloudshell",
+  "ServiceName" : "CloudShell",
   "Actions" : [ {
     "Name" : "ApproveCommand",
     "Annotations" : {
@@ -197,5 +198,5 @@
     "Name" : "Environment",
     "ARNFormats" : [ "arn:${Partition}:cloudshell:${Region}:${Account}:environment/${EnvironmentId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

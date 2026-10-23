@@ -1,5 +1,6 @@
 {
   "Name" : "qdeveloper",
+  "ServiceName" : "Q Developer",
   "Actions" : [ {
     "Name" : "ExportArtifact",
     "Annotations" : {
@@ -135,5 +136,5 @@
     "ARNFormats" : [ "arn:${Partition}:qdeveloper:${Region}:${Account}:codeTransformation/${Identifier}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

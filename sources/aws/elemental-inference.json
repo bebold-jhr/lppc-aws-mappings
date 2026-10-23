@@ -1,9 +1,11 @@
 {
   "Name" : "elemental-inference",
+  "ServiceName" : "Elemental Inference",
   "Actions" : [ {
     "Name" : "AssociateFeed",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -22,6 +24,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -37,6 +40,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -51,6 +55,7 @@
     "Name" : "DeleteDictionary",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -68,6 +73,7 @@
     "Name" : "DeleteFeed",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -85,6 +91,7 @@
     "Name" : "DeleteFeedPolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -102,6 +109,7 @@
     "Name" : "DisassociateFeed",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -119,6 +127,7 @@
     "Name" : "ExportDictionaryEntries",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -136,6 +145,7 @@
     "Name" : "GetDictionary",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -153,6 +163,7 @@
     "Name" : "GetFeed",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -170,6 +181,7 @@
     "Name" : "GetFeedPolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -204,6 +216,7 @@
     "Name" : "ListDictionaries",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -218,6 +231,7 @@
     "Name" : "ListFeeds",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -232,6 +246,7 @@
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -246,6 +261,7 @@
     "Name" : "PutFeedPolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -281,6 +297,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -301,6 +318,7 @@
     "ActionConditionKeys" : [ "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -320,6 +338,7 @@
     "Name" : "UpdateDictionary",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -337,6 +356,7 @@
     "Name" : "UpdateFeed",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -407,6 +427,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateScheduleAction",
+    "SDK" : [ {
+      "Name" : "elementalinference",
+      "Method" : "create_schedule_action",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteDictionary",
     "AuthorizedActions" : [ {
       "Name" : "DeleteDictionary",
@@ -437,6 +464,13 @@
     "SDK" : [ {
       "Name" : "elementalinference",
       "Method" : "delete_feed_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteScheduleAction",
+    "SDK" : [ {
+      "Name" : "elementalinference",
+      "Method" : "delete_schedule_action",
       "Package" : "Boto3"
     } ]
   }, {
@@ -521,6 +555,13 @@
     "SDK" : [ {
       "Name" : "elementalinference",
       "Method" : "list_feeds",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListScheduleActions",
+    "SDK" : [ {
+      "Name" : "elementalinference",
+      "Method" : "list_schedule_actions",
       "Package" : "Boto3"
     } ]
   }, {
@@ -612,5 +653,5 @@
     "ARNFormats" : [ "arn:${Partition}:elemental-inference:${Region}:${Account}:feed/${Id}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

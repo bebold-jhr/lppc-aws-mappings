@@ -1,10 +1,12 @@
 {
   "Name" : "arc-zonal-shift",
+  "ServiceName" : "ARC Zonal Shift",
   "Actions" : [ {
     "Name" : "CancelPracticeRun",
     "ActionConditionKeys" : [ "arc-zonal-shift:ResourceIdentifier", "aws:ResourceTag/${TagKey}", "elasticloadbalancing:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -25,6 +27,7 @@
     "ActionConditionKeys" : [ "arc-zonal-shift:ResourceIdentifier", "aws:ResourceTag/${TagKey}", "elasticloadbalancing:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -45,6 +48,7 @@
     "ActionConditionKeys" : [ "arc-zonal-shift:ResourceIdentifier", "aws:ResourceTag/${TagKey}", "elasticloadbalancing:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -65,6 +69,7 @@
     "ActionConditionKeys" : [ "arc-zonal-shift:ResourceIdentifier", "aws:ResourceTag/${TagKey}", "elasticloadbalancing:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -84,6 +89,7 @@
     "Name" : "GetAutoshiftObserverNotificationStatus",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -99,6 +105,7 @@
     "ActionConditionKeys" : [ "arc-zonal-shift:ResourceIdentifier", "aws:ResourceTag/${TagKey}", "elasticloadbalancing:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -118,6 +125,7 @@
     "Name" : "ListAutoshifts",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -132,6 +140,7 @@
     "Name" : "ListManagedResources",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -146,6 +155,7 @@
     "Name" : "ListZonalShifts",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -161,6 +171,7 @@
     "ActionConditionKeys" : [ "arc-zonal-shift:ResourceIdentifier", "aws:ResourceTag/${TagKey}", "elasticloadbalancing:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -181,6 +192,7 @@
     "ActionConditionKeys" : [ "arc-zonal-shift:ResourceIdentifier", "aws:ResourceTag/${TagKey}", "elasticloadbalancing:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -200,6 +212,7 @@
     "Name" : "UpdateAutoshiftObserverNotificationStatus",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -215,6 +228,7 @@
     "ActionConditionKeys" : [ "arc-zonal-shift:ResourceIdentifier", "aws:ResourceTag/${TagKey}", "elasticloadbalancing:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -235,6 +249,7 @@
     "ActionConditionKeys" : [ "arc-zonal-shift:ResourceIdentifier", "aws:ResourceTag/${TagKey}", "elasticloadbalancing:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -255,6 +270,7 @@
     "ActionConditionKeys" : [ "arc-zonal-shift:ResourceIdentifier", "aws:ResourceTag/${TagKey}", "elasticloadbalancing:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -456,5 +472,5 @@
     "ARNFormats" : [ "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:loadbalancer/net/${LoadBalancerName}/${LoadBalancerId}" ],
     "ConditionKeys" : [ "arc-zonal-shift:ResourceIdentifier", "aws:ResourceTag/${TagKey}", "elasticloadbalancing:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

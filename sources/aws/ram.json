@@ -1,10 +1,12 @@
 {
   "Name" : "ram",
+  "ServiceName" : "Resource Access Manager",
   "Actions" : [ {
     "Name" : "AcceptResourceShareInvitation",
     "ActionConditionKeys" : [ "ram:ResourceShareName", "ram:ShareOwnerAccountId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -23,6 +25,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:AllowsExternalPrincipals", "ram:Principal", "ram:RequestedResourceType", "ram:ResourceArn", "ram:ResourceShareName", "ram:ResourceTag/${TagKey}", "ram:RetainSharingOnAccountLeaveOrganization" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -40,6 +43,7 @@
     "Name" : "AssociateResourceSharePermission",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -62,6 +66,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ram:PermissionArn", "ram:PermissionResourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -77,6 +82,7 @@
     "ActionConditionKeys" : [ "ram:PermissionArn", "ram:PermissionResourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -95,6 +101,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ram:AllowsExternalPrincipals", "ram:Principal", "ram:RequestedAllowsExternalPrincipals", "ram:RequestedResourceType", "ram:ResourceArn", "ram:RetainSharingOnAccountLeaveOrganization" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -110,6 +117,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:PermissionArn", "ram:PermissionResourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -128,6 +136,7 @@
     "ActionConditionKeys" : [ "ram:PermissionArn", "ram:PermissionResourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -146,6 +155,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:AllowsExternalPrincipals", "ram:ResourceShareName", "ram:ResourceTag/${TagKey}", "ram:RetainSharingOnAccountLeaveOrganization" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -164,6 +174,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:AllowsExternalPrincipals", "ram:Principal", "ram:RequestedResourceType", "ram:ResourceArn", "ram:ResourceShareName", "ram:ResourceTag/${TagKey}", "ram:RetainSharingOnAccountLeaveOrganization" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -181,6 +192,7 @@
     "Name" : "DisassociateResourceSharePermission",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -202,6 +214,7 @@
     "Name" : "EnableSharingWithAwsOrganization",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -217,6 +230,7 @@
     "ActionConditionKeys" : [ "ram:PermissionArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -236,6 +250,7 @@
     "Name" : "GetResourcePolicies",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -250,6 +265,7 @@
     "Name" : "GetResourceShareAssociations",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -264,6 +280,7 @@
     "Name" : "GetResourceShareInvitations",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -279,6 +296,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -294,6 +312,7 @@
     "ActionConditionKeys" : [ "ram:ResourceShareName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -312,6 +331,7 @@
     "ActionConditionKeys" : [ "ram:PermissionArn", "ram:PermissionResourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -331,6 +351,7 @@
     "Name" : "ListPermissionVersions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -345,6 +366,7 @@
     "Name" : "ListPermissions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -359,6 +381,7 @@
     "Name" : "ListPrincipals",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -373,6 +396,7 @@
     "Name" : "ListReplacePermissionAssociationsWork",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -388,6 +412,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:AllowsExternalPrincipals", "ram:ResourceShareName", "ram:RetainSharingOnAccountLeaveOrganization" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -405,6 +430,7 @@
     "Name" : "ListResourceTypes",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -419,6 +445,7 @@
     "Name" : "ListResources",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -433,6 +460,7 @@
     "Name" : "ListSourceAssociations",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -448,6 +476,7 @@
     "ActionConditionKeys" : [ "ram:PermissionArn", "ram:PermissionResourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -465,6 +494,7 @@
     "Name" : "PromoteResourceShareCreatedFromPolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -483,6 +513,7 @@
     "ActionConditionKeys" : [ "ram:ResourceShareName", "ram:ShareOwnerAccountId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -501,6 +532,7 @@
     "ActionConditionKeys" : [ "ram:PermissionArn", "ram:PermissionResourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -521,6 +553,7 @@
     "ActionConditionKeys" : [ "ram:PermissionArn", "ram:PermissionResourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -539,6 +572,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -559,6 +593,7 @@
     "ActionConditionKeys" : [ "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -579,6 +614,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ram:AllowsExternalPrincipals", "ram:RequestedAllowsExternalPrincipals", "ram:ResourceShareName", "ram:ResourceTag/${TagKey}", "ram:RetainSharingOnAccountLeaveOrganization" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1045,5 +1081,5 @@
     "ARNFormats" : [ "arn:${Partition}:ram:${Region}:${Account}:resource-share-invitation/${ResourcePath}" ],
     "ConditionKeys" : [ "ram:ShareOwnerAccountId" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

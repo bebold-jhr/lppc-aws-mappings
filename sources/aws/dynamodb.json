@@ -1,9 +1,11 @@
 {
   "Name" : "dynamodb",
+  "ServiceName" : "DynamoDB",
   "Actions" : [ {
     "Name" : "AssociateTableReplica",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -22,6 +24,7 @@
     "ActionConditionKeys" : [ "dynamodb:Attributes", "dynamodb:LeadingKeys", "dynamodb:ReturnConsumedCapacity", "dynamodb:Select" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -40,6 +43,7 @@
     "ActionConditionKeys" : [ "dynamodb:Attributes", "dynamodb:LeadingKeys", "dynamodb:ReturnConsumedCapacity" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -58,6 +62,7 @@
     "ActionConditionKeys" : [ "dynamodb:Attributes", "dynamodb:LeadingKeys", "dynamodb:ReturnConsumedCapacity", "dynamodb:ReturnValues" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -75,6 +80,7 @@
     "Name" : "CreateBackup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -92,6 +98,7 @@
     "Name" : "CreateGlobalTable",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -111,6 +118,7 @@
     "Name" : "CreateGlobalTableWitness",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -129,6 +137,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -146,6 +155,7 @@
     "Name" : "CreateTableReplica",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -163,6 +173,7 @@
     "Name" : "DeleteBackup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -180,6 +191,7 @@
     "Name" : "DeleteGlobalTableWitness",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -198,6 +210,7 @@
     "ActionConditionKeys" : [ "dynamodb:Attributes", "dynamodb:EnclosingOperation", "dynamodb:LeadingKeys", "dynamodb:ReturnConsumedCapacity", "dynamodb:ReturnValues" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -215,6 +228,7 @@
     "Name" : "DeleteResourcePolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -234,6 +248,7 @@
     "Name" : "DeleteTable",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -268,6 +283,7 @@
     "Name" : "DescribeBackup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -285,6 +301,7 @@
     "Name" : "DescribeContinuousBackups",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -302,6 +319,7 @@
     "Name" : "DescribeContributorInsights",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -321,6 +339,7 @@
     "Name" : "DescribeEndpoints",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -335,6 +354,7 @@
     "Name" : "DescribeExport",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -352,6 +372,7 @@
     "Name" : "DescribeGlobalTable",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -369,6 +390,7 @@
     "Name" : "DescribeGlobalTableSettings",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -386,6 +408,7 @@
     "Name" : "DescribeImport",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -403,6 +426,7 @@
     "Name" : "DescribeKinesisStreamingDestination",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -420,6 +444,7 @@
     "Name" : "DescribeLimits",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -462,6 +487,7 @@
     "Name" : "DescribeStream",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -479,6 +505,7 @@
     "Name" : "DescribeTable",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -496,6 +523,7 @@
     "Name" : "DescribeTableReplicaAutoScaling",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -513,6 +541,7 @@
     "Name" : "DescribeTimeToLive",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -530,6 +559,7 @@
     "Name" : "DisableKinesisStreamingDestination",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -544,9 +574,27 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DisassociateTableReplica",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "table"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "EnableKinesisStreamingDestination",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -564,6 +612,7 @@
     "Name" : "ExportTableToPointInTime",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -596,6 +645,7 @@
     "ActionConditionKeys" : [ "dynamodb:Attributes", "dynamodb:EnclosingOperation", "dynamodb:LeadingKeys", "dynamodb:ReturnConsumedCapacity", "dynamodb:Select" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -613,6 +663,7 @@
     "Name" : "GetRecords",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -630,6 +681,7 @@
     "Name" : "GetResourcePolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -649,6 +701,7 @@
     "Name" : "GetShardIterator",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -666,6 +719,7 @@
     "Name" : "ImportTable",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -698,6 +752,7 @@
     "Name" : "ListBackups",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -712,6 +767,7 @@
     "Name" : "ListContributorInsights",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -726,6 +782,7 @@
     "Name" : "ListExports",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -743,6 +800,7 @@
     "Name" : "ListGlobalTables",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -757,6 +815,7 @@
     "Name" : "ListImports",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -774,6 +833,7 @@
     "Name" : "ListStreams",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -788,6 +848,7 @@
     "Name" : "ListTables",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -802,6 +863,7 @@
     "Name" : "ListTagsOfResource",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -822,6 +884,7 @@
     "ActionConditionKeys" : [ "dynamodb:Attributes", "dynamodb:EnclosingOperation", "dynamodb:LeadingKeys", "dynamodb:ReturnValues" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -840,6 +903,7 @@
     "ActionConditionKeys" : [ "dynamodb:Attributes", "dynamodb:EnclosingOperation", "dynamodb:LeadingKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -858,6 +922,7 @@
     "ActionConditionKeys" : [ "dynamodb:Attributes", "dynamodb:EnclosingOperation", "dynamodb:FullTableScan", "dynamodb:LeadingKeys", "dynamodb:Select" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -878,6 +943,7 @@
     "ActionConditionKeys" : [ "dynamodb:Attributes", "dynamodb:EnclosingOperation", "dynamodb:LeadingKeys", "dynamodb:ReturnValues" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -910,6 +976,7 @@
     "ActionConditionKeys" : [ "dynamodb:Attributes", "dynamodb:EnclosingOperation", "dynamodb:LeadingKeys", "dynamodb:ReturnConsumedCapacity", "dynamodb:ReturnValues" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -927,6 +994,7 @@
     "Name" : "PutResourcePolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -947,6 +1015,7 @@
     "ActionConditionKeys" : [ "dynamodb:Attributes", "dynamodb:LeadingKeys", "dynamodb:ReturnConsumedCapacity", "dynamodb:ReturnValues", "dynamodb:Select" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -966,6 +1035,7 @@
     "Name" : "ReadDataForReplication",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -983,6 +1053,7 @@
     "Name" : "ReplicateSettings",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1017,6 +1088,7 @@
     "Name" : "RestoreTableFromBackup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1054,6 +1126,7 @@
     "ActionConditionKeys" : [ "dynamodb:Attributes", "dynamodb:ReturnConsumedCapacity", "dynamodb:ReturnValues", "dynamodb:Select" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1110,6 +1183,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -1130,6 +1204,7 @@
     "ActionConditionKeys" : [ "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -1163,6 +1238,7 @@
     "Name" : "UpdateContinuousBackups",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1180,6 +1256,7 @@
     "Name" : "UpdateContributorInsights",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1199,6 +1276,7 @@
     "Name" : "UpdateGlobalTable",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1218,6 +1296,7 @@
     "Name" : "UpdateGlobalTableSettings",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1257,6 +1336,7 @@
     "ActionConditionKeys" : [ "dynamodb:Attributes", "dynamodb:EnclosingOperation", "dynamodb:LeadingKeys", "dynamodb:ReturnConsumedCapacity", "dynamodb:ReturnValues" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1274,6 +1354,7 @@
     "Name" : "UpdateKinesisStreamingDestination",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1291,6 +1372,7 @@
     "Name" : "UpdateTable",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1308,6 +1390,7 @@
     "Name" : "UpdateTableReplicaAutoScaling",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1325,6 +1408,7 @@
     "Name" : "UpdateTimeToLive",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1342,6 +1426,7 @@
     "Name" : "WriteDataForReplication",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2298,5 +2383,5 @@
     "ARNFormats" : [ "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

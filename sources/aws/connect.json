@@ -1,10 +1,12 @@
 {
   "Name" : "connect",
+  "ServiceName" : "Connect",
   "Actions" : [ {
     "Name" : "ActivateEvaluationForm",
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -40,6 +42,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -58,6 +61,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -76,6 +80,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -94,6 +99,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId", "connect:PreferredUserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -133,6 +139,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -151,6 +158,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -169,6 +177,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -189,6 +198,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:StorageResourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -207,6 +217,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -225,6 +236,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -243,6 +255,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -263,6 +276,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -281,6 +295,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -301,6 +316,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -321,6 +337,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -339,6 +356,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -361,6 +379,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -383,6 +402,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -403,6 +423,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -425,6 +446,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -443,6 +465,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:ExpressionValue", "connect:InstanceId", "connect:PrimaryAttribute/${PrimaryAttribute}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -461,6 +484,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId", "connect:PrimaryAttribute/${PrimaryAttribute}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -479,6 +503,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId", "connect:PrimaryAttribute/${PrimaryAttribute}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -497,6 +522,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -515,6 +541,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -533,6 +560,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -551,6 +579,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -571,6 +600,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:ExpressionValue", "connect:InstanceId", "connect:PrimaryAttribute/${PrimaryAttribute}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -589,6 +619,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -611,6 +642,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -629,6 +661,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -647,6 +680,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -683,6 +717,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:ContactInitiationMethod", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -705,6 +740,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:FlowType", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -723,6 +759,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -741,6 +778,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -759,6 +797,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -777,6 +816,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:FlowType", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -795,6 +835,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -813,6 +854,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -831,6 +873,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -849,6 +892,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -867,6 +911,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -885,6 +930,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -903,6 +949,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -923,6 +970,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -938,6 +986,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -958,6 +1007,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -976,6 +1026,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -996,6 +1047,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1016,6 +1068,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1036,6 +1089,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1054,6 +1108,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1072,6 +1127,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1090,6 +1146,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1116,6 +1173,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1140,6 +1198,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1160,6 +1219,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1178,6 +1238,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1201,6 +1262,7 @@
     "Name" : "CreateTaskTemplate",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1219,6 +1281,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1239,6 +1302,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1261,6 +1325,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1285,6 +1350,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1303,6 +1369,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1321,6 +1388,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1339,6 +1407,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1357,6 +1426,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1375,6 +1445,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1397,6 +1468,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1415,6 +1487,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1433,6 +1506,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1451,6 +1525,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:FlowType", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1469,6 +1544,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1487,6 +1563,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1505,6 +1582,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1523,6 +1601,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:FlowType", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1541,6 +1620,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1559,6 +1639,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1577,6 +1658,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1595,6 +1677,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1613,6 +1696,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1631,6 +1715,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1649,6 +1734,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1669,6 +1755,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1687,6 +1774,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1707,6 +1795,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1725,6 +1814,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1743,6 +1833,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1761,6 +1852,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1779,6 +1871,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1797,6 +1890,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1815,6 +1909,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1833,6 +1928,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1851,6 +1947,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1869,6 +1966,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1887,6 +1985,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1905,6 +2004,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1923,6 +2023,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1943,6 +2044,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1961,6 +2063,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1979,6 +2082,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1997,6 +2101,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2015,6 +2120,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2033,6 +2139,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2051,6 +2158,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2069,6 +2177,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2087,6 +2196,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2105,6 +2215,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2123,6 +2234,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2141,6 +2253,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2159,6 +2272,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2177,6 +2291,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:FlowType", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2195,6 +2310,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2213,6 +2329,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2231,6 +2348,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2249,6 +2367,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2267,6 +2386,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2285,6 +2405,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2303,6 +2424,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2339,6 +2461,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2357,6 +2480,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2377,6 +2501,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2395,6 +2520,7 @@
     "ActionConditionKeys" : [ "connect:AttributeType", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2413,6 +2539,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:StorageResourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2431,6 +2558,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2451,6 +2579,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2469,6 +2598,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2487,6 +2617,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2505,6 +2636,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2523,6 +2655,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2541,6 +2674,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2559,6 +2693,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2577,6 +2712,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2595,6 +2731,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2613,6 +2750,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2631,6 +2769,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2649,6 +2788,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2667,6 +2807,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2685,6 +2826,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2709,6 +2851,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2727,6 +2870,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2745,6 +2889,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2763,6 +2908,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2781,6 +2927,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2816,6 +2963,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2834,6 +2982,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2852,6 +3001,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:StorageResourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2870,6 +3020,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2888,6 +3039,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2906,6 +3058,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2924,6 +3077,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2942,6 +3096,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2962,6 +3117,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2980,6 +3136,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2998,6 +3155,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3020,6 +3178,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3042,6 +3201,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3062,6 +3222,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3080,6 +3241,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3098,6 +3260,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId", "connect:PrimaryAttribute/${PrimaryAttribute}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3116,6 +3279,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3134,6 +3298,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3152,6 +3317,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3172,6 +3338,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3190,6 +3357,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3210,6 +3378,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3234,6 +3403,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3254,6 +3424,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3272,6 +3443,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3290,6 +3462,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3308,6 +3481,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3326,6 +3500,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3350,6 +3525,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3368,6 +3544,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3386,6 +3563,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3404,6 +3582,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3424,6 +3603,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3441,6 +3621,7 @@
     "Name" : "ListAgentStatuses",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3459,6 +3640,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3477,6 +3659,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3495,6 +3678,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3513,6 +3697,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3531,6 +3716,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3549,6 +3735,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3567,6 +3754,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3585,6 +3773,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3603,6 +3792,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3621,6 +3811,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3638,6 +3829,7 @@
     "Name" : "ListContactFlowModules",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3656,6 +3848,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:FlowType", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3674,6 +3867,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3692,6 +3886,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3710,6 +3905,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3728,6 +3924,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId", "connect:PrimaryAttribute/${PrimaryAttribute}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3746,6 +3943,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId", "connect:PrimaryAttribute/${PrimaryAttribute}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3764,6 +3962,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3782,6 +3981,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3800,6 +4000,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3820,6 +4021,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3838,6 +4040,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3856,6 +4059,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3874,6 +4078,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3892,6 +4097,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3910,6 +4116,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3930,6 +4137,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3948,6 +4156,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3966,6 +4175,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3983,6 +4193,7 @@
     "Name" : "ListInstances",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3998,6 +4209,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4016,6 +4228,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4034,6 +4247,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4052,6 +4266,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4070,6 +4285,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4087,6 +4303,7 @@
     "Name" : "ListPhoneNumbers",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4104,6 +4321,7 @@
     "Name" : "ListPhoneNumbersV2",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4122,6 +4340,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4140,6 +4359,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4158,6 +4378,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4176,6 +4397,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4193,6 +4415,7 @@
     "Name" : "ListQueues",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4210,6 +4433,7 @@
     "Name" : "ListQuickConnects",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4228,6 +4452,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4246,6 +4471,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:ListRealtimeContactAnalysisSegmentsByOutputType", "connect:ListRealtimeContactAnalysisSegmentsBySegmentType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4264,6 +4490,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4282,6 +4509,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4300,6 +4528,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4318,6 +4547,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4336,6 +4566,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4354,6 +4585,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4372,6 +4604,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4390,6 +4623,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4410,6 +4644,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4428,6 +4663,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4446,6 +4682,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4503,6 +4740,7 @@
     "Name" : "ListTaskTemplates",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4521,6 +4759,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4538,6 +4777,7 @@
     "Name" : "ListTrafficDistributionGroups",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4556,6 +4796,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4574,6 +4815,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4592,6 +4834,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4610,6 +4853,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4630,6 +4874,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4648,6 +4893,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4668,6 +4914,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4686,6 +4933,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4704,6 +4952,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4722,6 +4971,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4740,6 +4990,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId", "connect:MonitorCapabilities" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4762,6 +5013,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4784,6 +5036,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4806,6 +5059,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4824,6 +5078,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4842,6 +5097,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4864,6 +5120,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4882,6 +5139,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4899,6 +5157,7 @@
     "Name" : "SearchAvailablePhoneNumbers",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4917,6 +5176,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4935,6 +5195,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4953,6 +5214,7 @@
     "ActionConditionKeys" : [ "connect:FlowType", "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4971,6 +5233,7 @@
     "ActionConditionKeys" : [ "connect:Channel", "connect:InstanceId", "connect:PreferredUserArn", "connect:SearchContactsByContactAnalysis", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -4989,6 +5252,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5007,6 +5271,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5025,6 +5290,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5043,6 +5309,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5063,6 +5330,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5081,6 +5349,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5099,6 +5368,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5117,6 +5387,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5135,6 +5406,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5153,6 +5425,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5171,6 +5444,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5189,6 +5463,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5207,6 +5482,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5225,6 +5501,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5243,6 +5520,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5261,6 +5539,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5279,6 +5558,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5297,6 +5577,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5315,6 +5596,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5333,6 +5615,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5351,6 +5634,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:SearchTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5368,6 +5652,7 @@
     "Name" : "SendChatIntegrationEvent",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5417,6 +5702,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5435,6 +5721,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5453,6 +5740,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5471,6 +5759,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5491,6 +5780,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5509,6 +5799,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5531,6 +5822,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5551,6 +5843,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5569,6 +5862,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5587,6 +5881,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5605,6 +5900,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5641,6 +5937,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:Subtype" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5667,6 +5964,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5684,6 +5982,7 @@
     "Name" : "StartOutboundVoiceContact",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5699,6 +5998,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5719,6 +6019,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:AssignmentType", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5743,6 +6044,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5761,6 +6063,7 @@
     "ActionConditionKeys" : [ "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5779,6 +6082,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5799,6 +6103,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5817,6 +6122,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5853,6 +6159,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5871,6 +6178,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5889,6 +6197,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5907,6 +6216,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -5975,6 +6285,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5997,6 +6308,7 @@
     "ActionConditionKeys" : [ "aws:TagKeys", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6015,6 +6327,7 @@
     "ActionConditionKeys" : [ "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -6083,6 +6396,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6101,6 +6415,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6119,6 +6434,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6137,6 +6453,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6155,6 +6472,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6173,6 +6491,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6191,6 +6510,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:FlowType", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6209,6 +6529,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:FlowType", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6227,6 +6548,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6245,6 +6567,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6263,6 +6586,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6281,6 +6605,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:FlowType", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6299,6 +6624,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6317,6 +6643,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6335,6 +6662,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6353,6 +6681,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6371,6 +6700,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6389,6 +6719,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId", "connect:PrimaryAttribute/${PrimaryAttribute}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6407,6 +6738,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6425,6 +6757,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6443,6 +6776,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6461,6 +6795,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6479,6 +6814,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6499,6 +6835,7 @@
     "ActionConditionKeys" : [ "connect:AttributeType", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6517,6 +6854,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId", "connect:StorageResourceType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6535,6 +6873,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6555,6 +6894,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6575,6 +6915,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6593,6 +6934,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6611,6 +6953,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6631,6 +6974,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6653,6 +6997,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6671,6 +7016,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6689,6 +7035,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6707,6 +7054,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6727,6 +7075,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6745,6 +7094,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6763,6 +7113,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6785,6 +7136,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6803,6 +7155,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6821,6 +7174,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6845,6 +7199,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6863,6 +7218,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6881,6 +7237,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6899,6 +7256,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6919,6 +7277,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6937,6 +7296,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6955,6 +7315,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6973,6 +7334,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6997,6 +7359,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7015,6 +7378,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7033,6 +7397,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7053,6 +7418,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7071,6 +7437,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7089,6 +7456,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7107,6 +7475,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7125,6 +7494,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7143,6 +7513,7 @@
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7163,6 +7534,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7183,6 +7555,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7203,6 +7576,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7221,6 +7595,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7239,6 +7614,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7257,6 +7633,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7279,6 +7656,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7297,6 +7675,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -10093,6 +10472,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListReplicationFindings",
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "list_replication_findings",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListRoutingProfileManualAssignmentQueues",
     "AuthorizedActions" : [ {
       "Name" : "ListRoutingProfileManualAssignmentQueues",
@@ -12132,5 +12518,5 @@
     "ARNFormats" : [ "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/workspace/${WorkspaceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

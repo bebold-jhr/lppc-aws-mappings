@@ -1,5 +1,6 @@
 {
   "Name" : "s3-outposts",
+  "ServiceName" : "S3 Outposts",
   "Actions" : [ {
     "Name" : "AbortMultipartUpload",
     "ActionConditionKeys" : [ "s3-outposts:AccessPointNetworkOrigin", "s3-outposts:DataAccessPointAccount", "s3-outposts:DataAccessPointArn", "s3-outposts:authType", "s3-outposts:signatureAge", "s3-outposts:signatureversion", "s3-outposts:x-amz-content-sha256" ],
@@ -58,6 +59,7 @@
     "Name" : "CreateEndpoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -147,6 +149,7 @@
     "Name" : "DeleteEndpoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -540,6 +543,7 @@
     "Name" : "ListEndpoints",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -572,6 +576,7 @@
     "Name" : "ListOutpostsWithS3",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -601,6 +606,7 @@
     "Name" : "ListSharedEndpoints",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -973,5 +979,5 @@
     "Name" : "object",
     "ARNFormats" : [ "arn:${Partition}:s3-outposts:${Region}:${Account}:outpost/${OutpostId}/bucket/${BucketName}/object/${ObjectName}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

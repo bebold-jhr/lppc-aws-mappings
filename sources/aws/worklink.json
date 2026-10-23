@@ -1,5 +1,6 @@
 {
   "Name" : "worklink",
+  "ServiceName" : "WorkLink",
   "Actions" : [ {
     "Name" : "AssociateDomain",
     "Annotations" : {
@@ -593,5 +594,5 @@
     "ARNFormats" : [ "arn:${Partition}:worklink::${Account}:fleet/${FleetName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

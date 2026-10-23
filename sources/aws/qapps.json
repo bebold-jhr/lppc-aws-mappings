@@ -1,10 +1,12 @@
 {
   "Name" : "qapps",
+  "ServiceName" : "Q Apps",
   "Actions" : [ {
     "Name" : "AssociateLibraryItemReview",
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:UserIsAppOwner" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -23,6 +25,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:UserIsAppOwner" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -42,6 +45,7 @@
     "Name" : "BatchCreateCategory",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -59,6 +63,7 @@
     "Name" : "BatchDeleteCategory",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -76,6 +81,7 @@
     "Name" : "BatchUpdateCategory",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -114,6 +120,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:UserIsAppOwner" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -154,6 +161,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -189,6 +197,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:UserIsAppOwner" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -209,6 +218,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:UserIsAppOwner" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -229,6 +239,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:UserIsAppOwner" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -249,6 +260,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:UserIsAppOwner" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -267,6 +279,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:UserIsAppOwner" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -286,6 +299,7 @@
     "Name" : "ExportQAppSessionData",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -304,6 +318,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:UserIsAppOwner" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -324,6 +339,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:UserIsAppOwner" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -344,6 +360,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:SessionIsShared", "qapps:UserIsAppOwner", "qapps:UserIsSessionModerator" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -361,6 +378,7 @@
     "Name" : "GetQAppSessionMetadata",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -379,6 +397,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:SessionIsShared", "qapps:UserIsAppOwner", "qapps:UserIsSessionModerator" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -398,6 +417,7 @@
     "Name" : "ListCategories",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -415,6 +435,7 @@
     "Name" : "ListLibraryItems",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -432,6 +453,7 @@
     "Name" : "ListQAppSessionData",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -449,6 +471,7 @@
     "Name" : "ListQApps",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -466,6 +489,7 @@
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -537,6 +561,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "qapps:AppIsPublished", "qapps:UserIsAppOwner" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -557,6 +582,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:SessionIsShared", "qapps:UserIsAppOwner", "qapps:UserIsSessionModerator" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -577,6 +603,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -597,6 +624,7 @@
     "ActionConditionKeys" : [ "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -617,6 +645,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:UserIsAppOwner" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -637,6 +666,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -655,6 +685,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:UserIsAppOwner" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -675,6 +706,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:UserIsAppOwner" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -695,6 +727,7 @@
     "ActionConditionKeys" : [ "qapps:AppIsPublished", "qapps:SessionIsShared", "qapps:UserIsAppOwner", "qapps:UserIsSessionModerator" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -712,6 +745,7 @@
     "Name" : "UpdateQAppSessionMetadata",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1142,5 +1176,5 @@
     "ARNFormats" : [ "arn:${Partition}:qapps:${Region}:${Account}:application/${ApplicationId}/qapp/${AppId}/session/${SessionId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

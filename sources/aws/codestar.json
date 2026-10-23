@@ -1,5 +1,6 @@
 {
   "Name" : "codestar",
+  "ServiceName" : "CodeStar",
   "Actions" : [ {
     "Name" : "AssociateTeamMember",
     "Annotations" : {
@@ -385,5 +386,5 @@
     "ARNFormats" : [ "arn:${Partition}:iam::${Account}:user/${AwsUserName}" ],
     "ConditionKeys" : [ "iam:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

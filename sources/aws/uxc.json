@@ -1,9 +1,11 @@
 {
   "Name" : "uxc",
+  "ServiceName" : "User Experience Customization (UXC)",
   "Actions" : [ {
     "Name" : "DeleteAccountColor",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -18,6 +20,7 @@
     "Name" : "GetAccountColor",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -32,6 +35,7 @@
     "Name" : "GetAccountCustomizations",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -46,6 +50,7 @@
     "Name" : "ListServices",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -60,6 +65,7 @@
     "Name" : "PutAccountColor",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -74,6 +80,7 @@
     "Name" : "UpdateAccountCustomizations",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -128,5 +135,5 @@
       "Package" : "Boto3"
     } ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

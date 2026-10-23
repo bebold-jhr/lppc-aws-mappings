@@ -1,9 +1,11 @@
 {
   "Name" : "pricing",
+  "ServiceName" : "Price List",
   "Actions" : [ {
     "Name" : "DescribeServices",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -18,6 +20,7 @@
     "Name" : "GetAttributeValues",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -32,6 +35,7 @@
     "Name" : "GetPriceListFileUrl",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -46,6 +50,7 @@
     "Name" : "GetProducts",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -60,6 +65,7 @@
     "Name" : "ListPriceLists",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -127,5 +133,5 @@
       "Package" : "Boto3"
     } ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

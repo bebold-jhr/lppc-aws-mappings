@@ -1,5 +1,6 @@
 {
   "Name" : "verifiedpermissions",
+  "ServiceName" : "Verified Permissions",
   "Actions" : [ {
     "Name" : "CreateIdentitySource",
     "Annotations" : {
@@ -781,5 +782,5 @@
     "Name" : "policy-store-alias",
     "ARNFormats" : [ "arn:${Partition}:verifiedpermissions:${Region}:${Account}:policy-store-alias/${AliasName}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

@@ -1,5 +1,6 @@
 {
   "Name" : "signin",
+  "ServiceName" : "Signin",
   "Actions" : [ {
     "Name" : "Authenticate",
     "ActionConditionKeys" : [ "signin:PrincipalArn" ],
@@ -83,6 +84,7 @@
     "Name" : "CreateOAuth2Token",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -123,6 +125,7 @@
     "Name" : "DeleteConsoleAuthorizationConfiguration",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -137,6 +140,7 @@
     "Name" : "DeleteResourcePermissionStatement",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -151,6 +155,7 @@
     "Name" : "GetConsoleAuthorizationConfiguration",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -165,6 +170,7 @@
     "Name" : "GetResourcePolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -201,6 +207,7 @@
     "Name" : "ListResourcePermissionStatements",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -229,6 +236,7 @@
     "Name" : "PutConsoleAuthorizationConfiguration",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -243,6 +251,7 @@
     "Name" : "PutResourcePermissionStatement",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -433,5 +442,5 @@
     "Name" : "oauth2-resource-service-principal",
     "ARNFormats" : [ "arn:${Partition}:signin:${Region}:${Account}:service-principal/${ServicePrincipalName}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

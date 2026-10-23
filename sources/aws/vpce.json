@@ -1,5 +1,6 @@
 {
   "Name" : "vpce",
+  "ServiceName" : "VPC Endpoints",
   "Actions" : [ {
     "Name" : "AllowMultiRegion",
     "Annotations" : {
@@ -27,5 +28,5 @@
     "Name" : "vpc-endpoint-service",
     "ARNFormats" : [ "arn:${Partition}:ec2:${Region}:${Account}:vpc-endpoint-service/${VpcEndpointServiceId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

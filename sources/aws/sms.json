@@ -1,5 +1,6 @@
 {
   "Name" : "sms",
+  "ServiceName" : "ServerMigrationService",
   "Actions" : [ {
     "Name" : "CreateApp",
     "Annotations" : {
@@ -519,5 +520,5 @@
       "IAM Action Last Accessed" : true
     }
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

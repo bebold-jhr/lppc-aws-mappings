@@ -1,5 +1,6 @@
 {
   "Name" : "swf",
+  "ServiceName" : "SWF",
   "Actions" : [ {
     "Name" : "CancelTimer",
     "Annotations" : {
@@ -73,6 +74,7 @@
     "ActionConditionKeys" : [ "swf:tagFilter.tag", "swf:typeFilter.name", "swf:typeFilter.version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -91,6 +93,7 @@
     "ActionConditionKeys" : [ "swf:tagFilter.tag", "swf:typeFilter.name", "swf:typeFilter.version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -109,6 +112,7 @@
     "ActionConditionKeys" : [ "swf:taskList.name" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -127,6 +131,7 @@
     "ActionConditionKeys" : [ "swf:taskList.name" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -145,6 +150,7 @@
     "ActionConditionKeys" : [ "swf:activityType.name", "swf:activityType.version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -163,6 +169,7 @@
     "ActionConditionKeys" : [ "swf:workflowType.name", "swf:workflowType.version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -181,6 +188,7 @@
     "ActionConditionKeys" : [ "swf:activityType.name", "swf:activityType.version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -198,6 +206,7 @@
     "Name" : "DeprecateDomain",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -216,6 +225,7 @@
     "ActionConditionKeys" : [ "swf:workflowType.name", "swf:workflowType.version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -234,6 +244,7 @@
     "ActionConditionKeys" : [ "swf:activityType.name", "swf:activityType.version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -251,6 +262,7 @@
     "Name" : "DescribeDomain",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -268,6 +280,7 @@
     "Name" : "DescribeWorkflowExecution",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -286,6 +299,7 @@
     "ActionConditionKeys" : [ "swf:workflowType.name", "swf:workflowType.version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -320,6 +334,7 @@
     "Name" : "GetWorkflowExecutionHistory",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -337,6 +352,7 @@
     "Name" : "ListActivityTypes",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -355,6 +371,7 @@
     "ActionConditionKeys" : [ "swf:tagFilter.tag", "swf:typeFilter.name", "swf:typeFilter.version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -372,6 +389,7 @@
     "Name" : "ListDomains",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -387,6 +405,7 @@
     "ActionConditionKeys" : [ "swf:tagFilter.tag", "swf:typeFilter.name", "swf:typeFilter.version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -404,6 +423,7 @@
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -421,6 +441,7 @@
     "Name" : "ListWorkflowTypes",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -439,6 +460,7 @@
     "ActionConditionKeys" : [ "swf:taskList.name" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -457,6 +479,7 @@
     "ActionConditionKeys" : [ "swf:taskList.name" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -474,6 +497,7 @@
     "Name" : "RecordActivityTaskHeartbeat",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -509,6 +533,7 @@
     "ActionConditionKeys" : [ "swf:defaultTaskList.name", "swf:name", "swf:version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -527,6 +552,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -542,6 +568,7 @@
     "ActionConditionKeys" : [ "swf:defaultTaskList.name", "swf:name", "swf:version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -593,6 +620,7 @@
     "Name" : "RequestCancelWorkflowExecution",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -610,6 +638,7 @@
     "Name" : "RespondActivityTaskCanceled",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -628,6 +657,7 @@
     "ActionConditionKeys" : [ "swf:activityType.name", "swf:activityType.version", "swf:tagList.member.0", "swf:tagList.member.1", "swf:tagList.member.2", "swf:tagList.member.3", "swf:tagList.member.4", "swf:taskList.name", "swf:workflowType.name", "swf:workflowType.version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -645,6 +675,7 @@
     "Name" : "RespondActivityTaskFailed",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -662,6 +693,7 @@
     "Name" : "RespondDecisionTaskCompleted",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -713,6 +745,7 @@
     "Name" : "SignalWorkflowExecution",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -765,6 +798,7 @@
     "ActionConditionKeys" : [ "swf:tagList.member.0", "swf:tagList.member.1", "swf:tagList.member.2", "swf:tagList.member.3", "swf:tagList.member.4", "swf:taskList.name", "swf:workflowType.name", "swf:workflowType.version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -783,6 +817,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -800,6 +835,7 @@
     "Name" : "TerminateWorkflowExecution",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -818,6 +854,7 @@
     "ActionConditionKeys" : [ "swf:activityType.name", "swf:activityType.version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -835,6 +872,7 @@
     "Name" : "UndeprecateDomain",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -853,6 +891,7 @@
     "ActionConditionKeys" : [ "swf:workflowType.name", "swf:workflowType.version" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -871,6 +910,7 @@
     "ActionConditionKeys" : [ "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -1399,5 +1439,5 @@
     "ARNFormats" : [ "arn:${Partition}:swf::${Account}:/domain/${DomainName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

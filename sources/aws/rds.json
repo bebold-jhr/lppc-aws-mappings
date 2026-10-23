@@ -1,9 +1,11 @@
 {
   "Name" : "rds",
+  "ServiceName" : "RDS",
   "Actions" : [ {
     "Name" : "AddRoleToDBCluster",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -21,6 +23,7 @@
     "Name" : "AddRoleToDBInstance",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -38,6 +41,7 @@
     "Name" : "AddSourceIdentifierToSubscription",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -56,6 +60,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:TagsFromRequest", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -78,6 +83,8 @@
       "Name" : "cluster-snapshot"
     }, {
       "Name" : "db"
+    }, {
+      "Name" : "db-capacity-reservation"
     }, {
       "Name" : "deployment"
     }, {
@@ -119,6 +126,7 @@
     "Name" : "ApplyPendingMaintenanceAction",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -138,6 +146,7 @@
     "Name" : "AuthorizeDBSecurityGroupIngress",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -155,6 +164,7 @@
     "Name" : "BacktrackDBCluster",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -169,9 +179,28 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CancelDBCapacityReservation",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "db-capacity-reservation"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CancelExportTask",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -204,6 +233,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -222,6 +252,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -240,6 +271,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -258,6 +290,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:CopyOptionGroup", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -276,6 +309,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -294,6 +328,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "rds:DatabaseClass", "rds:DatabaseEngine", "rds:DatabaseName", "rds:MultiAz", "rds:Piops", "rds:StorageEncrypted", "rds:StorageSize", "rds:Vpc", "rds:cluster-pg-tag/${TagKey}", "rds:cluster-tag/${TagKey}", "rds:db-tag/${TagKey}", "rds:pg-tag/${TagKey}", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -320,6 +355,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -334,10 +370,30 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateDBCapacityReservation",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "db-capacity-reservation"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateDBCluster",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:DatabaseClass", "rds:DatabaseEngine", "rds:DatabaseName", "rds:ManageMasterUserPassword", "rds:Piops", "rds:StorageEncrypted", "rds:StorageSize", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -366,6 +422,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:EndpointType", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -386,6 +443,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -404,6 +462,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -424,6 +483,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:BackupTarget", "rds:ManageMasterUserPassword", "rds:PubliclyAccessible", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -434,6 +494,8 @@
       "Name" : "cluster"
     }, {
       "Name" : "db"
+    }, {
+      "Name" : "db-capacity-reservation"
     }, {
       "Name" : "og"
     }, {
@@ -452,6 +514,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:PubliclyAccessible", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -462,6 +525,8 @@
       "Name" : "cluster"
     }, {
       "Name" : "db"
+    }, {
+      "Name" : "db-capacity-reservation"
     }, {
       "Name" : "og"
     }, {
@@ -478,6 +543,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -496,6 +562,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -511,6 +578,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -531,6 +599,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -549,6 +618,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:PubliclyAccessible", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -569,6 +639,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:BackupTarget", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -589,6 +660,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -607,6 +679,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -625,6 +698,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -645,6 +719,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -667,6 +742,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -685,6 +761,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:ManageMasterUserPassword", "rds:TenantDatabaseName", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -726,6 +803,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -743,6 +821,7 @@
     "Name" : "DeleteCustomDBEngineVersion",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -760,6 +839,7 @@
     "Name" : "DeleteDBCluster",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -779,6 +859,7 @@
     "Name" : "DeleteDBClusterAutomatedBackup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -796,6 +877,7 @@
     "Name" : "DeleteDBClusterEndpoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -813,6 +895,7 @@
     "Name" : "DeleteDBClusterParameterGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -830,6 +913,7 @@
     "Name" : "DeleteDBClusterSnapshot",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -847,6 +931,7 @@
     "Name" : "DeleteDBInstance",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -864,6 +949,7 @@
     "Name" : "DeleteDBInstanceAutomatedBackup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -881,6 +967,7 @@
     "Name" : "DeleteDBParameterGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -898,6 +985,7 @@
     "Name" : "DeleteDBProxy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -915,6 +1003,7 @@
     "Name" : "DeleteDBProxyEndpoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -932,6 +1021,7 @@
     "Name" : "DeleteDBSecurityGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -949,6 +1039,7 @@
     "Name" : "DeleteDBShardGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -966,6 +1057,7 @@
     "Name" : "DeleteDBSnapshot",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -983,6 +1075,7 @@
     "Name" : "DeleteDBSubnetGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1000,6 +1093,7 @@
     "Name" : "DeleteEventSubscription",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1017,6 +1111,7 @@
     "Name" : "DeleteGlobalCluster",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1034,6 +1129,7 @@
     "Name" : "DeleteIntegration",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1051,6 +1147,7 @@
     "Name" : "DeleteOptionGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1068,6 +1165,7 @@
     "Name" : "DeleteTenantDatabase",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1087,6 +1185,7 @@
     "Name" : "DeregisterDBProxyTargets",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1110,6 +1209,7 @@
     "Name" : "DescribeAccountAttributes",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1124,6 +1224,7 @@
     "Name" : "DescribeBlueGreenDeployments",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1141,6 +1242,7 @@
     "Name" : "DescribeCertificates",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1152,9 +1254,28 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DescribeDBCapacityReservations",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "db-capacity-reservation"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DescribeDBClusterAutomatedBackups",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1174,6 +1295,7 @@
     "Name" : "DescribeDBClusterBacktracks",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1191,6 +1313,7 @@
     "Name" : "DescribeDBClusterEndpoints",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1210,6 +1333,7 @@
     "Name" : "DescribeDBClusterParameterGroups",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1227,6 +1351,7 @@
     "Name" : "DescribeDBClusterParameters",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1244,6 +1369,7 @@
     "Name" : "DescribeDBClusterSnapshotAttributes",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1261,6 +1387,7 @@
     "Name" : "DescribeDBClusterSnapshots",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1280,6 +1407,7 @@
     "Name" : "DescribeDBClusters",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1297,6 +1425,7 @@
     "Name" : "DescribeDBEngineVersions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1311,6 +1440,7 @@
     "Name" : "DescribeDBInstanceAutomatedBackups",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1330,6 +1460,7 @@
     "Name" : "DescribeDBInstances",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1347,6 +1478,7 @@
     "Name" : "DescribeDBLogFiles",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1364,6 +1496,7 @@
     "Name" : "DescribeDBMajorEngineVersions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1378,6 +1511,7 @@
     "Name" : "DescribeDBParameterGroups",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1395,6 +1529,7 @@
     "Name" : "DescribeDBParameters",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1412,6 +1547,7 @@
     "Name" : "DescribeDBProxies",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1429,6 +1565,7 @@
     "Name" : "DescribeDBProxyEndpoints",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1448,6 +1585,7 @@
     "Name" : "DescribeDBProxyTargetGroups",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1465,6 +1603,7 @@
     "Name" : "DescribeDBProxyTargets",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1484,6 +1623,7 @@
     "Name" : "DescribeDBRecommendations",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1498,6 +1638,7 @@
     "Name" : "DescribeDBSecurityGroups",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1515,6 +1656,7 @@
     "Name" : "DescribeDBShardGroups",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1532,6 +1674,7 @@
     "Name" : "DescribeDBSnapshotAttributes",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1549,6 +1692,7 @@
     "Name" : "DescribeDBSnapshotTenantDatabases",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1570,6 +1714,7 @@
     "Name" : "DescribeDBSnapshots",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1589,6 +1734,7 @@
     "Name" : "DescribeDBSubnetGroups",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1606,6 +1752,7 @@
     "Name" : "DescribeEngineDefaultClusterParameters",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1620,6 +1767,7 @@
     "Name" : "DescribeEngineDefaultParameters",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1634,6 +1782,7 @@
     "Name" : "DescribeEventCategories",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1648,6 +1797,7 @@
     "Name" : "DescribeEventSubscriptions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1665,6 +1815,7 @@
     "Name" : "DescribeEvents",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1679,6 +1830,7 @@
     "Name" : "DescribeExportTasks",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1700,6 +1852,7 @@
     "Name" : "DescribeGlobalClusters",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1718,6 +1871,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1735,6 +1889,7 @@
     "Name" : "DescribeOptionGroupOptions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1749,6 +1904,7 @@
     "Name" : "DescribeOptionGroups",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1766,6 +1922,7 @@
     "Name" : "DescribeOrderableDBInstanceOptions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1780,6 +1937,7 @@
     "Name" : "DescribePendingMaintenanceActions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1827,6 +1985,7 @@
     "Name" : "DescribeReservedDBInstances",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1844,6 +2003,7 @@
     "Name" : "DescribeReservedDBInstancesOfferings",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1858,6 +2018,7 @@
     "Name" : "DescribeSourceRegions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1872,6 +2033,7 @@
     "Name" : "DescribeTenantDatabases",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1891,6 +2053,7 @@
     "Name" : "DescribeValidDBInstanceModifications",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1908,6 +2071,7 @@
     "Name" : "DisableHttpEndpoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1942,6 +2106,7 @@
     "Name" : "DownloadDBLogFilePortion",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1959,6 +2124,7 @@
     "Name" : "EnableHttpEndpoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1976,6 +2142,7 @@
     "Name" : "FailoverDBCluster",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1995,6 +2162,7 @@
     "Name" : "FailoverGlobalCluster",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2014,6 +2182,7 @@
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2036,6 +2205,8 @@
       "Name" : "cluster-snapshot"
     }, {
       "Name" : "db"
+    }, {
+      "Name" : "db-capacity-reservation"
     }, {
       "Name" : "es"
     }, {
@@ -2075,6 +2246,7 @@
     "Name" : "ModifyActivityStream",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2092,6 +2264,7 @@
     "Name" : "ModifyCertificates",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2106,6 +2279,7 @@
     "Name" : "ModifyCurrentDBClusterCapacity",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2123,6 +2297,7 @@
     "Name" : "ModifyCustomDBEngineVersion",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2137,10 +2312,29 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ModifyDBCapacityReservation",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "db-capacity-reservation"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ModifyDBCluster",
     "ActionConditionKeys" : [ "rds:DatabaseClass", "rds:ManageMasterUserPassword", "rds:Piops", "rds:StorageSize" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2164,6 +2358,7 @@
     "Name" : "ModifyDBClusterEndpoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2181,6 +2376,7 @@
     "Name" : "ModifyDBClusterParameterGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2198,6 +2394,7 @@
     "Name" : "ModifyDBClusterSnapshotAttribute",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2216,6 +2413,7 @@
     "ActionConditionKeys" : [ "rds:ManageMasterUserPassword" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2224,6 +2422,8 @@
     },
     "Resources" : [ {
       "Name" : "db"
+    }, {
+      "Name" : "db-capacity-reservation"
     }, {
       "Name" : "og"
     }, {
@@ -2241,6 +2441,7 @@
     "Name" : "ModifyDBParameterGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2258,6 +2459,7 @@
     "Name" : "ModifyDBProxy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2275,6 +2477,7 @@
     "Name" : "ModifyDBProxyEndpoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2292,6 +2495,7 @@
     "Name" : "ModifyDBProxyTargetGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2309,6 +2513,7 @@
     "Name" : "ModifyDBRecommendation",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2323,6 +2528,7 @@
     "Name" : "ModifyDBShardGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2340,6 +2546,7 @@
     "Name" : "ModifyDBSnapshot",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2359,6 +2566,7 @@
     "Name" : "ModifyDBSnapshotAttribute",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2376,6 +2584,7 @@
     "Name" : "ModifyDBSubnetGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2393,6 +2602,7 @@
     "Name" : "ModifyEventSubscription",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2410,6 +2620,7 @@
     "Name" : "ModifyGlobalCluster",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2427,6 +2638,7 @@
     "Name" : "ModifyIntegration",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2444,6 +2656,7 @@
     "Name" : "ModifyOptionGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2476,6 +2689,7 @@
     "ActionConditionKeys" : [ "rds:ManageMasterUserPassword", "rds:TenantDatabaseName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2495,6 +2709,7 @@
     "Name" : "PromoteReadReplica",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2512,6 +2727,7 @@
     "Name" : "PromoteReadReplicaDBCluster",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2530,6 +2746,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2547,6 +2764,7 @@
     "Name" : "RebootDBCluster",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2564,6 +2782,7 @@
     "Name" : "RebootDBInstance",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2581,6 +2800,7 @@
     "Name" : "RebootDBShardGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2598,6 +2818,7 @@
     "Name" : "RegisterDBProxyTargets",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2617,6 +2838,7 @@
     "Name" : "RemoveFromGlobalCluster",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2636,6 +2858,7 @@
     "Name" : "RemoveRoleFromDBCluster",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2653,6 +2876,7 @@
     "Name" : "RemoveRoleFromDBInstance",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2670,6 +2894,7 @@
     "Name" : "RemoveSourceIdentifierFromSubscription",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2688,6 +2913,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -2710,6 +2936,8 @@
       "Name" : "cluster-snapshot"
     }, {
       "Name" : "db"
+    }, {
+      "Name" : "db-capacity-reservation"
     }, {
       "Name" : "deployment"
     }, {
@@ -2751,6 +2979,7 @@
     "Name" : "ResetDBClusterParameterGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2768,6 +2997,7 @@
     "Name" : "ResetDBParameterGroup",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2786,6 +3016,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:DatabaseEngine", "rds:DatabaseName", "rds:ManageMasterUserPassword", "rds:StorageEncrypted", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2810,6 +3041,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:DatabaseClass", "rds:Piops", "rds:StorageSize", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2838,6 +3070,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:DatabaseClass", "rds:Piops", "rds:StorageSize", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2864,6 +3097,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:BackupTarget", "rds:ManageMasterUserPassword", "rds:PubliclyAccessible", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2874,6 +3108,8 @@
       "Name" : "cluster-snapshot"
     }, {
       "Name" : "db"
+    }, {
+      "Name" : "db-capacity-reservation"
     }, {
       "Name" : "og"
     }, {
@@ -2892,6 +3128,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:ManageMasterUserPassword", "rds:PubliclyAccessible", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2900,6 +3137,8 @@
     },
     "Resources" : [ {
       "Name" : "db"
+    }, {
+      "Name" : "db-capacity-reservation"
     }, {
       "Name" : "og"
     }, {
@@ -2918,6 +3157,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:BackupTarget", "rds:ManageMasterUserPassword", "rds:PubliclyAccessible", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2928,6 +3168,8 @@
       "Name" : "auto-backup"
     }, {
       "Name" : "db"
+    }, {
+      "Name" : "db-capacity-reservation"
     }, {
       "Name" : "og"
     }, {
@@ -2943,6 +3185,7 @@
     "Name" : "RevokeDBSecurityGroupIngress",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2960,6 +3203,7 @@
     "Name" : "StartActivityStream",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2979,6 +3223,7 @@
     "Name" : "StartDBCluster",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2996,6 +3241,7 @@
     "Name" : "StartDBInstance",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3004,6 +3250,8 @@
     },
     "Resources" : [ {
       "Name" : "db"
+    }, {
+      "Name" : "db-capacity-reservation"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -3014,6 +3262,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "rds:req-tag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3033,6 +3282,7 @@
     "Name" : "StartExportTask",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3054,6 +3304,7 @@
     "Name" : "StopActivityStream",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3073,6 +3324,7 @@
     "Name" : "StopDBCluster",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3090,6 +3342,7 @@
     "Name" : "StopDBInstance",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3109,6 +3362,7 @@
     "Name" : "StopDBInstanceAutomatedBackupsReplication",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3127,6 +3381,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3144,6 +3399,7 @@
     "Name" : "SwitchoverGlobalCluster",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3163,6 +3419,7 @@
     "Name" : "SwitchoverReadReplica",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3386,6 +3643,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CancelDBCapacityReservation",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelDBCapacityReservation",
+      "Service" : "rds"
+    } ],
+    "SDK" : [ {
+      "Name" : "rds",
+      "Method" : "cancel_db_capacity_reservation",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CancelExportTask",
     "AuthorizedActions" : [ {
       "Name" : "CancelExportTask",
@@ -3533,6 +3801,20 @@
     "SDK" : [ {
       "Name" : "rds",
       "Method" : "create_custom_db_engine_version",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateDBCapacityReservation",
+    "AuthorizedActions" : [ {
+      "Name" : "AddTagsToResource",
+      "Service" : "rds"
+    }, {
+      "Name" : "CreateDBCapacityReservation",
+      "Service" : "rds"
+    } ],
+    "SDK" : [ {
+      "Name" : "rds",
+      "Method" : "create_db_capacity_reservation",
       "Package" : "Boto3"
     } ]
   }, {
@@ -4273,6 +4555,17 @@
     }, {
       "Name" : "rds",
       "Method" : "describe_certificates",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeDBCapacityReservations",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeDBCapacityReservations",
+      "Service" : "rds"
+    } ],
+    "SDK" : [ {
+      "Name" : "rds",
+      "Method" : "describe_db_capacity_reservations",
       "Package" : "Boto3"
     } ]
   }, {
@@ -5027,6 +5320,17 @@
     "SDK" : [ {
       "Name" : "rds",
       "Method" : "modify_custom_db_engine_version",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ModifyDBCapacityReservation",
+    "AuthorizedActions" : [ {
+      "Name" : "ModifyDBCapacityReservation",
+      "Service" : "rds"
+    } ],
+    "SDK" : [ {
+      "Name" : "rds",
+      "Method" : "modify_db_capacity_reservation",
       "Package" : "Boto3"
     } ]
   }, {
@@ -5947,6 +6251,10 @@
     "ARNFormats" : [ "arn:${Partition}:rds:${Region}:${Account}:db:${DbInstanceName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "rds:DatabaseClass", "rds:DatabaseEngine", "rds:DatabaseName", "rds:MultiAz", "rds:Piops", "rds:StorageEncrypted", "rds:StorageSize", "rds:Vpc", "rds:db-tag/${TagKey}" ]
   }, {
+    "Name" : "db-capacity-reservation",
+    "ARNFormats" : [ "arn:${Partition}:rds:${Region}:${Account}:db-capacity-reservation:${DBCapacityReservationIdentifier}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "deployment",
     "ARNFormats" : [ "arn:${Partition}:rds:${Region}:${Account}:deployment:${BlueGreenDeploymentIdentifier}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
@@ -6011,5 +6319,5 @@
     "ARNFormats" : [ "arn:${Partition}:rds:${Region}:${Account}:tenant-database:${TenantResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

@@ -1,5 +1,6 @@
 {
   "Name" : "ecs",
+  "ServiceName" : "Elastic Container Service",
   "Actions" : [ {
     "Name" : "AllowVendedLogDeliveryForResource",
     "Annotations" : {
@@ -18,9 +19,29 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "AssociateGatewayWithCluster",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "gateway",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ContinueServiceDeployment",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -43,6 +64,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ecs:instance-metadata-tags-propagation", "ecs:propagate-tags" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -62,6 +84,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ecs:capacity-provider", "ecs:fargate-ephemeral-storage-kms-key" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -81,6 +104,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ecs:capacity-provider", "ecs:daemon-task-definition", "ecs:enable-ecs-managed-tags", "ecs:enable-execute-command", "ecs:propagate-tags", "ecs:task-cpu", "ecs:task-memory" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -100,6 +124,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ecs:enable-ecs-managed-tags", "ecs:propagate-tags", "ecs:subnet", "ecs:task-cpu", "ecs:task-definition", "ecs:task-memory" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -115,10 +140,31 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateGateway",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ecs:enable-ecs-managed-tags", "ecs:propagate-tags" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "gateway",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateService",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ecs:auto-assign-public-ip", "ecs:capacity-provider", "ecs:enable-ebs-volumes", "ecs:enable-ecs-managed-tags", "ecs:enable-execute-command", "ecs:enable-service-connect", "ecs:enable-vpc-lattice", "ecs:namespace", "ecs:propagate-tags", "ecs:subnet", "ecs:task-cpu", "ecs:task-definition", "ecs:task-memory" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -138,6 +184,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ecs:capacity-provider", "ecs:cluster", "ecs:service", "ecs:task-definition" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -156,6 +203,7 @@
     "ActionConditionKeys" : [ "ecs:account-setting" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -171,6 +219,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -189,6 +238,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -206,6 +256,7 @@
     "Name" : "DeleteCluster",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -224,6 +275,7 @@
     "Name" : "DeleteDaemon",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -242,6 +294,7 @@
     "Name" : "DeleteDaemonTaskDefinition",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -260,6 +313,7 @@
     "Name" : "DeleteExpressGatewayService",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -275,10 +329,30 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DeleteGateway",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "gateway",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteService",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -297,6 +371,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -315,6 +390,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster", "ecs:service" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -332,6 +408,7 @@
     "Name" : "DeregisterContainerInstance",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -350,6 +427,7 @@
     "Name" : "DeregisterTaskDefinition",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -365,6 +443,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -382,6 +461,7 @@
     "Name" : "DescribeClusters",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -401,6 +481,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -418,6 +499,7 @@
     "Name" : "DescribeDaemon",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -436,6 +518,7 @@
     "Name" : "DescribeDaemonDeployments",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -457,6 +540,7 @@
     "Name" : "DescribeDaemonRevisions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -478,6 +562,7 @@
     "Name" : "DescribeDaemonTaskDefinition",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -496,6 +581,7 @@
     "Name" : "DescribeExpressGatewayService",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -511,9 +597,70 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DescribeGateway",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "gateway",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeGatewayResources",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "gateway",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeGatewayRoute",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "gateway",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "gateway-route",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:gateway" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DescribeServiceDeployments",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -535,6 +682,7 @@
     "Name" : "DescribeServiceRevisions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -557,6 +705,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -574,6 +723,7 @@
     "Name" : "DescribeTaskDefinition",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -589,6 +739,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster", "ecs:service" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -607,6 +758,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -621,9 +773,29 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DisassociateGatewayFromCluster",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "gateway",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DiscoverPollEndpoint",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -639,6 +811,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster", "ecs:container-name", "ecs:task" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -659,6 +832,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -676,6 +850,7 @@
     "Name" : "ListAccountSettings",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -690,6 +865,7 @@
     "Name" : "ListAttributes",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -708,6 +884,7 @@
     "Name" : "ListClusters",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -722,6 +899,7 @@
     "Name" : "ListContainerInstances",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -740,6 +918,7 @@
     "Name" : "ListDaemonDeployments",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -758,6 +937,7 @@
     "Name" : "ListDaemonTaskDefinitions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -773,6 +953,7 @@
     "ActionConditionKeys" : [ "ecs:cluster" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -784,9 +965,78 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListGatewayClusterAssociations",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ]
+    }, {
+      "Name" : "gateway",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster", "ecs:gateway" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListGatewayRoutes",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ]
+    }, {
+      "Name" : "gateway",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:gateway" ]
+    }, {
+      "Name" : "gateway-route"
+    }, {
+      "Name" : "service",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster", "ecs:service" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListGateways",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "gateway",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:gateway" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListServiceDeployments",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -806,6 +1056,7 @@
     "ActionConditionKeys" : [ "ecs:cluster" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -821,6 +1072,7 @@
     "ActionConditionKeys" : [ "ecs:namespace" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -836,6 +1088,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -865,6 +1118,7 @@
     "Name" : "ListTaskDefinitionFamilies",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -879,6 +1133,7 @@
     "Name" : "ListTaskDefinitions",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -894,6 +1149,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -930,6 +1186,7 @@
     "ActionConditionKeys" : [ "ecs:account-setting" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -945,6 +1202,7 @@
     "ActionConditionKeys" : [ "ecs:account-setting" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -960,6 +1218,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -978,6 +1237,7 @@
     "ActionConditionKeys" : [ "ecs:capacity-provider" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1018,6 +1278,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1037,6 +1298,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ecs:privileged", "ecs:task-cpu", "ecs:task-memory" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1056,6 +1318,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "ecs:compute-compatibility", "ecs:privileged", "ecs:task-cpu", "ecs:task-memory" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1075,6 +1338,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ecs:capacity-provider", "ecs:cluster", "ecs:enable-ebs-volumes", "ecs:enable-execute-command", "ecs:task-cpu", "ecs:task-memory" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1093,6 +1357,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ecs:cluster", "ecs:container-instances", "ecs:enable-ebs-volumes", "ecs:enable-execute-command", "ecs:task-cpu", "ecs:task-memory" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1128,6 +1393,7 @@
     "Name" : "StopServiceDeployment",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1150,6 +1416,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1167,6 +1434,7 @@
     "Name" : "SubmitAttachmentStateChanges",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1185,6 +1453,7 @@
     "Name" : "SubmitContainerStateChange",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1203,6 +1472,7 @@
     "Name" : "SubmitTaskStateChange",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1222,6 +1492,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ecs:CreateAction" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -1238,6 +1509,8 @@
       "Name" : "daemon"
     }, {
       "Name" : "daemon-task-definition"
+    }, {
+      "Name" : "gateway"
     }, {
       "Name" : "service"
     }, {
@@ -1256,6 +1529,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -1272,6 +1546,8 @@
       "Name" : "daemon"
     }, {
       "Name" : "daemon-task-definition"
+    }, {
+      "Name" : "gateway"
     }, {
       "Name" : "service"
     }, {
@@ -1290,6 +1566,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:instance-metadata-tags-propagation", "ecs:propagate-tags" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1308,6 +1585,7 @@
     "ActionConditionKeys" : [ "ecs:fargate-ephemeral-storage-kms-key" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1326,6 +1604,7 @@
     "Name" : "UpdateClusterSettings",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1345,6 +1624,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1363,6 +1643,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1381,6 +1662,7 @@
     "ActionConditionKeys" : [ "ecs:capacity-provider", "ecs:daemon-task-definition", "ecs:enable-ecs-managed-tags", "ecs:enable-execute-command", "ecs:propagate-tags", "ecs:task-cpu", "ecs:task-memory" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1400,6 +1682,7 @@
     "ActionConditionKeys" : [ "ecs:enable-ecs-managed-tags", "ecs:propagate-tags", "ecs:subnet", "ecs:task-cpu", "ecs:task-definition", "ecs:task-memory" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1415,10 +1698,31 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "UpdateGateway",
+    "ActionConditionKeys" : [ "ecs:enable-ecs-managed-tags", "ecs:propagate-tags" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "gateway",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateService",
     "ActionConditionKeys" : [ "ecs:auto-assign-public-ip", "ecs:capacity-provider", "ecs:enable-ebs-volumes", "ecs:enable-ecs-managed-tags", "ecs:enable-execute-command", "ecs:enable-service-connect", "ecs:enable-vpc-lattice", "ecs:namespace", "ecs:propagate-tags", "ecs:subnet", "ecs:task-cpu", "ecs:task-definition", "ecs:task-memory" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1438,6 +1742,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1456,6 +1761,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1474,6 +1780,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster", "ecs:service" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1583,6 +1890,17 @@
     "Types" : [ "Numeric" ]
   } ],
   "Operations" : [ {
+    "Name" : "AssociateGatewayWithCluster",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateGatewayWithCluster",
+      "Service" : "ecs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ecs",
+      "Method" : "associate_gateway_with_cluster",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ContinueServiceDeployment",
     "AuthorizedActions" : [ {
       "Name" : "ContinueServiceDeployment",
@@ -1653,10 +1971,16 @@
   }, {
     "Name" : "CreateExpressGatewayService",
     "AuthorizedActions" : [ {
+      "Name" : "AssociateGatewayWithCluster",
+      "Service" : "ecs"
+    }, {
       "Name" : "CreateCluster",
       "Service" : "ecs"
     }, {
       "Name" : "CreateExpressGatewayService",
+      "Service" : "ecs"
+    }, {
+      "Name" : "CreateGateway",
       "Service" : "ecs"
     }, {
       "Name" : "PassRole",
@@ -1674,6 +1998,26 @@
     "SDK" : [ {
       "Name" : "ecs",
       "Method" : "create_express_gateway_service",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateGateway",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateGateway",
+      "Service" : "ecs"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "ecs.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "ecs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ecs",
+      "Method" : "create_gateway",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1794,6 +2138,17 @@
     "SDK" : [ {
       "Name" : "ecs",
       "Method" : "delete_express_gateway_service",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteGateway",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteGateway",
+      "Service" : "ecs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ecs",
+      "Method" : "delete_gateway",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1940,6 +2295,39 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeGateway",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeGateway",
+      "Service" : "ecs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ecs",
+      "Method" : "describe_gateway",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeGatewayResources",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeGatewayResources",
+      "Service" : "ecs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ecs",
+      "Method" : "describe_gateway_resources",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeGatewayRoute",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeGatewayRoute",
+      "Service" : "ecs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ecs",
+      "Method" : "describe_gateway_route",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeServiceDeployments",
     "AuthorizedActions" : [ {
       "Name" : "DescribeServiceDeployments",
@@ -2003,6 +2391,17 @@
     "SDK" : [ {
       "Name" : "ecs",
       "Method" : "describe_tasks",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DisassociateGatewayFromCluster",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateGatewayFromCluster",
+      "Service" : "ecs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ecs",
+      "Method" : "disassociate_gateway_from_cluster",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2113,6 +2512,39 @@
     "SDK" : [ {
       "Name" : "ecs",
       "Method" : "list_daemons",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListGatewayClusterAssociations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListGatewayClusterAssociations",
+      "Service" : "ecs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ecs",
+      "Method" : "list_gateway_cluster_associations",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListGatewayRoutes",
+    "AuthorizedActions" : [ {
+      "Name" : "ListGatewayRoutes",
+      "Service" : "ecs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ecs",
+      "Method" : "list_gateway_routes",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListGateways",
+    "AuthorizedActions" : [ {
+      "Name" : "ListGateways",
+      "Service" : "ecs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ecs",
+      "Method" : "list_gateways",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2491,6 +2923,12 @@
   }, {
     "Name" : "UpdateExpressGatewayService",
     "AuthorizedActions" : [ {
+      "Name" : "AssociateGatewayWithCluster",
+      "Service" : "ecs"
+    }, {
+      "Name" : "CreateGateway",
+      "Service" : "ecs"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "ecs-tasks.amazonaws.com", "ecs.amazonaws.com" ]
@@ -2506,6 +2944,23 @@
     "SDK" : [ {
       "Name" : "ecs",
       "Method" : "update_express_gateway_service",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateGateway",
+    "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "ecs.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "UpdateGateway",
+      "Service" : "ecs"
+    } ],
+    "SDK" : [ {
+      "Name" : "ecs",
+      "Method" : "update_gateway",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2588,6 +3043,14 @@
     "ARNFormats" : [ "arn:${Partition}:ecs:${Region}:${Account}:daemon-task-definition/${DaemonTaskDefinitionFamilyName}:${DaemonTaskDefinitionRevisionNumber}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
+    "Name" : "gateway",
+    "ARNFormats" : [ "arn:${Partition}:ecs:${Region}:${Account}:gateway/${GatewayName}/${GatewayId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "gateway-route",
+    "ARNFormats" : [ "arn:${Partition}:ecs:${Region}:${Account}:gateway-route/${GatewayName}/${GatewayId}/${RouteId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:gateway" ]
+  }, {
     "Name" : "service",
     "ARNFormats" : [ "arn:${Partition}:ecs:${Region}:${Account}:service/${ClusterName}/${ServiceName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:ResourceTag/${TagKey}" ]
@@ -2612,5 +3075,5 @@
     "ARNFormats" : [ "arn:${Partition}:ecs:${Region}:${Account}:task-set/${ClusterName}/${ServiceName}/${TaskSetId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

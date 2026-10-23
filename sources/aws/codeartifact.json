@@ -1,5 +1,6 @@
 {
   "Name" : "codeartifact",
+  "ServiceName" : "CodeArtifact",
   "Actions" : [ {
     "Name" : "AssociateExternalConnection",
     "Annotations" : {
@@ -1235,5 +1236,5 @@
     "ARNFormats" : [ "arn:${Partition}:codeartifact:${Region}:${Account}:repository/${DomainName}/${RepositoryName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

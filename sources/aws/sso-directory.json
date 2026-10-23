@@ -1,5 +1,6 @@
 {
   "Name" : "sso-directory",
+  "ServiceName" : "IAM Identity Center directory",
   "Actions" : [ {
     "Name" : "AddMemberToGroup",
     "Annotations" : {
@@ -799,5 +800,5 @@
       "IAM Action Last Accessed" : false
     }
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

@@ -1,5 +1,6 @@
 {
   "Name" : "elemental-support-cases",
+  "ServiceName" : "Elemental Support Cases",
   "Actions" : [ {
     "Name" : "AddCaseComment",
     "Annotations" : {
@@ -293,5 +294,5 @@
     "ARNFormats" : [ "arn:${Partition}:elemental-support-cases::${Account}:case/${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

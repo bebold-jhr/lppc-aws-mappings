@@ -1,5 +1,6 @@
 {
   "Name" : "monitron",
+  "ServiceName" : "Monitron",
   "Actions" : [ {
     "Name" : "AssociateProjectAdminUser",
     "Annotations" : {
@@ -319,5 +320,5 @@
     "ARNFormats" : [ "arn:${Partition}:monitron:${Region}:${Account}:project/${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

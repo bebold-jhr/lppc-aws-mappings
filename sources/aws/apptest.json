@@ -1,5 +1,6 @@
 {
   "Name" : "apptest",
+  "ServiceName" : "Mainframe Modernization Application Testing",
   "Actions" : [ {
     "Name" : "CreateTestCase",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
@@ -427,5 +428,5 @@
     "ARNFormats" : [ "arn:${Partition}:apptest:${Region}:${Account}:testsuite/${TestSuiteId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

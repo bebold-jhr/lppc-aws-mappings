@@ -1,5 +1,6 @@
 {
   "Name" : "iq-permission",
+  "ServiceName" : "IQ Permission",
   "Actions" : [ {
     "Name" : "ApproveAccessGrant",
     "Annotations" : {
@@ -158,5 +159,5 @@
     "Name" : "permission",
     "ARNFormats" : [ "arn:${Partition}:iq-permission:${Region}::permission/${PermissionRequestId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

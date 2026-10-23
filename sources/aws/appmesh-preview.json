@@ -1,5 +1,6 @@
 {
   "Name" : "appmesh-preview",
+  "ServiceName" : "App Mesh Preview",
   "Actions" : [ {
     "Name" : "CreateGatewayRoute",
     "Annotations" : {
@@ -703,5 +704,5 @@
     "Name" : "virtualService",
     "ARNFormats" : [ "arn:${Partition}:appmesh-preview:${Region}:${Account}:mesh/${MeshName}/virtualService/${VirtualServiceName}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

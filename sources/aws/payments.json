@@ -1,5 +1,6 @@
 {
   "Name" : "payments",
+  "ServiceName" : "Payments",
   "Actions" : [ {
     "Name" : "AcceptFinancingApplicationTerms",
     "Annotations" : {
@@ -367,5 +368,5 @@
     "ARNFormats" : [ "arn:${Partition}:payments::${Account}:payment-instrument:${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

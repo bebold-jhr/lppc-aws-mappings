@@ -1,5 +1,6 @@
 {
   "Name" : "mapcredits",
+  "ServiceName" : "MapCredits",
   "Actions" : [ {
     "Name" : "ListAssociatedPrograms",
     "Annotations" : {
@@ -56,5 +57,5 @@
     "Name" : "agreement",
     "ARNFormats" : [ "arn:${Partition}:mapcredits:::${Agreement}/${AgreementId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

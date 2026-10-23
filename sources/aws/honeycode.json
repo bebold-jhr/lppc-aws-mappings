@@ -1,5 +1,6 @@
 {
   "Name" : "honeycode",
+  "ServiceName" : "Honeycode",
   "Actions" : [ {
     "Name" : "ApproveTeamAssociation",
     "Annotations" : {
@@ -470,5 +471,5 @@
     "Name" : "workbook",
     "ARNFormats" : [ "arn:${Partition}:honeycode:${Region}:${Account}:workbook:workbook/${WorkbookId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

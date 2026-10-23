@@ -1,5 +1,6 @@
 {
   "Name" : "identity-sync",
+  "ServiceName" : "Identity Sync",
   "Actions" : [ {
     "Name" : "AllowVendedLogDeliveryForResource",
     "Annotations" : {
@@ -232,5 +233,5 @@
     "Name" : "SyncTargetResource",
     "ARNFormats" : [ "arn:${Partition}:identity-sync:${Region}:${Account}:target/${SyncProfileName}/${SyncTargetName}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

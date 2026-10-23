@@ -1,5 +1,6 @@
 {
   "Name" : "vendor-insights",
+  "ServiceName" : "Vendor Insights",
   "Actions" : [ {
     "Name" : "ActivateSecurityProfile",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
@@ -434,5 +435,5 @@
     "ARNFormats" : [ "arn:${Partition}:vendor-insights:::security-profile:${ResourceId}" ],
     "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

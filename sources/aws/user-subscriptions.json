@@ -1,5 +1,6 @@
 {
   "Name" : "user-subscriptions",
+  "ServiceName" : "User Subscriptions",
   "Actions" : [ {
     "Name" : "CancelPurchaseSession",
     "Annotations" : {
@@ -328,5 +329,5 @@
     "Name" : "user-subscriptions:CreateForSelf",
     "Types" : [ "Bool" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

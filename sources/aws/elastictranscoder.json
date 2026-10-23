@@ -1,5 +1,6 @@
 {
   "Name" : "elastictranscoder",
+  "ServiceName" : "Elastic Transcoder",
   "Actions" : [ {
     "Name" : "CancelJob",
     "Annotations" : {
@@ -284,5 +285,5 @@
     "Name" : "preset",
     "ARNFormats" : [ "arn:${Partition}:elastictranscoder:${Region}:${Account}:preset/${PresetId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

@@ -1,9 +1,11 @@
 {
   "Name" : "sso-oauth",
+  "ServiceName" : "OIDC service",
   "Actions" : [ {
     "Name" : "CreateTokenWithIAM",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -93,5 +95,5 @@
     "Name" : "Application",
     "ARNFormats" : [ "arn:${Partition}:sso::${AccountId}:application/${InstanceId}/${ApplicationId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

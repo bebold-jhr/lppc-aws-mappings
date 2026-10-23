@@ -1,5 +1,6 @@
 {
   "Name" : "s3-object-lambda",
+  "ServiceName" : "S3 Object Lambda",
   "Actions" : [ {
     "Name" : "AbortMultipartUpload",
     "ActionConditionKeys" : [ "s3-object-lambda:TlsVersion", "s3-object-lambda:authType", "s3-object-lambda:signatureAge" ],
@@ -486,5 +487,5 @@
     "Name" : "objectlambdaaccesspoint",
     "ARNFormats" : [ "arn:${Partition}:s3-object-lambda:${Region}:${Account}:accesspoint/${AccessPointName}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

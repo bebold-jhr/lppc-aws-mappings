@@ -1,5 +1,6 @@
 {
   "Name" : "q",
+  "ServiceName" : "Q",
   "Actions" : [ {
     "Name" : "AssociateConnectorResource",
     "Annotations" : {
@@ -868,5 +869,5 @@
     "ARNFormats" : [ "arn:${Partition}:codewhisperer:${Region}:${Account}:profile/${Identifier}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

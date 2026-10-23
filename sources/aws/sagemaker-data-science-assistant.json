@@ -1,5 +1,6 @@
 {
   "Name" : "sagemaker-data-science-assistant",
+  "ServiceName" : "SageMakerDataScienceAssistant",
   "Actions" : [ {
     "Name" : "SendConversation",
     "Annotations" : {
@@ -15,5 +16,5 @@
       "IAM Action Last Accessed" : false
     }
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

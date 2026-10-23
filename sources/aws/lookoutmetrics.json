@@ -1,5 +1,6 @@
 {
   "Name" : "lookoutmetrics",
+  "ServiceName" : "Lookout Metrics",
   "Actions" : [ {
     "Name" : "ActivateAnomalyDetector",
     "Annotations" : {
@@ -549,5 +550,5 @@
     "ARNFormats" : [ "arn:${Partition}:lookoutmetrics:${Region}:${Account}:MetricSet/${AnomalyDetectorName}/${MetricSetName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

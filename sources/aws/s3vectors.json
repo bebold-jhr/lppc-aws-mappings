@@ -1,5 +1,6 @@
 {
   "Name" : "s3vectors",
+  "ServiceName" : "S3 Vectors",
   "Actions" : [ {
     "Name" : "CreateIndex",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "s3vectors:VectorBucketTag/${TagKey}", "s3vectors:kmsKeyArn", "s3vectors:sseType" ],
@@ -557,5 +558,5 @@
     "ARNFormats" : [ "arn:${Partition}:s3vectors:${Region}:${Account}:bucket/${BucketName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3vectors:VectorBucketTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

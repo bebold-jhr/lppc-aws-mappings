@@ -1,5 +1,6 @@
 {
   "Name" : "purchase-orders",
+  "ServiceName" : "Purchase Orders",
   "Actions" : [ {
     "Name" : "AddPurchaseOrder",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
@@ -256,5 +257,5 @@
     "ARNFormats" : [ "arn:${Partition}:purchase-orders::${Account}:purchase-order/${ResourceName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

@@ -1,5 +1,6 @@
 {
   "Name" : "ts",
+  "ServiceName" : "Diagnostic tools",
   "Actions" : [ {
     "Name" : "GetExecution",
     "Annotations" : {
@@ -167,5 +168,5 @@
     "Name" : "tool",
     "ARNFormats" : [ "arn:${Partition}:ts::aws:tool/${ToolId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

@@ -1,5 +1,6 @@
 {
   "Name" : "eventsbilltoaws",
+  "ServiceName" : "eventsbilltoaws",
   "Actions" : [ {
     "Name" : "approve",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
@@ -50,5 +51,5 @@
     "ARNFormats" : [ "arn:${Partition}:eventsbilltoaws:${Region}:${Account}:${RelativeId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

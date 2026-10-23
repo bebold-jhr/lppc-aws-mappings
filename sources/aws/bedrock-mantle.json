@@ -1,5 +1,6 @@
 {
   "Name" : "bedrock-mantle",
+  "ServiceName" : "Bedrock Mantle",
   "Actions" : [ {
     "Name" : "ArchiveProject",
     "Annotations" : {
@@ -771,5 +772,5 @@
     "ARNFormats" : [ "arn:${Partition}:bedrock-mantle:${Region}:${Account}:reservation/${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

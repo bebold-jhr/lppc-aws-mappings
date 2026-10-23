@@ -1,5 +1,6 @@
 {
   "Name" : "s3express",
+  "ServiceName" : "S3 Express",
   "Actions" : [ {
     "Name" : "CreateAccessPoint",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "s3express:AccessPointNetworkOrigin", "s3express:DataAccessPointAccount", "s3express:DataAccessPointArn", "s3express:LocationName", "s3express:ResourceAccount", "s3express:TlsVersion", "s3express:authType", "s3express:signatureversion", "s3express:x-amz-content-sha256" ],
@@ -581,5 +582,5 @@
     "ARNFormats" : [ "arn:${Partition}:s3express:${Region}:${Account}:bucket/${BucketName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "s3express:BucketTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

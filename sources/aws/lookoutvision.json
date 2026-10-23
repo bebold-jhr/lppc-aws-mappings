@@ -1,5 +1,6 @@
 {
   "Name" : "lookoutvision",
+  "ServiceName" : "Lookout Vision",
   "Actions" : [ {
     "Name" : "CreateDataset",
     "Annotations" : {
@@ -411,5 +412,5 @@
     "Name" : "project",
     "ARNFormats" : [ "arn:${Partition}:lookoutvision:${Region}:${Account}:project/${ProjectName}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

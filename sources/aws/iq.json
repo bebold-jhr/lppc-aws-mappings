@@ -1,5 +1,6 @@
 {
   "Name" : "iq",
+  "ServiceName" : "IQ",
   "Actions" : [ {
     "Name" : "AcceptCall",
     "Annotations" : {
@@ -1081,5 +1082,5 @@
     "Name" : "token",
     "ARNFormats" : [ "arn:${Partition}:iq:${Region}::token/${TokenId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

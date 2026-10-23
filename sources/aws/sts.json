@@ -1,10 +1,12 @@
 {
   "Name" : "sts",
+  "ServiceName" : "STS",
   "Actions" : [ {
     "Name" : "AssumeRole",
     "ActionConditionKeys" : [ "accounts.google.com:aud", "accounts.google.com:sub", "aws:RequestTag/${TagKey}", "aws:TagKeys", "cognito-identity.amazonaws.com:amr", "cognito-identity.amazonaws.com:aud", "cognito-identity.amazonaws.com:sub", "graph.facebook.com:app_id", "graph.facebook.com:id", "iam:ResourceTag/${TagKey}", "saml:namequalifier", "saml:sub", "saml:sub_type", "sts:ExternalId", "sts:RoleSessionName", "sts:SourceIdentity", "sts:TransitiveTagKeys", "www.amazon.com:app_id", "www.amazon.com:user_id" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -59,6 +61,7 @@
     "ActionConditionKeys" : [ "sts:TaskPolicyArn" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -76,6 +79,7 @@
     "Name" : "DecodeAuthorizationMessage",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -90,6 +94,7 @@
     "Name" : "GetAccessKeyInfo",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -104,6 +109,7 @@
     "Name" : "GetCallerIdentity",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -118,6 +124,7 @@
     "Name" : "GetDelegatedAccessToken",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -133,6 +140,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -165,6 +173,7 @@
     "Name" : "GetSessionToken",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -180,6 +189,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "sts:DurationSeconds", "sts:IdentityTokenAudience", "sts:SigningAlgorithm" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -195,6 +205,7 @@
     "ActionConditionKeys" : [ "sts:RequestContext/${ContextKey}", "sts:RequestContextProviders" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -215,6 +226,7 @@
     "ActionConditionKeys" : [ "sts:SourceIdentity" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -233,6 +245,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -248,6 +261,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "saml:aud", "sts:TransitiveTagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -802,5 +816,5 @@
     "Name" : "self-session",
     "ARNFormats" : [ "arn:${Partition}:sts::${Account}:self" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

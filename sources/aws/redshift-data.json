@@ -1,10 +1,12 @@
 {
   "Name" : "redshift-data",
+  "ServiceName" : "Redshift Data API",
   "Actions" : [ {
     "Name" : "BatchExecuteStatement",
     "ActionConditionKeys" : [ "redshift-data:glue-catalog-arn", "redshift-data:session-owner-iam-userid" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -25,6 +27,7 @@
     "ActionConditionKeys" : [ "redshift-data:statement-owner-iam-userid" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -40,6 +43,7 @@
     "ActionConditionKeys" : [ "redshift-data:statement-owner-iam-userid" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -54,6 +58,7 @@
     "Name" : "DescribeTable",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -74,6 +79,7 @@
     "ActionConditionKeys" : [ "redshift-data:glue-catalog-arn", "redshift-data:session-owner-iam-userid" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -111,6 +117,7 @@
     "ActionConditionKeys" : [ "redshift-data:statement-owner-iam-userid" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -125,6 +132,7 @@
     "Name" : "ListDatabases",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -144,6 +152,7 @@
     "Name" : "ListSchemas",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -164,6 +173,7 @@
     "ActionConditionKeys" : [ "redshift-data:session-owner-iam-userid" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -179,6 +189,7 @@
     "ActionConditionKeys" : [ "redshift-data:statement-owner-iam-userid" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -193,6 +204,7 @@
     "Name" : "ListTables",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -367,5 +379,5 @@
     "ARNFormats" : [ "arn:${Partition}:redshift-serverless:${Region}:${Account}:workgroup/${WorkgroupId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

@@ -1,5 +1,6 @@
 {
   "Name" : "one",
+  "ServiceName" : "One",
   "Actions" : [ {
     "Name" : "CreateDeviceActivationQrCode",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
@@ -516,5 +517,5 @@
     "Name" : "user",
     "ARNFormats" : [ "arn:${Partition}:one:${Region}:${Account}:user/${UserId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

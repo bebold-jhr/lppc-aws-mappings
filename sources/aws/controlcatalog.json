@@ -1,9 +1,11 @@
 {
   "Name" : "controlcatalog",
+  "ServiceName" : "Control Catalog",
   "Actions" : [ {
     "Name" : "GetControl",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -21,6 +23,7 @@
     "Name" : "ListCommonControls",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -35,6 +38,7 @@
     "Name" : "ListControlMappings",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -49,6 +53,7 @@
     "Name" : "ListControls",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -66,6 +71,7 @@
     "Name" : "ListDomains",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -80,6 +86,7 @@
     "Name" : "ListObjectives",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -177,5 +184,5 @@
     "Name" : "objective",
     "ARNFormats" : [ "arn:${Partition}:controlcatalog:::objective/${ObjectiveId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

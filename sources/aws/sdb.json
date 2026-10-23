@@ -1,5 +1,6 @@
 {
   "Name" : "sdb",
+  "ServiceName" : "SimpleDB",
   "Actions" : [ {
     "Name" : "BatchDeleteAttributes",
     "Annotations" : {
@@ -123,6 +124,7 @@
     "Name" : "GetExport",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -154,6 +156,7 @@
     "Name" : "ListExports",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -205,6 +208,7 @@
     "Name" : "StartDomainExport",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -330,5 +334,5 @@
     "Name" : "export",
     "ARNFormats" : [ "arn:${Partition}:sdb:${Region}:${Account}:domain/${DomainName}/export/${ExportUUID}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

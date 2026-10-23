@@ -1,5 +1,6 @@
 {
   "Name" : "consoleapp",
+  "ServiceName" : "Console Mobile App",
   "Actions" : [ {
     "Name" : "GetDeviceIdentity",
     "Annotations" : {
@@ -36,5 +37,5 @@
     "Name" : "DeviceIdentity",
     "ARNFormats" : [ "arn:${Partition}:consoleapp::${Account}:device/${DeviceId}/identity/${IdentityId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

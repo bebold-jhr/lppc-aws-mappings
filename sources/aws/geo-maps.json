@@ -1,9 +1,11 @@
 {
   "Name" : "geo-maps",
+  "ServiceName" : "Geo Maps",
   "Actions" : [ {
     "Name" : "GetStaticMap",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -21,6 +23,7 @@
     "Name" : "GetTile",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -83,5 +86,5 @@
     "Name" : "provider",
     "ARNFormats" : [ "arn:${Partition}:geo-maps:${Region}::provider/default" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

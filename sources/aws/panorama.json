@@ -1,5 +1,6 @@
 {
   "Name" : "panorama",
+  "ServiceName" : "Panorama",
   "Actions" : [ {
     "Name" : "CreateApplicationInstance",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
@@ -602,5 +603,5 @@
     "ARNFormats" : [ "arn:${Partition}:panorama:${Region}:${Account}:package/${PackageId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

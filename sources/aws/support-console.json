@@ -1,5 +1,6 @@
 {
   "Name" : "support-console",
+  "ServiceName" : "Support Console",
   "Actions" : [ {
     "Name" : "CheckSubscription",
     "Annotations" : {
@@ -183,5 +184,5 @@
       "IAM Action Last Accessed" : false
     }
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

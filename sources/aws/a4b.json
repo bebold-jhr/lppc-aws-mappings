@@ -1,5 +1,6 @@
 {
   "Name" : "a4b",
+  "ServiceName" : "Alexa for Business",
   "Actions" : [ {
     "Name" : "ApproveSkill",
     "Annotations" : {
@@ -1617,5 +1618,5 @@
     "ARNFormats" : [ "arn:${Partition}:a4b:${Region}:${Account}:user/${ResourceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

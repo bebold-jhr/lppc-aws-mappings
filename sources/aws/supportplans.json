@@ -1,5 +1,6 @@
 {
   "Name" : "supportplans",
+  "ServiceName" : "Support Plans",
   "Actions" : [ {
     "Name" : "AcceptSupportAgreement",
     "Annotations" : {
@@ -183,5 +184,5 @@
       "IAM Action Last Accessed" : false
     }
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

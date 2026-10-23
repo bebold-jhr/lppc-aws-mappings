@@ -1,5 +1,6 @@
 {
   "Name" : "bedrock-websearch",
+  "ServiceName" : "Bedrock Web Search",
   "Actions" : [ {
     "Name" : "ExternalWebAccess",
     "Annotations" : {
@@ -53,5 +54,5 @@
     "Name" : "tool",
     "ARNFormats" : [ "arn:${Partition}:bedrock-websearch:${Region}:aws:tool/${ToolName}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

@@ -1,5 +1,6 @@
 {
   "Name" : "neptune-db",
+  "ServiceName" : "Neptune",
   "Actions" : [ {
     "Name" : "CancelLoaderJob",
     "Annotations" : {
@@ -877,5 +878,5 @@
     "Name" : "database",
     "ARNFormats" : [ "arn:${Partition}:neptune-db:${Region}:${Account}:${ClusterResourceId}/*" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

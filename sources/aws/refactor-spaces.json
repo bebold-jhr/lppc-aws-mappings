@@ -1,10 +1,12 @@
 {
   "Name" : "refactor-spaces",
+  "ServiceName" : "Migration Hub Refactor Spaces",
   "Actions" : [ {
     "Name" : "CreateApplication",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "refactor-spaces:ApplicationCreatedByAccount", "refactor-spaces:CreatedByAccountIds" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -20,6 +22,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -35,6 +38,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "refactor-spaces:ApplicationCreatedByAccount", "refactor-spaces:CreatedByAccountIds", "refactor-spaces:RouteCreatedByAccount", "refactor-spaces:ServiceCreatedByAccount", "refactor-spaces:SourcePath" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -50,6 +54,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "refactor-spaces:ApplicationCreatedByAccount", "refactor-spaces:CreatedByAccountIds", "refactor-spaces:ServiceCreatedByAccount" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -65,6 +70,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "refactor-spaces:ApplicationCreatedByAccount", "refactor-spaces:CreatedByAccountIds" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -83,6 +89,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -100,6 +107,7 @@
     "Name" : "DeleteResourcePolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -115,6 +123,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "refactor-spaces:ApplicationCreatedByAccount", "refactor-spaces:CreatedByAccountIds", "refactor-spaces:RouteCreatedByAccount", "refactor-spaces:ServiceCreatedByAccount", "refactor-spaces:SourcePath" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -133,6 +142,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "refactor-spaces:ApplicationCreatedByAccount", "refactor-spaces:CreatedByAccountIds", "refactor-spaces:ServiceCreatedByAccount" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -151,6 +161,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "refactor-spaces:ApplicationCreatedByAccount", "refactor-spaces:CreatedByAccountIds" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -169,6 +180,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -186,6 +198,7 @@
     "Name" : "GetResourcePolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -201,6 +214,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "refactor-spaces:ApplicationCreatedByAccount", "refactor-spaces:CreatedByAccountIds", "refactor-spaces:RouteCreatedByAccount", "refactor-spaces:ServiceCreatedByAccount", "refactor-spaces:SourcePath" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -219,6 +233,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "refactor-spaces:ApplicationCreatedByAccount", "refactor-spaces:CreatedByAccountIds", "refactor-spaces:ServiceCreatedByAccount" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -236,6 +251,7 @@
     "Name" : "ListApplications",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -253,6 +269,7 @@
     "Name" : "ListEnvironmentVpcs",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -270,6 +287,7 @@
     "Name" : "ListEnvironments",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -284,6 +302,7 @@
     "Name" : "ListRoutes",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -301,6 +320,7 @@
     "Name" : "ListServices",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -318,6 +338,7 @@
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -332,6 +353,7 @@
     "Name" : "PutResourcePolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -347,6 +369,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "refactor-spaces:ApplicationCreatedByAccount", "refactor-spaces:CreatedByAccountIds", "refactor-spaces:RouteCreatedByAccount", "refactor-spaces:ServiceCreatedByAccount", "refactor-spaces:SourcePath" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -371,6 +394,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "refactor-spaces:ApplicationCreatedByAccount", "refactor-spaces:CreatedByAccountIds", "refactor-spaces:RouteCreatedByAccount", "refactor-spaces:ServiceCreatedByAccount", "refactor-spaces:SourcePath" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -395,6 +419,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "refactor-spaces:ApplicationCreatedByAccount", "refactor-spaces:CreatedByAccountIds", "refactor-spaces:RouteCreatedByAccount", "refactor-spaces:ServiceCreatedByAccount", "refactor-spaces:SourcePath" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -728,5 +753,5 @@
     "ARNFormats" : [ "arn:${Partition}:refactor-spaces:${Region}:${Account}:environment/${EnvironmentId}/application/${ApplicationId}/service/${ServiceId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "refactor-spaces:ApplicationCreatedByAccount", "refactor-spaces:CreatedByAccountIds", "refactor-spaces:ServiceCreatedByAccount" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

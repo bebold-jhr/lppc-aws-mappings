@@ -1,5 +1,6 @@
 {
   "Name" : "simspaceweaver",
+  "ServiceName" : "SimSpace Weaver",
   "Actions" : [ {
     "Name" : "CreateSnapshot",
     "Annotations" : {
@@ -282,5 +283,5 @@
     "ARNFormats" : [ "arn:${Partition}:simspaceweaver:${Region}:${Account}:simulation/${SimulationName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

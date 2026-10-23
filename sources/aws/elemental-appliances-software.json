@@ -1,5 +1,6 @@
 {
   "Name" : "elemental-appliances-software",
+  "ServiceName" : "Elemental Appliances and Software",
   "Actions" : [ {
     "Name" : "CompleteUpload",
     "Annotations" : {
@@ -210,5 +211,5 @@
     "Name" : "quote",
     "ARNFormats" : [ "arn:${Partition}:elemental-appliances-software:${Region}:${Account}:quote/${ResourceId}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }

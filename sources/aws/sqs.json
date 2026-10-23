@@ -1,5 +1,6 @@
 {
   "Name" : "sqs",
+  "ServiceName" : "SQS",
   "Actions" : [ {
     "Name" : "AddPermission",
     "Annotations" : {
@@ -637,5 +638,5 @@
     "ARNFormats" : [ "arn:${Partition}:sqs:${Region}:${Account}:${QueueName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
-  "Version" : "v1.4"
+  "Version" : "v1.5"
 }
