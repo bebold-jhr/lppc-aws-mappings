@@ -21,7 +21,7 @@ jobs:
       test_dirs: ${{ steps.changed-files.outputs.test_dirs }}
     steps:
       - name: Get PR details
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         id: get-pr
         with:
           script: |
@@ -170,7 +170,7 @@ jobs:
         test_dir: ${{ fromJson(needs.detect-tests.outputs.test_dirs) }}
     steps:
       - name: Get PR details
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         id: get-pr
         with:
           script: |
