@@ -215,6 +215,7 @@
     "Name" : "CopyCustomDBEngineVersion",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3730,6 +3731,9 @@
     "Name" : "CopyDBSnapshot",
     "AuthorizedActions" : [ {
       "Name" : "AddTagsToResource",
+      "Service" : "rds"
+    }, {
+      "Name" : "CopyCustomDBEngineVersion",
       "Service" : "rds"
     }, {
       "Name" : "CopyDBSnapshot",

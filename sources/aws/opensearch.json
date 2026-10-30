@@ -226,6 +226,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "AddReplicationPeer",
+    "AuthorizedActions" : [ {
+      "Name" : "AddReplicationPeer",
+      "Service" : "es"
+    } ],
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "add_replication_peer",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "AddTags",
     "AuthorizedActions" : [ {
       "Name" : "AddTags",
@@ -303,6 +314,17 @@
     "SDK" : [ {
       "Name" : "opensearch",
       "Method" : "cancel_service_software_update",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CompareDomainConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "CompareDomainConfiguration",
+      "Service" : "es"
+    } ],
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "compare_domain_configuration",
       "Package" : "Boto3"
     } ]
   }, {
@@ -592,6 +614,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeDomainReplication",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeDomainReplication",
+      "Service" : "es"
+    } ],
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "describe_domain_replication",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeDomains",
     "AuthorizedActions" : [ {
       "Name" : "DescribeDomains",
@@ -750,6 +783,13 @@
     "SDK" : [ {
       "Name" : "opensearch",
       "Method" : "dissociate_packages",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "FailoverReplication",
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "failover_replication",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1142,6 +1182,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "RemoveReplicationPeer",
+    "AuthorizedActions" : [ {
+      "Name" : "RemoveReplicationPeer",
+      "Service" : "es"
+    } ],
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "remove_replication_peer",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "RemoveTags",
     "AuthorizedActions" : [ {
       "Name" : "RemoveTags",
@@ -1211,6 +1262,17 @@
     "SDK" : [ {
       "Name" : "opensearch",
       "Method" : "start_service_software_update",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "SwitchoverReplication",
+    "AuthorizedActions" : [ {
+      "Name" : "SwitchoverReplication",
+      "Service" : "es"
+    } ],
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "switchover_replication",
       "Package" : "Boto3"
     } ]
   }, {

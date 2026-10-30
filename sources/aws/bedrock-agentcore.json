@@ -3807,6 +3807,7 @@
     "Name" : "ResetTokenVaultKeyMaterial",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7171,6 +7172,17 @@
     "SDK" : [ {
       "Name" : "bedrock-agentcore-control",
       "Method" : "put_resource_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ResetTokenVaultKeyMaterial",
+    "AuthorizedActions" : [ {
+      "Name" : "ResetTokenVaultKeyMaterial",
+      "Service" : "bedrock-agentcore"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore-control",
+      "Method" : "reset_token_vault_key_material",
       "Package" : "Boto3"
     } ]
   }, {

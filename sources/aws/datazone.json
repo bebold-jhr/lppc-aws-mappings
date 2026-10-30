@@ -5918,6 +5918,12 @@
   }, {
     "Name" : "UpdateConnection",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "datazone.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateConnection",
       "Service" : "datazone"
     } ],

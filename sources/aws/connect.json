@@ -11909,6 +11909,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateOutboundEmailContactMessage",
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "update_outbound_email_contact_message",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateParticipantAuthentication",
     "AuthorizedActions" : [ {
       "Name" : "UpdateParticipantAuthentication",

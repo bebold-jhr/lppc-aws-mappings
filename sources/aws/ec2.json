@@ -23927,6 +23927,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetCapacityManagerSupportabilityScores",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "get_capacity_manager_supportability_scores",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetCapacityReservationUsage",
     "AuthorizedActions" : [ {
       "Name" : "GetCapacityReservationUsage",
@@ -24085,6 +24092,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "get_image_block_public_access_state",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetImageFindings",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "get_image_findings",
       "Package" : "Boto3"
     } ]
   }, {

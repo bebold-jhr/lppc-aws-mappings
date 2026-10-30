@@ -327,6 +327,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateOAuth2TokenWithTokenExchange",
+    "SDK" : [ {
+      "Name" : "signin",
+      "Method" : "create_o_auth2_token_with_token_exchange",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteConsoleAuthorizationConfiguration",
     "AuthorizedActions" : [ {
       "Name" : "DeleteConsoleAuthorizationConfiguration",

@@ -113,6 +113,7 @@
     "ActionConditionKeys" : [ "kms:CallerAccount", "kms:EncapsulationAlgorithm", "kms:RequestAlias", "kms:ViaService" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -352,6 +353,7 @@
     "ActionConditionKeys" : [ "kms:CallerAccount", "kms:EncapsulationAlgorithm", "kms:RequestAlias", "kms:ViaService" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1443,6 +1445,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "Decapsulate",
+    "AuthorizedActions" : [ {
+      "Name" : "Decapsulate",
+      "Service" : "kms"
+    } ],
+    "SDK" : [ {
+      "Name" : "kms",
+      "Method" : "decapsulate",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "Decrypt",
     "AuthorizedActions" : [ {
       "Name" : "Decrypt",
@@ -1572,6 +1585,17 @@
     "SDK" : [ {
       "Name" : "kms",
       "Method" : "enable_key_rotation",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "Encapsulate",
+    "AuthorizedActions" : [ {
+      "Name" : "Encapsulate",
+      "Service" : "kms"
+    } ],
+    "SDK" : [ {
+      "Name" : "kms",
+      "Method" : "encapsulate",
       "Package" : "Boto3"
     } ]
   }, {

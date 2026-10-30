@@ -116,6 +116,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CancelIngestionJob",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "IngestionJob"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateAccessPolicy",
     "ActionConditionKeys" : [ "aoss:collection", "aoss:index" ],
     "Annotations" : {
@@ -174,6 +192,44 @@
         "IsWrite" : true
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateIngestionJob",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Collection"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateIngestionStream",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Collection"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -326,6 +382,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteIngestionStream",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "IngestionStream"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteLifecyclePolicy",
     "ActionConditionKeys" : [ "aoss:index" ],
     "Annotations" : {
@@ -422,6 +496,20 @@
     "Name" : "GetIndex",
     "Annotations" : {
       "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetIngestionJob",
+    "Annotations" : {
+      "Properties" : {
         "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
@@ -429,6 +517,27 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "IngestionJob"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetIngestionStream",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "IngestionStream"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -525,6 +634,42 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListIngestionJobs",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Collection"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListIngestionStreams",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Collection"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListLifecyclePolicies",
     "Annotations" : {
       "Properties" : {
@@ -580,6 +725,15 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "Collection"
+    }, {
+      "Name" : "CollectionGroup"
+    }, {
+      "Name" : "IngestionJob"
+    }, {
+      "Name" : "IngestionStream"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -607,10 +761,19 @@
         "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
+        "IsTaggingOnly" : true,
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "Collection"
+    }, {
+      "Name" : "CollectionGroup"
+    }, {
+      "Name" : "IngestionJob"
+    }, {
+      "Name" : "IngestionStream"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -623,10 +786,19 @@
         "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
-        "IsTaggingOnly" : false,
+        "IsTaggingOnly" : true,
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "Collection"
+    }, {
+      "Name" : "CollectionGroup"
+    }, {
+      "Name" : "IngestionJob"
+    }, {
+      "Name" : "IngestionStream"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -664,6 +836,7 @@
     }
   }, {
     "Name" : "UpdateCollection",
+    "ActionConditionKeys" : [ "aoss:DeletionProtection" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -780,6 +953,9 @@
     "Name" : "aoss:CollectionId",
     "Types" : [ "String" ]
   }, {
+    "Name" : "aoss:DeletionProtection",
+    "Types" : [ "String" ]
+  }, {
     "Name" : "aoss:collection",
     "Types" : [ "String" ]
   }, {
@@ -855,6 +1031,10 @@
     } ]
   }, {
     "Name" : "CancelIngestionJob",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelIngestionJob",
+      "Service" : "aoss"
+    } ],
     "SDK" : [ {
       "Name" : "opensearchserverless",
       "Method" : "cancel_ingestion_job",
@@ -916,6 +1096,9 @@
   }, {
     "Name" : "CreateIngestionJob",
     "AuthorizedActions" : [ {
+      "Name" : "CreateIngestionJob",
+      "Service" : "aoss"
+    }, {
       "Name" : "TagResource",
       "Service" : "aoss"
     } ],
@@ -927,8 +1110,14 @@
   }, {
     "Name" : "CreateIngestionStream",
     "AuthorizedActions" : [ {
+      "Name" : "CreateIngestionStream",
+      "Service" : "aoss"
+    }, {
       "Name" : "PassRole",
       "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "aoss"
     } ],
     "SDK" : [ {
       "Name" : "opensearchserverless",
@@ -1025,6 +1214,10 @@
     } ]
   }, {
     "Name" : "DeleteIngestionStream",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteIngestionStream",
+      "Service" : "aoss"
+    } ],
     "SDK" : [ {
       "Name" : "opensearchserverless",
       "Method" : "delete_ingestion_stream",
@@ -1109,6 +1302,10 @@
     } ]
   }, {
     "Name" : "GetIngestionJob",
+    "AuthorizedActions" : [ {
+      "Name" : "GetIngestionJob",
+      "Service" : "aoss"
+    } ],
     "SDK" : [ {
       "Name" : "opensearchserverless",
       "Method" : "get_ingestion_job",
@@ -1116,6 +1313,10 @@
     } ]
   }, {
     "Name" : "GetIngestionStream",
+    "AuthorizedActions" : [ {
+      "Name" : "GetIngestionStream",
+      "Service" : "aoss"
+    } ],
     "SDK" : [ {
       "Name" : "opensearchserverless",
       "Method" : "get_ingestion_stream",
@@ -1189,6 +1390,10 @@
     } ]
   }, {
     "Name" : "ListIngestionJobs",
+    "AuthorizedActions" : [ {
+      "Name" : "ListIngestionJobs",
+      "Service" : "aoss"
+    } ],
     "SDK" : [ {
       "Name" : "opensearchserverless",
       "Method" : "list_ingestion_jobs",
@@ -1196,6 +1401,10 @@
     } ]
   }, {
     "Name" : "ListIngestionStreams",
+    "AuthorizedActions" : [ {
+      "Name" : "ListIngestionStreams",
+      "Service" : "aoss"
+    } ],
     "SDK" : [ {
       "Name" : "opensearchserverless",
       "Method" : "list_ingestion_streams",
@@ -1389,6 +1598,14 @@
   }, {
     "Name" : "Dashboards",
     "ARNFormats" : [ "arn:${Partition}:aoss:${Region}:${Account}:dashboards/default" ]
+  }, {
+    "Name" : "IngestionJob",
+    "ARNFormats" : [ "arn:${Partition}:aoss:${Region}:${Account}:collection/${CollectionId}/ingestion-job/${IngestionJobId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "IngestionStream",
+    "ARNFormats" : [ "arn:${Partition}:aoss:${Region}:${Account}:collection/${CollectionId}/ingestion-stream/${IngestionStreamId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.5"
 }

@@ -782,6 +782,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "UpdateLanguageModel",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "languagemodel"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateMedicalVocabulary",
     "Annotations" : {
       "Properties" : {
@@ -1369,6 +1387,9 @@
         "iam:PassedToService" : [ "transcribe.amazonaws.com" ]
       },
       "Service" : "iam"
+    }, {
+      "Name" : "UpdateLanguageModel",
+      "Service" : "transcribe"
     } ],
     "SDK" : [ {
       "Name" : "transcribe",

@@ -654,6 +654,9 @@
     "Name" : "SetIdentityPoolRoles",
     "AuthorizedActions" : [ {
       "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "cognito-identity.amazonaws.com" ]
+      },
       "Service" : "iam"
     }, {
       "Name" : "SetIdentityPoolRoles",

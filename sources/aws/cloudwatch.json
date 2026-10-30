@@ -98,7 +98,6 @@
     "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
     "Annotations" : {
       "Properties" : {
-        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2756,10 +2755,6 @@
     } ]
   }, {
     "Name" : "CreateAlert",
-    "AuthorizedActions" : [ {
-      "Name" : "CreateAlert",
-      "Service" : "cloudwatch"
-    } ],
     "SDK" : [ {
       "Name" : "cloudwatchomni",
       "Method" : "create_alert",
@@ -3702,6 +3697,9 @@
   }, {
     "Name" : "PutCompositeAlarm",
     "AuthorizedActions" : [ {
+      "Name" : "ListTagsForResource",
+      "Service" : "cloudwatch"
+    }, {
       "Name" : "PutCompositeAlarm",
       "Service" : "cloudwatch"
     }, {

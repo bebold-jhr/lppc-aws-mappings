@@ -2202,12 +2202,6 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateConfigurationSetEventDestination",
       "Service" : "sms-voice"
-    }, {
-      "Name" : "PassRole",
-      "Context" : {
-        "iam:PassedToService" : [ "sms-voice.amazonaws.com" ]
-      },
-      "Service" : "iam"
     } ],
     "SDK" : [ {
       "Name" : "pinpoint-sms-voice",
