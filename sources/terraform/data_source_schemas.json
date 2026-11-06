@@ -361,6 +361,8 @@
   "aws_lambda_invocation",
   "aws_lambda_layer_version",
   "aws_lambdamicrovms_image_version",
+  "aws_lambdaweb_function",
+  "aws_lambdaweb_function_endpoint",
   "aws_launch_configuration",
   "aws_launch_template",
   "aws_lb",
