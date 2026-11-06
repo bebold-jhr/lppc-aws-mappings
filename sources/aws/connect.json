@@ -4596,8 +4596,8 @@
       "Name" : "security-profile"
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListSecurityProfileApplications",
@@ -6928,6 +6928,25 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "UpdateOutboundEmailContactMessage",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:Channel", "connect:ContactAssociationId", "connect:InstanceId", "connect:UserArn" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "contact"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "UpdateParticipantAuthentication",
@@ -11910,6 +11929,10 @@
     } ]
   }, {
     "Name" : "UpdateOutboundEmailContactMessage",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateOutboundEmailContactMessage",
+      "Service" : "connect"
+    } ],
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "update_outbound_email_contact_message",

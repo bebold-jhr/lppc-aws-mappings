@@ -244,7 +244,7 @@
     },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateServiceLevelObjective",
@@ -610,7 +610,7 @@
     },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DeleteServiceLevelObjective",
@@ -746,6 +746,20 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DetectGroupOutliers",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DisableAlarmActions",
@@ -1262,6 +1276,25 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetProfileRecords",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dataset",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetRecords",
     "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
     "Annotations" : {
@@ -1291,7 +1324,7 @@
     },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "GetService",
@@ -2124,6 +2157,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "PutProfileRecords",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "dataset",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "PutRecords",
     "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
     "Annotations" : {
@@ -2629,7 +2680,7 @@
     },
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "UpdateServiceLevelObjective",
@@ -3787,6 +3838,9 @@
   }, {
     "Name" : "PutMetricAlarm",
     "AuthorizedActions" : [ {
+      "Name" : "ListTagsForResource",
+      "Service" : "cloudwatch"
+    }, {
       "Name" : "PutMetricAlarm",
       "Service" : "cloudwatch"
     }, {
@@ -4170,7 +4224,7 @@
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "view",
-    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:view/${ViewName}" ],
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:view/${ViewName}/${ViewId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.5"

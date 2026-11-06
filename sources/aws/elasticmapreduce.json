@@ -2227,7 +2227,7 @@
     }, {
       "Name" : "PassRole",
       "Context" : {
-        "iam:PassedToService" : [ "elasticmapreduce.amazonaws.com" ]
+        "iam:PassedToService" : [ "elasticmapreduce.amazonaws.com", "managed-compute.elasticmapreduce.amazonaws.com" ]
       },
       "Service" : "iam"
     }, {

@@ -13,7 +13,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "lexicon"
+      "Name" : "lexicon",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -46,7 +47,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "lexicon"
+      "Name" : "lexicon",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -98,7 +100,27 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListTagsForResource",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "lexicon",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "PutLexicon",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -109,7 +131,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "lexicon"
+      "Name" : "lexicon",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -127,7 +150,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "lexicon"
+      "Name" : "lexicon",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -145,7 +169,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "lexicon"
+      "Name" : "lexicon",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -163,12 +188,63 @@
       }
     },
     "Resources" : [ {
-      "Name" : "lexicon"
+      "Name" : "lexicon",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
     }
+  }, {
+    "Name" : "TagResource",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : true,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "lexicon",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UntagResource",
+    "ActionConditionKeys" : [ "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : true,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "lexicon",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  } ],
+  "ConditionKeys" : [ {
+    "Name" : "aws:RequestTag/${TagKey}",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "aws:ResourceTag/${TagKey}",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "aws:TagKeys",
+    "Types" : [ "ArrayOfString" ]
   } ],
   "Operations" : [ {
     "Name" : "DeleteLexicon",
@@ -237,9 +313,23 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListTagsForResource",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTagsForResource",
+      "Service" : "polly"
+    } ],
+    "SDK" : [ {
+      "Name" : "polly",
+      "Method" : "list_tags_for_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "PutLexicon",
     "AuthorizedActions" : [ {
       "Name" : "PutLexicon",
+      "Service" : "polly"
+    }, {
+      "Name" : "TagResource",
       "Service" : "polly"
     } ],
     "SDK" : [ {
@@ -280,10 +370,33 @@
       "Method" : "synthesize_speech",
       "Package" : "Boto3"
     } ]
+  }, {
+    "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "polly"
+    } ],
+    "SDK" : [ {
+      "Name" : "polly",
+      "Method" : "tag_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "polly"
+    } ],
+    "SDK" : [ {
+      "Name" : "polly",
+      "Method" : "untag_resource",
+      "Package" : "Boto3"
+    } ]
   } ],
   "Resources" : [ {
     "Name" : "lexicon",
-    "ARNFormats" : [ "arn:${Partition}:polly:${Region}:${Account}:lexicon/${LexiconName}" ]
+    "ARNFormats" : [ "arn:${Partition}:polly:${Region}:${Account}:lexicon/${LexiconName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.5"
 }

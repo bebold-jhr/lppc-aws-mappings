@@ -58,6 +58,42 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "BulkPutItems",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "table"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CancelBulkOperation",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "bulk-operation"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ConditionCheckItem",
     "ActionConditionKeys" : [ "dynamodb:Attributes", "dynamodb:LeadingKeys", "dynamodb:ReturnConsumedCapacity", "dynamodb:ReturnValues" ],
     "Annotations" : {
@@ -296,6 +332,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeBulkOperation",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "bulk-operation"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DescribeContinuousBackups",
@@ -764,6 +818,21 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListBulkOperations",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListContributorInsights",
     "Annotations" : {
       "Properties" : {
@@ -1179,6 +1248,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StartBulkOperation",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "bulk-operation"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "TagResource",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -1533,6 +1620,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CancelBulkOperation",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelBulkOperation",
+      "Service" : "dynamodb"
+    } ],
+    "SDK" : [ {
+      "Name" : "dynamodb",
+      "Method" : "cancel_bulk_operation",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateBackup",
     "AuthorizedActions" : [ {
       "Name" : "CreateBackup",
@@ -1654,6 +1752,17 @@
     "SDK" : [ {
       "Name" : "dynamodb",
       "Method" : "describe_backup",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeBulkOperation",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeBulkOperation",
+      "Service" : "dynamodb"
+    } ],
+    "SDK" : [ {
+      "Name" : "dynamodb",
+      "Method" : "describe_bulk_operation",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1960,6 +2069,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListBulkOperations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListBulkOperations",
+      "Service" : "dynamodb"
+    } ],
+    "SDK" : [ {
+      "Name" : "dynamodb",
+      "Method" : "list_bulk_operations",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListContributorInsights",
     "AuthorizedActions" : [ {
       "Name" : "ListContributorInsights",
@@ -2158,6 +2278,20 @@
     "SDK" : [ {
       "Name" : "dynamodb",
       "Method" : "search_vectors",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartBulkPutItems",
+    "AuthorizedActions" : [ {
+      "Name" : "BulkPutItems",
+      "Service" : "dynamodb"
+    }, {
+      "Name" : "StartBulkOperation",
+      "Service" : "dynamodb"
+    } ],
+    "SDK" : [ {
+      "Name" : "dynamodb",
+      "Method" : "start_bulk_put_items",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2364,6 +2498,9 @@
   "Resources" : [ {
     "Name" : "backup",
     "ARNFormats" : [ "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/backup/${BackupName}" ]
+  }, {
+    "Name" : "bulk-operation",
+    "ARNFormats" : [ "arn:${Partition}:dynamodb:${Region}:${Account}:bulk-operation/${BulkOperationId}" ]
   }, {
     "Name" : "export",
     "ARNFormats" : [ "arn:${Partition}:dynamodb:${Region}:${Account}:table/${TableName}/export/${ExportName}" ]

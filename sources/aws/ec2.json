@@ -15863,8 +15863,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ReplaceNetworkAclAssociation",
@@ -16978,8 +16978,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:SecurityGroupID", "ec2:Vpc" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "WithdrawByoipCidr",

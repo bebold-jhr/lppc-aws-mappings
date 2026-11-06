@@ -7156,9 +7156,6 @@
     }, {
       "Name" : "InvokeModelWithResponseStream",
       "Service" : "bedrock"
-    }, {
-      "Name" : "InvokeTool",
-      "Service" : "bedrock"
     } ],
     "SDK" : [ {
       "Name" : "bedrock-runtime",

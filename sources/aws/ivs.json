@@ -1227,6 +1227,8 @@
     }, {
       "Name" : "Stage"
     }, {
+      "Name" : "Stage-Logging-Configuration"
+    }, {
       "Name" : "Storage-Configuration"
     }, {
       "Name" : "Stream-Key"
@@ -1419,6 +1421,8 @@
     }, {
       "Name" : "Stage"
     }, {
+      "Name" : "Stage-Logging-Configuration"
+    }, {
       "Name" : "Storage-Configuration"
     }, {
       "Name" : "Stream-Key"
@@ -1461,6 +1465,8 @@
       "Name" : "Recording-Configuration"
     }, {
       "Name" : "Stage"
+    }, {
+      "Name" : "Stage-Logging-Configuration"
     }, {
       "Name" : "Storage-Configuration"
     }, {

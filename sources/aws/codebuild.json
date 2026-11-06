@@ -1632,6 +1632,9 @@
       "Name" : "CreateProject",
       "Service" : "codebuild"
     }, {
+      "Name" : "DescribeSecret",
+      "Service" : "secretsmanager"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "codebuild.amazonaws.com" ]
@@ -2145,6 +2148,9 @@
   }, {
     "Name" : "UpdateProject",
     "AuthorizedActions" : [ {
+      "Name" : "DescribeSecret",
+      "Service" : "secretsmanager"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "codebuild.amazonaws.com" ]

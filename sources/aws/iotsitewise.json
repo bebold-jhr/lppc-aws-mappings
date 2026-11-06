@@ -3229,6 +3229,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateAccessPolicy",
       "Service" : "iotsitewise"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "iotsitewise"
     } ],
     "SDK" : [ {
       "Name" : "iotsitewise",

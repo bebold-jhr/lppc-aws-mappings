@@ -615,6 +615,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateNotificationPreference",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateProject",
     "Annotations" : {
       "Properties" : {
@@ -709,6 +723,20 @@
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateUIConfiguration",
+    "Annotations" : {
+      "Properties" : {
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1152,6 +1180,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteNotificationPreference",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteProject",
     "Annotations" : {
       "Properties" : {
@@ -1261,6 +1303,20 @@
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteUIConfiguration",
+    "Annotations" : {
+      "Properties" : {
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1653,6 +1709,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetEffectiveUICustomization",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetEnvironment",
     "Annotations" : {
       "Properties" : {
@@ -1966,6 +2036,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetNotificationPreference",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetProject",
     "Annotations" : {
       "Properties" : {
@@ -2085,10 +2169,38 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetSystemTableExportConfiguration",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetTimeSeriesDataPoint",
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetUIConfiguration",
+    "Annotations" : {
+      "Properties" : {
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2351,6 +2463,20 @@
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListDeployableEnvironmentBlueprints",
+    "Annotations" : {
+      "Properties" : {
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2829,6 +2955,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListUIConfigurations",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListWarehouseMetadata",
     "Annotations" : {
       "Properties" : {
@@ -2948,6 +3088,20 @@
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutSystemTableExportConfiguration",
+    "Annotations" : {
+      "Properties" : {
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3496,6 +3650,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateAssetOwner",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateCell",
     "Annotations" : {
       "Properties" : {
@@ -3792,6 +3960,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateNotificationPreference",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateProject",
     "Annotations" : {
       "Properties" : {
@@ -3871,6 +4053,20 @@
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateUIConfiguration",
+    "Annotations" : {
+      "Properties" : {
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,

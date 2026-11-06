@@ -3,7 +3,7 @@
   "ServiceName" : "Cognito Identity",
   "Actions" : [ {
     "Name" : "CreateIdentityPool",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
