@@ -37,6 +37,23 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "AssociateVirtualMachinesToCloudVmCluster",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cloud-vm-cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "AssociateVirtualMachinesToExadbVmCluster",
     "Annotations" : {
       "Properties" : {
@@ -524,6 +541,23 @@
     "Resources" : [ {
       "Name" : "cloud-autonomous-vm-cluster"
     }, {
+      "Name" : "cloud-vm-cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DisassociateVirtualMachinesFromCloudVmCluster",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
       "Name" : "cloud-vm-cluster"
     } ],
     "SupportedBy" : {
@@ -1537,6 +1571,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateCloudAutonomousVmCluster",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cloud-autonomous-vm-cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateCloudExadataInfrastructure",
     "Annotations" : {
       "Properties" : {
@@ -1549,6 +1601,42 @@
     },
     "Resources" : [ {
       "Name" : "cloud-exadata-infrastructure"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateCloudExadataInfrastructureStorageCapacity",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cloud-exadata-infrastructure"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateCloudVmCluster",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cloud-vm-cluster"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1714,6 +1802,13 @@
     "SDK" : [ {
       "Name" : "odb",
       "Method" : "associate_iam_role_to_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "AssociateVirtualMachinesToCloudVmCluster",
+    "SDK" : [ {
+      "Name" : "odb",
+      "Method" : "associate_virtual_machines_to_cloud_vm_cluster",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1983,6 +2078,13 @@
     "SDK" : [ {
       "Name" : "odb",
       "Method" : "disassociate_iam_role_from_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DisassociateVirtualMachinesFromCloudVmCluster",
+    "SDK" : [ {
+      "Name" : "odb",
+      "Method" : "disassociate_virtual_machines_from_cloud_vm_cluster",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2554,6 +2656,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateCloudAutonomousVmCluster",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateCloudAutonomousVmCluster",
+      "Service" : "odb"
+    } ],
+    "SDK" : [ {
+      "Name" : "odb",
+      "Method" : "update_cloud_autonomous_vm_cluster",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateCloudExadataInfrastructure",
     "AuthorizedActions" : [ {
       "Name" : "UpdateCloudExadataInfrastructure",
@@ -2562,6 +2675,28 @@
     "SDK" : [ {
       "Name" : "odb",
       "Method" : "update_cloud_exadata_infrastructure",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateCloudExadataInfrastructureStorageCapacity",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateCloudExadataInfrastructureStorageCapacity",
+      "Service" : "odb"
+    } ],
+    "SDK" : [ {
+      "Name" : "odb",
+      "Method" : "update_cloud_exadata_infrastructure_storage_capacity",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateCloudVmCluster",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateCloudVmCluster",
+      "Service" : "odb"
+    } ],
+    "SDK" : [ {
+      "Name" : "odb",
+      "Method" : "update_cloud_vm_cluster",
       "Package" : "Boto3"
     } ]
   }, {

@@ -156,8 +156,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "CreateService",
@@ -653,8 +653,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:gateway" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DescribeServiceDeployments",
@@ -788,8 +788,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "DiscoverPollEndpoint",
@@ -983,8 +983,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster", "ecs:gateway" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListGatewayRoutes",
@@ -1010,8 +1010,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:cluster", "ecs:service" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListGateways",
@@ -1029,8 +1029,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ecs:gateway" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "ListServiceDeployments",
@@ -1714,8 +1714,8 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
-      "IAM Access Analyzer Policy Generation" : false,
-      "IAM Action Last Accessed" : false
+      "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : true
     }
   }, {
     "Name" : "UpdateService",

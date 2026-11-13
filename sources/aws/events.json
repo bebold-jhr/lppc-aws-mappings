@@ -2189,6 +2189,9 @@
     "AuthorizedActions" : [ {
       "Name" : "StartReplay",
       "Service" : "events"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "events"
     } ],
     "SDK" : [ {
       "Name" : "events",

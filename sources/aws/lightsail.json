@@ -2812,6 +2812,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CheckSubdomainAvailability",
+    "SDK" : [ {
+      "Name" : "lightsail",
+      "Method" : "check_subdomain_availability",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CloseInstancePublicPorts",
     "AuthorizedActions" : [ {
       "Name" : "CloseInstancePublicPorts",
@@ -3152,6 +3159,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateSubdomain",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "lightsail"
+    } ],
+    "SDK" : [ {
+      "Name" : "lightsail",
+      "Method" : "create_subdomain",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteAlarm",
     "AuthorizedActions" : [ {
       "Name" : "DeleteAlarm",
@@ -3380,6 +3398,13 @@
     "SDK" : [ {
       "Name" : "lightsail",
       "Method" : "delete_relational_database_snapshot",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteSubdomain",
+    "SDK" : [ {
+      "Name" : "lightsail",
+      "Method" : "delete_subdomain",
       "Package" : "Boto3"
     } ]
   }, {
@@ -4193,6 +4218,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetSubdomains",
+    "SDK" : [ {
+      "Name" : "lightsail",
+      "Method" : "get_subdomains",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ImportKeyPair",
     "AuthorizedActions" : [ {
       "Name" : "ImportKeyPair",
@@ -4578,6 +4610,13 @@
     "SDK" : [ {
       "Name" : "lightsail",
       "Method" : "update_relational_database_parameters",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateSubdomainAssociation",
+    "SDK" : [ {
+      "Name" : "lightsail",
+      "Method" : "update_subdomain_association",
       "Package" : "Boto3"
     } ]
   } ],

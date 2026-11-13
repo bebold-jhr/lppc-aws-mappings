@@ -2699,6 +2699,7 @@
     }
   }, {
     "Name" : "InvokeGateway",
+    "ActionConditionKeys" : [ "bedrock-agentcore:InboundJwtClaim/aud", "bedrock-agentcore:InboundJwtClaim/client_id", "bedrock-agentcore:InboundJwtClaim/iss", "bedrock-agentcore:InboundJwtClaim/scope", "bedrock-agentcore:InboundJwtClaim/sub" ],
     "Annotations" : {
       "Properties" : {
         "IsList" : false,
@@ -6598,6 +6599,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "InvokeWebSearch",
+    "SDK" : [ {
+      "Name" : "bedrock-agentcore",
+      "Method" : "invoke_web_search",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListABTests",
     "AuthorizedActions" : [ {
       "Name" : "ListABTests",
@@ -7546,6 +7554,9 @@
   }, {
     "Name" : "UpdateGateway",
     "AuthorizedActions" : [ {
+      "Name" : "CreateGateway",
+      "Service" : "bedrock-agentcore"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "bedrock-agentcore.amazonaws.com" ]

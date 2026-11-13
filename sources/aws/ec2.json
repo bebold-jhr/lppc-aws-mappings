@@ -892,7 +892,7 @@
     },
     "Resources" : [ {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1164,7 +1164,7 @@
     },
     "Resources" : [ {
       "Name" : "capacity-reservation",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:CapacityReservationFleet" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:CapacityReservationFleet", "ec2:FutureCapacitySpecification" ]
     }, {
       "Name" : "capacity-reservation-cancellation-quote",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
@@ -1550,7 +1550,7 @@
     },
     "Resources" : [ {
       "Name" : "capacity-reservation",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:FutureCapacitySpecification", "ec2:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "capacity-reservation-cancellation-quote",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
@@ -1558,6 +1558,29 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "CreateCapacityReservationDateChangeQuote",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "capacity-reservation",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:FutureCapacitySpecification", "ec2:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "capacity-reservation-modification-quote",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "CreateCapacityReservationFleet",
@@ -1973,7 +1996,7 @@
     },
     "Resources" : [ {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     }, {
       "Name" : "image-usage-report",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
@@ -2845,7 +2868,7 @@
     },
     "Resources" : [ {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     }, {
       "Name" : "instance",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:AvailabilityZone", "ec2:AvailabilityZoneId", "ec2:CpuOptionsAmdSevSnp", "ec2:EbsOptimized", "ec2:InstanceAutoRecovery", "ec2:InstanceBandwidthWeighting", "ec2:InstanceID", "ec2:InstanceMarketType", "ec2:InstanceMetadataTags", "ec2:InstanceProfile", "ec2:InstanceType", "ec2:ManagedResourceOperator", "ec2:MetadataHttpEndpoint", "ec2:MetadataHttpPutResponseHopLimit", "ec2:MetadataHttpTokens", "ec2:PlacementGroup", "ec2:ProductCode", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType", "ec2:Tenancy" ]
@@ -3156,7 +3179,7 @@
     },
     "Resources" : [ {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -3231,7 +3254,7 @@
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "capacity-reservation",
-      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:FutureCapacitySpecification" ]
     }, {
       "Name" : "capacity-reservation-cancellation-quote",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
@@ -3285,7 +3308,7 @@
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     }, {
       "Name" : "image-usage-report",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:ResourceTag/${TagKey}" ]
@@ -4214,7 +4237,7 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "vpc-endpoint-service",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:VpceMultiRegion", "ec2:VpceServiceRegion" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -4440,6 +4463,26 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteClientVpnEndpointAuthorizationPolicy",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "client-vpn-endpoint",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ClientRootCertificateChainArn", "ec2:CloudwatchLogGroupArn", "ec2:CloudwatchLogStreamArn", "ec2:DirectoryArn", "ec2:ResourceTag/${TagKey}", "ec2:SamlProviderArn", "ec2:ServerCertificateArn" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteClientVpnRoute",
@@ -6559,7 +6602,7 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "vpc-endpoint-service",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:VpceMultiRegion", "ec2:VpceSupportedRegion" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -6795,7 +6838,7 @@
     },
     "Resources" : [ {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -7202,6 +7245,22 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeCapacityReservationDateChangeQuotes",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DescribeCapacityReservationFleets",
@@ -7773,7 +7832,7 @@
     },
     "Resources" : [ {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -9914,7 +9973,7 @@
     },
     "Resources" : [ {
       "Name" : "vpc-endpoint-service",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:VpceMultiRegion", "ec2:VpceSupportedRegion" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -10088,7 +10147,7 @@
     },
     "Resources" : [ {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -10386,7 +10445,7 @@
     },
     "Resources" : [ {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -10422,7 +10481,7 @@
     },
     "Resources" : [ {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -10442,7 +10501,7 @@
     },
     "Resources" : [ {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -11203,7 +11262,7 @@
     },
     "Resources" : [ {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     }, {
       "Name" : "launch-template",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ManagedResourceOperator", "ec2:ResourceTag/${TagKey}" ]
@@ -11282,7 +11341,7 @@
     },
     "Resources" : [ {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -11621,7 +11680,7 @@
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ]
     }, {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -11832,11 +11891,31 @@
     },
     "Resources" : [ {
       "Name" : "capacity-reservation",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:CapacityReservationFleet" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:CapacityReservationFleet", "ec2:FutureCapacitySpecification" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetClientVpnEndpointAuthorizationPolicy",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "client-vpn-endpoint",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ClientRootCertificateChainArn", "ec2:CloudwatchLogGroupArn", "ec2:CloudwatchLogStreamArn", "ec2:DirectoryArn", "ec2:ResourceTag/${TagKey}", "ec2:SamlProviderArn", "ec2:ServerCertificateArn" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "GetCoipPoolUsage",
@@ -12016,7 +12095,7 @@
     },
     "Resources" : [ {
       "Name" : "capacity-reservation",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:CapacityReservationFleet" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:CapacityReservationFleet", "ec2:FutureCapacitySpecification" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -12052,7 +12131,7 @@
     },
     "Resources" : [ {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -12073,6 +12152,26 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetImageFindings",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "image",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "GetInstanceMetadataDefaults",
@@ -12858,6 +12957,26 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetTransitGatewayAttachmentNatConfiguration",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "transit-gateway-attachment",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetTransitGatewayAttachmentPropagations",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -13509,7 +13628,10 @@
     },
     "Resources" : [ {
       "Name" : "capacity-reservation",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:CapacityReservationFleet" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:CapacityReservationFleet", "ec2:FutureCapacitySpecification" ]
+    }, {
+      "Name" : "capacity-reservation-modification-quote",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -13563,6 +13685,26 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ModifyClientVpnEndpointAuthorizationPolicy",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "client-vpn-endpoint",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:ClientRootCertificateChainArn", "ec2:CloudwatchLogGroupArn", "ec2:CloudwatchLogStreamArn", "ec2:DirectoryArn", "ec2:ResourceTag/${TagKey}", "ec2:SamlProviderArn", "ec2:ServerCertificateArn" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ModifyDefaultCreditSpecification",
@@ -13711,7 +13853,7 @@
     },
     "Resources" : [ {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -13757,7 +13899,7 @@
     },
     "Resources" : [ {
       "Name" : "capacity-reservation",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:FutureCapacitySpecification" ]
     }, {
       "Name" : "instance",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:AvailabilityZone", "ec2:AvailabilityZoneId", "ec2:CpuOptionsAmdSevSnp", "ec2:EbsOptimized", "ec2:InstanceAutoRecovery", "ec2:InstanceBandwidthWeighting", "ec2:InstanceID", "ec2:InstanceMarketType", "ec2:InstanceMetadataTags", "ec2:InstanceProfile", "ec2:InstanceType", "ec2:ManagedResourceOperator", "ec2:MetadataHttpEndpoint", "ec2:MetadataHttpPutResponseHopLimit", "ec2:MetadataHttpTokens", "ec2:PlacementGroup", "ec2:ProductCode", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType", "ec2:Tenancy" ]
@@ -14595,6 +14737,26 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ModifyTransitGatewayAttachmentNatConfiguration",
+    "ActionConditionKeys" : [ "ec2:Region" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "transit-gateway-attachment",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ModifyTransitGatewayMeteringPolicy",
     "ActionConditionKeys" : [ "ec2:Region" ],
     "Annotations" : {
@@ -15000,7 +15162,7 @@
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "vpc-endpoint-service",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}", "ec2:VpceMultiRegion", "ec2:VpceSupportedRegion" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -16179,7 +16341,7 @@
     },
     "Resources" : [ {
       "Name" : "image",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:ImageID", "ec2:ImageType", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:Owner", "ec2:Public", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -16434,7 +16596,7 @@
     },
     "Resources" : [ {
       "Name" : "capacity-reservation",
-      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:IsLaunchTemplateResource", "ec2:LaunchTemplate" ]
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:FutureCapacitySpecification", "ec2:IsLaunchTemplateResource", "ec2:LaunchTemplate" ]
     }, {
       "Name" : "elastic-gpu",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "ec2:ElasticGpuType", "ec2:IsLaunchTemplateResource", "ec2:LaunchTemplate", "ec2:ResourceTag/${TagKey}" ]
@@ -17113,6 +17275,9 @@
     "Name" : "ec2:FisTargetArns",
     "Types" : [ "ArrayOfARN" ]
   }, {
+    "Name" : "ec2:FutureCapacitySpecification",
+    "Types" : [ "ARN" ]
+  }, {
     "Name" : "ec2:GatewayType",
     "Types" : [ "String" ]
   }, {
@@ -17127,6 +17292,9 @@
   }, {
     "Name" : "ec2:ImageType",
     "Types" : [ "String" ]
+  }, {
+    "Name" : "ec2:ImageWatermarkKeys",
+    "Types" : [ "ArrayOfString" ]
   }, {
     "Name" : "ec2:InsideTunnelCidr",
     "Types" : [ "String" ]
@@ -18267,6 +18435,9 @@
   }, {
     "Name" : "CreateCapacityReservationDateChangeQuote",
     "AuthorizedActions" : [ {
+      "Name" : "CreateCapacityReservationDateChangeQuote",
+      "Service" : "ec2"
+    }, {
       "Name" : "CreateTags",
       "Service" : "ec2"
     } ],
@@ -18872,6 +19043,17 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "create_managed_prefix_list",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateMetricCategory",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateTags",
+      "Service" : "ec2"
+    } ],
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "create_metric_category",
       "Package" : "Boto3"
     } ]
   }, {
@@ -19735,6 +19917,10 @@
     } ]
   }, {
     "Name" : "DeleteClientVpnEndpointAuthorizationPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteClientVpnEndpointAuthorizationPolicy",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "delete_client_vpn_endpoint_authorization_policy",
@@ -20101,6 +20287,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "delete_managed_prefix_list",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteMetricCategory",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "delete_metric_category",
       "Package" : "Boto3"
     } ]
   }, {
@@ -21084,6 +21277,10 @@
     } ]
   }, {
     "Name" : "DescribeCapacityReservationDateChangeQuotes",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeCapacityReservationDateChangeQuotes",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "describe_capacity_reservation_date_change_quotes",
@@ -21967,6 +22164,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "describe_managed_prefix_lists",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeMetricCategories",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "describe_metric_categories",
       "Package" : "Boto3"
     } ]
   }, {
@@ -23946,6 +24150,10 @@
     } ]
   }, {
     "Name" : "GetClientVpnEndpointAuthorizationPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "GetClientVpnEndpointAuthorizationPolicy",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "get_client_vpn_endpoint_authorization_policy",
@@ -24096,6 +24304,10 @@
     } ]
   }, {
     "Name" : "GetImageFindings",
+    "AuthorizedActions" : [ {
+      "Name" : "GetImageFindings",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "get_image_findings",
@@ -24532,6 +24744,10 @@
     } ]
   }, {
     "Name" : "GetTransitGatewayAttachmentNatConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "GetTransitGatewayAttachmentNatConfiguration",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "get_transit_gateway_attachment_nat_configuration",
@@ -24900,6 +25116,10 @@
     } ]
   }, {
     "Name" : "ModifyClientVpnEndpointAuthorizationPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "ModifyClientVpnEndpointAuthorizationPolicy",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "modify_client_vpn_endpoint_authorization_policy",
@@ -25280,6 +25500,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ModifyMetricCategory",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "modify_metric_category",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ModifyNetworkInterfaceAttribute",
     "AuthorizedActions" : [ {
       "Name" : "ModifyNetworkInterfaceAttribute",
@@ -25435,6 +25662,10 @@
     } ]
   }, {
     "Name" : "ModifyTransitGatewayAttachmentNatConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "ModifyTransitGatewayAttachmentNatConfiguration",
+      "Service" : "ec2"
+    } ],
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "modify_transit_gateway_attachment_nat_configuration",
@@ -26720,7 +26951,7 @@
   }, {
     "Name" : "capacity-reservation",
     "ARNFormats" : [ "arn:${Partition}:ec2:${Region}:${Account}:capacity-reservation/${CapacityReservationId}" ],
-    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:AvailabilityZone", "ec2:AvailabilityZoneId", "ec2:CapacityReservationFleet", "ec2:CommitmentDuration", "ec2:CreateDate", "ec2:DestinationCapacityReservationId", "ec2:EbsOptimized", "ec2:EndDate", "ec2:EndDateType", "ec2:EphemeralStorage", "ec2:InstanceCount", "ec2:InstanceMatchCriteria", "ec2:InstancePlatform", "ec2:InstanceType", "ec2:InterruptibleCapacityReservationId", "ec2:InterruptionType", "ec2:IsInterruptible", "ec2:IsLaunchTemplateResource", "ec2:LaunchTemplate", "ec2:OutpostArn", "ec2:PlacementGroup", "ec2:Region", "ec2:ResourceTag/${TagKey}", "ec2:SourceCapacityReservationId", "ec2:TargetInstanceCount", "ec2:Tenancy" ]
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:AvailabilityZone", "ec2:AvailabilityZoneId", "ec2:CapacityReservationFleet", "ec2:CommitmentDuration", "ec2:CreateDate", "ec2:DestinationCapacityReservationId", "ec2:EbsOptimized", "ec2:EndDate", "ec2:EndDateType", "ec2:EphemeralStorage", "ec2:FutureCapacitySpecification", "ec2:InstanceCount", "ec2:InstanceMatchCriteria", "ec2:InstancePlatform", "ec2:InstanceType", "ec2:InterruptibleCapacityReservationId", "ec2:InterruptionType", "ec2:IsInterruptible", "ec2:IsLaunchTemplateResource", "ec2:LaunchTemplate", "ec2:OutpostArn", "ec2:PlacementGroup", "ec2:Region", "ec2:ResourceTag/${TagKey}", "ec2:SourceCapacityReservationId", "ec2:TargetInstanceCount", "ec2:Tenancy" ]
   }, {
     "Name" : "capacity-reservation-cancellation-quote",
     "ARNFormats" : [ "arn:${Partition}:ec2:${Region}:${Account}:capacity-reservation-cancellation-quote/${CapacityReservationCancellationQuoteId}" ],
@@ -26728,6 +26959,10 @@
   }, {
     "Name" : "capacity-reservation-fleet",
     "ARNFormats" : [ "arn:${Partition}:ec2:${Region}:${Account}:capacity-reservation-fleet/${CapacityReservationFleetId}" ],
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:Region", "ec2:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "capacity-reservation-modification-quote",
+    "ARNFormats" : [ "arn:${Partition}:ec2:${Region}:${Account}:capacity-reservation-modification-quote/${CapacityReservationModificationQuoteId}" ],
     "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:Region", "ec2:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "carrier-gateway",
@@ -26801,7 +27036,7 @@
   }, {
     "Name" : "image",
     "ARNFormats" : [ "arn:${Partition}:ec2:${Region}::image/${ImageId}" ],
-    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:BootModeOverride", "ec2:ImageID", "ec2:ImageType", "ec2:IsLaunchTemplateResource", "ec2:LaunchTemplate", "ec2:Owner", "ec2:Public", "ec2:Region", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys", "ec2:Attribute", "ec2:Attribute/${AttributeName}", "ec2:BootModeOverride", "ec2:ImageID", "ec2:ImageType", "ec2:ImageWatermarkKeys", "ec2:IsLaunchTemplateResource", "ec2:LaunchTemplate", "ec2:Owner", "ec2:Public", "ec2:Region", "ec2:ResourceTag/${TagKey}", "ec2:RootDeviceType" ]
   }, {
     "Name" : "image-usage-report",
     "ARNFormats" : [ "arn:${Partition}:ec2:${Region}:${Account}:image-usage-report/${ImageUsageReportId}" ],

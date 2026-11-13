@@ -1356,6 +1356,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateResourceRecordSetProtections",
+    "SDK" : [ {
+      "Name" : "route53",
+      "Method" : "create_resource_record_set_protections",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateReusableDelegationSet",
     "AuthorizedActions" : [ {
       "Name" : "CreateReusableDelegationSet",
@@ -1474,6 +1481,13 @@
     "SDK" : [ {
       "Name" : "route53",
       "Method" : "delete_query_logging_config",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteResourceRecordSetProtections",
+    "SDK" : [ {
+      "Name" : "route53",
+      "Method" : "delete_resource_record_set_protections",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1848,6 +1862,13 @@
     "SDK" : [ {
       "Name" : "route53",
       "Method" : "list_query_logging_configs",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListResourceRecordSetProtections",
+    "SDK" : [ {
+      "Name" : "route53",
+      "Method" : "list_resource_record_set_protections",
       "Package" : "Boto3"
     } ]
   }, {

@@ -886,6 +886,17 @@
     "Types" : [ "ARN" ]
   } ],
   "Operations" : [ {
+    "Name" : "BatchCreateRelatedItem",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateRelatedItem",
+      "Service" : "cases"
+    } ],
+    "SDK" : [ {
+      "Name" : "connectcases",
+      "Method" : "batch_create_related_item",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "BatchGetCaseRule",
     "AuthorizedActions" : [ {
       "Name" : "BatchGetCaseRule",
@@ -916,6 +927,17 @@
     "SDK" : [ {
       "Name" : "connectcases",
       "Method" : "batch_put_field_options",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "BatchUpdateCase",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateCase",
+      "Service" : "cases"
+    } ],
+    "SDK" : [ {
+      "Name" : "connectcases",
+      "Method" : "batch_update_case",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1131,6 +1153,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetMergeCasesStatus",
+    "SDK" : [ {
+      "Name" : "connectcases",
+      "Method" : "get_merge_cases_status",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetTemplate",
     "AuthorizedActions" : [ {
       "Name" : "GetTemplate",
@@ -1271,6 +1300,13 @@
     "SDK" : [ {
       "Name" : "connectcases",
       "Method" : "search_related_items",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartMergeCases",
+    "SDK" : [ {
+      "Name" : "connectcases",
+      "Method" : "start_merge_cases",
       "Package" : "Boto3"
     } ]
   }, {

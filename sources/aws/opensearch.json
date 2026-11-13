@@ -1291,6 +1291,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateClone",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateClone",
+      "Service" : "es"
+    } ],
+    "SDK" : [ {
+      "Name" : "opensearch",
+      "Method" : "update_clone",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateDataSource",
     "AuthorizedActions" : [ {
       "Name" : "PassRole",

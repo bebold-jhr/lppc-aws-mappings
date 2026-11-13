@@ -577,6 +577,9 @@
   }, {
     "Name" : "IssueCertificate",
     "AuthorizedActions" : [ {
+      "Name" : "GetCertificate",
+      "Service" : "acm-pca"
+    }, {
       "Name" : "IssueCertificate",
       "Service" : "acm-pca"
     } ],

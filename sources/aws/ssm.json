@@ -517,6 +517,21 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DeregisterDefaultHostManagementConfiguration",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeregisterManagedInstance",
     "ActionConditionKeys" : [ "ssm:resourceTag/tag-key" ],
     "Annotations" : {
@@ -2214,6 +2229,21 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "RegisterDefaultHostManagementConfiguration",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "RegisterDefaultPatchBaseline",
     "Annotations" : {
       "Properties" : {
@@ -3426,6 +3456,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeregisterDefaultHostManagementConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "DeregisterDefaultHostManagementConfiguration",
+      "Service" : "ssm"
+    } ],
+    "SDK" : [ {
+      "Name" : "ssm",
+      "Method" : "deregister_default_host_management_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeregisterManagedInstance",
     "AuthorizedActions" : [ {
       "Name" : "DeregisterManagedInstance",
@@ -4439,6 +4480,23 @@
     "SDK" : [ {
       "Name" : "ssm",
       "Method" : "put_resource_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "RegisterDefaultHostManagementConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "ssm.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "RegisterDefaultHostManagementConfiguration",
+      "Service" : "ssm"
+    } ],
+    "SDK" : [ {
+      "Name" : "ssm",
+      "Method" : "register_default_host_management_configuration",
       "Package" : "Boto3"
     } ]
   }, {
