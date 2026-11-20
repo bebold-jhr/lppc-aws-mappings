@@ -17930,6 +17930,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "AssociateKmsKeyId",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "associate_kms_key_id",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "AssociateNatGatewayAddress",
     "AuthorizedActions" : [ {
       "Name" : "AssociateNatGatewayAddress",
@@ -17938,6 +17945,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "associate_nat_gateway_address",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "AssociateNetworkingFlexCostAllocationPolicy",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "associate_networking_flex_cost_allocation_policy",
       "Package" : "Boto3"
     } ]
   }, {
@@ -19149,6 +19163,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateNetworkingFlexCostAllocationPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateTags",
+      "Service" : "ec2"
+    } ],
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "create_networking_flex_cost_allocation_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreatePlacementGroup",
     "AuthorizedActions" : [ {
       "Name" : "CreatePlacementGroup",
@@ -19548,6 +19573,17 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "create_transit_gateway_multicast_domain",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateTransitGatewayNetworkFunctionAttachment",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateTags",
+      "Service" : "ec2"
+    } ],
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "create_transit_gateway_network_function_attachment",
       "Package" : "Boto3"
     } ]
   }, {
@@ -20396,6 +20432,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteNetworkingFlexCostAllocationPolicies",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "delete_networking_flex_cost_allocation_policies",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeletePlacementGroup",
     "AuthorizedActions" : [ {
       "Name" : "DeletePlacementGroup",
@@ -20690,6 +20733,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "delete_transit_gateway_multicast_domain",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteTransitGatewayNetworkFunctionAttachment",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "delete_transit_gateway_network_function_attachment",
       "Package" : "Boto3"
     } ]
   }, {
@@ -22280,6 +22330,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeNetworkingFlexCostAllocationPolicies",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "describe_networking_flex_cost_allocation_policies",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeNetworkingFlexCostAllocationPolicyAssociations",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "describe_networking_flex_cost_allocation_policy_associations",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeOutpostLags",
     "AuthorizedActions" : [ {
       "Name" : "DescribeOutpostLags",
@@ -22794,6 +22858,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "describe_transit_gateway_multicast_domains",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeTransitGatewayNetworkFunctionAttachments",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "describe_transit_gateway_network_function_attachments",
       "Package" : "Boto3"
     } ]
   }, {
@@ -23589,6 +23660,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DisassociateKmsKeyId",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "disassociate_kms_key_id",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DisassociateNatGatewayAddress",
     "AuthorizedActions" : [ {
       "Name" : "DisassociateNatGatewayAddress",
@@ -23597,6 +23675,13 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "disassociate_nat_gateway_address",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DisassociateNetworkingFlexCostAllocationPolicy",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "disassociate_networking_flex_cost_allocation_policy",
       "Package" : "Boto3"
     } ]
   }, {
@@ -24633,6 +24718,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetNetworkingFlexCostAllocationPolicyVersions",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "get_networking_flex_cost_allocation_policy_versions",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetPasswordData",
     "AuthorizedActions" : [ {
       "Name" : "GetPasswordData",
@@ -25518,6 +25610,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ModifyNetworkingFlexCostAllocationPolicy",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "modify_networking_flex_cost_allocation_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ModifyPrivateDnsNameOptions",
     "AuthorizedActions" : [ {
       "Name" : "ModifyPrivateDnsNameOptions",
@@ -25680,6 +25779,20 @@
     "SDK" : [ {
       "Name" : "ec2",
       "Method" : "modify_transit_gateway_metering_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ModifyTransitGatewayNetworkFunctionAttachment",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "modify_transit_gateway_network_function_attachment",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ModifyTransitGatewayPeeringAttachment",
+    "SDK" : [ {
+      "Name" : "ec2",
+      "Method" : "modify_transit_gateway_peering_attachment",
       "Package" : "Boto3"
     } ]
   }, {

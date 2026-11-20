@@ -612,6 +612,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CancelPointInTimeRecovery",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "userpool"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ChangePassword",
     "Annotations" : {
       "Properties" : {
@@ -670,6 +688,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "CreateCIMDPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "userpool"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "CreateGroup",
@@ -848,6 +884,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteCIMDPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "userpool"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteGroup",
@@ -1060,6 +1114,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DescribeCIMDPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "userpool"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DescribeIdentityProvider",
     "Annotations" : {
       "Properties" : {
@@ -1112,6 +1184,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribePointInTimeRecovery",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "userpool"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DescribeResourceServer",
@@ -1321,6 +1411,21 @@
     }
   }, {
     "Name" : "GetClientToken",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetDerivedToken",
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -1601,6 +1706,60 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "InitiatePointInTimeRecovery",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "userpool"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListCIMDPolicies",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "userpool"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListClientMetadataURLs",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "userpool"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListDevices",
     "Annotations" : {
       "Properties" : {
@@ -1650,6 +1809,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListPointInTimeRecoveries",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "userpool"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ListResourceServers",
@@ -2074,6 +2251,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "StartPointInTimeRecovery",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "userpool"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StartUserImportJob",
     "Annotations" : {
       "Properties" : {
@@ -2164,6 +2359,42 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "UpdateCIMDPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "userpool"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateClientMetadataURLState",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "userpool"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "UpdateDeviceStatus",
@@ -2778,6 +3009,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CancelPointInTimeRecovery",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelPointInTimeRecovery",
+      "Service" : "cognito-idp"
+    } ],
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "cancel_point_in_time_recovery",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ChangePassword",
     "AuthorizedActions" : [ {
       "Name" : "ChangePassword",
@@ -2826,6 +3068,17 @@
     "SDK" : [ {
       "Name" : "cognito-idp",
       "Method" : "confirm_sign_up",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateCIMDPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateCIMDPolicy",
+      "Service" : "cognito-idp"
+    } ],
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "create_cimd_policy",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2951,6 +3204,17 @@
     "SDK" : [ {
       "Name" : "cognito-idp",
       "Method" : "create_user_pool_replica",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteCIMDPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteCIMDPolicy",
+      "Service" : "cognito-idp"
+    } ],
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "delete_cimd_policy",
       "Package" : "Boto3"
     } ]
   }, {
@@ -3093,6 +3357,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeCIMDPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeCIMDPolicy",
+      "Service" : "cognito-idp"
+    } ],
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "describe_cimd_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeIdentityProvider",
     "AuthorizedActions" : [ {
       "Name" : "DescribeIdentityProvider",
@@ -3123,6 +3398,17 @@
     "SDK" : [ {
       "Name" : "cognito-idp",
       "Method" : "describe_managed_login_branding_by_client",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribePointInTimeRecovery",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribePointInTimeRecovery",
+      "Service" : "cognito-idp"
+    } ],
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "describe_point_in_time_recovery",
       "Package" : "Boto3"
     } ]
   }, {
@@ -3258,6 +3544,17 @@
     "SDK" : [ {
       "Name" : "cognito-idp",
       "Method" : "get_client_token",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetDerivedToken",
+    "AuthorizedActions" : [ {
+      "Name" : "GetDerivedToken",
+      "Service" : "cognito-idp"
+    } ],
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "get_derived_token",
       "Package" : "Boto3"
     } ]
   }, {
@@ -3433,6 +3730,39 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "InitiatePointInTimeRecovery",
+    "AuthorizedActions" : [ {
+      "Name" : "InitiatePointInTimeRecovery",
+      "Service" : "cognito-idp"
+    } ],
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "initiate_point_in_time_recovery",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListCIMDPolicies",
+    "AuthorizedActions" : [ {
+      "Name" : "ListCIMDPolicies",
+      "Service" : "cognito-idp"
+    } ],
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "list_cimd_policies",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListClientMetadataURLs",
+    "AuthorizedActions" : [ {
+      "Name" : "ListClientMetadataURLs",
+      "Service" : "cognito-idp"
+    } ],
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "list_client_metadata_urls",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListDevices",
     "AuthorizedActions" : [ {
       "Name" : "ListDevices",
@@ -3463,6 +3793,17 @@
     "SDK" : [ {
       "Name" : "cognito-idp",
       "Method" : "list_identity_providers",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListPointInTimeRecoveries",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPointInTimeRecoveries",
+      "Service" : "cognito-idp"
+    } ],
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "list_point_in_time_recoveries",
       "Package" : "Boto3"
     } ]
   }, {
@@ -3740,6 +4081,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "StartPointInTimeRecovery",
+    "AuthorizedActions" : [ {
+      "Name" : "StartPointInTimeRecovery",
+      "Service" : "cognito-idp"
+    } ],
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "start_point_in_time_recovery",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StartUserImportJob",
     "AuthorizedActions" : [ {
       "Name" : "StartUserImportJob",
@@ -3799,6 +4151,28 @@
     "SDK" : [ {
       "Name" : "cognito-idp",
       "Method" : "update_auth_event_feedback",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateCIMDPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateCIMDPolicy",
+      "Service" : "cognito-idp"
+    } ],
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "update_cimd_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateClientMetadataURLState",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateClientMetadataURLState",
+      "Service" : "cognito-idp"
+    } ],
+    "SDK" : [ {
+      "Name" : "cognito-idp",
+      "Method" : "update_client_metadata_url_state",
       "Package" : "Boto3"
     } ]
   }, {

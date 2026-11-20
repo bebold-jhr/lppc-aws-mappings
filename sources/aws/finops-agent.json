@@ -380,6 +380,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetOrganizationAccess",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetTask",
     "Annotations" : {
       "Properties" : {
@@ -633,6 +647,20 @@
     }
   }, {
     "Name" : "UpdateDocument",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateOrganizationAccess",
     "Annotations" : {
       "Properties" : {
         "IsList" : false,

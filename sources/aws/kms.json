@@ -518,7 +518,7 @@
     }
   }, {
     "Name" : "GetKeyPolicy",
-    "ActionConditionKeys" : [ "kms:CallerAccount", "kms:ViaService" ],
+    "ActionConditionKeys" : [ "kms:CallerAccount", "kms:PolicyName", "kms:ViaService" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -736,7 +736,7 @@
     }
   }, {
     "Name" : "PutKeyPolicy",
-    "ActionConditionKeys" : [ "kms:BypassPolicyLockoutSafetyCheck", "kms:CallerAccount", "kms:ViaService" ],
+    "ActionConditionKeys" : [ "kms:BypassPolicyLockoutSafetyCheck", "kms:CallerAccount", "kms:PolicyName", "kms:ViaService" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -1154,6 +1154,9 @@
     "Types" : [ "Bool" ]
   }, {
     "Name" : "kms:MultiRegionKeyType",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "kms:PolicyName",
     "Types" : [ "String" ]
   }, {
     "Name" : "kms:PrimaryRegion",

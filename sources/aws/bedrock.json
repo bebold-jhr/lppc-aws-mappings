@@ -3044,6 +3044,7 @@
     "ActionConditionKeys" : [ "bedrock:GuardrailIdentifier", "bedrock:InferenceProfileArn", "bedrock:PromptRouterArn", "bedrock:ServiceTier" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,

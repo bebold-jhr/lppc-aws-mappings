@@ -4614,6 +4614,13 @@
     } ]
   }, {
     "Name" : "UpdateSubdomainAssociation",
+    "AuthorizedActions" : [ {
+      "Name" : "AttachCertificateToDistribution",
+      "Service" : "lightsail"
+    }, {
+      "Name" : "DetachCertificateFromDistribution",
+      "Service" : "lightsail"
+    } ],
     "SDK" : [ {
       "Name" : "lightsail",
       "Method" : "update_subdomain_association",

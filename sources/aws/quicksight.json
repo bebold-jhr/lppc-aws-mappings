@@ -6925,6 +6925,9 @@
   }, {
     "Name" : "CreateTopic",
     "AuthorizedActions" : [ {
+      "Name" : "CreateFolderMembership",
+      "Service" : "quicksight"
+    }, {
       "Name" : "CreateTopic",
       "Service" : "quicksight"
     }, {

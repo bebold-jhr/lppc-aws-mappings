@@ -1274,6 +1274,7 @@
     "Name" : "RegisterKnowledgeBaseReplicaKey",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2712,6 +2713,10 @@
     } ]
   }, {
     "Name" : "RegisterKnowledgeBaseReplicaKey",
+    "AuthorizedActions" : [ {
+      "Name" : "RegisterKnowledgeBaseReplicaKey",
+      "Service" : "wisdom"
+    } ],
     "SDK" : [ {
       "Name" : "qconnect",
       "Method" : "register_knowledge_base_replica_key",

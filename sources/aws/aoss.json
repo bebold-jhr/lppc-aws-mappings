@@ -1449,6 +1449,9 @@
     "AuthorizedActions" : [ {
       "Name" : "ListTagsForResource",
       "Service" : "aoss"
+    }, {
+      "Name" : "ListTagsForResource",
+      "Service" : "osm"
     } ],
     "SDK" : [ {
       "Name" : "opensearchserverless",
@@ -1471,6 +1474,9 @@
     "AuthorizedActions" : [ {
       "Name" : "TagResource",
       "Service" : "aoss"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "osm"
     } ],
     "SDK" : [ {
       "Name" : "opensearchserverless",
@@ -1482,6 +1488,9 @@
     "AuthorizedActions" : [ {
       "Name" : "UntagResource",
       "Service" : "aoss"
+    }, {
+      "Name" : "UntagResource",
+      "Service" : "osm"
     } ],
     "SDK" : [ {
       "Name" : "opensearchserverless",

@@ -118,6 +118,25 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateCoreNetworkEndpoint",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "core-network-endpoint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateDNSView",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -225,6 +244,24 @@
     },
     "Resources" : [ {
       "Name" : "access-token"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteCoreNetworkEndpoint",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "core-network-endpoint"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -387,6 +424,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetCoreNetworkEndpoint",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "core-network-endpoint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetDNSView",
     "Annotations" : {
       "Properties" : {
@@ -534,6 +589,21 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListCoreNetworkEndpoints",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListDNSViews",
     "Annotations" : {
       "Properties" : {
@@ -645,6 +715,21 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListSharedDNSViews",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
@@ -659,6 +744,8 @@
       "Name" : "access-source"
     }, {
       "Name" : "access-token"
+    }, {
+      "Name" : "core-network-endpoint"
     }, {
       "Name" : "dns-view"
     }, {
@@ -687,6 +774,8 @@
     }, {
       "Name" : "access-token"
     }, {
+      "Name" : "core-network-endpoint"
+    }, {
       "Name" : "dns-view"
     }, {
       "Name" : "firewall-domain-list"
@@ -713,6 +802,8 @@
       "Name" : "access-source"
     }, {
       "Name" : "access-token"
+    }, {
+      "Name" : "core-network-endpoint"
     }, {
       "Name" : "dns-view"
     }, {
@@ -755,6 +846,24 @@
     },
     "Resources" : [ {
       "Name" : "access-token"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateCoreNetworkEndpoint",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "core-network-endpoint"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -928,6 +1037,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateCoreNetworkEndpoint",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateCoreNetworkEndpoint",
+      "Service" : "route53globalresolver"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "route53globalresolver"
+    } ],
+    "SDK" : [ {
+      "Name" : "route53globalresolver",
+      "Method" : "create_core_network_endpoint",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateDNSView",
     "AuthorizedActions" : [ {
       "Name" : "CreateDNSView",
@@ -1000,6 +1123,17 @@
     "SDK" : [ {
       "Name" : "route53globalresolver",
       "Method" : "delete_access_token",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteCoreNetworkEndpoint",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteCoreNetworkEndpoint",
+      "Service" : "route53globalresolver"
+    } ],
+    "SDK" : [ {
+      "Name" : "route53globalresolver",
+      "Method" : "delete_core_network_endpoint",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1102,6 +1236,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetCoreNetworkEndpoint",
+    "AuthorizedActions" : [ {
+      "Name" : "GetCoreNetworkEndpoint",
+      "Service" : "route53globalresolver"
+    } ],
+    "SDK" : [ {
+      "Name" : "route53globalresolver",
+      "Method" : "get_core_network_endpoint",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetDNSView",
     "AuthorizedActions" : [ {
       "Name" : "GetDNSView",
@@ -1201,6 +1346,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListCoreNetworkEndpoints",
+    "AuthorizedActions" : [ {
+      "Name" : "ListCoreNetworkEndpoints",
+      "Service" : "route53globalresolver"
+    } ],
+    "SDK" : [ {
+      "Name" : "route53globalresolver",
+      "Method" : "list_core_network_endpoints",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListDNSViews",
     "AuthorizedActions" : [ {
       "Name" : "ListDNSViews",
@@ -1279,6 +1435,10 @@
     } ]
   }, {
     "Name" : "ListSharedDNSViews",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSharedDNSViews",
+      "Service" : "route53globalresolver"
+    } ],
     "SDK" : [ {
       "Name" : "route53globalresolver",
       "Method" : "list_shared_dns_views",
@@ -1337,6 +1497,17 @@
     "SDK" : [ {
       "Name" : "route53globalresolver",
       "Method" : "update_access_token",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateCoreNetworkEndpoint",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateCoreNetworkEndpoint",
+      "Service" : "route53globalresolver"
+    } ],
+    "SDK" : [ {
+      "Name" : "route53globalresolver",
+      "Method" : "update_core_network_endpoint",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1402,6 +1573,10 @@
   }, {
     "Name" : "access-token",
     "ARNFormats" : [ "arn:${Partition}:route53globalresolver::${Account}:access-token/${Id}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "core-network-endpoint",
+    "ARNFormats" : [ "arn:${Partition}:route53globalresolver::${Account}:core-network-endpoint/${Id}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "dns-view",

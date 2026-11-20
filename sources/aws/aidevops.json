@@ -1923,6 +1923,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetChat",
+    "SDK" : [ {
+      "Name" : "devops-agent",
+      "Method" : "get_chat",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetOperatorApp",
     "AuthorizedActions" : [ {
       "Name" : "GetOperatorApp",
@@ -2211,6 +2218,13 @@
     "SDK" : [ {
       "Name" : "devops-agent",
       "Method" : "update_backlog_task",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateChat",
+    "SDK" : [ {
+      "Name" : "devops-agent",
+      "Method" : "update_chat",
       "Package" : "Boto3"
     } ]
   }, {

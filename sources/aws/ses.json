@@ -2852,6 +2852,22 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "PutAccountDeliveryAttributes",
+    "ActionConditionKeys" : [ "ses:ApiVersion" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "PutAccountDetails",
     "ActionConditionKeys" : [ "ses:ApiVersion" ],
     "Annotations" : {
@@ -3388,6 +3404,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion", "ses:FeedbackAddress", "ses:FromAddress", "ses:FromDisplayName", "ses:Recipients" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3431,6 +3448,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion", "ses:FeedbackAddress", "ses:FromAddress", "ses:FromDisplayName", "ses:MultiRegionEndpointId", "ses:Recipients", "ses:TenantName" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3453,6 +3471,7 @@
     "ActionConditionKeys" : [ "ses:ApiVersion", "ses:FeedbackAddress", "ses:FromAddress", "ses:FromDisplayName", "ses:Recipients" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : true,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6272,6 +6291,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "PutAccountDeliveryAttributes",
+    "AuthorizedActions" : [ {
+      "Name" : "PutAccountDeliveryAttributes",
+      "Service" : "ses"
+    } ],
+    "SDK" : [ {
+      "Name" : "sesv2",
+      "Method" : "put_account_delivery_attributes",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "PutAccountDetails",
     "AuthorizedActions" : [ {
       "Name" : "PutAccountDetails",
@@ -6617,6 +6647,9 @@
     "AuthorizedActions" : [ {
       "Name" : "SendBulkEmail",
       "Service" : "ses"
+    }, {
+      "Name" : "SendBulkTemplatedEmail",
+      "Service" : "ses"
     } ],
     "SDK" : [ {
       "Name" : "sesv2",
@@ -6647,6 +6680,16 @@
     } ]
   }, {
     "Name" : "SendEmail",
+    "AuthorizedActions" : [ {
+      "Name" : "SendEmail",
+      "Service" : "ses"
+    }, {
+      "Name" : "SendRawEmail",
+      "Service" : "ses"
+    }, {
+      "Name" : "SendTemplatedEmail",
+      "Service" : "ses"
+    } ],
     "SDK" : [ {
       "Name" : "pinpoint-email",
       "Method" : "send_email",

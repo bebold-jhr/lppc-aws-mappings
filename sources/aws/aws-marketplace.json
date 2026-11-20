@@ -2,6 +2,22 @@
   "Name" : "aws-marketplace",
   "ServiceName" : "Marketplace",
   "Actions" : [ {
+    "Name" : "AcceptAgreementApproval",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "AcceptAgreementApprovalRequest",
     "Annotations" : {
       "Properties" : {
@@ -158,8 +174,10 @@
     }
   }, {
     "Name" : "CancelAgreementRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -205,6 +223,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateDataSubscription",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "DataSubscription"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreatePrivateMarketplaceRequests",
     "Annotations" : {
       "Properties" : {
@@ -231,6 +267,24 @@
     },
     "Resources" : [ {
       "Name" : "VerificationEvidence"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteDataSubscription",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "DataSubscription"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -381,6 +435,22 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetAgreementApproval",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetAgreementApprovalRequest",
     "Annotations" : {
       "Properties" : {
@@ -397,6 +467,22 @@
   }, {
     "Name" : "GetAgreementCancellationRequest",
     "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetAgreementContacts",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -444,8 +530,42 @@
     }
   }, {
     "Name" : "GetAgreementRequest",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetAgreementRequestApprovalPlans",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetAgreementRequestTerms",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -501,6 +621,64 @@
     },
     "Resources" : [ {
       "Name" : "Dashboard"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetDataSubscription",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "DataSubscription"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetDeploymentConfiguration",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "DeploymentConfiguration",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetDeploymentConfigurationJob",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "DeploymentConfiguration",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -761,6 +939,21 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListAgreementApprovals",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListAgreementCancellationRequests",
     "ActionConditionKeys" : [ "aws-marketplace:AgreementType", "aws-marketplace:PartyType" ],
     "Annotations" : {
@@ -828,6 +1021,7 @@
     "Name" : "ListAgreementRequests",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -894,6 +1088,40 @@
         "IsWrite" : false
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListDataSubscriptions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListDeploymentConfigurationJobs",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "DeploymentConfiguration",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -1047,7 +1275,13 @@
       }
     },
     "Resources" : [ {
+      "Name" : "Assessment"
+    }, {
       "Name" : "ChangeSet"
+    }, {
+      "Name" : "DataSubscription"
+    }, {
+      "Name" : "DeploymentConfiguration"
     }, {
       "Name" : "DeploymentParameter"
     }, {
@@ -1207,6 +1441,22 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "RejectAgreementApproval",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "RejectAgreementApprovalRequest",
     "Annotations" : {
       "Properties" : {
@@ -1352,6 +1602,40 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StartAgreementApprovals",
+    "ActionConditionKeys" : [ "aws-marketplace:AgreementType" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StartAssessment",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "Entity"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StartBuild",
     "Annotations" : {
       "Properties" : {
@@ -1379,6 +1663,26 @@
     },
     "Resources" : [ {
       "Name" : "Entity"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StartDeploymentConfigurationJob",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "DeploymentConfiguration",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1466,7 +1770,14 @@
       }
     },
     "Resources" : [ {
+      "Name" : "Assessment"
+    }, {
       "Name" : "ChangeSet"
+    }, {
+      "Name" : "DataSubscription"
+    }, {
+      "Name" : "DeploymentConfiguration",
+      "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
     }, {
       "Name" : "DeploymentParameter",
       "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
@@ -1515,7 +1826,14 @@
       }
     },
     "Resources" : [ {
+      "Name" : "Assessment"
+    }, {
       "Name" : "ChangeSet"
+    }, {
+      "Name" : "DataSubscription"
+    }, {
+      "Name" : "DeploymentConfiguration",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
     }, {
       "Name" : "DeploymentParameter",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
@@ -1628,6 +1946,17 @@
     "Types" : [ "String" ]
   } ],
   "Operations" : [ {
+    "Name" : "AcceptAgreementApproval",
+    "AuthorizedActions" : [ {
+      "Name" : "AcceptAgreementApproval",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "accept_agreement_approval",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "AcceptAgreementCancellationRequest",
     "AuthorizedActions" : [ {
       "Name" : "AcceptAgreementCancellationRequest",
@@ -1662,6 +1991,9 @@
       "Service" : "aws-marketplace"
     }, {
       "Name" : "Subscribe",
+      "Service" : "aws-marketplace"
+    }, {
+      "Name" : "UpdatePurchaseOrders",
       "Service" : "aws-marketplace"
     } ],
     "SDK" : [ {
@@ -1736,6 +2068,17 @@
     "SDK" : [ {
       "Name" : "marketplace-agreement",
       "Method" : "cancel_agreement_payment_request",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CancelAgreementRequest",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelAgreementRequest",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "cancel_agreement_request",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1822,6 +2165,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetAgreementApproval",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAgreementApproval",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "get_agreement_approval",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetAgreementCancellationRequest",
     "AuthorizedActions" : [ {
       "Name" : "GetAgreementCancellationRequest",
@@ -1830,6 +2184,17 @@
     "SDK" : [ {
       "Name" : "marketplace-agreement",
       "Method" : "get_agreement_cancellation_request",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetAgreementContacts",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAgreementContacts",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "get_agreement_contacts",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1855,6 +2220,39 @@
     "SDK" : [ {
       "Name" : "marketplace-agreement",
       "Method" : "get_agreement_payment_request",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetAgreementRequest",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAgreementRequest",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "get_agreement_request",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetAgreementRequestApprovalPlans",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAgreementRequestApprovalPlans",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "get_agreement_request_approval_plans",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetAgreementRequestTerms",
+    "AuthorizedActions" : [ {
+      "Name" : "GetAgreementRequestTerms",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "get_agreement_request_terms",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1891,6 +2289,28 @@
     "SDK" : [ {
       "Name" : "marketplace-reporting",
       "Method" : "get_buyer_dashboard",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetDeploymentConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "GetDeploymentConfiguration",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-deployment",
+      "Method" : "get_deployment_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetDeploymentConfigurationJob",
+    "AuthorizedActions" : [ {
+      "Name" : "GetDeploymentConfigurationJob",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-deployment",
+      "Method" : "get_deployment_configuration_job",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1971,6 +2391,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListAgreementApprovals",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAgreementApprovals",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "list_agreement_approvals",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListAgreementCancellationRequests",
     "AuthorizedActions" : [ {
       "Name" : "ListAgreementCancellationRequests",
@@ -2015,6 +2446,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListAgreementRequests",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAgreementRequests",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "list_agreement_requests",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListAssessments",
     "AuthorizedActions" : [ {
       "Name" : "ListAssessments",
@@ -2045,6 +2487,17 @@
     "SDK" : [ {
       "Name" : "marketplace-catalog",
       "Method" : "list_change_sets",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListDeploymentConfigurationJobs",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDeploymentConfigurationJobs",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-deployment",
+      "Method" : "list_deployment_configuration_jobs",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2149,6 +2602,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "RejectAgreementApproval",
+    "AuthorizedActions" : [ {
+      "Name" : "RejectAgreementApproval",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "reject_agreement_approval",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "RejectAgreementCancellationRequest",
     "AuthorizedActions" : [ {
       "Name" : "RejectAgreementCancellationRequest",
@@ -2240,6 +2704,30 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "StartAgreementApprovals",
+    "SDK" : [ {
+      "Name" : "marketplace-agreement",
+      "Method" : "start_agreement_approvals",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartAssessment",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeEntity",
+      "Service" : "aws-marketplace"
+    }, {
+      "Name" : "StartAssessment",
+      "Service" : "aws-marketplace"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-catalog",
+      "Method" : "start_assessment",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StartChangeSet",
     "AuthorizedActions" : [ {
       "Name" : "DescribeAgreement",
@@ -2272,6 +2760,17 @@
     "SDK" : [ {
       "Name" : "marketplace-catalog",
       "Method" : "start_change_set",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartDeploymentConfigurationJob",
+    "AuthorizedActions" : [ {
+      "Name" : "StartDeploymentConfigurationJob",
+      "Service" : "aws-marketplace"
+    } ],
+    "SDK" : [ {
+      "Name" : "marketplace-deployment",
+      "Method" : "start_deployment_configuration_job",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2324,7 +2823,8 @@
     "ARNFormats" : [ "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/purchaseOption/*" ]
   }, {
     "Name" : "Assessment",
-    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}::${Catalog}/Assessment/${ResourceId}" ]
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}::${Catalog}/Assessment/${ResourceId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "ChangeSet",
     "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}:${Account}:${Catalog}/ChangeSet/${ResourceId}" ],
@@ -2332,6 +2832,14 @@
   }, {
     "Name" : "Dashboard",
     "ARNFormats" : [ "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dashboard/${DashboardName}" ]
+  }, {
+    "Name" : "DataSubscription",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/DataSubscription/${DataSubscriptionId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "DeploymentConfiguration",
+    "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}:${Account}:DeploymentConfiguration:catalogs/${CatalogName}/products/${ProductId}/delivery-options/${DeliveryOptionType}" ],
+    "ConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ]
   }, {
     "Name" : "DeploymentParameter",
     "ARNFormats" : [ "arn:${Partition}:aws-marketplace:${Region}:${Account}:DeploymentParameter:catalogs/${CatalogName}/products/${ProductId}/${ResourceId}" ],

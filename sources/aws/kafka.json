@@ -38,6 +38,27 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateAssessment",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "assessment"
+    }, {
+      "Name" : "cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateChannel",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -174,6 +195,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DeleteAssessment",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "assessment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteChannel",
     "Annotations" : {
       "Properties" : {
@@ -299,6 +338,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeAssessment",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "assessment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DescribeChannel",
@@ -475,6 +532,26 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DescribeTopicReassignment",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    }, {
+      "Name" : "topic-reassignment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DescribeVpcConnection",
     "Annotations" : {
       "Properties" : {
@@ -539,6 +616,42 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "ListAssessmentFindings",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "assessment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListAssessments",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ListChannels",
@@ -753,10 +866,30 @@
       }
     },
     "Resources" : [ {
+      "Name" : "assessment"
+    }, {
       "Name" : "cluster"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListTopicReassignments",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
@@ -848,6 +981,46 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "StartTopicReassignment",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    }, {
+      "Name" : "topic-reassignment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StopTopicReassignment",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster"
+    }, {
+      "Name" : "topic-reassignment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "TagResource",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -860,6 +1033,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "assessment"
+    }, {
       "Name" : "cluster"
     }, {
       "Name" : "vpc-connection"
@@ -881,6 +1056,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "assessment"
+    }, {
       "Name" : "cluster"
     }, {
       "Name" : "vpc-connection"
@@ -1182,6 +1359,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateAssessment",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAssessment",
+      "Service" : "kafka"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "kafka"
+    } ],
+    "SDK" : [ {
+      "Name" : "kafka",
+      "Method" : "create_assessment",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateChannel",
     "AuthorizedActions" : [ {
       "Name" : "CreateChannel",
@@ -1295,6 +1486,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteAssessment",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAssessment",
+      "Service" : "kafka"
+    } ],
+    "SDK" : [ {
+      "Name" : "kafka",
+      "Method" : "delete_assessment",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteChannel",
     "AuthorizedActions" : [ {
       "Name" : "DeleteChannel",
@@ -1375,6 +1577,17 @@
     "SDK" : [ {
       "Name" : "kafka",
       "Method" : "delete_vpc_connection",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeAssessment",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAssessment",
+      "Service" : "kafka"
+    } ],
+    "SDK" : [ {
+      "Name" : "kafka",
+      "Method" : "describe_assessment",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1503,6 +1716,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeTopicReassignment",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeTopicReassignment",
+      "Service" : "kafka"
+    } ],
+    "SDK" : [ {
+      "Name" : "kafka",
+      "Method" : "describe_topic_reassignment",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeVpcConnection",
     "AuthorizedActions" : [ {
       "Name" : "DescribeVpcConnection",
@@ -1544,6 +1768,28 @@
     "SDK" : [ {
       "Name" : "kafka",
       "Method" : "get_compatible_kafka_versions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListAssessmentFindings",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAssessmentFindings",
+      "Service" : "kafka"
+    } ],
+    "SDK" : [ {
+      "Name" : "kafka",
+      "Method" : "list_assessment_findings",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListAssessments",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAssessments",
+      "Service" : "kafka"
+    } ],
+    "SDK" : [ {
+      "Name" : "kafka",
+      "Method" : "list_assessments",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1690,6 +1936,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListTopicReassignments",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTopicReassignments",
+      "Service" : "kafka"
+    } ],
+    "SDK" : [ {
+      "Name" : "kafka",
+      "Method" : "list_topic_reassignments",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListTopics",
     "AuthorizedActions" : [ {
       "Name" : "Connect",
@@ -1745,6 +2002,28 @@
     "SDK" : [ {
       "Name" : "kafka",
       "Method" : "reject_client_vpc_connection",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartTopicReassignment",
+    "AuthorizedActions" : [ {
+      "Name" : "StartTopicReassignment",
+      "Service" : "kafka"
+    } ],
+    "SDK" : [ {
+      "Name" : "kafka",
+      "Method" : "start_topic_reassignment",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StopTopicReassignment",
+    "AuthorizedActions" : [ {
+      "Name" : "StopTopicReassignment",
+      "Service" : "kafka"
+    } ],
+    "SDK" : [ {
+      "Name" : "kafka",
+      "Method" : "stop_topic_reassignment",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1934,6 +2213,10 @@
     } ]
   } ],
   "Resources" : [ {
+    "Name" : "assessment",
+    "ARNFormats" : [ "arn:${Partition}:kafka:${Region}:${Account}:assessment/${ClusterUuid}/${Uuid}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "channel",
     "ARNFormats" : [ "arn:${Partition}:kafka:${Region}:${Account}:channel/${ClusterName}/${ClusterUuid}/${ChannelName}/${Uuid}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
@@ -1954,6 +2237,9 @@
   }, {
     "Name" : "topic",
     "ARNFormats" : [ "arn:${Partition}:kafka:${Region}:${Account}:topic/${ClusterName}/${ClusterUuid}/${TopicName}" ]
+  }, {
+    "Name" : "topic-reassignment",
+    "ARNFormats" : [ "arn:${Partition}:kafka:${Region}:${Account}:topic-reassignment/${ClusterName}/${ClusterUuid}/${Uuid}" ]
   }, {
     "Name" : "transactional-id",
     "ARNFormats" : [ "arn:${Partition}:kafka:${Region}:${Account}:transactional-id/${ClusterName}/${ClusterUuid}/${TransactionalId}" ]

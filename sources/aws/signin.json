@@ -323,6 +323,13 @@
     "Types" : [ "ARN" ]
   } ],
   "Operations" : [ {
+    "Name" : "BatchRevokeSessions",
+    "SDK" : [ {
+      "Name" : "signin",
+      "Method" : "batch_revoke_sessions",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateBearerToken",
     "SDK" : [ {
       "Name" : "signin",
@@ -403,6 +410,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetSession",
+    "SDK" : [ {
+      "Name" : "signin",
+      "Method" : "get_session",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "IntrospectOAuth2TokenWithIAM",
     "AuthorizedActions" : [ {
       "Name" : "IntrospectOAuth2Token",
@@ -422,6 +436,13 @@
     "SDK" : [ {
       "Name" : "signin",
       "Method" : "list_resource_permission_statements",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListSessions",
+    "SDK" : [ {
+      "Name" : "signin",
+      "Method" : "list_sessions",
       "Package" : "Boto3"
     } ]
   }, {

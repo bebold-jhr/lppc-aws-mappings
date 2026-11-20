@@ -928,6 +928,12 @@
   }, {
     "Name" : "UpdateUser",
     "AuthorizedActions" : [ {
+      "Name" : "DisableUser",
+      "Service" : "sso-directory"
+    }, {
+      "Name" : "EnableUser",
+      "Service" : "sso-directory"
+    }, {
       "Name" : "UpdateUser",
       "Service" : "identitystore"
     }, {

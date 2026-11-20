@@ -405,7 +405,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "datasource"
+      "Name" : "evaluation"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,

@@ -149,6 +149,8 @@
     },
     "Resources" : [ {
       "Name" : "DestinationEndpoint"
+    }, {
+      "Name" : "SourceEndpoint"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -599,6 +601,8 @@
     },
     "Resources" : [ {
       "Name" : "DestinationEndpoint"
+    }, {
+      "Name" : "SourceEndpoint"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1003,7 +1007,7 @@
       }
     },
     "Resources" : [ {
-      "Name" : "Reservation"
+      "Name" : "Offering"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1569,6 +1573,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "Entitlement"
+    }, {
       "Name" : "Flow"
     } ],
     "SupportedBy" : {

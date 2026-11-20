@@ -127,6 +127,8 @@
     }, {
       "Name" : "inference-recommendations-job"
     }, {
+      "Name" : "inference-router"
+    }, {
       "Name" : "job"
     }, {
       "Name" : "labeling-job"
@@ -1183,6 +1185,25 @@
     },
     "Resources" : [ {
       "Name" : "inference-recommendations-job"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateInferenceRouter",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "inference-router"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2328,6 +2349,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteEndpointPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "endpoint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteExperiment",
     "Annotations" : {
       "Properties" : {
@@ -2560,6 +2599,24 @@
     },
     "Resources" : [ {
       "Name" : "inference-experiment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteInferenceRouter",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "inference-router"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -3074,6 +3131,8 @@
       "Name" : "inference-component"
     }, {
       "Name" : "inference-recommendations-job"
+    }, {
+      "Name" : "inference-router"
     }, {
       "Name" : "job"
     }, {
@@ -4033,6 +4092,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DescribeInferenceRouter",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "inference-router"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DescribeJob",
     "Annotations" : {
       "Properties" : {
@@ -4903,6 +4980,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetEndpointPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "endpoint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetLineageGroupPolicy",
     "Annotations" : {
       "Properties" : {
@@ -5074,7 +5169,7 @@
     }
   }, {
     "Name" : "InvokeEndpoint",
-    "ActionConditionKeys" : [ "sagemaker:TargetModel" ],
+    "ActionConditionKeys" : [ "sagemaker:SourceInferenceRouterArn", "sagemaker:TargetModel" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : true,
@@ -5095,6 +5190,7 @@
     }
   }, {
     "Name" : "InvokeEndpointAsync",
+    "ActionConditionKeys" : [ "sagemaker:SourceInferenceRouterArn" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : true,
@@ -5125,6 +5221,40 @@
       "Name" : "endpoint"
     }, {
       "Name" : "inference-component"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "InvokeInferenceRouter",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "inference-router"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "InvokeInferenceRouterAsync",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "inference-router"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -5780,6 +5910,21 @@
     }
   }, {
     "Name" : "ListInferenceRecommendationsJobs",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListInferenceRouters",
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -6516,6 +6661,8 @@
     }, {
       "Name" : "inference-recommendations-job"
     }, {
+      "Name" : "inference-router"
+    }, {
       "Name" : "job"
     }, {
       "Name" : "labeling-job"
@@ -6744,6 +6891,24 @@
         "IsWrite" : false
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutEndpointPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "endpoint"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -8089,6 +8254,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateInferenceRouter",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "inference-router"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateMlflowApp",
     "Annotations" : {
       "Properties" : {
@@ -8664,6 +8847,9 @@
   }, {
     "Name" : "sagemaker:ServerlessMemorySize",
     "Types" : [ "Numeric" ]
+  }, {
+    "Name" : "sagemaker:SourceInferenceRouterArn",
+    "Types" : [ "ARN" ]
   }, {
     "Name" : "sagemaker:SpaceSharingType",
     "Types" : [ "String" ]
@@ -9464,6 +9650,20 @@
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "create_inference_recommendations_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateInferenceRouter",
+    "AuthorizedActions" : [ {
+      "Name" : "AddTags",
+      "Service" : "sagemaker"
+    }, {
+      "Name" : "CreateInferenceRouter",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "create_inference_router",
       "Package" : "Boto3"
     } ]
   }, {
@@ -10322,6 +10522,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteEndpointPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteEndpointPolicy",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "delete_endpoint_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteExperiment",
     "AuthorizedActions" : [ {
       "Name" : "DeleteExperiment",
@@ -10462,6 +10673,17 @@
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "delete_inference_experiment",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteInferenceRouter",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteInferenceRouter",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "delete_inference_router",
       "Package" : "Boto3"
     } ]
   }, {
@@ -10952,6 +11174,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeClusterOperation",
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "describe_cluster_operation",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeClusterSchedulerConfig",
     "AuthorizedActions" : [ {
       "Name" : "DescribeClusterSchedulerConfig",
@@ -11230,6 +11459,17 @@
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "describe_inference_recommendations_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeInferenceRouter",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeInferenceRouter",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "describe_inference_router",
       "Package" : "Boto3"
     } ]
   }, {
@@ -11749,6 +11989,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetEndpointPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "GetEndpointPolicy",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "get_endpoint_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetLineageGroupPolicy",
     "AuthorizedActions" : [ {
       "Name" : "GetLineageGroupPolicy",
@@ -11859,6 +12110,9 @@
   }, {
     "Name" : "InvokeEndpoint",
     "AuthorizedActions" : [ {
+      "Name" : "CallWithBearerToken",
+      "Service" : "sagemaker"
+    }, {
       "Name" : "InvokeEndpoint",
       "Service" : "sagemaker"
     } ],
@@ -11890,6 +12144,20 @@
     "SDK" : [ {
       "Name" : "sagemaker-runtime",
       "Method" : "invoke_endpoint_with_response_stream",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "InvokeInferenceRouter",
+    "SDK" : [ {
+      "Name" : "sagemaker-inference-router-runtime",
+      "Method" : "invoke_inference_router",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "InvokeInferenceRouterAsync",
+    "SDK" : [ {
+      "Name" : "sagemaker-inference-router-runtime",
+      "Method" : "invoke_inference_router_async",
       "Package" : "Boto3"
     } ]
   }, {
@@ -12036,6 +12304,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListClusterExtensionVersions",
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "list_cluster_extension_versions",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListClusterExtensions",
     "SDK" : [ {
       "Name" : "sagemaker",
@@ -12051,6 +12326,13 @@
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "list_cluster_nodes",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListClusterOperations",
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "list_cluster_operations",
       "Package" : "Boto3"
     } ]
   }, {
@@ -12354,6 +12636,17 @@
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "list_inference_recommendations_jobs",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListInferenceRouters",
+    "AuthorizedActions" : [ {
+      "Name" : "ListInferenceRouters",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "list_inference_routers",
       "Package" : "Boto3"
     } ]
   }, {
@@ -12900,6 +13193,17 @@
     "SDK" : [ {
       "Name" : "sagemaker",
       "Method" : "list_workteams",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutEndpointPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "PutEndpointPolicy",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "put_endpoint_policy",
       "Package" : "Boto3"
     } ]
   }, {
@@ -13697,6 +14001,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateInferenceRouter",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateInferenceRouter",
+      "Service" : "sagemaker"
+    } ],
+    "SDK" : [ {
+      "Name" : "sagemaker",
+      "Method" : "update_inference_router",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateMlflowApp",
     "AuthorizedActions" : [ {
       "Name" : "UpdateMlflowApp",
@@ -14122,6 +14437,10 @@
   }, {
     "Name" : "inference-recommendations-job",
     "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:inference-recommendations-job/${InferenceRecommendationsJobName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "inference-router",
+    "ARNFormats" : [ "arn:${Partition}:sagemaker:${Region}:${Account}:inference-router/${InferenceRouterName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}", "sagemaker:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "job",

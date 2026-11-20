@@ -3,7 +3,7 @@
   "ServiceName" : "CloudWatch Observability Admin",
   "Actions" : [ {
     "Name" : "CreateCentralizationRuleForOrganization",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "observabilityadmin:CentralizationBackupRegion", "observabilityadmin:CentralizationDestinationAccount", "observabilityadmin:CentralizationDestinationRegion", "observabilityadmin:CentralizationRuleName", "observabilityadmin:CentralizationSourceId", "observabilityadmin:CentralizationSourceRegions" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "observabilityadmin:CentralizationBackupRegion", "observabilityadmin:CentralizationDestinationAccount", "observabilityadmin:CentralizationDestinationRegion", "observabilityadmin:CentralizationRuleName", "observabilityadmin:CentralizationSourceId", "observabilityadmin:CentralizationSourceOrganizationalUnitId", "observabilityadmin:CentralizationSourceRegions" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -15,6 +15,25 @@
     },
     "Resources" : [ {
       "Name" : "organization-centralization-rule"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateConnector",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "connector"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -135,6 +154,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteConnector",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "connector"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteDatasetIntegration",
     "Annotations" : {
       "Properties" : {
@@ -238,6 +275,60 @@
     },
     "Resources" : [ {
       "Name" : "organization-centralization-rule"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetConnector",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "connector"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetConnectorTelemetryManifest",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "connector"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetConnectorTelemetrySetup",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "connector"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -379,7 +470,40 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetThirdPartyTelemetryEnrichment",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "telemetry-enrichment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListCentralizationRulesForOrganization",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListConnectors",
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -441,6 +565,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListResourcesByConnector",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "connector"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListS3TableIntegrations",
     "Annotations" : {
       "Properties" : {
@@ -467,6 +609,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "connector"
+    }, {
       "Name" : "dataset-integration"
     }, {
       "Name" : "organization-centralization-rule"
@@ -474,6 +618,8 @@
       "Name" : "organization-telemetry-rule"
     }, {
       "Name" : "s3tableintegration"
+    }, {
+      "Name" : "telemetry-enrichment"
     }, {
       "Name" : "telemetry-pipeline"
     }, {
@@ -529,6 +675,40 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListThirdPartyTelemetryEnrichments",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutConnectorTelemetryManifest",
+    "ActionConditionKeys" : [ "observabilityadmin:AzureTelemetryRegion" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "connector"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StartTelemetryEnrichment",
     "Annotations" : {
       "Properties" : {
@@ -571,6 +751,42 @@
         "IsWrite" : true
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StartTelemetryPipelineRefresh",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "telemetry-pipeline"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StartThirdPartyTelemetryEnrichment",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "telemetry-enrichment"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -621,6 +837,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "StopThirdPartyTelemetryEnrichment",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "telemetry-enrichment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "TagResource",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -633,6 +867,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "connector"
+    }, {
       "Name" : "dataset-integration"
     }, {
       "Name" : "organization-centralization-rule"
@@ -640,6 +876,8 @@
       "Name" : "organization-telemetry-rule"
     }, {
       "Name" : "s3tableintegration"
+    }, {
+      "Name" : "telemetry-enrichment"
     }, {
       "Name" : "telemetry-pipeline"
     }, {
@@ -677,6 +915,8 @@
       }
     },
     "Resources" : [ {
+      "Name" : "connector"
+    }, {
       "Name" : "dataset-integration"
     }, {
       "Name" : "organization-centralization-rule"
@@ -684,6 +924,8 @@
       "Name" : "organization-telemetry-rule"
     }, {
       "Name" : "s3tableintegration"
+    }, {
+      "Name" : "telemetry-enrichment"
     }, {
       "Name" : "telemetry-pipeline"
     }, {
@@ -695,7 +937,7 @@
     }
   }, {
     "Name" : "UpdateCentralizationRuleForOrganization",
-    "ActionConditionKeys" : [ "observabilityadmin:CentralizationBackupRegion", "observabilityadmin:CentralizationDestinationAccount", "observabilityadmin:CentralizationDestinationRegion", "observabilityadmin:CentralizationRuleName", "observabilityadmin:CentralizationSourceId", "observabilityadmin:CentralizationSourceRegions" ],
+    "ActionConditionKeys" : [ "observabilityadmin:CentralizationBackupRegion", "observabilityadmin:CentralizationDestinationAccount", "observabilityadmin:CentralizationDestinationRegion", "observabilityadmin:CentralizationRuleName", "observabilityadmin:CentralizationSourceId", "observabilityadmin:CentralizationSourceOrganizationalUnitId", "observabilityadmin:CentralizationSourceRegions" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -812,6 +1054,9 @@
     "Name" : "aws:TagKeys",
     "Types" : [ "ArrayOfString" ]
   }, {
+    "Name" : "observabilityadmin:AzureTelemetryRegion",
+    "Types" : [ "ArrayOfString" ]
+  }, {
     "Name" : "observabilityadmin:CentralizationBackupRegion",
     "Types" : [ "String" ]
   }, {
@@ -825,6 +1070,9 @@
     "Types" : [ "String" ]
   }, {
     "Name" : "observabilityadmin:CentralizationSourceId",
+    "Types" : [ "ArrayOfString" ]
+  }, {
+    "Name" : "observabilityadmin:CentralizationSourceOrganizationalUnitId",
     "Types" : [ "ArrayOfString" ]
   }, {
     "Name" : "observabilityadmin:CentralizationSourceRegions",
@@ -848,6 +1096,26 @@
     "SDK" : [ {
       "Name" : "observabilityadmin",
       "Method" : "create_centralization_rule_for_organization",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateConnector",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateConnector",
+      "Service" : "observabilityadmin"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "observabilityadmin.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "observabilityadmin"
+    } ],
+    "SDK" : [ {
+      "Name" : "observabilityadmin",
+      "Method" : "create_connector",
       "Package" : "Boto3"
     } ]
   }, {
@@ -950,6 +1218,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteConnector",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteConnector",
+      "Service" : "observabilityadmin"
+    } ],
+    "SDK" : [ {
+      "Name" : "observabilityadmin",
+      "Method" : "delete_connector",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteDatasetIntegration",
     "AuthorizedActions" : [ {
       "Name" : "DeleteDatasetIntegration",
@@ -1013,6 +1292,39 @@
     "SDK" : [ {
       "Name" : "observabilityadmin",
       "Method" : "get_centralization_rule_for_organization",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetConnector",
+    "AuthorizedActions" : [ {
+      "Name" : "GetConnector",
+      "Service" : "observabilityadmin"
+    } ],
+    "SDK" : [ {
+      "Name" : "observabilityadmin",
+      "Method" : "get_connector",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetConnectorTelemetryManifest",
+    "AuthorizedActions" : [ {
+      "Name" : "GetConnectorTelemetryManifest",
+      "Service" : "observabilityadmin"
+    } ],
+    "SDK" : [ {
+      "Name" : "observabilityadmin",
+      "Method" : "get_connector_telemetry_manifest",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetConnectorTelemetrySetup",
+    "AuthorizedActions" : [ {
+      "Name" : "GetConnectorTelemetrySetup",
+      "Service" : "observabilityadmin"
+    } ],
+    "SDK" : [ {
+      "Name" : "observabilityadmin",
+      "Method" : "get_connector_telemetry_setup",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1104,6 +1416,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetThirdPartyTelemetryEnrichment",
+    "AuthorizedActions" : [ {
+      "Name" : "GetThirdPartyTelemetryEnrichment",
+      "Service" : "observabilityadmin"
+    } ],
+    "SDK" : [ {
+      "Name" : "observabilityadmin",
+      "Method" : "get_third_party_telemetry_enrichment",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListCentralizationRulesForOrganization",
     "AuthorizedActions" : [ {
       "Name" : "ListCentralizationRulesForOrganization",
@@ -1112,6 +1435,17 @@
     "SDK" : [ {
       "Name" : "observabilityadmin",
       "Method" : "list_centralization_rules_for_organization",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListConnectors",
+    "AuthorizedActions" : [ {
+      "Name" : "ListConnectors",
+      "Service" : "observabilityadmin"
+    } ],
+    "SDK" : [ {
+      "Name" : "observabilityadmin",
+      "Method" : "list_connectors",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1145,6 +1479,17 @@
     "SDK" : [ {
       "Name" : "observabilityadmin",
       "Method" : "list_resource_telemetry_for_organization",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListResourcesByConnector",
+    "AuthorizedActions" : [ {
+      "Name" : "ListResourcesByConnector",
+      "Service" : "observabilityadmin"
+    } ],
+    "SDK" : [ {
+      "Name" : "observabilityadmin",
+      "Method" : "list_resources_by_connector",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1203,6 +1548,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListThirdPartyTelemetryEnrichments",
+    "AuthorizedActions" : [ {
+      "Name" : "ListThirdPartyTelemetryEnrichments",
+      "Service" : "observabilityadmin"
+    } ],
+    "SDK" : [ {
+      "Name" : "observabilityadmin",
+      "Method" : "list_third_party_telemetry_enrichments",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutConnectorTelemetryManifest",
+    "AuthorizedActions" : [ {
+      "Name" : "PutConnectorTelemetryManifest",
+      "Service" : "observabilityadmin"
+    } ],
+    "SDK" : [ {
+      "Name" : "observabilityadmin",
+      "Method" : "put_connector_telemetry_manifest",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StartTelemetryEnrichment",
     "AuthorizedActions" : [ {
       "Name" : "StartTelemetryEnrichment",
@@ -1236,6 +1603,24 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "StartTelemetryPipelineRefresh",
+    "AuthorizedActions" : [ {
+      "Name" : "StartTelemetryPipelineRefresh",
+      "Service" : "observabilityadmin"
+    } ],
+    "SDK" : [ {
+      "Name" : "observabilityadmin",
+      "Method" : "start_telemetry_pipeline_refresh",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartThirdPartyTelemetryEnrichment",
+    "SDK" : [ {
+      "Name" : "observabilityadmin",
+      "Method" : "start_third_party_telemetry_enrichment",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "StopTelemetryEnrichment",
     "AuthorizedActions" : [ {
       "Name" : "StopTelemetryEnrichment",
@@ -1266,6 +1651,17 @@
     "SDK" : [ {
       "Name" : "observabilityadmin",
       "Method" : "stop_telemetry_evaluation_for_organization",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StopThirdPartyTelemetryEnrichment",
+    "AuthorizedActions" : [ {
+      "Name" : "StopThirdPartyTelemetryEnrichment",
+      "Service" : "observabilityadmin"
+    } ],
+    "SDK" : [ {
+      "Name" : "observabilityadmin",
+      "Method" : "stop_third_party_telemetry_enrichment",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1381,6 +1777,10 @@
     } ]
   } ],
   "Resources" : [ {
+    "Name" : "connector",
+    "ARNFormats" : [ "arn:${Partition}:observabilityadmin:${Region}:${Account}:connector/${ConnectorProvider}/${ConnectorId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "dataset-integration",
     "ARNFormats" : [ "arn:${Partition}:observabilityadmin:${Region}:${Account}:dataset-integration/${DatasetIntegrationIdentifier}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
@@ -1395,6 +1795,10 @@
   }, {
     "Name" : "s3tableintegration",
     "ARNFormats" : [ "arn:${Partition}:observabilityadmin:${Region}:${Account}:s3tableintegration/${S3TableIntegrationIdentifier}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "telemetry-enrichment",
+    "ARNFormats" : [ "arn:${Partition}:observabilityadmin:${Region}:${Account}:telemetry-enrichments/${TelemetryEnrichmentId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "telemetry-pipeline",

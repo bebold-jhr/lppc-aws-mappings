@@ -161,6 +161,42 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateSnapshot",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "application"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateSystemSnapshot",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "application"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteApplication",
     "Annotations" : {
       "Properties" : {
@@ -287,6 +323,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DeleteSnapshot",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "snapshot"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DescribeApplication",
     "Annotations" : {
       "Properties" : {
@@ -359,6 +413,42 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DescribeSnapshot",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "snapshot"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeSnapshotOperation",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "snapshot"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DiscoverInputSchema",
     "Annotations" : {
       "Properties" : {
@@ -374,6 +464,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ExportSnapshot",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "snapshot"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetApplicationState",
     "Annotations" : {
       "Properties" : {
@@ -385,6 +493,25 @@
     },
     "Resources" : [ {
       "Name" : "application"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ImportSnapshot",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -460,6 +587,42 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListSnapshotOperations",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "snapshot"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListSnapshots",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "application"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
@@ -472,9 +635,28 @@
     },
     "Resources" : [ {
       "Name" : "application"
+    }, {
+      "Name" : "snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "RestoreFromSnapshot",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "snapshot"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
@@ -545,6 +727,8 @@
     },
     "Resources" : [ {
       "Name" : "application"
+    }, {
+      "Name" : "snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -564,6 +748,8 @@
     },
     "Resources" : [ {
       "Name" : "application"
+    }, {
+      "Name" : "snapshot"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -771,6 +957,9 @@
   }, {
     "Name" : "CreateSnapshot",
     "AuthorizedActions" : [ {
+      "Name" : "CreateSnapshot",
+      "Service" : "kinesisanalytics"
+    }, {
       "Name" : "TagResource",
       "Service" : "kinesisanalytics"
     } ],
@@ -878,6 +1067,10 @@
     } ]
   }, {
     "Name" : "DeleteSnapshot",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteSnapshot",
+      "Service" : "kinesisanalytics"
+    } ],
     "SDK" : [ {
       "Name" : "kinesisanalyticsv2",
       "Method" : "delete_snapshot",
@@ -933,6 +1126,10 @@
     } ]
   }, {
     "Name" : "DescribeSnapshot",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeSnapshot",
+      "Service" : "kinesisanalytics"
+    } ],
     "SDK" : [ {
       "Name" : "kinesisanalyticsv2",
       "Method" : "describe_snapshot",
@@ -940,6 +1137,10 @@
     } ]
   }, {
     "Name" : "DescribeSnapshotOperation",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeSnapshotOperation",
+      "Service" : "kinesisanalytics"
+    } ],
     "SDK" : [ {
       "Name" : "kinesisanalyticsv2",
       "Method" : "describe_snapshot_operation",
@@ -968,6 +1169,16 @@
     } ]
   }, {
     "Name" : "ExportSnapshot",
+    "AuthorizedActions" : [ {
+      "Name" : "ExportSnapshot",
+      "Service" : "kinesisanalytics"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "kinesisanalytics.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    } ],
     "SDK" : [ {
       "Name" : "kinesisanalyticsv2",
       "Method" : "export_snapshot",
@@ -976,6 +1187,9 @@
   }, {
     "Name" : "ImportSnapshot",
     "AuthorizedActions" : [ {
+      "Name" : "ImportSnapshot",
+      "Service" : "kinesisanalytics"
+    }, {
       "Name" : "PassRole",
       "Context" : {
         "iam:PassedToService" : [ "kinesisanalytics.amazonaws.com" ]
@@ -1037,6 +1251,10 @@
     } ]
   }, {
     "Name" : "ListSnapshotOperations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSnapshotOperations",
+      "Service" : "kinesisanalytics"
+    } ],
     "SDK" : [ {
       "Name" : "kinesisanalyticsv2",
       "Method" : "list_snapshot_operations",
@@ -1044,6 +1262,10 @@
     } ]
   }, {
     "Name" : "ListSnapshots",
+    "AuthorizedActions" : [ {
+      "Name" : "ListSnapshots",
+      "Service" : "kinesisanalytics"
+    } ],
     "SDK" : [ {
       "Name" : "kinesisanalyticsv2",
       "Method" : "list_snapshots",
@@ -1171,6 +1393,10 @@
   "Resources" : [ {
     "Name" : "application",
     "ARNFormats" : [ "arn:${Partition}:kinesisanalytics:${Region}:${Account}:application/${ApplicationName}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "snapshot",
+    "ARNFormats" : [ "arn:${Partition}:kinesisanalytics:${Region}:${Account}:snapshot/${SnapshotName}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.5"

@@ -38,6 +38,25 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ApproveTimeOff",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "user"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "AssociateAnalyticsDataSet",
     "ActionConditionKeys" : [ "connect:InstanceId" ],
     "Annotations" : {
@@ -613,6 +632,25 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "CancelTimeOff",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "user"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ClaimPhoneNumber",
@@ -1275,6 +1313,25 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "CreateTimeOff",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "user"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "CreateTrafficDistributionGroup",
@@ -3559,6 +3616,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetTimeOff",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "user"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetTrafficDistribution",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
@@ -5032,6 +5108,25 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "PutTimeOffBalance",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "user"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "PutUserStatus",
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
@@ -5053,6 +5148,25 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "RejectTimeOff",
+    "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "user"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "ReleasePhoneNumber",
@@ -7785,6 +7899,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ApproveTimeOff",
+    "AuthorizedActions" : [ {
+      "Name" : "ApproveTimeOff",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connectscheduling",
+      "Method" : "approve_time_off",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "AssociateAnalyticsDataSet",
     "AuthorizedActions" : [ {
       "Name" : "AssociateAnalyticsDataSet",
@@ -8104,6 +8229,17 @@
     "SDK" : [ {
       "Name" : "connectparticipant",
       "Method" : "cancel_participant_authentication",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CancelTimeOff",
+    "AuthorizedActions" : [ {
+      "Name" : "CancelTimeOff",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connectscheduling",
+      "Method" : "cancel_time_off",
       "Package" : "Boto3"
     } ]
   }, {
@@ -8561,6 +8697,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateTimeOff",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateTimeOff",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connectscheduling",
+      "Method" : "create_time_off",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateTrafficDistributionGroup",
     "AuthorizedActions" : [ {
       "Name" : "CreateTrafficDistributionGroup",
@@ -8689,6 +8836,13 @@
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "deactivate_evaluation_form",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteAllEntitySessions",
+    "SDK" : [ {
+      "Name" : "connect",
+      "Method" : "delete_all_entity_sessions",
       "Package" : "Boto3"
     } ]
   }, {
@@ -9928,6 +10082,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetTimeOff",
+    "AuthorizedActions" : [ {
+      "Name" : "GetTimeOff",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connectscheduling",
+      "Method" : "get_time_off",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetTrafficDistribution",
     "AuthorizedActions" : [ {
       "Name" : "GetTrafficDistribution",
@@ -10805,6 +10970,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "PutTimeOffBalance",
+    "AuthorizedActions" : [ {
+      "Name" : "PutTimeOffBalance",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connectscheduling",
+      "Method" : "put_time_off_balance",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "PutUserStatus",
     "AuthorizedActions" : [ {
       "Name" : "PutUserStatus",
@@ -10813,6 +10989,17 @@
     "SDK" : [ {
       "Name" : "connect",
       "Method" : "put_user_status",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "RejectTimeOff",
+    "AuthorizedActions" : [ {
+      "Name" : "RejectTimeOff",
+      "Service" : "connect"
+    } ],
+    "SDK" : [ {
+      "Name" : "connectscheduling",
+      "Method" : "reject_time_off",
       "Package" : "Boto3"
     } ]
   }, {
