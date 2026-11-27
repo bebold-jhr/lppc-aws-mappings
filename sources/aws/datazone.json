@@ -3653,6 +3653,7 @@
     "Name" : "UpdateAssetOwner",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -6109,6 +6110,17 @@
     "SDK" : [ {
       "Name" : "datazone",
       "Method" : "update_asset_filter",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateAssetOwner",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAssetOwner",
+      "Service" : "datazone"
+    } ],
+    "SDK" : [ {
+      "Name" : "datazone",
+      "Method" : "update_asset_owner",
       "Package" : "Boto3"
     } ]
   }, {

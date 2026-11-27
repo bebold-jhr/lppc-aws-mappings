@@ -17,6 +17,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "BatchGetOmniSloReport",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "omni-slo"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "BatchGetServiceLevelIndicatorReport",
     "Annotations" : {
       "Properties" : {
@@ -57,6 +75,24 @@
         "IsWrite" : true
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CompleteExperimentRun",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "experiment"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -155,6 +191,21 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateExperiment",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateIngestionEndpoint",
     "Annotations" : {
       "Properties" : {
@@ -174,6 +225,21 @@
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateLookup",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -216,6 +282,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateOmniSlo",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "omni-slo"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateOmniThread",
     "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
     "Annotations" : {
@@ -235,6 +319,20 @@
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateProvisioningRolesForOrganization",
+    "Annotations" : {
+      "Properties" : {
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -489,6 +587,42 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteExperiment",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "experiment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteExperimentRun",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "experiment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteIngestionEndpoint",
     "Annotations" : {
       "Properties" : {
@@ -537,6 +671,24 @@
     },
     "Resources" : [ {
       "Name" : "integration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteLookup",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "lookup"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -610,6 +762,24 @@
     },
     "Resources" : [ {
       "Name" : "omni-dashboard"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteOmniSlo",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "omni-slo"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1125,6 +1295,42 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetExperiment",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "experiment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetExperimentRun",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "experiment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetIngestionEndpoint",
     "Annotations" : {
       "Properties" : {
@@ -1190,6 +1396,24 @@
         "IsWrite" : false
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetLookup",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "lookup"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -1341,6 +1565,24 @@
     },
     "Resources" : [ {
       "Name" : "omni-dashboard"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetOmniSlo",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "omni-slo"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1716,6 +1958,21 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListAnomalies",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListDashboards",
     "Annotations" : {
       "Properties" : {
@@ -1776,6 +2033,39 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListExperimentRuns",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "experiment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListExperiments",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListIngestionEndpoints",
     "Annotations" : {
       "Properties" : {
@@ -1790,11 +2080,44 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListIntegrationTargets",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "integration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListIntegrations",
     "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListLookups",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1900,6 +2223,21 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListObservations",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListOmniAgentAssets",
     "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
     "Annotations" : {
@@ -1920,6 +2258,21 @@
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListOmniSlos",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2045,13 +2398,22 @@
       "Name" : "dataset",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     }, {
+      "Name" : "experiment",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
       "Name" : "insight-rule",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "lookup",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "metric-query-definition",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "metric-stream",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "omni-slo",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "service",
@@ -2185,6 +2547,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "PutExperimentRunResults",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "experiment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "PutInsightRule",
@@ -2435,6 +2815,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "StartExperimentRun",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "experiment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "StartMetricStreams",
     "Annotations" : {
       "Properties" : {
@@ -2523,6 +2921,24 @@
         "IsWrite" : true
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StopExperimentRun",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "experiment"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -2646,13 +3062,22 @@
       "Name" : "dataset",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     }, {
+      "Name" : "experiment",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
       "Name" : "insight-rule",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "lookup",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "metric-query-definition",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "metric-stream",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "omni-slo",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "service",
@@ -2690,13 +3115,22 @@
       "Name" : "dataset",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     }, {
+      "Name" : "experiment",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
       "Name" : "insight-rule",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "lookup",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "metric-query-definition",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "metric-stream",
+      "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+    }, {
+      "Name" : "omni-slo",
       "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
     }, {
       "Name" : "service",
@@ -2784,6 +3218,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateExperiment",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "experiment"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateIngestionEndpoint",
     "Annotations" : {
       "Properties" : {
@@ -2814,6 +3266,24 @@
     },
     "Resources" : [ {
       "Name" : "integration"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateLookup",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "lookup"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -2866,6 +3336,24 @@
     },
     "Resources" : [ {
       "Name" : "omni-dashboard"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateOmniSlo",
+    "ActionConditionKeys" : [ "cloudwatch:HasAccessGrant" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "omni-slo"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -4476,6 +4964,10 @@
     "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:domain/${DomainId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
+    "Name" : "experiment",
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:experiment/${ExperimentId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "ingestion-endpoint",
     "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:ingestion-endpoint/${IngestionEndpointName}/${IngestionEndpointId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
@@ -4486,6 +4978,10 @@
   }, {
     "Name" : "integration",
     "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:integration/${IntegrationId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "lookup",
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:lookup/${LookupName}/${LookupId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "metric-query-definition",
@@ -4502,6 +4998,10 @@
   }, {
     "Name" : "omni-dashboard",
     "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:omni-dashboard/${DashboardId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "omni-slo",
+    "ARNFormats" : [ "arn:${Partition}:cloudwatch:${Region}:${Account}:omni-slo/${SloId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "organization-access-grant",

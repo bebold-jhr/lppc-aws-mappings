@@ -1201,6 +1201,7 @@
     "Name" : "ListNetworkMigrationInsights",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3182,6 +3183,10 @@
     } ]
   }, {
     "Name" : "ListNetworkMigrationInsights",
+    "AuthorizedActions" : [ {
+      "Name" : "ListNetworkMigrationInsights",
+      "Service" : "mgn"
+    } ],
     "SDK" : [ {
       "Name" : "mgn",
       "Method" : "list_network_migration_insights",
@@ -3519,6 +3524,9 @@
     "Name" : "StartRemoteSourceActionJob",
     "AuthorizedActions" : [ {
       "Name" : "StartRemoteSourceActionJob",
+      "Service" : "mgn"
+    }, {
+      "Name" : "TagResource",
       "Service" : "mgn"
     } ],
     "SDK" : [ {

@@ -11,6 +11,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -25,6 +28,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -39,6 +45,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -67,6 +76,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -81,6 +93,11 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    }, {
+      "Name" : "integration"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -95,6 +112,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -109,6 +129,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -137,6 +160,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -151,6 +177,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -165,6 +194,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -179,6 +211,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -193,6 +228,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -207,6 +245,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "automation"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -221,6 +262,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "connection"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -235,6 +279,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "document"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -249,6 +296,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "integration"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -263,6 +313,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -277,6 +330,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -291,6 +347,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -305,6 +364,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -319,6 +381,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "automation"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -333,6 +398,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "connection"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -347,6 +415,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "document"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -361,6 +432,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "document"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -375,6 +449,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "integration"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -403,6 +480,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -417,6 +497,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -445,6 +528,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -459,6 +545,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -473,6 +562,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -487,6 +579,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -501,6 +596,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -529,6 +627,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -543,6 +644,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -557,6 +661,9 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -571,6 +678,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -585,6 +695,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "document"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -599,6 +712,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -613,6 +729,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "agentspace"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -627,6 +746,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "automation"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -641,6 +763,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "connection"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -655,6 +780,9 @@
         "IsWrite" : true
       }
     },
+    "Resources" : [ {
+      "Name" : "document"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -673,6 +801,22 @@
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
+  } ],
+  "Resources" : [ {
+    "Name" : "agentspace",
+    "ARNFormats" : [ "arn:${Partition}:finops-agent:${Region}:${Account}:agentspace/${AgentSpaceId}" ]
+  }, {
+    "Name" : "automation",
+    "ARNFormats" : [ "arn:${Partition}:finops-agent:${Region}:${Account}:agentspace/${AgentSpaceId}/automation/${AutomationId}" ]
+  }, {
+    "Name" : "connection",
+    "ARNFormats" : [ "arn:${Partition}:finops-agent:${Region}:${Account}:agentspace/${AgentSpaceId}/connection/${ConnectionId}" ]
+  }, {
+    "Name" : "document",
+    "ARNFormats" : [ "arn:${Partition}:finops-agent:${Region}:${Account}:agentspace/${AgentSpaceId}/document/${DocumentId}" ]
+  }, {
+    "Name" : "integration",
+    "ARNFormats" : [ "arn:${Partition}:finops-agent:${Region}:${Account}:integration/${IntegrationId}" ]
   } ],
   "Version" : "v1.5"
 }

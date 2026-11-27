@@ -746,8 +746,6 @@
     },
     "Resources" : [ {
       "Name" : "readSet"
-    }, {
-      "Name" : "sequenceStore"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -820,8 +818,6 @@
     },
     "Resources" : [ {
       "Name" : "readSet"
-    }, {
-      "Name" : "sequenceStore"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -840,8 +836,6 @@
     },
     "Resources" : [ {
       "Name" : "reference"
-    }, {
-      "Name" : "referenceStore"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -878,8 +872,6 @@
     },
     "Resources" : [ {
       "Name" : "reference"
-    }, {
-      "Name" : "referenceStore"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,

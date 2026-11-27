@@ -791,6 +791,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetHostedZoneChangeBatch",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "hostedzone"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetHostedZoneCount",
     "Annotations" : {
       "Properties" : {
@@ -1051,6 +1069,24 @@
     },
     "Resources" : [ {
       "Name" : "healthchecksource"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListHostedZoneChangeBatches",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "hostedzone"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1384,6 +1420,24 @@
     }
   }, {
     "Name" : "UpdateHostedZoneFeatures",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "hostedzone"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateHostedZoneTier",
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -1950,6 +2004,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetHostedZoneChangeBatch",
+    "AuthorizedActions" : [ {
+      "Name" : "GetHostedZoneChangeBatch",
+      "Service" : "route53"
+    }, {
+      "Name" : "ListResourceRecordSets",
+      "Service" : "route53"
+    } ],
+    "SDK" : [ {
+      "Name" : "route53",
+      "Method" : "get_hosted_zone_change_batch",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetHostedZoneCount",
     "AuthorizedActions" : [ {
       "Name" : "GetHostedZoneCount",
@@ -2115,6 +2183,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListHostedZoneChangeBatches",
+    "AuthorizedActions" : [ {
+      "Name" : "ListHostedZoneChangeBatches",
+      "Service" : "route53"
+    } ],
+    "SDK" : [ {
+      "Name" : "route53",
+      "Method" : "list_hosted_zone_change_batches",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListHostedZones",
     "AuthorizedActions" : [ {
       "Name" : "ListHostedZones",
@@ -2156,6 +2235,20 @@
     "SDK" : [ {
       "Name" : "route53",
       "Method" : "list_query_logging_configs",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListResourceRecordSetChanges",
+    "AuthorizedActions" : [ {
+      "Name" : "GetHostedZoneChangeBatch",
+      "Service" : "route53"
+    }, {
+      "Name" : "ListResourceRecordSets",
+      "Service" : "route53"
+    } ],
+    "SDK" : [ {
+      "Name" : "route53",
+      "Method" : "list_resource_record_set_changes",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2321,6 +2414,17 @@
     "SDK" : [ {
       "Name" : "route53",
       "Method" : "update_hosted_zone_features",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateHostedZoneTier",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateHostedZoneTier",
+      "Service" : "route53"
+    } ],
+    "SDK" : [ {
+      "Name" : "route53",
+      "Method" : "update_hosted_zone_tier",
       "Package" : "Boto3"
     } ]
   }, {

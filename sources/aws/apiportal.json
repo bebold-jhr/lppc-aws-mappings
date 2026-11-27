@@ -5,6 +5,7 @@
     "Name" : "AssociateManagedApis",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -23,6 +24,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -41,6 +43,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -58,6 +61,7 @@
     "Name" : "CreatePortalPreview",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -76,6 +80,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -94,6 +99,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -112,6 +118,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -129,6 +136,7 @@
     "Name" : "DeleteDiscoveryConfiguration",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -146,6 +154,7 @@
     "Name" : "DeleteManagedApi",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -163,6 +172,7 @@
     "Name" : "DeleteOrganizationDiscoveryConfiguration",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -180,6 +190,7 @@
     "Name" : "DeletePortal",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -197,6 +208,7 @@
     "Name" : "DeleteProduct",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -214,6 +226,7 @@
     "Name" : "DeleteProductApiPage",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -231,6 +244,7 @@
     "Name" : "DeleteProductPage",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -248,6 +262,7 @@
     "Name" : "DeleteProductSharingPolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -265,6 +280,7 @@
     "Name" : "DisassociateManagedApis",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -282,6 +298,7 @@
     "Name" : "GetApiInventoryItem",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -296,6 +313,7 @@
     "Name" : "GetDiscoveryConfiguration",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -313,6 +331,7 @@
     "Name" : "GetManagedApi",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -330,6 +349,7 @@
     "Name" : "GetOrganizationDiscoveryConfiguration",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -347,6 +367,7 @@
     "Name" : "GetPortal",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -364,6 +385,7 @@
     "Name" : "GetProduct",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -381,6 +403,7 @@
     "Name" : "GetProductApiPage",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -398,6 +421,7 @@
     "Name" : "GetProductPage",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -415,6 +439,7 @@
     "Name" : "GetProductSharingPolicy",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -432,6 +457,7 @@
     "Name" : "ListApiInventoryItems",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -446,6 +472,7 @@
     "Name" : "ListDiscoveryStatuses",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -460,6 +487,7 @@
     "Name" : "ListManagedApiEvents",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -477,6 +505,7 @@
     "Name" : "ListManagedApis",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -491,6 +520,7 @@
     "Name" : "ListPortals",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -505,6 +535,7 @@
     "Name" : "ListProductApiPages",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -522,6 +553,7 @@
     "Name" : "ListProductPages",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -539,6 +571,7 @@
     "Name" : "ListProducts",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -553,6 +586,7 @@
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -585,6 +619,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -603,6 +638,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -621,6 +657,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
@@ -638,6 +675,7 @@
     "Name" : "StartDiscovery",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -657,6 +695,7 @@
     "Name" : "StopDiscovery",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -677,6 +716,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -709,6 +749,7 @@
     "ActionConditionKeys" : [ "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : true,
@@ -740,6 +781,7 @@
     "Name" : "UpdatePortal",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -757,6 +799,7 @@
     "Name" : "UpdatePortalPublishStatus",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -774,6 +817,7 @@
     "Name" : "UpdateProduct",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -791,6 +835,7 @@
     "Name" : "UpdateProductApiPage",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -808,6 +853,7 @@
     "Name" : "UpdateProductPage",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -831,6 +877,549 @@
   }, {
     "Name" : "aws:TagKeys",
     "Types" : [ "ArrayOfString" ]
+  } ],
+  "Operations" : [ {
+    "Name" : "AssociateManagedApis",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateManagedApis",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "associate_managed_apis",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateManagedApi",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateManagedApi",
+      "Service" : "apiportal"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "create_managed_api",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreatePortal",
+    "AuthorizedActions" : [ {
+      "Name" : "CreatePortal",
+      "Service" : "apiportal"
+    }, {
+      "Name" : "GetProduct",
+      "Service" : "apiportal"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "create_portal",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreatePortalPreview",
+    "AuthorizedActions" : [ {
+      "Name" : "CreatePortalPreview",
+      "Service" : "apiportal"
+    }, {
+      "Name" : "GetProduct",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "create_portal_preview",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateProduct",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateProduct",
+      "Service" : "apiportal"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "create_product",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateProductApiPage",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateProductApiPage",
+      "Service" : "apiportal"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "create_product_api_page",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateProductPage",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateProductPage",
+      "Service" : "apiportal"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "create_product_page",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteDiscoveryConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteDiscoveryConfiguration",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "delete_discovery_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteManagedApi",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteManagedApi",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "delete_managed_api",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteOrganizationDiscoveryConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteOrganizationDiscoveryConfiguration",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "delete_organization_discovery_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeletePortal",
+    "AuthorizedActions" : [ {
+      "Name" : "DeletePortal",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "delete_portal",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteProduct",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteProduct",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "delete_product",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteProductApiPage",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteProductApiPage",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "delete_product_api_page",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteProductPage",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteProductPage",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "delete_product_page",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteProductSharingPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteProductSharingPolicy",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "delete_product_sharing_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DisassociateManagedApis",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateManagedApis",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "disassociate_managed_apis",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetApiInventoryItem",
+    "AuthorizedActions" : [ {
+      "Name" : "GetApiInventoryItem",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "get_api_inventory_item",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetDiscoveryConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "GetDiscoveryConfiguration",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "get_discovery_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetManagedApi",
+    "AuthorizedActions" : [ {
+      "Name" : "GetManagedApi",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "get_managed_api",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetOrganizationDiscoveryConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "GetOrganizationDiscoveryConfiguration",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "get_organization_discovery_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetPortal",
+    "AuthorizedActions" : [ {
+      "Name" : "GetPortal",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "get_portal",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetProduct",
+    "AuthorizedActions" : [ {
+      "Name" : "GetProduct",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "get_product",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetProductApiPage",
+    "AuthorizedActions" : [ {
+      "Name" : "GetProductApiPage",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "get_product_api_page",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetProductPage",
+    "AuthorizedActions" : [ {
+      "Name" : "GetProductPage",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "get_product_page",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetProductSharingPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "GetProductSharingPolicy",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "get_product_sharing_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListApiInventoryItems",
+    "AuthorizedActions" : [ {
+      "Name" : "ListApiInventoryItems",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "list_api_inventory_items",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListDiscoveryStatuses",
+    "AuthorizedActions" : [ {
+      "Name" : "ListDiscoveryStatuses",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "list_discovery_statuses",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListManagedApiEvents",
+    "AuthorizedActions" : [ {
+      "Name" : "ListManagedApiEvents",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "list_managed_api_events",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListManagedApis",
+    "AuthorizedActions" : [ {
+      "Name" : "ListManagedApis",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "list_managed_apis",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListPortals",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPortals",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "list_portals",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListProductApiPages",
+    "AuthorizedActions" : [ {
+      "Name" : "ListProductApiPages",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "list_product_api_pages",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListProductPages",
+    "AuthorizedActions" : [ {
+      "Name" : "ListProductPages",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "list_product_pages",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListProducts",
+    "AuthorizedActions" : [ {
+      "Name" : "ListProducts",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "list_products",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListTagsForResource",
+    "AuthorizedActions" : [ {
+      "Name" : "ListTagsForResource",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "list_tags_for_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutDiscoveryConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "PutDiscoveryConfiguration",
+      "Service" : "apiportal"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "put_discovery_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutOrganizationDiscoveryConfiguration",
+    "AuthorizedActions" : [ {
+      "Name" : "PutOrganizationDiscoveryConfiguration",
+      "Service" : "apiportal"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "put_organization_discovery_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutProductSharingPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "PutProductSharingPolicy",
+      "Service" : "apiportal"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "put_product_sharing_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartDiscovery",
+    "AuthorizedActions" : [ {
+      "Name" : "StartDiscovery",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "start_discovery",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StopDiscovery",
+    "AuthorizedActions" : [ {
+      "Name" : "StopDiscovery",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "stop_discovery",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "TagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "TagResource",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "tag_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UntagResource",
+    "AuthorizedActions" : [ {
+      "Name" : "UntagResource",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "untag_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdatePortal",
+    "AuthorizedActions" : [ {
+      "Name" : "GetProduct",
+      "Service" : "apiportal"
+    }, {
+      "Name" : "UpdatePortal",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "update_portal",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdatePortalPublishStatus",
+    "AuthorizedActions" : [ {
+      "Name" : "GetProduct",
+      "Service" : "apiportal"
+    }, {
+      "Name" : "UpdatePortalPublishStatus",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "update_portal_publish_status",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateProduct",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateProduct",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "update_product",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateProductApiPage",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateProductApiPage",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "update_product_api_page",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateProductPage",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateProductPage",
+      "Service" : "apiportal"
+    } ],
+    "SDK" : [ {
+      "Name" : "apiportal",
+      "Method" : "update_product_page",
+      "Package" : "Boto3"
+    } ]
   } ],
   "Resources" : [ {
     "Name" : "DiscoveryConfiguration",

@@ -2016,6 +2016,20 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DescribeSchemas",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DescribeSourceRegions",
     "Annotations" : {
       "Properties" : {
@@ -2090,6 +2104,7 @@
     "Name" : "DisableInternetAccessGateway",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5430,6 +5445,12 @@
   }, {
     "Name" : "ModifyDBCluster",
     "AuthorizedActions" : [ {
+      "Name" : "DisableInternetAccessGateway",
+      "Service" : "rds"
+    }, {
+      "Name" : "EnableVpcNetworking",
+      "Service" : "rds"
+    }, {
       "Name" : "ModifyDBCluster",
       "Service" : "rds"
     }, {
@@ -5971,7 +5992,7 @@
     }, {
       "Name" : "PassRole",
       "Context" : {
-        "iam:PassedToService" : [ "rds-preview.amazonaws.com", "rds.amazonaws.com" ]
+        "iam:PassedToService" : [ "rds.amazonaws.com" ]
       },
       "Service" : "iam"
     }, {

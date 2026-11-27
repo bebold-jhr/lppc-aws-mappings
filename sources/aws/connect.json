@@ -42,7 +42,6 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
-        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5154,7 +5153,6 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}", "connect:InstanceId" ],
     "Annotations" : {
       "Properties" : {
-        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -7900,10 +7898,6 @@
     } ]
   }, {
     "Name" : "ApproveTimeOff",
-    "AuthorizedActions" : [ {
-      "Name" : "ApproveTimeOff",
-      "Service" : "connect"
-    } ],
     "SDK" : [ {
       "Name" : "connectscheduling",
       "Method" : "approve_time_off",
@@ -10993,10 +10987,6 @@
     } ]
   }, {
     "Name" : "RejectTimeOff",
-    "AuthorizedActions" : [ {
-      "Name" : "RejectTimeOff",
-      "Service" : "connect"
-    } ],
     "SDK" : [ {
       "Name" : "connectscheduling",
       "Method" : "reject_time_off",

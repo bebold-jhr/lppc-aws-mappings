@@ -82,6 +82,64 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateBlueprint",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "blueprint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateBlueprintVersion",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "blueprint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateProject",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "blueprint"
+    }, {
+      "Name" : "project"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteAdapter",
     "Annotations" : {
       "Properties" : {
@@ -116,6 +174,42 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteBlueprint",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "blueprint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteProject",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DetectDocumentText",
@@ -169,6 +263,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetBlueprint",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "blueprint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetDocumentAnalysis",
     "Annotations" : {
       "Properties" : {
@@ -182,6 +294,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "GetDocumentInsights",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : true,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "job"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "GetDocumentTextDetection",
@@ -244,6 +374,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "GetProject",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListAdapterVersions",
     "Annotations" : {
       "Properties" : {
@@ -274,6 +422,46 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "ListBlueprints",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "blueprint"
+    }, {
+      "Name" : "project"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListProjects",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "blueprint"
+    }, {
+      "Name" : "project"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListTagsForResource",
     "Annotations" : {
       "Properties" : {
@@ -288,6 +476,12 @@
       "Name" : "adapter"
     }, {
       "Name" : "adapterversion"
+    }, {
+      "Name" : "blueprint"
+    }, {
+      "Name" : "job"
+    }, {
+      "Name" : "project"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -307,6 +501,29 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "StartDocumentInsights",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : true,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "blueprint"
+    }, {
+      "Name" : "job"
+    }, {
+      "Name" : "project"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "StartDocumentTextDetection",
@@ -369,6 +586,12 @@
       "Name" : "adapter"
     }, {
       "Name" : "adapterversion"
+    }, {
+      "Name" : "blueprint"
+    }, {
+      "Name" : "job"
+    }, {
+      "Name" : "project"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -390,6 +613,12 @@
       "Name" : "adapter"
     }, {
       "Name" : "adapterversion"
+    }, {
+      "Name" : "blueprint"
+    }, {
+      "Name" : "job"
+    }, {
+      "Name" : "project"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -412,6 +641,44 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "UpdateBlueprint",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "blueprint"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateProject",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "blueprint"
+    }, {
+      "Name" : "project"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   } ],
   "ConditionKeys" : [ {
@@ -486,6 +753,45 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateBlueprint",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateBlueprint",
+      "Service" : "textract"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "textract"
+    } ],
+    "SDK" : [ {
+      "Name" : "textract",
+      "Method" : "create_blueprint",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateBlueprintVersion",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateBlueprintVersion",
+      "Service" : "textract"
+    } ],
+    "SDK" : [ {
+      "Name" : "textract",
+      "Method" : "create_blueprint_version",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateProject",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateProject",
+      "Service" : "textract"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "textract"
+    } ],
+    "SDK" : [ {
+      "Name" : "textract",
+      "Method" : "create_project",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteAdapter",
     "AuthorizedActions" : [ {
       "Name" : "DeleteAdapter",
@@ -505,6 +811,28 @@
     "SDK" : [ {
       "Name" : "textract",
       "Method" : "delete_adapter_version",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteBlueprint",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteBlueprint",
+      "Service" : "textract"
+    } ],
+    "SDK" : [ {
+      "Name" : "textract",
+      "Method" : "delete_blueprint",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteProject",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteProject",
+      "Service" : "textract"
+    } ],
+    "SDK" : [ {
+      "Name" : "textract",
+      "Method" : "delete_project",
       "Package" : "Boto3"
     } ]
   }, {
@@ -541,6 +869,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetBlueprint",
+    "AuthorizedActions" : [ {
+      "Name" : "GetBlueprint",
+      "Service" : "textract"
+    } ],
+    "SDK" : [ {
+      "Name" : "textract",
+      "Method" : "get_blueprint",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetDocumentAnalysis",
     "AuthorizedActions" : [ {
       "Name" : "GetDocumentAnalysis",
@@ -549,6 +888,17 @@
     "SDK" : [ {
       "Name" : "textract",
       "Method" : "get_document_analysis",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetDocumentInsights",
+    "AuthorizedActions" : [ {
+      "Name" : "GetDocumentInsights",
+      "Service" : "textract"
+    } ],
+    "SDK" : [ {
+      "Name" : "textract",
+      "Method" : "get_document_insights",
       "Package" : "Boto3"
     } ]
   }, {
@@ -596,6 +946,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetProject",
+    "AuthorizedActions" : [ {
+      "Name" : "GetProject",
+      "Service" : "textract"
+    } ],
+    "SDK" : [ {
+      "Name" : "textract",
+      "Method" : "get_project",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListAdapterVersions",
     "AuthorizedActions" : [ {
       "Name" : "ListAdapterVersions",
@@ -615,6 +976,28 @@
     "SDK" : [ {
       "Name" : "textract",
       "Method" : "list_adapters",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListBlueprints",
+    "AuthorizedActions" : [ {
+      "Name" : "ListBlueprints",
+      "Service" : "textract"
+    } ],
+    "SDK" : [ {
+      "Name" : "textract",
+      "Method" : "list_blueprints",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListProjects",
+    "AuthorizedActions" : [ {
+      "Name" : "ListProjects",
+      "Service" : "textract"
+    } ],
+    "SDK" : [ {
+      "Name" : "textract",
+      "Method" : "list_projects",
       "Package" : "Boto3"
     } ]
   }, {
@@ -643,6 +1026,20 @@
     "SDK" : [ {
       "Name" : "textract",
       "Method" : "start_document_analysis",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartDocumentInsights",
+    "AuthorizedActions" : [ {
+      "Name" : "StartDocumentInsights",
+      "Service" : "textract"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "textract"
+    } ],
+    "SDK" : [ {
+      "Name" : "textract",
+      "Method" : "start_document_insights",
       "Package" : "Boto3"
     } ]
   }, {
@@ -729,6 +1126,28 @@
       "Method" : "update_adapter",
       "Package" : "Boto3"
     } ]
+  }, {
+    "Name" : "UpdateBlueprint",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateBlueprint",
+      "Service" : "textract"
+    } ],
+    "SDK" : [ {
+      "Name" : "textract",
+      "Method" : "update_blueprint",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateProject",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateProject",
+      "Service" : "textract"
+    } ],
+    "SDK" : [ {
+      "Name" : "textract",
+      "Method" : "update_project",
+      "Package" : "Boto3"
+    } ]
   } ],
   "Resources" : [ {
     "Name" : "adapter",
@@ -737,6 +1156,18 @@
   }, {
     "Name" : "adapterversion",
     "ARNFormats" : [ "arn:${Partition}:textract:${Region}:${Account}:/adapters/${AdapterId}/versions/${AdapterVersion}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "blueprint",
+    "ARNFormats" : [ "arn:${Partition}:textract:${Region}:${Account}:blueprint/${BlueprintId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "job",
+    "ARNFormats" : [ "arn:${Partition}:textract:${Region}:${Account}:job/${JobId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "project",
+    "ARNFormats" : [ "arn:${Partition}:textract:${Region}:${Account}:project/${ProjectId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   } ],
   "Version" : "v1.5"

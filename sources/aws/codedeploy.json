@@ -937,9 +937,6 @@
     "AuthorizedActions" : [ {
       "Name" : "ContinueDeployment",
       "Service" : "codedeploy"
-    }, {
-      "Name" : "CreateCloudFormationDeployment",
-      "Service" : "codedeploy"
     } ],
     "SDK" : [ {
       "Name" : "codedeploy",
@@ -1328,9 +1325,6 @@
   }, {
     "Name" : "SkipWaitTimeForInstanceTermination",
     "AuthorizedActions" : [ {
-      "Name" : "CreateCloudFormationDeployment",
-      "Service" : "codedeploy"
-    }, {
       "Name" : "SkipWaitTimeForInstanceTermination",
       "Service" : "codedeploy"
     } ],

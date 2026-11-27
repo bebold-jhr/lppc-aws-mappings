@@ -2148,6 +2148,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateAgentOrganizationalProfile",
       "Service" : "wellarchitected"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "wellarchitected"
     } ],
     "SDK" : [ {
       "Name" : "wellarchitected",

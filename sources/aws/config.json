@@ -144,6 +144,7 @@
     }
   }, {
     "Name" : "DeleteConformancePack",
+    "ActionConditionKeys" : [ "config:ConformancePackType" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -154,7 +155,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "ConformancePack"
+      "Name" : "ConformancePack",
+      "ConditionKeys" : [ "config:ConformancePackType" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1358,6 +1360,7 @@
     }
   }, {
     "Name" : "PutConformancePack",
+    "ActionConditionKeys" : [ "config:ConformancePackType" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -1368,7 +1371,8 @@
       }
     },
     "Resources" : [ {
-      "Name" : "ConformancePack"
+      "Name" : "ConformancePack",
+      "ConditionKeys" : [ "config:ConformancePackType" ]
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
@@ -1793,6 +1797,9 @@
     "Types" : [ "ArrayOfString" ]
   }, {
     "Name" : "config:ConfigurationRecorderServicePrincipal",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "config:ConformancePackType",
     "Types" : [ "String" ]
   } ],
   "Operations" : [ {

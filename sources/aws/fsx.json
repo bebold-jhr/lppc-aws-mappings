@@ -153,6 +153,27 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateClusterPeer",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster-peer"
+    }, {
+      "Name" : "file-system"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateDataRepositoryAssociation",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -258,6 +279,53 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateSnapmirrorPolicy",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "file-system"
+    }, {
+      "Name" : "snapmirror-policy"
+    }, {
+      "Name" : "storage-virtual-machine"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateSnapmirrorRelationship",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "snapmirror-policy"
+    }, {
+      "Name" : "snapmirror-relationship",
+      "ConditionKeys" : [ "fsx:SnapmirrorSourcePath" ]
+    }, {
+      "Name" : "volume"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateSnapshot",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -279,6 +347,29 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "CreateSnapshotPolicy",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "file-system"
+    }, {
+      "Name" : "snapshot-policy"
+    }, {
+      "Name" : "storage-virtual-machine"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreateStorageVirtualMachine",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -298,6 +389,27 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "CreateStorageVirtualMachinePeer",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "storage-virtual-machine"
+    }, {
+      "Name" : "svm-peer"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "CreateVolume",
@@ -362,6 +474,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteClusterPeer",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster-peer"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteDataRepositoryAssociation",
@@ -440,6 +570,42 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteSnapmirrorPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "snapmirror-policy"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteSnapmirrorRelationship",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "snapmirror-relationship"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteSnapshot",
     "Annotations" : {
       "Properties" : {
@@ -458,6 +624,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DeleteSnapshotPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "snapshot-policy"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeleteStorageVirtualMachine",
     "Annotations" : {
       "Properties" : {
@@ -474,6 +658,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DeleteStorageVirtualMachinePeer",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "svm-peer"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DeleteVolume",
@@ -528,6 +730,21 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeClusterPeers",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DescribeDataRepositoryAssociations",
@@ -638,6 +855,51 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "DescribeSnapmirrorPolicies",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeSnapmirrorRelationships",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeSnapshotPolicies",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DescribeSnapshots",
     "Annotations" : {
       "Properties" : {
@@ -651,6 +913,21 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "DescribeStorageVirtualMachinePeers",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "DescribeStorageVirtualMachines",
@@ -768,13 +1045,23 @@
     }, {
       "Name" : "backup"
     }, {
+      "Name" : "cluster-peer"
+    }, {
       "Name" : "file-cache"
     }, {
       "Name" : "file-system"
     }, {
+      "Name" : "snapmirror-policy"
+    }, {
+      "Name" : "snapmirror-relationship"
+    }, {
       "Name" : "snapshot"
     }, {
+      "Name" : "snapshot-policy"
+    }, {
       "Name" : "storage-virtual-machine"
+    }, {
+      "Name" : "svm-peer"
     }, {
       "Name" : "task"
     }, {
@@ -892,13 +1179,23 @@
     }, {
       "Name" : "backup"
     }, {
+      "Name" : "cluster-peer"
+    }, {
       "Name" : "file-cache"
     }, {
       "Name" : "file-system"
     }, {
+      "Name" : "snapmirror-policy"
+    }, {
+      "Name" : "snapmirror-relationship"
+    }, {
       "Name" : "snapshot"
     }, {
+      "Name" : "snapshot-policy"
+    }, {
       "Name" : "storage-virtual-machine"
+    }, {
+      "Name" : "svm-peer"
     }, {
       "Name" : "task"
     }, {
@@ -926,13 +1223,23 @@
     }, {
       "Name" : "backup"
     }, {
+      "Name" : "cluster-peer"
+    }, {
       "Name" : "file-cache"
     }, {
       "Name" : "file-system"
     }, {
+      "Name" : "snapmirror-policy"
+    }, {
+      "Name" : "snapmirror-relationship"
+    }, {
       "Name" : "snapshot"
     }, {
+      "Name" : "snapshot-policy"
+    }, {
       "Name" : "storage-virtual-machine"
+    }, {
+      "Name" : "svm-peer"
     }, {
       "Name" : "task"
     }, {
@@ -940,6 +1247,24 @@
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateClusterPeer",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "cluster-peer"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
     }
   }, {
@@ -1012,6 +1337,44 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "UpdateSnapmirrorPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "snapmirror-policy"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateSnapmirrorRelationship",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "snapmirror-policy"
+    }, {
+      "Name" : "snapmirror-relationship"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateSnapshot",
     "Annotations" : {
       "Properties" : {
@@ -1030,6 +1393,24 @@
       "IAM Action Last Accessed" : true
     }
   }, {
+    "Name" : "UpdateSnapshotPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "snapshot-policy"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdateStorageVirtualMachine",
     "Annotations" : {
       "Properties" : {
@@ -1046,6 +1427,24 @@
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : true,
       "IAM Action Last Accessed" : true
+    }
+  }, {
+    "Name" : "UpdateStorageVirtualMachinePeer",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "svm-peer"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
     }
   }, {
     "Name" : "UpdateVolume",
@@ -1090,6 +1489,9 @@
     "Types" : [ "Bool" ]
   }, {
     "Name" : "fsx:ParentVolumeId",
+    "Types" : [ "String" ]
+  }, {
+    "Name" : "fsx:SnapmirrorSourcePath",
     "Types" : [ "String" ]
   }, {
     "Name" : "fsx:StorageVirtualMachineId",
@@ -1168,6 +1570,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateClusterPeer",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateClusterPeer",
+      "Service" : "fsx"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "create_cluster_peer",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateDataRepositoryAssociation",
     "AuthorizedActions" : [ {
       "Name" : "CreateDataRepositoryAssociation",
@@ -1241,6 +1657,34 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateSnapmirrorPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateSnapmirrorPolicy",
+      "Service" : "fsx"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "create_snapmirror_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateSnapmirrorRelationship",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateSnapmirrorRelationship",
+      "Service" : "fsx"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "create_snapmirror_relationship",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateSnapshot",
     "AuthorizedActions" : [ {
       "Name" : "CreateSnapshot",
@@ -1255,6 +1699,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateSnapshotPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateSnapshotPolicy",
+      "Service" : "fsx"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "create_snapshot_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateStorageVirtualMachine",
     "AuthorizedActions" : [ {
       "Name" : "CreateStorageVirtualMachine",
@@ -1266,6 +1724,20 @@
     "SDK" : [ {
       "Name" : "fsx",
       "Method" : "create_storage_virtual_machine",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateStorageVirtualMachinePeer",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateStorageVirtualMachinePeer",
+      "Service" : "fsx"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "create_storage_virtual_machine_peer",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1305,6 +1777,17 @@
     "SDK" : [ {
       "Name" : "fsx",
       "Method" : "delete_backup",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteClusterPeer",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteClusterPeer",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "delete_cluster_peer",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1350,6 +1833,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteSnapmirrorPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteSnapmirrorPolicy",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "delete_snapmirror_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteSnapmirrorRelationship",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteSnapmirrorRelationship",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "delete_snapmirror_relationship",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteSnapshot",
     "AuthorizedActions" : [ {
       "Name" : "DeleteSnapshot",
@@ -1361,6 +1866,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteSnapshotPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteSnapshotPolicy",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "delete_snapshot_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteStorageVirtualMachine",
     "AuthorizedActions" : [ {
       "Name" : "DeleteStorageVirtualMachine",
@@ -1369,6 +1885,17 @@
     "SDK" : [ {
       "Name" : "fsx",
       "Method" : "delete_storage_virtual_machine",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteStorageVirtualMachinePeer",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteStorageVirtualMachinePeer",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "delete_storage_virtual_machine_peer",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1397,6 +1924,17 @@
     "SDK" : [ {
       "Name" : "fsx",
       "Method" : "describe_backups",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeClusterPeers",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeClusterPeers",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "describe_cluster_peers",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1477,6 +2015,39 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeSnapmirrorPolicies",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeSnapmirrorPolicies",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "describe_snapmirror_policies",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeSnapmirrorRelationships",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeSnapmirrorRelationships",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "describe_snapmirror_relationships",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeSnapshotPolicies",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeSnapshotPolicies",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "describe_snapshot_policies",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeSnapshots",
     "AuthorizedActions" : [ {
       "Name" : "DescribeSnapshots",
@@ -1485,6 +2056,17 @@
     "SDK" : [ {
       "Name" : "fsx",
       "Method" : "describe_snapshots",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeStorageVirtualMachinePeers",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeStorageVirtualMachinePeers",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "describe_storage_virtual_machine_peers",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1598,6 +2180,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateClusterPeer",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateClusterPeer",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "update_cluster_peer",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateDataRepositoryAssociation",
     "AuthorizedActions" : [ {
       "Name" : "UpdateDataRepositoryAssociation",
@@ -1642,6 +2235,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateSnapmirrorPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateSnapmirrorPolicy",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "update_snapmirror_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateSnapmirrorRelationship",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateSnapmirrorRelationship",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "update_snapmirror_relationship",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateSnapshot",
     "AuthorizedActions" : [ {
       "Name" : "UpdateSnapshot",
@@ -1653,6 +2268,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateSnapshotPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateSnapshotPolicy",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "update_snapshot_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateStorageVirtualMachine",
     "AuthorizedActions" : [ {
       "Name" : "UpdateStorageVirtualMachine",
@@ -1661,6 +2287,17 @@
     "SDK" : [ {
       "Name" : "fsx",
       "Method" : "update_storage_virtual_machine",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateStorageVirtualMachinePeer",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateStorageVirtualMachinePeer",
+      "Service" : "fsx"
+    } ],
+    "SDK" : [ {
+      "Name" : "fsx",
+      "Method" : "update_storage_virtual_machine_peer",
       "Package" : "Boto3"
     } ]
   }, {
@@ -1684,6 +2321,10 @@
     "ARNFormats" : [ "arn:${Partition}:fsx:${Region}:${Account}:backup/${BackupId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
+    "Name" : "cluster-peer",
+    "ARNFormats" : [ "arn:${Partition}:fsx:${Region}:${Account}:cluster-peer/${FileSystemId}/${ClusterPeerId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "file-cache",
     "ARNFormats" : [ "arn:${Partition}:fsx:${Region}:${Account}:file-cache/${FileCacheId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
@@ -1692,12 +2333,28 @@
     "ARNFormats" : [ "arn:${Partition}:fsx:${Region}:${Account}:file-system/${FileSystemId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
+    "Name" : "snapmirror-policy",
+    "ARNFormats" : [ "arn:${Partition}:fsx:${Region}:${Account}:snapmirror-policy/${FileSystemIdOrStorageVirtualMachineId}/${SnapmirrorPolicyId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "snapmirror-relationship",
+    "ARNFormats" : [ "arn:${Partition}:fsx:${Region}:${Account}:snapmirror-relationship/${FileSystemId}/${VolumeId}/${SnapmirrorRelationshipId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "snapshot",
     "ARNFormats" : [ "arn:${Partition}:fsx:${Region}:${Account}:snapshot/${VolumeId}/${SnapshotId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
+    "Name" : "snapshot-policy",
+    "ARNFormats" : [ "arn:${Partition}:fsx:${Region}:${Account}:snapshot-policy/${FileSystemIdOrStorageVirtualMachineId}/${SnapshotPolicyId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
     "Name" : "storage-virtual-machine",
     "ARNFormats" : [ "arn:${Partition}:fsx:${Region}:${Account}:storage-virtual-machine/${FileSystemId}/${StorageVirtualMachineId}" ],
+    "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
+  }, {
+    "Name" : "svm-peer",
+    "ARNFormats" : [ "arn:${Partition}:fsx:${Region}:${Account}:svm-peer/${FileSystemId}/${StorageVirtualMachineId}/${StorageVirtualMachinePeerId}" ],
     "ConditionKeys" : [ "aws:ResourceTag/${TagKey}" ]
   }, {
     "Name" : "task",

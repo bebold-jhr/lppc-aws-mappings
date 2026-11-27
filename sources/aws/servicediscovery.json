@@ -3,7 +3,7 @@
   "ServiceName" : "Cloud Map",
   "Actions" : [ {
     "Name" : "CreateHttpNamespace",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -19,7 +19,7 @@
     }
   }, {
     "Name" : "CreatePrivateDnsNamespace",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -35,7 +35,7 @@
     }
   }, {
     "Name" : "CreatePublicDnsNamespace",
-    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,

@@ -42,7 +42,7 @@
   "service" : "aco-automation",
   "serviceName" : "Compute Optimizer Automation",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/aco-automation/aco-automation.json",
-  "modified" : 1792604715
+  "modified" : 1795240918
 }, {
   "service" : "action-recommendations",
   "serviceName" : "Action Recommendations",
@@ -54,10 +54,15 @@
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/activate/activate.json",
   "modified" : 1792604708
 }, {
+  "service" : "agent-discovery",
+  "serviceName" : "Agent Discovery",
+  "url" : "https://servicereference.us-east-1.amazonaws.com/v1/agent-discovery/agent-discovery.json",
+  "modified" : 1795222923
+}, {
   "service" : "agent-registry",
   "serviceName" : "Agent Registry",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/agent-registry/agent-registry.json",
-  "modified" : 1795107723
+  "modified" : 1795222922
 }, {
   "service" : "agentaccess-mcp",
   "serviceName" : "WorkSpaces AgentAccess MCP",
@@ -67,7 +72,7 @@
   "service" : "aidevops",
   "serviceName" : "DevOps Agent",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/aidevops/aidevops.json",
-  "modified" : 1794949325
+  "modified" : 1795212123
 }, {
   "service" : "aiops",
   "serviceName" : "AI Operations",
@@ -94,6 +99,11 @@
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/amplifybackend/amplifybackend.json",
   "modified" : 1792604718
 }, {
+  "service" : "amplifygen3",
+  "serviceName" : "AmplifyGen3",
+  "url" : "https://servicereference.us-east-1.amazonaws.com/v1/amplifygen3/amplifygen3.json",
+  "modified" : 1795633320
+}, {
   "service" : "amplifyuibuilder",
   "serviceName" : "Amplify UI Builder",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/amplifyuibuilder/amplifyuibuilder.json",
@@ -117,7 +127,7 @@
   "service" : "apiportal",
   "serviceName" : "API Portal",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/apiportal/apiportal.json",
-  "modified" : 1794956523
+  "modified" : 1795669323
 }, {
   "service" : "app-integrations",
   "serviceName" : "AppIntegrations",
@@ -182,7 +192,7 @@
   "service" : "appstream",
   "serviceName" : "AppStream 2.0",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/appstream/appstream.json",
-  "modified" : 1795060917
+  "modified" : 1795669318
 }, {
   "service" : "appstudio",
   "serviceName" : "App Studio",
@@ -257,7 +267,7 @@
   "service" : "aws-marketplace",
   "serviceName" : "Marketplace",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/aws-marketplace/aws-marketplace.json",
-  "modified" : 1795150915
+  "modified" : 1795222918
 }, {
   "service" : "aws-marketplace-management",
   "serviceName" : "Marketplace Portal",
@@ -332,12 +342,12 @@
   "service" : "bedrock",
   "serviceName" : "Bedrock",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/bedrock/bedrock.json",
-  "modified" : 1795179721
+  "modified" : 1795755716
 }, {
   "service" : "bedrock-agentcore",
   "serviceName" : "Bedrock-Agentcore",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/bedrock-agentcore/bedrock-agentcore.json",
-  "modified" : 1795147326
+  "modified" : 1795320121
 }, {
   "service" : "bedrock-mantle",
   "serviceName" : "Bedrock Mantle",
@@ -402,7 +412,7 @@
   "service" : "cleanrooms",
   "serviceName" : "Clean Rooms",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/cleanrooms/cleanrooms.json",
-  "modified" : 1792604695
+  "modified" : 1795755714
 }, {
   "service" : "cleanrooms-ml",
   "serviceName" : "Clean Rooms ML",
@@ -462,7 +472,7 @@
   "service" : "cloudwatch",
   "serviceName" : "CloudWatch",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/cloudwatch/cloudwatch.json",
-  "modified" : 1795176117
+  "modified" : 1795633319
 }, {
   "service" : "codeartifact",
   "serviceName" : "CodeArtifact",
@@ -492,7 +502,7 @@
   "service" : "codedeploy",
   "serviceName" : "CodeDeploy",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/codedeploy/codedeploy.json",
-  "modified" : 1792604688
+  "modified" : 1795669316
 }, {
   "service" : "codedeploy-commands-secure",
   "serviceName" : "CodeDeploy Commands Secure",
@@ -572,12 +582,12 @@
   "service" : "config",
   "serviceName" : "Config",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/config/config.json",
-  "modified" : 1795039316
+  "modified" : 1795201316
 }, {
   "service" : "connect",
   "serviceName" : "Connect",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/connect/connect.json",
-  "modified" : 1795147318
+  "modified" : 1795323715
 }, {
   "service" : "connect-campaigns",
   "serviceName" : "Connect Outbound Campaigns",
@@ -597,7 +607,7 @@
   "service" : "continuum",
   "serviceName" : "Continuum",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/continuum/continuum.json",
-  "modified" : 1795150917
+  "modified" : 1795669319
 }, {
   "service" : "controlcatalog",
   "serviceName" : "Control Catalog",
@@ -647,7 +657,7 @@
   "service" : "datazone",
   "serviceName" : "DataZone",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/datazone/datazone.json",
-  "modified" : 1793829723
+  "modified" : 1795222921
 }, {
   "service" : "dax",
   "serviceName" : "DynamoDBAccelerator",
@@ -697,7 +707,7 @@
   "service" : "dms",
   "serviceName" : "DMS",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/dms/dms.json",
-  "modified" : 1795150917
+  "modified" : 1795237315
 }, {
   "service" : "docdb-elastic",
   "serviceName" : "DocumentDB Elastic Clusters",
@@ -707,7 +717,7 @@
   "service" : "drs",
   "serviceName" : "DRS",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/drs/drs.json",
-  "modified" : 1792604707
+  "modified" : 1795323718
 }, {
   "service" : "ds",
   "serviceName" : "Directory Service",
@@ -802,7 +812,7 @@
   "service" : "elasticloadbalancing",
   "serviceName" : "ELB",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/elasticloadbalancing/elasticloadbalancing.json",
-  "modified" : 1792604706
+  "modified" : 1795654918
 }, {
   "service" : "elasticmapreduce",
   "serviceName" : "EMR",
@@ -887,7 +897,7 @@
   "service" : "finops-agent",
   "serviceName" : "FinOps Agent",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/finops-agent/finops-agent.json",
-  "modified" : 1795154514
+  "modified" : 1795460518
 }, {
   "service" : "finspace",
   "serviceName" : "FinSpace",
@@ -937,7 +947,7 @@
   "service" : "fsx",
   "serviceName" : "FSx",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/fsx/fsx.json",
-  "modified" : 1792604703
+  "modified" : 1795482120
 }, {
   "service" : "gamelift",
   "serviceName" : "GameLift Servers",
@@ -982,7 +992,7 @@
   "service" : "glue",
   "serviceName" : "Glue",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/glue/glue.json",
-  "modified" : 1795064519
+  "modified" : 1795212119
 }, {
   "service" : "grafana",
   "serviceName" : "Managed Grafana",
@@ -1197,12 +1207,12 @@
   "service" : "kinesis",
   "serviceName" : "Kinesis",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/kinesis/kinesis.json",
-  "modified" : 1794963716
+  "modified" : 1795237314
 }, {
   "service" : "kinesisanalytics",
   "serviceName" : "Kinesis Analytics",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/kinesisanalytics/kinesisanalytics.json",
-  "modified" : 1795147326
+  "modified" : 1795669325
 }, {
   "service" : "kinesisvideo",
   "serviceName" : "Kinesis Video Streams",
@@ -1377,7 +1387,7 @@
   "service" : "mgn",
   "serviceName" : "MGN",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/mgn/mgn.json",
-  "modified" : 1794963719
+  "modified" : 1795582920
 }, {
   "service" : "migrationhub-orchestrator",
   "serviceName" : "MigrationHubOrchestrator",
@@ -1437,7 +1447,7 @@
   "service" : "network-security-manager",
   "serviceName" : "Network Security Manager",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/network-security-manager/network-security-manager.json",
-  "modified" : 1792604721
+  "modified" : 1795222926
 }, {
   "service" : "networkflowmonitor",
   "serviceName" : "Network Flow Monitor",
@@ -1492,12 +1502,12 @@
   "service" : "odb",
   "serviceName" : "Oracle Database@AWS",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/odb/odb.json",
-  "modified" : 1794531717
+  "modified" : 1795579316
 }, {
   "service" : "omics",
   "serviceName" : "Omics",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/omics/omics.json",
-  "modified" : 1794344520
+  "modified" : 1795212119
 }, {
   "service" : "one",
   "serviceName" : "One",
@@ -1547,7 +1557,7 @@
   "service" : "partnercentral",
   "serviceName" : "Partner Central",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/partnercentral/partnercentral.json",
-  "modified" : 1795150919
+  "modified" : 1795618626
 }, {
   "service" : "partnercentral-account-management",
   "serviceName" : "Partner central account management",
@@ -1562,7 +1572,7 @@
   "service" : "payments",
   "serviceName" : "Payments",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/payments/payments.json",
-  "modified" : 1793890923
+  "modified" : 1795669319
 }, {
   "service" : "pca-connector-ad",
   "serviceName" : "Private CA Connector for Active Directory",
@@ -1657,7 +1667,7 @@
   "service" : "quicksight",
   "serviceName" : "QuickSight",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/quicksight/quicksight.json",
-  "modified" : 1795150920
+  "modified" : 1795237319
 }, {
   "service" : "ram",
   "serviceName" : "Resource Access Manager",
@@ -1672,7 +1682,7 @@
   "service" : "rds",
   "serviceName" : "RDS",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/rds/rds.json",
-  "modified" : 1795132914
+  "modified" : 1795651317
 }, {
   "service" : "rds-data",
   "serviceName" : "RDS Data API",
@@ -1687,7 +1697,7 @@
   "service" : "redshift",
   "serviceName" : "Redshift",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/redshift/redshift.json",
-  "modified" : 1794344517
+  "modified" : 1795550522
 }, {
   "service" : "redshift-data",
   "serviceName" : "Redshift Data API",
@@ -1757,7 +1767,7 @@
   "service" : "route53",
   "serviceName" : "Route 53",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/route53/route53.json",
-  "modified" : 1795136515
+  "modified" : 1795222918
 }, {
   "service" : "route53-recovery-cluster",
   "serviceName" : "Route 53 Recovery Cluster",
@@ -1842,7 +1852,7 @@
   "service" : "sagemaker",
   "serviceName" : "SageMaker",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/sagemaker/sagemaker.json",
-  "modified" : 1794978117
+  "modified" : 1795237317
 }, {
   "service" : "sagemaker-data-science-assistant",
   "serviceName" : "SageMakerDataScienceAssistant",
@@ -1902,7 +1912,7 @@
   "service" : "securityagent",
   "serviceName" : "securityagent",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/securityagent/securityagent.json",
-  "modified" : 1795147322
+  "modified" : 1795197722
 }, {
   "service" : "securityhub",
   "serviceName" : "SecurityHub",
@@ -1927,7 +1937,7 @@
   "service" : "servicediscovery",
   "serviceName" : "Cloud Map",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/servicediscovery/servicediscovery.json",
-  "modified" : 1792604710
+  "modified" : 1795201320
 }, {
   "service" : "serviceextract",
   "serviceName" : "Microservice Extractor for .NET",
@@ -1957,7 +1967,7 @@
   "service" : "signin",
   "serviceName" : "Signin",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/signin/signin.json",
-  "modified" : 1795039319
+  "modified" : 1795230117
 }, {
   "service" : "simspaceweaver",
   "serviceName" : "SimSpace Weaver",
@@ -1972,7 +1982,7 @@
   "service" : "sms-voice",
   "serviceName" : "Pinpoint SMS Voice",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/sms-voice/sms-voice.json",
-  "modified" : 1793336527
+  "modified" : 1795496523
 }, {
   "service" : "snow-device-management",
   "serviceName" : "Snow Device Management",
@@ -2127,7 +2137,7 @@
   "service" : "textract",
   "serviceName" : "Textract",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/textract/textract.json",
-  "modified" : 1792604708
+  "modified" : 1795323718
 }, {
   "service" : "thinclient",
   "serviceName" : "WorkSpaces Thin Client",
@@ -2157,7 +2167,7 @@
   "service" : "transcribe",
   "serviceName" : "Transcribe",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/transcribe/transcribe.json",
-  "modified" : 1794344518
+  "modified" : 1795222922
 }, {
   "service" : "transfer",
   "serviceName" : "Transfer",
@@ -2247,7 +2257,7 @@
   "service" : "wafv2",
   "serviceName" : "WAF V2",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/wafv2/wafv2.json",
-  "modified" : 1794952915
+  "modified" : 1795640518
 }, {
   "service" : "wam",
   "serviceName" : "WAM",
@@ -2257,7 +2267,7 @@
   "service" : "wellarchitected",
   "serviceName" : "Well-Architected Tool",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/wellarchitected/wellarchitected.json",
-  "modified" : 1794978119
+  "modified" : 1795669322
 }, {
   "service" : "wickr",
   "serviceName" : "Wickr",
@@ -2278,6 +2288,11 @@
   "serviceName" : "WorkLink",
   "url" : "https://servicereference.us-east-1.amazonaws.com/v1/worklink/worklink.json",
   "modified" : 1792604692
+}, {
+  "service" : "workload-telemetry",
+  "serviceName" : "Workload Telemetry",
+  "url" : "https://servicereference.us-east-1.amazonaws.com/v1/workload-telemetry/workload-telemetry.json",
+  "modified" : 1795219323
 }, {
   "service" : "workmail",
   "serviceName" : "WorkMail",

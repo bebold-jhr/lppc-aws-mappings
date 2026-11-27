@@ -87,6 +87,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -178,6 +179,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -196,6 +198,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -266,6 +269,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -281,6 +285,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -301,6 +306,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -340,6 +346,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -355,6 +362,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -393,6 +401,7 @@
     "Name" : "CreateThemeForStack",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -411,6 +420,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:ResourceTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1090,6 +1100,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1294,6 +1305,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1522,6 +1534,7 @@
     "ActionConditionKeys" : [ "aws:ResourceTag/${TagKey}" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1671,6 +1684,10 @@
     } ]
   }, {
     "Name" : "AssociateSoftwareToImageBuilder",
+    "AuthorizedActions" : [ {
+      "Name" : "AssociateSoftwareToImageBuilder",
+      "Service" : "appstream"
+    } ],
     "SDK" : [ {
       "Name" : "appstream",
       "Method" : "associate_software_to_image_builder",
@@ -1714,6 +1731,9 @@
     "AuthorizedActions" : [ {
       "Name" : "CreateAppBlock",
       "Service" : "appstream"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "appstream"
     } ],
     "SDK" : [ {
       "Name" : "appstream",
@@ -1722,6 +1742,13 @@
     } ]
   }, {
     "Name" : "CreateAppBlockBuilder",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAppBlockBuilder",
+      "Service" : "appstream"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "appstream"
+    } ],
     "SDK" : [ {
       "Name" : "appstream",
       "Method" : "create_app_block_builder",
@@ -1729,6 +1756,10 @@
     } ]
   }, {
     "Name" : "CreateAppBlockBuilderStreamingURL",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAppBlockBuilderStreamingURL",
+      "Service" : "appstream"
+    } ],
     "SDK" : [ {
       "Name" : "appstream",
       "Method" : "create_app_block_builder_streaming_url",
@@ -1738,6 +1769,9 @@
     "Name" : "CreateApplication",
     "AuthorizedActions" : [ {
       "Name" : "CreateApplication",
+      "Service" : "appstream"
+    }, {
+      "Name" : "TagResource",
       "Service" : "appstream"
     } ],
     "SDK" : [ {
@@ -1769,6 +1803,16 @@
     } ]
   }, {
     "Name" : "CreateExportImageTask",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateExportImageTask",
+      "Service" : "appstream"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "appstream.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    } ],
     "SDK" : [ {
       "Name" : "appstream",
       "Method" : "create_export_image_task",
@@ -1776,6 +1820,19 @@
     } ]
   }, {
     "Name" : "CreateFleet",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateFleet",
+      "Service" : "appstream"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "appstream.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "appstream"
+    } ],
     "SDK" : [ {
       "Name" : "appstream",
       "Method" : "create_fleet",
@@ -1783,6 +1840,19 @@
     } ]
   }, {
     "Name" : "CreateImageBuilder",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateImageBuilder",
+      "Service" : "appstream"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "appstream.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "appstream"
+    } ],
     "SDK" : [ {
       "Name" : "appstream",
       "Method" : "create_image_builder",
@@ -1801,6 +1871,16 @@
     } ]
   }, {
     "Name" : "CreateImportedImage",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateImportedImage",
+      "Service" : "appstream"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "appstream.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    } ],
     "SDK" : [ {
       "Name" : "appstream",
       "Method" : "create_imported_image",
@@ -1808,6 +1888,13 @@
     } ]
   }, {
     "Name" : "CreateStack",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateStack",
+      "Service" : "appstream"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "appstream"
+    } ],
     "SDK" : [ {
       "Name" : "appstream",
       "Method" : "create_stack",
@@ -1826,6 +1913,10 @@
     } ]
   }, {
     "Name" : "CreateThemeForStack",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateThemeForStack",
+      "Service" : "appstream"
+    } ],
     "SDK" : [ {
       "Name" : "appstream",
       "Method" : "create_theme_for_stack",
@@ -1833,6 +1924,13 @@
     } ]
   }, {
     "Name" : "CreateUpdatedImage",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateUpdatedImage",
+      "Service" : "appstream"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "appstream"
+    } ],
     "SDK" : [ {
       "Name" : "appstream",
       "Method" : "create_updated_image",
@@ -2261,6 +2359,10 @@
     } ]
   }, {
     "Name" : "DisassociateSoftwareFromImageBuilder",
+    "AuthorizedActions" : [ {
+      "Name" : "DisassociateSoftwareFromImageBuilder",
+      "Service" : "appstream"
+    } ],
     "SDK" : [ {
       "Name" : "appstream",
       "Method" : "disassociate_software_from_image_builder",
@@ -2396,6 +2498,10 @@
     } ]
   }, {
     "Name" : "StartSoftwareDeploymentToImageBuilder",
+    "AuthorizedActions" : [ {
+      "Name" : "StartSoftwareDeploymentToImageBuilder",
+      "Service" : "appstream"
+    } ],
     "SDK" : [ {
       "Name" : "appstream",
       "Method" : "start_software_deployment_to_image_builder",
@@ -2502,6 +2608,16 @@
     } ]
   }, {
     "Name" : "UpdateFleet",
+    "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "appstream.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "UpdateFleet",
+      "Service" : "appstream"
+    } ],
     "SDK" : [ {
       "Name" : "appstream",
       "Method" : "update_fleet",

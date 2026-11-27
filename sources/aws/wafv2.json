@@ -17,11 +17,15 @@
     }, {
       "Name" : "amplify-app"
     }, {
+      "Name" : "amplifygen3-app"
+    }, {
       "Name" : "apigateway"
     }, {
       "Name" : "apprunner"
     }, {
       "Name" : "appsync"
+    }, {
+      "Name" : "elb-proxy"
     }, {
       "Name" : "loadbalancer/app/"
     }, {
@@ -387,11 +391,15 @@
     }, {
       "Name" : "amplify-app"
     }, {
+      "Name" : "amplifygen3-app"
+    }, {
       "Name" : "apigateway"
     }, {
       "Name" : "apprunner"
     }, {
       "Name" : "appsync"
+    }, {
+      "Name" : "elb-proxy"
     }, {
       "Name" : "loadbalancer/app/"
     }, {
@@ -437,6 +445,7 @@
     "Name" : "GetEvent",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -454,6 +463,7 @@
     "Name" : "GetEventActor",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -726,11 +736,15 @@
     }, {
       "Name" : "amplify-app"
     }, {
+      "Name" : "amplifygen3-app"
+    }, {
       "Name" : "apigateway"
     }, {
       "Name" : "apprunner"
     }, {
       "Name" : "appsync"
+    }, {
+      "Name" : "elb-proxy"
     }, {
       "Name" : "loadbalancer/app/"
     }, {
@@ -793,6 +807,7 @@
     "Name" : "ListEventActors",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -807,6 +822,7 @@
     "Name" : "ListEvents",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -821,6 +837,7 @@
     "Name" : "ListEventsByWebACL",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -926,7 +943,11 @@
     }, {
       "Name" : "amplify-app"
     }, {
+      "Name" : "amplifygen3-app"
+    }, {
       "Name" : "apprunner"
+    }, {
+      "Name" : "elb-proxy"
     }, {
       "Name" : "userpool"
     }, {
@@ -1563,6 +1584,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetEvent",
+    "AuthorizedActions" : [ {
+      "Name" : "GetEvent",
+      "Service" : "wafv2"
+    } ],
+    "SDK" : [ {
+      "Name" : "wafv2",
+      "Method" : "get_event",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetEventActor",
+    "AuthorizedActions" : [ {
+      "Name" : "GetEventActor",
+      "Service" : "wafv2"
+    } ],
+    "SDK" : [ {
+      "Name" : "wafv2",
+      "Method" : "get_event_actor",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetIPSet",
     "AuthorizedActions" : [ {
       "Name" : "GetIPSet",
@@ -1764,6 +1807,39 @@
     "SDK" : [ {
       "Name" : "wafv2",
       "Method" : "list_available_managed_rule_groups",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListEventActors",
+    "AuthorizedActions" : [ {
+      "Name" : "ListEventActors",
+      "Service" : "wafv2"
+    } ],
+    "SDK" : [ {
+      "Name" : "wafv2",
+      "Method" : "list_event_actors",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListEvents",
+    "AuthorizedActions" : [ {
+      "Name" : "ListEvents",
+      "Service" : "wafv2"
+    } ],
+    "SDK" : [ {
+      "Name" : "wafv2",
+      "Method" : "list_events",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListEventsByWebACL",
+    "AuthorizedActions" : [ {
+      "Name" : "ListEventsByWebACL",
+      "Service" : "wafv2"
+    } ],
+    "SDK" : [ {
+      "Name" : "wafv2",
+      "Method" : "list_events_by_web_acl",
       "Package" : "Boto3"
     } ]
   }, {
@@ -2006,6 +2082,9 @@
     "Name" : "amplify-app",
     "ARNFormats" : [ "arn:${Partition}:amplify:${Region}:${Account}:apps/${AppId}" ]
   }, {
+    "Name" : "amplifygen3-app",
+    "ARNFormats" : [ "arn:${Partition}:amplifygen3:${Region}:${Account}:app/${AppName}" ]
+  }, {
     "Name" : "apigateway",
     "ARNFormats" : [ "arn:${Partition}:apigateway:${Region}::/restapis/${ApiId}/stages/${StageName}" ]
   }, {
@@ -2014,6 +2093,9 @@
   }, {
     "Name" : "appsync",
     "ARNFormats" : [ "arn:${Partition}:appsync:${Region}:${Account}:apis/${GraphQLAPIId}" ]
+  }, {
+    "Name" : "elb-proxy",
+    "ARNFormats" : [ "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:proxy/${ProxyName}:${ProxyId}" ]
   }, {
     "Name" : "ipset",
     "ARNFormats" : [ "arn:${Partition}:wafv2:${Region}:${Account}:${Scope}/ipset/${Name}/${Id}" ],

@@ -81,6 +81,26 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "BatchDeletePolicyAssignmentByPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "custompermissions"
+    }, {
+      "Name" : "limitsProfile"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "BatchDeleteTopicReviewedAnswer",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -132,6 +152,26 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "BatchPutPolicyAssignmentByPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "custompermissions"
+    }, {
+      "Name" : "limitsProfile"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "BatchUpdatePreferences",
     "Annotations" : {
       "Properties" : {
@@ -169,6 +209,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -186,6 +227,7 @@
     "Name" : "CreateAccessControlApplicationSecret",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -607,6 +649,7 @@
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -654,6 +697,24 @@
     "Resources" : [ {
       "Name" : "datasource"
     }, {
+      "Name" : "knowledgeBase"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "CreateKnowledgeBaseRefreshSchedule",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
       "Name" : "knowledgeBase"
     } ],
     "SupportedBy" : {
@@ -946,6 +1007,7 @@
     "Name" : "DeleteAccessControlApplication",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -963,6 +1025,7 @@
     "Name" : "DeleteAccessControlApplicationSecret",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1457,6 +1520,7 @@
     "Name" : "DeleteInboundConnector",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1472,6 +1536,24 @@
     }
   }, {
     "Name" : "DeleteKnowledgeBase",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "knowledgeBase"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteKnowledgeBaseRefreshSchedule",
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -1538,6 +1620,26 @@
     },
     "Resources" : [ {
       "Name" : "oauthClientApplication"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeletePolicyAssignment",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "custompermissions"
+    }, {
+      "Name" : "limitsProfile"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -1796,6 +1898,7 @@
     "Name" : "DescribeAccessControlApplication",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2604,6 +2707,7 @@
     "Name" : "DescribeInboundConnector",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -2693,6 +2797,24 @@
         "IsPermissionManagement" : true,
         "IsTaggingOnly" : false,
         "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "knowledgeBase"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DescribeKnowledgeBaseRefreshSchedule",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
       }
     },
     "Resources" : [ {
@@ -3245,6 +3367,20 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetEffectiveCustomPermissions",
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetFlowMetadata",
     "Annotations" : {
       "Properties" : {
@@ -3314,6 +3450,26 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetPolicyAssignment",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "custompermissions"
+    }, {
+      "Name" : "limitsProfile"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetSessionEmbedUrl",
     "Annotations" : {
       "Properties" : {
@@ -3332,6 +3488,7 @@
     "Name" : "ListAccessControlApplications",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3820,6 +3977,7 @@
     "Name" : "ListInboundConnectorApplicationAssociations",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3837,6 +3995,7 @@
     "Name" : "ListInboundConnectors",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : true,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -3873,6 +4032,24 @@
         "IsWrite" : false
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListKnowledgeBaseRefreshSchedules",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "knowledgeBase"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -3937,6 +4114,26 @@
         "IsWrite" : false
       }
     },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListPrincipalsForPolicy",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "custompermissions"
+    }, {
+      "Name" : "limitsProfile"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -4063,6 +4260,8 @@
       "Name" : "folder"
     }, {
       "Name" : "inboundConnector"
+    }, {
+      "Name" : "knowledgeBase"
     }, {
       "Name" : "namespace"
     }, {
@@ -4400,6 +4599,26 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "PutPolicyAssignment",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "custompermissions"
+    }, {
+      "Name" : "limitsProfile"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "QuickSuiteUsageMetrics",
     "Annotations" : {
       "Properties" : {
@@ -4711,9 +4930,6 @@
         "IsWrite" : false
       }
     },
-    "Resources" : [ {
-      "Name" : "knowledgeBase"
-    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -4965,6 +5181,8 @@
     }, {
       "Name" : "ingestion"
     }, {
+      "Name" : "knowledgeBase"
+    }, {
       "Name" : "namespace"
     }, {
       "Name" : "oauthClientApplication"
@@ -5060,6 +5278,8 @@
     }, {
       "Name" : "ingestion"
     }, {
+      "Name" : "knowledgeBase"
+    }, {
       "Name" : "namespace"
     }, {
       "Name" : "oauthClientApplication"
@@ -5082,6 +5302,7 @@
     "Name" : "UpdateAccessControlApplication",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5099,6 +5320,7 @@
     "Name" : "UpdateAccessControlApplicationSecret",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5795,6 +6017,7 @@
     "Name" : "UpdateInboundConnector",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5812,6 +6035,7 @@
     "Name" : "UpdateInboundConnectorApplicationAssociations",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -5880,6 +6104,24 @@
         "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : true,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "knowledgeBase"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "UpdateKnowledgeBaseRefreshSchedule",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
         "IsWrite" : true
       }
@@ -6419,6 +6661,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "BatchDeletePolicyAssignmentByPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchDeletePolicyAssignmentByPolicy",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "batch_delete_policy_assignment_by_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "BatchDeleteTopicReviewedAnswer",
     "AuthorizedActions" : [ {
       "Name" : "BatchDeleteTopicReviewedAnswer",
@@ -6441,6 +6694,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "BatchPutPolicyAssignmentByPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "BatchPutPolicyAssignmentByPolicy",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "batch_put_policy_assignment_by_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CancelIngestion",
     "AuthorizedActions" : [ {
       "Name" : "CancelIngestion",
@@ -6449,6 +6713,37 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "cancel_ingestion",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateAccessControlApplication",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAccessControlApplication",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "quicksight.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "create_access_control_application",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateAccessControlApplicationSecret",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateAccessControlApplicationSecret",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "create_access_control_application_secret",
       "Package" : "Boto3"
     } ]
   }, {
@@ -6761,6 +7056,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateInboundConnector",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateInboundConnector",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "create_inbound_connector",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreateIngestion",
     "AuthorizedActions" : [ {
       "Name" : "CreateIngestion",
@@ -6786,6 +7095,20 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "create_knowledge_base",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "CreateKnowledgeBaseRefreshSchedule",
+    "AuthorizedActions" : [ {
+      "Name" : "CreateKnowledgeBaseRefreshSchedule",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "PassDataSource",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "create_knowledge_base_refresh_schedule",
       "Package" : "Boto3"
     } ]
   }, {
@@ -6991,6 +7314,28 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "create_vpc_connection",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteAccessControlApplication",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAccessControlApplication",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "delete_access_control_application",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteAccessControlApplicationSecret",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAccessControlApplicationSecret",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "delete_access_control_application_secret",
       "Package" : "Boto3"
     } ]
   }, {
@@ -7276,6 +7621,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteInboundConnector",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteInboundConnector",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "delete_inbound_connector",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeleteKnowledgeBase",
     "AuthorizedActions" : [ {
       "Name" : "DeleteKnowledgeBase",
@@ -7284,6 +7640,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "delete_knowledge_base",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteKnowledgeBaseRefreshSchedule",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteKnowledgeBaseRefreshSchedule",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "delete_knowledge_base_refresh_schedule",
       "Package" : "Boto3"
     } ]
   }, {
@@ -7317,6 +7684,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "delete_o_auth_client_application",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeletePolicyAssignment",
+    "AuthorizedActions" : [ {
+      "Name" : "DeletePolicyAssignment",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "delete_policy_assignment",
       "Package" : "Boto3"
     } ]
   }, {
@@ -7494,6 +7872,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "delete_vpc_connection",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeAccessControlApplication",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeAccessControlApplication",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_access_control_application",
       "Package" : "Boto3"
     } ]
   }, {
@@ -7948,6 +8337,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DescribeInboundConnector",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeInboundConnector",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_inbound_connector",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DescribeIngestion",
     "AuthorizedActions" : [ {
       "Name" : "DescribeIngestion",
@@ -8003,6 +8403,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "describe_knowledge_base_permissions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DescribeKnowledgeBaseRefreshSchedule",
+    "AuthorizedActions" : [ {
+      "Name" : "DescribeKnowledgeBaseRefreshSchedule",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "describe_knowledge_base_refresh_schedule",
       "Package" : "Boto3"
     } ]
   }, {
@@ -8371,6 +8782,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetPolicyAssignment",
+    "AuthorizedActions" : [ {
+      "Name" : "GetPolicyAssignment",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "get_policy_assignment",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetSessionEmbedUrl",
     "AuthorizedActions" : [ {
       "Name" : "GetAuthCode",
@@ -8382,6 +8804,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "get_session_embed_url",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListAccessControlApplications",
+    "AuthorizedActions" : [ {
+      "Name" : "ListAccessControlApplications",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_access_control_applications",
       "Package" : "Boto3"
     } ]
   }, {
@@ -8638,6 +9071,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListInboundConnectorApplicationAssociations",
+    "AuthorizedActions" : [ {
+      "Name" : "ListInboundConnectorApplicationAssociations",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_inbound_connector_application_associations",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListInboundConnectors",
+    "AuthorizedActions" : [ {
+      "Name" : "ListInboundConnectors",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_inbound_connectors",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListIngestions",
     "AuthorizedActions" : [ {
       "Name" : "ListIngestions",
@@ -8646,6 +9101,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "list_ingestions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListKnowledgeBaseRefreshSchedules",
+    "AuthorizedActions" : [ {
+      "Name" : "ListKnowledgeBaseRefreshSchedules",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_knowledge_base_refresh_schedules",
       "Package" : "Boto3"
     } ]
   }, {
@@ -8690,6 +9156,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "list_o_auth_client_applications",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ListPrincipalsForPolicy",
+    "AuthorizedActions" : [ {
+      "Name" : "ListPrincipalsForPolicy",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "list_principals_for_policy",
       "Package" : "Boto3"
     } ]
   }, {
@@ -8935,6 +9412,17 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "put_data_set_refresh_properties",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutPolicyAssignment",
+    "AuthorizedActions" : [ {
+      "Name" : "PutPolicyAssignment",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "put_policy_assignment",
       "Package" : "Boto3"
     } ]
   }, {
@@ -9197,6 +9685,28 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "untag_resource",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateAccessControlApplication",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAccessControlApplication",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_access_control_application",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateAccessControlApplicationSecret",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateAccessControlApplicationSecret",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_access_control_application_secret",
       "Package" : "Boto3"
     } ]
   }, {
@@ -9616,6 +10126,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateInboundConnector",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateInboundConnector",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_inbound_connector",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateInboundConnectorApplicationAssociations",
+    "AuthorizedActions" : [ {
+      "Name" : "UpdateInboundConnectorApplicationAssociations",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_inbound_connector_application_associations",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdateIpRestriction",
     "AuthorizedActions" : [ {
       "Name" : "UpdateIpRestriction",
@@ -9663,6 +10195,20 @@
     "SDK" : [ {
       "Name" : "quicksight",
       "Method" : "update_knowledge_base_permissions",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "UpdateKnowledgeBaseRefreshSchedule",
+    "AuthorizedActions" : [ {
+      "Name" : "PassDataSource",
+      "Service" : "quicksight"
+    }, {
+      "Name" : "UpdateKnowledgeBaseRefreshSchedule",
+      "Service" : "quicksight"
+    } ],
+    "SDK" : [ {
+      "Name" : "quicksight",
+      "Method" : "update_knowledge_base_refresh_schedule",
       "Package" : "Boto3"
     } ]
   }, {

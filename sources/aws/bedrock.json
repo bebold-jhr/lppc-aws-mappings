@@ -28,6 +28,8 @@
     },
     "Resources" : [ {
       "Name" : "knowledge-base"
+    }, {
+      "Name" : "project"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -48,6 +50,24 @@
       "Name" : "guardrail"
     }, {
       "Name" : "guardrail-profile"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ArchiveProject",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -819,6 +839,25 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "CreateProject",
+    "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys", "bedrock:DataRetentionMode" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "CreatePrompt",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -937,6 +976,21 @@
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : true,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteAccountDataRetentionStorage",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -1440,6 +1494,39 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "DeleteOrganizationDataRetentionStorage",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "DeleteProjectDataRetentionStorage",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "DeletePrompt",
     "Annotations" : {
       "Properties" : {
@@ -1683,6 +1770,21 @@
     }
   }, {
     "Name" : "GetAccountDataRetention",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetAccountDataRetentionStorage",
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -2331,6 +2433,7 @@
     }
   }, {
     "Name" : "GetFoundationModel",
+    "ActionConditionKeys" : [ "bedrock:ProjectArn" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -2400,6 +2503,7 @@
     }
   }, {
     "Name" : "GetInferenceProfile",
+    "ActionConditionKeys" : [ "bedrock:ProjectArn" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -2645,6 +2749,57 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "GetOrganizationDataRetentionStorage",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetProject",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetProjectDataRetentionStorage",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "GetPrompt",
     "Annotations" : {
       "Properties" : {
@@ -2757,6 +2912,86 @@
     },
     "Resources" : [ {
       "Name" : "session"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetTrustedAccessProgram",
+    "ActionConditionKeys" : [ "bedrock:Provider" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project"
+    }, {
+      "Name" : "trusted-access-program"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetTrustedAccessProgramAccountEnrollment",
+    "ActionConditionKeys" : [ "bedrock:Provider" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "trusted-access-program"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetTrustedAccessProgramOrganizationEnrollment",
+    "ActionConditionKeys" : [ "bedrock:Provider" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "trusted-access-program"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "GetTrustedAccessProgramProjectEnrollment",
+    "ActionConditionKeys" : [ "bedrock:Provider" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project"
+    }, {
+      "Name" : "trusted-access-program"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -3041,7 +3276,7 @@
     }
   }, {
     "Name" : "InvokeModelWithResponseStream",
-    "ActionConditionKeys" : [ "bedrock:GuardrailIdentifier", "bedrock:InferenceProfileArn", "bedrock:PromptRouterArn", "bedrock:ServiceTier" ],
+    "ActionConditionKeys" : [ "bedrock:GuardrailIdentifier", "bedrock:InferenceProfileArn", "bedrock:ModelArn", "bedrock:ProjectArn", "bedrock:PromptRouterArn", "bedrock:ServiceTier" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : true,
@@ -3065,6 +3300,8 @@
       "Name" : "imported-model"
     }, {
       "Name" : "inference-profile"
+    }, {
+      "Name" : "project"
     }, {
       "Name" : "prompt-router"
     }, {
@@ -3581,6 +3818,7 @@
     }
   }, {
     "Name" : "ListFoundationModels",
+    "ActionConditionKeys" : [ "bedrock:ProjectArn" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -3629,6 +3867,7 @@
     }
   }, {
     "Name" : "ListInferenceProfiles",
+    "ActionConditionKeys" : [ "bedrock:ProjectArn" ],
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -3638,6 +3877,11 @@
         "IsWrite" : false
       }
     },
+    "Resources" : [ {
+      "Name" : "application-inference-profile"
+    }, {
+      "Name" : "inference-profile"
+    } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
       "IAM Action Last Accessed" : false
@@ -3819,6 +4063,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "ListProjects",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "ListPromptRouters",
     "Annotations" : {
       "Properties" : {
@@ -3978,6 +4240,8 @@
     }, {
       "Name" : "model-invocation-job"
     }, {
+      "Name" : "project"
+    }, {
       "Name" : "prompt"
     }, {
       "Name" : "prompt-router"
@@ -3989,6 +4253,26 @@
       "Name" : "retrieval-instruction"
     }, {
       "Name" : "session"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "ListTrustedAccessPrograms",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : true,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : false
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project"
+    }, {
+      "Name" : "trusted-access-program"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -4048,6 +4332,21 @@
   }, {
     "Name" : "PutAccountDataRetention",
     "ActionConditionKeys" : [ "bedrock:DataRetentionMode" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutAccountDataRetentionStorage",
     "Annotations" : {
       "Properties" : {
         "IsDataPlane" : false,
@@ -4124,6 +4423,39 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "PutOrganizationDataRetentionStorage",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutProjectDataRetentionStorage",
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "PutResourcePolicy",
     "ActionConditionKeys" : [ "aws:RequestTag/${TagKey}", "aws:TagKeys" ],
     "Annotations" : {
@@ -4143,6 +4475,65 @@
       "Name" : "guardrail-profile"
     }, {
       "Name" : "knowledge-base"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutTrustedAccessProgramAccountEnrollment",
+    "ActionConditionKeys" : [ "bedrock:Provider", "bedrock:TrustedAccessProgramOptIn" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "trusted-access-program"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutTrustedAccessProgramOrganizationEnrollment",
+    "ActionConditionKeys" : [ "bedrock:Provider", "bedrock:TrustedAccessProgramOptIn" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "trusted-access-program"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "PutTrustedAccessProgramProjectEnrollment",
+    "ActionConditionKeys" : [ "bedrock:Provider", "bedrock:TrustedAccessProgramOptIn" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project"
+    }, {
+      "Name" : "trusted-access-program"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -4317,6 +4708,65 @@
     },
     "Resources" : [ {
       "Name" : "knowledge-base"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StartTrustedAccessProgramAccountApplication",
+    "ActionConditionKeys" : [ "bedrock:Provider" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "trusted-access-program"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StartTrustedAccessProgramOrganizationApplication",
+    "ActionConditionKeys" : [ "bedrock:Provider" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "trusted-access-program"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
+    "Name" : "StartTrustedAccessProgramProjectApplication",
+    "ActionConditionKeys" : [ "bedrock:Provider" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsDataPlane" : false,
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project"
+    }, {
+      "Name" : "trusted-access-program"
     } ],
     "SupportedBy" : {
       "IAM Access Analyzer Policy Generation" : false,
@@ -4499,6 +4949,8 @@
     }, {
       "Name" : "model-invocation-job"
     }, {
+      "Name" : "project"
+    }, {
       "Name" : "prompt"
     }, {
       "Name" : "prompt-router"
@@ -4579,6 +5031,8 @@
       "Name" : "model-import-job"
     }, {
       "Name" : "model-invocation-job"
+    }, {
+      "Name" : "project"
     }, {
       "Name" : "prompt"
     }, {
@@ -4935,6 +5389,24 @@
       "IAM Action Last Accessed" : false
     }
   }, {
+    "Name" : "UpdateProject",
+    "ActionConditionKeys" : [ "bedrock:DataRetentionMode" ],
+    "Annotations" : {
+      "Properties" : {
+        "IsList" : false,
+        "IsPermissionManagement" : false,
+        "IsTaggingOnly" : false,
+        "IsWrite" : true
+      }
+    },
+    "Resources" : [ {
+      "Name" : "project"
+    } ],
+    "SupportedBy" : {
+      "IAM Access Analyzer Policy Generation" : false,
+      "IAM Action Last Accessed" : false
+    }
+  }, {
     "Name" : "UpdatePrompt",
     "Annotations" : {
       "Properties" : {
@@ -5060,11 +5532,17 @@
     "Name" : "bedrock:PromptRouterArn",
     "Types" : [ "ARN" ]
   }, {
+    "Name" : "bedrock:Provider",
+    "Types" : [ "String" ]
+  }, {
     "Name" : "bedrock:ServiceTier",
     "Types" : [ "String" ]
   }, {
     "Name" : "bedrock:ThirdPartyKnowledgeBaseCredentialsSecretArn",
     "Types" : [ "ARN" ]
+  }, {
+    "Name" : "bedrock:TrustedAccessProgramOptIn",
+    "Types" : [ "String" ]
   } ],
   "Operations" : [ {
     "Name" : "AgenticRetrieveStream",
@@ -5095,6 +5573,17 @@
     "SDK" : [ {
       "Name" : "bedrock-runtime",
       "Method" : "apply_guardrail",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "ArchiveProject",
+    "AuthorizedActions" : [ {
+      "Name" : "ArchiveProject",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "archive_project",
       "Package" : "Boto3"
     } ]
   }, {
@@ -5445,9 +5934,6 @@
   }, {
     "Name" : "CreateEvaluationJob",
     "AuthorizedActions" : [ {
-      "Name" : "CallWithBearerToken",
-      "Service" : "bedrock"
-    }, {
       "Name" : "CreateEvaluationJob",
       "Service" : "bedrock"
     }, {
@@ -5713,6 +6199,23 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "CreateProject",
+    "AuthorizedActions" : [ {
+      "Name" : "CallWithBearerToken",
+      "Service" : "bedrock"
+    }, {
+      "Name" : "CreateProject",
+      "Service" : "bedrock"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "create_project",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "CreatePrompt",
     "AuthorizedActions" : [ {
       "Name" : "CreatePrompt",
@@ -5818,6 +6321,17 @@
     "SDK" : [ {
       "Name" : "bedrock-agent",
       "Method" : "create_vpc_configuration",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteAccountDataRetentionStorage",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteAccountDataRetentionStorage",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "delete_account_data_retention_storage",
       "Package" : "Boto3"
     } ]
   }, {
@@ -6134,6 +6648,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "DeleteOrganizationDataRetentionStorage",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteOrganizationDataRetentionStorage",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "delete_organization_data_retention_storage",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "DeleteProjectDataRetentionStorage",
+    "AuthorizedActions" : [ {
+      "Name" : "DeleteProjectDataRetentionStorage",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "delete_project_data_retention_storage",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "DeletePrompt",
     "AuthorizedActions" : [ {
       "Name" : "DeletePrompt",
@@ -6306,6 +6842,20 @@
     "SDK" : [ {
       "Name" : "bedrock",
       "Method" : "get_account_data_retention",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetAccountDataRetentionStorage",
+    "AuthorizedActions" : [ {
+      "Name" : "CallWithBearerToken",
+      "Service" : "bedrock"
+    }, {
+      "Name" : "GetAccountDataRetentionStorage",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "get_account_data_retention_storage",
       "Package" : "Boto3"
     } ]
   }, {
@@ -6899,6 +7449,42 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "GetOrganizationDataRetentionStorage",
+    "AuthorizedActions" : [ {
+      "Name" : "GetOrganizationDataRetentionStorage",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "get_organization_data_retention_storage",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetProject",
+    "AuthorizedActions" : [ {
+      "Name" : "CallWithBearerToken",
+      "Service" : "bedrock"
+    }, {
+      "Name" : "GetProject",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "get_project",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetProjectDataRetentionStorage",
+    "AuthorizedActions" : [ {
+      "Name" : "GetProjectDataRetentionStorage",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "get_project_data_retention_storage",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "GetPrompt",
     "AuthorizedActions" : [ {
       "Name" : "GetPrompt",
@@ -6972,6 +7558,50 @@
     "SDK" : [ {
       "Name" : "bedrock-agent-runtime",
       "Method" : "get_session",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetTrustedAccessProgram",
+    "AuthorizedActions" : [ {
+      "Name" : "GetTrustedAccessProgram",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "get_trusted_access_program",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetTrustedAccessProgramAccountEnrollment",
+    "AuthorizedActions" : [ {
+      "Name" : "GetTrustedAccessProgramAccountEnrollment",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "get_trusted_access_program_account_enrollment",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetTrustedAccessProgramOrganizationEnrollment",
+    "AuthorizedActions" : [ {
+      "Name" : "GetTrustedAccessProgramOrganizationEnrollment",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "get_trusted_access_program_organization_enrollment",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "GetTrustedAccessProgramProjectEnrollment",
+    "AuthorizedActions" : [ {
+      "Name" : "GetTrustedAccessProgramProjectEnrollment",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "get_trusted_access_program_project_enrollment",
       "Package" : "Boto3"
     } ]
   }, {
@@ -7671,6 +8301,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListProjects",
+    "AuthorizedActions" : [ {
+      "Name" : "ListProjects",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "list_projects",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListPromptRouters",
     "AuthorizedActions" : [ {
       "Name" : "CallWithBearerToken",
@@ -7773,6 +8414,20 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "ListTrustedAccessPrograms",
+    "AuthorizedActions" : [ {
+      "Name" : "CallWithBearerToken",
+      "Service" : "bedrock"
+    }, {
+      "Name" : "ListTrustedAccessPrograms",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "list_trusted_access_programs",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "ListVpcConfigurations",
     "SDK" : [ {
       "Name" : "bedrock-agent",
@@ -7827,6 +8482,17 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "PutAccountDataRetentionStorage",
+    "AuthorizedActions" : [ {
+      "Name" : "PutAccountDataRetentionStorage",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "put_account_data_retention_storage",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "PutEnforcedGuardrailConfiguration",
     "AuthorizedActions" : [ {
       "Name" : "PutEnforcedGuardrailConfiguration",
@@ -7869,6 +8535,28 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "PutOrganizationDataRetentionStorage",
+    "AuthorizedActions" : [ {
+      "Name" : "PutOrganizationDataRetentionStorage",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "put_organization_data_retention_storage",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutProjectDataRetentionStorage",
+    "AuthorizedActions" : [ {
+      "Name" : "PutProjectDataRetentionStorage",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "put_project_data_retention_storage",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "PutResourcePolicy",
     "AuthorizedActions" : [ {
       "Name" : "PutResourcePolicy",
@@ -7881,6 +8569,39 @@
     }, {
       "Name" : "bedrock-agent",
       "Method" : "put_resource_policy",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutTrustedAccessProgramAccountEnrollment",
+    "AuthorizedActions" : [ {
+      "Name" : "PutTrustedAccessProgramAccountEnrollment",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "put_trusted_access_program_account_enrollment",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutTrustedAccessProgramOrganizationEnrollment",
+    "AuthorizedActions" : [ {
+      "Name" : "PutTrustedAccessProgramOrganizationEnrollment",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "put_trusted_access_program_organization_enrollment",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "PutTrustedAccessProgramProjectEnrollment",
+    "AuthorizedActions" : [ {
+      "Name" : "PutTrustedAccessProgramProjectEnrollment",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "put_trusted_access_program_project_enrollment",
       "Package" : "Boto3"
     } ]
   }, {
@@ -8020,6 +8741,39 @@
     "SDK" : [ {
       "Name" : "bedrock-agent",
       "Method" : "start_ingestion_job",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartTrustedAccessProgramAccountApplication",
+    "AuthorizedActions" : [ {
+      "Name" : "StartTrustedAccessProgramAccountApplication",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "start_trusted_access_program_account_application",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartTrustedAccessProgramOrganizationApplication",
+    "AuthorizedActions" : [ {
+      "Name" : "StartTrustedAccessProgramOrganizationApplication",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "start_trusted_access_program_organization_application",
+      "Package" : "Boto3"
+    } ]
+  }, {
+    "Name" : "StartTrustedAccessProgramProjectApplication",
+    "AuthorizedActions" : [ {
+      "Name" : "StartTrustedAccessProgramProjectApplication",
+      "Service" : "bedrock"
+    } ],
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "start_trusted_access_program_project_application",
       "Package" : "Boto3"
     } ]
   }, {
@@ -8392,6 +9146,13 @@
       "Package" : "Boto3"
     } ]
   }, {
+    "Name" : "UpdateProject",
+    "SDK" : [ {
+      "Name" : "bedrock",
+      "Method" : "update_project",
+      "Package" : "Boto3"
+    } ]
+  }, {
     "Name" : "UpdatePrompt",
     "AuthorizedActions" : [ {
       "Name" : "UpdatePrompt",
@@ -8606,6 +9367,9 @@
   }, {
     "Name" : "system-tool",
     "ARNFormats" : [ "arn:${Partition}:bedrock::${Account}:system-tool/${ResourceId}" ]
+  }, {
+    "Name" : "trusted-access-program",
+    "ARNFormats" : [ "arn:${Partition}:bedrock::aws:trusted-access-program/${ProgramId}" ]
   } ],
   "Version" : "v1.5"
 }

@@ -553,6 +553,7 @@
     "Name" : "UpdateCollector",
     "Annotations" : {
       "Properties" : {
+        "IsDataPlane" : false,
         "IsList" : false,
         "IsPermissionManagement" : false,
         "IsTaggingOnly" : false,
@@ -975,6 +976,16 @@
     } ]
   }, {
     "Name" : "UpdateCollector",
+    "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "collector.continuum.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
+      "Name" : "UpdateCollector",
+      "Service" : "continuum"
+    } ],
     "SDK" : [ {
       "Name" : "continuum",
       "Method" : "update_collector",
@@ -983,6 +994,12 @@
   }, {
     "Name" : "UpdateEnvironment",
     "AuthorizedActions" : [ {
+      "Name" : "PassRole",
+      "Context" : {
+        "iam:PassedToService" : [ "continuum.amazonaws.com" ]
+      },
+      "Service" : "iam"
+    }, {
       "Name" : "UpdateEnvironment",
       "Service" : "continuum"
     } ],

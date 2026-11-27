@@ -1195,6 +1195,9 @@
         "iam:PassedToService" : [ "kinesisanalytics.amazonaws.com" ]
       },
       "Service" : "iam"
+    }, {
+      "Name" : "TagResource",
+      "Service" : "kinesisanalytics"
     } ],
     "SDK" : [ {
       "Name" : "kinesisanalyticsv2",
